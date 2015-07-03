@@ -1,0 +1,72 @@
+a {
+    &, &:visited {
+        color: $main-color;
+        text-decoration: none;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h1, h2, h3, h4 {
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    color: $headings-color;
+    text-transform: $headings-text-transform;
+
+    small,
+    .small {
+        font-weight: normal;
+        line-height: 1;
+        color: $headings-small-color;
+    }
+
+    a {
+        color: $headings-color;
+    }
+}
+
+h1, h2, h3 , h4 {
+    margin: 0;
+
+    small,
+    .small {
+        font-size: 65%;
+    }
+}
+
+h1 {
+    font-family: $headings-font-family;
+    font-size: $font-size-h1;
+    letter-spacing: $headings-letter-spacing;
+    margin-bottom: $headings-margin;
+    position: relative;
+}
+
+h2 {
+    font-family: $headings-font-family;
+    font-size: $font-size-h2;
+    margin: $headings-margin 0;
+    letter-spacing: $headings-letter-spacing;
+    text-transform: none;
+}
+
+h3 {
+    font-family: $headings-font-family;
+    font-size: $font-size-h3;
+}
+
+h4 {
+    font-size: $font-size-h4;
+    font-weight: normal;
+    letter-spacing: 0;
+}
+
+p {
+    margin: 0 0 20px 0;
+}
+
+ul {
+    padding-left: 0;
+}

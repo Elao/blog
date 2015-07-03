@@ -1,0 +1,57 @@
+$background-color: #F0F0F0;
+$base-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica";
+$base-font-size:   18px;
+$base-line-height: $base-font-size * 1.8;
+$text-color:       #222;
+
+$main-color: #F34141;
+
+$headings-font-family:    "League Spartan", "Helvetica Neue", "Helvetica";
+$headings-font-weight:    800;
+$headings-line-height:    1.4;
+$headings-letter-spacing: -0.03em;
+$headings-text-transform: uppercase;
+$headings-color:          $text-color;
+$headings-small-color:    lighten($text-color, 30%);
+$headings-margin:         10px;
+
+$font-size-h1: 60px;
+$font-size-h2: 50px;
+$font-size-h3: 26px;
+$font-size-h4: 18px;
+
+///////////////////////////
+/// GRID
+///////////////////////////
+$grid-columns:      12 !default;
+$grid-gutter-width: 30px !default;
+
+///////////////////////////
+/// MEDIA QUERIES
+///////////////////////////
+$screen-xs: 480px !default;
+$screen-sm: 768px !default;
+$screen-md: 992px !default;
+$screen-lg: 1140px !default;
+
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+$container-tablet:           ((720px + $grid-gutter-width)) !default;
+$container-desktop:          ((940px + $grid-gutter-width)) !default;
+$container-lg-desktop:       ((1140px + $grid-gutter-width)) !default;
+
+$container-max-width:        $screen-lg !default;

@@ -1,0 +1,170 @@
+.homepage-slider {
+    margin-bottom: 50px;
+
+    .owl-theme {
+        position: relative;
+        height: 600px;
+
+        .owl-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .owl-dot {
+                span {
+                    border-radius: 0;
+                    transition: all 0.1s linear;
+                    margin: 0 6px;
+                    background-color: $background-color;
+                    opacity: 0.6;
+                }
+
+                &.active {
+                    span {
+                        transform: rotate(45deg);
+                        opacity: 0.8;
+                        background-color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .owl-carousel {
+        .owl-item {
+            position: relative;
+
+            .item {
+                height: 600px;
+                background: #222;
+                position: relative;
+
+                .hero {
+                    background: none;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 0;
+                    opacity: 0.2;
+                }
+
+                .inner {
+                    position: absolute;
+                    z-index: 1;
+                    top: 50%;
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                    transform: translateY(-50%);
+
+                    img {
+                        width: auto;
+                        display: inline;
+                    }
+
+                    h4 {
+                        color: #DFDFDF;
+                        margin: 0;
+                    }
+
+                    h1 {
+                        letter-spacing: -0.05em;
+                        margin: 20px 0;
+                        padding: 0 40px;
+
+                        &, a, a:visited {
+                            color: #FFF;
+
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
+                    .author {
+                        img {
+                            height: 60px;
+                            width: 60px;
+                            border-radius: 60px;
+                            border: 2px solid #FFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.articles-list {
+    padding: 0;
+
+    article {
+        margin: 40px 0;
+        display: table;
+        width: 100%;
+        position: relative;
+        background: none;
+        transition: all 0.2s linear;
+
+        > div {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 25px;
+
+            &.col-text {
+                width: 60%;
+                padding: 25px 40px;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        h4 {
+            opacity: 0.5;
+        }
+
+        p {
+            padding: 0 0 20px 0;
+        }
+
+        .btn {
+            float: right;
+        }
+
+        &:hover {
+            background: #FFF;
+        }
+    }
+}
+
+.pager {
+    text-align: center;
+    margin: 50px 0;
+    font-family: $headings-font-family;
+
+    a {
+        color: $text-color;
+        background: none;
+        transition: all 0.1s linear;
+        display: inline-block;
+        margin: 0 2px;
+        width: 40px;
+        height: 40px;
+        line-height: 44px;
+
+        &.active, &:hover {
+            color: $main-color;
+            background: #FFF;
+            text-decoration: none;
+        }
+    }
+}
