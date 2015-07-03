@@ -1,0 +1,35 @@
+--- 
+
+baseurl:        "http://blog.dev/"
+languageCode:   "fr-FR"
+title:          "Le blog ELAO"
+
+params:
+  Subtitle: "Spinning the cogs in the widgets"
+  AuthorName: "ELAO"
+
+menu:
+  main:
+      - Name:       "About"
+        Identifier: "about"
+        URL:        "/about"
+        Weight:     80
+      - Name:       "Infra"
+        Identifier: "infra"
+        URL:        "/infra"
+        Weight:     90
+      - Name:       "Dev"
+        Identifier: "dev"
+        URL:        "/dev"
+        Weight:     100
+
+  sidebar:
+      - Name:       "Mon lien 1"
+        Identifier: "mon-lien-1"
+        URL:        "/about/mon-lien-1"
+      - Name:       "Mon lien 2"
+        Identifier: "mon-lien-2"
+        URL:        "/about/mon-lien-2"
+      - Name:       "Mon lien 3"
+        Identifier: "mon-lien-3"
+        URL:        "/about/mon-lien-3"
