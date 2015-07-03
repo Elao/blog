@@ -1462,6 +1462,10 @@ footer {
       display: block; }
     .articles-list article h4 {
       opacity: 0.5; }
+    .articles-list article h2 {
+      line-height: 1.2;
+      margin-top: 25px;
+      margin-bottom: 15px; }
     .articles-list article p {
       padding: 0 0 20px 0; }
     .articles-list article .btn {
