@@ -6,34 +6,7 @@
         <div class="navbar">
             <a href="#" class="logo"><img src="/images/logo.svg" alt="" /></a>
         </div>
-        <header class="homepage-slider">
-            <div class="owl-carousel">
-                <div class="item">
-                    <div class="hero" style="background-image: url('/images/carousel/pic-1.jpg');"></div>
-                    <div class="inner">
-                        <h4><strong>Conférence</strong> - 29.05.2015</h4>
-                        <h1><a href="#">Un titre d'article</a></h1>
-                        <a href="#" class="author"><img src="http://www.gravatar.com/avatar/7f70e04906c6be43177bfeafe903b649" alt=""></a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="hero" style="background-image: url('/images/carousel/pic-2.jpg');"></div>
-                    <div class="inner">
-                        <h4><strong>Conférence</strong> - 29.05.2015</h4>
-                        <h1><a href="#">Un titre d'article vraiment un poil trop long pour tester</a></h1>
-                        <a href="#" class="author"><img src="http://www.gravatar.com/avatar/7f70e04906c6be43177bfeafe903b649" alt=""></a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="hero" style="background-image: url('/images/carousel/pic-1.jpg');"></div>
-                    <div class="inner">
-                        <h4><strong>Conférence</strong> - 29.05.2015</h4>
-                        <h1><a href="#">Un titre d'article</a></h1>
-                        <a href="#" class="author"><img src="http://www.gravatar.com/avatar/7f70e04906c6be43177bfeafe903b649" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </header>
+        {{ partial "slider.html" . }}
         <div class="container">
             <div class="articles-list">
                 <article>
