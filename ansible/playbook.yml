@@ -1,0 +1,27 @@
+---
+
+- hosts: all
+  sudo:  yes
+
+  roles:
+    - { role: elao.motd }
+    - { role: elao.timezone }
+    - { role: elao.env }
+    - { role: elao.apt }
+    - { role: elao.ssh }
+    - { role: elao.git }
+    - { role: elao.zsh }
+    - { role: elao.ohmyzsh }
+    - { role: elao.curl }
+    - { role: elao.acl }
+    - { role: elao.nodejs }
+    - { role: elao.npm }
+    - { role: elao.files }
+    - { role: elao.make }
+    - { role: elao.python }
+    - { role: elao.pip }
+    - { role: elao.mailcatcher }
+    - { role: elao.logio }
+    - { role: elao.nginx }
+    # App
+    #- { role: elao.gohugo }
