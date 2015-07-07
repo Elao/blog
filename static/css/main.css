@@ -1038,6 +1038,18 @@ body {
   body.nav-opened {
     overflow: hidden; }
 
+::-webkit-input-placeholder {
+  color: #222; }
+
+:-moz-placeholder {
+  color: #222; }
+
+::-moz-placeholder {
+  color: #222; }
+
+:-ms-input-placeholder {
+  color: #222; }
+
 .container {
   width: 100%;
   max-width: 1230px;
@@ -1389,11 +1401,12 @@ footer {
 #nav-overlay {
   z-index: 150;
   position: fixed;
+  overflow: auto;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 100px;
+  padding: 100px 100px 0 100px;
   background: rgba(240, 240, 240, 0.95);
   visibility: hidden;
   opacity: 0;
@@ -1404,6 +1417,58 @@ footer {
     opacity: 1;
     -webkit-transition-delay: 0s;
             transition-delay: 0s; }
+  #nav-overlay .container {
+    margin-top: 50px; }
+    #nav-overlay .container .search {
+      position: relative;
+      border-left: 2px solid #222;
+      margin-bottom: 30px; }
+      #nav-overlay .container .search > input {
+        width: 100%;
+        font-size: 60px;
+        height: 150px;
+        line-height: 150px;
+        padding-left: 30px;
+        font-family: "League Spartan", "Helvetica Neue", "Helvetica";
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        background: none;
+        color: #222;
+        border: 0; }
+      #nav-overlay .container .search .start-typing {
+        position: absolute;
+        bottom: 5px;
+        left: 30px;
+        color: #999;
+        font-style: italic;
+        margin: 0; }
+    #nav-overlay .container .categories {
+      margin: 60px 0;
+      padding: 60px 0;
+      border-top: 1px solid rgba(34, 34, 34, 0.2);
+      border-bottom: 1px solid rgba(34, 34, 34, 0.2); }
+      #nav-overlay .container .categories .row > div {
+        padding-bottom: 0; }
+        #nav-overlay .container .categories .row > div:hover h3 {
+          color: #F34141; }
+      #nav-overlay .container .categories h3 {
+        font-size: 30px;
+        -webkit-transition: all 0.1s linear;
+                transition: all 0.1s linear; }
+      #nav-overlay .container .categories ul {
+        list-style: none; }
+        #nav-overlay .container .categories ul li {
+          text-transform: uppercase;
+          font-weight: 800;
+          font-size: 20px; }
+          #nav-overlay .container .categories ul li a, #nav-overlay .container .categories ul li a:visited {
+            color: #222;
+            display: block;
+            -webkit-transition: all 0.1s linear;
+                    transition: all 0.1s linear; }
+            #nav-overlay .container .categories ul li a:hover, #nav-overlay .container .categories ul li a:visited:hover {
+              color: #F34141;
+              text-decoration: none; }
 
 .homepage-slider {
   margin-bottom: 50px; }

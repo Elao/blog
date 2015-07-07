@@ -19,10 +19,7 @@
 <body class="detail">
     {{ partial "nav-overlay.html" . }}
     <div id="all">
-        <div class="navbar">
-            <a href="/fr/" class="logo"><img src="/images/logo.svg" alt="" /></a>
-            <button type="button" class="nav-button"><span class="line-1"></span><span class="line-2"></span><span class="line-3"></span></button>
-        </div>
+        {{ partial "navbar.html" . }}
         <header>
             <h4><strong>Conférence</strong> - 29.05.2015</h4>
             <h1>{{ .Title }}</h1>
@@ -54,8 +51,8 @@
                             Développeur Front-end
                         </div>
                         <div class="links">
-                            <a href="#"><i class="icon-twitter"></i></a>
-                            <a href="#"><i class="icon-github"></i></a>
+                            <a href="#" target="_blank"><i class="icon-twitter"></i></a>
+                            <a href="#" target="_blank"><i class="icon-github"></i></a>
                         </div>
                     </div>
 
