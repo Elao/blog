@@ -14,7 +14,7 @@
                     <div class="col-text">
                         <h4><strong>{{ delimit .Params.tags ", " }}</strong> - {{ .Date.Format "02 Jan 2006" }}</h4>
                         <h2>{{ .Title }}</h2>
-                        <p>{{ .Description }}</p>
+                        <p>{{ .Summary }}</p>
                         <a href="{{ .Permalink }}" class="btn">Lire la suite</a>
                     </div>
                     {{ if ne (mod $index 2) 0 }}

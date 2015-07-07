@@ -1,36 +1,18 @@
-<!-- {{ partial "head.html" . }}
-<body>
-
-{{ partial "sidebar.html" . }}
-
-    <div class="content container">
-<div class="post">
-  <h1>{{ .Title }}</h1>
-  <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
-      {{ .Content }}
-</div>
-</div>
-
-  </body>
-</html>
- -->
-
 {{ partial "head.html" . }}
 <body class="detail">
     {{ partial "nav-overlay.html" . }}
     <div id="all">
         {{ partial "navbar.html" . }}
         <header>
-            <h4><strong>Conférence</strong> - 29.05.2015</h4>
+            <h4><strong>Conférence</strong> - {{ .Date.Format "02 Jan 2006" }}</h4>
             <h1>{{ .Title }}</h1>
             <p class="author">
-                <a href="#" class="author"><img src="http://www.gravatar.com/avatar/7f70e04906c6be43177bfeafe903b649" alt=""></a>
+                <a href="#" class="author"><img src="{{ .Params.avatar }}" alt=""></a>
                 <br/>
-                <span>écrit par <a href="#" class="strong">Jérémy FAGIS</a></span>
+                <span>écrit par <a href="#" class="strong">{{ .Params.author }}</a></span>
             </p>
             <div class="intro">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ratione, nostrum sequi, vero illum quibusdam nobis deserunt perferendis architecto amet exercitationem deleniti, iste recusandae ipsum possimus doloribus reprehenderit voluptatem vitae!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ratione, nostrum sequi, vero illum quibusdam nobis deserunt perferendis architecto amet exercitationem deleniti, iste recusandae ipsum possimus doloribus reprehenderit voluptatem vitae!
+                {{ .Description }}
             </div>
             <div class="hero">
                 <img src="https://placeimg.com/1000/310/any" alt="" />
@@ -38,17 +20,15 @@
         </header>
         <div class="container">
             <article id="article">
-
                 {{ .Content }}
-
                 <div id="socials">
                     <div class="author-block">
                         <div class="picture">
-                            <img src="http://www.gravatar.com/avatar/7f70e04906c6be43177bfeafe903b649" alt="">
+                            <img src="{{ .Params.avatar }}" alt="">
                         </div>
                         <div class="job">
-                            <strong>Jérémy FAGIS</strong><br/>
-                            Développeur Front-end
+                            <strong>{{ .Params.author }}</strong><br/>
+                            {{ .Params.function }}
                         </div>
                         <div class="links">
                             <a href="#" target="_blank"><i class="icon-twitter"></i></a>
