@@ -1,0 +1,223 @@
+.detail {
+    header {
+        text-align: center;
+        padding: 50px 0 80px 0;
+
+        h4 {
+            opacity: 0.5;
+        }
+
+        h1 {
+            text-transform: none;
+            margin: 40px 0;
+        }
+
+        .author {
+            margin: 0;
+
+            img {
+                height: 60px;
+                width: 60px;
+                border-radius: 60px;
+                border: 2px solid #FFF;
+            }
+
+            a, a:visited {
+                color: $text-color;
+            }
+
+            span {
+                opacity: 0.5;
+            }
+        }
+
+        .intro {
+            font-weight: 600;
+            margin: 60px auto;
+            padding: 0 40px;
+            font-size: 20px;
+            line-height: 38px;
+            max-width: 1500px;
+        }
+
+        .hero {
+            margin: 60px auto 0 auto;
+            max-width: 1700px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    article#article {
+        max-width: 900px;
+        margin: auto;
+
+        h1, h2 {
+            font-size: 40px;
+            line-height: 54px;
+            margin: 50px 0 15px;
+            text-transform: none;
+            letter-spacing: $headings-letter-spacing;
+        }
+
+        h3 {
+            font-size: 34px;
+            line-height: 40px;
+            margin: 30px 0 15px;
+            text-transform: none;
+            letter-spacing: $headings-letter-spacing;
+        }
+
+        h1, h2, h3 {
+            clear: left;
+
+            a {
+                &, &:visited {
+                    text-decoration: underline;
+                    color: $text-color;
+                }
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background: #222;
+            font-family: "Roboto Mono", monospace;
+            color: #EEE;
+            padding: 10px 15px;
+            font-size: 16px;
+            line-height: 28px;
+            margin: 20px 0;
+
+            code {
+                font-family: "Roboto Mono", monospace;
+                color: #EEE;
+            }
+        }
+
+        a {
+            &, &:visited {
+                text-decoration: underline;
+                color: $text-color;
+            }
+
+            &:hover {
+                color: $main-color;
+            }
+        }
+
+        img {
+            max-width: 100%;
+
+            &.left {
+                float: left;
+                margin: 0 40px 20px 0;
+            }
+
+            &.right {
+                float: right;
+                margin: 0 0 20px 40px;
+            }
+
+            &.outside-left {
+                float: left;
+                margin: 0 40px 20px -120px;
+            }
+
+            &.outside-right {
+                float: right;
+                margin: 0 -120px 20px 40px;
+            }
+
+            &.full {
+                width: 100%;
+                margin: 40px 0;
+            }
+
+            &.center {
+                margin: 40px auto;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        blockquote {
+            margin: 40px 0;
+            padding: 5px 0 5px 40px;
+            font-style: italic;
+            border-left: 2px solid #222;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        #socials {
+            margin-bottom: 60px;
+
+            .author-block {
+                display: inline-table;
+                width: 100%;
+                margin: 60px 0;
+                border-top: 1px solid #222;
+                border-bottom: 1px solid #222;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+                > div {
+                    display: table-cell;
+                    vertical-align: middle;
+
+                    &.picture {
+                        width: 60px;
+
+                        img {
+                            width: 60px;
+                            border-radius: 30px;
+                            display: block;
+                        }
+                    }
+
+                    &.job {
+                        padding-left: 20px;
+                        min-width: 300px;
+                        color: #999;
+                        line-height: 26px;
+
+                        strong {
+                            font-size: 22px;
+                            color: #222;
+                        }
+                    }
+
+                    &.links {
+                        text-align: right;
+
+                        a, a:visited {
+                            color: $text-color;
+                            font-size: 30px;
+                            margin-left: 5px;
+                            transition: all 0.1s linear;
+
+                            &:hover {
+                                color: $main-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

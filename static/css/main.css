@@ -458,6 +458,44 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: 'elaoblog';
+  src: url("../fonts/icons/elaoblog.eot?27127108");
+  src: url("../fonts/icons/elaoblog.eot?27127108#iefix") format("embedded-opentype"), url("../fonts/icons/elaoblog.woff?27127108") format("woff"), url("../fonts/icons/elaoblog.ttf?27127108") format("truetype"), url("../fonts/icons/elaoblog.svg?27127108#elaoblog") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "elaoblog";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-twitter:before {
+  content: '\e800'; }
+
+.icon-github:before {
+  content: '\e801'; }
+
+.icon-search:before {
+  content: '\e802'; }
+
+@font-face {
+  font-family: 'League Spartan';
+  src: url("../fonts/leaguespartan/leaguespartan-bold.eot");
+  src: url("../fonts/leaguespartan/leaguespartan-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/leaguespartan/leaguespartan-bold.woff2") format("woff2"), url("../fonts/leaguespartan/leaguespartan-bold.woff") format("woff"), url("../fonts/leaguespartan/leaguespartan-bold.ttf") format("truetype"), url("../fonts/leaguespartan/leaguespartan-bold.svg#league_spartanbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 .text-left {
   text-align: left; }
 
@@ -1024,7 +1062,7 @@ body {
   left: 0;
   right: 0;
   height: 100px;
-  z-index: 110;
+  z-index: 160;
   background-color: rgba(240, 240, 240, 0.95);
   text-align: center; }
   .navbar .logo {
@@ -1491,3 +1529,143 @@ footer {
       color: #F34141;
       background: #FFF;
       text-decoration: none; }
+
+.detail header {
+  text-align: center;
+  padding: 50px 0 80px 0; }
+  .detail header h4 {
+    opacity: 0.5; }
+  .detail header h1 {
+    text-transform: none;
+    margin: 40px 0; }
+  .detail header .author {
+    margin: 0; }
+    .detail header .author img {
+      height: 60px;
+      width: 60px;
+      border-radius: 60px;
+      border: 2px solid #FFF; }
+    .detail header .author a, .detail header .author a:visited {
+      color: #222; }
+    .detail header .author span {
+      opacity: 0.5; }
+  .detail header .intro {
+    font-weight: 600;
+    margin: 60px auto;
+    padding: 0 40px;
+    font-size: 20px;
+    line-height: 38px;
+    max-width: 1500px; }
+  .detail header .hero {
+    margin: 60px auto 0 auto;
+    max-width: 1700px; }
+    .detail header .hero img {
+      width: 100%; }
+
+.detail article#article {
+  max-width: 900px;
+  margin: auto; }
+  .detail article#article h1, .detail article#article h2 {
+    font-size: 40px;
+    line-height: 54px;
+    margin: 50px 0 15px;
+    text-transform: none;
+    letter-spacing: -0.03em; }
+  .detail article#article h3 {
+    font-size: 34px;
+    line-height: 40px;
+    margin: 30px 0 15px;
+    text-transform: none;
+    letter-spacing: -0.03em; }
+  .detail article#article h1, .detail article#article h2, .detail article#article h3 {
+    clear: left; }
+    .detail article#article h1 a, .detail article#article h1 a:visited, .detail article#article h2 a, .detail article#article h2 a:visited, .detail article#article h3 a, .detail article#article h3 a:visited {
+      text-decoration: underline;
+      color: #222; }
+    .detail article#article h1 a:hover, .detail article#article h2 a:hover, .detail article#article h3 a:hover {
+      color: #F34141; }
+  .detail article#article ul {
+    padding-left: 20px; }
+  .detail article#article pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: #222;
+    font-family: "Roboto Mono", monospace;
+    color: #EEE;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 28px;
+    margin: 20px 0; }
+    .detail article#article pre code {
+      font-family: "Roboto Mono", monospace;
+      color: #EEE; }
+  .detail article#article a, .detail article#article a:visited {
+    text-decoration: underline;
+    color: #222; }
+  .detail article#article a:hover {
+    color: #F34141; }
+  .detail article#article img {
+    max-width: 100%; }
+    .detail article#article img.left {
+      float: left;
+      margin: 0 40px 20px 0; }
+    .detail article#article img.right {
+      float: right;
+      margin: 0 0 20px 40px; }
+    .detail article#article img.outside-left {
+      float: left;
+      margin: 0 40px 20px -120px; }
+    .detail article#article img.outside-right {
+      float: right;
+      margin: 0 -120px 20px 40px; }
+    .detail article#article img.full {
+      width: 100%;
+      margin: 40px 0; }
+    .detail article#article img.center {
+      margin: 40px auto;
+      display: block;
+      text-align: center; }
+  .detail article#article blockquote {
+    margin: 40px 0;
+    padding: 5px 0 5px 40px;
+    font-style: italic;
+    border-left: 2px solid #222; }
+    .detail article#article blockquote p {
+      margin: 0; }
+  .detail article#article #socials {
+    margin-bottom: 60px; }
+    .detail article#article #socials .author-block {
+      display: inline-table;
+      width: 100%;
+      margin: 60px 0;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+      padding-top: 20px;
+      padding-bottom: 20px; }
+      .detail article#article #socials .author-block > div {
+        display: table-cell;
+        vertical-align: middle; }
+        .detail article#article #socials .author-block > div.picture {
+          width: 60px; }
+          .detail article#article #socials .author-block > div.picture img {
+            width: 60px;
+            border-radius: 30px;
+            display: block; }
+        .detail article#article #socials .author-block > div.job {
+          padding-left: 20px;
+          min-width: 300px;
+          color: #999;
+          line-height: 26px; }
+          .detail article#article #socials .author-block > div.job strong {
+            font-size: 22px;
+            color: #222; }
+        .detail article#article #socials .author-block > div.links {
+          text-align: right; }
+          .detail article#article #socials .author-block > div.links a, .detail article#article #socials .author-block > div.links a:visited {
+            color: #222;
+            font-size: 30px;
+            margin-left: 5px;
+            -webkit-transition: all 0.1s linear;
+                    transition: all 0.1s linear; }
+            .detail article#article #socials .author-block > div.links a:hover, .detail article#article #socials .author-block > div.links a:visited:hover {
+              color: #F34141; }

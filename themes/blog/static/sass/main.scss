@@ -1,5 +1,6 @@
 @import "base/reset";
 @import "base/variables";
+@import "base/fonts";
 @import "helpers/mixins";
 @import "helpers/shortcuts";
 @import "base/typo";
@@ -11,3 +12,4 @@
 
 @import "pages/nav";
 @import "pages/homepage";
+@import "pages/detail";
