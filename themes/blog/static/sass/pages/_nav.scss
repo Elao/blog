@@ -1,11 +1,12 @@
 #nav-overlay {
     z-index: 150;
     position: fixed;
+    overflow: auto;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 100px;
+    padding: 100px 100px 0 100px;
     background: transparentize($background-color, 0.05);
     visibility: hidden;
     opacity: 0;
@@ -15,5 +16,82 @@
         visibility: visible;
         opacity: 1;
         transition-delay: 0s;
+    }
+
+    .container {
+        margin-top: 50px;
+
+        .search {
+            position: relative;
+            border-left: 2px solid #222;
+            margin-bottom: 30px;
+
+            > input {
+                width: 100%;
+                font-size: 60px;
+                height: 150px;
+                line-height: 150px;
+                padding-left: 30px;
+                font-family: $headings-font-family;
+                letter-spacing: $headings-letter-spacing;
+                text-transform: uppercase;
+                background: none;
+                color: $text-color;
+                border: 0;
+            }
+
+            .start-typing {
+                position: absolute;
+                bottom: 5px;
+                left: 30px;
+                color: #999;
+                font-style: italic;
+                margin: 0;
+            }
+        }
+
+        .categories {
+            margin: 60px 0;
+            padding: 60px 0;
+            border-top: 1px solid transparentize($text-color, 0.8);
+            border-bottom: 1px solid transparentize($text-color, 0.8);
+
+            .row > div {
+                padding-bottom: 0;
+
+                &:hover {
+                    h3 {
+                        color: $main-color;
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 30px;
+                transition: all 0.1s linear;
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    font-size: 20px;
+
+                    a, a:visited {
+                        color: $text-color;
+                        display: block;
+                        transition: all 0.1s linear;
+
+                        &:hover {
+                            color: $main-color;
+                            text-decoration: none;
+
+                        }
+                    }
+                }
+            }
+        }
     }
 }

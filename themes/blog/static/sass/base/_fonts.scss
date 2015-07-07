@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'elaoblog';
+  src: url('../fonts/icons/elaoblog.eot?27127108');
+  src: url('../fonts/icons/elaoblog.eot?27127108#iefix') format('embedded-opentype'),
+       url('../fonts/icons/elaoblog.woff?27127108') format('woff'),
+       url('../fonts/icons/elaoblog.ttf?27127108') format('truetype'),
+       url('../fonts/icons/elaoblog.svg?27127108#elaoblog') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "elaoblog";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before { content: '\e800'; }
+.icon-github:before { content: '\e801'; }
+.icon-search:before { content: '\e802'; }
+
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url('../fonts/leaguespartan/leaguespartan-bold.eot');
+    src: url('../fonts/leaguespartan/leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/leaguespartan/leaguespartan-bold.woff2') format('woff2'),
+         url('../fonts/leaguespartan/leaguespartan-bold.woff') format('woff'),
+         url('../fonts/leaguespartan/leaguespartan-bold.ttf') format('truetype'),
+         url('../fonts/leaguespartan/leaguespartan-bold.svg#league_spartanbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

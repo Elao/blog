@@ -2,10 +2,7 @@
 <body>
     {{ partial "nav-overlay.html" . }}
     <div id="all">
-        <button type="button" class="nav-button"><span class="line-1"></span><span class="line-2"></span><span class="line-3"></span></button>
-        <div class="navbar">
-            <a href="#" class="logo"><img src="/images/logo.svg" alt="" /></a>
-        </div>
+        {{ partial "navbar.html" . }}
         {{ partial "slider.html" . }}
         <div class="container">
             <div class="articles-list">
