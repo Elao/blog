@@ -15,7 +15,7 @@
                         <h4><strong>{{ delimit .Params.tags ", " }}</strong> - {{ .Date.Format "02 Jan 2006" }}</h4>
                         <h2>{{ .Title }}</h2>
                         <p>{{ .Summary }}</p>
-                        <a href="{{ .Permalink }}" class="btn">Lire la suite</a>
+                        <a href="{{ .RelPermalink }}" class="btn">Lire la suite</a>
                     </div>
                     {{ if ne (mod $index 2) 0 }}
                         <div class="col-img"><img src="http://www.gravatar.com/avatar/7f70e04906c6be43177bfeafe903b649?s=600" alt=""></div>

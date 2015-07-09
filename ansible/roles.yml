@@ -62,6 +62,14 @@
   name:    elao.pip
   version: origin/1.0
 
+- src:     https://github.com/ElaoInfra/ansible-role-ruby
+  name:    elao.ruby
+  version: origin/1.0
+
+- src:     https://github.com/ElaoInfra/ansible-role-gem
+  name:    elao.gem
+  version: origin/1.0
+  
 - src:     https://github.com/ElaoInfra/ansible-role-mailcatcher
   name:    elao.mailcatcher
   version: origin/1.0
@@ -83,4 +91,6 @@
   version: origin/1.0
 
 # App
-
+- src:     git@github.com:ElaoInfra/ansible-role-hugo
+  name:    elao.hugo
+  version: origin/1.0
