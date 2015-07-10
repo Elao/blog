@@ -1,4 +1,8 @@
+{{ $author := index .Site.Data.authors .Params.author_username .Params.language }}
+{{ $social := (index .Site.Data.authors $.Params.author_username).social }}
+
 {{ partial "head.html" . }}
+
 <body class="detail">
     {{ partial "nav-overlay.html" . }}
     <div id="all">
@@ -6,10 +10,11 @@
         <header>
             <h4><strong>Conférence</strong> - {{ .Date.Format "02 Jan 2006" }}</h4>
             <h1>{{ .Title }}</h1>
+            {{ range .Params.tags }}<strong><a href="/tags/{{ . | urlize }}">{{ . }}</a> </strong>{{ end }}
             <p class="author">
-                <a href="#" class="author"><img src="{{ .Params.avatar }}" alt=""></a>
+                <a href="#" class="author"><img src="{{ $social.avatar_url }}" alt="{{ $author.display_name }}"></a>
                 <br/>
-                <span>écrit par <a href="#" class="strong">{{ .Params.author }}</a></span>
+                <span>écrit par <a href="#" class="strong">{{ $author.display_name }}</a></span>
             </p>
             <div class="intro">
                 {{ .Description }}
@@ -24,15 +29,15 @@
                 <div id="socials">
                     <div class="author-block">
                         <div class="picture">
-                            <img src="{{ .Params.avatar }}" alt="">
+                            <img src="{{ $social.avatar_url }}" alt="{{ $author.display_name }}">
                         </div>
                         <div class="job">
-                            <strong>{{ .Params.author }}</strong><br/>
-                            {{ .Params.function }}
+                            <strong>{{ $author.display_name }}</strong><br/>
+                            {{ $author.job_title }}
                         </div>
                         <div class="links">
-                            <a href="#" target="_blank"><i class="icon-twitter"></i></a>
-                            <a href="#" target="_blank"><i class="icon-github"></i></a>
+                            <a href="https://twitter.com/{{ $social.twitter }}" target="_blank"><i class="icon-twitter"></i></a>
+                            <a href="https://github.com/{{ $social.github }}" target="_blank"><i class="icon-github"></i></a>
                         </div>
                     </div>
 

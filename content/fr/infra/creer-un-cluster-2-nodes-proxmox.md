@@ -3,14 +3,15 @@ title       = "Créer un cluster 2 nodes Proxmox"
 date        = "2015-01-16"
 slug        = "creer-un-cluster-2-nodes-proxmox"
 description = "Rapide présentation d'une fonctionnalité intéressante des distributions Proxmox qui permet de faire du clustering avec deux ou plusieures machines physiques."
+language    = "fr"
+thumbnail   = "/"
 tags        = ["proxmox", "openvz", "cluster"]
 categories  = [
   "Proxmox",
   "Cluster"
 ]
-author   = "Guewen FAIVRE"
-avatar   = "http://www.gravatar.com/avatar/79ffd37e2f03e9b35b4fa3d5bb822317"
-function = "DevOps"
+
+author_username = "gfaivre"
 +++
 
 Bonjour à tous,
@@ -151,7 +152,7 @@ Une fois cela fait nous allons modifier l'entrée **cman** pour y ajouter les in
 
 Votre fichier doit donc à présent ressembler à ceci:
 
-```
+{{< highlight xml >}}
 <?xml version="1.0"?>
 <cluster name="elao" config_version="5">
 
@@ -163,7 +164,7 @@ Votre fichier doit donc à présent ressembler à ceci:
   <clusternode name="bismuth" votes="1" nodeid="2"/></clusternodes>
 
 </cluster>
-```
+{{< /highlight >}}
 
 Redémarrer à présent votre cluster avec un  ```/etc/init.d/pve-cluster restart``` vous devriez avoir à présent comme résultat à ```pvecm status```
 

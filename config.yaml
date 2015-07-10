@@ -8,6 +8,10 @@ params:
   Subtitle: "Spinning the cogs in the widgets"
   AuthorName: "ELAO"
 
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
 menu:
   main:
       - Name:       "About"
