@@ -39,6 +39,7 @@ elao_apt_repositories:
   - backports
   - dotdeb
   - nginx
+  - nodesource_0_12
 
 elao_apt_preferences:
   - ruby@bearstech
@@ -46,8 +47,18 @@ elao_apt_preferences:
   - file: dotdeb
     template: preferences/dotdeb_low.j2
   - nginx@nginx
+  - nodejs@nodesource_0_12
+  
+elao_apt_packages:
+  - name: golang
 
-elao_apt_packages: []
+#######
+# Ssh #
+#######
+
+elao_ssh_config_sshd_template: config/sshd/{{ _env }}.j2
+
+elao_ssh_config_template: config/{{ _env }}.j2
 
 #######
 # Git #
@@ -69,7 +80,7 @@ elao_ohmyzsh_users:
             else sudo mv /etc/php5/fpm/conf.d/20-xdebug.ini /etc/php5/fpm/conf.d/20-xdebug.ini.off; fi
             sudo service php5-fpm restart
         }
-      - cd {{ _app_dir }}/symfony
+      - cd {{ _app_dir }}
 
 #########
 # Files #
@@ -101,7 +112,17 @@ elao_logio_config_harvester:
 elao_nginx_config_template: config/http_{{ _env }}.conf.j2
 
 elao_nginx_configs_exclusive: true
-elao_nginx_configs: ~
+elao_nginx_configs: 
+  - file:     blog.conf
+    template: configs/server_{{ _env }}.conf.j2
+    config:
+      - listen: "{{ ansible_eth1.ipv4.address }}:80"
+      - access_log:  "{{ elao_nginx_log_dir }}/app.access.log"
+      - error_log:   "{{ elao_nginx_log_dir }}/app.error.log"
+      - location /:
+        - proxy_set_header: "Host $host"
+        - proxy_set_header: "X-Real-IP $remote_addr"
+        - proxy_pass:       "http://localhost:1313"
 
 ##############
 # Supervisor #
@@ -110,6 +131,18 @@ elao_nginx_configs: ~
 elao_supervisor_config_template: config/{{ _env }}.conf.j2
 
 elao_supervisor_configs_exclusive: true
-elao_supervisor_configs: ~
+elao_supervisor_configs:
+  - file:     inet-http-server.conf
+    template: configs/inet_http_server_{{ _env }}.conf.j2
+  - file:     app-worker-hugo.conf
+    template: configs/program_{{ _env }}.conf.j2
+    config:
+      - app-worker-hugo:
+        - command:         hugo server --theme=blog --buildDrafts=true --watch=true --ignoreCache=true
+        - directory:       "{{ _app_dir }}/hugo"
+        - user:            "www-data"
+        - autorestart:     true
+        - stdout_logfile:  "{{ elao_supervisor_log_dir }}/app-worker-hugo.log"
+        - redirect_stderr: true
 
 

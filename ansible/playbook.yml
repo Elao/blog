@@ -20,8 +20,11 @@
     - { role: elao.make }
     - { role: elao.python }
     - { role: elao.pip }
+    - { role: elao.ruby }
+    - { role: elao.gem }
     - { role: elao.mailcatcher }
     - { role: elao.logio }
     - { role: elao.nginx }
+    - { role: elao.supervisor }
     # App
-    #- { role: elao.gohugo }
+    - { role: elao.hugo }
