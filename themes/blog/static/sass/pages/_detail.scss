@@ -68,7 +68,7 @@
 
         .article-infos {
             height: 220px;
-            width: 300px;
+            width: 80px;
             z-index: 210;
             position: relative;
             background: transparent;
@@ -87,38 +87,18 @@
                 height: 100%;
                 transition: all 0.3s linear;
             }
-
-            p {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 100%;
-                padding: 10px 20px;
-                text-align: center;
-                font-size: 16px;
-                line-height: 26px;
-                opacity: 0;
-                transition: all 0.3s linear;
-            }
         }
 
         &:hover {
-            width: 300px;
-
-            > a {
-                height: 300px;
-                opacity: 0;
+            a {
+                color: $background-color;
             }
 
             .article-infos {
-                background: $text-color;
+                background: $main-color;
 
                 .article-img {
-                    opacity: 0.3;
-                }
-
-                p {
-                    opacity: 1;
+                    opacity: 0.2;
                 }
             }
         }
