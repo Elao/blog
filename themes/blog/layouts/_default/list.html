@@ -9,7 +9,7 @@
                 {{ range $index, $article := .Data.Pages }}
                 <article>
                     {{ if eq (mod $index 2) 0 }}
-                        <div class="col-img"><img src="/images/posts/thumbnails/matryoshka.jpg" alt=""></div>
+                        <div class="col-img"><img src="{{ .Params.thumbnail }}" alt=""></div>
                     {{ end }}
                     <div class="col-text">
                         <h4><strong>{{ delimit .Params.tags ", " }}</strong> - {{ .Date.Format "02 Jan 2006" }}</h4>
@@ -18,7 +18,7 @@
                         <a href="{{ .RelPermalink }}" class="btn">Lire la suite</a>
                     </div>
                     {{ if ne (mod $index 2) 0 }}
-                        <div class="col-img"><img src="/images/posts/thumbnails/hdd_partition.jpg" alt=""></div>
+                        <div class="col-img"><img src="{{ .Params.thumbnail }}" alt=""></div>
                     {{ end }}
                 </article>
                 {{ end }}

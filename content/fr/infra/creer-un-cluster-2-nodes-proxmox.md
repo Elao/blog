@@ -4,7 +4,7 @@ date        = "2015-01-16"
 slug        = "creer-un-cluster-2-nodes-proxmox"
 description = "Rapide présentation d'une fonctionnalité intéressante des distributions Proxmox qui permet de faire du clustering avec deux ou plusieures machines physiques."
 language    = "fr"
-thumbnail   = "/"
+thumbnail   = "/images/posts/thumbnails/matryoshka.jpg"
 tags        = ["proxmox", "openvz", "cluster"]
 categories  = [
   "Proxmox",

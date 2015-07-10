@@ -9,13 +9,13 @@
     <div id="all">
         {{ partial "navbar.html" . }}
         <div class="article-link article-prev">
-            <a href="#">Précédent</a>
+            <a href="{{if .PrevInSection}}{{.PrevInSection.Permalink}}{{end}}">Précédent</a>
             <div class="article-infos">
                 <div class="article-img" style="background-image: url('/images/carousel/pic-1.jpg');"></div>
             </div>
         </div>
         <div class="article-link article-next">
-            <a href="#">Suivant</a>
+            <a href="{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}">Suivant</a>
             <div class="article-infos">
                 <div class="article-img" style="background-image: url('/images/carousel/pic-1.jpg');"></div>
             </div>
