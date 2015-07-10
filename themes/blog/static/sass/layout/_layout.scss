@@ -4,6 +4,7 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     color: $text-color;
+    letter-spacing: -0.04em;
 
     &.nav-opened {
         overflow: hidden;
@@ -11,19 +12,28 @@ body {
 }
 
 ::-webkit-input-placeholder {
-   color: $text-color;
+   color: lighten($text-color, 50%);
 }
 
 :-moz-placeholder {
-   color: $text-color;
+   color: lighten($text-color, 50%);
 }
 
 ::-moz-placeholder {
-   color: $text-color;
+   color: lighten($text-color, 50%);
 }
 
 :-ms-input-placeholder {
-   color: $text-color;
+   color: lighten($text-color, 50%);
+}
+
+::selection {
+    background: $main-color;
+    color: #FFF;
+}
+::-moz-selection {
+    background: $main-color;
+    color: #FFF;
 }
 
 .container {
@@ -49,19 +59,19 @@ body {
     z-index: 160;
     background-color: transparentize($background-color, 0.05);
     text-align: center;
+}
 
-    .logo {
-        position: absolute;
+.logo {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    z-index: 200;
+    top: 0;
+    left: 0;
+
+    img {
         width: 100px;
-        height: 100px;
-        z-index: 110;
-        top: 0;
-        left: 0;
-
-        img {
-            width: 100px;
-            display: block;
-        }
+        display: block;
     }
 }
 
@@ -69,7 +79,7 @@ body {
     background: none;
     border: 0;
     position: fixed;
-    z-index: 160;
+    z-index: 170;
     width: 40px;
     height: 30px;
     top: 50px;
@@ -147,3 +157,16 @@ footer {
         color: transparentize($text-color, 0.6);
     }
 }
+
+.is-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.is-animated {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+

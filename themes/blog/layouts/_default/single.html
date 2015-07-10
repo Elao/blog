@@ -1,8 +1,23 @@
 {{ partial "head.html" . }}
 <body class="detail">
     {{ partial "nav-overlay.html" . }}
+    <div id="read-progress"><div></div></div>
     <div id="all">
         {{ partial "navbar.html" . }}
+        <div class="article-link article-prev">
+            <a href="#">Précédent</a>
+            <div class="article-infos">
+                <div class="article-img" style="background-image: url('/images/carousel/pic-1.jpg');"></div>
+                <p>Lorem ipsum dolor sit amet ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <div class="article-link article-next">
+            <a href="#">Suivant</a>
+            <div class="article-infos">
+                <div class="article-img" style="background-image: url('/images/carousel/pic-1.jpg');"></div>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
         <header>
             <h4><strong>Conférence</strong> - {{ .Date.Format "02 Jan 2006" }}</h4>
             <h1>{{ .Title }}</h1>
@@ -54,6 +69,5 @@
             {{ partial "footer.html" . }}
         </div>
     </div>
-    <script src="/js/main.js"></script>
 </body>
 </html>

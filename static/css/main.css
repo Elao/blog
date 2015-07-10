@@ -496,6 +496,18 @@ table {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Work Sans';
+  src: url("../fonts/worksans/WorkSans-Regular.woff2") format("woff2"), url("../fonts/worksans/WorkSans-Regular.woff") format("woff"), url("../fonts/worksans/WorkSans-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url("../fonts/worksans/WorkSans-SemiBold.woff2") format("woff2"), url("../fonts/worksans/WorkSans-SemiBold.woff") format("woff"), url("../fonts/worksans/WorkSans-SemiBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal; }
+
 .text-left {
   text-align: left; }
 
@@ -540,14 +552,14 @@ table {
     clear: both; }
 
 hr {
-  margin-top: 32.4px;
-  margin-bottom: 32.4px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   border: 0;
   border-top: 1px solid #CCC; }
   hr.big {
     border-top: 2px solid #DDD;
-    margin-top: 64.8px;
-    margin-bottom: 64.8px; }
+    margin-top: 60px;
+    margin-bottom: 60px; }
 
 a, a:visited {
   color: #F34141;
@@ -560,7 +572,8 @@ h1, h2, h3, h4 {
   font-weight: 800;
   line-height: 1.4;
   color: #222;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: -0.03em; }
   h1 small,
   h1 .small, h2 small,
   h2 .small, h3 small,
@@ -584,7 +597,6 @@ h1, h2, h3, h4 {
 h1 {
   font-family: "League Spartan", "Helvetica Neue", "Helvetica";
   font-size: 60px;
-  letter-spacing: -0.03em;
   margin-bottom: 10px;
   position: relative; }
 
@@ -592,7 +604,6 @@ h2 {
   font-family: "League Spartan", "Helvetica Neue", "Helvetica";
   font-size: 50px;
   margin: 10px 0;
-  letter-spacing: -0.03em;
   text-transform: none; }
 
 h3 {
@@ -600,9 +611,8 @@ h3 {
   font-size: 26px; }
 
 h4 {
-  font-size: 18px;
-  font-weight: normal;
-  letter-spacing: 0; }
+  font-size: 16px;
+  font-weight: normal; }
 
 p {
   margin: 0 0 20px 0; }
@@ -1031,24 +1041,37 @@ ul {
 
 body {
   background: #F0F0F0;
-  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica";
-  font-size: 18px;
-  line-height: 32.4px;
-  color: #222; }
+  font-family: "Work Sans", "Helvetica Neue", "Helvetica";
+  font-size: 17px;
+  line-height: 30px;
+  color: #222;
+  letter-spacing: -0.04em; }
   body.nav-opened {
     overflow: hidden; }
 
 ::-webkit-input-placeholder {
-  color: #222; }
+  color: #a2a2a2; }
 
 :-moz-placeholder {
-  color: #222; }
+  color: #a2a2a2; }
 
 ::-moz-placeholder {
-  color: #222; }
+  color: #a2a2a2; }
 
 :-ms-input-placeholder {
-  color: #222; }
+  color: #a2a2a2; }
+
+::-moz-selection {
+  background: #F34141;
+  color: #FFF; }
+
+::selection {
+  background: #F34141;
+  color: #FFF; }
+
+::-moz-selection {
+  background: #F34141;
+  color: #FFF; }
 
 .container {
   width: 100%;
@@ -1077,22 +1100,23 @@ body {
   z-index: 160;
   background-color: rgba(240, 240, 240, 0.95);
   text-align: center; }
-  .navbar .logo {
-    position: absolute;
+
+.logo {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  z-index: 200;
+  top: 0;
+  left: 0; }
+  .logo img {
     width: 100px;
-    height: 100px;
-    z-index: 110;
-    top: 0;
-    left: 0; }
-    .navbar .logo img {
-      width: 100px;
-      display: block; }
+    display: block; }
 
 .nav-button {
   background: none;
   border: 0;
   position: fixed;
-  z-index: 160;
+  z-index: 170;
   width: 40px;
   height: 30px;
   top: 50px;
@@ -1157,6 +1181,20 @@ footer {
   font-weight: bold; }
   footer, footer a, footer a:visited {
     color: rgba(34, 34, 34, 0.4); }
+
+.is-hidden {
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+      -ms-transform: translateY(40px);
+          transform: translateY(40px); }
+
+.is-animated {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
 
 .btn {
   padding: 13px 40px;
@@ -1429,12 +1467,21 @@ footer {
         height: 150px;
         line-height: 150px;
         padding-left: 30px;
+        padding-right: 60px;
         font-family: "League Spartan", "Helvetica Neue", "Helvetica";
         letter-spacing: -0.03em;
         text-transform: uppercase;
         background: none;
         color: #222;
         border: 0; }
+        #nav-overlay .container .search > input:focus + i {
+          color: #222; }
+      #nav-overlay .container .search i {
+        position: absolute;
+        right: 0;
+        top: 44px;
+        font-size: 40px;
+        color: #a2a2a2; }
       #nav-overlay .container .search .start-typing {
         position: absolute;
         bottom: 5px;
@@ -1458,12 +1505,9 @@ footer {
       #nav-overlay .container .categories ul {
         list-style: none; }
         #nav-overlay .container .categories ul li {
-          text-transform: uppercase;
-          font-weight: 800;
           font-size: 20px; }
           #nav-overlay .container .categories ul li a, #nav-overlay .container .categories ul li a:visited {
             color: #222;
-            display: block;
             -webkit-transition: all 0.1s linear;
                     transition: all 0.1s linear; }
             #nav-overlay .container .categories ul li a:hover, #nav-overlay .container .categories ul li a:visited:hover {
@@ -1556,10 +1600,14 @@ footer {
     .articles-list article > div {
       display: table-cell;
       vertical-align: middle;
-      padding: 25px; }
+      padding: 40px; }
       .articles-list article > div.col-text {
-        width: 60%;
-        padding: 25px 40px; }
+        width: 60%; }
+      .articles-list article > div.col-img {
+        padding-right: 0; }
+    .articles-list article > .col-text + .col-img {
+      padding-left: 0;
+      padding-right: 40px; }
     .articles-list article img {
       max-width: 100%;
       display: block; }
@@ -1569,6 +1617,13 @@ footer {
       line-height: 1.2;
       margin-top: 25px;
       margin-bottom: 15px; }
+      .articles-list article h2 a, .articles-list article h2 a:visited {
+        color: #222;
+        -webkit-transition: all 0.2s linear;
+                transition: all 0.2s linear; }
+        .articles-list article h2 a:hover, .articles-list article h2 a:visited:hover {
+          color: #F34141;
+          text-decoration: none; }
     .articles-list article p {
       padding: 0 0 20px 0; }
     .articles-list article .btn {
@@ -1594,6 +1649,116 @@ footer {
       color: #F34141;
       background: #FFF;
       text-decoration: none; }
+
+#read-progress {
+  position: fixed;
+  top: 0;
+  left: 100px;
+  z-index: 500; }
+  #read-progress > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+    background-color: #F34141; }
+
+.detail .article-link {
+  position: fixed;
+  z-index: 200;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: 2px solid #F34141;
+  height: 220px;
+  width: 80px;
+  color: #F34141;
+  text-transform: uppercase;
+  font-weight: 600;
+  overflow: hidden;
+  -webkit-transition: width 0.3s ease;
+          transition: width 0.3s ease; }
+  .detail .article-link > a {
+    width: 220px;
+    height: 80px;
+    line-height: 80px;
+    z-index: 220;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease; }
+    .detail .article-link > a:hover {
+      text-decoration: none; }
+  .detail .article-link.article-prev {
+    left: 0;
+    border-left: 0; }
+    .detail .article-link.article-prev > a {
+      -webkit-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+      -webkit-transform-origin: top left;
+          -ms-transform-origin: top left;
+              transform-origin: top left;
+      margin-top: 218px;
+      left: 0; }
+  .detail .article-link.article-next {
+    right: 0;
+    border-right: 0; }
+    .detail .article-link.article-next > a {
+      -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+              transform: rotate(90deg);
+      -webkit-transform-origin: top right;
+          -ms-transform-origin: top right;
+              transform-origin: top right;
+      margin-top: 218px;
+      right: 0; }
+  .detail .article-link .article-infos {
+    height: 220px;
+    width: 300px;
+    z-index: 210;
+    position: relative;
+    background: transparent;
+    -webkit-transition: all 0.3s linear;
+            transition: all 0.3s linear; }
+    .detail .article-link .article-infos .article-img {
+      opacity: 0;
+      background: none;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all 0.3s linear;
+              transition: all 0.3s linear; }
+    .detail .article-link .article-infos p {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      width: 100%;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 26px;
+      opacity: 0;
+      -webkit-transition: all 0.3s linear;
+              transition: all 0.3s linear; }
+  .detail .article-link:hover {
+    width: 300px; }
+    .detail .article-link:hover > a {
+      height: 300px;
+      opacity: 0; }
+    .detail .article-link:hover .article-infos {
+      background: #222; }
+      .detail .article-link:hover .article-infos .article-img {
+        opacity: 0.3; }
+      .detail .article-link:hover .article-infos p {
+        opacity: 1; }
 
 .detail header {
   text-align: center;
@@ -1660,10 +1825,12 @@ footer {
     padding: 10px 15px;
     font-size: 16px;
     line-height: 28px;
-    margin: 20px 0; }
+    margin: 20px 0;
+    letter-spacing: 0; }
     .detail article#article pre code {
       font-family: "Roboto Mono", monospace;
-      color: #EEE; }
+      color: #EEE;
+      letter-spacing: 0; }
   .detail article#article a, .detail article#article a:visited {
     text-decoration: underline;
     color: #222; }

@@ -41,3 +41,20 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/worksans/WorkSans-Regular.woff2') format('woff2'),
+         url('../fonts/worksans/WorkSans-Regular.woff') format('woff'),
+         url('../fonts/worksans/WorkSans-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../fonts/worksans/WorkSans-SemiBold.woff2') format('woff2'),
+         url('../fonts/worksans/WorkSans-SemiBold.woff') format('woff'),
+         url('../fonts/worksans/WorkSans-SemiBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}

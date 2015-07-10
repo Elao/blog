@@ -32,12 +32,25 @@
                 height: 150px;
                 line-height: 150px;
                 padding-left: 30px;
+                padding-right: 60px;
                 font-family: $headings-font-family;
                 letter-spacing: $headings-letter-spacing;
                 text-transform: uppercase;
                 background: none;
                 color: $text-color;
                 border: 0;
+
+                &:focus + i {
+                    color: #222;
+                }
+            }
+
+            i {
+                position: absolute;
+                right: 0;
+                top: 44px;
+                font-size: 40px;
+                color: lighten($text-color, 50%);
             }
 
             .start-typing {
@@ -75,13 +88,10 @@
                 list-style: none;
 
                 li {
-                    text-transform: uppercase;
-                    font-weight: 800;
                     font-size: 20px;
 
                     a, a:visited {
                         color: $text-color;
-                        display: block;
                         transition: all 0.1s linear;
 
                         &:hover {
