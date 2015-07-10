@@ -1489,6 +1489,10 @@ footer {
         color: #999;
         font-style: italic;
         margin: 0; }
+    #nav-overlay .container h3 {
+      font-size: 30px;
+      -webkit-transition: all 0.1s linear;
+              transition: all 0.1s linear; }
     #nav-overlay .container .categories {
       margin: 60px 0;
       padding: 60px 0;
@@ -1498,10 +1502,6 @@ footer {
         padding-bottom: 0; }
         #nav-overlay .container .categories .row > div:hover h3 {
           color: #F34141; }
-      #nav-overlay .container .categories h3 {
-        font-size: 30px;
-        -webkit-transition: all 0.1s linear;
-                transition: all 0.1s linear; }
       #nav-overlay .container .categories ul {
         list-style: none; }
         #nav-overlay .container .categories ul li {
@@ -1513,6 +1513,52 @@ footer {
             #nav-overlay .container .categories ul li a:hover, #nav-overlay .container .categories ul li a:visited:hover {
               color: #F34141;
               text-decoration: none; }
+    #nav-overlay .container .last-articles {
+      margin-top: 30px;
+      margin-left: -20px;
+      margin-right: -20px; }
+      #nav-overlay .container .last-articles article {
+        padding: 0;
+        display: inline-table;
+        width: 50%;
+        float: left;
+        background: transparent;
+        -webkit-transition: all 0.2s linear;
+                transition: all 0.2s linear; }
+        #nav-overlay .container .last-articles article:nth-child(2n+1) {
+          clear: both; }
+        #nav-overlay .container .last-articles article:hover {
+          background: #FFF; }
+        #nav-overlay .container .last-articles article > div {
+          float: none;
+          display: table-cell;
+          vertical-align: middle;
+          padding: 20px; }
+          #nav-overlay .container .last-articles article > div.col-img {
+            width: 30%;
+            vertical-align: top; }
+            #nav-overlay .container .last-articles article > div.col-img img {
+              display: block;
+              -webkit-transition: all 0.1s linear;
+                      transition: all 0.1s linear; }
+              #nav-overlay .container .last-articles article > div.col-img img:hover {
+                opacity: 0.7; }
+        #nav-overlay .container .last-articles article h4 {
+          margin-bottom: 15px;
+          color: #999; }
+        #nav-overlay .container .last-articles article h3 {
+          text-transform: none;
+          font-size: 24px;
+          margin-bottom: 0; }
+          #nav-overlay .container .last-articles article h3 a, #nav-overlay .container .last-articles article h3 a:visited {
+            color: #222;
+            -webkit-transition: all 0.1s linear;
+                    transition: all 0.1s linear; }
+            #nav-overlay .container .last-articles article h3 a:hover, #nav-overlay .container .last-articles article h3 a:visited:hover {
+              text-decoration: none;
+              color: #F34141; }
+      #nav-overlay .container .last-articles img {
+        max-width: 100%; }
 
 .homepage-slider {
   margin-bottom: 50px; }
@@ -1612,7 +1658,7 @@ footer {
       max-width: 100%;
       display: block; }
     .articles-list article h4 {
-      opacity: 0.5; }
+      color: #999; }
     .articles-list article h2 {
       line-height: 1.2;
       margin-top: 25px;

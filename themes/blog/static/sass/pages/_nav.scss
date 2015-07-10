@@ -63,6 +63,11 @@
             }
         }
 
+        h3 {
+            font-size: 30px;
+            transition: all 0.1s linear;
+        }
+
         .categories {
             margin: 60px 0;
             padding: 60px 0;
@@ -77,11 +82,6 @@
                         color: $main-color;
                     }
                 }
-            }
-
-            h3 {
-                font-size: 30px;
-                transition: all 0.1s linear;
             }
 
             ul {
@@ -101,6 +101,75 @@
                         }
                     }
                 }
+            }
+        }
+
+        .last-articles {
+            margin-top: 30px;
+            margin-left: -20px;
+            margin-right: -20px;
+
+            article {
+                padding: 0;
+                display: inline-table;
+                width: 50%;
+                float: left;
+                background: transparent;
+                transition: all 0.2s linear;
+
+                &:nth-child(2n+1) {
+                    clear: both;
+                }
+
+                &:hover {
+                    background: #FFF;
+                }
+
+                > div {
+                    float: none;
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 20px;
+
+                    &.col-img {
+                        width: 30%;
+                        vertical-align: top;
+
+                        img {
+                            display: block;
+                            transition: all 0.1s linear;
+
+                            &:hover {
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+
+                h4 {
+                    margin-bottom: 15px;
+                    color: #999;
+                }
+
+                h3 {
+                    text-transform: none;
+                    font-size: 24px;
+                    margin-bottom: 0;
+
+                    a, a:visited {
+                        color: $headings-color;
+                        transition: all 0.1s linear;
+
+                        &:hover {
+                            text-decoration: none;
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+
+            img {
+                max-width: 100%;
             }
         }
     }
