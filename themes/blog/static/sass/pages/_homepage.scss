@@ -115,12 +115,20 @@
         > div {
             display: table-cell;
             vertical-align: middle;
-            padding: 25px;
+            padding: 40px;
 
             &.col-text {
                 width: 60%;
-                padding: 25px 40px;
             }
+
+            &.col-img {
+                padding-right: 0;
+            }
+        }
+
+        > .col-text + .col-img {
+            padding-left: 0;
+            padding-right: 40px;
         }
 
         img {
@@ -129,13 +137,23 @@
         }
 
         h4 {
-            opacity: 0.5;
+            color: #999;
         }
 
         h2 {
             line-height: 1.2;
             margin-top: 25px;
             margin-bottom: 15px;
+
+            a, a:visited {
+                color: $headings-color;
+                transition: all 0.2s linear;
+
+                &:hover {
+                    color: $main-color;
+                    text-decoration: none;
+                }
+            }
         }
 
         p {

@@ -13,7 +13,7 @@
                     {{ end }}
                     <div class="col-text">
                         <h4><strong>{{ delimit .Params.tags ", " }}</strong> - {{ .Date.Format "02 Jan 2006" }}</h4>
-                        <h2>{{ .Title }}</h2>
+                        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                         <p>{{ .Summary }}</p>
                         <a href="{{ .RelPermalink }}" class="btn">Lire la suite</a>
                     </div>
@@ -33,6 +33,5 @@
             {{ partial "footer.html" . }}
         </div>
     </div>
-    <script src="/js/main.js"></script>
 </body>
 </html>
