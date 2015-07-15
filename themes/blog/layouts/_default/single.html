@@ -8,22 +8,25 @@
     <div id="read-progress"><div></div></div>
     <div id="all">
         {{ partial "navbar.html" . }}
+        {{if .PrevInSection}}
         <div class="article-link article-prev">
-            <a href="{{if .PrevInSection}}{{.PrevInSection.Permalink}}{{end}}">Précédent</a>
+            <a href="{{.PrevInSection.Permalink}}">Précédent</a>
             <div class="article-infos">
-                <div class="article-img" style="background-image: url('/images/carousel/pic-1.jpg');"></div>
+                <div class="article-img" style="background-image: url('{{ .PrevInSection.Params.thumbnail }}');"></div>
             </div>
         </div>
+        {{end}}
+        {{if .NextInSection}}
         <div class="article-link article-next">
             <a href="{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}">Suivant</a>
             <div class="article-infos">
-                <div class="article-img" style="background-image: url('/images/carousel/pic-1.jpg');"></div>
+                <div class="article-img" style="background-image: url('{{ .NextInSection.Params.thumbnail }}');"></div>
             </div>
         </div>
+        {{end}}
         <header>
-            <h4><strong>Conférence</strong> - {{ .Date.Format "02 Jan 2006" }}</h4>
+            <h4>{{ range .Params.tags }}<strong><a href="/tags/{{ . | urlize }}">{{ . }}</a></strong> {{ end }} - {{ .Date.Format "02 Jan 2006" }}</h4>
             <h1>{{ .Title }}</h1>
-            {{ range .Params.tags }}<strong><a href="/tags/{{ . | urlize }}">{{ . }}</a> </strong>{{ end }}
             <p class="author">
                 <a href="#" class="author"><img src="{{ $social.avatar_url }}" alt="{{ $author.display_name }}"></a>
                 <br/>

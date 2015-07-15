@@ -9244,35 +9244,39 @@ $(document).ready(function(){
         });
     });
 
+});
 
+$(window).load(function(){
     if ($('#read-progress').length > 0) {
-        var documentHeight = $(document).height();
+        var documentHeight = $('#disqus_thread').offset().top;
         var windowHeight = $(window).height();
         var scrollTop = $(window).scrollTop();
+        var offset = ($(window).width() > 767) ? 100 : 60;
 
-        $('#read-progress').width($(window).width() - 100);
+        $('#read-progress').width($(window).width() - offset);
 
         scrollTop = $(window).scrollTop();
         var scrollPercent = (scrollTop) / (documentHeight - windowHeight);
-        var pct = scrollPercent * 100;
+        var pct = (scrollPercent < 1) ? scrollPercent * 100 : 100;
         $('#read-progress div').css('width', pct + "%");
 
         $(window).resize(function(){
-            documentHeight = $(document).height();
+            documentHeight = $('#disqus_thread').offset().top;
             windowHeight = $(window).height();
             scrollTop = $(window).scrollTop();
+            offset = ($(window).width() > 767) ? 100 : 60;
 
-            $('#read-progress').width($(window).width() - 100);
+            $('#read-progress').width($(window).width() - offset);
 
             var scrollPercent = (scrollTop) / (documentHeight - windowHeight);
-            var pct = scrollPercent * 100;
+            var pct = (scrollPercent < 1) ? scrollPercent * 100 : 100;
             $('#read-progress div').css('width', pct + "%");
         });
 
         $(window).on("scroll", function() {
             scrollTop = $(window).scrollTop();
             var scrollPercent = (scrollTop) / (documentHeight - windowHeight);
-            var pct = scrollPercent * 100;
+            var pct = (scrollPercent < 1) ? scrollPercent * 100 : 100;
             $('#read-progress div').css('width', pct + "%");
         });
     }
