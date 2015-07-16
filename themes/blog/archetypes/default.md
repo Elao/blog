@@ -1,13 +1,10 @@
-+++
-title       = "My title"
-date        = "2015-01-16"
-slug        = "slug-of-my-post"
-description = "Description of my post."
-thumbnail   = ""
-tags = ["x", "y"]
-categories = ["x", "y"]
+---
+type:           "page"
+title:          "My title"
+date:           "2015-01-16"
+publishdate:    "2015-01-16"
+draft:          false
+slug:           "slug-of-my-page"
+description:    "Description of my page."
 
-author   = "Firstname Lastname"
-avatar   = "http://www.gravatar.com/avatar/my-gravatar-id"
-function = "My job"
-+++
+---

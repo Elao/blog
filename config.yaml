@@ -3,29 +3,58 @@
 baseurl:        "http://blog.elao.dev/"
 languageCode:   "fr-FR"
 title:          "Le blog ELAO"
+log:            true
+logFile:        "/var/log/hugo/hugo.log"
+# verbose output
+verbose:                    true
+# verbose logging
+verboseLog:                 true
 
 params:
   Subtitle: "Spinning the cogs in the widgets"
   AuthorName: "ELAO"
+  TwitterUser: "Elao"
 
 taxonomies:
-  tag: "tags"
+  tag:      "tags"
   category: "categories"
+  author:   "authors'"
 
 menu:
   main:
-      - Name:       "About"
-        Identifier: "about"
-        URL:        "/about"
-        Weight:     80
+      # INFRA
       - Name:       "Infra"
         Identifier: "infra"
         URL:        "/infra"
-        Weight:     90
+        Weight:     200
+      - Name:       "Proxmox"
+        Identifier: "proxmox"
+        URL:        "/categories/proxmox"
+        Weight:     10
+        parent:     "infra"
+      - Name:       "OpenVZ"
+        Identifier: "openvz"
+        URL:        "/categories/openvz"
+        Weight:     20
+        parent:     "infra"
+      - Name:       "Linux"
+        Identifier: "linux"
+        URL:        "/categories/linux"
+        Weight:     30
+        parent:     "infra"
+      # DEV
       - Name:       "Dev"
         Identifier: "dev"
         URL:        "/dev"
-        Weight:     100
+        Weight:     220
+      - Name:       "Design"
+        Identifier: "design"
+        URL:        "/design"
+        Weight:     210
+      - Name:       "About"
+        Identifier: "about"
+        URL:        "/about"
+        Weight:     200
 
   sidebar:
       - Name:       "Mon lien 1"

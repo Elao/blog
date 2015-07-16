@@ -3,22 +3,21 @@
     {{ partial "nav-overlay.html" . }}
     <div id="all">
         {{ partial "navbar.html" . }}
-        {{ partial "slider.html" . }}
         <div class="container">
             <div class="articles-list">
-                {{ range $index, $article := .Data.Pages }}
+                {{ range $index, $article := .Site.Taxonomies.categories.proxmox }}
                 <article>
                     {{ if eq (mod $index 2) 0 }}
-                        <div class="col-img"><a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" /></a></div>
+                        <div class="col-img"><a href="{{ .Page.Permalink }}"><img src="{{ .Page.Params.thumbnail }}" alt="{{ .Page.Title }}" /></a></div>
                     {{ end }}
                     <div class="col-text">
-                        <h4>{{ range .Params.tags }}<strong><a href="/tags/{{ . | urlize }}">{{ . }}</a></strong> {{ end }} - {{ .Date.Format "02 Jan 2006" }}</h4>
-                        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                        <p>{{ .Summary }}</p>
-                        <a href="{{ .RelPermalink }}" class="btn">Lire la suite</a>
+                        <h4>{{ range .Page.Params.tags }}<strong><a href="/tags/{{ . | urlize }}">{{ . }}</a></strong> {{ end }} - {{ .Page.Date.Format "02 Jan 2006" }}</h4>
+                        <h2><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a></h2>
+                        <p>{{ .Page.Summary }}</p>
+                        <a href="{{ .Page.RelPermalink }}" class="btn">Lire la suite</a>
                     </div>
                     {{ if ne (mod $index 2) 0 }}
-                        <div class="col-img"><a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" /></a></div>
+                        <div class="col-img"><a href="{{ .Page.Permalink }}"><img src="{{ .Page.Params.thumbnail }}" alt="{{ .Page.Title }}" /></a></div>
                     {{ end }}
                 </article>
                 {{ end }}

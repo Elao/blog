@@ -1,18 +1,23 @@
-+++
-title       = "Créer un cluster 2 nodes Proxmox"
-date        = "2015-01-16"
-slug        = "creer-un-cluster-2-nodes-proxmox"
-description = "Rapide présentation d'une fonctionnalité intéressante des distributions Proxmox qui permet de faire du clustering avec deux ou plusieures machines physiques."
-language    = "fr"
-thumbnail   = "/images/posts/thumbnails/matryoshka.jpg"
-tags        = ["proxmox", "openvz", "cluster"]
-categories  = [
-  "Proxmox",
-  "Cluster"
-]
+---
+type:               "post"
+title:              "Créer un cluster 2 nodes Proxmox"
+date:               "2015-01-16"
+publishdate:        "2015-01-16"
+draft:              false
+slug:               "creer-un-cluster-2-nodes-proxmox"
+description:        "Rapide présentation d'une fonctionnalité intéressante des distributions Proxmox qui permet de faire du clustering avec deux ou plusieures machines physiques."
+language:           "fr"
+thumbnail:          "/images/posts/thumbnails/matryoshka.jpg"
+tags:               ["proxmox", "openvz", "cluster"]
+categories:         ["Infra", "Proxmox", "Cluster"]
 
-author_username = "gfaivre"
-+++
+author_username:    "gfaivre"
+
+#aliases:
+#    - /posts/fr/infra/creer-un-cluster-2-nodes-proxmox/
+#    - /fr/infra/creer-un-cluster-2-nodes-proxmox/
+
+---
 
 Bonjour à tous,
 

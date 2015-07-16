@@ -1,3 +1,4 @@
+
 <div id="nav-overlay">
     <div class="container">
         <div class="search">
@@ -7,42 +8,18 @@
         </div>
         <div class="categories">
             <div class="row">
-                <div class="col-sm-3">
-                    <h3>Design</h3>
-                    <ul>
-                        <li><a href="#">Ux / Ui</a></li>
-                        <li><a href="#">Photoshop</a></li>
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Logo</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h3>Design</h3>
-                    <ul>
-                        <li><a href="#">Ux / Ui</a></li>
-                        <li><a href="#">Photoshop</a></li>
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Logo</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h3>Design</h3>
-                    <ul>
-                        <li><a href="#">Ux / Ui</a></li>
-                        <li><a href="#">Photoshop</a></li>
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Logo</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h3>Design</h3>
-                    <ul>
-                        <li><a href="#">Ux / Ui</a></li>
-                        <li><a href="#">Photoshop</a></li>
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Logo</a></li>
-                    </ul>
-                </div>
+                {{ $currentNode := . }}
+                {{ range .Site.Menus.main }}
+                        <div class="col-sm-3">
+                            <h3>{{ .Name }}</h3>
+                            <ul>
+                            {{ range .Children }}
+                                <li><a href="{{.URL}}">{{ .Name }}</a></li>
+                            {{ end }}
+                            </ul>
+                            
+                        </div>
+                {{ end }}
             </div>
         </div>
         <h3>Derniers articles</h3>
