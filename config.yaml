@@ -2,8 +2,8 @@
 
 baseurl:        "http://blog.elao.dev/"
 languageCode:   "fr-FR"
-title:          "Le blog ELAO"
-Paginate:       1
+title:          "Le blog de la team ELAO"
+Paginate:       10
 log:            true
 logFile:        "/var/log/hugo/hugo.log"
 # verbose output
@@ -12,7 +12,7 @@ verbose:                    true
 verboseLog:                 true
 
 params:
-  Subtitle: "Spinning the cogs in the widgets"
+  Subtitle: "ELAO - Agence Web, Experts Symfony et Technologies Open Source - PARIS / LYON / MONTPELLIER"
   AuthorName: "ELAO"
   TwitterUser: "Elao"
 

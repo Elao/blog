@@ -3,7 +3,7 @@
 
 {{ partial "head.html" . }}
 
-<body class="detail">
+<body class="detail" itemscope itemtype="http://schema.org/Article">
     {{ partial "nav-overlay.html" . }}
     <div id="read-progress"><div></div></div>
     <div id="all">
@@ -26,13 +26,13 @@
         {{end}}
         <header>
             <h4>{{ range .Params.tags }}<strong><a href="/tags/{{ . | urlize }}">{{ . }}</a></strong> {{ end }} - {{ .Date.Format "02 Jan 2006" }}</h4>
-            <h1>{{ .Title }}</h1>
+            <h1 itemprop="name">{{ .Title }}</h1>
             <p class="author">
                 <a href="#" class="author"><img src="{{ $social.avatar_url }}" alt="{{ $author.display_name }}"></a>
                 <br/>
                 <span>écrit par <a href="#" class="strong">{{ $author.display_name }}</a></span>
             </p>
-            <div class="intro">
+            <div itemprop="description" class="intro">
                 {{ .Description }}
             </div>
             <div class="hero">
@@ -54,6 +54,10 @@
                         <div class="links">
                             <a href="https://twitter.com/{{ $social.twitter }}" target="_blank"><i class="icon-twitter"></i></a>
                             <a href="https://github.com/{{ $social.github }}" target="_blank"><i class="icon-github"></i></a>
+                            
+                            {{ with $social.google_plus_id }}
+                            <a href="https://plus.google.com/{{ $social.google_plus_id }}?rel=author" target="_blank"><i class="icon-github"></i></a>
+                            {{ end }}
                         </div>
                     </div>
 

@@ -6,6 +6,7 @@ publishdate:    "2015-01-16"
 draft:          false
 slug:           "slug-of-my-post"
 description:    "Description of my post."
+
 thumbnail:      ""
 tags:           ["x", "y"]
 categories:     ["x", "y"]

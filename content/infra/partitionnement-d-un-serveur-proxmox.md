@@ -7,6 +7,7 @@ publishdate:        "2014-11-06"
 draft:              false
 slug:               "partitionnement-d-un-serveur-proxmox"
 description:        "Petit billet mémo aujourd'hui concernant le partitionnement d'un serveur Proxmox, rien de bien sorcier en soi mais il est toujours bon d'avoir un référentiel auquel se fier."
+
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/hdd_partition.jpg"
 tags:               ["proxmox", "openvz", "partitionnement", "linux"]
