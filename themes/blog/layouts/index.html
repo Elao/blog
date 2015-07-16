@@ -6,7 +6,7 @@
         {{ partial "slider.html" . }}
         <div class="container">
             <div class="articles-list">
-                {{ range $index, $article := .Data.Pages }}
+                {{ range $index, $article := .Paginator.Pages }}
                 <article>
                     {{ if eq (mod $index 2) 0 }}
                         <div class="col-img"><a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" /></a></div>
@@ -23,13 +23,7 @@
                 </article>
                 {{ end }}
             </div>
-            <nav class="pager">
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-            </nav>
+            {{ partial "pagination.html" . }}
             {{ partial "footer.html" . }}
         </div>
     </div>

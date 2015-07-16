@@ -22,13 +22,7 @@
                 </article>
                 {{ end }}
             </div>
-            <nav class="pager">
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-            </nav>
+            {{ partial "pagination.html" . }}
             {{ partial "footer.html" . }}
         </div>
     </div>
