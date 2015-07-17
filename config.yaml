@@ -3,7 +3,7 @@
 baseurl:        "http://blog.elao.dev/"
 languageCode:   "fr-FR"
 title:          "Le blog de la team ELAO"
-Paginate:       2
+Paginate:       10
 log:            true
 logFile:        "/var/log/hugo/hugo.log"
 # verbose output
