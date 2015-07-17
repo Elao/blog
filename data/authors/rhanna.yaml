@@ -1,0 +1,21 @@
+en:
+  display_name: Richard HANNA
+  short_bio:    ""
+  long_bio:     ""
+  job_title":   "Symfony developer"
+
+fr:
+  display_name: Richard HANNA
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    Développeur Symfony
+
+social:
+  website:         http://www.elao.com
+  twitter:         richardhanna
+  github:          supertanuki
+  email:           richard.hanna@elao.com
+  avatar_url:      ""
+  google_plus_id:  ""
+
+  

@@ -21,12 +21,12 @@
 
     {{ if .IsPage }}
         <meta property="og:type" content="article"/>
-        <meta property="og:image" content="{{ .Site.BaseUrl }}{{ .Params.thumbnail }}"/>
+        <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"/>
         <meta name="twitter:card" content="summary">
         <meta name="twitter:url" content="{{ .Permalink }}">
         <meta name="twitter:title" content="{{ .Title }}">
         <meta name="twitter:description" content="{{ .Description }}"/>
-        <meta property="twitter:image" content="{{ .Site.BaseUrl }}{{ .Params.thumbnail }}"/>
+        <meta property="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.thumbnail }}"/>
     {{ else }}
         <meta property="og:type" content="blog"/>
     {{ end }}

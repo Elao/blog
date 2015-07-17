@@ -1,14 +1,14 @@
 ---
 type:               "post"
 title:              "Retour sur le Best Of Web 2015"
-date:               "2015-01-16"
-publishdate:        "2015-01-16"
+date:               "2015-06-12"
+publishdate:        "2015-06-12"
 draft:              false
 slug:               "best-of-web-2015"
 description:        "La première édition du Best Of Web s'est tenue le Vendredi 5 Juin 2015 à Paris, et à rassembler le meilleurs des meetups de l'année. Retour sur cet évènement."
 
 language:           "fr"
-thumbnail:          "/images/posts/thumbnails/bow_2015.jpg"
+thumbnail:          "/images/posts/thumbnails/geek.jpg"
 tags:               ["Javascript", "Web","Conférence"]
 categories:         ["Web", "Conférences"]
 
