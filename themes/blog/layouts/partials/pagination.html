@@ -1,15 +1,15 @@
 {{ if gt .Paginator.TotalPages 1 }}
 <nav class="pager">
     {{ with .Paginator.First }}
-        <a href="{{ .Url }}" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+        <a href="{{ .Url }}" aria-label="First"><span aria-hidden="true">&larr;</span></a>
     {{ end }}
 
     {{ range .Paginator.Pagers }}
-        <a href="{{ .Url }}" class="active">{{ .PageNumber }}</a>
+        <a href="{{ .Url }}">{{ .PageNumber }}</a>
     {{ end }}
 
     {{ with .Paginator.Last }}
-        <a href="{{ .Url }}" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="{{ .Url }}" aria-label="Last"><span aria-hidden="true">&rarr;</span></a>
     {{ end }}
 </nav>
 {{ end }}

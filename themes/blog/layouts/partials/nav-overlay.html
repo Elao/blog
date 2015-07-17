@@ -10,15 +10,14 @@
             <div class="row">
                 {{ $currentNode := . }}
                 {{ range .Site.Menus.main }}
-                        <div class="col-sm-3">
-                            <h3>{{ .Name }}</h3>
-                            <ul>
-                            {{ range .Children }}
-                                <li><a href="{{.URL}}">{{ .Name }}</a></li>
-                            {{ end }}
-                            </ul>
-                            
-                        </div>
+                    <div class="col-sm-3">
+                        <h3>{{ .Name }}</h3>
+                        <ul>
+                        {{ range .Children }}
+                            <li><a href="{{.URL}}">{{ .Name }}</a></li>
+                        {{ end }}
+                        </ul>
+                    </div>
                 {{ end }}
             </div>
         </div>

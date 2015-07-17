@@ -3,6 +3,12 @@
     {{ partial "nav-overlay.html" . }}
     <div id="all">
         {{ partial "navbar.html" . }}
+        <header class="category-header" style="background-image: url('/images/category/dev.jpg');">
+            <div class="inner">
+                <h1>Dev</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dicta odio amet aperiam, culpa ratione reprehenderit mollitia laboriosam itaque fugiat? Architecto alias incidunt earum et mollitia dolore culpa laboriosam animi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil asperiores hic, accusantium veniam voluptate eveniet itaque ratione tempora repellat rem optio id maxime cum dignissimos dicta, exercitationem, saepe sequi temporibus.</p>
+            </div>
+        </header>
         <div class="container">
             <div class="articles-list">
                 {{ range $index, $article := .Site.Taxonomies.categories.proxmox }}

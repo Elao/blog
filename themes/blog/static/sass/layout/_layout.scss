@@ -8,6 +8,10 @@ body {
 
     &.nav-opened {
         overflow: hidden;
+
+        #read-progress {
+            top: -3px;
+        }
     }
 }
 

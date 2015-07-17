@@ -3,6 +3,7 @@
     top: 0;
     left: 100px;
     z-index: 500;
+    transition: all 0.15s linear;
 
     > div {
         position: absolute;
@@ -185,7 +186,16 @@
             letter-spacing: $headings-letter-spacing;
         }
 
-        h1, h2, h3 {
+        h4, h5 {
+            font-size: 26px;
+            line-height: 34px;
+            margin: 30px 0 15px;
+            text-transform: none;
+            font-family: $headings-font-family;
+            letter-spacing: $headings-letter-spacing;
+        }
+
+        h1, h2, h3, h4, h5 {
             clear: left;
 
             a {
@@ -329,6 +339,10 @@
 
                             &:hover {
                                 color: $main-color;
+                            }
+
+                            i.icon-gplus {
+                                font-size: 26px;
                             }
                         }
                     }
