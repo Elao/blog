@@ -17,7 +17,7 @@ author_username:    "jgaulupeau"
 
 ## Introduction
 
-Etant donnée que Meteor envoie tous les fichiers du projet aux clients web (hormis les dossiers spéciaux tels que `/server`, `/private`, `/public`), toute l'application est packagée et envoyée. Cela pose plusieurs problèmes dont :
+Etant donnée que Meteor envoie tous les fichiers du projet aux clients web (hormis les dossiers spéciaux tels que `/server`, `/private`, `/public`), toute l'application est packagée et envoyée.<!--more--> Cela pose plusieurs problèmes dont :
 - la difficulté d'alléger la masse de code envoyé au client (templates html + helpers & libs js + styles css) ;
 - la difficulté de "protéger" son application par omission de code (typiquement le code de la partie `/admin` ne devrait être envoyé qu'aux utilisateurs de type admin).
 

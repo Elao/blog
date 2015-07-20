@@ -48,14 +48,41 @@ menu:
         Identifier: "dev"
         URL:        "/dev"
         Weight:     220
-      - Name:       "Design"
-        Identifier: "design"
-        URL:        "/design"
-        Weight:     210
-      - Name:       "About"
-        Identifier: "about"
-        URL:        "/about"
+      - Name:       "Web"
+        Identifier: "web"
+        URL:        "/categories/web"
+        Weight:     10
+        parent:     "dev"
+      - Name:       "Conférences"
+        Identifier: "conferences"
+        URL:        "/categories/conferences"
+        Weight:     20
+        parent:     "dev"
+      - Name:       "Javascript"
+        Identifier: "javascript"
+        URL:        "/categories/javascript"
+        Weight:     30
+        parent:     "dev"
+      - Name:       "NodeJS"
+        Identifier: "nodejs"
+        URL:        "/categories/nodejs"
+        Weight:     40
+        parent:     "dev"
+      # ACTU
+      - Name:       "Actualités"
+        Identifier: "actu"
+        URL:        "/actu"
         Weight:     200
+      - Name:       "Vie au bureau"
+        Identifier: "vie-au-bureau"
+        URL:        "/categories/vie-au-bureau"
+        Weight:     10
+        parent:     "actu"
+      - Name:       "Évènements"
+        Identifier: "evenements"
+        URL:        "/categories/evenements"
+        Weight:     20
+        parent:     "actu"
 
   sidebar:
       - Name:       "Mon lien 1"
