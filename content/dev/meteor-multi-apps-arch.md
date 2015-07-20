@@ -10,7 +10,7 @@ description:        "Architecture d'une application Meteor décomposée en plusi
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/meteor.jpg"
 tags:               ["Meteor", "Tips", "Développement", "Bonnes pratiques"]
-categories:         ["Web", "Conférences", "Javascript", "NodeJS"]
+categories:         ["Web", "Meteor"]
 
 author_username:    "jgaulupeau"
 ---

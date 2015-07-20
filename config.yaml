@@ -33,14 +33,19 @@ menu:
         URL:        "/categories/proxmox"
         Weight:     10
         parent:     "infra"
-      - Name:       "OpenVZ"
-        Identifier: "openvz"
-        URL:        "/categories/openvz"
+      - Name:       "Nginx"
+        Identifier: "nginx"
+        URL:        "/categories/nginx"
         Weight:     20
         parent:     "infra"
       - Name:       "Linux"
         Identifier: "linux"
         URL:        "/categories/linux"
+        Weight:     30
+        parent:     "infra"
+      - Name:       "Monitoring"
+        Identifier: "monitoring"
+        URL:        "/categories/monitoring"
         Weight:     30
         parent:     "infra"
       # DEV
@@ -55,7 +60,7 @@ menu:
         parent:     "dev"
       - Name:       "Conférences"
         Identifier: "conferences"
-        URL:        "/categories/conferences"
+        URL:        "/categories/conférences"
         Weight:     20
         parent:     "dev"
       - Name:       "Javascript"
@@ -69,28 +74,18 @@ menu:
         Weight:     40
         parent:     "dev"
       # ACTU
-      - Name:       "Actualités"
-        Identifier: "actu"
-        URL:        "/actu"
-        Weight:     200
-      - Name:       "Vie au bureau"
-        Identifier: "vie-au-bureau"
-        URL:        "/categories/vie-au-bureau"
-        Weight:     10
-        parent:     "actu"
-      - Name:       "Évènements"
-        Identifier: "evenements"
-        URL:        "/categories/evenements"
-        Weight:     20
-        parent:     "actu"
+      #- Name:       "Actualités"
+      #  Identifier: "news"
+      #  URL:        "/news"
+      #  Weight:     200
+      #- Name:       "Vie au bureau"
+      #  Identifier: "vie-au-bureau"
+      #  URL:        "/categories/vie-au-bureau"
+      #  Weight:     10
+      #  parent:     "news"
+      #- Name:       "Évènements"
+      #  Identifier: "evenements"
+      #  URL:        "/categories/evenements"
+      #  Weight:     20
+      #  parent:     "news"
 
-  sidebar:
-      - Name:       "Mon lien 1"
-        Identifier: "mon-lien-1"
-        URL:        "/about/mon-lien-1"
-      - Name:       "Mon lien 2"
-        Identifier: "mon-lien-2"
-        URL:        "/about/mon-lien-2"
-      - Name:       "Mon lien 3"
-        Identifier: "mon-lien-3"
-        URL:        "/about/mon-lien-3"

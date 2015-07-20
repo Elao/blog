@@ -11,7 +11,7 @@
                 {{ $currentNode := . }}
                 {{ range .Site.Menus.main }}
                     <div class="col-sm-3">
-                        <h3>{{ .Name }}</h3>
+                        <h3><a href="{{.URL}}">{{ .Name }}</a></h3>
                         <ul>
                         {{ range .Children }}
                             <li><a href="{{.URL}}">{{ .Name }}</a></li>
