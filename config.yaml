@@ -4,12 +4,12 @@ baseurl:        "http://blog.elao.dev/"
 languageCode:   "fr-FR"
 title:          "Le blog de la team ELAO"
 Paginate:       10
-log:            true
-logFile:        "/var/log/hugo/hugo.log"
+#log:            true
+#logFile:        "/var/log/hugo/hugo.log"
 # verbose output
-verbose:                    true
+#verbose:                    true
 # verbose logging
-verboseLog:                 true
+#verboseLog:                 true
 
 params:
   Subtitle: "ELAO - Agence Web, Experts Symfony et Technologies Open Source - PARIS / LYON / MONTPELLIER"
@@ -53,26 +53,47 @@ menu:
         Identifier: "dev"
         URL:        "/dev"
         Weight:     220
+      - Name:       "Symfony"
+        Identifier: "Symfony"
+        URL:        "/categories/symfony"
+        Weight:     10
+        parent:     "dev"
       - Name:       "Web"
         Identifier: "web"
         URL:        "/categories/web"
-        Weight:     10
+        Weight:     20
         parent:     "dev"
       - Name:       "Conférences"
         Identifier: "conferences"
         URL:        "/categories/conférences"
-        Weight:     20
+        Weight:     30
         parent:     "dev"
       - Name:       "Javascript"
         Identifier: "javascript"
         URL:        "/categories/javascript"
-        Weight:     30
+        Weight:     40
         parent:     "dev"
       - Name:       "NodeJS"
         Identifier: "nodejs"
         URL:        "/categories/nodejs"
-        Weight:     40
+        Weight:     50
         parent:     "dev"
+      # DEV
+      - Name:       "Inclassable"
+        Identifier: "inclassable"
+        URL:        "/inclassable"
+        Weight:     230
+      - Name:       "OSX"
+        Identifier: "osx"
+        URL:        "/categories/osx"
+        Weight:     10
+        parent:     "inclassable"
+      - Name:       "Communication/Conférences"
+        Identifier: "communication"
+        URL:        "/categories/communication"
+        Weight:     20
+        parent:     "inclassable"
+
       # ACTU
       #- Name:       "Actualités"
       #  Identifier: "news"
