@@ -1,16 +1,17 @@
 # Hugo
 
-## Installing Hugo with brew (binary)
+## Installing Hugo (only if you want run the server localy)
+Your password is mandatory to install Python Pygments.
 
-`brew install hugo`
+`make install`
 
 ## Using Hugo inside vagrant VM
 
 `vagrant up`
 
-# Run Hugo (Launching server only if you are not using the vagrant VM)
+# Run Hugo Server (Only if you are not using the vagrant VM)
 
-`hugo server --theme=hyde --buildDrafts --watch --ignoreCache=true`
+`make server-start`
 
 # Writing a post
 

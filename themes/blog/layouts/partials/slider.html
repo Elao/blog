@@ -8,7 +8,7 @@
             <div class="hero" style="background-image: url('/images/carousel/pic-1.jpg');"></div>
             <div class="inner">
                 <h4><strong>{{ .Section }}</strong> - {{ .PublishDate.Format "02 Jan 2006" }}</h4>
-                <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+                <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
                 <a href="#" class="author"><img src="{{ $social.avatar_url }}" alt="{{ $author.display_name }}"></a>
             </div>
         </div>

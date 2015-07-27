@@ -1,6 +1,6 @@
 ---
 
-baseurl:        "http://blog.elao.dev/"
+baseurl:        "https://blog.elao.com/"
 languageCode:   "fr-FR"
 title:          "Le blog de la team ELAO"
 Paginate:       10
