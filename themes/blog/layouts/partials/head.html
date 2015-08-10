@@ -42,7 +42,9 @@
     <link rel="shortcut icon" href="/favicon.ico">
 
     <!-- RSS -->
-    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-
+    {{ if .RSSlink }}
+        <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+        <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
     <script src="/js/main.js" async></script>
 </head>
