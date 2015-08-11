@@ -1,6 +1,6 @@
 ---
 type:               "post"
-title:              "Meteor - Architecture multi-applicatives connectées sur une seule base mongo"
+title:              "Meteor - Archi. multi-apps connectées"
 date:               "2015-06-23"
 publishdate:        "2015-06-23"
 draft:              false
@@ -14,8 +14,6 @@ categories:         ["Web", "Meteor"]
 
 author_username:    "jgaulupeau"
 ---
-
-## Introduction
 
 Etant donnée que Meteor envoie tous les fichiers du projet aux clients web (hormis les dossiers spéciaux tels que `/server`, `/private`, `/public`), toute l'application est packagée et envoyée.<!--more--> Cela pose plusieurs problèmes dont :
 - la difficulté d'alléger la masse de code envoyé au client (templates html + helpers & libs js + styles css) ;

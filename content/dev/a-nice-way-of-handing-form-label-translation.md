@@ -15,11 +15,13 @@ categories:         ["Dev", "Form", "Symfony"]
 author_username:    "tjarrand"
 ---
 
-# **[EDIT]** We finally built a bundle that solve the problem in an even better way and more! <a href="http://github.com/Elao/ElaoFormTranslationBundle" title="Check it out" target="_blank">Check it out</a><!--more-->
+
 
 ## The problem
 
-When you need to translate the labels of the different forms in your app, you usually have to set a translation key for each label manually.
+When you need to translate the labels of the different forms in your app, you usually have to set a translation key for each label manually.<!--more-->
+
+# **[EDIT]** We finally built a bundle that solve the problem in an even better way and more! <a href="http://github.com/Elao/ElaoFormTranslationBundle" title="Check it out" target="_blank">Check it out</a>
 
 **Here's what it looks like with a simple User form:**
 

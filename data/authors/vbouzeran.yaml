@@ -1,0 +1,20 @@
+en:
+  display_name: Vincent BOUZERAN
+  short_bio:    ""
+  long_bio:     ""
+  job_title":   "Symfony Developer"
+
+fr:
+  display_name: Vincent BOUZERAN
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    Développeur Symfony
+
+social:
+  website:         http://www.elao.com
+  twitter:         ~
+  github:          Vincz
+  email:           vincent.bouzeran@elao.com
+  avatar_url:      https://www.gravatar.com/avatar/624e94c7ceac2b455f1d0e3368389f88
+  google_plus_id:  ~
+

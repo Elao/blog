@@ -78,21 +78,36 @@ menu:
         URL:        "/categories/nodejs"
         Weight:     50
         parent:     "dev"
-      # DEV
-      - Name:       "Inclassable"
-        Identifier: "inclassable"
-        URL:        "/inclassable"
+      - Name:       "PHP"
+        Identifier: "php"
+        URL:        "/categories/php"
+        Weight:     60
+        parent:     "dev"
+      # TECH
+      - Name:       "Tech"
+        Identifier: "tech"
+        URL:        "/tech"
         Weight:     230
       - Name:       "OSX"
         Identifier: "osx"
         URL:        "/categories/osx"
         Weight:     10
-        parent:     "inclassable"
+        parent:     "tech"
+      # MISC
+      - Name:       "Autour d'ELAO"
+        Identifier: "elao"
+        URL:        "/autour-d-elao"
+        Weight:     240
+      - Name:       "Vie au bureau"
+        Identifier: "vie-au-bureau"
+        URL:        "/categories/vie-au-bureau"
+        Weight:     10
+        parent:     "elao"
       - Name:       "Communication/Conférences"
         Identifier: "communication"
         URL:        "/categories/communication"
-        Weight:     20
-        parent:     "inclassable"
+        Weight:     30
+        parent:     "elao"
 
       # ACTU
       #- Name:       "Actualités"

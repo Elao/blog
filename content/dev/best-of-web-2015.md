@@ -16,7 +16,8 @@ author_username:    "ndievart"
 ---
 
 La première édition du Best of Web s’est tenue à Paris le vendredi 5 Juin 2015 à la Grande Crypte de Paris.
-L’idée de cette rencontre est de rassembler les meetups parisiens orientés web et permettre à ceux qui les ont loupés de découvrir leurs meilleurs talks.
+L’idée de cette rencontre est de rassembler les meetups parisiens orientés web et permettre à ceux qui les ont loupés de découvrir leurs meilleurs talks. 
+<!--more-->
 Bien évidemment, une grosse majorité des talks étaient tournés vers le JS mais pas seulement, on a pu découvrir pas mal de choses.
 L’événement était sur une seule trame et ce n’est pas plus mal, car cela permet de se confronter à des sujets qu’on n’aurait pas forcément choisi si le choix des conférences était plus ouvert.
 

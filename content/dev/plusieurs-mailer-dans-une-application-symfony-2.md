@@ -15,7 +15,7 @@ categories:         ["Dev", "Mailer", "Symfony"]
 author_username:    "jlopes"
 ---
 
-Voici une petite astuce que j'ai découvert hier et que j'ai pensé utile de partager !
+Voici une petite astuce que j'ai découvert hier et que j'ai pensé utile de partager !<!--more-->
 
 # Problématique
 
@@ -24,7 +24,9 @@ Voici une petite astuce que j'ai découvert hier et que j'ai pensé utile de par
 *   Votre application Symfony2 utilise un service tiers pour envoyer vos e-mails (comme [Mailjet][1] par exemple)
 *   Votre application a besoin d'envoyer des e-mails de notifications aux administrateurs lorsque des erreurs se produisent (Erreurs 500 par exemple)<!--more--> 
 
-Imaginez qu’une erreur se produise sur l’une de vos pages et que vous ayez des centaines d’utilisateurs en train de visualiser cette même page.Pour chaque affichage de cette dernière, vous allez recevoir un e-mail de notification. Si ces e-mails passent par Mailjet par exemple, votre quota fondra à vue d’œil... Au mieux vous atteindrez une limite de quota et les mails suivants seront bloqués, au pire vous ferez un énorme hors forfait qui pourra vous couter très cher... <img src="http://old-blog.elao.dev/wp-includes/images/smilies/icon_wink.gif" alt="icon wink Plusieurs mailer dans une application Symfony 2" class="wp-smiley" title="Plusieurs mailer dans une application Symfony 2" />
+Imaginez qu’une erreur se produise sur l’une de vos pages et que vous ayez des centaines d’utilisateurs en train de visualiser cette même page.Pour chaque affichage de cette dernière, vous allez recevoir un e-mail de notification. 
+Si ces e-mails passent par Mailjet par exemple, votre quota fondra à vue d’œil... 
+Au mieux vous atteindrez une limite de quota et les mails suivants seront bloqués, au pire vous ferez un énorme hors forfait qui pourra vous couter très cher...
 
 # Solution proposée
 
@@ -37,7 +39,8 @@ La solution que je vous propose pour palier à cela est de créer 2 mailer utili
 
 Pour cela rien de plus simple, créez plusieurs mailers dans votre app/config/config.yml :
 
-```
+{{< highlight yaml >}}
+
 # Swiftmailer Configuration
 swiftmailer:
     default_mailer: default
@@ -49,11 +52,13 @@ swiftmailer:
             password:  mypassword
         notifier:
             transport: mail
-```
+{{< /highlight >}}
+
 
 Vous remarquerez que cela aura pour effet de créer 2 services d'envoi d'e-mails que vous pourrez ensuite utiliser dans votre application :
 
-```
+{{< highlight shell >}}
+
 jlopes:/Volumes/Elao/workspace/myProject ./app/console container:debug | grep mailer
 mailer                                            n/a       alias for swiftmailer.mailer.default
 swiftmailer.mailer                                n/a       alias for swiftmailer.mailer.default
@@ -64,7 +69,8 @@ swiftmailer.mailer.notifier                       container Swift_Mailer
 swiftmailer.mailer.notifier.plugin.messagelogger  container Swift_Plugins_MessageLogger
 swiftmailer.mailer.notifier.transport             container Swift_Transport_MailTransport
 ...
-```
+{{< /highlight >}}
+
 
 Cette astuce reste très simple mais je n'ai rien trouvé dans la documentation officielle de Symfony qui l'expliquait clairement. Elle peut se révéler très utile lorsque vous utilisez le bundle **[ErrorNotifierBundle][2]**
 
