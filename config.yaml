@@ -48,6 +48,7 @@ menu:
         URL:        "/categories/monitoring"
         Weight:     30
         parent:     "infra"
+
       # DEV
       - Name:       "Dev"
         Identifier: "dev"
@@ -96,7 +97,7 @@ menu:
       # MISC
       - Name:       "Autour d'ELAO"
         Identifier: "elao"
-        URL:        "/autour-d-elao"
+        URL:        "/elao"
         Weight:     240
       - Name:       "Vie au bureau"
         Identifier: "vie-au-bureau"
@@ -108,6 +109,12 @@ menu:
         URL:        "/categories/communication"
         Weight:     30
         parent:     "elao"
+      - Name:       "Actualités"
+        Identifier: "actualites"
+        URL:        "/categories/actualites"
+        Weight:     40
+        parent:     "elao"
+
 
       # ACTU
       #- Name:       "Actualités"

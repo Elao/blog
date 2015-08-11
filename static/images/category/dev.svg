@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="492px" height="248px" viewBox="0 0 492 248" enable-background="new 0 0 492 248" xml:space="preserve">
+<rect x="0.5" y="45.5" fill="none" stroke="#F34141" stroke-miterlimit="10" width="35" height="202"/>
+<rect x="0.5" y="0.5" fill="none" stroke="#F34141" stroke-miterlimit="10" width="491" height="35"/>
+<rect x="45.5" y="45.5" fill="none" stroke="#F34141" stroke-miterlimit="10" width="446" height="202"/>
+<circle fill="#F34141" cx="13.343" cy="18.476" r="3.155"/>
+<circle fill="#F34141" cx="26.485" cy="18.476" r="3.155"/>
+<circle fill="#F34141" cx="39.627" cy="18.476" r="3.155"/>
+<text transform="matrix(1 0 0 1 15 67)"><tspan x="0" y="0" fill="#F34141" font-family="'SourceSansPro-Regular'" font-size="12">1</tspan><tspan x="0" y="21" fill="#F34141" font-family="'SourceSansPro-Regular'" font-size="12">2</tspan><tspan x="0" y="42" fill="#F34141" font-family="'SourceSansPro-Regular'" font-size="12">3</tspan><tspan x="0" y="63" fill="#F34141" font-family="'SourceSansPro-Regular'" font-size="12">4</tspan><tspan x="0" y="84" fill="#F34141" font-family="'SourceSansPro-Regular'" font-size="12">5</tspan><tspan x="0" y="105" fill="#F34141" font-family="'SourceSansPro-Regular'" font-size="12">6</tspan><tspan x="0" y="126" fill="#F34141" font-family="'SourceSansPro-Regular'" font-size="12">7</tspan><tspan x="0" y="147" fill="#F34141" font-family="'SourceSansPro-Regular'" font-size="12">8</tspan><tspan x="0" y="168" fill="#F34141" font-family="'SourceSansPro-Regular'" font-size="12">9</tspan></text>
+<g>
+	<path fill="#F34141" d="M211.94,107.255c16.273,0,29.955,12.385,29.955,29.667c0,17.354-13.609,29.738-29.955,29.738H194.73
+		v-59.405H211.94z M210.356,154.562c10.009,0,16.85-7.632,16.921-17.568c0-9.938-6.841-17.642-16.921-17.642h-2.088v35.21H210.356z"
+		/>
+	<path fill="#F34141" d="M281.854,119.136h-20.45v11.809h19.586v11.881h-19.586v11.953h20.45v11.881h-33.987v-59.405h33.987V119.136
+		z"/>
+	<path fill="#F34141" d="M284.288,107.255h15.266l14.978,39.027l14.978-39.027h15.265l-24.914,59.405h-10.656L284.288,107.255z"/>
+</g>
+</svg>

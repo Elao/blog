@@ -25,6 +25,15 @@ $(document).ready(function(){
         });
     });
 
+    var cpt = 0;
+    $('.articles-list.compact').children('article').each(function(){
+        cpt = cpt + 1;
+        $('.articles-list.compact').find('.col-' + cpt).append($(this));
+        if (cpt == 3) {
+            cpt = 0;
+        }
+    });
+
 });
 
 $(window).load(function(){

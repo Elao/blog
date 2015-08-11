@@ -492,6 +492,9 @@ table {
 .icon-gplus:before {
   content: '\e803'; }
 
+.icon-instagram:before {
+  content: '\e804'; }
+
 @font-face {
   font-family: 'League Spartan';
   src: url("../fonts/leaguespartan/leaguespartan-bold.eot");
@@ -585,7 +588,7 @@ h1, h2, h3, h4 {
     font-weight: normal;
     line-height: 1;
     color: #6f6f6f; }
-  h1 a, h2 a, h3 a, h4 a {
+  h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited {
     color: #222; }
 
 h1, h2, h3, h4 {
@@ -1712,40 +1715,6 @@ footer {
       background: #FFF;
       text-decoration: none; }
 
-.category-header {
-  position: relative;
-  height: 450px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; }
-  .category-header::after {
-    content: '';
-    width: 100%;
-    height: 80%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: -webkit-linear-gradient(top, transparent 0%, #F0F0F0 75%);
-    background: linear-gradient(to bottom, transparent 0%, #F0F0F0 75%); }
-  .category-header .inner {
-    position: absolute;
-    z-index: 20;
-    top: 60%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    text-align: center;
-    width: 90%;
-    max-width: 1000px; }
-    .category-header .inner h1 {
-      font-size: 100px;
-      margin-bottom: 20px; }
-    .category-header .inner p {
-      display: block;
-      width: 100%;
-      margin: 0; }
-
 #read-progress {
   position: fixed;
   top: 0;
@@ -1997,6 +1966,97 @@ footer {
             .detail article#article #socials .author-block > div.links a i.icon-gplus, .detail article#article #socials .author-block > div.links a:visited i.icon-gplus {
               font-size: 26px; }
 
+.category-header {
+  position: relative;
+  text-align: center;
+  padding: 20px; }
+  .category-header img {
+    margin: 75px 0 20px 0;
+    max-width: 650px;
+    width: 100%; }
+  .category-header.elao {
+    height: 500px;
+    background-image: url(../images/category/actus.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    color: #FFF;
+    margin-bottom: 60px; }
+    .category-header.elao::after {
+      content: '';
+      background: #222;
+      opacity: 0.8;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1; }
+    .category-header.elao .inner {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      text-align: center;
+      z-index: 10;
+      font-size: 22px; }
+      .category-header.elao .inner h1 {
+        color: #FFF;
+        font-size: 80px; }
+      .category-header.elao .inner p {
+        margin: 15px 0 30px 0; }
+      .category-header.elao .inner nav a {
+        color: #FFF;
+        padding: 5px;
+        font-size: 22px;
+        -webkit-transition: all 0.15s linear;
+                transition: all 0.15s linear; }
+        .category-header.elao .inner nav a:hover {
+          color: #F34141; }
+
+.intro {
+  font-size: 22px;
+  line-height: 38px;
+  text-align: center;
+  margin: 30px 0 60px 0; }
+
+.articles-list.compact {
+  margin-left: -10px;
+  margin-right: -10px; }
+  .articles-list.compact .col-1, .articles-list.compact .col-2, .articles-list.compact .col-3 {
+    float: left;
+    width: 33.3333333%;
+    padding: 0 10px;
+    margin: 0 0 20px 0; }
+  .articles-list.compact article {
+    display: block;
+    padding: 0;
+    background: #FFF;
+    margin: 0 0 20px 0; }
+    .articles-list.compact article .image {
+      display: block;
+      height: 150px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      -webkit-transition: all 0.15s linear;
+              transition: all 0.15s linear; }
+      .articles-list.compact article .image:hover {
+        opacity: 0.7; }
+    .articles-list.compact article .content {
+      padding: 15px 20px 15px 20px;
+      display: block; }
+      .articles-list.compact article .content h3 {
+        text-transform: none;
+        margin-bottom: 5px; }
+      .articles-list.compact article .content p {
+        margin: 0;
+        padding: 0;
+        text-align: right;
+        font-family: "League Spartan", "Helvetica Neue", "Helvetica"; }
+
 @media (max-width: 1200px) {
   .detail article#article img.outside-left {
     margin-left: -80px; }
@@ -2038,7 +2098,20 @@ footer {
       display: block;
       padding-left: 20px;
       padding-right: 20px;
-      text-align: center; } }
+      text-align: center; }
+  .category-header img {
+    margin: 20px 0 0 0; }
+  .intro {
+    font-size: 17px;
+    line-height: 30px;
+    margin: 0 0 30px 0; }
+  .articles-list.compact {
+    margin-left: 0;
+    margin-right: 0; }
+    .articles-list.compact .col-1, .articles-list.compact .col-2, .articles-list.compact .col-3 {
+      float: none;
+      width: 100%;
+      padding: 0; } }
 
 @media (max-width: 767px) {
   #all {

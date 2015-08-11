@@ -23,7 +23,7 @@ h1, h2, h3, h4 {
         color: $headings-small-color;
     }
 
-    a {
+    a, a:visited {
         color: $headings-color;
     }
 }

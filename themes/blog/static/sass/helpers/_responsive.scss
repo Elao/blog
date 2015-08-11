@@ -79,6 +79,29 @@
             }
         }
     }
+
+    .category-header {
+        img {
+            margin: 20px 0 0 0;
+        }
+    }
+
+    .intro {
+        font-size: 17px;
+        line-height: 30px;
+        margin: 0 0 30px 0;
+    }
+
+    .articles-list.compact {
+        margin-left: 0;
+        margin-right: 0;
+
+        .col-1, .col-2, .col-3 {
+            float: none;
+            width: 100%;
+            padding: 0;
+        }
+    }
 }
 
 @media (max-width: 767px) {
