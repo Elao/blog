@@ -1,1 +1,38 @@
-infra.html
+{{ partial "head.html" . }}
+<body>
+    {{ partial "nav-overlay.html" . }}
+    <div id="all">
+        {{ partial "navbar.html" . }}
+        <header class="category-header elao">
+            <div class="inner">
+                <h1>{{ .Title }}</h1>
+                <p>Suivez toutes les actualités d'élao</p>
+                <nav class="socials">
+                    <a href="https://twitter.com/{{ .Site.Params.TwitterUser }}" target="_blank"><i class="icon-twitter"></i></a>
+                    <a href="https://github.com/{{ .Site.Params.GitHubUser }}" target="_blank"><i class="icon-github"></i></a>
+                    <a href="https://instagram.com/{{ .Site.Params.InstagramUser }}" target="_blank"><i class="icon-instagram"></i></a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="articles-list compact">
+                <div class="col-1"></div>
+                <div class="col-2"></div>
+                <div class="col-3"></div>
+                {{ range .Data.Pages }}
+                    <article>
+                        <a href="#" class="image" style="background-image: url('{{ .Params.thumbnail }}');"></a>
+                        <div class="content">
+                            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                            <p><a href="{{ .RelPermalink }}">Lire l'article</a></p>
+                        </div>
+                    </article>
+                {{ end }}
+            </div>
+            {{ partial "pagination.html" . }}
+            {{ partial "footer.html" . }}
+        </div>
+    </div>
+</body>
+</html>

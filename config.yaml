@@ -12,10 +12,12 @@ Paginate:       10
 #verboseLog:                 true
 
 params:
-  Subtitle: "ELAO - Agence Web, Experts Symfony et Technologies Open Source - PARIS / LYON / MONTPELLIER"
-  AuthorName: "ELAO"
-  TwitterUser: "Elao"
-
+  Subtitle:       "ELAO - Agence Web, Experts Symfony et Technologies Open Source - PARIS / LYON / MONTPELLIER"
+  AuthorName:     "ELAO"
+  TwitterUser:    "Elao"
+  GitHubUser:     "Elao"
+  InstagramUser:  "elao_agency"
+  
 taxonomies:
   tag:      "tags"
   category: "categories"
@@ -115,20 +117,4 @@ menu:
         Weight:     40
         parent:     "elao"
 
-
-      # ACTU
-      #- Name:       "Actualités"
-      #  Identifier: "news"
-      #  URL:        "/news"
-      #  Weight:     200
-      #- Name:       "Vie au bureau"
-      #  Identifier: "vie-au-bureau"
-      #  URL:        "/categories/vie-au-bureau"
-      #  Weight:     10
-      #  parent:     "news"
-      #- Name:       "Évènements"
-      #  Identifier: "evenements"
-      #  URL:        "/categories/evenements"
-      #  Weight:     20
-      #  parent:     "news"
 

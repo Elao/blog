@@ -3,29 +3,31 @@
     {{ partial "nav-overlay.html" . }}
     <div id="all">
         {{ partial "navbar.html" . }}
-        <header class="category-header" style="background-image: url('/images/category/dev.jpg');">
+        <header class="category-header elao">
             <div class="inner">
-                <h1>Dev</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dicta odio amet aperiam, culpa ratione reprehenderit mollitia laboriosam itaque fugiat? Architecto alias incidunt earum et mollitia dolore culpa laboriosam animi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil asperiores hic, accusantium veniam voluptate eveniet itaque ratione tempora repellat rem optio id maxime cum dignissimos dicta, exercitationem, saepe sequi temporibus.</p>
+                <h1>{{ .Title }}</h1>
+                <p>Suivez toutes les actualités d'élao</p>
+                <nav class="socials">
+                    <a href="https://twitter.com/{{ .Site.Params.TwitterUser }}" target="_blank"><i class="icon-twitter"></i></a>
+                    <a href="https://github.com/{{ .Site.Params.GitHubUser }}" target="_blank"><i class="icon-github"></i></a>
+                    <a href="https://instagram.com/{{ .Site.Params.InstagramUser }}" target="_blank"><i class="icon-instagram"></i></a>
+                </nav>
             </div>
         </header>
+
         <div class="container">
-            <div class="articles-list">
-                {{ range $index, $article := .Data.category.Pages }}
-                <article>
-                    {{ if eq (mod $index 2) 0 }}
-                        <div class="col-img"><a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" /></a></div>
-                    {{ end }}
-                    <div class="col-text">
-                        <h4>{{ range .Params.tags }}<strong><a href="/tags/{{ . | urlize }}">{{ . }}</a></strong> {{ end }} - {{ .Date.Format "02 Jan 2006" }}</h4>
-                        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                        <p>{{ .Summary }}</p>
-                        <a href="{{ .RelPermalink }}" class="btn">Lire la suite</a>
-                    </div>
-                    {{ if ne (mod $index 2) 0 }}
-                        <div class="col-img"><a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" /></a></div>
-                    {{ end }}
-                </article>
+            <div class="articles-list compact">
+                <div class="col-1"></div>
+                <div class="col-2"></div>
+                <div class="col-3"></div>
+                {{ range .Data.Pages }}
+                    <article>
+                        <a href="#" class="image" style="background-image: url('{{ .Params.thumbnail }}');"></a>
+                        <div class="content">
+                            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                            <p><a href="{{ .RelPermalink }}">Lire l'article</a></p>
+                        </div>
+                    </article>
                 {{ end }}
             </div>
             {{ partial "pagination.html" . }}
