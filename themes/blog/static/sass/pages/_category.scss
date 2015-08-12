@@ -2,62 +2,68 @@
     position: relative;
     text-align: center;
     padding: 20px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    color: #FFF;
+    margin-bottom: 60px;
+    height: 500px;
 
-    img {
-        margin: 75px 0 20px 0;
-        max-width: 650px;
-        width: 100%;
+    &.dev {
+        background-image: url(../images/category/dev.jpg);
+    }
+
+    &.infra {
+        background-image: url(../images/category/infra.jpg);
+    }
+
+    &.tech {
+        background-image: url(../images/category/tech.jpg);
     }
 
     &.elao {
-        height: 500px;
         background-image: url(../images/category/actus.jpg);
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        background-size: cover;
-        color: #FFF;
-        margin-bottom: 60px;
+    }
 
-        &::after {
-            content: '';
-            background: #222;
-            opacity: 0.8;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 1;
+    &::after {
+        content: '';
+        background: #222;
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .inner {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        z-index: 10;
+        font-size: 22px;
+
+        h1 {
+            color: #FFF;
+            font-size: 80px;
         }
 
-        .inner {
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            transform: translateY(-50%);
-            text-align: center;
-            z-index: 10;
-            font-size: 22px;
+        p {
+            margin: 15px 0 30px 0;
+        }
 
-            h1 {
+        nav {
+            a {
                 color: #FFF;
-                font-size: 80px;
-            }
+                padding: 5px;
+                font-size: 22px;
+                transition: all 0.15s linear;
 
-            p {
-                margin: 15px 0 30px 0;
-            }
-
-            nav {
-                a {
-                    color: #FFF;
-                    padding: 5px;
-                    font-size: 22px;
-                    transition: all 0.15s linear;
-
-                    &:hover {
-                        color: $main-color;
-                    }
+                &:hover {
+                    color: $main-color;
                 }
             }
         }
