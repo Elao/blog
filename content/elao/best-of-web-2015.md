@@ -9,8 +9,8 @@ description:        "La première édition du Best Of Web s'est tenue le Vendred
 
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/geek.jpg"
-tags:               ["Javascript", "Web","Conférence"]
-categories:         ["Web", "Conférences"]
+tags:               ["Javascript", "Web","conference"]
+categories:         ["Actualité", "Web", "conference"]
 
 author_username:    "ndievart"
 ---

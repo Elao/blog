@@ -21,7 +21,7 @@ params:
 taxonomies:
   tag:      "tags"
   category: "categories"
-  author:   "authors'"
+  author:   "authors"
 
 menu:
   main:
@@ -106,9 +106,9 @@ menu:
         URL:        "/categories/vie-au-bureau"
         Weight:     10
         parent:     "elao"
-      - Name:       "Communication/Conférences"
-        Identifier: "communication"
-        URL:        "/categories/communication"
+      - Name:       "Conférences"
+        Identifier: "conference"
+        URL:        "/categories/conference"
         Weight:     30
         parent:     "elao"
       - Name:       "Actualités"

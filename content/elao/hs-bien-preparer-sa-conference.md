@@ -11,7 +11,7 @@ description:        "Hors sujet n°1 - Comment bien préparer sa conférence ?"
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/yosemite.jpg"
 tags:               ["Talk", "Aisance", "Conférence", "Oral", "Préparation"]
-categories:         ["Inclassable", "Communication"]
+categories:         ["Actualité", "Communication", "conference"]
 
 author_username:    "jjames"
 
