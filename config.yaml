@@ -50,7 +50,6 @@ menu:
         URL:        "/categories/monitoring"
         Weight:     30
         parent:     "infra"
-
       # DEV
       - Name:       "Dev"
         Identifier: "dev"
@@ -85,6 +84,11 @@ menu:
         Identifier: "php"
         URL:        "/categories/php"
         Weight:     60
+        parent:     "dev"
+      - Name:       "Python"
+        Identifier: "python"
+        URL:        "/categories/python"
+        Weight:     70
         parent:     "dev"
       # TECH
       - Name:       "Tech"

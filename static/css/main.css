@@ -1661,7 +1661,7 @@ footer {
         padding-right: 0; }
         .articles-list article > div.col-img img {
           display: block;
-          max-width: 100%;
+          max-width: 500px;
           -webkit-transition: all 0.1s linear;
                   transition: all 0.1s linear; }
           .articles-list article > div.col-img img:hover {
