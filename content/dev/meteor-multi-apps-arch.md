@@ -8,7 +8,7 @@ slug:               "meteor-multi-apps-architecture"
 description:        "Architecture d'une application Meteor décomposée en plusieurs sous-applications connectées à la même base de données MongoDb."
 
 language:           "fr"
-thumbnail:          "/images/posts/thumbnails/meteor.jpg"
+thumbnail:          "/images/posts/thumbnails/beer.jpg"
 tags:               ["Meteor", "Tips", "Développement", "Bonnes pratiques"]
 categories:         ["Web", "Meteor"]
 
