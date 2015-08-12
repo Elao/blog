@@ -2030,6 +2030,8 @@ footer {
     width: 33.3333333%;
     padding: 0 10px;
     margin: 0 0 20px 0; }
+  .articles-list.compact > article {
+    float: left; }
   .articles-list.compact article {
     display: block;
     padding: 0;
