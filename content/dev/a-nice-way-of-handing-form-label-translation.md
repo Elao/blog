@@ -15,8 +15,6 @@ categories:         ["Dev", "Form", "Symfony"]
 author_username:    "tjarrand"
 ---
 
-
-
 ## The problem
 
 When you need to translate the labels of the different forms in your app, you usually have to set a translation key for each label manually.<!--more-->

@@ -36,7 +36,7 @@
                 {{ .Description }}
             </div>
             <div class="hero">
-                <img src="https://placeimg.com/1000/310/any" alt="" />
+                <img src="{{ if isset .Params "header_img" }} {{ index .Params "header_img" }}{{ else }}https://placeimg.com/1000/310/any{{ end }}" alt="" />
             </div>
         </header>
         <div class="container">

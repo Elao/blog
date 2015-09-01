@@ -25,7 +25,9 @@ Vous avez du mal à <strong>accrocher l’attention de votre auditoire</strong> 
 
 ## Ce qu’il ne faut pas faire
 
-{{< figure src="/images/posts/2014/obama.jpg" title="Hors sujet n°1 - Comment bien préparer sa conférence ?" alt="Hors sujet n°1 - Comment bien préparer sa conférence ?" width="450" height="300">}}
+<div class="pull-left">
+{{< figure src="/images/posts/2014/obama.jpg"  alt="Hors sujet n°1 - Comment bien préparer sa conférence ?" width="450" height="300">}}
+</div>
 
 Arriver en mode YOLO. Quelques slides et votre grand pouvoir d’improvisation risquent de ne pas être suffisant pour les speakers débutants. Je vous conseille donc de vous <strong>préparer un minimum</strong> : commencer par écrire son texte, le faire évaluer par ses proches, et surtout <strong>répéter une bonne dizaine de fois sa présentation</strong> ! Un éventuel plan pourra aussi être utile pour s’assurer de la fluidité du déroulement de votre conférence.
 
@@ -39,7 +41,9 @@ Si possible, <strong>éteignez votre téléphone</strong>. Au pire, vous avez le
 
 ## Ce que je vous conseille de faire
 
-<img class="pull-left" alt="Tom 300x300 Hors sujet n°1   Comment bien préparer sa conférence ?" src="/blog/medias/2014-06-03-hs-bien-preparer-sa-conference/tom-300x300.jpg" width="300" height="300" title="Hors sujet n°1 Comment bien préparer sa conférence ?" />
+<div class="pull-left">
+{{< figure src="/images/posts/2014/tom-300x300.jpg" alt="Tom 300x300 Hors sujet n°1 Comment bien préparer sa conférence ?" width="300" height="300">}}
+</div>
 
 <strong>Travaillez votre voix</strong>. Ça peut paraître anodin, mais c’est l’un des axes les plus importants. Les principaux points à regarder concernant votre voix sont les suivants :
 
@@ -55,7 +59,7 @@ La meilleure technique pour améliorer sa voix reste de <strong>s’enregistrer<
 
 Avoir une <strong>bonne gestuelle</strong> et une <strong>bonne gestion du regard</strong>. Le nombre de notions concernant ces deux points est beaucoup trop important pour un petit article “résumé” comme celui-ci. Je vous invite à lire <a href="http://www.toastmasters.org/FR201-gestures.aspx">cet article très complet</a>.
 
-<strong>Préparez</strong> vos slides et votre démo, si cette dernière est nécessaire. De bons slides vous aideront grandement à être à l’aise à l’oral, puisque vous ne vous sentirez plus seuls sur scène, grâce à eux <img src="http://old-blog.elao.dev/wp-includes/images/smilies/icon_smile.gif" alt="icon smile Hors sujet n°1   Comment bien préparer sa conférence ?" class="wp-smiley" title="Hors sujet n°1   Comment bien préparer sa conférence ?" />
+<strong>Préparez</strong> vos slides et votre démo, si cette dernière est nécessaire. De bons slides vous aideront grandement à être à l’aise à l’oral, puisque vous ne vous sentirez plus seuls sur scène, grâce à eux :)
 
 <em>NB :</em> Avoir une petite télécommande pour passer vos slides à distance peut être une bonne chose. Cela vous évitera de perdre le fil en changeant de slide à la main sur votre machine. Avoir une main occupée par cette télécommande peut aussi vous empêcher d’effectuer certains gestes parasites.
 

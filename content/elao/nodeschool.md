@@ -9,8 +9,8 @@ description:        "La NodeSchool permet de pratiquer Javascript et Node.js gr�
 
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/nodejs.png"
-tags:               ["Javascript", "Node.js"]
-categories:         ["Dev", "Conférences", "Javascript", "NodeJS"]
+tags:               ["Javascript", "Node.js", "Conférences"]
+categories:         ["Dev", "conference", "Javascript", "NodeJS"]
 
 author_username:    "rhanna"
 ---

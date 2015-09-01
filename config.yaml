@@ -100,25 +100,25 @@ menu:
         URL:        "/categories/osx"
         Weight:     10
         parent:     "tech"
-      # MISC
+      # ELAO
       - Name:       "Autour d'ELAO"
         Identifier: "elao"
         URL:        "/elao"
         Weight:     240
-      - Name:       "Vie au bureau"
-        Identifier: "vie-au-bureau"
-        URL:        "/categories/vie-au-bureau"
-        Weight:     10
-        parent:     "elao"
+      #- Name:       "Vie au bureau"
+      #  Identifier: "vie-au-bureau"
+      #  URL:        "/categories/vie-au-bureau"
+      #  Weight:     10
+      #  parent:     "elao"
       - Name:       "Conférences"
         Identifier: "conference"
         URL:        "/categories/conference"
         Weight:     30
         parent:     "elao"
-      - Name:       "Actualités"
-        Identifier: "actualites"
-        URL:        "/categories/actualites"
-        Weight:     40
-        parent:     "elao"
+      #- Name:       "Actualités"
+      #  Identifier: "actualites"
+      #  URL:        "/categories/actualites"
+      #  Weight:     40
+      #  parent:     "elao"
 
 

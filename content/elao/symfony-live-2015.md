@@ -9,8 +9,8 @@ description:        "La septième édition du SymfonyLive Paris s'est tenue le j
 
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/SymfonyLive.png"
-tags:               ["Conférence", "Symfony Live"]
-categories:         ["Dev", "Conférence", "Symfony Live"]
+tags:               ["Conférence", "Symfony Live", "Conférence"]
+categories:         ["conference", "Symfony Live"]
 
 author_username:    "rhanna"
 ---
