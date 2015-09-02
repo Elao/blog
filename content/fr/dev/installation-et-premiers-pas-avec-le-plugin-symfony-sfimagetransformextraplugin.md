@@ -75,7 +75,7 @@ Si elle n'existe pas encore, on crée l'application "Frontend" ...
 
 Pour notre démonstration, j'ai choisi cette image, partant du principe qu'un prosélytisme de bon aloi ne saurait nuire à la carrière d'un développeur :
 
-{{< figure src="/images/posts/2010/zf.jpg" title="Installation et premier pas avec le plugin sfImageTransformExtraPlugin" alt="Installation et premier pas avec le plugin sfImageTransformExtraPlugin">}}
+{{< figure src="/fr/images/posts/2010/zf.jpg" title="Installation et premier pas avec le plugin sfImageTransformExtraPlugin" alt="Installation et premier pas avec le plugin sfImageTransformExtraPlugin">}}
 
 J'ai nommé cette image zf.jpg et je l'ai placée dans le répertoire web/images de notre projet.
 
@@ -96,7 +96,7 @@ Nous allons dans un premier temps écrire le code de notre template pour y insé
 
 Comme nous venons juste de créer le module, pensez à supprimer le code par défaut de la méthode executeIndex du fichier apps/frontend/modules/actions/actions.class.php`. Affichons à présent la page dans notre navigateur : http://mon_hote_virtuel/frontend_dev.php/image. Le résultat est admirable ... je ne m'en lasse pas ...
 
-{{< figure src="/images/posts/2010/sfImageTransformExtrePlugin.png" title="Installation et premier pas avec le plugin sfImageTransformExtraPlugin" alt="indexSuccess.php  Installation et premiers pas avec le plugin Symfony sfImageTransformExtraPlugin">}}
+{{< figure src="/fr/images/posts/2010/sfImageTransformExtrePlugin.png" title="Installation et premier pas avec le plugin sfImageTransformExtraPlugin" alt="indexSuccess.php  Installation et premiers pas avec le plugin Symfony sfImageTransformExtraPlugin">}}
 
 Cela étant, notre but étant d'utiliser dans un premier temps le plugin sfImageTransformPlugin, nous allons écrire une méthode sans prétention qui va appliquer un traitement à cette image lorsque nous soumettons le formulaire. Pour cela, nous allons modifier le fichier actions.class.php afin de mettre à jour la méthode executeIndex :
 

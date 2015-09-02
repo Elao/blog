@@ -9,6 +9,7 @@ description:        "La première édition du Best Of Web s'est tenue le Vendred
 
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/geek_evolution.jpg"
+header_img:         "/images/posts/headers/forum_php_elao.jpg"
 tags:               ["Javascript", "Web","conference"]
 categories:         ["Actualité", "Web", "conference"]
 

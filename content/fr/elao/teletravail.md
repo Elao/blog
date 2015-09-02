@@ -3,7 +3,7 @@ type:               "post"
 title:              "Retour sur le Symfony Live 2015"
 date:               "2015-08-14"
 publishdate:        "2015-08-14"
-draft:              false
+draft:              true
 slug:               "teletravail"
 description:        ""
 

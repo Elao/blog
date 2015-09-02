@@ -10,33 +10,34 @@
         {{ partial "navbar.html" . }}
         {{if .PrevInSection}}
         <div class="article-link article-prev">
-            <a href="{{.PrevInSection.Permalink}}">Précédent</a>
+            <a href="{{.PrevInSection.Permalink}}">{{ ( index $.Site.Data.translations $.Site.Params.locale ).post_prev }}</a>
             <div class="article-infos">
-                <div class="article-img" style="background-image: url('{{ .PrevInSection.Params.thumbnail }}');"></div>
+                <div class="article-img" style="background-image: url('{{ partial "i18n.html" . }}{{ .PrevInSection.Params.thumbnail }}');"></div>
             </div>
         </div>
         {{end}}
         {{if .NextInSection}}
         <div class="article-link article-next">
-            <a href="{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}">Suivant</a>
+            <a href="{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}">{{ ( index $.Site.Data.translations $.Site.Params.locale ).post_next }}</a>
             <div class="article-infos">
-                <div class="article-img" style="background-image: url('{{ .NextInSection.Params.thumbnail }}');"></div>
+                <div class="article-img" style="background-image: url('{{ partial "i18n.html" . }}{{ .NextInSection.Params.thumbnail }}');"></div>
             </div>
         </div>
         {{end}}
         <header>
-            <h4>{{ range .Params.tags }}<strong><a href="/tags/{{ . | urlize }}">{{ . }}</a></strong> {{ end }} - {{ .Date.Format "02 Jan 2006" }}</h4>
+            {{ $context := . }}
+            <h4>{{ range .Params.tags }}<strong><a href="{{ partial "i18n.html" $context }}/tags/{{ . | urlize }}">{{ . }}</a></strong> {{ end }} - {{ .Date.Format "02 Jan 2006" }}</h4>
             <h1 itemprop="name">{{ .Title }}</h1>
             <p class="author">
-                <a href="#" class="author"><img src="{{ $social.avatar_url }}" alt="{{ $author.display_name }}"></a>
+                <a href="#" class="author"><img src="{{ if $social.avatar_url }}{{ $social.avatar_url }}{{ else }}{{ partial "i18n.html" . }}/images/logo.svg{{ end }}" alt="{{ $author.display_name }}"></a>
                 <br/>
-                <span>écrit par <a href="#" class="strong">{{ $author.display_name }}</a></span>
+                <span>{{ ( index $.Site.Data.translations $.Site.Params.locale ).post_wrote_by }} <a href="#" class="strong">{{ $author.display_name }}</a></span>
             </p>
             <div itemprop="description" class="intro">
                 {{ .Description }}
             </div>
             <div class="hero">
-                <img src="{{ if isset .Params "header_img" }} {{ index .Params "header_img" }}{{ else }}https://placeimg.com/1000/310/any{{ end }}" alt="" />
+                <img src="{{ if isset .Params "header_img" }} {{ partial "i18n.html" . }}{{ index .Params "header_img" }}{{ else }}https://placeimg.com/1000/310/any{{ end }}" alt="" />
             </div>
         </header>
         <div class="container">
@@ -45,7 +46,7 @@
                 <div id="socials">
                     <div class="author-block">
                         <div class="picture">
-                            <img src="{{ $social.avatar_url }}" alt="{{ $author.display_name }}">
+                            <img src="{{ if $social.avatar_url }}{{ $social.avatar_url }}{{ else }}{{ partial "i18n.html" . }}/images/logo.svg{{ end }}" alt="{{ $author.display_name }}">
                         </div>
                         <div class="job">
                             <strong>{{ $author.display_name }}</strong><br/>
