@@ -6,7 +6,7 @@
         <header class="category-header dev">
             <div class="inner">
                 <h1>Dev</h1>
-                <p>Suivez toutes les actualités d'élao</p>
+                <p>{{ ( index $.Site.Data.translations $.Site.Params.locale ).header_follow_elao_news }}</p>
                 <nav class="socials">
                     <a href="https://twitter.com/{{ .Site.Params.TwitterUser }}" target="_blank"><i class="icon-twitter"></i></a>
                     <a href="https://github.com/{{ .Site.Params.GitHubUser }}" target="_blank"><i class="icon-github"></i></a>
@@ -22,13 +22,7 @@
                 <div class="col-3"></div>
                 <div class="clearfix"></div>
                 {{ range .Paginator.Pages }}
-                    <article>
-                        <a href="#" class="image" style="background-image: url('{{ .Params.thumbnail }}');"></a>
-                        <div class="content">
-                            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                            <p><a href="{{ .RelPermalink }}">Lire l'article</a></p>
-                        </div>
-                    </article>
+                    {{ partial "article-thumbnail.html" . }}
                 {{ end }}
             </div>
             {{ partial "pagination.html" . }}

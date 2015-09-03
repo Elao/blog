@@ -1,20 +1,14 @@
 ---
 
-baseurl:        "https://blog.elao.com/"
+baseurl:        "https://blog.elao.com/fr/"
 languageCode:   "fr-FR"
 title:          "Le blog de la team ELAO"
 Paginate:       10
 contentdir:     "content/fr"
 publishdir:     "public/fr"
 
-#log:            true
-#logFile:        "/var/log/hugo/hugo.log"
-# verbose output
-#verbose:                    true
-# verbose logging
-#verboseLog:                 true
-
 params:
+  locale:         "fr-FR"
   Subtitle:       "ELAO - Agence Web, Experts Symfony et Technologies Open Source - PARIS / LYON / MONTPELLIER"
   AuthorName:     "ELAO"
   TwitterUser:    "Elao"
@@ -113,6 +107,3 @@ menu:
         URL:        "/categories/conference"
         Weight:     30
         parent:     "elao"
-
-
-

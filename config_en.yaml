@@ -1,0 +1,34 @@
+---
+
+baseurl:        "https://blog.elao.com/en/"
+languageCode:   "en-EN"
+title:          "The blog of ELAO team"
+Paginate:       10
+contentdir:     "content/en"
+publishdir:     "public/en"
+
+params:
+  locale:         "en-EN"
+  Subtitle:       "ELAO - Agence Web, Experts Symfony et Technologies Open Source - PARIS / LYON / MONTPELLIER"
+  AuthorName:     "ELAO"
+  TwitterUser:    "Elao"
+  GitHubUser:     "Elao"
+  InstagramUser:  "elao_agency"
+
+taxonomies:
+  tag:      "tags"
+  category: "categories"
+  author:   "authors"
+
+menu:
+  main:
+      # DEV
+      - Name:       "Dev"
+        Identifier: "dev"
+        URL:        "/dev"
+        Weight:     220
+      - Name:       "Symfony"
+        Identifier: "Symfony"
+        URL:        "/categories/symfony"
+        Weight:     10
+        parent:     "dev"

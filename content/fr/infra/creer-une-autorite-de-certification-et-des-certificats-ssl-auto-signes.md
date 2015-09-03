@@ -19,7 +19,7 @@ Bonjour à tous !
 
 Petit memo aujourd'hui pour les admin sys
 
-Nous allons voir comment créer sa propre autorité de certification et créer ses propres certificats SSL auto-signés, toujours très utiles lorsque l'on a des problématiques de connexion sécurisée.
+Nous allons voir comment créer sa propre autorité de certification et créer ses propres certificats SSL auto-signés, toujours très utiles lorsque l'on a des problématiques de connexion sécurisée.<!-- more -->
 L'ensemble de ces manipulations ont été réalisées sur des serveurs Linux / Debian Lenny.
 
 ### Créer son propre CA (Certificate Authority)

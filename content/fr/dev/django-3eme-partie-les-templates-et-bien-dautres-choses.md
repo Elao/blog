@@ -24,7 +24,7 @@ En effet, nous allons enrichir le projet initié lors de notre <a href="/blog/dj
 Voici le résultat à atteindre :
 
 <div style="text-align:center;">
-{{< figure src="/images/posts/2010/elao_shop_index_vfinale.png" title="Elao - Boutique de sport - Accueil" alt="elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...">}}
+{{< figure src="/fr/images/posts/2010/elao_shop_index_vfinale.png" title="Elao - Boutique de sport - Accueil" alt="elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...">}}
 </div>
 
 
@@ -152,7 +152,7 @@ Si vous avez récupéré la feuille de style et les images que je vous proposais
 
 
 <div style="text-align:center;">
-{{< figure src="/images/posts/2010/elao_shop_index_v1.png" title="Django (3ème partie) : les templates, et bien dautres choses ..." alt="elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...">}}
+{{< figure src="/fr/images/posts/2010/elao_shop_index_v1.png" title="Django (3ème partie) : les templates, et bien dautres choses ..." alt="elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...">}}
 </div>
 
 Bon, tout cela commence à prendre forme, à présent, nous allons afficher nos articles dans notre template fraichement créée !
@@ -298,7 +298,7 @@ A présent, si vous soumettez le formulaire de recherche, Django vous gratifiera
 
 
 <div style="text-align:center;">
-{{< figure src="/images/posts/2010/elao_shop_csrf_403.png" title="Django (3ème partie) : les templates, et bien dautres choses ..." alt="elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...">}}
+{{< figure src="/fr/images/posts/2010/elao_shop_csrf_403.png" title="Django (3ème partie) : les templates, et bien dautres choses ..." alt="elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...">}}
 </div>
 
 Concernant les deux derniers points, nous sommes "**dans les clous**". En particulier, la classe **CsrfViewMiddleware** est bien déclarée par défaut dans notre fichier **settings.py**. En revanche, concernant le premier point, nous devons modifier notre méthode **index** pour passer à la méthode **render_to_response** un troisième paramètre de type **RequestContext**. Nous allons donc nous exécuter :

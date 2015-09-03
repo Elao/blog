@@ -11,9 +11,9 @@ fr:
   job_title:    Développeur Symfony
 
 social:
-  website:    http://www.elao.com
-  twitter:    ""
+  website:         http://www.elao.com
+  twitter:         ""
   github:     
-  email:      nicolas.dievart@elao.com
-  avatar_url: /images/logo.svg
+  email:           nicolas.dievart@elao.com
+  avatar_url:      ~
   google_plus_id:  ~

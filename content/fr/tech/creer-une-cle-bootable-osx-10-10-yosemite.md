@@ -9,7 +9,7 @@ slug:               "creer-une-cle-bootable-osx-10-10-yosemite"
 description:        "Créer une clé bootable OSX 10.10 Yosemite."
 
 language:           "fr"
-thumbnail:          "/images/posts/thumbnails/yosemite.jpg"
+thumbnail:          "/fr/fr/images/posts/thumbnails/yosemite.jpg"
 tags:               ["OSX"]
 categories:         ["Tech", "OSX"]
 
@@ -34,7 +34,7 @@ Avant de lancer la mise à jour, copier le fichier <strong>InstallESD.dmg</stron
 Attention pour cette partie il faut bien faire attention de sélectionner "GUID Partition Table" dans les options lors de la création de la partition comme ci-dessous:
 
 <p class="text-center">
-    {{< figure src="/images/posts/2014/OSX_Yosemite.png" title="OSX Yosemite options de partition." alt="Créer une clé bootable osx yosemite">}}
+    {{< figure src="/fr/fr/images/posts/2014/OSX_Yosemite.png" title="OSX Yosemite options de partition." alt="Créer une clé bootable osx yosemite">}}
 </p>
 
 

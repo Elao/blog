@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ .Params.language}}" lang="{{ if eq .Params.language "fr" }}fr-FR{{ else }}en-US{{ end }}">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ .Site.Params.locale }}" lang="{{ .Site.Params.locale }}">
 <head>
     <link href="http://gmpg.org/xfn/11" rel="profile">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -35,15 +35,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ partial "i18n.html" . }}/css/main.css">
 
     <!-- Icons -->
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="{{ partial "i18n.html" . }}/favicon.ico">
 
     <!-- RSS -->
     {{ if .RSSlink }}
         <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
         <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
-    <script src="/js/main.js" async></script>
+    <script src="{{ partial "i18n.html" . }}/js/main.js" async></script>
 </head>
