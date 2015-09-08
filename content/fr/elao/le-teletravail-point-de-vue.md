@@ -26,7 +26,7 @@ Interpellé récemment sur twitter à propos du télétravail et suite à <a tar
 
 # Recentrons le sujet
 
-Pour commencer, je pense qu'il est nécessaire de recentrer la discussion sur son sujet à savoir le télétravail, je ne pense pas que se positionner en tant que "patron" ou "salarié" n'est une quelconque valeur (à notre échelle) pour le débat, l'un comme l'autre peuvent en bénéficier, ce n'est pas parce qu'on est "patron" qu'on y est hostile tout comme ce n'est pas parce que l'on est salarié que l'on y est favorable (et vice versa).
+Pour commencer, je pense qu'il est nécessaire de recentrer la discussion sur son sujet à savoir le télétravail, je ne pense pas que se positionner en tant que "patron" ou "salarié" n'ait une quelconque valeur (à notre échelle) pour le débat, l'un comme l'autre peuvent en bénéficier, ce n'est pas parce qu'on est "patron" qu'on y est hostile tout comme ce n'est pas parce que l'on est salarié que l'on y est favorable (et vice versa).
 
 J'ai la chance, avant d'être entrepreneur (oui je n'aime pas le mot "patron", cliché du travail à la française et de son modèle hyper hiérarchisé, ça donnerait d'ailleurs un bon sujet d'article) d'être avant tout un technicien, entendre par là un développeur, un sysadmin, en termes plus généralistes, un collaborateur.
 Et c'est <strong><u>de ce point de vue là</u></strong> que j'aimerais plutôt aborder la discussion.
