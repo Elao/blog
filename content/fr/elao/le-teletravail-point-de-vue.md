@@ -35,7 +35,7 @@ Et c'est <strong><u>de ce point de vue là</u></strong> que j'aimerais plutôt a
 
 <img src="/fr/images/posts/2015/homeoffice.gif" alt="teletravail" class="outside-right" />
 
-A titre personnel, je n'ai jamais été un grand fan du télétravail, tout simplement parce que c'est un modèle qui ne m'a jamais convenu pour différentes raisons parmi lesquelles:
+A titre personnel, je n'ai jamais été un grand fan du télétravail, tout simplement parce que c'est un modèle qui ne m'a jamais convenu pour différentes raisons parmi lesquelles :
 
 - Si je bosse depuis chez moi, je suis quasi certain de glander au lit 1h après la sonnerie du réveil, de petit déjeuner à 10h et d'aller à la douche à midi après avoir lancé un déploiement ou toute autre tâche un tant soit peu chronophage. 
 - D'oublier la moitié des trucs dont j'ai besoin au bureau (oui oui, même l'ordi j'en suis capable, même si j'ai une grosse préférence pour le chargeur).
@@ -44,14 +44,14 @@ A titre personnel, je n'ai jamais été un grand fan du télétravail, tout simp
 - De me transformer en un animal profondément anti-social (je le suis déjà un peu), qui répondra par un grognement pour oui et deux pour non.
 
 <p>
-En tant que travailleur, je préfère utiliser le télétravail pour dépanner en cas de situation imprévue, le môme qui est malade et qui ne peut pas aller à la crèche, l'intervention nécessaire du plombier parce que la machine à laver à inondé l'appart, bref pour tout un tas de raisons plus ou moins saugrenues, mais pas au quotidien.</p>
+En tant que travailleur, je préfère utiliser le télétravail pour dépanner en cas de situation imprévue, le môme qui est malade et qui ne peut pas aller à la crèche, l'intervention nécessaire du plombier parce que la machine à laver a inondé l'appart, bref pour tout un tas de raisons plus ou moins saugrenues, mais pas au quotidien.</p>
 <p>
 J'ai en effet une grosse préférence pour le travail "sur site" avec mon équipe, mes collaborateurs, mes associés parce qu'au final j'aime voir les gens, j'aime échanger avec eux, prendre un café et de temps en temps aller se faire une terrasse le midi, bref <strong><u>conserver le lien social</u></strong>.
 Également parce que je trouve qu'il est plus facile de communiquer "en direct" et que ça laisse moins la place à l'interprétation voir pire, à l'incompréhension.</p>
 
 Attention ces remarques ne sont applicables qu'à moi seul, je suis un bordélique chronique à forte tendance workaholic et je m'astreins donc le plus possible à essayer de séparer le pro du perso.
 
-<u>Bref le home-office très peu pour moi, toutefois:</u>
+<u>Bref le home-office très peu pour moi, toutefois :</u>
 
 * J'y trouve énormément d'avantages.
 * Je ne vais pas forcément imposer à d'autres, un ressenti issu d'une approche/expérience personnelle.
@@ -63,7 +63,7 @@ A ces réflexions personnelles nous pouvons ajouter d'autres remarques plus gén
 - Ne pas pouvoir rapidement confronter ses idées avec les collègues (oui je connais Skype, mais j'ai beaucoup plus de mal à faire un call plutôt que d'interpeller quelqu'un que j'ai sous la main. Je sais aussi combien c'est frustant d'appeler dans le vide parce que le collègue est parti fumer sa clope ou se faire un baby).
 - Je ne suis pas à l'abri d'une connexion de mauvaise qualité ou d'une panne (même si, de plus en plus en ville, la fibre fait sa place).
 - On reste dans une société assez "old school", aller expliquer à ses clients que les différents membres de l'équipe sont éparpillés aux quatres coins de la France, voir à l'étranger, n'est pas forcément très simple. D'autant que certains ne comprennent toujours pas que l'on puisse faire confiance à ses équipes au point de ne pas assurer un controle strict de leur activité car oui, le cliché du salarié qui se "touche la nouille" si on ne le surveille pas est toujours présent. Tout comme celui du méchant patron qui n'est là que pour exploiter ses pauvres salariés et faire un maximum de profits. 
-En 10 ans d'existence d'ELAO, il y a longtemps que je devrais faire du télétravail depuis ma villa au Bahamas ;)
+En 10 ans d'existence d'ELAO, il y a longtemps que je devrais faire du télétravail depuis ma villa aux Bahamas ;)
 - La problématique de la confidentialité des données et de la sécurité des réseaux.
 - La problématique des lignes téléphoniques et plus généralement des moyens de communication.
 
@@ -75,7 +75,7 @@ En 10 ans d'existence d'ELAO, il y a longtemps que je devrais faire du télétra
 
 Il est tout aussi facile d'y trouver un grand nombre d'avantages. Parmis ceux qui me viennent à l'esprit:
 
-- La possibilité de profiter d'un silence absolu ou presque pour ce concentrer sur des tâches ardues ou sur une réflexion prise de tête, sans être emmerdé par un téléphone qui sonne, participer à une discussion pour ou contre les ORM, qu'apporte le DDD, etc.(Sans se prendre du Francky Vincent dans les oreilles pendant 30 min ;) )
+- La possibilité de profiter d'un silence absolu ou presque pour se concentrer sur des tâches ardues ou sur une réflexion prise de tête, sans être emmerdé par un téléphone qui sonne, participer à une discussion pour ou contre les ORM, qu'apporte le DDD, etc. (Sans se prendre du Francky Vincent dans les oreilles pendant 30 min ;) )
 - Ne pas avoir à perdre du temps à rejoindre le bureau, même si, ici à Lyon, la plupart d'entre nous viennent à pieds, à vélo, en skate ou même en train en moins de 30 min. Oui ça c'est pour toi ami Parisien ;)
 - Organiser sa journée en fonction de ses "temps forts", certains sont du matin, d'autres sont plus du soir.
 - Ne pas avoir à courir pour emmener les enfants à l'école ou à la crèche, chez le dentiste ; bref pouvoir gérer ses impératifs tranquillement.
@@ -98,9 +98,9 @@ Sans surprise le principal frein à sa mise en place est culturel et managérial
 
 <p>Il serait malhonnête de dire que le télétravail est quelque chose d'établi que l'on pratique de manière assidue, néanmoins cela arrive régulièrement et cela se passe plutôt très bien pour peu que certaines règles de bons sens soient respectées, à savoir prévenir les collègues que l'on ne sera pas là et rester facilement joignable.</p>
 
-Pour le reste sa mise en place et son utilisation au quotidien dépend, à mon sens, de trois choses, le collaborateur, l'équipe et l'entreprise auxquelles il faut ajouter les éléments suivant :
+Pour le reste, sa mise en place et son utilisation au quotidien dépendent, à mon sens, de trois choses, le collaborateur, l'équipe et l'entreprise auxquelles il faut ajouter les éléments suivant :
 
-- La volonté, en premier lieu, de travailler "à la maison" et donc de ne pas l'imposer et de laisser le choix au collaborateur.
+- La volonté, en premier lieu, de travailler "à la maison" et donc de ne pas l'imposer et de laisser le choix au collaborateur
 - La faculté du collaborateur à évoluer "seul" et à s'auto-organiser
 - Son projet de vie
 - Ses contraintes personnelles
