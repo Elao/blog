@@ -1,12 +1,12 @@
 ---
 
 type:               "post"
-title:              "Hors sujet n°1 - Comment bien préparer sa conférence ?"
+title:              "Comment bien préparer sa conférence ?"
 date:               "2014-06-03"
 publishdate:        "2014-06-03"
 draft:              false
 slug:               "hs-bien-preparer-sa-conference"
-description:        "Hors sujet n°1 - Comment bien préparer sa conférence ?"
+description:        "Comment bien préparer sa conférence ?"
 
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/yosemite.jpg"

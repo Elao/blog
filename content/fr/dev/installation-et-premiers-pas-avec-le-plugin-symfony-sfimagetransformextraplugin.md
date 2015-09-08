@@ -8,7 +8,7 @@ slug:               "installation-et-premiers-pas-avec-le-plugin-symfony-sfimage
 description:        "Installation et premiers pas avec le plugin Symfony sfImageTransformExtraPlugin."
 
 language:           "fr"
-thumbnail:          "/images/posts/thumbnails/meteor.jpg"
+thumbnail:          "/images/posts/thumbnails/toad.jpg"
 tags:               ["Développement", "PHP", "Symfony"]
 categories:         ["PHP", "Symfony"]
 
