@@ -97,11 +97,11 @@ menu:
         Identifier: "elao"
         URL:        "/elao"
         Weight:     240
-      #- Name:       "Vie au bureau"
-      #  Identifier: "vie-au-bureau"
-      #  URL:        "/categories/vie-au-bureau"
-      #  Weight:     10
-      #  parent:     "elao"
+      - Name:       "Vie au bureau"
+        Identifier: "vie-au-bureau"
+        URL:        "/categories/vie-au-bureau"
+        Weight:     10
+        parent:     "elao"
       - Name:       "Conférences"
         Identifier: "conference"
         URL:        "/categories/conference"

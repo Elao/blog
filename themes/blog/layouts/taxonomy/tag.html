@@ -8,7 +8,7 @@
                 {{ range $index, $article := .Paginator.Pages }}
                 <article>
                     {{ if eq (mod $index 2) 0 }}
-                        <div class="col-img"><a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" /></a></div>
+                        <div class="col-img"><a href="{{ .Permalink }}"><img src="{{ partial "i18n.html" .}}{{ .Params.thumbnail }}" alt="{{ .Title }}" /></a></div>
                     {{ end }}
                     <div class="col-text">
                         {{ $context := . }}
@@ -18,7 +18,7 @@
                         <a href="{{ .RelPermalink }}" class="btn">{{ ( index $.Site.Data.translations $.Site.Params.locale ).post_read_more }}</a>
                     </div>
                     {{ if ne (mod $index 2) 0 }}
-                        <div class="col-img"><a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" /></a></div>
+                        <div class="col-img"><a href="{{ .Permalink }}"><img src="{{ partial "i18n.html" .}}{{ .Params.thumbnail }}" alt="{{ .Title }}" /></a></div>
                     {{ end }}
                 </article>
                 {{ end }}
