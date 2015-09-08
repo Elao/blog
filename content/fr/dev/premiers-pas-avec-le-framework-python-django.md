@@ -345,7 +345,7 @@ def hello(request, firstname):
 
 <!-- monprojet/templates/hello.html -->
 <h1>Hello {{ firstname }} ! </h1>
-{{< highlight >}}
+{{< /highlight >}}
 
 
 Pour visualiser le résultat, rendez-vous à cette URL : <a href="http://localhost:8000/hello/Georges" target="_blank">http://localhost:8000/hello/Georges</a>

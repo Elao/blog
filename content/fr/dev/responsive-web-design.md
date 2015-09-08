@@ -54,7 +54,7 @@ max-width: 100%;/* pour limiter la taille à la largeur du parent */
 height: auto;/* pour conserver le ratio */
 width: auto;/* pour corriger un bug sur IE8  */
 box-sizing: border-box;/*pour limiter à 100% de la largeur, même si des paddings ou bordures sont appliquées à l’élément */
-{{< highlight >}}
+{{< /highlight >}}
 
 
 En ce qui concerne les background-images :
@@ -88,7 +88,7 @@ Elles n’ont pas d’impact sur le code HTML. Ainsi, on reste dépendant de l�
 @media only screen and (max-width: 767px) { {   /* Smartphones */ }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {   /* Tablettes */ }
 @media only screen and (min-width: 1024px) {   /* Desktops */ }
-{{< highlight >}}
+{{< /highlight >}}
 
 
 **Pour notre ami IE  : **
