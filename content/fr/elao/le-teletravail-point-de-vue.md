@@ -4,8 +4,8 @@ title:              "Le télétravail, point de vue."
 date:               "2015-08-14"
 publishdate:        "2015-08-14"
 draft:              true
-slug:               "le-teletravail-point-de-vu"
-description:        "Faisant encore preuve de discrétion dans l'entreprise française, le télétravail s'imposera sans doute dans les années à venir comme une réelle alternative aux méthodes traditionnelles. Le point sur ses avantages, ses inconvénients et mon point de vue."
+slug:               "le-teletravail-point-de-vue"
+description:        "Faisant encore preuve de discrétion dans l'entreprise française le télétravail s'imposera sans doute dans les années à venir comme une réelle alternative aux méthodes traditionnelles. Le point sur ses avantages, ses inconvénients et mon point de vue."
 
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/RemoteMountain.jpg"
