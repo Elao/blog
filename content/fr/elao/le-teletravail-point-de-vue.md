@@ -9,7 +9,7 @@ description:        "Pratique encore relativement marginale dans l'entreprise fr
 
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/RemoteMountain.jpg"
-header_img:         "/images/posts/headers/elephpant_elao.jpg"
+header_img:         "/images/posts/headers/elao_babyfoot.jpg"
 tags:               ["teletravail", "vie au travail"]
 categories:         ["vie au bureau", "elao"]
 
