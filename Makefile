@@ -38,6 +38,7 @@ optimize-headers:
 
 ## Install
 install:
+	brew update
 	brew install hugo
 	sudo easy_install Pygments
 
