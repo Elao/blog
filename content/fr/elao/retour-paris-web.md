@@ -24,12 +24,12 @@ Cela a été un réel plaisir tant en termes d'échanges et de belles rencontres
 
 <img src="/fr/images/posts/2015/unicorn.png" class="pull-right">
 
-Je précise que je ne suis pas développeuse, je me suis donc plus naturellement orientée sur les conférences moins tech bien que Paris Web reste accessible à tous et c'est un vrai bonheur !
+Je précise que je ne suis pas développeuse, je me suis donc plus naturellement orientée sur les conférences moins tech bien que Paris Web reste accessible à tous et c'est un vrai bonheur.
 
-Merci Paris Web pour ces moments conviviaux et détendus, je suis très partante pour la 11<sup>e</sup> édition ;-)
+Merci Paris Web pour ces moments conviviaux et détendus, je suis très partante pour la 11<sup>e</sup> édition.
 
 
-<strong>Voilà 2 confs que j'ai très envie de vous recommander et qui m'ont particulièrement interpellée (cela ne remet absolument pas en question la qualité des autres bien sûr ;-)</strong>
+<strong>Voilà 2 confs que j'ai très envie de vous recommander et qui m'ont particulièrement interpellée (cela ne remet absolument pas en question la qualité des autres bien sûr.</strong>
 
 ## "Internet et libertés pour un engagement des acteurs du numérique" - Par [Adrienne Charmet](http://www.paris-web.fr/orateurs/adrienne-charmet.php)
 
@@ -41,7 +41,7 @@ L'objectif premier de La Quadrature est de décrypter et décortiquer les textes
 Au delà des actions juridiques de longue traîne, La Quadrature initie une sensibilisation par l'éducation de tous en faveur de la protection de la liberté et des droits sur la toile (outils, config, etc).
 Nous sommes tous encouragés, chacun à notre niveau en tant qu'acteur du web, à prendre position et à ne pas avoir peur de s'engager pour la protection de la confidentialité de nos données et de celles de nos clients.
 
-C'est un sujet qu'Elao n’a pas mis de côté ;-)
+C'est un sujet qu'Elao n’a pas mis de côté !
 
 
 ## "Confessions d'un serial killer"- Par [Virginie Caplet](http://www.paris-web.fr/orateurs/virginie-caplet.php)
@@ -56,8 +56,8 @@ On se fait étouffer par des facteurs intérieurs et extérieurs, on s'invente d
 
 Une conférence sous le signe de l'introspection… la connaissance de soi et pour aller plus loin… la reconnaissance de soi.
 
-Se connaître soi-même, repousser ses propres limites, se blinder et s'assumer… C'est déjà ouvrir les portes à sa créativité, apprendre à la partager, mais encore mieux, c'est se donner la chance de concrétiser ses projets !
-Ça n'aboutit pas à tous les coups, mais on en tire une expérience propice aux prochaines idées naissantes et on ne reste pas un éternel frustré ;-)
+Se connaître soi-même, repousser ses propres limites, se blinder et s'assumer… c'est déjà ouvrir les portes à sa créativité, apprendre à la partager, mais encore mieux, c'est se donner la chance de concrétiser ses projets !
+Ça n'aboutit pas à tous les coups, mais on en tire une expérience propice aux prochaines idées naissantes et on ne reste pas un éternel frustré !
 
 C'est un retour d'expérience plein d'humour et de générosité ; perso, je me suis régalée.
 
