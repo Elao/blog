@@ -11,7 +11,7 @@ language:           "fr"
 thumbnail:          "/images/posts/thumbnails/unicorn.jpg"
 header_img:         "/images/posts/headers/unicorn.jpg"
 tags:               ["ParisWeb", "Conférences"]
-categories:         ["conferences"]
+categories:         ["conference"]
 
 author_username:    "lhoizey"
 ---
