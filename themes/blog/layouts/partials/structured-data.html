@@ -1,0 +1,19 @@
+{{ $author := index .Site.Data.authors .Params.author_username .Params.language }}
+{{ $social := (index .Site.Data.authors $.Params.author_username).social }}
+
+{{ if eq .Type "post" }}
+    <script type="application/ld+json">
+    {
+      "@context":       "http://schema.org",
+      "@type":          "BlogPosting",
+      "name":           "{{ .Title }}",
+      "headline":       "{{ .Title }}",
+      "articleSection": "{{ .Section }}",
+      "datePublished":  "{{ .PublishDate.Format "02 Jan 2006" }}",
+      "image":          "{{ .Site.BaseURL }}{{ .Params.thumbnail }}",
+      "inLanguage":     "{{ .Site.Params.locale }}",
+      "author":         "{{ $author.display_name }}",
+      "url":            "{{ .Permalink }}"
+    }
+    </script>
+{{ end }}

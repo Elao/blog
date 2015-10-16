@@ -38,6 +38,7 @@ optimize-headers:
 
 ## Install
 install:
+	brew update
 	brew install hugo
 	sudo easy_install Pygments
 
@@ -74,4 +75,5 @@ server-start-en:
 
 ## Deploy app to production
 deploy@prod: build
+	echo "google-site-verification: google98e08ccbf4b44d9b.html" > public/google98e08ccbf4b44d9b.html
 	rsync -arzv --delete public deploy@blog.elao.elao.local:/srv/app

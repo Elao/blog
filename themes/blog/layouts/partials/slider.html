@@ -5,7 +5,7 @@
         {{ $social := (index .Site.Data.authors .Params.author_username).social }}
 
         <div class="item">
-            <div class="hero" style="background-image: url('');"></div>
+            <div class="hero" style="background-image: url('{{ partial "i18n.html" . }}/{{ .Params.header_img }}');"></div>
             <div class="inner">
                 <h4><strong>{{ .Section }}</strong> - {{ .PublishDate.Format "02 Jan 2006" }}</h4>
                 <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>

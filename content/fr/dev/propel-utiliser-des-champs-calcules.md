@@ -17,7 +17,7 @@ author_username:    "gfaivre"
 
 Il est parfois très utile de pouvoir récupérer directement des champs calculés depuis la base de données, soit parce que passer par un criteria s'avère très compliqué, voir impossible, soit pour confier les calculs à la base de données.
 
-Je vous propose donc aujourd'hui deux solutions pour le faire avec Propel :
+Je vous propose donc aujourd'hui deux solutions pour le faire avec Propel :<!--more-->
 
 ### 1ère solution, les résultats sont accédés via des index numériques
 
