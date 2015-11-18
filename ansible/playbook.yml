@@ -24,7 +24,8 @@
     - { role: elao.gem }
     - { role: elao.mailcatcher }
     - { role: elao.logio }
-    - { role: elao.nginx }
     - { role: elao.supervisor }
+    - { role: elao.nginx }
+
     # App
     - { role: elao.hugo }

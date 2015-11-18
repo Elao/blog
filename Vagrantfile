@@ -11,7 +11,7 @@ options = {
     :aliases          => [],
     :memory           => 1024,
     :box              => 'elao/debian-7-amd64',
-    :box_version      => '~> 1.0.1',
+    :box_version      => '~> 1.0.0',
     :folders          => {
         '.' => '/srv/app/hugo'
     },
