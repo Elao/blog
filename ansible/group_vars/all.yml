@@ -8,6 +8,10 @@ _app_host: "{{ _app ~ ('.' ~ _vendor if _vendor else '') }}"
 _user: vagrant
 _env:  dev
 
+_nginx_access_log: "{{ elao_nginx_log_dir }}/app.access.log"
+_nginx_error_log:  "{{ elao_nginx_log_dir }}/app.error.log"
+_nginx_logformat: '[$time_local] "request_method": $request_method "request_uri": $request_uri "status": $status "forward_from": $remote_addr "real_ip": "$http_x_forwarded_for" "body_bytes_sent": $body_bytes_sent "http_referer": $http_referer "user_agent": "$http_user_agent" "http_x_forwarded_proto": $http_x_forwarded_proto "request_time": $request_time "upstream_response_time": $upstream_response_time'
+
 ########
 # Motd #
 ########
@@ -34,21 +38,16 @@ elao_env:
 
 elao_apt_update: true
 
-elao_apt_repositories:
-  - bearstech
-  - backports
-  - dotdeb
-  - nginx
-  - nodesource_0_12
+elao_apt_repositories: []
 
 elao_apt_preferences:
   - ruby@bearstech
-  - git@backports
+  - git@debian_backports
   - file: dotdeb
     template: preferences/dotdeb_low.j2
   - nginx@nginx
   - nodejs@nodesource_0_12
-  
+
 elao_apt_packages:
   - name: golang
 
@@ -98,21 +97,30 @@ elao_mailcatcher_config_template: config/{{ _env }}.j2
 # Log.io #
 ##########
 
-elao_logio_config_harvester:
-  - nodeName: App
-  - logStreams:
-    - nginx:
-      - "{{ elao_nginx_log_dir }}/app.access.log"
-      - "{{ elao_nginx_log_dir }}/app.error.log"
+#elao_logio_config_harvester:
+#  - nodeName: App
+#  - logStreams:
+#    - nginx:
+#      - "{{ elao_nginx_log_dir }}/app.access.log"
+#      - "{{ elao_nginx_log_dir }}/app.error.log"
 
 #########
 # Nginx #
 #########
 
+elao_nginx_logrotate_template: logrotate/weekly_52.j2
+
 elao_nginx_config_template: config/http_{{ _env }}.conf.j2
+elao_nginx_config:
+  - http:
+    - log_format: "main '{{ _nginx_logformat }}'"
 
 elao_nginx_configs_exclusive: true
-elao_nginx_configs: 
+elao_nginx_configs:
+  # Gzip
+  - file:     gzip
+    template: configs/gzip_{{ _env }}.j2
+
   - file:     blog.conf
     template: configs/server_{{ _env }}.conf.j2
     config:
@@ -123,6 +131,17 @@ elao_nginx_configs:
         - proxy_set_header: "Host $host"
         - proxy_set_header: "X-Real-IP $remote_addr"
         - proxy_pass:       "http://localhost:1313"
+
+##########
+# Log.io #
+##########
+
+elao_logio_config_harvester:
+  - nodeName: App
+  - logStreams:
+    - nginx:
+      - "{{ elao_nginx_log_dir }}/app.access.log"
+      - "{{ elao_nginx_log_dir }}/app.error.log"
 
 ##############
 # Supervisor #
@@ -137,12 +156,10 @@ elao_supervisor_configs:
   - file:     app-worker-hugo.conf
     template: configs/program_{{ _env }}.conf.j2
     config:
-      - app-worker-hugo:
-        - command:         hugo server --theme=blog --buildDrafts=true --watch=true --ignoreCache=true
+      - hugo:
+        - command:         make server-start-fr
         - directory:       "{{ _app_dir }}/hugo"
         - user:            "www-data"
         - autorestart:     true
-        - stdout_logfile:  "{{ elao_supervisor_log_dir }}/app-worker-hugo.log"
+        - stdout_logfile:  "{{ elao_supervisor_log_dir }}/hugo.log"
         - redirect_stderr: true
-
-
