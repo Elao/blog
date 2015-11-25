@@ -64,4 +64,18 @@ une demande en nouvelles fonctionnalités assez énormes.
 * Organisation par squad
 * Encouragement aux projets personnels
 
+### Insuffler la culture client dans une équipe de dev par Xavier (Elao)
+
+Par sourcis d'objectivité, nous nous abstriendrons de commenter cette présentation, même si nous avons trouvé ça très
+bien :)
+Voici le pitch :
+
+> "L’approche agile impacte fortement la relation client avec les équipes de dev. L’approche Produit
+axée autour de la valeur ajoutée des développements pour le projet a changé les relations et le fonctionnement des
+équipes projets.Nous ferons le tour des grandes étapes et des écueils qui aimèrent à ce changement qui n’a qu’un seul
+but : faire un projet de qualité qui répond au besoin des utilisateurs".
+
+Nous pouvons juste dire que nous avons eu quelques bons retours d'auditeurs se disant se reconnaitre dans notre
+discours. Tant mieux, on va dans le bon sens !
+
 ## Conclusion
