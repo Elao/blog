@@ -15,6 +15,8 @@ categories:         ["conference"]
 author_username:    "rhanna"
 ---
 
+## PHP a 20 ans et s'offre une cure de jouvence avec la version 7
+
 Le Forum PHP de l'<abbr title="Association Française des Utilisateurs de PHP">AFUP</abbr> a réuni au Beffroi de Montrouge du beau monde
 cette année, des membres de la Core team du développement de PHP et le créateur du langage, le groenlandais Rasmus
 Lerdorf.
@@ -79,9 +81,12 @@ Design... A Elao, nous avons déjà adopté ce style d'architecture pour des app
 
 ### CQRS de la théorie à la pratique par Nicolas Le Nardou (Materiel.net)
 
-Bon retour d'expérience sur la gestion de stock du site ecommerce *materiel.net* grâce au *design pattern*
-<abbr title="Command Query Responsibility Segregation">CQRS</abbr>. En résumé, ne mettez pas à jour votre stock en
-direct, historiser plutôt les évènements (ajout ou suppression d'items) pour pouvoir "rejouer" l'historique.
+Bon retour d'expérience sur la gestion de stock du site ecommerce [materiel.net](http://www.materiel.net/) grâce au
+*design pattern* <abbr title="Command Query Responsibility Segregation">CQRS</abbr>.
+En résumé, ne mettez pas à jour votre stock en direct, historiser plutôt les évènements (ajout ou suppression d'items)
+pour pouvoir "rejouer" l'historique.
+
+[Les slides de CQRS de la théorie à la pratique](https://speakerdeck.com/niktux/cqrs-de-la-theorie-a-la-pratique).
 
 ### Halte à l'anarchitecture ! par Gauthier Delamarre
 
@@ -90,17 +95,27 @@ sur le rôle de l'architecte. Il nous a manqué des exemples plus concrets. Domm
 plus nuancé. Par exemple que l'architecture du logiciel ne soit pas plus "collaborative". Conférence intéressante tout
 de même qui permet des poser les bases d'une application réussie.
 
+[Les slides de Halte à l'anarchitecture !](http://slides.opcoding.eu/anarchitecture/?standalone#/)
+
 ### PHP 7 – What changed internally? par Nikita Popov
  
 Nikita est l'un des développeurs de la *core team* de PHP. Il nous a expliqué très simplement comment PHP7 a gagné en
 performance grâce à une meilleure gestion mémoire des variables, des *array* et des classes.
+
+[Les slides de PHP 7 – What changed internally?](http://www.slideshare.net/nikita_ppv/php-7-what-changed-internally-forum-php-2015)
+
+### Zoom sur les objets PHP par Julien Pauli
+
+A l'heure du passage de la version 5 à la version 7, un sujet très intéressant sur le fonctionnement interne des
+objets PHP, animé par un développeur de la *core team* de PHP. De temps en temps, cela ne fait pas de mal de regarder
+sous le capot.
 
 ### Soyez spécifiques ? Un business clair et du code limpide avec RulerZ par Kévin Gomez
 
 Connaissez-vous le *Pattern Specification* ? En gros, les règles métiers de votre application doivent être réunies à
 un seul endroit en étant agnostique de votre framework ou autre CMS que vous utilisez.
 
-Kévin Gomez a créé son implémentation de ce *pattern*, une librairie appelée [RulerZ}(https://github.com/K-Phoen/rulerz)
+Kévin Gomez a créé son implémentation de ce *pattern*, une librairie appelée [RulerZ](https://github.com/K-Phoen/rulerz)
 disponible en bundle pour Symfony.
 La particularité de cette implémentation ? Un langage d'expression proche du SQL pour faire des spécifications lisibles. 
 Nous avons trouvé cette conférence dynamique et claire avec des vrais morceaux de cas concrets dedans.
@@ -111,9 +126,9 @@ Meetic est l'une des plus belles réussites de l'écosystème start-up français
 refonte est en cours pour passer d'une application monolithique vers des micro-services.
 Qui dit micro-services, dit système de communication entre ces différentes briques et pour cela il était nécessaire
 d'avoir un système de *message queue*. Après études des différentes solutions du marché, les équipes tech de Meetic
-ont adopté *Kafka*, une solution Open Source qui offrent à la fois simplicité d'utilisation et haute performance.
-Nous avons été convaincu. Pour sûr, au prochain besoin en Queuing qui apparait, au lieu d'un lourd RabbitMQ, nous
-tenterons la métamorphose avec *Kafka* :)
+ont adopté [Apache Kafka](http://kafka.apache.org/), une solution Open Source qui offrent à la fois simplicité d'utilisation et haute performance.
+Nous avons été convaincus. Pour sûr, au prochain besoin en *queuing*, au lieu d'un lourd RabbitMQ, nous tenterons la
+métamorphose avec Kafka :)
 
 ### Framework agnostic for the win par Jonathan Reinink
 
@@ -121,18 +136,20 @@ En bref, ne coder par votre librairie pour un framework en particulier. Rendez l
 l'interopérabilité.
 Malheureusement, c'est resté trop "en surface" et on aurait aimé plus de "retour terrain", notamment car le conférencier est
 l'auteur de la librairie de gestion d'image Glide.
-Car il suffit de connaitre un peu php-fig pour s'ennuyer durant cette conférence.
+Car il suffit de connaitre un peu [PHP-FIG](http://www.php-fig.org/) pour ne rien apprendre durant cette présentation.
+
+[Les slides de Framework agnostic for the win](https://speakerdeck.com/reinink/framework-agnostic-packages-for-the-win)
 
 ### Suivre ses séries avec des API par Maxime Valette
 
-Le créateur du célèbre site *Vie de Merde* est venu parler d'un de ses autres projets, en l'occurence BetaSeries, de
+Le créateur du célèbre site [viedemerde.fr](http://www.viedemerde.fr/) est venu parler d'un de ses autres projets, en l'occurence BetaSeries, de
 scraping (aspiration de contenus de sites web tiers), d'utilisation d'API hétéroclites et surtout de... débrouilles.
 *"Librairie PHP"* très utile dans ce cas ? un simple *preg_match()* en PHP pour parser manuellement les sources.
 
 ### Un éléphant dans le monde des licornes par Matthieu Moquet (Blablacar)
 
 La vie du développeur chez Blablacar entre migration vers Symfony, *code legacy* et technologies nouvelles :
-*ElasticSearch*, *Cassandra*, réplication des données sur différents serveurs de par le monde.
+ElasticSearch, Cassandra, réplication des données sur différents serveurs de par le monde.
 Toujours très intéressant de voir ce qu'il a sous le capot des start-up françaises à succès.
 
 ### Insuffler la culture client dans une équipe de dev par Xavier (Elao)
@@ -151,11 +168,10 @@ discours. Tant mieux, nous allons dans le bon sens !
 
 ## Conclusion
 
-Cette édition du Forum PHP a fait la part belle à l'arrivée de PHP7. D'autre part, nous avons ressorti des grandes
-tendances selon les thèmes de plusieurs conférences : l'organisation du travail et l'architecture logicielle (qui sont
-souvent liées finalement).
+Cette édition du Forum PHP a fait la part belle à l'arrivée de PHP7. D'autre part, nous retiendrons des grandes
+tendances : l'organisation du travail et l'architecture logicielle. Les deux sont souvent assez liées finalement.
 
-La liste des conférences et certains slides sont disponibles sur
+Le pitch des conférences et certains slides sont disponibles sur
 [la page évènement Forum PHP](https://joind.in/event/view/3950) sur Joind.in.
 
 L'organisation animée par des membres de la communauté PHP a été parfaite. Le rendez-vous est pris pour le PHP Tour qui
