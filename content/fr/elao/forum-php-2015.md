@@ -35,7 +35,8 @@ Finalement nous avons la définition ultime de l'acronyme PHP : People Helping P
 
 ## Les confs auxquelles nous avons assisté
 
-Il y avait 3 tracks de conférences qui se sont déroulées sur deux journées et nous avons dû parfois faire des choix cornéliens entre les différents sujets.
+Il y avait 3 tracks de conférences qui se sont déroulées sur deux journées et nous avons dû parfois faire des choix
+cornéliens entre les différents sujets.
 Voici notre retour sur les conférences auxquelles nous avons assisté.
 
 ### Taylorisme de la qualité logicielle par Jean-François Lépine
@@ -47,13 +48,13 @@ De plus il ne faut pas laisser la technique résoudre tous les problèmes.
 L'Humain est au cœur de notre métier. Dans une équipe, il faut des meneurs, des gens motivés qui vont porter un projet
 ou des évolutions, que ce soit au niveau technique ou en terme d'organisation. 
 
-### Comment Ansible et Docker changent notre environnement de mise en production par Simon Constans et Maxime Thoonsen (Theodo)
+### Comment Ansible et Docker changent notre environnement de mise en production par Simon Constans et Maxime Thoonsen
 
 Sur des projets courts de quelques semaines à quelques mois, il est important de ne pas perdre de temps pour initier la
 production. Cette présentation nous a montré comment tirer parti de Ansible et Docker pour être "up" en production en
 très peu de temps.
 
-### Scrum... et après ? par Yvan Wibaux et Olivier Madre (Evaneos)
+### Scrum... et après ? par Yvan Wibaux et Olivier Madre
 
 Un des cofondateurs, un architecte et un Developpeur d'Evaneos nous ont présenté comment cette start-up s'est
 auto-ré-organiser.
@@ -78,7 +79,7 @@ Bref, un très bon retour d'expérience sur une tendance forte : la libéralisat
 Très bonne introduction sur l'architecture logicielle tendance du moment : Domain Driven Design, Behavior Driven
 Design... A Elao, nous avons déjà adopté ce style d'architecture pour des applications métiers complexes.
 
-### CQRS de la théorie à la pratique par Nicolas Le Nardou (Materiel.net)
+### CQRS de la théorie à la pratique par Nicolas Le Nardou
 
 Bon retour d'expérience sur la gestion de stock du site ecommerce [materiel.net](http://www.materiel.net/) grâce au
 *design pattern* <abbr title="Command Query Responsibility Segregation">CQRS</abbr>.
@@ -145,13 +146,13 @@ Le créateur du célèbre site [viedemerde.fr](http://www.viedemerde.fr/) est ve
 scraping (aspiration de contenus de sites web tiers), d'utilisation d'API hétéroclites et surtout de... débrouilles.
 *"Librairie PHP"* très utile dans ce cas ? un simple *preg_match()* en PHP pour parser manuellement les sources.
 
-### Un éléphant dans le monde des licornes par Matthieu Moquet (Blablacar)
+### Un éléphant dans le monde des licornes par Matthieu Moquet
 
 La vie du développeur chez Blablacar entre migration vers Symfony, *code legacy* et technologies nouvelles :
 ElasticSearch, Cassandra, réplication des données sur différents serveurs de par le monde.
 Toujours très intéressant de voir ce qu'il y a sous le capot des start-up françaises à succès.
 
-### Insuffler la culture client dans une équipe de dev par Xavier (Elao)
+### Insuffler la culture client dans une équipe de dev par Xavier Gorse
 
 Par souci d'objectivité, nous nous abstriendrons de commenter cette présentation, même si nous avons trouvé ça très
 bien :)
