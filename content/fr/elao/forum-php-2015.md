@@ -25,18 +25,17 @@ Et pour cause ! Nous fêtons les 15 ans de l'association et les 20 ans du langag
 
 <img src="/images/posts/2015/haphpybirthday.jpg" class="text-center">
 
-Point d'orgue de la keynote d'ouverture, il a été diffusé en avant première mondiale la vidéo
+Point d'orgue de la keynote d'ouverture, diffusion en avant première mondiale de la vidéo
 ["Haphpy Birthday"](https://www.youtube.com/watch?v=tHlCsZf3nmA),
 projet collaboratif animé par notre ami [Julien](https://twitter.com/Woecifaun).
-Un montage de vidéos et de photos provenant du monde entier a célébré l'amour des développeurs pour le langage PHP.
+Un montage de vidéos et de photos provenant du monde entier a célébré l'amour des développeurs pour le PHP.
 Oui en ces temps obscurs, célébrons l'amour !
 L'amour pour PHP mais aussi des valeurs de partage véhiculées par ce langage Open Source.
 Finalement nous avons la définition ultime de l'acronyme PHP : People Helping People.
 
 ## Les confs auxquelles nous avons assisté
 
-Il y avait 3 tracks de conférences qui se sont déroulées sur deux journées et nous avons dû parfois faire des choix cornéliens entre des
-sujets qui nous intéressent.
+Il y avait 3 tracks de conférences qui se sont déroulées sur deux journées et nous avons dû parfois faire des choix cornéliens entre les différents sujets.
 Voici notre retour sur les conférences auxquelles nous avons assisté.
 
 ### Taylorisme de la qualité logicielle par Jean-François Lépine
@@ -59,12 +58,12 @@ très peu de temps.
 Un des cofondateurs, un architecte et un Developpeur d'Evaneos nous ont présenté comment cette start-up s'est
 auto-ré-organiser.
 Surtout à un moment critique où de nombreux développeurs sont arrivés en peu de temps.
-Tout cela conjugué a une forte croissance et une importante demande en nouvelles fonctionnalités.
+Tout cela conjugué à une forte croissance et une importante demande en nouvelles fonctionnalités.
 En vrac :
 
 * Auto-organisation d'une équipe engagée
 * Les développeurs ne sont pas des simples exécutants mais doivent être des développeurs-entrepreneurs
-* Ré-organisation physiques des bureaux pour mieux partager et échanger
+* Ré-organisation physique des bureaux pour mieux partager et échanger
 * Amélioration de la gestion des *user stories* : abandon de Jira en faveur de *Trello* ou de simples *post-it*.
 * Nouvelles fonctionnalités et stratégies portées par tous
 * Le *Product Owner* partage avec les équipes plutôt que ne décide tout seul de l'orientation de son produit
@@ -118,7 +117,7 @@ un seul endroit en étant agnostique de votre framework ou autre CMS que vous ut
 Kévin Gomez a créé son implémentation de ce *pattern*, une librairie appelée [RulerZ](https://github.com/K-Phoen/rulerz)
 disponible en bundle pour Symfony.
 La particularité de cette implémentation ? Un langage d'expression proche du SQL pour faire des spécifications lisibles. 
-Nous avons trouvé cette conférence dynamique et claire avec des vrais morceaux de cas concrets dedans.
+Nous avons trouvé cette conférence dynamique et claire avec une présentation de vrais cas concrets.
 
 ### L'architecture événementielle chez Meetic par Matthieu Robin et Benjamin Pineau
 
@@ -126,7 +125,7 @@ Meetic est l'une des plus belles réussites de l'écosystème start-up français
 refonte est en cours pour passer d'une application monolithique vers des micro-services.
 Qui dit micro-services, dit système de communication entre ces différentes briques et pour cela il était nécessaire
 d'avoir un système de *message queue*. Après études des différentes solutions du marché, les équipes tech de Meetic
-ont adopté [Apache Kafka](http://kafka.apache.org/), une solution Open Source qui offrent à la fois simplicité d'utilisation et haute performance.
+ont adopté [Apache Kafka](http://kafka.apache.org/), une solution Open Source qui offre à la fois simplicité d'utilisation et haute performance.
 Nous avons été convaincus. Pour sûr, au prochain besoin en *queuing*, au lieu d'un lourd RabbitMQ, nous tenterons la
 métamorphose avec Kafka :)
 
@@ -142,7 +141,7 @@ Car il suffit de connaitre un peu [PHP-FIG](http://www.php-fig.org/) pour ne rie
 
 ### Suivre ses séries avec des API par Maxime Valette
 
-Le créateur du célèbre site [viedemerde.fr](http://www.viedemerde.fr/) est venu parler d'un de ses autres projets, en l'occurence BetaSeries, de
+Le créateur du célèbre site [viedemerde.fr](http://www.viedemerde.fr/) est venu parler de l'un de ses autres projets, en l'occurence BetaSeries, de
 scraping (aspiration de contenus de sites web tiers), d'utilisation d'API hétéroclites et surtout de... débrouilles.
 *"Librairie PHP"* très utile dans ce cas ? un simple *preg_match()* en PHP pour parser manuellement les sources.
 
@@ -150,7 +149,7 @@ scraping (aspiration de contenus de sites web tiers), d'utilisation d'API hété
 
 La vie du développeur chez Blablacar entre migration vers Symfony, *code legacy* et technologies nouvelles :
 ElasticSearch, Cassandra, réplication des données sur différents serveurs de par le monde.
-Toujours très intéressant de voir ce qu'il a sous le capot des start-up françaises à succès.
+Toujours très intéressant de voir ce qu'il y a sous le capot des start-up françaises à succès.
 
 ### Insuffler la culture client dans une équipe de dev par Xavier (Elao)
 
