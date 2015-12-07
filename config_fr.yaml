@@ -107,3 +107,8 @@ menu:
         URL:        "/categories/conference"
         Weight:     30
         parent:     "elao"
+      - Name:       "Méthodo"
+        Identifier: "methodo"
+        URL:        "/categories/methodo"
+        Weight:     30
+        parent:     "elao"
