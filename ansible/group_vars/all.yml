@@ -2,7 +2,7 @@
 
 _vendor:   elao
 _app:      blog
-_app_dir:  /srv/app
+_app_dir:  /srv/app/
 _app_host: "{{ _app ~ ('.' ~ _vendor if _vendor else '') }}"
 
 _user: vagrant
@@ -50,6 +50,9 @@ elao_apt_preferences:
 
 elao_apt_packages:
   - name: golang
+  - name: optipng
+  - name: libjpeg-progs
+  - name: graphicsmagick-imagemagick-compat
 
 #######
 # Ssh #
@@ -58,6 +61,15 @@ elao_apt_packages:
 elao_ssh_config_sshd_template: config/sshd/{{ _env }}.j2
 
 elao_ssh_config_template: config/{{ _env }}.j2
+
+elao_ssh_config:
+  # Prod
+  - Host *.elao.local:
+    - User:                  deploy
+    - ProxyCommand:          ssh gateway@hv-1.elao.com "nc %h %p"
+    - ForwardAgent:          true
+    - StrictHostKeyChecking: false
+    - HashKnownHosts:        false
 
 #######
 # Git #
@@ -124,13 +136,25 @@ elao_nginx_configs:
   - file:     blog.conf
     template: configs/server_{{ _env }}.conf.j2
     config:
-      - listen: "{{ ansible_eth1.ipv4.address }}:80"
+      - listen:      "{{ ansible_eth1.ipv4.address }}:80"
+      - server_name: "{{ _app_host }}.dev"
       - access_log:  "{{ elao_nginx_log_dir }}/app.access.log"
       - error_log:   "{{ elao_nginx_log_dir }}/app.error.log"
       - location /:
         - proxy_set_header: "Host $host"
         - proxy_set_header: "X-Real-IP $remote_addr"
         - proxy_pass:       "http://localhost:1313"
+
+  - file:     static.conf
+    template: configs/server_{{ _env }}.conf.j2
+    config:
+      - listen:      "{{ ansible_eth1.ipv4.address }}:8001"
+      - server_name: "{{ _app_host }}.dev"
+      - root:        "{{ _app_dir }}/hugo/public"
+      - access_log:  "{{ elao_nginx_log_dir }}/app.access.log"
+      - error_log:   "{{ elao_nginx_log_dir }}/app.error.log"
+      - charset:     "UTF-8"
+      - location /: []
 
 ##########
 # Log.io #

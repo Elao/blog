@@ -21,18 +21,18 @@ help:
 	} \
 	{ lastLine = $$0 }' $(MAKEFILE_LIST)
 
-## Images optimization
-optimize: optimize-thumbnails optimize-headers
+## Images croping
+optimizing: crop-thumbnails crop-headers
 	find public/fr/images -iname "*.png" -type f -exec optipng -o7 {} \;
 	find public/en/images -iname "*.png" -type f -exec optipng -o7 {} \;
 	find public/fr/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \;
 	find public/en/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \;
 
-optimize-thumbnails:
+crop-thumbnails:
 	find public/fr/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \;
 	find public/en/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \;
 
-optimize-headers:
+crop-headers:
 	find public/fr/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \;
 	find public/en/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \;
 
