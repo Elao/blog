@@ -2,7 +2,7 @@ en:
   display_name: Elao
   short_bio:    ""
   long_bio:     ""
-  job_title":   "Agence web experte Symfony"
+  job_title:    "Agence web experte Symfony"
 
 fr:
   display_name: Elao
@@ -17,4 +17,3 @@ social:
   email:           contact@elao.com
   avatar:          ~
   google_plus_id:  "118274493624974429462"
-  
