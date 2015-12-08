@@ -9,7 +9,9 @@
             <div class="inner">
                 <h4><strong>{{ .Section }}</strong> - {{ .PublishDate.Format "02 Jan 2006" }}</h4>
                 <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-                <a href="#" class="author"><img src="{{ if $social.avatar_url }}{{ $social.avatar_url }}{{ else }}{{ partial "i18n.html" . }}/images/logo.svg{{ end }}" alt="{{ $author.display_name }}"></a>
+                <a href="#" class="author"><img src="{{ if $social.avatar }}{{ partial "i18n.html" . }}/images/{{ $social.avatar }}{{ else }}{{ partial "i18n.html" . }}/images/logo.svg{{ end }}" alt="{{ $author.display_name }}"></a>
+                <br/>
+                <!--<span>{{ ( index $.Site.Data.translations $.Site.Params.locale ).post_wrote_by }} <a href="#" class="strong">{{ $author.display_name }}</a></span>-->
             </div>
         </div>
         {{ end }}

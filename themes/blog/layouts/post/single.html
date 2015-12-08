@@ -29,7 +29,7 @@
             <h4>{{ range .Params.tags }}<strong><a href="{{ partial "i18n.html" $context }}/tags/{{ . | urlize }}">{{ . }}</a></strong> {{ end }} - {{ .Date.Format "02 Jan 2006" }}</h4>
             <h1>{{ .Title }}</h1>
             <p class="author">
-                <a href="#" class="author"><img src="{{ if $social.avatar_url }}{{ $social.avatar_url }}{{ else }}{{ partial "i18n.html" . }}/images/logo.svg{{ end }}" alt="{{ $author.display_name }}"></a>
+                <a href="#" class="author"><img src="{{ if $social.avatar }}{{ partial "i18n.html" . }}/images/{{ $social.avatar }}{{ else }}{{ partial "i18n.html" . }}/images/logo.svg{{ end }}" alt="{{ $author.display_name }}"></a>
                 <br/>
                 <span>{{ ( index $.Site.Data.translations $.Site.Params.locale ).post_wrote_by }} <a href="#" class="strong">{{ $author.display_name }}</a></span>
             </p>
@@ -46,7 +46,7 @@
                 <div id="socials">
                     <div class="author-block">
                         <div class="picture">
-                            <img src="{{ if $social.avatar_url }}{{ $social.avatar_url }}{{ else }}{{ partial "i18n.html" . }}/images/logo.svg{{ end }}" alt="{{ $author.display_name }}">
+                            <img src="{{ if $social.avatar }}{{ partial "i18n.html" . }}/images/{{ $social.avatar }}{{ else }}{{ partial "i18n.html" . }}/images/logo.svg{{ end }}" alt="{{ $author.display_name }}">
                         </div>
                         <div class="job">
                             <strong>{{ $author.display_name }}</strong><br/>
