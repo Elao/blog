@@ -13,7 +13,7 @@ header_img:     "/images/posts/headers/elao_team_front.jpg"
 tags:           ["agile", "user stories", "specifications"]
 categories:     ["methodo"]
 
-author_username:    "elao"
+author_username:    "ssolere"
 
 ---
 

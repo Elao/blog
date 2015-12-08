@@ -1,22 +1,19 @@
 en:
-  display_name: Richard HANNA
+  display_name: Sébastien SOLERE
   short_bio:    ""
   long_bio:     ""
-  job_title":   "Symfony developer"
+  job_title":   "Web and Mobile consultant, Agile mentor"
 
 fr:
-  display_name: Richard HANNA
+  display_name: Sébastien SOLERE
   short_bio:    ""
   long_bio:     ""
-  job_title:    Développeur Symfony
+  job_title:    "Consultat Web et Mobile, Agile Mentor"
 
 social:
   website:         http://www.elao.com
   twitter:         richardhanna
   github:          supertanuki
   email:           richard.hanna@elao.com
-  avatar:          "authors/rhanna.jpg"
+  avatar:          "authors/ssolere.jpg"
   google_plus_id:  ~
-
-
-  
