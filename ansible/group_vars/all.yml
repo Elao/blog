@@ -53,6 +53,7 @@ elao_apt_packages:
   - name: optipng
   - name: libjpeg-progs
   - name: graphicsmagick-imagemagick-compat
+  - name: python3-pygments
 
 #######
 # Ssh #
