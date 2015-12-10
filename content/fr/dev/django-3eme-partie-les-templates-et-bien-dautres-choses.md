@@ -42,7 +42,7 @@ Il faut savoir que Django gère les fixtures dans plusieurs formats : XML, YAML 
 
 La manière la plus simple pour générer un jeu de données est dans un premier temps de créer en base de données un enregistrement pour chaque classe, à l'aide de l'Admin de Django, puis de lancer la sous-commande **dumpdata** qui va générer un fichier exemple de fixtures à partir des données que nous aurons enregistrées. Si vous souhaitez créer vos propres fixtures, je vous laisse donc le temps d'aller créer une instance de la classe "**shop.Sport**" et une autre de la classe "sport.Item" via l'Admin … Ca y est ? C'est fait ? Nous pouvons donc générer un squelette de fixtures qui va nous servir de base pour créer des données supplémentaires :
 
-{{< highlight shell >}}
+{{< highlight bash >}}
 python manage.py dumpdata --indent=2 --format=xml shop
 {{< /highlight >}}
 
@@ -59,7 +59,7 @@ En nous basant sur cet exemple, nous allons pouvoir créer des données supplém
 
 A présent, nous allons charger les données en base en lançant la commande **loaddata** :
 
-{{< highlight shell >}}
+{{< highlight bash >}}
 
 python manage.py loaddata shop/fixtures/initial_data.xml
 {{< /highlight >}}

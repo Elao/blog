@@ -165,7 +165,7 @@ Sass possède deux syntaxes :
 
 SASS nécessite le langage `RUBY` pour fonctionner. Assurez vous d’avoir un environnement Ruby à jour ou installer le. Puis installer SASS, avec la commande
 
-{{< highlight shell >}}
+{{< highlight bash >}}
 
 gem install sass
 {{< /highlight >}}

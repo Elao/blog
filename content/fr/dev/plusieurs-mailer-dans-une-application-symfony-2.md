@@ -40,7 +40,6 @@ La solution que je vous propose pour palier à cela est de créer 2 mailer utili
 Pour cela rien de plus simple, créez plusieurs mailers dans votre app/config/config.yml :
 
 {{< highlight yaml >}}
-
 # Swiftmailer Configuration
 swiftmailer:
     default_mailer: default
@@ -57,7 +56,7 @@ swiftmailer:
 
 Vous remarquerez que cela aura pour effet de créer 2 services d'envoi d'e-mails que vous pourrez ensuite utiliser dans votre application :
 
-{{< highlight shell >}}
+{{< highlight bash >}}
 
 jlopes:/Volumes/Elao/workspace/myProject ./app/console container:debug | grep mailer
 mailer                                            n/a       alias for swiftmailer.mailer.default

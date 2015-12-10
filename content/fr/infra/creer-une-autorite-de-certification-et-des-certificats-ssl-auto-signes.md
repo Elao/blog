@@ -26,7 +26,7 @@ L'ensemble de ces manipulations ont été réalisées sur des serveurs Linux / D
 
 Nous allons commencer par créer une clé privée
 
-{{< highlight shell >}}
+{{< highlight bash >}}
 
 root@my_server:~# openssl genrsa -des3 -out elao-ca.key 2048
 Generating RSA private key, 2048 bit long modulus
@@ -91,7 +91,7 @@ openssl req -new -key elao-server.key -out elao-server.csr
 
 ... qui devrait aboutir sur:
 
-{{< highlight shell >}}
+{{< highlight bash >}}
 
 Enter pass phrase for elao-server.tld.key:
 You are about to be asked to enter information that will be incorporated into your certificate request.

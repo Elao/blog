@@ -27,7 +27,7 @@ Le projet qui va nous servir de fil rouge tout au long de cet article (et ceux q
 
 Nous ouvrons donc une ligne de commande, nous nous plaçons dans le répertoire qui contient nos projets Django ("workspace-django" en ce qui me concerne), et nous lançons les commandes nécessaires pour initialiser le projet et créer l'application "shop" :
 
-{{< highlight shell >}}
+{{< highlight bash >}}
 cd ~/workspace-django
 django-admin.py startproject elao
 cd elao
@@ -172,7 +172,7 @@ python manage.py sqlall shop # où 'shop' correspond à notre application
 
 Nous allons à présent manipuler la classe *Sport* au moyen d'un shell interactif très pratique, en particulier lorsque l'on débute sous Django et Python. N'hésitez pas à en abuser lorsque vous souhaitez expérimenter Python et/ou Django pour vous familiariser avec ces deux technologies !
 
-```
+```python
 python manage.py shell
 ```
 

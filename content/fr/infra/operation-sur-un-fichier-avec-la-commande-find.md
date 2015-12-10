@@ -18,7 +18,7 @@ author_username:    "gfaivre"
 
 La commande "find" permet non seulement de faire des recherches sur les fichiers de l'arborescence mais également d'exécuter des commandes sur ces mêmes fichiers. Option au combien pratique pour toutes les tâches de maintenance / nettoyage des systèmes !
 
-{{< highlight shell >}}
+{{< highlight bash >}}
 
 find . -name ’*.yml’ -exec rm {} ;
 {{< /highlight >}}

@@ -41,7 +41,7 @@ python
 
 Vous devriez alors voir apparaître une invitation de commande Python assez semblable à celle-ci :
 
-{{< highlight shell >}}
+{{< highlight bash >}}
 
 Python 2.5.2 (r252:60911, Jan 20 2010, 23:16:55)
 [GCC 4.3.2] on linux2
@@ -86,7 +86,7 @@ django-admin.py
 
 Si tout s'est déroulé correctement, vous devriez obtenir le résultat suivant (et notamment la liste des sous-commandes Django disponibles) :
 
-{{< highlight shell >}}
+{{< highlight bash >}}
 
 Usage: django-admin.py subcommand [options] [args]
       .....

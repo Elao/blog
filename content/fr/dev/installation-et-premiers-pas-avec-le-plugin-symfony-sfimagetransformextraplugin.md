@@ -33,7 +33,7 @@ En effet, au moment de la rédaction de ce billet, la version courante du plugin
 
 Installer le plugin de base (sfImageTransformPlugin) en ligne de commande en prenant soin de préciser la version souhaitée :
 
-{{< highlight shell >}}
+{{< highlight bash >}}
 ./symfony plugin:install --release=1.3.1 sfImageTransformPlugin
 {{< /highlight >}}
 
@@ -50,7 +50,7 @@ Pour le plugin "Extra", il faut l'installer manuellement. Pour cela :
 
 Enfin, un article consacré à Symfony qui ne contient pas une instruction **symfony cc** n'est pas digne de ce nom ! Donc :
 
-{{< highlight shell >}}
+{{< highlight bash >}}
 ./symfony cc
 {{< /highlight >}}
 
