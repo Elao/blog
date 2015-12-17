@@ -206,12 +206,6 @@ du code ou la modification du Coding Styles en "Airbnb Code Style";
 
 [Les slides](http://slides.seld.be/?file=2015-12-04+Behind+the+Scenes+of+Maintaining+an+Open+Source+Project.html)
 
-### Comparing Symfony2 perfs in PHP7 migrationby Julien Pauli
-Julien Pauli nous amène dans les profondeurs du fonctionnement interne de PHP7 pour nous expliquer l'augmentation notable de performance de PHP7. 
-Ce qu'il faut retenir : 
-* La compilation de PHP7 est plus gourmande que PHP5, ce qui n'a pas d'importante au final avec le cache d'opcode indispensable sur des frameworks comme Symfony.
-* Beaucoup de travail fait dans le coeur de PHP pour exploiter au mieux les caches L1 & L2 des CPU, ce qui explique la plus faible consommation mémoire et la rapidité de ce dernier. 
-
 ### Comparing Symfony2 perfs in PHP7 migration by Julien Pauli
 
 Julien Pauli nous amène dans les profondeurs du fonctionnement interne de PHP7 pour nous expliquer l'augmentation
@@ -219,7 +213,7 @@ notable de performance de PHP7.
 
 Ce qu'il faut retenir :
  
-* La compilation de PHP7 est plus gourmande que PHP5, ce qui n'a pas d'importante au final avec le cache d'opcode
+* La compilation de PHP7 est plus gourmande que PHP5, ce qui n'a pas d'importance au final avec le cache d'opcode
 indispensable sur des frameworks comme Symfony.
 * Beaucoup de travail fait dans le cœur de PHP pour exploiter au mieux les caches L1 & L2 des CPU, ce qui explique la
 plus faible consommation mémoire et la rapidité de ce dernier. 
