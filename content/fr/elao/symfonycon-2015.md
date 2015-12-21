@@ -2,7 +2,7 @@
 type:               "post"
 title:              "Retour sur la SymfonyCon 2015"
 date:               "2015-12-04"
-publishdate:        "2015-12-04"
+publishdate:        "2015-12-17"
 draft:              false
 slug:               "symfonycon-2015"
 description:        "Nous étions à la SymfonyCon 2015 pour fêter les 10 ans de Symfony"

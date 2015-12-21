@@ -26,7 +26,7 @@
         {{end}}
         <header>
             {{ $context := . }}
-            <h4>{{ range .Params.tags }}<strong><a href="{{ partial "i18n.html" $context }}/tags/{{ . | urlize }}">{{ . }}</a></strong> {{ end }} - {{ .Date.Format "02 Jan 2006" }}</h4>
+            <h4>{{ range .Params.tags }}<strong><a href="{{ partial "i18n.html" $context }}/tags/{{ . | urlize }}">{{ . }}</a></strong> {{ end }} - {{ .PublishDate.Format "02 Jan 2006" }}</h4>
             <h1>{{ .Title }}</h1>
             <p class="author">
                 <a href="#" class="author"><img src="{{ if $social.avatar }}{{ partial "i18n.html" . }}/images/{{ $social.avatar }}{{ else }}{{ partial "i18n.html" . }}/images/logo.svg{{ end }}" alt="{{ $author.display_name }}"></a>
