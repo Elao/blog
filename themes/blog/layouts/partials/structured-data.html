@@ -6,14 +6,30 @@
     {
       "@context":       "http://schema.org",
       "@type":          "BlogPosting",
+      "mainEntityOfPage":{
+        "@type":"WebPage",
+        "@id":"{{ .Permalink }}"
+      },
       "name":           "{{ .Title }}",
       "headline":       "{{ .Title }}",
       "articleSection": "{{ .Section }}",
       "datePublished":  "{{ .PublishDate.Format "02 Jan 2006" }}",
-      "image":          "{{ .Site.BaseURL }}{{ .Params.thumbnail }}",
+      "dateModified":   "{{ if isset .Params "modifiedDate" }}{{ .Params.modifiedDate | dateFormat "02 Jan 2006" }}{{ else }}{{ .PublishDate.Format "02 Jan 2006" }}{{ end }}",
+      "image":          "{{ .Site.BaseURL }}{{ slicestr .Params.thumbnail 1 }}",
       "inLanguage":     "{{ .Site.Params.locale }}",
       "author":         "{{ $author.display_name }}",
+      "publisher": {
+        "@type":        "Organization",
+        "name":         "ELAO",
+        "logo": {
+          "@type":      "ImageObject",
+          "url":        "https://www.elao.com/images/corpo/logo.png",
+          "width":      120,
+          "height":     120
+        }
+      },
       "url":            "{{ .Permalink }}"
     }
     </script>
+
 {{ end }}
