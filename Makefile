@@ -73,7 +73,8 @@ server-start-fr:
 server-start-en:
 	hugo server --theme=blog --buildDrafts --watch --ignoreCache=true --config=config_en.yaml
 
-## Deploy app to production
+## Deploy app to production (after static build)
 deploy@prod: build
 	echo "google-site-verification: google98e08ccbf4b44d9b.html" > public/google98e08ccbf4b44d9b.html
 	rsync -arzv --delete public deploy@blog.elao.elao.local:/srv/app
+

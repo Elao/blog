@@ -15,7 +15,12 @@
       "articleSection": "{{ .Section }}",
       "datePublished":  "{{ .PublishDate.Format "02 Jan 2006" }}",
       "dateModified":   "{{ if isset .Params "modifiedDate" }}{{ .Params.modifiedDate | dateFormat "02 Jan 2006" }}{{ else }}{{ .PublishDate.Format "02 Jan 2006" }}{{ end }}",
-      "image":          "{{ .Site.BaseURL }}{{ slicestr .Params.thumbnail 1 }}",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{ .Site.BaseURL }}{{ slicestr .Params.thumbnail 1 }}",
+        "height": 800,
+        "width": 800
+      },
       "inLanguage":     "{{ .Site.Params.locale }}",
       "author":         "{{ $author.display_name }}",
       "publisher": {
@@ -23,9 +28,9 @@
         "name":         "ELAO",
         "logo": {
           "@type":      "ImageObject",
-          "url":        "https://www.elao.com/images/corpo/logo.png",
-          "width":      120,
-          "height":     120
+          "url":        "{{ .Site.BaseURL }}images/elao_60x60.jpg",
+          "width":      60,
+          "height":     60
         }
       },
       "url":            "{{ .Permalink }}"
