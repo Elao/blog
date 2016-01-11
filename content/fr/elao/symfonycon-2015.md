@@ -211,7 +211,7 @@ notable de performance de PHP7.
 
 Ce qu'il faut retenir :
  
-* La compilation de PHP7 est plus gourmande que PHP5, ce qui n'a pas d'importante au final avec le cache d'opcode
+* La compilation de PHP7 est plus gourmande que PHP5, ce qui n'a pas d'importance au final avec le cache d'opcode
 indispensable sur des frameworks comme Symfony.
 * Beaucoup de travail fait dans le cœur de PHP pour exploiter au mieux les caches L1 & L2 des CPU, ce qui explique la
 plus faible consommation mémoire et la rapidité de ce dernier. 
