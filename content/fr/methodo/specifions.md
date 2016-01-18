@@ -21,7 +21,7 @@ Ecrire des user stories est déjà bien compliqué ; si le product owner n’a p
 
 # Spécifions les user stories
 
-Chaque product owner devrait lire les livres de Gojko Adzic (http://gojko.net/books-and-papers/). Ses livres peuvent être très utiles pour tout développement itératif et l'écriture de user stories.
+Chaque product owner devrait lire les livres de Gojko Adzic (http://books.gojko.net/). Ses livres peuvent être très utiles pour tout développement itératif et l'écriture de user stories.
 
 **5 principes basiques peuvent aider les product owners à rédiger leurs stories**
 
