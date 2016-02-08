@@ -53,7 +53,7 @@ Il existe plusieurs outils plus ou moins connus permettant d'automatiser. Quatre
 
 - **Le script shell**
 
-Historiquement il s'agit sans doute de la façon la plus ancienne d'assurer le provisioning de ses environnements. Difficilement maintenable et extrêmement spécifique il tant à être délaissé au profit d'outils plus haut niveau.
+Historiquement il s'agit sans doute de la façon la plus ancienne d'assurer le provisioning de ses environnements. Difficilement maintenable et extrêmement spécifique, il tend à être délaissé au profit d'outils plus haut niveau.
 
 - [**Chef**](http://www.chef.io/) - 2009 (Première révision stable)
 
@@ -77,11 +77,11 @@ C'est la solution que nous avons choisi d'utiliser chez [ELAO](https://www.elao.
 
 # Et la virtualisation ?
 
-Même si la virtualisation n'est pas un pré-requis il est très commun d'utiliser des outils de provisioning sur des environnements virtualisés, c'est même là où ils trouvent tout leur intérêt.
+Même si la virtualisation n'est pas un pré-requis, il est très commun d'utiliser des outils de provisioning sur des environnements virtualisés, c'est même là où ils trouvent tout leur intérêt.
 
 En effet cette notion de virtualisation, couplée au provisioning, introduit dans des infras complexes la notion de « **jetabilité** » des instances, celles-ci étant très souvent redondées on peut envisager de les perdre (ou de les détruires) car elles sont  facilement recréables.
 De même il devient beaucoup plus facile (attention je n'ai pas dit simple) d'assurer la scalabilité des applications, encore une fois car la mise à disposition des environnements techniques est plus rapide.
 
 Il devient également de plus en plus commun de virtualiser les environnements de développement (nous utilisons par exemple le couple **Vagrant / Ansible**), ces outils permettant à un développeur d'être rapidement opérationel et de se concentrer sur l'essentiel de son métier, la création d'applications.
 
-Loin d'être exhaustive sur le sujet cette introduction reste ouverte à toute remarque et/ou complément.
+Loin d'être exhaustive sur le sujet, cette introduction reste ouverte à toute remarque et/ou complément.
