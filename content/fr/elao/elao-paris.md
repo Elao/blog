@@ -1,14 +1,12 @@
 
 #TL;DR 
-Elao met un grand **coup d'accélérateur sur Paris** et recherche des passionnés pour construire cette nouvelle tribu. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => jobs@elao.com**
+Elao met un grand **coup d'accélérateur sur Paris** et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => jobs@elao.com**
 
 
 #Elao à Paris
-Elao existe depuis 10 ans. Nous avons des bureaux à **Paris, Lyon et Montpellier**. Aujourd’hui, nous créons une entité parisienne à part entière, **Elao Paris**,  pour continuer à **accompagner nos clients de la région parisienne** avec des équipes au plus proche.
+Elao a été créé par 3 développeurs sur Lyon il y a 10 ans. Nous avons des bureaux à **Paris, Lyon et Montpellier**. Aujourd’hui, nous renforçons **Elao Paris**  pour continuer à **accompagner nos clients de la région parisienne** avec des équipes à proximité.
 
-Elao a été créé par 3 développeurs sur Lyon. Elao Paris est une extension d’Elao avec le même ADN « technique ». Elao Paris, c’est aussi la volonté de prendre en compte une partie accompagnement client à travers du Scrum Mastering et de l'accompagnement de Product Owner. **Nous préconisons aussi des approches Lean** toujours dans l’idée d’être le plus pragmatique et d’apporter le maximum de valeur ajoutée à notre **partenariat avec nos clients**.
-
-Nous sommes à la **recherche de nouvelles personnes** qui souhaitent nous accompagner dans notre développement parisien. Rejoindre Elao Paris, c’est **rejoindre des développeurs passionnées** mais c’est aussi rejoindre une structure qui grandit et dans laquelle vous pouvez apporter votre pierre à l’édifice.
+Dans notre développement parisien, nous **recherchons des développeurs**, sensibilisés aux méthodologies agiles et Lean. Rejoindre Elao Paris, c’est **rejoindre des développeurs motivés** au sein d'une structure qui grandit et dans laquelle vous apporterez votre pierre à l’édifice.
 
 
 #Etre proche de nos clients
@@ -28,7 +26,7 @@ Nous sommes des **artisans passionnés** par cet écosystème qui avance vite…
 # Une culture de l’ingénierie logicielle
 Depuis **10 ans** et quelques **200 projets** web, nous avons construit en interne une culture du **génie logiciel**. Certains de nos clients nous ont poussés à aller loin sur le terrain de la qualité au vu de la criticité de certaines de leurs applications. Maintenant, ce niveau de **qualité** est devenu un **standard** chez Elao.
 
-Cette approche vertueuse du développement nous a systématiquement prouvés sa valeur ajoutée sur le moyen/long terme. Le **coût de la qualité reste bien inférieur à celui de la non-qualité**. Un investissement raisonnable au début du projet permet des **gains importants** en temps et en sérénité sur le projet.
+Cette approche vertueuse du développement nous a systématiquement prouvés sa valeur ajoutée sur le moyen/long terme. **Le coût de la qualité reste bien inférieur à celui de la non-qualité**. Un investissement raisonnable au début du projet permet des **gains importants** en temps et en sérénité sur le projet.
 
 Notre **culture** centrée sur le **produit** impacte également la structure de notre code. Nous essayons de **découpler le code métier**, qui porte le plus de valeur ajoutée, du framework qui sert juste à le mettre en oeuvre. Ce **type d'architecture DDD** (Domain Driven Design) permet également de faciliter la mise en place de tests automatiques et de se rendre moins dépendant des montées de version du framework.
 
