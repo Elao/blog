@@ -6,17 +6,17 @@ Elao met un grand **coup d'accélérateur sur Paris** et recherche des passionn�
 #Elao à Paris
 Elao existe depuis 10 ans. Nous avons des bureaux à **Paris, Lyon et Montpellier**. Aujourd’hui, nous créons une entité parisienne à part entière, **Elao Paris**,  pour continuer à **accompagner nos clients de la région parisienne** avec des équipes au plus proche.
 
-Elao a été créé par 3 développeurs sur Lyon. Elao Paris est une extension d’Elao avec le même ADN « technique ». Elao Paris, c’est aussi la volonté de prendre en compte une partie accompagnement client à travers du Scrum Mastering et du coaching de Product Owner. **Nous préconisons aussi des approches Lean** toujours dans l’idée d’être le plus pragmatique et d’apporter le maximum de valeur ajoutée à notre **partenariat avec nos clients**.
+Elao a été créé par 3 développeurs sur Lyon. Elao Paris est une extension d’Elao avec le même ADN « technique ». Elao Paris, c’est aussi la volonté de prendre en compte une partie accompagnement client à travers du Scrum Mastering et de l'accompagnement de Product Owner. **Nous préconisons aussi des approches Lean** toujours dans l’idée d’être le plus pragmatique et d’apporter le maximum de valeur ajoutée à notre **partenariat avec nos clients**.
 
 Nous sommes à la **recherche de nouvelles personnes** qui souhaitent nous accompagner dans notre développement parisien. Rejoindre Elao Paris, c’est **rejoindre des développeurs passionnées** mais c’est aussi rejoindre une structure qui grandit et dans laquelle vous pouvez apporter votre pierre à l’édifice.
 
 
 #Etre proche de nos clients
-Elao Paris est une tribu montée sur le concept d’une équipe de développement et un coach client qui accompagne le projet et le client. 
+Elao Paris est une tribu montée sur le concept d’une équipe de développement et un accompagnant projet. 
 
-Une **équipe est composée de 2 à 3 développeurs**, en majorité expérimentés. Elle a suffisamment d'expérience pour **être force de proposition chez nos clients**. Elle se déplace régulièrement chez le client pour recueillir le besoin et partager l'avancement. A travers cette connaissance du produit, nous sommes persuadés que nous répondrons mieux à nos clients. L'équipe peut être accompagnée d'autres compétences (intégration, design, UX) quand le projet le nécessite.
+Une **équipe est composée de 2 à 3 développeurs**, en majorité expérimentés. Elle a suffisamment d'expérience pour **être force de proposition chez nos clients**. Elle rencontre régulièrement le client pour recueillir le besoin et partager l'avancement. A travers cette connaissance du produit, nous sommes persuadés que nous répondrons mieux à nos clients. L'équipe peut être accompagnée d'autres compétences (intégration, design, UX) quand le projet le nécessite.
 
-Le **coach client** est un peu l’équivalent du **Scrum Master**. Il est là pour **fluidifier la relation avec nos clients**. Il est moins impliqué dans la gestion du quotidien qui est géré par l’équipe dans la mesure du possible, mais peut aussi devenir plus actif en Scrum Mastering selon les besoins du projet. 
+L'**accompagnant projet** est un peu l’équivalent du **Scrum Master**. Il est là pour **fluidifier la relation avec nos clients**. Il est moins impliqué dans la gestion du quotidien qui est géré par l’équipe dans la mesure du possible, mais peut aussi devenir plus actif selon les besoins du projet. 
 
 
 
