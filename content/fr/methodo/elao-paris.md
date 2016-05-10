@@ -3,8 +3,8 @@
 Elao met un grand **coup d'accélérateur sur Paris** et recherche des passionnés pour construire cette nouvelle tribu. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => jobs@elao.com**
 
 
-#Elao, 10 ans d'expérience
-Elao existe depuis 10 ans. Nous avons des bureaux à **Paris, Lyon et Montpellier**. Aujourd’hui, nous créons une entité parisienne à part entière pour continuer à **accompagner nos clients de la région parisienne** avec des équipes au plus proche.
+#Elao à Paris
+Elao existe depuis 10 ans. Nous avons des bureaux à **Paris, Lyon et Montpellier**. Aujourd’hui, nous créons une entité parisienne à part entière, **Elao Paris**,  pour continuer à **accompagner nos clients de la région parisienne** avec des équipes au plus proche.
 
 Elao a été créé par 3 développeurs sur Lyon. Elao Paris est une extension d’Elao avec le même ADN « technique ». Elao Paris, c’est aussi la volonté de prendre en compte une partie accompagnement client à travers du Scrum Mastering et du coaching de Product Owner. **Nous préconisons aussi des approches Lean** toujours dans l’idée d’être le plus pragmatique et d’apporter le maximum de valeur ajoutée à notre **partenariat avec nos clients**.
 
