@@ -4,18 +4,17 @@ Elao met un grand **coup d'accélérateur sur Paris** et recherche des passionn�
 
 
 #Elao à Paris
-Elao a été créé par 3 développeurs sur Lyon il y a 10 ans. Nous avons des bureaux à **Paris, Lyon et Montpellier**. Aujourd’hui, nous renforçons **Elao Paris**  pour continuer à **accompagner nos clients de la région parisienne** avec des équipes à proximité.
+Elao a été créé par 3 développeurs à Lyon il y a 10 ans. Nous avons des bureaux à **Paris, Lyon et Montpellier**. Aujourd’hui, nous renforçons **Elao Paris**  pour continuer à **accompagner nos clients de la région parisienne** avec des équipes à proximité.
 
 Dans notre développement parisien, nous **recherchons des développeurs**, sensibilisés aux méthodologies agiles et Lean. Rejoindre Elao Paris, c’est **rejoindre des développeurs motivés** au sein d'une structure qui grandit et dans laquelle vous apporterez votre pierre à l’édifice.
 
 
-#Etre proche de nos clients
+#Une équipe proche du client
 Elao Paris est une tribu montée sur le concept d’une équipe de développement et un accompagnant projet. 
 
-Une **équipe est composée de 2 à 3 développeurs**, en majorité expérimentés. Elle a suffisamment d'expérience pour **être force de proposition chez nos clients**. Elle rencontre régulièrement le client pour recueillir le besoin et partager l'avancement. A travers cette connaissance du produit, nous sommes persuadés que nous répondrons mieux à nos clients. L'équipe peut être accompagnée d'autres compétences (intégration, design, UX) quand le projet le nécessite.
+Une **équipe est composée de 2 à 3 développeurs**, en majorité expérimentés. Elle a suffisamment d'expérience pour **être force de proposition chez nos clients**. Elle rencontre régulièrement le client pour recueillir le besoin et partager l'avancement. Elle s'organise pour trouver la solution la plus adaptée au projet.
 
-L'**accompagnant projet** est un peu l’équivalent du **Scrum Master**. Il est là pour **fluidifier la relation avec nos clients**. Il est moins impliqué dans la gestion du quotidien qui est géré par l’équipe dans la mesure du possible, mais peut aussi devenir plus actif selon les besoins du projet. 
-
+A travers cette connaissance du produit, nous sommes persuadés que nous répondrons mieux à nos clients. L'équipe peut être accompagnée d'autres compétences (intégration, design, UX) quand le projet le nécessite. Un accompagnant projet intervient pour **fluidifier la relation avec nos clients** comme un Scrum Master et aide l'équipe à s'auto-organiser.
 
 
 # Environnement technique
@@ -50,3 +49,13 @@ Nous espérons que vous avez une bonne idée de ce qu'est Elao. Nous vous propos
 
 Nous attachons beaucoup d'importance à l'intégration d'un nouveau collaborateur et nous espérons le retranscrire dans notre **processus de recrutement**. Nous évaluons votre **niveau technique et notre capacité à vous intégrer** dans nos équipes. Après une première rencontre, nous préférons rapidement entrer dans un mode plus relax pour **vous donner une bonne impression du travail en équipe chez Elao**.
 
+Vous voulez en savoir plus ? N'hésitez pas à en discuter directement avec nous sur Twitter ; rien de plus pertinent pour vous faire une idée précise de Elao Paris.
+
+Ca parle technique
+Maxime Colin @colin_maxime
+Nicolas Dievart @nicolasdievart
+Richard Hanna @richardhanna
+Xavier Gorse @xgorse
+
+Un point de vue sur l'organisation
+Sébastien Solère @sebsolere
