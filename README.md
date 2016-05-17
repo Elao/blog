@@ -61,7 +61,7 @@ author_username:    "elao"
 ---
 ```
 
-### With Hugo 
+### With Hugo
 
 `hugo new dev/my-first-post.md`
 
@@ -114,14 +114,14 @@ social:
   twitter:         Elao
   github:          Elao
   email:           your-email@elao.com
-  avatar_url:      ~
+  avatar:          ~
   google_plus_id:  "~"
 ```
 
 ## Publish an article
 Your post is good to go ? Create a PR and ask for review to a team member once it's done you're ready going to production.
 
-### If you are working from the VM
+### Going to production
 
 `make deploy@prod`
 
