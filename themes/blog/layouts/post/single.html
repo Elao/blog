@@ -46,9 +46,17 @@
                 {{ .Content }}
                 <div id="socials">
                     <div class="author-block">
-                        <div class="picture">
-                            <img src="{{ if $social.avatar }}{{ partial "i18n.html" . }}/images/{{ $social.avatar }}{{ else }}{{ partial "i18n.html" . }}/images/logo.svg{{ end }}" alt="{{ $author.display_name }}">
-                        </div>
+                        {{ if isset .Params "co_authors" }}
+                            {{ $context := . }}
+                            {{ range .Params.co_authors }}
+                                {{ $author := index $.Site.Data.authors . $.Params.language }}
+                                {{ $social := (index $.Site.Data.authors .).social }}
+
+                                {{ partial "social-avatar.html" (dict "context" $context "social" $social "author" $author) }}&nbsp;
+                            {{ end }}
+                        {{ else }}
+                        {{ partial "social-avatar.html" (dict "context" $context "social" $social "author" $author) }}
+                        {{ end }}
                         <div class="job">
                             <strong>{{ $author.display_name }}</strong><br/>
                             {{ $author.job_title }}
