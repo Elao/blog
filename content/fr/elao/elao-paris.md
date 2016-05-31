@@ -20,7 +20,7 @@ co_authors:         []
 
 # TL;DR 
 
-Elao met un **coup d'accélérateur sur Paris** et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => [jobs@elao.com](mailto:jobs@elao.com)**
+Elao met un **coup d'accélérateur sur Paris** et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => [jobs@elao.com](mailto:jobs@elao.com)** <!--more-->
 
 # Elao à Paris
 
