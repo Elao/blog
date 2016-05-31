@@ -1,10 +1,29 @@
+---
+type:               "post"
+title:              "PHP Tour 2016, Merciiiiii"
+date:               "2016-05-31"
+publishdate:        "2016-05-31"
+draft:              true
+slug:               "phptour-2016"
+description:        "Elao met un grand **coup d'accélérateur sur Paris** et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre."
+
+language:           "fr"
+thumbnail:          ""
+header_img:         ""
+tags:               ["Paris", "Recrutement", "Tribu",]
+categories:         ["elao", "methodo"]
+
+author_username:    "ssolere"
+co_authors:         []
+
+---
 
 #TL;DR 
 Elao met un grand **coup d'accélérateur sur Paris** et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => [jobs@elao.com](mailto:jobs@elao.com)**
 
 
 #Elao à Paris
-Elao a été créé par 3 développeurs à Lyon il y a 10 ans. Aujourd'hui installés à Lyon, Paris et Montpellier, nous renforçons plus particulièrement notre équipe **Elao Paris**  pour continuer à **accompagner nos clients de la région parisienne**.
+Elao a été créé par 3 développeurs à Lyon il y a 10 ans. Aujourd'hui installé à Lyon, Paris et Montpellier, nous renforçons plus particulièrement notre équipe **Elao Paris**  pour continuer à **accompagner nos clients de la région parisienne**.
 
 Dans notre développement parisien, nous **recherchons des développeurs** sensibilisés aux méthodologies agiles et Lean. Rejoindre Elao Paris, c’est **rejoindre des développeurs motivés** au sein d'une structure qui grandit et dans laquelle vous apporterez votre pierre à l’édifice.
 
