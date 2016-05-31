@@ -66,7 +66,7 @@ Nous appliquons aussi cette recette sur des projets. Notre jeu **[LazerDrive](ht
 
 Vous pouvez nous croiser sur les **conférences techniques** où nous participons et proposons des sujets. Nous sommes **impliqués dans la vie de l'AFUP** depuis 2008 et nous organisons le meetup lyonnais Ansible. 
 
-Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code avec l'**[ouverture de notre stack Symfony](https://github.com/Elao/symfony-standard)**, de certains de nos **bundles** ou de nos **rôles Ansible**.
+Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code avec l'**[ouverture de notre stack Symfony](https://github.com/Elao/symfony-standard)**, de certains de nos **bundles** ou de nos **[rôles Ansible](https://github.com/Manala)**.
 
 #Nous rejoindre
 Nous espérons que vous avez une bonne idée de ce qu'est Elao. Nous vous proposons de **vous rencontrer sur Paris près de la Bourse** pour en discuter plus en détail. Nous recherchons des **personnes avec un bon niveau de programmation**, encore mieux sur du PHP, toujours plus mieux, sur du Symfony. Nous pouvons **assurer la montée en compétences** des personnes moins expérimentées mais avec de bonnes bases.
