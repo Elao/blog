@@ -1,6 +1,6 @@
 
 #TL;DR 
-Elao met un grand **coup d'accélérateur sur Paris** et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => jobs@elao.com**
+Elao met un grand **coup d'accélérateur sur Paris** et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => [jobs@elao.com](mailto:jobs@elao.com)**
 
 
 #Elao à Paris
@@ -18,7 +18,11 @@ A travers cette connaissance du produit, nous sommes persuadés que nous répond
 
 
 # Environnement technique
-Notre socle technique est basé **depuis 2006** sur PHP et le framework **Symfony** sur lequel nous avons beaucoup investi. Nous faisons partie des tout premiers **partenaires officiels de SensioLabs**, l'éditeur de Symfony. Mais le web ne résume pas à la partie backend; nous avons également une affinité grandissante avec l'écosystème **JavaScript**, avec des projets en **React** et **ReactNative**.Notre positionnement historique sur Symfony nous confronte à des projets profondément techniques. **Chaque projet est unique**. Nous faisons de l'**application web métier sur mesure**. Cette appétence technique et notre recherche de l'efficacité nous ont très rapidement fait monter en compétence sur la partie Ops. Porté par la mouvance **DevOps**, nous avons commencé par **l'optimisation de notre écosystème de développement**, puis de nos environnements de démo, pour finir par la prod et faire émerger un **nouveau métier** chez Elao : **l'hébergement sur mesure** d'application web. Nous sommes positionnés sur la solution **Ansible**.
+Notre socle technique est basé **depuis 2006** sur PHP et le framework **Symfony** sur lequel nous avons beaucoup investi. Nous faisons partie des tout premiers **partenaires officiels de SensioLabs**, l'éditeur de Symfony. Mais le web ne résume pas à la partie backend; nous avons également une affinité grandissante avec l'écosystème **JavaScript**, avec des projets en **React** et **ReactNative**.
+
+Notre positionnement historique sur Symfony nous confronte à des projets profondément techniques. **Chaque projet est unique**. Nous faisons de l'**application web métier sur mesure**. 
+
+Cette appétence technique et notre recherche de l'efficacité nous ont très rapidement fait monter en compétence sur la partie Ops. Porté par la mouvance **DevOps**, nous avons commencé par **l'optimisation de notre écosystème de développement**, puis de nos environnements de démo, pour finir par la prod et faire émerger un **nouveau métier** chez Elao : **l'hébergement sur mesure** d'application web. Nous sommes positionnés sur la solution **Ansible**.
 
 Nous sommes des **artisans passionnés** par cet écosystème qui avance vite… très vite.
 
@@ -39,11 +43,12 @@ Pour garantir et suivre les indicateurs qualité tout au long du projet, nous me
 #Le partage
 Nous sommes conscients que les technologies avancent très vite en ce moment et nous souhaitons **dédier du temps pour monter en compétence** et nous former à travers des Dojos/Katas, des Elao Talks où nous expérimentons des nouvelles technologies ou des nouveaux design patterns. 
 
-Nous appliquons aussi cette recette sur des projets. Notre jeu **LazerDrive** est né comme un **projet de R&D** sous le nom de **Curvytron** avant de prendre son envol en tant que projet à part entière. Nous avons aussi **participé aux lancements de  startups**.
+Nous appliquons aussi cette recette sur des projets. Notre jeu **[LazerDrive](http://www.lazerdrive.io/)** est né comme un **projet de R&D** sous le nom de **[Curvytron](http://www.curvytron.com)** avant de prendre son envol en tant que projet à part entière. Nous avons aussi **participé aux lancements de  startups**.
 
 Vous pouvez nous croiser sur les **conférences techniques** où nous participons et proposons des sujets. Nous sommes **impliqués dans la vie de l'AFUP** depuis 2008 et nous organisons le meetup lyonnais Ansible. 
 
-Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code avec l'**ouverture de notre stack Symfony**, de certains de nos **bundles** ou de nos **rôles Ansible**.
+Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code avec l'**[ouverture de notre stack Symfony](https://github.com/Elao/symfony-standard)**, de certains de nos **bundles** ou de nos **rôles Ansible**.
+
 #Nous rejoindre
 Nous espérons que vous avez une bonne idée de ce qu'est Elao. Nous vous proposons de **vous rencontrer sur Paris près de la Bourse** pour en discuter plus en détail. Nous recherchons des **personnes avec un bon niveau de programmation**, encore mieux sur du PHP, toujours plus mieux, sur du Symfony. Nous sommes capables de **faire monter en compétence** des personnes moins expérimentées mais qui ont de bonnes bases.
 
@@ -51,11 +56,11 @@ Nous attachons beaucoup d'importance à l'intégration d'un nouveau collaborateu
 
 Vous voulez en savoir plus ? N'hésitez pas à en discuter directement avec nous sur Twitter ; rien de plus pertinent pour vous faire une idée précise de Elao Paris.
 
-Ca parle technique
-Maxime Colin @colin_maxime
-Nicolas Dievart @nicolasdievart
-Richard Hanna @richardhanna
-Xavier Gorse @xgorse
+Ça parle technique
+* Maxime Colin [@colin_maxime](https://twitter.com/colin_maxime)
+* Nicolas Dievart [@nicolasdievart](https://twitter.com/nicolasdievart)
+* Richard Hanna [@richardhanna](https://twitter.com/richardhanna)
+* Xavier Gorse [@xgorse](https://twitter.com/xgorse)
 
 Un point de vue sur l'organisation
-Sébastien Solère @sebsolere
+* Sébastien Solère [@sebsolere](https://twitter.com/sebsolere)
