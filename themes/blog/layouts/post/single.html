@@ -45,7 +45,7 @@
                 {{ .Content }}
                 <div id="socials">
                     <div class="author-block">
-                        {{ if isset .Params "co_authors" }}
+                        {{ if  .Params.co_authors }}
                             {{ $context := . }}
                             {{ range .Params.co_authors }}
                                 {{ $author := index $.Site.Data.authors . $.Params.language }}
