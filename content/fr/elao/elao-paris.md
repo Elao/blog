@@ -5,7 +5,7 @@ date:               "2016-05-31"
 publishdate:        "2016-05-31"
 draft:              false
 slug:               "elao-paris"
-description:        "Elao met un grand coup d'accélérateur sur Paris et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre."
+description:        "Elao met un coup d'accélérateur sur Paris et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre."
 
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/haphpybirthday.jpg"
@@ -20,7 +20,7 @@ co_authors:         []
 
 # TL;DR 
 
-Elao met un grand **coup d'accélérateur sur Paris** et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => [jobs@elao.com](mailto:jobs@elao.com)**
+Elao met un **coup d'accélérateur sur Paris** et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => [jobs@elao.com](mailto:jobs@elao.com)**
 
 # Elao à Paris
 
@@ -32,7 +32,7 @@ Dans notre développement parisien, nous **recherchons des développeurs** sensi
 
 Elao Paris est une tribu montée sur le concept d’une équipe de développement et un accompagnant projet. 
 
-Une **équipe est composée de 3-4 développeurs**. Elle a suffisamment d'expérience pour **être force de proposition chez nos clients**. Elle rencontre régulièrement le client pour recueillir le besoin et partager l'avancement. Elle s'organise pour trouver la solution la plus adaptée au projet.
+Une **équipe est composée de 3-4 développeurs**. Elle a suffisamment d'expérience pour **être force de proposition chez nos clients**. Elle travaille à l'agence et rencontre régulièrement le client pour recueillir le besoin et partager l'avancement. Elle s'organise pour trouver la solution la plus adaptée au projet, au produit.
 
 Cette connaissance du produit nous permet de mieux répondre à nos clients. L'équipe peut être accompagnée d'autres compétences (intégration, design, UX) quand le projet le nécessite. Un accompagnant projet intervient pour **fluidifier la relation avec nos clients** comme un Scrum Master et aide l'équipe à s'auto-organiser.
 
@@ -45,6 +45,19 @@ Notre positionnement historique sur Symfony nous confronte à des projets profon
 Cette appétence technique et notre recherche de l'efficacité nous ont très rapidement fait monter en compétence sur la partie Ops. Porté par la mouvance **DevOps**, nous avons commencé par **l'optimisation de notre écosystème de développement**, puis de nos environnements de démo, pour finir par la prod et faire émerger un **nouveau métier** chez Elao : **l'hébergement sur mesure** d'application web. Nous sommes positionnés sur la solution **Ansible**.
 
 Nous sommes des **artisans passionnés** par cet écosystème qui avance vite… très vite.
+
+<div class=row>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <a href="/fr/images/posts/2016/tech-environment-1.jpg">
+            <img alt="Environnement technique 1" src="/fr/images/posts/2016/tech-environment-1.jpg" />
+        </a>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <a href="/fr/images/posts/2016/tech-environment-2.jpg">
+            <img alt="Environnement technique 2" src="/fr/images/posts/2016/tech-environment-2.jpg" />
+        </a>
+    </div>
+</div>
 
 # Une culture de l’ingénierie logicielle
 
@@ -71,6 +84,19 @@ Nous appliquons aussi cette recette sur des projets. Notre jeu **[LazerDrive](ht
 Vous pouvez nous croiser sur les **conférences techniques** où nous participons et proposons des sujets. Nous sommes **impliqués dans la vie de l'AFUP** depuis 2008 et nous organisons le meetup lyonnais Ansible. 
 
 Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code avec l'**[ouverture de notre stack Symfony](https://github.com/Elao/symfony-standard)**, de certains de nos **bundles** ou de nos **[rôles Ansible](https://github.com/Manala)**.
+
+<div class=row>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <a href="/fr/images/posts/2016/xgorse-talk.jpg">
+            <img alt="Environnement technique 1" src="/fr/images/posts/2016/xgorse-talk.jpg" />
+        </a>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <a href="/fr/images/posts/2016/lazerdrive-blend.jpg">
+            <img alt="Environnement technique 2" src="/fr/images/posts/2016/lazerdrive-blend.jpg" />
+        </a>
+    </div>
+</div>
 
 # Nous rejoindre
 
