@@ -5,7 +5,7 @@ date:               "2016-05-31"
 publishdate:        "2016-05-31"
 draft:              false
 slug:               "elao-paris"
-description:        "Elao met un grand coup d'accélérateur sur Paris et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre."
+description:        "Elao met un coup d'accélérateur sur Paris et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre."
 
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/haphpybirthday.jpg"
@@ -20,7 +20,7 @@ co_authors:         []
 
 # TL;DR 
 
-Elao met un grand **coup d'accélérateur sur Paris** et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => [jobs@elao.com](mailto:jobs@elao.com)**
+Elao met un **coup d'accélérateur sur Paris** et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => [jobs@elao.com](mailto:jobs@elao.com)**
 
 # Elao à Paris
 
@@ -32,7 +32,7 @@ Dans notre développement parisien, nous **recherchons des développeurs** sensi
 
 Elao Paris est une tribu montée sur le concept d’une équipe de développement et un accompagnant projet. 
 
-Une **équipe est composée de 3-4 développeurs**. Elle a suffisamment d'expérience pour **être force de proposition chez nos clients**. Elle rencontre régulièrement le client pour recueillir le besoin et partager l'avancement. Elle s'organise pour trouver la solution la plus adaptée au projet.
+Une **équipe est composée de 3-4 développeurs**. Elle a suffisamment d'expérience pour **être force de proposition chez nos clients**. Elle travaille à l'agence et rencontre régulièrement le client pour recueillir le besoin et partager l'avancement. Elle s'organise pour trouver la solution la plus adaptée au projet, au produit.
 
 Cette connaissance du produit nous permet de mieux répondre à nos clients. L'équipe peut être accompagnée d'autres compétences (intégration, design, UX) quand le projet le nécessite. Un accompagnant projet intervient pour **fluidifier la relation avec nos clients** comme un Scrum Master et aide l'équipe à s'auto-organiser.
 
