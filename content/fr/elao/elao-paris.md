@@ -38,7 +38,7 @@ Cette connaissance du produit nous permet de mieux répondre à nos clients. L'�
 
 # Environnement technique
 
-Notre socle technique est basé **depuis 2006** sur PHP et le framework **Symfony** sur lequel nous avons beaucoup investi. Nous faisons partie des tout premiers **partenaires officiels de SensioLabs**, l'éditeur de Symfony. Mais le web ne résume pas à la partie backend; nous avons également une affinité grandissante avec l'écosystème **JavaScript**, avec des projets en **React**, **ReactNative**, EmberJs ou Meteor.
+Notre socle technique est basé **depuis 2006** sur PHP et le framework **Symfony** sur lequel nous avons beaucoup investi. Nous faisons partie des tout premiers **partenaires officiels de SensioLabs**, l'éditeur de Symfony. Mais le web ne résume pas à la partie backend; nous avons également une affinité grandissante avec l'écosystème **JavaScript**, avec des projets en **React**, **ReactNative**, **EmberJs** ou **Meteor**.
 
 Notre positionnement historique sur Symfony nous confronte à des projets profondément techniques. **Chaque projet est unique**. Nous faisons de l'**application web métier sur mesure**. 
 
