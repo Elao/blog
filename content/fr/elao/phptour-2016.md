@@ -3,7 +3,7 @@ type:               "post"
 title:              "PHP Tour 2016, Merciiiiii"
 date:               "2016-05-27"
 publishdate:        "2016-05-27"
-draft:              true
+draft:              false
 slug:               "phptour-2016"
 description:        "Les 23 et 23 mai se déroulait à Clermont-Ferrand le PHP Tour 2016. Pour l'occasion l'Afup et Clermont'ech ont à nouveau réuni la communauté open source PHP."
 
