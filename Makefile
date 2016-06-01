@@ -59,7 +59,7 @@ build-assets:
 	gulp build
 
 ## Build
-build: build-hugo build-assets optimize
+build: build-hugo build-assets
 
 ## Hugo server (Dev only)
 server-start:
@@ -73,8 +73,12 @@ server-start-fr:
 server-start-en:
 	hugo server --theme=blog --buildDrafts --watch --ignoreCache=true --config=config_en.yaml
 
-## Deploy app to production (after static build)
-deploy@prod: build
+## Deploy app to production (after static build and images optimization)
+deploy_and_optimize@prod: build optimize
 	echo "google-site-verification: google98e08ccbf4b44d9b.html" > public/google98e08ccbf4b44d9b.html
 	rsync -arzv --delete public deploy@blog.elao.elao.local:/srv/app
 
+## Deploy app to production (after static build)
+deploy@prod: build
+	echo "google-site-verification: google98e08ccbf4b44d9b.html" > public/google98e08ccbf4b44d9b.html
+	rsync -arzv --delete --exclude '*/images' public deploy@blog.elao.elao.local:/srv/app
