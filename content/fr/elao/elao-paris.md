@@ -26,7 +26,7 @@ Elao met un **coup d'accélérateur sur Paris** et recherche des passionnés pou
 
 Elao a été créé par 3 développeurs à Lyon il y a 10 ans. Aujourd'hui installé à Lyon, Paris et Montpellier, nous renforçons plus particulièrement notre équipe **Elao Paris**  pour continuer à **accompagner nos clients de la région parisienne**.
 
-Dans notre développement parisien, nous **recherchons des développeurs** sensibilisés aux méthodologies agiles et Lean. Rejoindre Elao Paris, c’est **rejoindre des développeurs motivés** au sein d'une structure qui grandit et dans laquelle vous apporterez votre pierre à l’édifice.
+Dans notre développement parisien, nous **recherchons des développeuses et développeurs** sensibilisés aux méthodologies agiles et Lean. Nous voulons clairement des **personnalités motivées**, capables d'apporter leur diversité et leur univers. C’est une garantie essentielle à la richesse de l'équipe, tant sur le plan humain que professionnel.
 
 # Une équipe proche du client
 
