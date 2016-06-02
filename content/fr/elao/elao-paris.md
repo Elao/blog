@@ -116,6 +116,6 @@ Vous voulez en savoir plus ? N'hésitez pas à nous contacter sur [jobs@elao.com
 
 Vous vous retrouvez dans ce que nous partageons mais vous préférez descendre/rester plus au sud ou vous êtes bien dans votre travail actuel ?
 
-Notre **tribu montpelliéraine** est aussi en plein développement. **Parlez-en avec Johan [@y0h34](https://twitter.com/y0h34)**.
+Notre **tribu montpelliéraine** est aussi en pleine construction. **Parlez-en avec Johan [@y0h34](https://twitter.com/y0h34)**.
 
-Sur Lyon, Montpellier ou Paris, on est toujours prêt à partager, à écouter, à apprendre. **N'hésitez pas à nous contacter, à passer nous voir**.
+Sur Lyon, Montpellier ou Paris, nous sommes toujours prêt à partager, écouter et apprendre. **N'hésitez pas à nous contacter ou à passer nous voir !**
