@@ -104,10 +104,18 @@ Nous espérons que vous avez une bonne idée de ce qu'est Elao. Nous vous propos
 
 Nous attachons beaucoup d'importance à l'intégration de nouveaux collaborateurs et nous espérons le retranscrire dans notre **processus de recrutement**. Nous évaluons votre **niveau technique et notre capacité à vous intégrer** dans nos équipes. Après une première rencontre, nous préférons rapidement entrer dans un mode plus relax pour **vous donner une bonne impression du travail en équipe chez Elao**.
 
-Vous voulez en savoir plus ? N'hésitez pas à en discuter directement avec nous sur Twitter ; rien de plus pertinent pour vous faire une idée précise de Elao Paris.
+Vous voulez en savoir plus ? N'hésitez pas à nous contacter sur [jobs@elao.com](mailto:jobs@elao.com) ou en discuter directement avec nous sur Twitter ; rien de plus pertinent pour vous faire une idée précise d'Elao Paris.
 
 * Maxime Colin [@colin_maxime](https://twitter.com/colin_maxime)
 * Nicolas Dievart [@nicolasdievart](https://twitter.com/nicolasdievart)
 * Richard Hanna [@richardhanna](https://twitter.com/richardhanna)
 * Xavier Gorse [@xgorse](https://twitter.com/xgorse)
 * Sébastien Solère [@sebsolere](https://twitter.com/sebsolere)
+
+# Des envies d'ailleurs
+
+Vous vous retrouvez dans ce que nous partageons mais vous préférez descendre/rester plus au sud ou vous êtes bien dans votre travail actuel ?
+
+Notre **tribu montpelliéraine** est aussi en plein développement. **Parlez-en avec Johan [@y0h34](https://twitter.com/y0h34)**.
+
+Sur Lyon, Montpellier ou Paris, on est toujours prêt à partager, à écouter, à apprendre. **N'hésitez pas à nous contacter, à passer nous voir**.
