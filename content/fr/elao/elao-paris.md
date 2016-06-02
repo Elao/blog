@@ -83,7 +83,7 @@ Nous appliquons aussi cette recette sur des projets. Notre jeu **[LazerDrive](ht
 
 Vous pouvez nous croiser sur les **conférences techniques** où nous participons et proposons des sujets. Nous sommes **impliqués dans la vie de l'AFUP** depuis 2008 et nous organisons le meetup lyonnais Ansible. 
 
-Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code avec l'**[ouverture de notre stack Symfony](https://github.com/Elao/symfony-standard)**, de certains de nos **bundles** ou de nos **[rôles Ansible](https://github.com/Manala)**.
+Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code avec l'**[ouverture de notre stack Symfony](https://github.com/Elao/symfony-standard)**, de certains de nos **[bundles](https://github.com/Elao?query=bundle)** ou de nos **[rôles Ansible](https://github.com/Manala)**.
 
 <div class=row>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
