@@ -83,7 +83,7 @@ Nous appliquons aussi cette recette sur des projets. Notre jeu **[LazerDrive](ht
 
 Vous pouvez nous croiser sur les **conférences techniques** où nous participons et proposons des sujets. Nous sommes **impliqués dans la vie de l'AFUP** depuis 2008 et nous organisons le meetup lyonnais Ansible. 
 
-Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code avec l'**[ouverture de notre stack Symfony](https://github.com/Elao/symfony-standard)**, de certains de nos **bundles** ou de nos **[rôles Ansible](https://github.com/Manala)**.
+Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code avec l'**[ouverture de notre stack Symfony](https://github.com/Elao/symfony-standard)**, de certains de nos **[bundles](https://github.com/Elao?query=bundle)** ou de nos **[rôles Ansible](https://github.com/Manala)**.
 
 <div class=row>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -104,10 +104,18 @@ Nous espérons que vous avez une bonne idée de ce qu'est Elao. Nous vous propos
 
 Nous attachons beaucoup d'importance à l'intégration de nouveaux collaborateurs et nous espérons le retranscrire dans notre **processus de recrutement**. Nous évaluons votre **niveau technique et notre capacité à vous intégrer** dans nos équipes. Après une première rencontre, nous préférons rapidement entrer dans un mode plus relax pour **vous donner une bonne impression du travail en équipe chez Elao**.
 
-Vous voulez en savoir plus ? N'hésitez pas à en discuter directement avec nous sur Twitter ; rien de plus pertinent pour vous faire une idée précise de Elao Paris.
+Vous voulez en savoir plus ? N'hésitez pas à nous contacter sur [jobs@elao.com](mailto:jobs@elao.com) ou en discuter directement avec nous sur Twitter ; rien de plus pertinent pour vous faire une idée précise d'Elao Paris.
 
 * Maxime Colin [@colin_maxime](https://twitter.com/colin_maxime)
 * Nicolas Dievart [@nicolasdievart](https://twitter.com/nicolasdievart)
 * Richard Hanna [@richardhanna](https://twitter.com/richardhanna)
 * Xavier Gorse [@xgorse](https://twitter.com/xgorse)
 * Sébastien Solère [@sebsolere](https://twitter.com/sebsolere)
+
+# Des envies d'ailleurs
+
+Vous vous retrouvez dans ce que nous partageons mais vous préféreriez vivre dans le sud ?
+
+Notre **tribu montpelliéraine** est aussi en pleine construction. **Parlez-en avec Johan [@y0h34](https://twitter.com/y0h34)**.
+
+Dans tous les cas, que ce soit sur Lyon, Montpellier ou Paris, nous sommes toujours prêt à partager, écouter et apprendre. **N'hésitez pas à nous contacter ou à passer nous voir !**
