@@ -114,7 +114,7 @@ Vous voulez en savoir plus ? N'hésitez pas à nous contacter sur [jobs@elao.com
 
 # Des envies d'ailleurs
 
-Vous vous retrouvez dans ce que nous partageons mais vous mais vous préféreriez vivre dans le sud ?
+Vous vous retrouvez dans ce que nous partageons mais vous préféreriez vivre dans le sud ?
 
 Notre **tribu montpelliéraine** est aussi en pleine construction. **Parlez-en avec Johan [@y0h34](https://twitter.com/y0h34)**.
 
