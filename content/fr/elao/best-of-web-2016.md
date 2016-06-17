@@ -5,7 +5,7 @@ date:               "2016-06-17"
 publishdate:        "2016-06-17"
 draft:              false
 slug:               "best-of-web-2016"
-description:        "La seconde édition du Best Of Web s'est tenue le Vendredi 10 Juin 2016 à Paris, et a rassemblé le meilleurs des meetups de l'année. Retour sur cet évènement."
+description:        "La seconde édition du Best Of Web s'est tenue le Vendredi 10 Juin 2016 à Paris, et a rassemblé le meilleur des meetups de l'année. Retour sur cet évènement."
 
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/best-of-web-2016.jpg"
@@ -16,7 +16,7 @@ categories:         ["Actualité", "Web", "conference"]
 author_username:    "mcolin"
 ---
 
-La seconde édition du Best Of Web s'est tenue à Paris le vendredi 10 juin 2016. Comme l'année dernière c'est la salle de la Grande Crypte de Paris qui a hébergé l'évènement. Le principe ne change pas, pendant une journée l'évènement propose de revivre les meilleurs meetups parisiens orienté web.
+La seconde édition du Best Of Web s'est tenue à Paris le vendredi 10 juin 2016. Comme l'année dernière c'est la salle de la Grande Crypte de Paris qui a hébergé l'évènement. Le principe ne change pas, pendant une journée l'évènement propose de revivre les meilleurs meetups parisiens orientés web.
 <!--more-->
 L'évènement est plutôt orienté front, ça parle donc de Javascript, de CSS, de webperf, ... Le format de l'année précédente a été conservé, c'est à dire une seule track pour ne rien manquer.
 
@@ -38,7 +38,7 @@ L'autre sujet qui tenait une bonne place dans ce Best Of Web 2016 concernait les
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">Astuce : La propriété <a href="https://twitter.com/hashtag/css?src=hash">#css</a> will-change permet d&#39;indiquer au browser que l&#39;élément sera animé <a href="https://twitter.com/hashtag/gpu?src=hash">#gpu</a> <a href="https://twitter.com/hashtag/webperf?src=hash">#webperf</a> <a href="https://twitter.com/hashtag/bestofweb2016?src=hash">#bestofweb2016</a></p>&mdash; Maxime COLIN (@colin_maxime) <a href="https://twitter.com/colin_maxime/status/741179119833079808">10 juin 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Ensuite [Audrey Neveu](@Audrey_Neveu) nous explique comment fonctionne le temps de réaction chez un utilisateur. Le temps de rendu de votre page ne doit pas excéder celui ci au risque de perdre l'utilisateur. 
+Ensuite [Audrey Neveu](@Audrey_Neveu) nous explique comment fonctionne le temps de réaction chez un utilisateur. Le temps de rendu de votre page ne doit pas excéder celui-ci au risque de perdre l'utilisateur. 
 
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">Réaction: 100/500ms, interaction: 100/500ms. 1s de chargement = 👍, 4s = perte de patience, &gt;4s = utilisateur perdu <a href="https://twitter.com/hashtag/webperf?src=hash">#webperf</a> <a href="https://twitter.com/hashtag/bestofweb2016?src=hash">#bestofweb2016</a></p>&mdash; Maxime COLIN (@colin_maxime) <a href="https://twitter.com/colin_maxime/status/741185758317424640">10 juin 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -69,7 +69,7 @@ Elle nous présente également des cas concrets où une baisse de reactivité a 
 
 # L'artisanat du web
 
-Petit coup de coeur pour le talk de [Tim Carry](https://twitter.com/pixelastic) qui nous parle d'artisanat du web. Il nous explique qu'un artisant se doit de réaliser un chef d'oeuvre au cours de sa carrière et voici le sien : [la réalisation des pays du monde uniquement avec un ```div``` et du css](https://pixelastic.github.io/css-flags/). Et vous, quel sera votre chef d'oeuvre ?
+Petit coup de coeur pour le talk de [Tim Carry](https://twitter.com/pixelastic) qui nous parle d'artisanat du web. Il nous explique qu'un artisan se doit de réaliser un chef d'oeuvre au cours de sa carrière et voici le sien : [la réalisation des pays du monde uniquement avec un ```div``` et du css](https://pixelastic.github.io/css-flags/). Et vous, quel sera votre chef d'oeuvre ?
 
 # Progressive Web Apps
 
