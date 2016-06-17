@@ -5,7 +5,7 @@ date:               "2016-06-17"
 publishdate:        "2016-06-17"
 draft:              false
 slug:               "best-of-web-2016"
-description:        "La seconde édition du Best Of Web s'est tenue le Vendredi 10 Juin 2016 à Paris, et a rassemblé le meilleur des meetups de l'année. Retour sur cet évènement."
+description:        "La seconde édition du Best Of Web s'est tenue le Vendredi 10 Juin 2016 à Paris, et a rassemblé le meilleur des meetups de l'année. Retour sur cet événement."
 
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/best-of-web-2016.jpg"
@@ -16,16 +16,16 @@ categories:         ["Actualité", "Web", "conference"]
 author_username:    "mcolin"
 ---
 
-La seconde édition du Best Of Web s'est tenue à Paris le vendredi 10 juin 2016. Comme l'année dernière c'est la salle de la Grande Crypte de Paris qui a hébergé l'évènement. Le principe ne change pas, pendant une journée l'évènement propose de revivre les meilleurs meetups parisiens orientés web.
+La seconde édition du Best Of Web s'est tenue à Paris le vendredi 10 juin 2016. Comme l'année dernière c'est la salle de la Grande Crypte de Paris qui a hébergé l'événement. Le principe ne change pas, pendant une journée l'événement propose de revivre les meilleurs meetups parisiens orientés web.
 <!--more-->
-L'évènement est plutôt orienté front, ça parle donc de Javascript, de CSS, de webperf, ... Le format de l'année précédente a été conservé, c'est à dire une seule track pour ne rien manquer.
+L'événement est plutôt axé front, ça parle donc de Javascript, de CSS, de webperf, ... Le format de l'année précédente a été conservé, c'est-à-dire une seule track pour ne rien manquer.
 
-<blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">On est à <a href="https://twitter.com/hashtag/bestofweb2016?src=hash">#bestofweb2016</a> n&#39;hésitez pas à nous pouvons pinger pour que l&#39;on se rencontre <a href="https://t.co/KAoWNerGSU">https://t.co/KAoWNerGSU</a> <a href="https://t.co/qWNrKiPZ88">pic.twitter.com/qWNrKiPZ88</a></p>&mdash; Elao (@Elao) <a href="https://twitter.com/Elao/status/741168106723258368">10 juin 2016</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">On est à <a href="https://twitter.com/hashtag/bestofweb2016?src=hash">#bestofweb2016</a> n&#39;hésitez pas à nous pinger pour que l&#39;on se rencontre <a href="https://t.co/KAoWNerGSU">https://t.co/KAoWNerGSU</a> <a href="https://t.co/qWNrKiPZ88">pic.twitter.com/qWNrKiPZ88</a></p>&mdash; Elao (@Elao) <a href="https://twitter.com/Elao/status/741168106723258368">10 juin 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 # Frameworks temps réel
 
-L'un des sujets les plus souvent abordés était celui des frameworks temps réel. Backbone, Angular, Meteor ou encore React pour les plus trendy, ces frameworks révolutionnent depuis quelques années le développement d'application web front. A travers plusieurs talks nous avons eu un bon tour des différentes solutions, leurs points forts et leurs faiblesses, lesquelles utiliser et pourquoi.
+L'un des sujets les plus souvent abordés était celui des frameworks temps réel. Backbone, Angular, Meteor ou encore React pour les plus trendy, ces frameworks révolutionnent depuis quelques années le développement d'applications web front. A travers plusieurs talks nous avons eu un bon aperçu des différentes solutions, leurs points forts et leurs faiblesses, lesquelles utiliser et pourquoi.
 
 Bien qu'il ne soit pas le plus utilisé, [React.js](https://facebook.github.io/react/) semble être le grand favori cette année.
 
@@ -43,7 +43,7 @@ Ensuite [Audrey Neveu](@Audrey_Neveu) nous explique comment fonctionne le temps 
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">Réaction: 100/500ms, interaction: 100/500ms. 1s de chargement = 👍, 4s = perte de patience, &gt;4s = utilisateur perdu <a href="https://twitter.com/hashtag/webperf?src=hash">#webperf</a> <a href="https://twitter.com/hashtag/bestofweb2016?src=hash">#bestofweb2016</a></p>&mdash; Maxime COLIN (@colin_maxime) <a href="https://twitter.com/colin_maxime/status/741185758317424640">10 juin 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Elle nous présente également des cas concrets où une baisse de reactivité a pour conséquence une perte de traffic ou pire une perte de vente.
+Elle nous présente également des cas concrets ou une baisse de reactivité a pour conséquence une perte de trafic ou pire une perte de vente.
 
 <table style="width: 500px;margin: auto;text-align: center;">
 	<thead>
@@ -73,7 +73,7 @@ Petit coup de coeur pour le talk de [Tim Carry](https://twitter.com/pixelastic) 
 
 # Progressive Web Apps
 
-Un autre sujet que j'ai trouvé très intéressant est la présentation des Progressive Web Apps par [Florian Orpelière](https://twitter.com/florpeliere). Ces applications sont des applications web pensées comme des applications natives afin d'offrir à l'utilisateur une expérience que n'offre pas une application web tout en gardant la flexibilité d'une application web.
+Un autre sujet que j'ai trouvé très intéressant est la présentation des Progressive Web Apps par [Florian Orpelière](https://twitter.com/florpeliere). Ces applications sont des applications web pensées comme des applications natives afin d'offrir à l'utilisateur une expérience que n'offre pas une application web tout en gardant la flexibilité du web.
 
 * Gestion des connexions lentes et le hors-ligne,
 * Réception des messages push,
@@ -81,7 +81,7 @@ Un autre sujet que j'ai trouvé très intéressant est la présentation des Prog
 * Synchronisation des données en arrière plan,
 * Ajout à l'écran d’accueil.
 
-Ses applications sont hébergées comme n'importe que application web mais disposent d'un manifest décrivant leur fonctionnement et leur configuration en tant qu'application. Les Progressive Web Apps reposent principalement sur la technologie des Service Workers qui est actuellement en cours de standardisation et pourrait être le futur des applications web.
+Ses applications sont hébergées comme n'importe quelle application web mais disposent d'un manifest décrivant leur fonctionnement et leur configuration. Les Progressive Web Apps reposent principalement sur la technologie des Service Workers qui est actuellement en cours de standardisation et pourrait être le futur des applications web.
 
 # OVNI
 
@@ -93,15 +93,15 @@ Petit OVNI à travers les différents sujets présentés, l'émulation d'une Gam
 # Coup de coeur
 
 Petit coup de coeur pour l'organisation et l'ambiance qui étaient très réussi. 
-Les talks bien choisis et correspondaient à l'actualité de notre métier. L'accueil était chaleureux, le repas exceptionnel, les sponsors ont bien joué le jeu et l'équipe était très sympathique.
+Les talks bien choisis et correspondaient à l'actualité de notre métier. L'accueil était chaleureux, le repas exceptionnel. Les sponsors ont bien joué le jeu et l'équipe était très sympathique.
 
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">L&#39;inattendu mais très apprécié bar à <a href="https://twitter.com/hashtag/fromage?src=hash">#fromage</a> du <a href="https://twitter.com/hashtag/bestofweb2016?src=hash">#bestofweb2016</a> 😍😋👍 <a href="https://t.co/aa7GZCmfqg">pic.twitter.com/aa7GZCmfqg</a></p>&mdash; Maxime COLIN (@colin_maxime) <a href="https://twitter.com/colin_maxime/status/741222954609053696">10 juin 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 # Conclusion
 
-Pour conclure, je dirais que cette seconde édition du Best Of Web était très réussie. Les talks étaient très intéressants, d'actualité et tournés vers l'avenir.
-Je félicite les organisateurs pour une organisation sans faille de l'évènement. Bravo et à l'année prochaine.
+Pour conclure, je dirais que cette seconde édition du Best Of Web était très réussies. Les talks étaient très intéressants, d'actualité et tournés vers l'avenir.
+Je félicite les organisateurs pour une organisation sans faille de l'événement. Bravo et à l'année prochaine.
 
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">Pour revivre <a href="https://twitter.com/hashtag/bestofweb2016?src=hash">#bestofweb2016</a> retrouvez toutes les photos de l&#39;événement <a href="https://t.co/DVYfQ3lhtJ">https://t.co/DVYfQ3lhtJ</a> <a href="https://t.co/19s5fx59dl">pic.twitter.com/19s5fx59dl</a></p>&mdash; bestofweb (@bestofwebconf) <a href="https://twitter.com/bestofwebconf/status/743431195657109505">16 juin 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
