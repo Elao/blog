@@ -18,7 +18,7 @@ author_username:    "mcolin"
 
 La seconde édition du Best Of Web s'est tenue à Paris le vendredi 10 juin 2016. Comme l'année dernière c'est la salle de la Grande Crypte de Paris qui a hébergé l'évènement. Le principe ne change pas, pendant une journée l'évènement propose de revivre les meilleurs meetups parisiens orienté web.
 <!--more-->
-L'évènement est plutôt orienté front, ça parle donc de Javascript, de CSS, de webperf, ... Le format que l'année précédente a été conservé, c'est à dire une seul track pour ne rien manqué.
+L'évènement est plutôt orienté front, ça parle donc de Javascript, de CSS, de webperf, ... Le format de l'année précédente a été conservé, c'est à dire une seule track pour ne rien manqué.
 
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">On est à <a href="https://twitter.com/hashtag/bestofweb2016?src=hash">#bestofweb2016</a> n&#39;hésitez pas à nous pouvons pinger pour que l&#39;on se rencontre <a href="https://t.co/KAoWNerGSU">https://t.co/KAoWNerGSU</a> <a href="https://t.co/qWNrKiPZ88">pic.twitter.com/qWNrKiPZ88</a></p>&mdash; Elao (@Elao) <a href="https://twitter.com/Elao/status/741168106723258368">10 juin 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
