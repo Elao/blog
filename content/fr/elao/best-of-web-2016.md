@@ -33,7 +33,7 @@ Bien qu'il ne soit pas le plus utilisé, [React.js](https://facebook.github.io/r
 
 L'autre sujet qui tenait une bonne place dans ce Best Of Web 2016 concernait les performances. Effectivement avec le développement des applications front de plus en plus lourdes et l'arrivée de fonctionnalités permettant des opérations de plus en plus complexes (transformation, animation, 3D, ...) ainsi que l'utilisation croissante d'API, la question de la performance est devenu cruciale. Les utilisateurs, habitués à la fluidité des applications natives, s'attendent à la même réactivité de la part du web.
 
-[Freddy Harris ](https://twitter.com/harrisfreddy) a longuement parlé dans son talk des performances dans l'animation et nous donne de nombreuses astuces sur le fonctionnement des animations dans les navigateurs. 
+[Freddy Harris](https://twitter.com/harrisfreddy) a longuement parlé dans son talk des performances dans l'animation et nous donne de nombreuses astuces sur le fonctionnement des animations dans les navigateurs. 
 
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">Astuce : La propriété <a href="https://twitter.com/hashtag/css?src=hash">#css</a> will-change permet d&#39;indiquer au browser que l&#39;élément sera animé <a href="https://twitter.com/hashtag/gpu?src=hash">#gpu</a> <a href="https://twitter.com/hashtag/webperf?src=hash">#webperf</a> <a href="https://twitter.com/hashtag/bestofweb2016?src=hash">#bestofweb2016</a></p>&mdash; Maxime COLIN (@colin_maxime) <a href="https://twitter.com/colin_maxime/status/741179119833079808">10 juin 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -85,7 +85,7 @@ Ses applications sont hébergées comme n'importe quelle application web mais di
 
 # OVNI
 
-Petit OVNI à travers les différents sujets présentés, l'émulation d'une GameBoy en javascript. Au delà de la curiosité et de la coolitude de la chose, j'ai trouvé la performance très interessante pour montrer la puissance montante du language Javascript ainsi que les possiblités qu'il offre.
+Petit OVNI à travers les différents sujets présentés, l'émulation d'une GameBoy en javascript. Au delà de la curiosité et de la coolitude de la chose, j'ai trouvé la performance très interessante pour montrer la puissance montante du language Javascript ainsi que les possibilités qu'il offre.
 
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">Emuler la <a href="https://twitter.com/hashtag/GameBoy?src=hash">#GameBoy</a> en <a href="https://twitter.com/hashtag/Javascript?src=hash">#Javascript</a> oui c&#39;est possible <a href="https://twitter.com/hashtag/bestofweb2016?src=hash">#bestofweb2016</a> <a href="https://t.co/XILnVsAmVC">pic.twitter.com/XILnVsAmVC</a></p>&mdash; Maxime COLIN (@colin_maxime) <a href="https://twitter.com/colin_maxime/status/741276662185250816">10 juin 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
