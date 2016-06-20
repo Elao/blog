@@ -28,6 +28,10 @@ L'un des sujets les plus souvent abordés était celui des frameworks temps rée
 
 Bien qu'il ne soit pas le plus utilisé, [React.js](https://facebook.github.io/react/) semble être le grand favori cette année.
 
+Mention spéciale au format sympa de la conf tout en live coding de [Gerard Sans](https://twitter.com/gerardsans).
+
+<blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">Conf au format sympa (love coding + todolist) sur RxJS à <a href="https://twitter.com/hashtag/bestofweb2016?src=hash">#bestofweb2016</a> by <a href="https://twitter.com/gerardsans">@gerardsans</a> <a href="https://t.co/vxBFVRLF1H">pic.twitter.com/vxBFVRLF1H</a></p>&mdash; Richard HANNA (@richardhanna) <a href="https://twitter.com/richardhanna/status/741246253913284609">10 juin 2016</a></blockquote>
+
 # WebPerf
 
 L'autre sujet qui tenait une bonne place dans ce Best Of Web 2016 concernait les performances. Effectivement avec le développement des applications front de plus en plus lourdes et l'arrivée de fonctionnalités permettant des opérations de plus en plus complexes (transformation, animation, 3D, ...) ainsi que l'utilisation croissante d'API, la question de la performance est devenu cruciale. Les utilisateurs, habitués à la fluidité des applications natives, s'attendent à la même réactivité de la part du web.
@@ -63,6 +67,8 @@ Elle nous présente également des cas concrets ou une baisse de reactivité a p
 		</tr>
 	</tbody>
 </table>
+
+Pour elle, deux technologies servent à streamer des données : WebSockets et Server-Sent Events (SSE). Si on a besoin uniquement de récupérer des données sans en envoyer, il faut mieux utiliser les SSE qui sont plus performants. L'utilisation de [JSON Patch](http://jsonpatch.com/) permet également de réduire la quantité de données qui transitent : on ne reçoit que ce qui a changé.
 
 # L'artisanat du web
 
