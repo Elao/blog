@@ -1,15 +1,17 @@
 ---
 
-baseurl:        "https://blog.elao.com/fr/"
-languageCode:   "fr-FR"
-title:          "Le blog de la team ELAO"
-Paginate:       10
-contentdir:     "content/fr"
-publishdir:     "public/fr"
+baseurl:         "https://blog.elao.com/fr/"
+languageCode:    "fr-FR"
+title:           "Le blog de la team ELAO"
+Paginate:        10
+contentdir:      "content/fr"
+publishdir:      "public/fr"
+enableRobotsTXT: true
 
 params:
   locale:         "fr-FR"
   Subtitle:       "ELAO - Agence Web, Experts Symfony et Technologies Open Source - PARIS / LYON / MONTPELLIER"
+  description:    "Le blog de l'équipe ELAO"
   AuthorName:     "ELAO"
   TwitterUser:    "Elao"
   GitHubUser:     "Elao"
