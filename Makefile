@@ -59,7 +59,7 @@ build-assets:
 	gulp build
 
 ## Build
-build: build-hugo build-assets
+build: build-assets build-hugo
 
 ## Hugo server (Dev only)
 server-start:
