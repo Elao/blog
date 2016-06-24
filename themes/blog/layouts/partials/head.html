@@ -9,14 +9,18 @@
 
     <meta name="keywords" content=""/>
     <meta name="Author" content="ELAO"/>
+    <meta name="description" content="{{ .Site.Params.description }}" />
     <meta charset="utf-8"/>
 
     <link rel="publisher" href="https://plus.google.com/b/118274493624974429462"/>
 
+
     <meta property="og:title" content="{{ .Title }}"/>
-    <meta property="og:description" name="description" content="{{ .Description }}"/>
+    <meta property="og:description" name="description" content="{{ .Site.Params.description }}"/>
     <meta property="og:url" content="{{ .Permalink }}"/>
     <meta property="og:site_name" content="{{ .Title }}"/>
+    <meta property="og:image" content="/fr/images/elao.png"/>
+
     <meta name="twitter:site" content="@Elao" />
 
     {{ if .IsPage }}

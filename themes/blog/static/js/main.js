@@ -48,7 +48,7 @@ $(window).load(function(){
         scrollTop = $(window).scrollTop();
         var scrollPercent = (scrollTop) / (documentHeight - windowHeight);
         var pct = (scrollPercent < 1) ? scrollPercent * 100 : 100;
-        $('#read-progress div').css('width', pct + "%");
+        $('#read-progress').find('div').css('width', pct + "%");
 
         $(window).resize(function(){
             documentHeight = $('#disqus_thread').offset().top;
@@ -60,14 +60,14 @@ $(window).load(function(){
 
             var scrollPercent = (scrollTop) / (documentHeight - windowHeight);
             var pct = (scrollPercent < 1) ? scrollPercent * 100 : 100;
-            $('#read-progress div').css('width', pct + "%");
+            $('#read-progress').find('div').css('width', pct + "%");
         });
 
         $(window).on("scroll", function() {
             scrollTop = $(window).scrollTop();
             var scrollPercent = (scrollTop) / (documentHeight - windowHeight);
             var pct = (scrollPercent < 1) ? scrollPercent * 100 : 100;
-            $('#read-progress div').css('width', pct + "%");
+            $('#read-progress').find('div').css('width', pct + "%");
         });
     }
 });
