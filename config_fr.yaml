@@ -49,6 +49,16 @@ menu:
         URL:        "/categories/monitoring"
         Weight:     30
         parent:     "infra"
+      # WEBPERF
+      - Name:       "WebPerf"
+        Identifier: "webperf"
+        URL:        "/webperf"
+        Weight:     210
+      - Name:       "Analyse"
+        Identifier: "analyse"
+        URL:        "/categories/analyse"
+        Weight:     10
+        parent:     "webperf"
       # DEV
       - Name:       "Dev"
         Identifier: "dev"

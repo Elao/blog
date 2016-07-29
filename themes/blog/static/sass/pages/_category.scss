@@ -25,6 +25,10 @@
         background-image: url(../images/category/actus.jpg);
     }
 
+    &.webperf {
+        background-image: url(../images/category/webperf.jpg);
+    }
+
     &::after {
         content: '';
         background: #222;
