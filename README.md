@@ -1,25 +1,20 @@
 # Hugo
 
-## Installing Hugo (only if you want run the server localy)
-Your password is mandatory to install Python Pygments.
+We finally use Docker to handle the container stuff, so you will need ... [docker](http://www.docker.com/products/docker#/mac) to be able to work on the blog.
+
+## Launching hugo (watch mode)
+
+### First run
 
 `make install`
 
-## Using Hugo inside vagrant VM (It's note the good way to wrote a post due to filecache)
+### Server launch
+`make watch`
 
-`vagrant up`
+### I don't see my assets !!
+`make build && make watch`
 
-# Run Hugo Server (Only if you are not using the vagrant VM)
-
-`make server-start`
-
-## Run Hugo Server (In FR locale)
-
-`make server-start-fr`
-
-## Run Hugo Server (In EN locale)
-
-`make server-start-en`
+(By default the french blog is loaded if you want to work on the english part you will need to change the `--config`option into the makefile (--config=config_en.yml)
 
 # Writing a post
 
@@ -123,26 +118,8 @@ Your post is good to go ? Create a PR and ask for review to a team member once i
 
 ### Going to production
 
+#### Sync only files (you don't had any images)
 `make deploy@prod`
 
-### If you are working localy (OSX)
-
-You need to be sure to have those tools installed:
-
-- optipng (`brew install optipng`)
-- imagemagick (`brew link jpeg --overwrite && brew install imagemagick`)
-- jpegtran
-
-#### Installing jpegtran
-```
-cd /tmp && \
-wget http://jpegclub.org/jpegcrop.tar.gz && \
-tar xvfz jpegcrop.tar.gz && \
-cd /tmp/jpegcrop/jpeg-9b && \
-./configure && \
-make && \
-sudo make install
-```
-
-
-
+#### Sync files and optimize images
+`make deploy_and_optimize@prod`

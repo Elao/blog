@@ -2,9 +2,9 @@
     "name": "ElaoBlog",
     "version": "0.0.1",
     "description": "Blog Elao",
-    "author": "Jeremy FAGIS <jeremy@fagis.fr> (http://fagis.fr)",
+    "author": "ELAO <contact@elao.com> (http://www.elao.com)",
     "dependencies": {
-        "jquery": "*"
+        "jquery": "2.*"
     },
     "devDependencies": {
         "gulp": "^3.9.*",
