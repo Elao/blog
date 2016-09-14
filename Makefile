@@ -21,60 +21,120 @@ help:
 	} \
 	{ lastLine = $$0 }' $(MAKEFILE_LIST)
 
-## Images croping
-optimize: crop-thumbnails crop-headers
-	find public/fr/images -iname "*.png" -type f -exec optipng -o7 {} \;
-	find public/en/images -iname "*.png" -type f -exec optipng -o7 {} \;
-	find public/fr/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \;
-	find public/en/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \;
+#######
+# Dev #
+#######
 
-crop-thumbnails:
-	find public/fr/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \;
-	find public/en/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \;
+## Dev
+shell:
+	docker run \
+		--hostname blog.dev \
+		--rm \
+		--volume `pwd`:/srv \
+		--env HOME=/home \
+		--user `id -u` \
+		--publish 1313:1313 \
+		--tty --interactive \
+		manala/hugo-debian \
+		bash
 
-crop-headers:
-	find public/fr/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \;
-	find public/en/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \;
+###########
+# Install #
+###########
 
 ## Install
 install:
-	brew update
-	brew install hugo
-	sudo easy_install Pygments
-
-clean-up:
-	rm -rf public/*
-
-build-fr: clean-up
-	hugo --theme=blog --config=config_fr.yaml
-	chmod -R a+r static/images
-
-build-en: clean-up
-	hugo --theme=blog --config=config_en.yaml
-	chmod -R a+r static/images
-
-build-hugo:	build-fr build-en
-
-build-assets:
-	gulp build
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		--env HOME=/home \
+		--user `id -u` \
+		--tty \
+		manala/hugo-debian \
+		bash -c "\
+			NPM_CONFIG_CACHE=/tmp/npm npm install \
+		"
+#########
+# Build #
+#########
 
 ## Build
-build: build-assets build-hugo
+build: install
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		--env HOME=/home \
+		--user `id -u` \
+		--tty \
+		manala/hugo-debian \
+		bash -c "\
+			node_modules/.bin/gulp build \
+			&& hugo --theme=blog --config=config_fr.yaml \
+		"
 
-## Hugo server (Dev only)
-server-start:
-	hugo server --theme=blog --buildDrafts --watch --ignoreCache=true
+## Build and optimize
+build-and-optimize: build crop optimize
 
-## Hugo server FR (Dev only)
-server-start-fr:
-	hugo server --theme=blog --buildDrafts --watch --ignoreCache=true --config=config_fr.yaml
+#########
+# Watch #
+#########
 
-## Hugo server EN (Dev only)
-server-start-en:
-	hugo server --theme=blog --buildDrafts --watch --ignoreCache=true --config=config_en.yaml
+## Watch
+watch:
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		--env HOME=/srv \
+		--user `id -u` \
+		--tty -i \
+		--publish 1313:1313 \
+		manala/hugo-debian \
+		hugo server --bind=0.0.0.0 --theme=blog --config=config_fr.yaml --buildDrafts --watch --ignoreCache=true
 
+## Images compression
+optimize:
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		--env HOME=/srv \
+		--user `id -u` \
+		--tty \
+		manala/hugo-debian \
+		bash -c "\
+			find public/fr/images -iname "*.png" -type f -exec optipng -o7 {} \; \
+			&& find public/en/images -iname "*.png" -type f -exec optipng -o7 {} \; \
+			&& find public/fr/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \; \
+			&& find public/en/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \; \
+		"
+## Crop thumbnail and header files
+crop: crop-thumbnails crop-headers
+
+crop-thumbnails:
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		--env HOME=/srv \
+		--user `id -u` \
+		--tty \
+		manala/hugo-debian \
+		bash -c "\
+			find public/fr/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \; \
+			&& find public/en/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \; \
+		"
+crop-headers:
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		--env HOME=/srv \
+		--user `id -u` \
+		--tty \
+		manala/hugo-debian \
+		bash -c "\
+			find public/fr/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \; \
+			&& find public/en/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \; \
+		"
 ## Deploy app to production (after static build and images optimization)
-deploy_and_optimize@prod: build optimize
+deploy_and_optimize@prod: build-and-optimize
 	echo "google-site-verification: google98e08ccbf4b44d9b.html" > public/google98e08ccbf4b44d9b.html
 	rsync -arzv --delete public deploy@blog.elao.elao.local:/srv/app
 
