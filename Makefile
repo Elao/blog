@@ -21,18 +21,18 @@ help:
 	} \
 	{ lastLine = $$0 }' $(MAKEFILE_LIST)
 
-#######
-# Dev #
-#######
+#############
+# Dev tools #
+#############
 
-## Dev
+## Make me God
 shell:
 	docker run \
 		--hostname blog.dev \
 		--rm \
 		--volume `pwd`:/srv \
 		--env HOME=/home \
-		--user `id -u` \
+		--user root \
 		--publish 1313:1313 \
 		--tty --interactive \
 		manala/hugo-debian \
