@@ -57,9 +57,9 @@ install:
 #########
 # Build #
 #########
+build: install build_assets build_fr build_en
 
-## Build
-build: install
+build_assets:
 	docker run \
 		--rm \
 		--volume `pwd`:/srv \
@@ -69,7 +69,31 @@ build: install
 		manala/hugo-debian \
 		bash -c "\
 			node_modules/.bin/gulp build \
-			&& hugo --theme=blog --config=config_fr.yaml \
+		"
+
+## Build
+build_fr:
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		--env HOME=/home \
+		--user `id -u` \
+		--tty \
+		manala/hugo-debian \
+		bash -c "\
+			hugo --theme=blog --config=config_fr.yaml \
+		"
+
+build_en:
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		--env HOME=/home \
+		--user `id -u` \
+		--tty \
+		manala/hugo-debian \
+		bash -c "\
+			hugo --theme=blog --config=config_en.yaml \
 		"
 
 ## Build and optimize
