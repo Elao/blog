@@ -28,7 +28,7 @@ Voici à titre d'exemple une "[TODO List](https://jsfiddle.net/Lsgc2rhr/9/)" ré
 
 ## Versatile
 
-La versalité de **Vue.js** vient de la possibilité d'utiliser le framework de différente façon plus ou moins poussées. Vous pouvez l'utiliser pour créer un petit widget qui s'intégrera sur une page en quelques lignes à la manière d'un plugin jQuery, réaliser des Single Page Application, créer vos propres composants, ou même créer des applications complexes avec du routing et cablée sur une API. Coté rendu, vous pouvez utiliser des templates HTML directement de le DOM, déclarer des templates inline ou packager votre template avec son composant dans un fichier ```.vue```. Bref, **Vue.js** s'adapte à vos besoins.
+La versalité de **Vue.js** vient de la possibilité d'utiliser le framework de différentes façons plus ou moins poussées. Vous pouvez l'utiliser pour créer un petit widget qui s'intégrera sur une page en quelques lignes à la manière d'un plugin jQuery, réaliser des Single Page Application, créer vos propres composants, ou même créer des applications complexes avec du routing et cablée sur une API. Coté rendu, vous pouvez utiliser des templates HTML directement dans le DOM, déclarer des templates inline ou packager votre template avec son composant dans un fichier ```.vue```. Bref, **Vue.js** s'adapte à vos besoins.
 
 ## Performant
 
@@ -44,11 +44,11 @@ Ils s'accordent tous pour dire que le framework est vraiment perfomant et compé
 
 ## Fonctionnalités
 
-Le coeur de **Vue.js** ce concentre sur la couche de présentation (vue). Il dispose pour celà de fonctionalités de templating avancées basées sur des directives préfixées d'un ```v-``` à la manière d'Angular et de ses propriétés ```ng:```. La création des templates est ainsi simple et rapide, autant pour un développeur que pour un intégrateur.
+Le coeur de **Vue.js** se concentre sur la couche de présentation (vue). Il dispose pour cela de fonctionalités de templating avancées basées sur des directives préfixées d'un ```v-``` à la manière d'Angular et de ses propriétés ```ng:```. La création des templates est ainsi simple et rapide, autant pour un développeur que pour un intégrateur.
 
 Il offre la possibilité de créer ses propre directives, de créer des composants et des mixins (un peu comme les traits de PHP).
 
-Les composants peuvent être déclarer simplement dans un fichier Javascript et attachés à des templates dans votre HTML ou vous pouvez créer des Single File Components sous la forme de fichiers ```.vue``` rassemblant le template, le javascript et le CSS de votre composant.
+Les composants peuvent être déclarés simplement dans un fichier Javascript et attachés à des templates dans votre HTML ou vous pouvez créer des Single File Components sous la forme de fichiers ```.vue``` rassemblant le template, le javascript et le CSS de votre composant.
 
 Un systeme d'événement est disponible pour faire communiquer les composants ensemble.
 
@@ -64,13 +64,13 @@ Un systeme d'événement est disponible pour faire communiquer les composants en
 
 ### Environnement de développement
 
-**Vue.js** est compatible avec [WebPack](https://webpack.github.io/docs/) et [Browserify](http://browserify.org/). [Vue CLI](https://github.com/vuejs/vue-cli), un outils en ligne de command, propose un environnement de développement complet et moderne avec de la génération de boilerplate, de la compilation, du watching, du live reload, ...
+**Vue.js** est compatible avec [WebPack](https://webpack.github.io/docs/) et [Browserify](http://browserify.org/). [Vue CLI](https://github.com/vuejs/vue-cli), un outil en ligne de commande, propose un environnement de développement complet et moderne avec de la génération de boilerplate, de la compilation, du watching, du live reload, ...
 
 
 ## Intégration avec Symfony
 
-Développant majoritairement avec Symfony, un gros plus que j'ai trouvé au framework est qu'il s'intègre très simplement à Symfony. Il est en effet possible de mélanger vos templates **Vue.js** et vos templates **Twig** et il est très simple d'y intégrer des composants voir de cabler une application **Vue.js** sur une template ou un formulaire Symfony.
+Développant majoritairement avec Symfony, un gros plus que j'ai trouvé au framework est qu'il s'intègre très simplement à Symfony. Il est en effet possible de mélanger vos templates **Vue.js** et vos templates **Twig** et il est très simple d'y intégrer des composants voire de cabler une application **Vue.js** sur un template ou un formulaire Symfony.
 
 ## Conclusion
 
-En conclusion, pour moi sa **versabilité** et sa **flexibilité** sont les plus gros avantages de **Vue.js**. Bien qu'il dispose de tout ce qu'il faut pour développer une SPA ou une application frontend complexe, il est également très simple de réaliser un petit composant. C'est pourquoi je le recommande pour intégrer un peu de dynamisme à une application backend mais également pour développer une application frontend. Ces avantages permettent également une courbe d'aprentisage plus douce qu'avec un framework plus complexe.
+En conclusion, pour moi sa **versatilité** et sa **flexibilité** sont les plus gros avantages de **Vue.js**. Bien qu'il dispose de tout ce qu'il faut pour développer une SPA ou une application frontend complexe, il est également très simple de réaliser un petit composant. C'est pourquoi je le recommande pour intégrer un peu de dynamisme à une application backend mais également pour développer une application frontend. Ces avantages permettent également une courbe d'aprentisage plus douce qu'avec un framework plus complexe.
