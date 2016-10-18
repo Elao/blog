@@ -11,28 +11,28 @@ language:           "fr"
 thumbnail:          "/images/posts/thumbnails/vuejs.jpg"
 header_img:         "/images/posts/headers/vuejs.jpg"
 tags:               ["Vue.js","Javascript","Front","Frontend","Framework"]
-categories:         ["Dev", Vue.js", "Javascript"]
+categories:         ["Dev", "Vue.js", "Javascript"]
 
 author_username:    "mcolin"
 ---
 
-A l'heure de framework front, et à contrepier des désormais conventionnels Angular, Riot, Amber ou encore React, j'ai décidé de m'intéresser à [Vue.js](https://vuejs.org/). **Vue.js** est un framework javascript développé par Evan You qui se veut accessible, versatile et performant.
+A l'heure des frameworks front, et à contre-pied des désormais conventionnels Angular, Riot, Ember ou encore React, j'ai décidé de m'intéresser à [Vue.js](https://vuejs.org/). **Vue.js** est un framework javascript développé par Evan You qui se veut accessible, versatile et performant.
 
 ## Accessible
 
-A comparaison de ce que j'ai pu tester avec d'autres framework front, j'ai effectivement trouvé que Vue.js est très simple à mettre en place. La création d'une application basique se fait en quelques lignes de code et les résultats sont rapidement là.
+En comparaison de ce que j'ai pu tester avec d'autres frameworks front, j'ai effectivement trouvé que Vue.js est très simple à mettre en place. La création d'une application basique se fait en quelques lignes de code et les résultats sont rapidement là.
 
-Voici à titre d'exemple une "[TODO List](https://jsfiddle.net/Lsgc2rhr/9/)" réalisé en quelques minutes avec seulement une vingtaine de lignes de Javascript.
+Voici à titre d'exemple une "[TODO List](https://jsfiddle.net/Lsgc2rhr/9/)" réalisée en quelques minutes avec seulement une vingtaine de lignes de Javascript.
 
 <script async src="//jsfiddle.net/Lsgc2rhr/9/embed/js,html,result/"></script>
 
 ## Versatile
 
-La versalité de **Vue.js** vient de la possibilité d'utiliser le framework de différentes façons plus ou moins poussées. Vous pouvez l'utiliser pour créer un petit widget qui s'intégrera sur une page en quelques lignes à la manière d'un plugin jQuery, réaliser des Single Page Application, créer vos propres composants, ou même créer des applications complexes avec du routing et cablée sur une API. Coté rendu, vous pouvez utiliser des templates HTML directement dans le DOM, déclarer des templates inline ou packager votre template avec son composant dans un fichier ```.vue```. Bref, **Vue.js** s'adapte à vos besoins.
+La versatilité de **Vue.js** vient de la possibilité d'utiliser le framework de différentes façons plus ou moins poussées. Vous pouvez l'utiliser pour créer un petit widget qui s'intégrera sur une page en quelques lignes à la manière d'un plugin jQuery, réaliser des Single Page Application, créer vos propres composants, ou même créer des applications complexes avec du routing et câblées sur une API. Côté rendu, vous pouvez utiliser des templates HTML directement dans le DOM, déclarer des templates inline ou packager votre template avec son composant dans un fichier ```.vue```. Bref, **Vue.js** s'adapte à vos besoins.
 
 ## Performant
 
-Que celà soit pour un petit widget ou pour une application multi-page, je n'ai pas trouvé de problème de performance. Tout est fluide, le rendu est rapide et la synchronisation des données efficace. Je n'ai pas fait de benchmark parce qu'on en trouve déjà plein le web, le site de Vue.js fait lui même une comparaison avec différents frameworks.
+Que cela soit pour un petit widget ou pour une application multi-pages, je n'ai pas trouvé de problème de performances. Tout est fluide, le rendu est rapide et la synchronisation des données efficace. Je n'ai pas fait de benchmark parce qu'on en trouve déjà plein le web, le site de Vue.js fait lui même une comparaison avec différents frameworks.
 
 * [JS web frameworks benchmark – Round 1](http://www.stefankrause.net/wp/?p=191)
 * [JS web frameworks benchmark – Round 2](http://www.stefankrause.net/wp/?p=283)
@@ -40,11 +40,11 @@ Que celà soit pour un petit widget ou pour une application multi-page, je n'ai 
 * [Vue.js lead: Our JavaScript framework is faster than React](http://www.infoworld.com/article/3063615/javascript/vuejs-lead-our-javascript-framework-is-faster-than-react.html)
 * [Consider VueJS for Your Next Web Project](https://blog.codeship.com/consider-vuejs-next-web-project/)
 
-Ils s'accordent tous pour dire que le framework est vraiment perfomant et compétitif par rapport aux autres solutions. Certains vont même plus loin en affirmant qu'il est plus rapide que des gros frameworks comme React.
+Ils s'accordent tous pour dire que le framework est vraiment performant et compétitif par rapport aux autres solutions. Certains vont même plus loin en affirmant qu'il est plus rapide que des gros frameworks comme React.
 
 ## Fonctionnalités
 
-Le coeur de **Vue.js** se concentre sur la couche de présentation (vue). Il dispose pour cela de fonctionalités de templating avancées basées sur des directives préfixées d'un ```v-``` à la manière d'Angular et de ses propriétés ```ng:```. La création des templates est ainsi simple et rapide, autant pour un développeur que pour un intégrateur.
+Le coeur de **Vue.js** se concentre sur la couche de présentation (vue). Il dispose pour cela de fonctionnalités de templating avancées basées sur des directives préfixées d'un ```v-``` à la manière d'Angular et de ses propriétés ```ng:```. La création des templates est ainsi simple et rapide, autant pour un développeur que pour un intégrateur.
 
 Il offre la possibilité de créer ses propre directives, de créer des composants et des mixins (un peu comme les traits de PHP).
 
@@ -54,9 +54,9 @@ Un systeme d'événement est disponible pour faire communiquer les composants en
 
 ### Plugins
 
-**Vue.js** dispose de plugins afin d'ammener d'autres fonctionnalités au framework :
+**Vue.js** dispose de plugins afin d'apporter d'autres fonctionnalités au framework :
 
-* **vue-resources** permet de réaliser des requêtes AJAX sur une API.
+* **vue-resources** permet de réaliser des requêtes AJAX sur une API
 * **vue-router** permet de gérer le routing de votre application
 * **vue-validator** permet de valider vos formulaires
 * **vuex** est un state manager pour Vue.js (équivalent de Flux/Redux)
@@ -73,4 +73,4 @@ Développant majoritairement avec Symfony, un gros plus que j'ai trouvé au fram
 
 ## Conclusion
 
-En conclusion, pour moi sa **versatilité** et sa **flexibilité** sont les plus gros avantages de **Vue.js**. Bien qu'il dispose de tout ce qu'il faut pour développer une SPA ou une application frontend complexe, il est également très simple de réaliser un petit composant. C'est pourquoi je le recommande pour intégrer un peu de dynamisme à une application backend mais également pour développer une application frontend. Ces avantages permettent également une courbe d'aprentisage plus douce qu'avec un framework plus complexe.
+En conclusion, pour moi sa **versatilité** et sa **flexibilité** sont les plus gros avantages de **Vue.js**. Bien qu'il dispose de tout ce qu'il faut pour développer une SPA ou une application frontend complexe, il est également très simple de réaliser un petit composant. C'est pourquoi je le recommande pour intégrer un peu de dynamisme à une application backend mais également pour développer une application frontend. Ces avantages permettent également une courbe d'apprentissage plus douce qu'avec un framework plus complexe.
