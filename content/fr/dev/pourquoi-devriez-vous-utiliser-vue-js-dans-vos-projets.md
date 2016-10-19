@@ -2,7 +2,7 @@
 type:               "post"
 title:              "Pourquoi devriez-vous utiliser Vue.js dans vos projets ?"
 date:               "2016-10-17"
-publishdate:        "2016-10-17"
+publishdate:        "2016-10-19"
 draft:              false
 slug:               "pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets"
 description:        "Retour d'expérience sur le framework frontend Vue.js et pourquoi l'utiliser"
