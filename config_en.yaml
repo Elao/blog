@@ -33,3 +33,13 @@ menu:
         URL:        "/categories/symfony"
         Weight:     10
         parent:     "dev"
+      # TECH
+      - Name:       "Tech"
+        Identifier: "tech"
+        URL:        "/tech"
+        Weight:     230
+      - Name:       "OSX"
+        Identifier: "osx"
+        URL:        "/categories/osx"
+        Weight:     10
+        parent:     "tech"
