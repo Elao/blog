@@ -11,6 +11,7 @@ enableRobotsTXT: true
 params:
   locale:         "en-EN"
   Subtitle:       "ELAO - Agence Web, Experts Symfony et Technologies Open Source - PARIS / LYON / MONTPELLIER"
+  description:    "ELAO's team blog"
   AuthorName:     "ELAO"
   TwitterUser:    "Elao"
   GitHubUser:     "Elao"
