@@ -16,7 +16,7 @@ categories:         ["Dev", "Vue.js", "Javascript", "Symfony"]
 author_username:    "mcolin"
 ---
 
-Dans mon [précédent article](/fr/dev/pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets/) je vous parlais des avantages de Vue.js et de pourquoi vous devriez l'utiliser dans vos projets. Je disais que Vue.js était parfait pour ajouter des fonctionnalités frontend à **Symfony**, je vais vous détailler dans cet article comment intégrer **Vue.js** au framework de **Sensio**.
+Dans mon [précédent article](/fr/dev/pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets/) je vous parlais des avantages de Vue.js et vous expliquais pourquoi vous devriez l'utiliser dans vos projets. Je disais que Vue.js était parfait pour ajouter des fonctionnalités frontend à **Symfony**, je vais vous détailler dans cet article comment intégrer **Vue.js** au framework de **Sensio**.
 
 ## {{ delimiters }}
 
@@ -38,7 +38,7 @@ ou globalement pour toutes les instances de Vue :
 Vue.config.delimiters = ['${', '}'];
 ```
 
-Vous pourrez ainsi mélanger les deux moteurs de templates :
+Vous pourrez ainsi utiliser conjointement les deux moteurs de templates :
 
 ```
 <h1>{{ variable_twig }}</h1>
@@ -98,7 +98,7 @@ Dans le cas d'un composant, vous avez le choix de déclarer votre template dans 
 
 ### Single File Component
 
-Si vous créez un Single File Component, votre composant et son template seront completement décorrélés de Symfony et Twig. Vous serez en outre obligé d'utilise un plugin pour importer les fichiers avec **Browserify** ou **Webpack**.
+Si vous créez un Single File Component, votre composant et son template seront completement décorrélés de Symfony et Twig. Vous serez en outre obligé d'utiliser un plugin pour importer les fichiers avec **Browserify** ou **Webpack**.
 
 ```
 <template>
@@ -175,7 +175,7 @@ Vue.component('my-component', {
 Les **props** sont des propriétés qui peuvent être données en entrée du composant. Elles servent à passer des données d'un composant parent à un composant enfant. Vous pouvez néanmoins y passer des données brutes et donc les utiliser pour passer des données de **Symfony** à **Vue.js**. 
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
-    Attention les <code>props</code> sont en <em>one-way-down</em>. Si vous modifiez un <code>data</code> d'un composant parent passé en <code>props</code> d'un composant enfant, la modification se répercutera sur le composant enfant. Mais modifier une <code>props</code> depuis son composant n'inpactera pas composant parent et vous obtiendrez un <code style="color: #ffa600">warning</code> de la part de Vue.
+    Attention les <code>props</code> sont en <em>one-way-down</em>. Si vous modifiez un <code>data</code> d'un composant parent passé en <code>props</code> d'un composant enfant, la modification se répercutera sur le composant enfant. Mais modifier une <code>props</code> depuis son composant n'inpactera pas le composant parent et vous obtiendrez un <code style="color: #ffa600">warning</code> de la part de Vue.
 
     Néanmoins, si vous passez un objet en <code>props</code>, les modifications des propriétés de l'objet seront répercutées sur le parent, car c'est la référence de l'objet passé en <code>props</code> qui est immutable.
 </div>
@@ -280,7 +280,7 @@ new Vue({
 Notez que dans les callbacks de watch, vous avez accès à la nouvelle et l'ancienne valeur.
 
 <div style="border-left: 5px solid #1b809e;padding: 20px;margin: 20px 0;">
-    Si vous avez bien suivi le chapitre sur les événements, vous vous demandez surement pourquoi utiliser le <code>watch</code> plutôt que de mettre un <code>v-on:change</code> sur le champ. La différence est que le <code>v-on:change</code> écoutera les modifications de l'élement DOM alors que le <code>watch</code> écoutera les modifications sur le modèle.
+    Si vous avez bien suivi le chapitre sur les événements, vous vous demandez surement pourquoi utiliser le <code>watch</code> plutôt que de mettre un <code>v-on:change</code> sur le champ. La différence est que le <code>v-on:change</code> écoutera les modifications de l'élément DOM alors que le <code>watch</code> écoutera les modifications sur le modèle.
 </div>
 
 
