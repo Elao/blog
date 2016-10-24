@@ -71,6 +71,8 @@ Un systeme d'événement est disponible pour faire communiquer les composants en
 
 Développant majoritairement avec Symfony, un gros plus que j'ai trouvé au framework est qu'il s'intègre très simplement à Symfony. Il est en effet possible de mélanger vos templates **Vue.js** et vos templates **Twig** et il est très simple d'y intégrer des composants voire de cabler une application **Vue.js** sur un template ou un formulaire Symfony.
 
+Pour plus d'information sur le sujet, vous pouvez lire mon article "[Comment intégrer Vue.js dans une application Symfony](/fr/dev/comment-integrer-vue-js-application-symfony/)"
+
 ## Conclusion
 
 En conclusion, pour moi sa **versatilité** et sa **flexibilité** sont les plus gros avantages de **Vue.js**. Bien qu'il dispose de tout ce qu'il faut pour développer une SPA ou une application frontend complexe, il est également très simple de réaliser un petit composant. C'est pourquoi je le recommande pour intégrer un peu de dynamisme à une application backend mais également pour développer une application frontend. Ces avantages permettent également une courbe d'apprentissage plus douce qu'avec un framework plus complexe.
