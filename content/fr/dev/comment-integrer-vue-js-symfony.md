@@ -175,7 +175,7 @@ Vue.component('my-component', {
 Les **props** sont des propriétés qui peuvent être données en entrée du composant. Elles servent à passer des données d'un composant parent à un composant enfant. Vous pouvez néanmoins y passer des données brutes et donc les utiliser pour passer des données de **Symfony** à **Vue.js**. 
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
-    Attention les <code>props</code> sont en <em>one-way-down</em>. Si vous modifiez un <code>data</code> d'un composant parent passé en <code>props</code> d'un composant enfant, la modification se répercutera sur le composant enfant. Mais modifier une <code>props</code> depuis son composant n'inpactera pas le composant parent et vous obtiendrez un <code style="color: #ffa600">warning</code> de la part de Vue.
+    Attention les <code>props</code> sont en <em>one-way-down</em>. Si vous modifiez un <code>data</code> d'un composant parent passé en <code>props</code> d'un composant enfant, la modification se répercutera sur le composant enfant. Mais modifier une <code>props</code> depuis son composant n'impactera pas le composant parent et vous obtiendrez un <code style="color: #ffa600">warning</code> de la part de Vue.
 
     Néanmoins, si vous passez un objet en <code>props</code>, les modifications des propriétés de l'objet seront répercutées sur le parent, car c'est la référence de l'objet passé en <code>props</code> qui est immutable.
 </div>
