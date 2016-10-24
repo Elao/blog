@@ -24,7 +24,7 @@ La principale difficulté à l'intégration d'un framework frontend comme **Vue.
 
 Fort heureusement, il est possible de changer les délimiteurs dans les deux moteur de templating. Pour Twig, [ça se passe là](http://twig.sensiolabs.org/doc/recipes.html#customizing-the-syntax), mais nous allons plutôt nous attarder sur **Vue.js** puisque c'est lui que nous intégrons dans **Symfony**.
 
-Vous pouvez changer les délimiteur sur une instance de Vue :
+Vous pouvez changer les délimiteurs sur une instance de Vue :
 
 ```
 new Vue({
@@ -45,7 +45,7 @@ Vous pourrez ainsi mélanger les deux moteurs de templates :
 <p>${ variable_vue }<p>
 ```
 
-Si vous decidez de ne pas changer les délimiteurs, vous pouvez utilise le tag ```{% verbatim %}``` afin d'indiquer à Twig de ne pas interpréter votre template vue :
+Si vous decidez de ne pas changer les délimiteurs, vous pouvez utiliser le tag ```{% verbatim %}``` afin d'indiquer à Twig de ne pas interpréter votre template vue :
 
 ```
 <h1>{{ variable_twig }}</h1>
@@ -54,7 +54,7 @@ Si vous decidez de ne pas changer les délimiteurs, vous pouvez utilise le tag `
 {% endverbatim %}
 ```
 
-Une troisième solution serait de contenir le template **Vue.js** dans une chaine de caractère Twig. Personnellement j'essaie d'éviter cette solution, mais elle peut dépanner très occasionnellement.
+Une troisième solution est de contenir le template **Vue.js** dans une chaine de caractère Twig. Personnellement j'essaie d'éviter cette solution, mais elle peut dépanner très occasionnellement.
 
 ```
 <h1>{{ variable_twig }}</h1>
@@ -94,7 +94,7 @@ Dans le cas d'un composant, vous avez le choix de déclarer votre template dans 
 
 ### Single File Component
 
-Si vous créez un Single File Component, votre composant et son template seront completement décorélé de Symfony et Twig. Vous serez en outre obligé d'utilise un plugin pour importer les fichiers avec **Browserify** ou **Webpack**.
+Si vous créez un Single File Component, votre composant et son template seront completement décorélés de Symfony et Twig. Vous serez en outre obligé d'utilise un plugin pour importer les fichiers avec **Browserify** ou **Webpack**.
 
 ```
 <template>
@@ -116,7 +116,7 @@ Néanmoins vous aurez l'avantage d'avoir un composant complètement autonome et 
 
 ### Script X Template
 
-La solution que j'utilise le plus souvent consiste à placer le template dans une balise script qui sera référencé dans le composant via son id.
+La solution que j'utilise le plus souvent consiste à placer le template dans une balise script qui sera référencée dans le composant via son id.
 
 ```
 <script id="my-component" type="text/x-template">
@@ -137,7 +137,7 @@ Vue.component('my-component', {
 });
 ```
 
-Cette solution peut permettre de placer votre template de composant dans un fichier Twig que vous incluerez sur toutes les pages qui utilisent ce composant et permet d'alléger votre template principal.
+Cette solution peut permettre de placer votre template de composant dans un fichier Twig que vous incluerez sur toutes les pages qui l'utilisent et permet d'alléger votre template principal.
 
 ### Template inline
 
@@ -168,7 +168,7 @@ Vue.component('my-component', {
 
 ## Les props
 
-Les **props** sont des propriétés qui peuvent être données en entrée du composant. Elles servent à passer des données d'un composant parent à un composant enfant. Vous pouvez néanmoins y passer des données brut et donc les utilisers pour passer des données de **Symfony** à **Vue.js**. Attention ces données sont accessibles en lecture seulement.
+Les **props** sont des propriétés qui peuvent être données en entrée du composant. Elles servent à passer des données d'un composant parent à un composant enfant. Vous pouvez néanmoins y passer des données brut et donc les utiliser pour passer des données de **Symfony** à **Vue.js**. Attention ces données sont accessibles en lecture seulement.
 
 Imaginons par exemple un composant qui liste des éléments qu'il récupère à partir de l'API de votre application. Vous pouvez utilise les **props** pour passer la configuration depuis **Symfony**.
 
@@ -192,11 +192,11 @@ Vue.component('foobar-list', {
     Attention, les <strong>props</strong> doivent être des valeurs intépretables par <strong>Javascript</strong> et compatibles avec les types renseignés au niveau du composant (ici <code>String</code> et <code>Number</code>), c'est pourquoi j'ai mit des guillements autour de mon url dans <code>v-bind:apiUrl</code>.
 </div>
 
-## Formulaire
+## Formulaires
 
 ### Two-way binding
 
-Grace à la propiété ```v-model``` vous pouvez très facilement lié les ```data``` d'un composant **Vue.js** avec un champ de formulaire. Cette liaison est bi-directionnelle (two-way binding), c'est à dire que les modifications des données dans le composant se repercutennt sur le formulaire et que les modifications des valeurs du formulaires se répercutent sur les données du composant.
+Grace à la propiété ```v-model``` vous pouvez très facilement lié les ```data``` d'une application **Vue.js** avec un champ de formulaire. Cette liaison est bi-directionnelle (two-way binding), c'est à dire que les modifications des données dans Vue se repercutent sur le formulaire et que les modifications des valeurs du formulaires se répercutent sur les données de l'application Vue.
 
 <script async src="//jsfiddle.net/hw4z8t91/1/embed/js,html,result/"></script>
 
@@ -223,7 +223,7 @@ new Vue({
 
 **Vue.js** propose également plusieurs directives ```v-on:*``` permettant d'écouter les événements Javascript (```click```, ```submit```, ```change```, ...). Ces directives peuvent être suivie d'un ou plusieurs ***modifier*** permettant par exemple de stopper la propagation de l'événement (```.stop```) ou d'annuler de comportement par defaut de l'événement (```.prevent```).
 
-Par exemple, si je souhaitais blocker le submit d'un formulaire et appeler une function de callback à la place, j'utiliserais la directive ```v-on:submit.prevent``` :
+Par exemple, si je souhaitais blocker le ```submit``` d'un formulaire et appeler une function de callback à la place, j'utiliserais la directive ```v-on:submit.prevent``` :
 
 ```
 new Vue({
@@ -247,7 +247,7 @@ new Vue({
 
 ### Watch
 
-Une autre fonctionnalité très pratique pour les formulaires est le [watch](http://vuejs.org/api/#watch) qui permet de surveiller une données **Vue.js** et d'appeler un callback à chaque modification. Si je preprend l'exemple si dessus, cela permettrait d'effectuer la recherche à chaque changement de valeur.
+Une autre fonctionnalité très pratique pour les formulaires est le [watch](http://vuejs.org/api/#watch) qui permet de surveiller une donnée **Vue.js** et d'appeler un callback à chaque modification. Si je reprend l'exemple si dessus, cela permettrait d'effectuer la recherche à chaque changement de valeur.
 
 
 ```
@@ -294,4 +294,4 @@ new Vue({
 
 ```
 
-Le plugin offre toutes les fonctionnalités nécessaire à l'interogation d'une API. Il supporte les promesses, les templates d'url, XMLHttpRequest et JSONP.
+Le plugin offre toutes les fonctionnalités nécessaires à l'interogation d'une API. Il supporte les promesses, les templates d'url, XMLHttpRequest et JSONP.
