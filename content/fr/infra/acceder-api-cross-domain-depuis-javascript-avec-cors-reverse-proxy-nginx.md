@@ -32,7 +32,7 @@ CORS est compatible avec :
 - Safari 4+
 - Internet Explorer 8+
 
-Pour utilser **CORS** il faut envoyer au serveur des *headers* de contrôle d'accès qu'il inspectera pour approuver ou non la requête. Ces *header* de contrôle d'accès décriront le context de la requête, sa méthode HTTP, son origine, ses headers custom, ...
+Pour utilser **CORS** il faut envoyer au serveur des *headers* de contrôle d'accès qu'il inspectera pour approuver ou non la requête. Ces *headers* de contrôle d'accès décriront le context de la requête, sa méthode HTTP, son origine, ses headers custom, ...
 
 Selon le type de requête, ces headers sont envoyé automatiquement par le navigateur avec la requête ou dans une requête préliminaire (*preflight request*). La requête aboutira si le serveur répond avec des headers de contrôle d'accès compatibles.
 
