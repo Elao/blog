@@ -18,11 +18,11 @@ author_username:    "mcolin"
 
 ## Introduction
 
-Dans la continuité de la monté des applications full frontend, nous sommes de plus en plus amméné a appeler des API directement en Javascript depuis le client. J'ai récemment été confronté à un cas où l'API à intérogé n'était pas sur le même domaine que l'application. Sur un développement backend ce genre de cas ne pose aucun problème mais avec Javascript, pour des raisons de sécurité, les communications **cross-domain** sont bloqué par la [Same Origin Policy](https://developer.mozilla.org/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript).
+Dans la continuité de la montée des applications full frontend, nous sommes de plus en plus amenés a appeler des API directement en Javascript depuis le client. J'ai récemment été confronté à un cas où l'API à intérogé n'était pas sur le même domaine que l'application. Sur un développement backend ce genre de cas ne pose aucun problème mais avec Javascript, pour des raisons de sécurité, les communications **cross-domain** sont bloquées par la [Same Origin Policy](https://developer.mozilla.org/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript).
 
 ## CORS
 
-[Cross-Origin Resource Sharing](http://www.w3.org/TR/cors/) (CORS) est une spécification du W3C permettant les requêtes **cross-domain** depuis les navigateurs compatibles. Si l'API que vous interrogé est compatibles avec **CORS**, vous pourrez accéder à l'API même si elle n'est pas sur le même domaine que votre application.
+[Cross-Origin Resource Sharing](http://www.w3.org/TR/cors/) (CORS) est une spécification du W3C permettant les requêtes **cross-domain** depuis les navigateurs compatibles. Si l'API que vous interrogez est compatibles avec **CORS**, vous pourrez accéder à l'API même si elle n'est pas sur le même domaine que votre application.
 
 CORS est compatible avec :
 
@@ -51,7 +51,7 @@ Access-Control-Max-Age: 86400
 Access-Control-Allow-Headers: Api-Key
 ```
 
-Pour plus d'information sur le fonctionnement de **CORS**, je vous laisse lire les articles [Making Cross-Domain Requests with CORS](https://www.eriwen.com/javascript/how-to-cors/) et [Démystifier CORS (Cross-Origin Resource Sharing)](http://blog.inovia-conseil.fr/?p=202) qui sont très complets.
+Pour plus d'informations sur le fonctionnement de **CORS**, je vous laisse lire les articles [Making Cross-Domain Requests with CORS](https://www.eriwen.com/javascript/how-to-cors/) et [Démystifier CORS (Cross-Origin Resource Sharing)](http://blog.inovia-conseil.fr/?p=202) qui sont très complets.
 
 ## Reverse Proxy
 
@@ -109,7 +109,7 @@ server {
 Je peux ainsi appeler l'API sur ```localhost:8181``` de façon transparente.
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
-    Attention, <code>Access-Control-Allow-Origin: '*'</code> permet les requête <em>cross-origin</em> depuis n'importe quel domaine, en dev cela permet de facilement mettre CORS en place mais dans un soucis de sécurité il faudrais être plus restrictif.
+    Attention, <code>Access-Control-Allow-Origin: '*'</code> permet les requêtes <em>cross-origin</em> depuis n'importe quel domaine, en dev cela permet de facilement mettre CORS en place mais dans un soucis de sécurité il faudrait être plus restrictif.
 </div>
 
 ## Bonus
