@@ -5,7 +5,7 @@ date:               "2016-10-26"
 publishdate:        "2016-10-26"
 draft:              false
 slug:               "acceder-api-cross-domain-depuis-javascript-avec-cors-reverse-proxy-nginx"
-description:        "Configurer un reverse proxy avec nginx et CORS pour permettre à une application Javascript d'accéder à une API sur un autre domaine en concernant la Same Origin Policy."
+description:        "Configurer un reverse proxy avec nginx et CORS pour permettre à une application Javascript d'accéder à une API sur un autre domaine en contournant la Same Origin Policy."
 
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/bridge.jpg"
