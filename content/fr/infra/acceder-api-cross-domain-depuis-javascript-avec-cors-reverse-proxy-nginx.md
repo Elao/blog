@@ -18,11 +18,11 @@ author_username:    "mcolin"
 
 ## Introduction
 
-Dans la continuité de la montée des applications full frontend, nous sommes de plus en plus amenés a appeler des API directement en Javascript depuis le client. J'ai récemment été confronté à un cas où l'API à intérogé n'était pas sur le même domaine que l'application. Sur un développement backend ce genre de cas ne pose aucun problème mais avec Javascript, pour des raisons de sécurité, les communications **cross-domain** sont bloquées par la [Same Origin Policy](https://developer.mozilla.org/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript).
+Dans la continuité de l'émergence des applications full frontend, nous sommes de plus en plus amenés a appeler des API directement en Javascript depuis le client. J'ai récemment été confronté à un cas où l'API à interroger n'était pas sur le même domaine que l'application. Sur un développement backend ce genre de cas ne pose aucun problème mais avec Javascript, pour des raisons de sécurité, les communications **cross-domain** sont bloquées par la [Same Origin Policy](https://developer.mozilla.org/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript).
 
 ## CORS
 
-[Cross-Origin Resource Sharing](http://www.w3.org/TR/cors/) (CORS) est une spécification du W3C permettant les requêtes **cross-domain** depuis les navigateurs compatibles. Si l'API que vous interrogez est compatibles avec **CORS**, vous pourrez accéder à l'API même si elle n'est pas sur le même domaine que votre application.
+[Cross-Origin Resource Sharing](http://www.w3.org/TR/cors/) (CORS) est une spécification du W3C permettant les requêtes **cross-domain** depuis les navigateurs compatibles. Si l'API que vous interrogez est compatible avec **CORS**, vous pourrez accéder à l'API même si elle n'est pas sur le même domaine que votre application.
 
 CORS est compatible avec :
 
@@ -32,9 +32,9 @@ CORS est compatible avec :
 - Safari 4+
 - Internet Explorer 8+
 
-Pour utilser **CORS** il faut envoyer au serveur des *headers* de contrôle d'accès qu'il inspectera pour approuver ou non la requête. Ces *headers* de contrôle d'accès décriront le context de la requête, sa méthode HTTP, son origine, ses headers custom, ...
+Pour utiliser **CORS** il faut envoyer au serveur des *headers* de contrôle d'accès qu'il inspectera pour approuver ou non la requête. Ces *headers* de contrôle d'accès décriront le contexte de la requête, sa méthode HTTP, son origine, ses headers custom, ...
 
-Selon le type de requête, ces headers sont envoyé automatiquement par le navigateur avec la requête ou dans une requête préliminaire (*preflight request*). La requête aboutira si le serveur répond avec des headers de contrôle d'accès compatibles.
+Selon le type de requête, ces headers sont envoyés automatiquement par le navigateur avec la requête ou dans une requête préliminaire (*preflight request*). La requête aboutira si le serveur répond avec des headers de contrôle d'accès compatibles.
 
 ```
 => OPTIONS https://api.com/foobar
@@ -57,7 +57,7 @@ Pour plus d'informations sur le fonctionnement de **CORS**, je vous laisse lire 
 
 Malheureusement l'API que je souhaitais utiliser n'était pas compatible CORS. Si c'est votre cas également, il faudra alors passer par un proxy.
 
-**Nginx** permet simplement de metter en place ce genre de *reverse proxy* grace à une configuration de ce type :
+**Nginx** permet simplement de mettre en place ce genre de *reverse proxy* grace à une configuration de ce type :
 
 ```
 server {
@@ -99,17 +99,17 @@ server {
         proxy_busy_buffers_size         64k;
 
         # Ajouter les headers de contrôle d'accès CORS
-        add_header    'Access-Control-Allow-Origin' '*';
-        add_header    'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
-        add_header    'Access-Control-Allow-Headers' 'Origin, X-Requested-With, Content-Type, Accept';
-        add_header    'Access-Control-Allow-Credentials' 'true'
+        add_header    'Access-Control-Allow-Origin' '*' always;
+        add_header    'Access-Control-Allow-Methods' 'GET, POST, OPTIONS' always;
+        add_header    'Access-Control-Allow-Headers' 'Origin, X-Requested-With, Content-Type, Accept' always;
+        add_header    'Access-Control-Allow-Credentials' 'true' always;
 }
 ```
 
 Je peux ainsi appeler l'API sur ```localhost:8181``` de façon transparente.
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
-    Attention, <code>Access-Control-Allow-Origin: '*'</code> permet les requêtes <em>cross-origin</em> depuis n'importe quel domaine, en dev cela permet de facilement mettre CORS en place mais dans un soucis de sécurité il faudrait être plus restrictif.
+    Attention, <code>Access-Control-Allow-Origin: '*'</code> autorise les requêtes <em>cross-origin</em> depuis n'importe quel domaine, en dev cela permet de facilement mettre CORS en place mais dans un soucis de sécurité il faudrait être plus restrictif.
 </div>
 
 ## Bonus
@@ -118,5 +118,5 @@ Vous pouvez encore améliorer votre proxy par exemple en ajoutant automatiquemen
 
 ## Conclusion
 
-Grâce a **nginx** vous pouvez donc créer un *reverse proxy* qui vous permettra d'accéder à une API directement depuis votre application front sur un domaine différent en contournant de façon sécurisé la **Same Origin Policy**.
+Grâce a **nginx** vous pouvez donc créer un *reverse proxy* qui vous permettra d'accéder à une API directement depuis votre application front sur un domaine différent en contournant de façon sécurisée la **Same Origin Policy**.
 
