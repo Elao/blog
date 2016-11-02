@@ -38,15 +38,15 @@ Très bonne conférence sur l'unicode qui démontre que les émojis c'est mignon
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">&quot;Utilisez utf8mb4 comme encoding MySQL si vous ne voulez pas vous faire hacker par une part de pizza&quot; via <a href="https://twitter.com/damienalexandre">@damienalexandre</a>  <a href="https://twitter.com/hashtag/forumphp?src=hash">#forumphp</a> 😅 <a href="https://t.co/GBlkfxeySP">pic.twitter.com/GBlkfxeySP</a></p>&mdash; Matthieu Moquet (@MattKetmo) <a href="https://twitter.com/MattKetmo/status/791657024031432706">27 octobre 2016</a></blockquote>
 
 - [MAKE is an actual task runner](https://speakerdeck.com/jubianchi/make-is-an-actual-task-runner) par Julien BIANCHI.
-On utilise déjà *Make* à Elao. Cette présentation nous en a montré davantage notamment concernant les tâches parallèles et l'execution de tâches que si un fichier est modifié.
+On utilise déjà *Make* à Elao. Cette présentation nous en a montré davantage notamment concernant les tâches parallèles et l'exécution de tâches que si un fichier est modifié.
 
 - [Boost up your code with Specifications](https://slides.pixelart.at/2016-10-28/forumphp/specifications/) par Patrik Karisch. Découplons notre code métier avec notamment le composant [Rulerz](https://github.com/K-Phoen/rulerz).
 
 - [Headers HTTP: Un bouclier sur votre application](https://speakerdeck.com/romain/headers-http-un-bouclier-sur-votre-application) de Romain Neutron
-ou comment protéger son site web avec les entêtes PHP assez méconnus mais absolument indispensables comme le *Content Security Policy (CSP)*.
+ou comment protéger son site web avec les entêtes PHP assez méconnues mais absolument indispensables comme le *Content Security Policy (CSP)*.
 
 - [Pattern ADR, PSR-7, actions framework-agnostic et autowiring avec Symfony](https://dunglas.fr/2016/10/slides-forum-php-create-symfony-apps-as-quickly-as-with-laravel-and-keep-your-code-framework-agnostic/) par Kévin Dunglas.
-Une présentation inspirante pour mieux gérer nos controlleurs Symfony. 
+Une présentation inspirante pour mieux gérer nos contrôleurs Symfony.
 
 - [Middlewares : Un vieux concept au coeur des nouvelles architectures](http://mnapoli.fr/presentations/forumphp-middlewares/#1) par Mathieu NAPOLI. Un middleware c'est quelque chose qui prend une `request` et qui retourne une `response`. On a retenu la leçon ! Conférence très pédagogique avec un speaker inspirant.
 
