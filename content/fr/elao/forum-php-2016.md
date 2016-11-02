@@ -45,11 +45,12 @@ On utilise déjà *Make* à Elao. Cette présentation nous en a montré davantag
 - [Headers HTTP: Un bouclier sur votre application](https://speakerdeck.com/romain/headers-http-un-bouclier-sur-votre-application) de Romain Neutron
 ou comment protéger son site web avec les entêtes PHP assez méconnus mais absolument indispensables comme le *Content Security Policy (CSP)*.
 
-- [Pattern ADR, PSR-7, actions framework-agnostic et autowiring avec Symfony](https://dunglas.fr/2016/10/slides-forum-php-create-symfony-apps-as-quickly-as-with-laravel-and-keep-your-code-framework-agnostic/) par Kévin Dunglas 
+- [Pattern ADR, PSR-7, actions framework-agnostic et autowiring avec Symfony](https://dunglas.fr/2016/10/slides-forum-php-create-symfony-apps-as-quickly-as-with-laravel-and-keep-your-code-framework-agnostic/) par Kévin Dunglas.
+Une présentation inspirante pour mieux gérer nos controlleurs Symfony. 
 
 - [Middlewares : Un vieux concept au coeur des nouvelles architectures](http://mnapoli.fr/presentations/forumphp-middlewares/#1) par Mathieu NAPOLI @mnapoli. Un middleware c'est quelque chose qui prend une `request` et qui retourne une `response`. On a retenu la leçon !
 
-- [Ecrire du code PHP "framework-agnostic": aujourd'hui et demain](https://thecodingmachine.github.io/forumphp2016talk/) par David Négrier.
+- [Ecrire du code PHP "framework-agnostic": aujourd'hui et demain](https://thecodingmachine.github.io/forumphp2016talk/) par David Négrier. L'un des sujets les plus pointus de ce Forum PHP, non moins intéressant.
 
 - Sylius eCommerce Framework par Paweł Jędrzejewski ou comment Sylius peut être utilisé tout ou en partie grâce aux composants.
 Les tests fonctionnels de Sylius sont orientés métiers : cela nous donne de bonnes idées pour gérer nos propres tests Behat.
