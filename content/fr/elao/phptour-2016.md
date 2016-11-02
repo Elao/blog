@@ -5,7 +5,7 @@ date:               "2016-05-27"
 publishdate:        "2016-05-27"
 draft:              false
 slug:               "phptour-2016"
-description:        "Les 23 et 23 mai se déroulait à Clermont-Ferrand le PHP Tour 2016. Pour l'occasion l'Afup et Clermont'ech ont à nouveau réuni la communauté open source PHP."
+description:        "Les 23 et 24 mai se déroulait à Clermont-Ferrand le PHP Tour 2016. Pour l'occasion l'Afup et Clermont'ech ont à nouveau réuni la communauté open source PHP."
 
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/phptour-thumbnail.jpg"
