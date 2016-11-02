@@ -15,7 +15,7 @@ author_username:    "elao"
 co_authors:         ["tjarrand", "bleveque", "lhoizey", "rchalas", "bviguier", "mcolin", "rhanna", "xgorse", "ndievart"]
 ---
 
-Le Forum PHP 2016 de l’AFUP s'est une nouvelle fois déroulé au Beffroi de Montrouge. [Le programme](http://event.afup.org/forum-php-2016/programme/) s'annonçait très alléchant et [nous n'avons pas été déçu](https://joind.in/event/forum-php-2016/schedule/list).
+Le Forum PHP 2016 de l’[AFUP](http://afup.org) s'est une nouvelle fois déroulé au Beffroi de Montrouge. [Le programme](http://event.afup.org/forum-php-2016/programme/) s'annonçait très alléchant et [nous n'avons pas été déçu](https://joind.in/event/forum-php-2016/schedule/list).
 
 ## Nous avons aimé les retours d'expérience
 
@@ -52,7 +52,7 @@ Une présentation inspirante pour mieux gérer nos controlleurs Symfony.
 
 - [Ecrire du code PHP "framework-agnostic": aujourd'hui et demain](https://thecodingmachine.github.io/forumphp2016talk/) par David Négrier. L'un des sujets les plus pointus de ce Forum PHP, non moins intéressant.
 
-- Sylius eCommerce Framework par Paweł Jędrzejewski ou comment Sylius peut être utilisé tout ou en partie grâce aux composants.
+- [Sylius eCommerce Framework](http://sylius.org/) par Paweł Jędrzejewski ou comment Sylius peut être utilisé tout ou en partie grâce aux composants.
 Les tests fonctionnels de Sylius sont orientés métiers : cela nous donne de bonnes idées pour gérer nos propres tests Behat.
 
 - Independence day par Frederic Bouchery. Composer et la Gestion sémantique de version sont indispensables aujourd'hui mais attention à trop de dépendance, l'effet "leftpad" bien connu dans la communauté Javascript.
