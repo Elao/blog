@@ -7,8 +7,8 @@ draft:              true
 slug:               "forum-php-2016"
 description:        "Nous étions au Forum PHP 2016 de l'AFUP"
 language:           "fr"
-thumbnail:          ""
-header_img:         ""
+thumbnail:          "/images/posts/thumbnails/forumphp2016-thumb.jpg"
+header_img:         "/images/posts/headers/phptour-2016.jpg"
 tags:               ["Développement", "Web", "afup", "Conférence", "ForumPHP"]
 categories:         ["conference"]
 author_username:    "elao"
