@@ -55,7 +55,7 @@ Une présentation inspirante pour mieux gérer nos controlleurs Symfony.
 - [Sylius eCommerce Framework](http://sylius.org/) par Paweł Jędrzejewski ou comment Sylius peut être utilisé tout ou en partie grâce aux composants.
 Les tests fonctionnels de Sylius sont orientés métiers : cela nous donne de bonnes idées pour gérer nos propres tests Behat.
 
-- Independence day par Frederic Bouchery. Composer et la Gestion sémantique de version sont indispensables aujourd'hui mais attention à trop de dépendance, l'effet "leftpad" bien connu dans la communauté Javascript.
+- Independence day par Frederic Bouchery. Composer et la Gestion sémantique de version sont indispensables aujourd'hui mais attention à trop de dépendances qui peut générer une catastrophe comme celle avec "leftpad" bien connu dans la communauté Javascript.
 
 - Et puis mention spéciale pour - malheureusement - la seule conférence présentée par une femme : "Peut-on s’affranchir de SonataAdminBundle ?" par Suzanne Favot.
 
