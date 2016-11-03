@@ -26,24 +26,24 @@ Fort heureusement, il est possible de changer les délimiteurs dans les deux mot
 
 Vous pouvez changer les délimiteurs sur une instance de Vue :
 
-{{<highlight js>}}
+```
 new Vue({
   delimiters: ['${', '}']
 })
-{{</highlight >}}
+```
 
 ou globalement pour toutes les instances de Vue :
 
-{{<highlight js>}}
+```
 Vue.config.delimiters = ['${', '}'];
-{{</highlight >}}
+```
 
 Vous pourrez ainsi utiliser conjointement les deux moteurs de templates :
 
-{{<highlight twig>}}
+```
 <h1>{{ variable_twig }}</h1>
 <p>${ variable_vue }<p>
-{{</highlight >}}
+```
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
     Attention néanmoins, le changement de délimiteurs de façon globale peut vous couper des composants tiers que vous pourriez installer et qui embarqueraient leur template avec les anciens délimiteurs.
@@ -51,19 +51,19 @@ Vous pourrez ainsi utiliser conjointement les deux moteurs de templates :
 
 Si vous decidez de ne pas changer les délimiteurs, vous pouvez utiliser le tag ```{% verbatim %}``` afin d'indiquer à Twig de ne pas interpréter votre template vue :
 
-{{<highlight twig>}}
+```
 <h1>{{ variable_twig }}</h1>
 {% verbatim %}
     <p>{{ variable_vue }}<p>
 {% endverbatim %}
-{{</highlight>}}
+```
 
 Une troisième solution est de contenir le template **Vue.js** dans une chaine de caractère Twig. Personnellement j'essaie d'éviter cette solution, mais elle peut dépanner très occasionnellement.
 
-{{<highlight twig>}}
+```
 <h1>{{ variable_twig }}</h1>
 <p>{{ '{{ variable_vue }}' }}<p>
-{{</highlight>}}
+```
 
 ## Template
 
@@ -71,18 +71,18 @@ Il y a plusieurs façons de déclarer les templates dans **Vue.js**. Concernant 
 
 Par exemple si j'ai l'application suivante :
 
-{{<highlight js>}}
+```
 new Vue({
     el: '#app',
     data: {
         greeting: "Hello world"
     }
 });
-{{</highlight>}}
+```
 
 Dans mon templates Twig j'aurais :
 
-{{<highlight twig>}}
+```
 {% extends '::base.html.twig' %}
 
 {% block content %}
@@ -92,7 +92,7 @@ Dans mon templates Twig j'aurais :
     </div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 {% endblock %}
-{{</highlight>}}
+```
 
 Dans le cas d'un composant, vous avez le choix de déclarer votre template dans un fichier ```.vue``` (Single File Component), dans une balise ```<script><script>``` ou inline.
 
@@ -100,7 +100,7 @@ Dans le cas d'un composant, vous avez le choix de déclarer votre template dans 
 
 Si vous créez un Single File Component, votre composant et son template seront completement décorrélés de Symfony et Twig. Vous serez en outre obligé d'utiliser un plugin pour importer les fichiers avec **Browserify** ou **Webpack**.
 
-{{<highlight html>}}
+```
 <template>
     <h2>${ greeting }</h2>
 </template>
@@ -114,7 +114,7 @@ Si vous créez un Single File Component, votre composant et son template seront 
         }
     };
 </script>
-{{</highlight>}}
+```
 
 Néanmoins vous aurez l'avantage d'avoir un composant complètement autonome et réutilisable facilement.
 
@@ -122,15 +122,15 @@ Néanmoins vous aurez l'avantage d'avoir un composant complètement autonome et 
 
 La solution que j'utilise le plus souvent consiste à placer le template dans une balise script qui sera référencée dans le composant via son id.
 
-{{<highlight html>}}
+```
 <script id="my-component" type="x-template">
     <div>
         <h1>${ greeting }</h1>
     </div>
 </script>
-{{</highlight>}}
+```
 
-{{<highlight js>}}
+```
 Vue.component('my-component', {
     template: '#my-component',
     data: function () {
@@ -139,7 +139,7 @@ Vue.component('my-component', {
         };
     }
 });
-{{</highlight>}}
+```
 
 Cette solution peut permettre de placer votre template de composant dans un fichier Twig que vous incluerez sur toutes les pages qui l'utilisent et permet d'alléger votre template principal.
 
@@ -147,19 +147,19 @@ Cette solution peut permettre de placer votre template de composant dans un fich
 
 Cette solution consiste à déclarer le template au moment où vous utilisez le composant. Vous pourrez ainsi écrire tout le code côté HTML d'un coup et profiter du découpage en composants côté Javascript. Cet option peut être utile pour utiliser un template différent pour plusieurs utilisations d'un même composant. En contre partie le composant perd en réutilisabilité.
 
-{{<highlight html>}}
+```
 <div id="app">
     <my-component inline-template>
         <h1>${ greeting }</h1>
     </my-component>
-</script>
-{{</highlight>}}
+</div>
+```
 
 ### Template interne
 
 La dernière possibilité permet de déclarer le template directement dans le code Javascript du composant. Cette solution est la moins flexible et n'a à mon sens d'intéret que pour un composant très simple.
 
-{{<highlight js>}}
+```
 Vue.component('my-component', {
     template: '<h1>${ greeting }</h1>',
     data: function () {
@@ -168,7 +168,7 @@ Vue.component('my-component', {
         };
     }
 });
-{{</highlight>}}
+```
 
 ## Les props
 
@@ -182,21 +182,21 @@ Les **props** sont des propriétés qui peuvent être données en entrée du com
 
 Imaginons par exemple un composant qui liste des éléments qu'il récupère à partir de l'API de votre application. Vous pouvez utiliser les **props** pour passer la configuration depuis **Symfony**.
 
-{{<highlight js>}}
+```
 Vue.component('foobar-list', {
     props: {
         apiUrl: String,
         itemsPerPage: Number
     }
 });
-{{</highlight>}}
+```
 
-{{<highlight twig>}}
+```
 {% set itemsPerPage = 5 %}
 <foobar-list
     v-bind:apiUrl="'{{ path('api_foobar_list') }}'"
     v-bind:itemsPerPage="{{ itemsPerPage }}"></foobar-list>
-{{</highlight>}}
+```
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
     Attention, les <strong>props</strong> doivent être des valeurs interprétables par <strong>Javascript</strong> et compatibles avec les types renseignés au niveau du composant (ici <code>String</code> et <code>Number</code>), c'est pourquoi j'ai mis des guillements autour de mon url dans <code>v-bind:apiUrl</code>.
@@ -212,22 +212,22 @@ Grâce à la propiété ```v-model``` vous pouvez très facilement lier les ```d
 
 Vous pouvez donc simplement ajouter cet attribut sur vos champs pour lier votre formulaire **Symfony** à votre application **Vue.js**. Vous profitez ainsi de la puissance du composant Form de Symfony (génération, validation, theming, ...) et des fonctionnalités de **Vue.js**
 
-{{<highlight js>}}
+```
 new Vue({
     el: '#app',
     data: {
         search: null
     }
 });
-{{</highlight>}}
+```
 
-{{<highlight twig>}}
+```
 <div id="app">
     {{ form_start(form) }}
         {{ form_widget(form.search, { 'attr': { 'v-model': 'search' } }) }}
     {{ form_end(form) }}
 </div>
-{{</highlight>}}
+```
 
 ### Evénements
 
@@ -235,7 +235,7 @@ new Vue({
 
 Par exemple, si je souhaitais bloquer le ```submit``` d'un formulaire et appeler une function de callback à la place, j'utiliserais la directive ```v-on:submit.prevent``` :
 
-{{<highlight js>}}
+```
 new Vue({
     el: '#app',
     data: {
@@ -245,22 +245,22 @@ new Vue({
         performSearch: function () { // Recherche en ajax par exemple }
     }
 });
-{{</highlight>}}
+```
 
-{{<highlight twig>}}
+```
 <div id="app">
     {{ form_start(form, { 'attr': 'v-on:submit.prevent': 'performSearch' }) }}
         {{ form_widget(form.search, { 'attr': { 'v-model': 'search' } }) }}
     {{ form_end(form) }}
 </div>
-{{</highlight>}}
+```
 
 ### Watch
 
 Une autre fonctionnalité très pratique pour les formulaires est le [watch](http://vuejs.org/api/#watch) qui permet de surveiller une donnée **Vue.js** et d'appeler un callback à chaque modification. Si je reprends l'exemple si dessus, cela permettrait d'effectuer la recherche à chaque changement de valeur.
 
 
-{{<highlight js>}}
+```
 new Vue({
     el: '#app',
     data: {
@@ -275,7 +275,7 @@ new Vue({
         }
     }
 });
-{{</highlight>}}
+```
 
 Notez que dans les callbacks de watch, vous avez accès à la nouvelle et l'ancienne valeur.
 
@@ -289,7 +289,7 @@ Notez que dans les callbacks de watch, vous avez accès à la nouvelle et l'anci
 Pour aller encore plus loin dans l'intégration de **Vue.js** à votre application **Symfony**, vous aurez certainement besoin d'une API. Le plugin [vue-resource](https://github.com/vuejs/vue-resource) vous permettra facilement de faire vos requêtes AJAX.
 
 
-{{<highlight js>}}
+```
 new Vue({
     methods: {
         fetch: function () {
@@ -301,6 +301,6 @@ new Vue({
         }
     }
 })
-{{</highlight>}}
+```
 
 Le plugin offre toutes les fonctionnalités nécessaires à l'interrogation d'une API. Il supporte les promesses, les templates d'url, XMLHttpRequest et JSONP.
