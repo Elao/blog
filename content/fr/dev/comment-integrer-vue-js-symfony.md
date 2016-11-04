@@ -308,7 +308,7 @@ Le plugin offre toutes les fonctionnalités nécessaires à l'interrogation d'un
 #### MàJ du 4 novembre 2016
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
-    Attention, Evan You, le créateur de Vue.js, vient d'annoncer que <a href="https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4">vue-resource ne serait plus maintenu et recommandé par Vue.js</a>. Ce choix a été fait notamment car <code>vue-resource</code> fait doublon avec d'autres bibliothèques tierces. L'équipe préfère donc concentrer ses efforts sur les fonctionnalités propre à <strong>Vue.js</strong>. Vous pourrez toujours utiliser <code>vue-resource</code> dont le dépot sera transféré à <a href="https://github.com/pagekit">l'équipe de PageKit</a>, ses mainteneurs originaux.
+    Attention, Evan You, le créateur de Vue.js, vient d'annoncer que <a href="https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4">vue-resource ne serait plus maintenu et recommandé par Vue.js</a>. Ce choix a été fait notamment car <code>vue-resource</code> fait doublon avec d'autres bibliothèques tierces. L'équipe préfère donc concentrer ses efforts sur les fonctionnalités propres à <strong>Vue.js</strong>. Vous pourrez toujours utiliser <code>vue-resource</code> dont le dépot sera transféré à <a href="https://github.com/pagekit">l'équipe de PageKit</a>, ses mainteneurs originaux.
 
     Si vous le souhaitez vous pouvez également migrer vers une autre bibliothèque comme <a href="https://github.com/mzabriskie/axios">axios</a> qui supporte les promesses et l'isomorphisme. Il est même possible de conserver l'accès <code>this.$http</code> ainsi :
 
