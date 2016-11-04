@@ -50,7 +50,7 @@ Mais à Blend, on a aussi parlé PHP : [Olivier Mansour](https://twitter.com/oma
 
 ## Des gens qui nous inspirent
 
-[Marie-Cécile Paccard](https://twitter.com/mcpaccard) nous invite à réfléchir sur nous-mêmes : en tant que personnes, en tant que professionnels du web, en tant qu'entreprises. Qui sommes-nous ? Quels sont nos valeurs ? Qu'est-ce qui nous fait vibrer ? Et ça, c'est des questions qui nous parlent : initiative, équipe, passion, bien-être, innovation, confiance, partage, ... et vous, c'est quoi vos valeurs ? 🤔
+[Marie-Cécile Paccard](https://twitter.com/mcpaccard) nous invite à réfléchir sur nous-mêmes : en tant que personnes, en tant que professionnels du web, en tant qu'entreprises. Qui sommes-nous ? Quelles sont nos valeurs ? Qu'est-ce qui nous fait vibrer ? Et ça, c'est des questions qui nous parlent : initiative, équipe, passion, bien-être, innovation, confiance, partage, ... et vous, c'est quoi vos valeurs ? 🤔
 
 ![](/fr/images/posts/2016/blend/mcpaccard.jpg)
 
