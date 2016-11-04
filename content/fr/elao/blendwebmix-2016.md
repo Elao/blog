@@ -56,6 +56,12 @@ Mais à Blend, on a aussi parlé PHP : **[Olivier Mansour](https://twitter.com/o
 
 **[Laurent Victorino](https://twitter.com/on_code)** a une mission : ~~troller l'auditoire~~ nous donner envie de faire un jeu vidéo. Pourquoi ? D'abord parce qu'on peut. Avec nos compétences du web, aujourd'hui, on en est tous capable. Ensuite parce que c'est fun et c’est une très bonne manière de souder nos équipes. Et enfin parce que ça permet de se confronter à des problèmes nouveaux, y répondre avec des solutions inédites, pour nous rendre meilleur dans notre travail. On approuve et on confirme ! ([Curvytron](http://www.curvytron.com/), [Lazerdrive](https://lazerdrive.io/), tout ça … 😉 )
 
+**[Gaspard Koenig](https://twitter.com/Gaspard2012)** parle de nos datas et comment il envisage le contrôle et la monétisation de nos datas personnelles. Je donne mes datas pour profiter des services de Waze ou Facebook, par contre, si je veux les garder pour moi et profiter de leurs services alors je les rémunère. Ca parle de cryptoparties, de hackers berlinois, de micro-paiements, tout ça sur l'angle philo… Très inspirant. 
+
+## Celle qui nous fait peur
+
+**[Virginie CLève](https://twitter.com/largow)** nous parle de l'évolution du Web. Elle voit tous les sites de contenus, voire les e-commercants comme étant obligés de passer par des intermédiaires : Facebook, Medium, Google… Ca fait peur mais ça paraît être effectivement le mouvement de fond. Quand on voit les journaux comme le Washington Post, l'Express qui passent sur Google AMP (Accelerated Mobile Page), Facebook Instant Articles, etc… Ils ne deviennent que fournisseurs de contenu et abandonnent leur données aux GAFA. Elle fait le parallèle avec les corners de marque des grands magasins, comme une marketplace Amazon d'ailleurs. Seuls les services personnalisés seront disponibles sur les apps et sites web hors intermédiaires, ou plutôt sur des PWA (Progressive Web Apps). Dans certains pays, le Web, c'est déjà que Facebook.
+
 ## Bilan
 
 Le web du futur est performant, puissant et fun ! Et surtout, il est disponible dès maintenant.
