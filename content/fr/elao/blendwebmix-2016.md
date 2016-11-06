@@ -18,7 +18,7 @@ co_authors:         ["tjarrand", "ssolere", "lhoizey", "cmeiller"]
 
 ---
 
-Cette semaine chez élao, on est allé se ballader au Blend Web Mix.
+Cette semaine chez élao, on est allé se ballader au [Blend Web Mix](http://www.blendwebmix.com/).
 
 Et vous savez quoi ? Ça nous a gonflé à bloc !
 
@@ -68,3 +68,7 @@ Le web du futur est performant, puissant et fun ! Et surtout, il est disponible 
 Nos outils nous permettent d'aller où on veut : d'adresser des problèmes jusque là hors de portée, d'aborder des projets innovants avec des solutions inédites. On n'a jamais eu autant de potentiel !
 
 Après deux jours comme ça, on est motivé et prêt à repousser les limites. Et vous ? 😎
+
+Pour finir un grand merci et un grand coup de chapeau à toute l’équipe de bénévole pour l'organisation de cette 4e édition. De l’avis de beaucoup c’etait le meilleur, la barre est haute pour l’an prochain. On a hate d’y être. 
+
+En tout cas, nous on a déjà pris nos [billets](http://www.blendwebmix.com/billetterie-blend-2017.html)  :-)
