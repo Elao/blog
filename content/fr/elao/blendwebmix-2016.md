@@ -69,6 +69,6 @@ Nos outils nous permettent d'aller où on veut : d'adresser des problèmes jusqu
 
 Après deux jours comme ça, on est motivé et prêt à repousser les limites. Et vous ? 😎
 
-Pour finir un grand merci et un grand coup de chapeau à toute l’équipe de bénévole pour l'organisation de cette 4e édition. De l’avis de beaucoup c’était le meilleur, la barre est haute pour l’an prochain. On a hate d’y être. 
+Pour finir un grand merci et un grand coup de chapeau à toute l’équipe de bénévole pour l'organisation de cette 4e édition. De l’avis de beaucoup c’était le meilleur, la barre est haute pour l’an prochain. On a hâte d’y être. 
 
-En tout cas, nous on a déjà pris nos [billets](http://www.blendwebmix.com/billetterie-blend-2017.html)  :-)
+En tout cas, nous, on a déjà pris nos [billets](http://www.blendwebmix.com/billetterie-blend-2017.html)  :-)
