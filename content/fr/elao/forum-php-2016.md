@@ -8,11 +8,11 @@ slug:               "forum-php-2016"
 description:        "Nous étions au Forum PHP 2016 de l'AFUP"
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/forumphp2016-thumb.jpg"
-header_img:         "/images/posts/headers/phptour-2016.jpg"
+header_img:         "/images/posts/headers/forumphp2016.jpg"
 tags:               ["Développement", "Web", "afup", "Conférence", "ForumPHP"]
 categories:         ["conference"]
 author_username:    "elao"
-co_authors:         ["tjarrand", "bleveque", "lhoizey", "rchalas", "bviguier", "mcolin", "rhanna", "xgorse", "ndievart"]
+co_authors:         ["tjarrand", "bleveque", "lhoizey", "rchalas", "mcolin", "bviguier", "rhanna", "ndievart"]
 ---
 
 Le Forum PHP 2016 de l’[AFUP](http://afup.org) s'est une nouvelle fois déroulé au Beffroi de Montrouge. [Le programme](http://event.afup.org/forum-php-2016/programme/) s'annonçait très alléchant et [nous n'avons pas été déçus](https://joind.in/event/forum-php-2016/schedule/list).
