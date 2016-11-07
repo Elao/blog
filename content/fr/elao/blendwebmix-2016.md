@@ -1,8 +1,8 @@
 ---
 type:               "post"
 title:              "Blend Web Mix 2016 : un gros coup de boost"
-date:               "2016-11-04"
-publishdate:        "2016-11-04"
+date:               "2016-11-08"
+publishdate:        "2016-11-08"
 draft:              false
 slug:               "blendwebmix-2016"
 description:        ""
@@ -18,9 +18,9 @@ co_authors:         ["xgorse", "lhoizey", "tjarrand", "cmeiller", "ssolere"]
 
 ---
 
-Cette semaine chez élao, on est allé se ballader au [Blend Web Mix](http://www.blendwebmix.com/).
+Cette semaine chez élao, on est allé se balader au [Blend Web Mix](http://www.blendwebmix.com/).
 
-Et vous savez quoi ? Ça nous a gonflé à bloc !
+Et vous savez quoi ? Ça nous a gonflés à bloc !
 
 Blend a la pêche, Blend est chaud bouillant et a plein de choses à dire.
 
@@ -35,7 +35,7 @@ Notre démo préférée : ils sont venus de Nice et ils nous proposent de prendr
 
 **[François Zaninoto](https://twitter.com/francoisz)** a fait quelques mises au point sur la blockchain : au-delà d'un travail de vulgarisation très agréable à suivre, [Marmelab](http://marmelab.com) a mis la main à la pâte et testé pour nous la blockchain en pratique ! Du concret, on apprécie. 👏  Résultat ? La blockchain supprime l'intermédiaire de confiance, oui, mais ce n'est pas la panacée pour autant. Très complexe, lente à l'échelle du web, la technologie n'est peut-être pas encore prête pour la révolution qu'on nous promet. Néanmoins elle offre des perspectives pertinentes dans des domaines précis où l'on a besoin de retrouver cette confiance ... vous avez dit politique ? ;)
 
-**[Antoine Contal](https://twitter.com/antoine_contal)**, de chez Google, nous arme pour affronter le grand ennemi du web mobile : les apps native. Pas question de les détrôner mais plutôt de les challenger : se mettre au niveau du mieux possible pour proposer une expérience optimale à l'utilisateur.
+**[Antoine Contal](https://twitter.com/antoine_contal)**, de chez Google, nous arme pour affronter le grand ennemi du web mobile : les apps natives. Pas question de les détrôner mais plutôt de les challenger : se mettre au niveau du mieux possible pour proposer une expérience optimale à l'utilisateur.
 L'objectif en 4 points : être performant, fonctionner offline, être accessible depuis la homescreen et pouvoir notifier l'utilisateur. Tout ça est possible dès aujourd'hui, c'est ça une "progressive web app" ! 💡
 
 ## Des gens qui nous rassurent
@@ -44,7 +44,7 @@ Le "cool kid" du moment, c'est bien sûr javascript en version "ES6" ou "ES2015"
 
 ![](/fr/images/posts/2016/blend/ES2016.jpg)
 
-Mais à Blend, on a aussi parlé PHP : **[Olivier Mansour](https://twitter.com/omansour)** fait le point sur l'éco-système PHP en 2016 et le bilan est positif ! PHP a aujourd'hui atteint une vraie maturité et une légitimité. Simple, productif, performant et solide il a rattrapé son retard face à des "concurrents" historiques comme Java et mérite d'être pris au sérieux. On dit oui ! 👍
+Mais à Blend, on a aussi parlé PHP : **[Olivier Mansour](https://twitter.com/omansour)** fait le point sur l'éco-système PHP en 2016 et le bilan est positif ! PHP a aujourd'hui atteint une vraie maturité et une légitimité. Simple, productif, performant et solide, il a rattrapé son retard face à des "concurrents" historiques comme Java et mérite d'être pris au sérieux. On dit oui ! 👍
 
 ## Des gens qui nous secouent
 
@@ -58,9 +58,9 @@ Mais à Blend, on a aussi parlé PHP : **[Olivier Mansour](https://twitter.com/o
 
 ![](/fr/images/posts/2016/blend/mcpaccard.jpg)
 
-**[Laurent Victorino](https://twitter.com/on_code)** a une mission : ~~troller l'auditoire~~ nous donner envie de faire un jeu vidéo. Pourquoi ? D'abord parce qu'on peut. Avec nos compétences du web, aujourd'hui, on en est tous capable. Ensuite parce que c'est fun et c’est une très bonne manière de souder nos équipes. Et enfin parce que ça permet de se confronter à des problèmes nouveaux, y répondre avec des solutions inédites, pour nous rendre meilleur dans notre travail. On approuve et on confirme ! ([Curvytron](http://www.curvytron.com/), [Lazerdrive](https://lazerdrive.io/), tout ça … 😉 )
+**[Laurent Victorino](https://twitter.com/on_code)** a une mission : ~~troller l'auditoire~~ nous donner envie de faire un jeu vidéo. Pourquoi ? D'abord parce qu'on peut. Avec nos compétences du web, aujourd'hui, on en est tous capable. Ensuite parce que c'est fun et c’est une très bonne manière de souder nos équipes. Et enfin parce que ça permet de se confronter à des problèmes nouveaux, y répondre avec des solutions inédites, pour nous rendre meilleurs dans notre travail. On approuve et on confirme ! ([Curvytron](http://www.curvytron.com/), [Lazerdrive](https://lazerdrive.io/), tout ça … 😉 )
 
-**[Gaspard Koenig](https://twitter.com/Gaspard2012)** envisage le contrôle et la monétisation de nos données personnelles : soit je "paye" les services de Waze ou Facebook en fournissant mes données personnelles, soit je choisi de les garder pour moi et je les rémunère à la place. Ça parle de cryptoparties, de hackers berlinois, de micro-paiements, tout ça sur l'angle philo ... 👌
+**[Gaspard Koenig](https://twitter.com/Gaspard2012)** envisage le contrôle et la monétisation de nos données personnelles : soit je "paye" les services de Waze ou Facebook en fournissant mes données personnelles, soit je choisis de les garder pour moi et je les rémunère à la place. Ça parle de cryptoparties, de hackers berlinois, de micro-paiements, tout ça sur l'angle philo ... 👌
 
 ## Bilan
 
