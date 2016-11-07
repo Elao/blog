@@ -3,7 +3,7 @@ type:               "post"
 title:              "Retour sur le Forum PHP 2016"
 date:               "2016-11-07"
 publishdate:        "2016-11-07"
-draft:              true
+draft:              false
 slug:               "forum-php-2016"
 description:        "Nous étions au Forum PHP 2016 de l'AFUP"
 language:           "fr"
