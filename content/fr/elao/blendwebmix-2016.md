@@ -3,14 +3,14 @@ type:               "post"
 title:              "Blend Web Mix 2016 : un gros coup de boost"
 date:               "2016-11-04"
 publishdate:        "2016-11-04"
-draft:              true
+draft:              false
 slug:               "blendwebmix-2016"
 description:        ""
 
 language:           "fr"
 thumbnail:          "/images/posts/thumbnails/blend2016.jpg"
 header_img:         "/images/posts/headers/blend2016.jpg"
-tags:               ["Web", "conférence", "blend", "lyon", "Développement", "Desgin", "Business"]
+tags:               ["Web", "conférence", "blend", "lyon", "Développement", "Design", "Business"]
 categories:         ["Actualité", "Web", "conference"]
 
 author_username:    "elao"
@@ -33,16 +33,16 @@ Notre démo préférée : ils sont venus de Nice et ils nous proposent de prendr
 <blockquote class="twitter-video" data-lang="fr"><p lang="fr" dir="ltr">À <a href="https://twitter.com/hashtag/BlendWebMix?src=hash">#BlendWebMix</a> on pilote un robot avec une manette de XBox et des technos web : WebRTC, WebSocket. J&#39;adore 😍🎮🤖 <a href="https://t.co/3D9xmFllnU">pic.twitter.com/3D9xmFllnU</a></p>&mdash; Thomas Jarrand (@Tom32i) <a href="https://twitter.com/Tom32i/status/794130889991135232">3 novembre 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-**[François Zaninoto](https://twitter.com/francoisz)** a fait quelques mises au point sur la blockchain : au delà d'un travail de vulgarisation très agréable à suivre, [Marmelab](http://marmelab.com) a mis la main à la pâte et testé pour nous la blockchain en pratique ! Du concret, on apprécie. 👏  Résultat ? La blockchain supprime l'intermédiaire de confiance, oui, mais ce n'est pas la panacée pour autant. Très complexe, lente à l'échelle du web, la technologie n'est peut-être pas encore prête pour la révolution qu'on nous promet. Néanmoins elle offre des perspectives pertinentes dans des domaines précis où l'on a besoin de retrouver cette confiance ... vous avez dit politique ? ;)
+**[François Zaninoto](https://twitter.com/francoisz)** a fait quelques mises au point sur la blockchain : au-delà d'un travail de vulgarisation très agréable à suivre, [Marmelab](http://marmelab.com) a mis la main à la pâte et testé pour nous la blockchain en pratique ! Du concret, on apprécie. 👏  Résultat ? La blockchain supprime l'intermédiaire de confiance, oui, mais ce n'est pas la panacée pour autant. Très complexe, lente à l'échelle du web, la technologie n'est peut-être pas encore prête pour la révolution qu'on nous promet. Néanmoins elle offre des perspectives pertinentes dans des domaines précis où l'on a besoin de retrouver cette confiance ... vous avez dit politique ? ;)
 
-**[Antoine Contal](https://twitter.com/antoine_contal)**, de chez Google, nous arme pour affronter le grand ennemi du web mobile: les apps native. Pas question de les détrôner mais plutôt de les challenger : se mettre au niveau du mieux possible pour proposer une expérience optimale à l'utilisateur.
+**[Antoine Contal](https://twitter.com/antoine_contal)**, de chez Google, nous arme pour affronter le grand ennemi du web mobile : les apps native. Pas question de les détrôner mais plutôt de les challenger : se mettre au niveau du mieux possible pour proposer une expérience optimale à l'utilisateur.
 L'objectif en 4 points : être performant, fonctionner offline, être accessible depuis la homescreen et pouvoir notifier l'utilisateur. Tout ça est possible dès aujourd'hui, c'est ça une "progressive web app" ! 💡
 
-**[Laurent Hausermann](https://twitter.com/lhausermann)** nous montre comment il est possible de lister tout les devices connectés sur le web grâce à [Shodan](https://www.shodan.io) et de savoir en un clic s'ils sont convenablement protégés. PC familial, caisse d'un restaurant, frigo connecté ou encore module de gestion des valves dans une centrale hydraulique 😰  : tout ça est accessible librement sur internet ! Ça fait peur hein ? _IoT_ et sécurité : y'a du boulot ...
+**[Laurent Hausermann](https://twitter.com/lhausermann)** nous montre comment il est possible de lister tous les devices connectés sur le web grâce à [Shodan](https://www.shodan.io) et de savoir en un clic s'ils sont convenablement protégés. PC familial, caisse d'un restaurant, frigo connecté ou encore module de gestion des valves dans une centrale hydraulique 😰  : tout ça est accessible librement sur internet ! Ça fait peur hein ? _IoT_ et sécurité : y'a du boulot ...
 
 ## Les outils dont on dispose
 
-Le "cool kid" du moment, c'est bien sur javascript en version "ES6" ou "ES2015", "ES2016", "ES2017"... et **[Christophe Porteneuve](https://twitter.com/porteneuve)** nous prouve que c'est **très bien supporté nativement** et que c'est prêt pour la prod grâce à Babel. _Protip_ : pour de meilleure perf au runtime, ne transpilez que les presets nécessaires !
+Le "cool kid" du moment, c'est bien sûr javascript en version "ES6" ou "ES2015", "ES2016", "ES2017"... et **[Christophe Porteneuve](https://twitter.com/porteneuve)** nous prouve que c'est **très bien supporté nativement** et que c'est prêt pour la prod grâce à Babel. _Protip_ : pour de meilleures perfs au runtime, ne transpilez que les presets nécessaires !
 
 ![](/fr/images/posts/2016/blend/ES2016.jpg)
 
@@ -59,6 +59,6 @@ Mais à Blend, on a aussi parlé PHP : **[Olivier Mansour](https://twitter.com/o
 ## Bilan
 
 Le web du futur est performant, puissant et fun ! Et surtout, il est disponible dès maintenant.
-Nos outils nous permettent d'aller où on veut : d'adresser des problèmes jusque là hors de portée, d'aborder des projets innovants avec des solutions inédites. On a jamais eu autant de potentiel !
+Nos outils nous permettent d'aller où on veut : d'adresser des problèmes jusque là hors de portée, d'aborder des projets innovants avec des solutions inédites. On n'a jamais eu autant de potentiel !
 
 Après deux jours comme ça, on est motivé et prêt à repousser les limites. Et vous ? 😎
