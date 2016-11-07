@@ -14,7 +14,7 @@ tags:               ["Web", "conférence", "blend", "lyon", "Développement", "D
 categories:         ["Actualité", "Web", "conference"]
 
 author_username:    "elao"
-co_authors:         ["tjarrand", "lhoizey", "cmeiller"]
+co_authors:         ["tjarrand", "ssolere", "lhoizey", "cmeiller"]
 
 ---
 
