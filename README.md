@@ -113,6 +113,11 @@ social:
   google_plus_id:  "~"
 ```
 
+## You have an old version of the docker image
+If you have cloned the repository a long time ago, your docker image could be an old one.
+To have the last version of the image, you can execute the following command:
+`docker pull manala/hugo-debian`
+
 ## Publish an article
 Your post is good to go ? Create a PR and ask for review to a team member once it's done you're ready going to production.
 
