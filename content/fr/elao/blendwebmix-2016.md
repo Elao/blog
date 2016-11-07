@@ -14,11 +14,11 @@ tags:               ["Web", "conférence", "blend", "lyon", "Développement", "D
 categories:         ["Actualité", "Web", "conference"]
 
 author_username:    "elao"
-co_authors:         ["tjarrand", "ssolere", "lhoizey", "cmeiller"]
+co_authors:         ["xgorse", "lhoizey", "tjarrand", "cmeiller", "ssolere"]
 
 ---
 
-Cette semaine chez élao, on est allé se ballader au Blend Web Mix.
+Cette semaine chez élao, on est allé se ballader au [Blend Web Mix](http://www.blendwebmix.com/).
 
 Et vous savez quoi ? Ça nous a gonflé à bloc !
 
@@ -65,6 +65,6 @@ Mais à Blend, on a aussi parlé PHP : **[Olivier Mansour](https://twitter.com/o
 ## Bilan
 
 Le web du futur est performant, puissant et fun ! Et surtout, il est disponible dès maintenant.
-Nos outils nous permettent d'aller où on veut : d'adresser des problèmes jusque là hors de portée, d'aborder des projets innovants avec des solutions inédites. On n'a jamais eu autant de potentiel !
+Nos outils nous permettent d'aller où on veut : d'adresser des problèmes jusque là hors de portée, de relever les nouveaux défis qui apparaissent, d'aborder des projets innovants avec des solutions inédites. On n'a jamais eu autant de potentiel !
 
-Après deux jours comme ça, on est motivé et prêt à repousser les limites. Et vous ? 😎
+On remercie toute l'équipe et les bénévoles : après deux jours comme ça, on est motivé et prêt à repousser les limites ! Et vous ? 😎
