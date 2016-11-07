@@ -38,15 +38,19 @@ Notre démo préférée : ils sont venus de Nice et ils nous proposent de prendr
 **[Antoine Contal](https://twitter.com/antoine_contal)**, de chez Google, nous arme pour affronter le grand ennemi du web mobile : les apps native. Pas question de les détrôner mais plutôt de les challenger : se mettre au niveau du mieux possible pour proposer une expérience optimale à l'utilisateur.
 L'objectif en 4 points : être performant, fonctionner offline, être accessible depuis la homescreen et pouvoir notifier l'utilisateur. Tout ça est possible dès aujourd'hui, c'est ça une "progressive web app" ! 💡
 
-**[Laurent Hausermann](https://twitter.com/lhausermann)** nous montre comment il est possible de lister tous les devices connectés sur le web grâce à [Shodan](https://www.shodan.io) et de savoir en un clic s'ils sont convenablement protégés. PC familial, caisse d'un restaurant, frigo connecté ou encore module de gestion des valves dans une centrale hydraulique 😰  : tout ça est accessible librement sur internet ! Ça fait peur hein ? _IoT_ et sécurité : y'a du boulot ...
-
-## Les outils dont on dispose
+## Des gens qui nous rassurent
 
 Le "cool kid" du moment, c'est bien sûr javascript en version "ES6" ou "ES2015", "ES2016", "ES2017"... et **[Christophe Porteneuve](https://twitter.com/porteneuve)** nous prouve que c'est **très bien supporté nativement** et que c'est prêt pour la prod grâce à Babel. _Protip_ : pour de meilleures perfs au runtime, ne transpilez que les presets nécessaires !
 
 ![](/fr/images/posts/2016/blend/ES2016.jpg)
 
 Mais à Blend, on a aussi parlé PHP : **[Olivier Mansour](https://twitter.com/omansour)** fait le point sur l'éco-système PHP en 2016 et le bilan est positif ! PHP a aujourd'hui atteint une vraie maturité et une légitimité. Simple, productif, performant et solide il a rattrapé son retard face à des "concurrents" historiques comme Java et mérite d'être pris au sérieux. On dit oui ! 👍
+
+## Des gens qui nous secouent
+
+**[Laurent Hausermann](https://twitter.com/lhausermann)** nous montre comment il est possible de lister tous les devices connectés sur le web grâce à [Shodan](https://www.shodan.io) et de savoir en un clic s'ils sont convenablement protégés. PC familial, caisse d'un restaurant, frigo connecté ou encore module de gestion des valves dans une centrale hydraulique 😰  : tout ça est accessible librement sur internet ! Ça fait peur hein ? _IoT_ et sécurité : y'a du boulot ...
+
+**[Virginie Clève](https://twitter.com/largow)** nous parle de l'évolution du Web. Elle voit tous les sites de contenus obligés de passer par des intermédiaires : Facebook, Medium, Google... Ça fait peur ? Et pourtant ça paraît être effectivement le mouvement de fond. Les journaux comme le Washington Post, l'Express passent sur Google AMP (Accelerated Mobile Page), Facebook Instant Articles, etc. Ils deviennent fournisseurs de contenu uniquement et abandonnent leur données aux GAFA. Seuls les services personnalisés seront disponibles sur les apps et sites web hors intermédiaires, ou plutôt sur des PWA (Progressive Web Apps). Dans certains pays déjà, le Web, c'est Facebook !
 
 ## Des gens qui nous inspirent
 
@@ -56,11 +60,7 @@ Mais à Blend, on a aussi parlé PHP : **[Olivier Mansour](https://twitter.com/o
 
 **[Laurent Victorino](https://twitter.com/on_code)** a une mission : ~~troller l'auditoire~~ nous donner envie de faire un jeu vidéo. Pourquoi ? D'abord parce qu'on peut. Avec nos compétences du web, aujourd'hui, on en est tous capable. Ensuite parce que c'est fun et c’est une très bonne manière de souder nos équipes. Et enfin parce que ça permet de se confronter à des problèmes nouveaux, y répondre avec des solutions inédites, pour nous rendre meilleur dans notre travail. On approuve et on confirme ! ([Curvytron](http://www.curvytron.com/), [Lazerdrive](https://lazerdrive.io/), tout ça … 😉 )
 
-**[Gaspard Koenig](https://twitter.com/Gaspard2012)** parle de nos datas et comment il envisage le contrôle et la monétisation de nos datas personnelles. Je donne mes datas pour profiter des services de Waze ou Facebook, par contre, si je veux les garder pour moi et profiter de leurs services alors je les rémunère. Ca parle de cryptoparties, de hackers berlinois, de micro-paiements, tout ça sur l'angle philo… Très inspirant. 
-
-## Celle qui nous fait peur
-
-**[Virginie CLève](https://twitter.com/largow)** nous parle de l'évolution du Web. Elle voit tous les sites de contenus, voire les e-commercants comme étant obligés de passer par des intermédiaires : Facebook, Medium, Google… Ca fait peur mais ça paraît être effectivement le mouvement de fond. Quand on voit les journaux comme le Washington Post, l'Express qui passent sur Google AMP (Accelerated Mobile Page), Facebook Instant Articles, etc… Ils ne deviennent que fournisseurs de contenu et abandonnent leur données aux GAFA. Elle fait le parallèle avec les corners de marque des grands magasins, comme une marketplace Amazon d'ailleurs. Seuls les services personnalisés seront disponibles sur les apps et sites web hors intermédiaires, ou plutôt sur des PWA (Progressive Web Apps). Dans certains pays, le Web, c'est déjà que Facebook.
+**[Gaspard Koenig](https://twitter.com/Gaspard2012)** envisage le contrôle et la monétisation de nos données personnelles : soit je "paye" les services de Waze ou Facebook en fournissant mes données personnelles, soit je choisi de les garder pour moi et je les rémunère à la place. Ça parle de cryptoparties, de hackers berlinois, de micro-paiements, tout ça sur l'angle philo ... 👌
 
 ## Bilan
 
