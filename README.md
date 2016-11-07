@@ -113,6 +113,14 @@ social:
   google_plus_id:  "~"
 ```
 
+## Expose your current branch (for review)
+
+Launch a local serveur on port 8080
+
+    make expose
+
+The blog is now accessible by everyone in the open-space on [http://192.168.1.xx:8080/fr](http://192.168.1.xx:8080/fr) (where xx is your local IP address).
+
 ## Publish an article
 Your post is good to go ? Create a PR and ask for review to a team member once it's done you're ready going to production.
 
