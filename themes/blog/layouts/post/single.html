@@ -29,9 +29,9 @@
             <h4>{{ range .Params.tags }}<strong><a href="{{ partial "i18n.html" $context }}/tags/{{ . | urlize }}">{{ . }}</a></strong> {{ end }} - {{ .PublishDate.Format "02 Jan 2006" }}</h4>
             <h1>{{ .Title }}</h1>
             <p class="author">
-                <a href="#" class="author"><img src="{{ if $social.avatar }}{{ partial "i18n.html" . }}/images/{{ $social.avatar }}{{ else }}{{ partial "i18n.html" . }}/images/logo.svg{{ end }}" alt="{{ $author.display_name }}"></a>
+                <a href="//www.elao.com/fr/la-tribu" class="author"><img src="{{ if $social.avatar }}{{ partial "i18n.html" . }}/images/{{ $social.avatar }}{{ else }}{{ partial "i18n.html" . }}/images/logo.svg{{ end }}" alt="{{ $author.display_name }}"></a>
                 <br/>
-                <span>{{ ( index $.Site.Data.translations $.Site.Params.locale ).post_wrote_by }} <a href="#" class="strong">{{ $author.display_name }}</a></span>
+                <span>{{ ( index $.Site.Data.translations $.Site.Params.locale ).post_wrote_by }} <a href="//www.elao.com/fr/la-tribu" class="strong">{{ $author.display_name }}</a></span>
             </p>
             <div class="intro">
                 {{ .Description }}
@@ -57,7 +57,7 @@
                         {{ partial "social-avatar.html" (dict "context" $context "social" $social "author" $author) }}
                         {{ end }}
                         <div class="job">
-                            <strong>{{ $author.display_name }}</strong><br/>
+                            <a href="//www.elao.com/fr/la-tribu"><strong>{{ $author.display_name }}</strong></a><br/>
                             {{ $author.job_title }}
                         </div>
                         <div class="links">
