@@ -25,7 +25,7 @@ taxonomies:
 menu:
   main:
       # INFRA
-      - Name:       "Infra"
+      - Name:       "Infra/Ops"
         Identifier: "infra"
         URL:        "/infra"
         Weight:     200

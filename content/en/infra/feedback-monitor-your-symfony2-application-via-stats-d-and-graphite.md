@@ -10,12 +10,12 @@ description:        "Feedback : Monitor your Symfony2 application via Stats.d an
 language:           "en"
 thumbnail:          "/images/posts/thumbnails/rocket.jpg"
 tags:               ["Carbon", "Graphite", "Monitoring", "Stats.d", "Symfony", "Webperf"]
-categories:         ["Dev", Symfony", "PHP"]
+categories:         ["Infra", "Monitoring", "PHP"]
 
 author_username:    "tbessoussa"
 ---
 
-Few times ago, I wrote two articles on how to monitor your Symfony2 application via Stats.d and Graphite (<a title="Install Stats.d / Graphite on a debian server in order to monitor a Symfony2 application (1/2)" href="/fr/blog/install-stats-d-graphite-on-a-debian-server-to-monitor-a-symfony2-application-12" target="_blank">part 1</a> / <a title="Monitor your Symfony2 application via Stats.d and Graphite (2/2)" href="/fr/blog/monitor-your-symfony2-application-via-stats-d-and-graphite-22" target="_blank">part 2</a>).
+Few times ago, I wrote two articles on how to monitor your Symfony2 application via Stats.d and Graphite (<a title="Install Stats.d / Graphite on a debian server in order to monitor a Symfony2 application (1/2)" href="/en/infra/install-stats-d-graphite-on-a-debian-server-to-monitor-a-symfony2-application" target="_blank">part 1</a> / <a title="Monitor your Symfony2 application via Stats.d and Graphite (2/2)" href="/en/infra/monitor-your-symfony2-application-via-stats-d-and-graphite-2" target="_blank">part 2</a>).
 
 Although I specifically said that you should be running your graphite environment on another server, I choose not to follow my own advise  (« do what I say not what I do »).
 
@@ -31,6 +31,5 @@ Once I realized that my monitoring system was the problem (especially carbon), I
 **I won ~60%** on my server response time (both monitored by google analytics and newrelic).
 
 <div style="text-align:center;">
-
-{{< figure src="/images/posts/2013/response_time.png" title="Feedback : Monitor your Symfony2 application via Stats.d and Graphite" alt="response time Feedback : Monitor your Symfony2 application via Stats.d and Graphite" width="694" height="210">}}
+{{< figure src="/en/images/posts/2012/memory_usage.png" title="Feedback : Monitor your Symfony2 application via Stats.d and Graphite" alt="response time Feedback : Monitor your Symfony2 application via Stats.d and Graphite">}}
 </div>

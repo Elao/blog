@@ -24,6 +24,16 @@ taxonomies:
 
 menu:
   main:
+      # INFRA
+      - Name:       "Infra/Ops"
+        Identifier: "infra"
+        URL:        "/infra"
+        Weight:     200
+      - Name:       "Monitoring"
+        Identifier: "monitoring"
+        URL:        "/categories/monitoring"
+        Weight:     30
+        parent:     "infra"
       # DEV
       - Name:       "Dev"
         Identifier: "dev"
