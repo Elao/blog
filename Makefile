@@ -166,3 +166,7 @@ deploy_and_optimize@prod: build-and-optimize
 deploy@prod: build
 	echo "google-site-verification: google98e08ccbf4b44d9b.html" > public/google98e08ccbf4b44d9b.html
 	rsync -arzv --delete --exclude '*/images' public deploy@blog.elao.elao.local:/srv/app
+
+## Expose the site on local network
+expose: build
+	php -S 0.0.0.0:8080 -t public
