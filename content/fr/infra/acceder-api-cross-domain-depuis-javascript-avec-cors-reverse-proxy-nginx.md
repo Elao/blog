@@ -36,7 +36,7 @@ Pour utiliser **CORS** il faut envoyer au serveur des *headers* de contrôle d'a
 
 Selon le type de requête, ces headers sont envoyés automatiquement par le navigateur avec la requête ou dans une requête préliminaire (*preflight request*). La requête aboutira si le serveur répond avec des headers de contrôle d'accès compatibles.
 
-{{<highlight shell>}}
+```
 => OPTIONS https://api.com/foobar
 - HEADERS -
 Origin: http://application.com
@@ -49,7 +49,7 @@ Access-Control-Allow-Origin: http://application.com
 Access-Control-Allow-Methods: GET, POST, OPTIONS
 Access-Control-Max-Age: 86400
 Access-Control-Allow-Headers: Api-Key
-{{</highlight>}}
+```
 
 
 Pour plus d'informations sur le fonctionnement de **CORS**, je vous laisse lire les articles [Making Cross-Domain Requests with CORS](https://www.eriwen.com/javascript/how-to-cors/) et [Démystifier CORS (Cross-Origin Resource Sharing)](http://blog.inovia-conseil.fr/?p=202) qui sont très complets.
@@ -60,7 +60,7 @@ Malheureusement l'API que je souhaitais utiliser n'était pas compatible CORS. S
 
 **Nginx** permet simplement de mettre en place ce genre de *reverse proxy* grace à une configuration de ce type :
 
-{{<highlight nginx>}}
+```
 server {
     listen          80;
     server_name     application.com;
@@ -78,13 +78,13 @@ server {
         proxy_busy_buffers_size         64k;
     }
 }
-{{</highlight>}}
+```
 
 Ainsi, votre application pourra appeler votre API sur ```http://application.com/api``` sans problème de *cross-origin*.
 
 Si vous avez besoin d'exposer l'API sur un autre domaine ou sur un autre port que votre application, vous aurez  besoin de permettre le *cross-domain* grâce à **CORS**. Mon application tournant sur ```localhost:8080```, j'ai décidé de mettre mon proxy sur ```localhost:8181```.
 
-{{<highlight nginx>}}
+```
 server {
     listen          8181;
     server_name     localhost;
@@ -105,7 +105,7 @@ server {
         add_header    'Access-Control-Allow-Headers' 'Origin, X-Requested-With, Content-Type, Accept' always;
         add_header    'Access-Control-Allow-Credentials' 'true' always;
 }
-{{</highlight>}}
+```
 
 Je peux ainsi appeler l'API sur ```localhost:8181``` de façon transparente.
 

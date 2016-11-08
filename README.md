@@ -121,6 +121,11 @@ Launch a local serveur on port 8080
 
 The blog is now accessible by everyone in the open-space on [http://192.168.1.xx:8080/fr](http://192.168.1.xx:8080/fr) (where xx is your local IP address).
 
+## You have an old version of the docker image
+If you have cloned the repository a long time ago, your docker image could be an old one.
+To have the last version of the image, you can execute the following command:
+`docker pull manala/hugo-debian`
+
 ## Publish an article
 Your post is good to go ? Create a PR and ask for review to a team member once it's done you're ready going to production.
 
