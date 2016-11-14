@@ -16,7 +16,7 @@ categories:         ["Dev", "Vue.js", "Javascript", "Symfony"]
 author_username:    "mcolin"
 ---
 
-Dans mes précédents articles je vous présentais [pourquoi utiliser Vue.js dans vos projets](/fr/dev/pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets/) et [comment intégrer Vue.js à une application Symfony](/fr/dev/comment-integrer-vue-js-application-symfony/). Je vais maintenant vous présenter une autre facette du framework d'Evan You, la création d'application frontend grâce à l'outil [vue-cli](https://github.com/vuejs/vue-cli).
+Dans mes précédents articles je vous présentais [pourquoi utiliser Vue.js dans vos projets](/fr/dev/pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets/) et [comment intégrer Vue.js à une application Symfony](/fr/dev/comment-integrer-vue-js-application-symfony/). Je vais maintenant vous présenter une autre facette du framework d'Evan You, la création d'applications frontend grâce à l'outil [vue-cli](https://github.com/vuejs/vue-cli).
 
 ## vue-cli
 
@@ -28,7 +28,7 @@ L'installation se fait simplement grâce à ```npm``` :
 $ npm install -g vue-cli
 ```
 
-L'outil permet en premier lieu d'initier votre projet, grâce à la commande suivante : 
+L'outil permet en premier lieu d'initialiser votre projet, grâce à la commande suivante : 
 
 ```
 $ vue init <template-name> <project-name>
@@ -90,17 +90,17 @@ h1 {
 
 ## Template
 
-J'ai trouvé les templates par defaut assez complets, néanmoins si vous avez besoin de développer courament des applications avec une architecture ou des dépendances particulières, **vue-cli** vous permet de créer [vos propres templates](https://github.com/vuejs/vue-cli#custom-templates) afin de *scaffolder* vos applications rapidement. 
+J'ai trouvé les templates par defaut assez complets, néanmoins si vous avez besoin de développer couramment des applications avec une architecture ou des dépendances particulières, **vue-cli** vous permet de créer [vos propres templates](https://github.com/vuejs/vue-cli#custom-templates) afin de *scaffolder* vos applications rapidement. 
 
 Un template peut être chargé depuis un repo git ou depuis un chemin local. Vous pouvez forker un template existant ou en créer un de zéro.
 
 ## Centralized State Management
 
-Si vous développez une application relativement complexe et que vous partagez des données entre plusieurs composants, vous aurez certainement besoin d'un gestionnaire d'état. Si pour une application simple un [bus d'événement global](https://vuejs.org/v2/guide/components.html#Non-Parent-Child-Communication) peut suffire pour faire communiquer vos composants ensemble, pour une application plus complexe je vous conseille d'utiliser [VUEX](https://github.com/vuejs/vuex). **VUEX** est une bibliothèque de gestion d'états centralisé pour **Vue.js** vous permettant de créer des repository de données accessibles depuis tous vos composants.
+Si vous développez une application relativement complexe et que vous partagez des données entre plusieurs composants, vous aurez certainement besoin d'un gestionnaire d'état. Si pour une application simple un [bus d'événement global](https://vuejs.org/v2/guide/components.html#Non-Parent-Child-Communication) peut suffire pour faire communiquer vos composants ensemble, pour une application plus complexe je vous conseille d'utiliser [VUEX](https://github.com/vuejs/vuex). **VUEX** est une bibliothèque de gestion d'états centralisé pour **Vue.js** vous permettant de créer des répertoires de données accessibles depuis tous vos composants.
 
 ## Exemple
 
-L'équipe de **Vue.js** a récemment partagé les sources d'un [clone d'Hackernews](https://github.com/vuejs/vue-hackernews-2.0) realisé entièrement en Vue.js. Les sources sont largement commentées afin de vous permettre de comprendre le fonctionnement de Vue.js et de vous en inspirer pour développer vos applications.
+L'équipe de **Vue.js** a récemment partagé les sources d'un [clone d'Hackernews](https://github.com/vuejs/vue-hackernews-2.0) realisé entièrement en Vue.js. Les sources sont largement commentées afin de vous permettre de comprendre le fonctionnement du framework et de vous en inspirer pour développer vos applications.
 
 ## Dev tool
 
