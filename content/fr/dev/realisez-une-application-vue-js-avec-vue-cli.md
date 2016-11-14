@@ -96,7 +96,7 @@ Un template peut être chargé depuis un repo git ou depuis un chemin local. Vou
 
 ## Centralized State Management
 
-Si vous développez une application relativement complexe et que vous partagez des données entre plusieurs composants, vous aurez certainement besoin d'un gestionnaire d'état. Si pour une application simple un [bus d'événement global](https://vuejs.org/v2/guide/components.html#Non-Parent-Child-Communication) peut suffire pour faire communiquer vos composants ensemble, pour une application plus complexe je vous conseille d'utiliser [VUEX](https://github.com/vuejs/vuex). **VUEX** est une bibliothèque de gestion d'états centralisé pour **Vue.js** vous permettant de créer des répertoires de données accessibles depuis tous vos composants.
+Si vous développez une application relativement complexe et que vous partagez des données entre plusieurs composants, vous aurez certainement besoin d'un gestionnaire d'état. Si pour une application simple un [bus d'événement global](https://vuejs.org/v2/guide/components.html#Non-Parent-Child-Communication) peut suffire pour faire communiquer vos composants ensemble, pour une application plus complexe je vous conseille d'utiliser [VUEX](https://github.com/vuejs/vuex). **VUEX** est une bibliothèque de gestion d'états centralisé pour **Vue.js** vous permettant de créer des repositories de données accessibles depuis tous vos composants.
 
 ## Exemple
 
