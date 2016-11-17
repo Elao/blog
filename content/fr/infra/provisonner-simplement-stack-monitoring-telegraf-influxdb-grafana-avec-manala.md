@@ -20,6 +20,8 @@ author_username:    "mcolin"
 
 [Manala](http://www.manala.io/) est la boîte à outils pour [Ansible](https://www.ansible.com/) créer par [Elao](https://www.elao.com/fr/). Elle se compose d'une multitude de rôles **Ansible** pensés autour de la même phylosophie : une installation et une configuration simple d'un environnement serveur.
 
+Si vous n'êtes pas famillier avec **Ansible**, je vous encourage à [découvrir ce magnifique outil](http://docs.ansible.com/ansible/index.html).
+
 ## Pourquoi monitorer
 
 ???
@@ -137,16 +139,33 @@ Je vous encourage néanmoins à jeter un oeil à la configuration de ses deux r�
 
 ### InfluxDB
 
-Par defaut, l'interface web de d'**InfluxDB** est accessible sur le port ```8083```. Cette interface vous permettra de requêter sur vos métrique. Par exemple, sélectionnez votre base de données ```telegraf``` en haut à gauche et testez la requête ```SHOW MEASUREMENTS```. Vous devriez voir la liste des métriques que vous aviez configurer plus haut dans le role ```manala.telegraf```
+InfluxDB dispose d'une interface en ligne de commandes à la manière de ```mysql``` pour exécuter des requêtes. Si vous vous connectez en SSH à la machine que vous avez provisonnez, vous devriez pouvoir l'interroger. Vous pouvez par exemple lister les métriques de la base de données "telegraf".
 
-<figure>
-    <img src="/fr/images/posts/2016/monitoring-influxdb.jpg" alt="Interface web d'InfluxDB" />
-    <figcaption style="text-align:center;font-style:italic;">Interface web d'InfluxDB</figcaption>
-</figure>
+{{< highlight bash >}}
+$ influx -execute 'SHOW MEASUREMENTS' -database="telegraf"
+name: measurements
+name
+----
+cpu
+disk
+diskio
+kernel
+mem
+net
+processes
+swap
+system
+{{< /highlight >}}
+
+Vous devriez voir la liste des métriques que vous aviez configurées plus haut dans le role ```manala.telegraf```
+
+<div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
+    Je ne parle intentionnellement pas de l'interface web d'InfluxDB habituellement disponible sur le port 8083 car celle ci est <a  href="https://docs.influxdata.com/influxdb/v1.1/administration/differences/#deprecations">actuellement dépréciée et désactivé par defaut</a> (version 1.1) et disparaitra des versions suivantes.
+</div>
 
 ### Grafana
 
-Par defaut **Grafana** est accesible sur le port ```3000```. Vous accédez alors au "Home Dashboard". Avant toute chose il faut ajouter notre base de données InfluxDB comme source de données. Pour celà dans le menu, sélectionné *Data Sources* puis *Add data source*. Nommez votre source, sélectionner le type "InfluxDB", renseigner l'url ```http://localhost:8086``` et le nom de base de données ```telegraf```. Par default il n'y a pas d'identifiant ni de mot de passe sur la base de données. Cliquez sur *Save and test* et si tout va bien vous devriez obtenir le message *Data source is working*.
+Par defaut **Grafana** est accesible sur le port ```3000``` avec pour identifiant et mot de passe "admin" / "admin". Vous accédez alors au "Home Dashboard". Avant toute chose il faut ajouter notre base de données InfluxDB comme source de données. Pour celà dans le menu, sélectionné *Data Sources* puis *Add data source*. Nommez votre source, sélectionner le type "InfluxDB", renseigner l'url ```http://localhost:8086``` et le nom de base de données ```telegraf```. Par default il n'y a pas d'identifiant ni de mot de passe sur la base de données. Cliquez sur *Save and test* et si tout va bien vous devriez obtenir le message *Data source is working*.
 
 A partir de la vous pouvez créer votre premier *dashboard* (Menu > Dashboard > New). Pour avoir rapidement une base, vous pouvez également importer (Menu > Dashboard > Import) <a href="https://gist.github.com/maximecolin/ae5876ff844ce6a5dca95bc179bfa72d" target="_blank">cette configuration de dashboard</a> que j'ai configuré pour vous.
 
@@ -155,5 +174,75 @@ A partir de la vous pouvez créer votre premier *dashboard* (Menu > Dashboard > 
     <figcaption style="text-align:center;font-style:italic;">Dashboard Grafana de monitoring système</figcaption>
 </figure>
 
+## Pour allez plus loin
+
+### Proxy pass
+
+Si vous destinez votre instance de **Grafana** à des utilisateurs par forcement téchnique, il peut être intéressant d'avoir une url une peu plus sexy qu'un numéro de port à la fin de votre domain. Vous pouvez opter pour un sous-domaine ou un chemin dedier en [placant **Grafana** derière un reverse proxy](http://docs.grafana.org/installation/behind_proxy/).
+
+Vous pouvez configurer un reverse proxy grâce au role [manala.nginx](https://github.com/manala/ansible-role-nginx). 
+
+Par exemple pour exposer **Grafana** sur l'url ```http://grafana.foobar.com``` :
+
+{{< highlight yaml >}}
+manala_nginx_config_template: config/http.{{ _env }}.j2
+
+manala_nginx_configs_exclusive: true
+manala_nginx_configs:
+  # Php fpm
+  - file:     app_php_fpm
+    template: configs/app_php_fpm.{{ _env }}.j2
+  # Grafana
+  - file:     grafana.conf
+    template: configs/server.{{ _env }}.j2
+    config:
+      - server_name: grafana.foobar.com
+      - location /:
+        - proxy_pass: http://localhost:3000
+{{< /highlight >}}
+
+Il faut également indiquer le domain à **Grafana** en ajouter la configuration suivante :
+
+{{< highlight yaml >}}
+manala_grafana_config:
+  - server:
+    - domain: grafana.foobar
+{{< /highlight >}}
+
+### Sécuriser Grafana
+
+Une première mesure est de changé l'identifiant et le mot de passe administrateur de **Grafana** et de désactivé la création de compte. Dans votre fichier de configuration **Ansible** :
+
+{{< highlight yaml >}}
+manala_grafana_config:
+  - security:
+    - admin_user: foobar
+    - admin_password: foobar
+  - users:
+    - allow_sign_up: false
+{{< /highlight >}}
+
+<div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
+    Attention, l'utilisateur administrateur est créé au premier démarrage de <strong>Grafana</strong>, vous ne pourrez donc pas changer son identifiant ou son mot de passe via la configuration après le premier provisioning. Vous devrez alors passer par la page <em>profile</em> dans l'interface de <strong>Grafana</strong>.
+</div>
+
+Il est possible de mettre en place des systèmes d'authentification tiers comme Google, GitHub ou votre propre OAuth.
+
+Vous pouvez également changer le port de l'interface web qui est à ```3000``` par defaut :
+
+{{< highlight yaml >}}
+manala_grafana_config:
+  - server:
+    - http_port: 3000
+{{< /highlight >}}
+
+Pour une configuration encore plus poussez, vous pouvez lire la [documentation de Grafana](http://docs.grafana.org/installation/configuration/).
 
 
+### Sécuriser InfluxDB
+
+???
+
+## Conclusion
+
+Grâce aux rôles de [Manala](http://www.manala.io/) j'ai pu créer simplement le provisonning d'une stack de monitoring en [moins de 100 lignes de configuration](https://gist.github.com/maximecolin/acf6dd12dff72640a2b224cbb3934c4d). Au besoin, grâce au provisonning, je peux répliquer cette stack sur n'importe quel serveur en quelques minutes.
