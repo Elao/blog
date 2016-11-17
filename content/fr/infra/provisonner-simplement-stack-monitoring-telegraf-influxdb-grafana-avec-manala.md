@@ -133,7 +133,22 @@ Les rôles [manala.influxdb](https://github.com/manala/ansible-role-influxdb) et
 
 Je vous encourage néanmoins à jeter un oeil à la configuration de ses deux rôles si vous souhaitez aller plus loin, notamment concernant la sécurité des deux outils ou l'activation de fonctionnalités de Grafana.
 
-## Résultat
+## Prise en main
+
+### InfluxDB
+
+Par defaut, l'interface web de d'**InfluxDB** est accessible sur le port ```8083```. Cette interface vous permettra de requêter sur vos métrique. Par exemple, sélectionnez votre base de données ```telegraf``` en haut à gauche et testez la requête ```SHOW MEASUREMENTS```. Vous devriez voir la liste des métriques que vous aviez configurer plus haut dans le role ```manala.telegraf```
+
+<figure>
+    <img src="/fr/images/posts/2016/monitoring-influxdb.jpg" alt="Interface web d'InfluxDB" />
+    <figcaption style="text-align:center;font-style:italic;">Interface web d'InfluxDB</figcaption>
+</figure>
+
+### Grafana
+
+Par defaut **Grafana** est accesible sur le port ```3000```. Vous accédez alors au "Home Dashboard". Avant toute chose il faut ajouter notre base de données InfluxDB comme source de données. Pour celà dans le menu, sélectionné *Data Sources* puis *Add data source*. Nommez votre source, sélectionner le type "InfluxDB", renseigner l'url ```http://localhost:8086``` et le nom de base de données ```telegraf```. Par default il n'y a pas d'identifiant ni de mot de passe sur la base de données. Cliquez sur *Save and test* et si tout va bien vous devriez obtenir le message *Data source is working*.
+
+A partir de la vous pouvez créer votre premier *dashboard* (Menu > Dashboard > New). Pour avoir rapidement une base, vous pouvez également importer (Menu > Dashboard > Import) <a href="https://gist.github.com/maximecolin/ae5876ff844ce6a5dca95bc179bfa72d" target="_blank">cette configuration de dashboard</a> que j'ai configuré pour vous.
 
 <figure>
     <img src="/fr/images/posts/2016/monitoring-grafana.jpg" alt="Dashboard Grafana de monitoring système" />
