@@ -7,8 +7,8 @@ draft:          false
 slug:           "notre-quotidien-equipe-projet-auto-organisee"
 description:    "Retour d'expérience sur la vie d'une équipe projet auto-organisée. Voici ce que nous avons mis en place progressivement, nos expérimentations, nos succès et nos échecs."
 language:       "fr"
-thumbnail:      "/images/posts/thumbnails/50-quick.jpg"
-header_img:     "/images/posts/headers/elao_team_front.jpg"
+thumbnail:      "/images/posts/2016/equipe-projet/storymapping.jpg"
+header_img:     "/images/posts/2016/equipe-projet/storymapping.jpg"
 tags:           ["agile", "user stories"]
 categories:     ["methodo"]
 
