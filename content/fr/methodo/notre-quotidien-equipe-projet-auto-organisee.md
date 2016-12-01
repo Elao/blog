@@ -16,7 +16,7 @@ author_username: "rhanna"
 
 ---
 
-Cela fait maintenant un an que nous travaillons sur un projet aux multiples facettes dont l'équipe est constituée de quatre développeurs coté Elao, un *Business Analyst* et un [*Product Owner*](https://fr.wikipedia.org/wiki/Scrum_(m%C3%A9thode)#Propri.C3.A9taire_du_produit) côté client.
+Cela fait maintenant un an que nous travaillons sur un projet aux multiples facettes dont l'équipe est constituée de quatre développeurs côté Elao, un *Business Analyst* et un [*Product Owner*](https://fr.wikipedia.org/wiki/Scrum_(m%C3%A9thode)#Propri.C3.A9taire_du_produit) côté client.
 Notre méthodologie est très inspirée de [Scrum](https://fr.wikipedia.org/wiki/Scrum_(m%C3%A9thode)) que nous avons adapté suivant nos besoins ou selon ce qui fonctionnait le mieux.
 Voici ce que nous avons mis en place progressivement, nos expérimentations, nos succès et nos échecs.
 
@@ -58,7 +58,7 @@ Le but de nos ateliers est :
 
 Et pour cela, il faut :
 - Définir un ordre du jour (qui n'est pas toujours facile à tenir).
-- Découper l'atelier en 3 parties (et entre parenthèses la durée réelle moyenne) : le prochain sprint (50%), le sprint d'après (30%), ce qui va arriver après (20%)
+- Découper l'atelier en 3 parties (et entre parenthèses, la durée réelle moyenne) : le prochain sprint (50%), le sprint d'après (30%), ce qui va arriver après (20%)
 Le résultat de l'atelier est ce qui est écrit sur le board physique et les Post-it. On prend une photo pour conserver le résultat.
 Prochaine étape : écrire les Users Stories dans Jira.
 
@@ -73,11 +73,11 @@ De plus, chaque membre de l'équipe doit participer aux ateliers à tour de rôl
     - Une démo de ce qui a été fait durant le dernier sprint (30 min)
     - Rétrospective (30 à 45 min).
     - Sprint planning : 2h dans les meilleurs des cas, 3 à 4h lorsqu'il y a un peu de travail d'atelier pour finaliser les User Stories.
-    Nous avons tenté plusieurs fois d'améliorer cela notamment en préparant mieux les *stories* en atelier.
+    Nous avons tenté plusieurs fois d'améliorer cela, notamment en préparant mieux les *stories* en atelier.
 - Récemment, nous avons mis en place avec notre client 1/2 journée par sprint pour traiter la dette technique, dette technique que nous récoltons sous forme d'*issues* sur *github*.
 - Célérité : pas très bien ou pas du tout suivi au début ;
 un problème de sous-estimation d'un sprint avec trop de stories et trop de complexité (le fameux sprint d'un mois en été dont je parle plus haut) nous a fait vite recadrer cela.
-- Abandon du *Sprint Goal* en cours de route, qui n'apportait pas grand chose.
+- Abandon du *Sprint Goal* en cours de route car il n'apportait pas grand chose.
     
 ## Definition of done
 
@@ -85,10 +85,10 @@ Voici la définition de fini pour le développement d'une *User Story* que nous 
 
 - Test d'acceptation de la *Story* respecté.
 - Tests fonctionnels (Behat) et unitaires (Phpunit) qui passent.
-- Indicateur de qualité de code *Insight* en platinum.
-- Pas d'erreur majeure sur Scrutinizer, un autre indicateur de qualité de code.
-- Être reviewé.
-- La *PR* sur *Github* ne doit pas avoir de conflits avec la branche `master` (ou les résoudre dès que possible).
+- Indicateur de qualité de code [*Insight*](https://insight.sensiolabs.com/) en *platinum*.
+- Indicateur de qualité de code [*Scrutinizer*](https://scrutinizer-ci.com/) sans erreur majeure.
+- Code *reviewé*.
+- La [*Pull Request*](https://help.github.com/articles/about-pull-requests/) sur [*Github*](https://github.com/) ne doit pas avoir de conflits avec la branche `master` (ou les résoudre dès que possible).
 - Générer les migrations de la base de données s'il y a un changement apporté.
 
 Autant vous dire tout de suite : un développeur qui ne respecte pas ce *DoD* prend cher ! :)
@@ -143,7 +143,6 @@ Nous faisons deux rétrospectives par sprint :
     - Se dire les choses même quand c'est négatif, mais toujours dans un esprit constructif.
     - Améliorer des processus internes ou des considérations techniques. Les améliorations qui émergent sont parfois partagées avec le client.
 - Une rétrospective avec l'équipe entière, c'est à dire avec le client lors de la cérémonie de début de sprint.
-
 
 <div class="text-center">
     <img src="/images/posts/2016/equipe-projet/retrospective.jpg" alt="Rétrospective" />
