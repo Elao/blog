@@ -109,41 +109,42 @@ Le client nous dit quand cela ne va pas ou nous fait des retours utilisateurs d�
 ## Organisation du développement
 
 - Revue de design
-    - On s'est imposé au cours du projet qu'une story ne peut commencé que si une revue de design est faite par toute ou partie de l'équipe.
+    - On s'est imposé au cours du projet qu'une story ne peut commencer que si une revue de design est faite par toute ou partie de l'équipe.
     Une revue de design est effectuée au tableau physique : un dessin tout simplement ou parfois plus rarement on regarde directement dans le code.
-    - Le résultat est cette revue de design peut être un dessin et une liste des tâches au tableau puis reportée sur la *PR* sur *Github*
+    - Le résultat peut être un dessin et une liste des tâches au tableau puis reportée sur la *PR* sur *Github*.
 - Revue de code (qu'on ne présente plus). Parfois, on explique à l'oral ce qu'on a reporté à l'écrit et ça passe mieux et beaucoup plus vite.
 - Une story ou une PR n'appartient pas à un développeur : il arrive souvent qu'une personne commence une story et un autre la termine.
 - Un développeur ne doit pas toujours faire la même chose ni être le seul dans l'équipe à maitriser une technique.
 Par exemple, dans notre projet, nous avions un moteur de recherche à facettes basé sur Elastic Search, chaque développeur de l'équipe a participé à une partie de sa conception.
 - Pair programming (qu'on ne présente plus) : outil qui dans notre cas, nous permet de transmettre des connaissances ou résoudre plus facilement un problème en mutualisant les cerveaux !
-- Nous avons également expérimenté le Mob programming. Les points positifs qu'on retient :
+- Nous avons également expérimenté le *Mob programming*. Les points positifs qu'on retient :
     - Vraiment utile lorsqu'il faut résoudre une fonctionnalité compliquée en mobilisant toute l'équipe derrière un même ordinateur. 
     - Apprendre à écouter les idées de chacun.
     - Cohésion d'équipe++
     
 ## Rétrospective
 
-La rétrospective qu'on ne va pas non plus présentée en détail est pour nous un superbe outil d'amélioration continue.
-Nous faison deux rétrospectives par sprint :
+La rétrospective agile est pour nous un superbe outil d'amélioration continue.
+Nous faisons deux rétrospectives par sprint :
 
 - Une rétrospective interne
     - Se dire des choses qui ne concernent pas forcément le client.
     - Se dire les choses même quand c'est négatif, mais toujours dans un esprit constructif.
     - Améliorer des processus internes ou des considérations techniques. Les améliorations qui émergent sont parfois partagées avec le client.
-- Rétrospective avec l'équipe entière, c'est à dire avec le client.
+- Rétrospective avec l'équipe entière, c'est à dire avec le client lors de la cérémonie de début de sprint.
 
-Le résultats de ces rétrospectives ce sont des axes d'améliorations posées sur des posts it rouges ou roses qui sont revérifiés au prochain sprint. Si le problème résolu, on jette le postit sinon on le laisse.
+Le résultat de ces rétrospectives ce sont des axes d'améliorations posées sur des posts it qui sont revérifiés au prochain sprint.
+Si le problème est résolu, on jette le postit.
 
 Nous expérimentons au fur et à mesure des formats différents de rétrospectives pour casser la routine et faire émerger de nouvelles améliorations.
-    
+
 ## Estimation du reste à faire
 
 Au début, on faisait passer tout avant l'estimation du reste à faire, car "on a le temps, c'est de l'agile".
 Quand le temps alloué au projet a fondu, il a bien fallu s'y mettre; un outil puissant et rapide pour cela : le *story mapping*.
-Il est facile de réaliser un *Story mapping* sous forme de post it pour avoir une vision long terme et une estimation macro pour l'atterissage.
+Il est facile de réaliser un *Story mapping* sous forme de post it pour avoir une vision long terme et faire une estimation macro pour l'atterissage.
 
-## tl,dr
+## tl;dr
 
 - \#AutoOrganisation
 - \#Communication
@@ -151,6 +152,5 @@ Il est facile de réaliser un *Story mapping* sous forme de post it pour avoir u
 - \#AméliorationContinue
 
 Résultats :
-- Confiance du client dans les choix techniques que nous faisons.
 - Équipe qui vit et travaille bien ensemble.
 - Relation saine et win-win avec notre client.
