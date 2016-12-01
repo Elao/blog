@@ -34,6 +34,12 @@ Cela dure environ 5 minutes.
     - Le Sprint Backlog : les *users stories* sous forme de Post-it, son numéro Jira, l'estimation en nombre de points
     - Un Kanban avec les colonnes suivantes : Doing (en cours) / To review / Ready to demo / Demo / Done
     - Un Burn Down Chart
+    
+<div class="text-center">
+    <img src="/images/posts/2016/equipe-projet/board.jpg" alt="Board projet" />
+</div>
+
+    
 - Skype, avec le client, en direct et au quotidien, par échanges textes, par audio ou partage d'écran.
 - Gitter, pour les besoins de discussions asynchrones de l'équipe en interne. Sinon on passe par des échanges oraux !
 - Très peu ou pas du tout d'échanges emails. Car l'email c'est le mal.
@@ -56,9 +62,9 @@ Et pour cela, il faut :
 Le résultat de l'atelier est ce qui est écrit sur le board physique et les Post-it. On prend une photo pour conserver le résultat.
 Prochaine étape : écrire les Users Stories dans Jira.
 
-On essaye d'avoir une démarche LEAN et/ou au moins d'insuffler cette démarche à notre client pour la conception du produit.
+On essaye d'avoir une [démarche *LEAN*](https://fr.wikipedia.org/wiki/Lean) ou au moins d'insuffler cette démarche à notre client pour la conception du produit.
 
-Chaque membre de l'équipe doit participer aux ateliers à tour de rôle ; ceci améliore l'implication et la connaissance du produit de tous les membres de l'équipe.
+De plus, chaque membre de l'équipe doit participer aux ateliers à tour de rôle ; ceci améliore l'implication et la connaissance du produit de tous les membres de l'équipe.
     
 ## Sprint
 
@@ -112,6 +118,11 @@ Le client nous dit quand cela ne va pas ou nous fait des retours utilisateurs d�
     - On s'est imposé au cours du projet qu'une Story ne peut commencer que si une revue de design est faite par toute ou partie de l'équipe.
     Une revue de design est effectuée au tableau physique : un dessin tout simplement ou parfois plus rarement on regarde directement dans le code.
     - Le résultat peut être un dessin et une liste des tâches au tableau puis reportée sur la *PR* sur *Github*.
+
+<div class="text-center">
+    <img src="/images/posts/2016/equipe-projet/designreview.jpg" alt="Revue de design" />
+</div>
+
 - Revue de code (qu'on ne présente plus). Parfois, on explique à l'oral ce qu'on a reporté à l'écrit et ça passe mieux et beaucoup plus vite.
 - Une Story ou une PR n'appartient pas à un développeur : il arrive souvent qu'une personne commence une Story et un autre la termine.
 - Un développeur ne doit pas toujours faire la même chose ni être le seul dans l'équipe à maitriser une technique.
@@ -133,6 +144,11 @@ Nous faisons deux rétrospectives par sprint :
     - Améliorer des processus internes ou des considérations techniques. Les améliorations qui émergent sont parfois partagées avec le client.
 - Une rétrospective avec l'équipe entière, c'est à dire avec le client lors de la cérémonie de début de sprint.
 
+
+<div class="text-center">
+    <img src="/images/posts/2016/equipe-projet/retrospective.jpg" alt="Rétrospective" />
+</div>
+
 Le résultat de ces rétrospectives sont des axes d'améliorations reportés sur des Post-it qui sont revérifiés au prochain sprint.
 Si le problème est résolu, on jette le Post-it.
 
@@ -143,6 +159,10 @@ Enfin, nous expérimentons au fur et à mesure des formats différents de rétro
 Au début du projet, l'estimation du reste à faire était toujours relégué pour plus tard, car "on a le temps, c'est de l'agile".
 Quand le temps alloué au projet a fondu, il a bien fallu s'y mettre; un outil existe pour cela : le *Story Mapping*.
 Il est facile de réaliser un *Story Mapping* sous forme de Post-it pour avoir une vision long terme et faire une estimation macro pour l'atterissage.
+
+<div class="text-center">
+    <img src="/images/posts/2016/equipe-projet/storymapping.jpg" alt="Revue de design" />
+</div>
 
 ## tl;dr
 
