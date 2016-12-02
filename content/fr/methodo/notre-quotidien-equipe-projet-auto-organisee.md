@@ -7,8 +7,8 @@ draft:          false
 slug:           "notre-quotidien-equipe-projet-auto-organisee"
 description:    "Retour d'expérience sur la vie d'une équipe projet auto-organisée. Voici ce que nous avons mis en place progressivement, nos expérimentations, nos succès et nos échecs."
 language:       "fr"
-thumbnail:      "/images/posts/2016/equipe-projet/storymapping.jpg"
-header_img:     "/images/posts/2016/equipe-projet/storymapping.jpg"
+thumbnail:      "/images/posts/2016/equipe-projet/equipe.jpg"
+header_img:     "/images/posts/2016/equipe-projet/equipe.jpg"
 tags:           ["agile", "user stories"]
 categories:     ["methodo"]
 
@@ -47,9 +47,10 @@ Cela dure environ 5 minutes.
 
 ## Atelier
 
-En préambule, au début du projet, toute l'équipe s'est rendue sur le terrain pour s'imprégner du domaine d'activité de notre client.
-Oui c'est "Vis ma vie". C'était un peu notre premier atelier.
+Au début du projet, toute l'équipe s'est rendue sur le terrain pour s'imprégner du domaine d'activité de notre client.
+Oui c'est "Vis ma vie".
 Cela ne peut prendre qu'une demie-journée et c'est très instructif. On sait pourquoi on va développer tel ou tel outil.
+C'était finalement notre premier atelier.
 
 L'atelier se déroule avec un ou deux développeurs et le *Product Owner* durant une demie-journée.
 Le but de nos ateliers est :
@@ -87,12 +88,13 @@ Ceci afin de finir les derniers *code review* (les *stories* pas prêtes à part
 La *Cérémonie* se déroule avec tous les membres de l'équipe, pour que tout le monde ait le même niveau d'informations et participe aux estimations.
 
 La *Cérémonie* est composée de 3 étapes :
-    - Une démo de ce qui a été fait durant le dernier sprint (30 min)
-    - Rétrospective (30 à 45 min).
-    - Sprint planning : cela dure 2h dans les meilleurs des cas, 3 à 4h lorsqu'il y a un peu de travail d'atelier pour finaliser les User Stories.
-    Nous avons tenté plusieurs fois d'améliorer cela, notamment en préparant mieux les *stories* en atelier.
-    Après avoir testé les cartes à jouer, nous réalisons maintenant les estimations à la main en *Shifumi*, avec comme repères pour les complexités, la suite de Fibonacci : 1, 2, 3, 5, plus rarement 8 car cela fait utiliser les deux mains et surtout cela signifie que la *story* est trop complexe ; il faut la découper.
-    Nous avons donc considéré que l'estimation à la main est beaucoup plus efficace ; pas de cartes à manipuler.
+
+- Une démo de ce qui a été fait durant le dernier sprint (30 min)
+- Rétrospective (30 à 45 min).
+- Sprint planning : cela dure 2h dans les meilleurs des cas, 3 à 4h lorsqu'il y a un peu de travail d'atelier pour finaliser les User Stories.
+Nous avons tenté plusieurs fois d'améliorer cela, notamment en préparant mieux les *stories* en atelier.
+Après avoir testé les cartes à jouer, nous réalisons maintenant les estimations à la main en *Shifumi*, avec comme repères pour les complexités, la suite de Fibonacci : 1, 2, 3, 5, plus rarement 8 car cela fait utiliser les deux mains et surtout cela signifie que la *story* est trop complexe ; il faut la découper.
+Nous avons donc considéré que l'estimation à la main est beaucoup plus efficace ; pas de cartes à manipuler.
 
 Récemment, nous avons mis en place avec notre client 1/2 journée par sprint pour traiter la dette technique, dette technique que nous récoltons sous forme d'*issues* sur *github*.
 
