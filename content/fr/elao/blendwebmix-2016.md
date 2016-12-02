@@ -20,7 +20,7 @@ co_authors:         ["xgorse", "lhoizey", "tjarrand", "cmeiller", "ssolere"]
 
 Cette semaine chez élao, on est allé se balader au [Blend Web Mix](http://www.blendwebmix.com/).
 
-Et vous savez quoi ? Ça nous a gonflés à bloc !
+Et vous savez quoi ? Ça nous a gonflé à bloc !
 
 Blend a la pêche, Blend est chaud bouillant et a plein de choses à dire.
 
