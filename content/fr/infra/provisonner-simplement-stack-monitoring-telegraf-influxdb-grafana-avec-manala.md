@@ -176,6 +176,40 @@ A partir de la vous pouvez créer votre premier *dashboard* (Menu > Dashboard > 
 
 ## Pour allez plus loin
 
+### Provisionner les datasources et les dashboards
+
+Une fois que vous avez configurer vos *datasources* et créer vos *dashboard* vous aurez peut être le souhait de les intégrer à votre provisonning afin d'automatiser leur configuration. Le rôle ```manala.grafana``` permet celà. 
+
+Pour configurer une *datasource*, renseigner les mêmes informations que dans le formulaire de l'administration de **Grafana** :
+
+{{< highlight yaml >}}
+manala_grafana_datasources_exclusive: true
+manala_grafana_datasources:
+  - name:      telegraf
+    type:      influxdb
+    isDefault: true
+    access:    proxy
+    basicAuth: false
+    url:       http://localhost:8086
+    database:  telegraf
+    username:  ''
+    password:  ''
+{{< /highlight >}}
+
+Pour configurer un *dahsboard*, indiquer le chemin vers le fichier d'export JSON du dashboard et renseigner les ```intputs``` utilisés par celui-ci :
+
+{{< highlight yaml >}}
+manala_grafana_dashboards_exclusive: true
+manala_grafana_dashboards:
+    - template: "{{ playbook_dir }}/templates/grafana/dashboards/system.json"
+      inputs:
+        - name:     "DS_TELEGRAF"
+          pluginId: "influxdb"
+          type:     "datasource"
+          value:    "telegraf"
+      overwrite: true
+{{< /highlight >}}
+
 ### Proxy pass
 
 Si vous destinez votre instance de **Grafana** à des utilisateurs par forcement téchnique, il peut être intéressant d'avoir une url une peu plus sexy qu'un numéro de port à la fin de votre domain. Vous pouvez opter pour un sous-domaine ou un chemin dedier en [placant **Grafana** derière un reverse proxy](http://docs.grafana.org/installation/behind_proxy/).
