@@ -82,7 +82,7 @@ C'est quelque chose sur lequel nous avons beaucoup insisté mais il n'est pas to
 
 Le sprint a une durée fixe de 2 semaines ; durant l'été, nous avons effectué un sprint d'un mois, ce fut un échec.
 
-Après avoir rencontré des *erreur applicatives* durant nos démos avec le client en raison de déploiements réalisés la veille au soir, nous avons alors décidé d'arrêter le développement la veille de la cérémonie vers 16h.
+Après avoir rencontré des *erreurs applicatives* durant nos démos avec le client en raison de déploiements réalisés la veille au soir, nous avons alors décidé d'arrêter le développement la veille de la cérémonie vers 16h.
 Ceci afin de finir les derniers *code review* (les *stories* pas prêtes à partir en démo, tant pis !), préparer la démo du lendemain et faire une rétrospective interne.
 
 La *Cérémonie* se déroule avec tous les membres de l'équipe, pour que tout le monde ait le même niveau d'informations et participe aux estimations.
