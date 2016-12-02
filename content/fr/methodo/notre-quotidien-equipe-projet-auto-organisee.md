@@ -54,6 +54,7 @@ Le but de nos ateliers est :
 - décrire le besoin,
 - dessiner car un dessin est plus parlant que des mots,
 - challenger le PO,
+- découper et prioriser les chantiers,
 - trouver des solutions techniques plus simples ou moins coûteuses.
 
 Et pour cela, il faut :
@@ -69,11 +70,14 @@ De plus, chaque membre de l'équipe doit participer aux ateliers à tour de rôl
 ## Sprint
 
 - Durée fixe de 2 semaines ; durant l'été, nous avons effectué un sprint d'un mois, ce fut un échec.
-- Une *Cérémonie* composée de :
+- Après avoir rencontré des *erreur 500* durant nos démo avec le client à cause de déploiements réalisés la veille au soir, nous avons décidé en cours de projet d'arrêter le développement la veille de la cérémonie vers 16h afin de finir les derniers *code review* (les *stories* pas prêtes à partir en démo, tant pis !), préparer la démo du lendemain et faire une rétrospective interne.
+- La *Cérémonie* se déroule avec tous les membres de l'équipe et est composée de 3 étapes :
     - Une démo de ce qui a été fait durant le dernier sprint (30 min)
     - Rétrospective (30 à 45 min).
-    - Sprint planning : 2h dans les meilleurs des cas, 3 à 4h lorsqu'il y a un peu de travail d'atelier pour finaliser les User Stories.
+    - Sprint planning : cela dure 2h dans les meilleurs des cas, 3 à 4h lorsqu'il y a un peu de travail d'atelier pour finaliser les User Stories.
     Nous avons tenté plusieurs fois d'améliorer cela, notamment en préparant mieux les *stories* en atelier.
+    Après avoir testé les cartes à jouer, nous réalisons maintenant les estimations à la main en *Shifumi*, avec comme repères pour les complexités, la suite de Fibonacci : 1, 2, 3, 5, plus rarement 8 car cela fait utiliser les deux mains et surtout cela signifie que la *story* est trop complexe ; il faut la découper.
+    Nous avons considéré donc que l'estimation à la main est beaucoup plus efficace ; pas de cartes à manipuler.
 - Récemment, nous avons mis en place avec notre client 1/2 journée par sprint pour traiter la dette technique, dette technique que nous récoltons sous forme d'*issues* sur *github*.
 - Célérité : pas très bien ou pas du tout suivi au début ;
 un problème de sous-estimation d'un sprint avec trop de stories et trop de complexité (le fameux sprint d'un mois en été dont je parle plus haut) nous a fait vite recadrer cela.
