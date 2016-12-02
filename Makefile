@@ -160,12 +160,12 @@ crop-headers:
 ## Deploy app to production (after static build and images optimization)
 deploy_and_optimize@prod: build-and-optimize
 	echo "google-site-verification: google98e08ccbf4b44d9b.html" > public/google98e08ccbf4b44d9b.html
-	rsync -arzv --delete public deploy@blog.elao.elao.local:/srv/app
+	rsync -arzv --delete public app@blog.elao.elao.local:/srv/app
 
 ## Deploy app to production (after static build)
 deploy@prod: build
 	echo "google-site-verification: google98e08ccbf4b44d9b.html" > public/google98e08ccbf4b44d9b.html
-	rsync -arzv --delete --exclude '*/images' public deploy@blog.elao.elao.local:/srv/app
+	rsync -arzv --delete --exclude '*/images' public app@blog.elao.elao.local:/srv/app
 
 ## Expose the site on local network
 expose: build
