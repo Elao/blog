@@ -100,7 +100,7 @@ Récemment, nous avons mis en place avec notre client 1/2 journée par sprint po
 
 La célérité d'un sprint n'était pas très bien ou pas du tout suivi au début. Un problème de sous-estimation d'un sprint avec trop de stories et trop de complexité (le fameux sprint d'un mois dont je parle plus haut) nous a fait vite recadrer cela.
 
-Enfin, on a abandonner la définition d'un *Sprint Goal* en cours de route car cela prenait du temps d'en établir un et il ne nous apportait pas grand chose.
+Enfin, on a abandonné la définition d'un *Sprint Goal* en cours de route car cela prenait du temps d'en établir un et il ne nous apportait pas grand chose.
     
 ## Definition of done
 
