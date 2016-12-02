@@ -126,7 +126,7 @@ Chaque personne de l'équipe donne son avis, peut déployer en démo ou en prod 
 Toute l'équipe participe à la conception du produit ou aux choix d'architecture logicielle notamment via les revues de design dont je parle plus bas.
 
 Par ailleurs, il n'y a pas de personne attitrée pour discuter avec le client.
-Au début, un junior demande souvent de "Peux-tu dire au client de...". On lui répond systématiquement : "Dis-le-lui toi-même !".
+Au début, un junior demande souvent "Peux-tu dire au client de...". On lui répond systématiquement : "Dis-le-lui toi-même !".
 Nous privilégions ainsi une relation directe avec le *Product Owner*.
 Responsabilisation++ de chacun dans l'équipe.
 
@@ -178,7 +178,7 @@ Enfin, nous expérimentons au fur et à mesure des formats différents de rétro
 
 ## Estimation du reste à faire
 
-Au début du projet, l'estimation du reste à faire était toujours relégué pour plus tard, car "on a le temps, c'est de l'agile".
+Au début du projet, l'estimation du reste à faire était toujours reléguée pour plus tard, car "on a le temps, c'est de l'agile".
 Quand le temps alloué au projet a fondu, il a bien fallu s'y mettre; un outil existe pour cela : le *Story Mapping*.
 Il est facile de réaliser un *Story Mapping* sous forme de Post-it pour avoir une vision long terme et faire une estimation macro pour l'atterrissage.
 
@@ -189,7 +189,8 @@ Il est facile de réaliser un *Story Mapping* sous forme de Post-it pour avoir u
 ## Et maintenant ?
 
 Et bien maintenant, nous pensons qu'il reste toujours des choses à améliorer.
-D'autres paramètres peuvent varier. Aujourd'hui l'équipe est colocalisée. Nous allons très bientôt intégrer des développeurs qui seront à distance dans notre équipe projet auto-organisée.
+Aujourd'hui l'équipe est colocalisée et nous allons très bientôt intégrer des développeurs qui seront à distance dans notre équipe projet auto-organisée.
+Il faudra sans doute trouver de nouvelles solutions pour maintenir la communication et l'équilibre.
 
 ## tl;dr
 
