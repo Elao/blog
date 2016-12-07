@@ -1,6 +1,6 @@
 ---
 type:           "post"
-title:          "Le web n'est pas mort, la revanche par les Progressive web apps"
+title:          "Le web n'est pas mort, la revanche par les Progressive Web Apps"
 date:           "2016-12-05"
 publishdate:    "2016-12-05"
 draft:          false
@@ -9,7 +9,7 @@ description:    "Les Progressives Web Apps rivalisent avec les apps natives. Voy
 language:       "fr"
 thumbnail:      "/images/posts/2016"
 header_img:     "/images/posts/2016"
-tags:           ["service workers", "web", "mobile"]
+tags:           ["service worker", "web", "mobile"]
 categories:     ["dev"]
 
 author_username: "rhanna"
@@ -31,8 +31,8 @@ Et honnêtement, ils n'ont pas tout à fait tord. Voici pourquoi.
 
 - Amélioration progressive : le site fonctionne pour n'importe quel utilisateur quel que soit le navigateur utilisé. Seuls les navigateurs modernes (comprendre Chrome et Firefox) profiteront de toutes les possibilités.
 - Responsive : s'ajuste à la taille de l'écran, sur ordinateur, mobile ou tablette.
-- Indépendant de la connexion : expérience améliorée grâce aux service workers qui permettent à l'application de fonctionner hors connexion ou en très bas débit.
-- Sécurité garantie : l'utilisation des Service Workers est conditionné par le fait que le site est délivré en https. 
+- Indépendant de la connexion : expérience améliorée grâce au Service Worker qui permettent à l'application de fonctionner hors connexion ou en très bas débit.
+- Sécurité garantie : l'utilisation d'un Service Worker est conditionné par le fait que le site est délivré en https. 
 - Ré-engagement de l'utiliseeur grâce :
     - aux notifications push,
     - à la possibilité d'installer un bon vieux favori sur l'écran d'accueil de l'appareil (sur mobile, tablette...).
@@ -52,7 +52,7 @@ Des retours sur inverstissement assez impressionnants :
 ## Mettez-vous au "Offline-first" !
 
 Depuis plusieurs années, il existe une technologie planquée dans nos navigateurs permettant de gérer du cache et donc de faire du hors-ligne : [Application Cache](https://developer.mozilla.org/fr/docs/Web/HTML/Utiliser_Application_Cache)
-mais celle-ci est dépréciée au profit des [Services Workers](https://developer.mozilla.org/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers).
+mais celle-ci est dépréciée au profit du [Service Worker](https://developer.mozilla.org/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers).
 
 Stratégies pour la gestion du cache : Jake Archibald, un des ingénieurs de Google [The offline cookbook](https://jakearchibald.com/2014/offline-cookbook/)
 
@@ -71,19 +71,19 @@ https://developers.google.com/web/fundamentals/engage-and-retain/push-notificati
 ## C'est réservé aux apps mobile ?
 
 Il est vrai que les problèmes de connectivité on l'a surtout en position de mobilité et grâce à la gestion du cache, une web app reste utilisable même en mode déconnecté.
-Mais rien ne vous empêche d'utiliser les Services Workers pour booster vos applications web *desktop*.
+Mais rien ne vous empêche d'utiliser un Service Worker pour booster vos applications web *desktop*.
 
 ## Outils
 
-- [Service Worker Precache](https://github.com/GoogleChrome/sw-precache/) un module node pour faciliter la gestion de la mise en cache des ressouces statiques (HTML, JavaScript, CSS, images, etc.) via les Service Worker. Un [codelab](https://codelabs.developers.google.com/codelabs/sw-precache/index.html) est disponible.
+- [Service Worker Precache](https://github.com/GoogleChrome/sw-precache/) un module node pour faciliter la gestion de la mise en cache des ressouces statiques (HTML, JavaScript, CSS, images, etc.) via un Service Worker. Un [codelab](https://codelabs.developers.google.com/codelabs/sw-precache/index.html) est disponible.
 - [Service Worker Toolbox](https://github.com/GoogleChrome/sw-toolbox) est un ensemble d'outils permettant notamment de gérer le *routing* vers du contenu caché ou du contenu en ligne.
 - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) est une extension Chrome permettant d'analyser une page et nous aider à implémenter les bonnes pratiques d'une Progressive Web App.
 
 ## Safari et iOS ?
 
-Autant vous le dire tout de suite. Une Progressive Web App fonctionne sous iOS, mais vous ne profiterez ni des Services Workers, ni donc de la mise en cache et des notifications Push.
+Autant vous le dire tout de suite. Une Progressive Web App fonctionne sous iOS, mais vous ne profiterez ni du Service Worker, ni donc de la mise en cache et des notifications Push.
 Inutile d'utiliser un navigateur Chrome sur votre iPhone ou votre iPad, iOS n'est pas encore prêt.
-L'implémentation des Services Workers dans WebKit, le moteur de rendu de Safari, est "[under consideration](https://webkit.org/status/#specification-service-workers)".
+L'implémentation du Service Worker dans WebKit, le moteur de rendu de Safari, est "[under consideration](https://webkit.org/status/#specification-service-workers)".
 
 Du côté de chez [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/), les Services Workers sont en cours d'implémentation.
 
