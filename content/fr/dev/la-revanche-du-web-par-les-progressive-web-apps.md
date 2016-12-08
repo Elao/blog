@@ -54,7 +54,10 @@ Des retours sur inverstissement assez impressionnants :
 Depuis plusieurs années, il existe une technologie planquée dans nos navigateurs permettant de gérer du cache et donc de faire du hors-ligne : [Application Cache](https://developer.mozilla.org/fr/docs/Web/HTML/Utiliser_Application_Cache)
 mais celle-ci est dépréciée au profit du [Service Worker](https://developer.mozilla.org/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers).
 
-Stratégies pour la gestion du cache : Jake Archibald, un des ingénieurs de Google [The offline cookbook](https://jakearchibald.com/2014/offline-cookbook/)
+Stratégies pour la gestion du cache : Jake Archibald, un des ingénieurs de Google a écrit cet article de blog : [The offline cookbook](https://jakearchibald.com/2014/offline-cookbook/).
+De nombreuses stratégies sont possibles : *Offline-first*, course entre le cache et le réseau... Il n'y a pas de "meilleure solution"; tout dépendra de votre besoin.
+
+Scope : /service-worker.js à la racine du domaine pour adresser l'ensemble du domaine.
 
 ## Ajout d'un site à l'écran d'accueil
 
@@ -63,17 +66,82 @@ offrant aux utilisateurs un accès plus rapide.
 https://developer.mozilla.org/fr/docs/Web/Manifest
 https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
 
+{{< highlight json >}}
+{
+  "short_name": "Elao App",
+  "name": "Elao, agence web agile",
+  "icons": [
+    {
+      "src": "logo-icon-1x.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "logo-icon-2x.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "logo-icon-4x.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#2196F3",
+  "display": "standalone"
+}
+{{< /highlight >}}
+
+- Dans notre `start_url` on a inséré un paramètre `utm_source` pour collecter via Analytics par exemple les utilisateurs ayant installé l'app sur leur écran d'accueil.
+- Pour simuler un affichage style App dans notre navigateur, c'est à dire sans l'interface du navigateur, on a spécifié : `"display": "standalone"`. Sinon on peut utiliser : `"display": "browser"`.
+- De plus, on peut forcer l'orientation de l'affichage, par exemple en mode paysage : `"orientation": "landscape"`.
+
+Dans votre `<head>` html, il suffit de déclarer votre manifest de la façon suivante :
+
+`<link rel="manifest" href="/manifest.json">`
+
+
 ## Push Notifications
 
 https://developers.google.com/web/fundamentals/getting-started/codelabs/push-notifications/
 https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/
 
+Les Push et les Notifications sont deux technologies différentes mais complémentaires :
+
+- l'[API Push](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) est utilisée lorsqu'un serveur sur Internet envoi une notification attrapée et traitée par le service worker sur notre navigateur
+- l'[API Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API) permet au Service Worker d'afficher la notification à l'utilisateur.
+
+Exemple du contenu d'une notification :
+
+{{< highlight json >}}
+{
+  "body": "Souhaitez-vous confirmer le rendez-vous du 20/11/2016 avec M. Martin ?",
+  "icon": "images/rendez-vous.png",
+  "tag": "meeting",
+  "actions": [
+    { "action": "yes", "title": "Yes", "icon": "images/yes.png" },
+    { "action": "no", "title": "No", "icon": "images/no.png" }
+  ]
+}
+{{< /highlight >}}
+
+Comme vous pouvez le voir, outre le contenu et l'icone de la notification, il est possible :
+
+- de taguer la notification (ici "meeting") afin de permettre à l'OS qui gère la notification de grouper les notifications de même tag.
+- de proposer différentes actions pour permettre à l'utilisateur d'interagir avec notre web app directement depuis la notification.
+
+{{< highlight js >}}
+{{< /highlight >}}
+
 ## C'est réservé aux apps mobile ?
 
-Il est vrai que les problèmes de connectivité on l'a surtout en position de mobilité et grâce à la gestion du cache, une web app reste utilisable même en mode déconnecté.
+Il est vrai que les problèmes de connectivité, on l'a surtout en position de mobilité et grâce à la gestion du cache, une web app reste utilisable même en mode déconnecté.
 Mais rien ne vous empêche d'utiliser un Service Worker pour booster vos applications web *desktop*.
 
 ## Outils
+
+Voici des outils - tous propulsés par Google - pour faciliter le développement d'une Progressive Web App :
 
 - [Service Worker Precache](https://github.com/GoogleChrome/sw-precache/) un module node pour faciliter la gestion de la mise en cache des ressouces statiques (HTML, JavaScript, CSS, images, etc.) via un Service Worker. Un [codelab](https://codelabs.developers.google.com/codelabs/sw-precache/index.html) est disponible.
 - [Service Worker Toolbox](https://github.com/GoogleChrome/sw-toolbox) est un ensemble d'outils permettant notamment de gérer le *routing* vers du contenu caché ou du contenu en ligne.
@@ -81,13 +149,18 @@ Mais rien ne vous empêche d'utiliser un Service Worker pour booster vos applica
 
 ## Safari et iOS ?
 
-Autant vous le dire tout de suite. Une Progressive Web App fonctionne sous iOS, mais vous ne profiterez ni du Service Worker, ni donc de la mise en cache et des notifications Push.
+Une Progressive Web App fonctionne sous iOS, mais vous ne profiterez ni du Service Worker, ni donc de la mise en cache et des notifications Push.
 Inutile d'utiliser un navigateur Chrome sur votre iPhone ou votre iPad, iOS n'est pas encore prêt.
 L'implémentation du Service Worker dans WebKit, le moteur de rendu de Safari, est "[under consideration](https://webkit.org/status/#specification-service-workers)".
 
-Du côté de chez [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/), les Services Workers sont en cours d'implémentation.
+Du côté de chez [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/), bonne nouvelle, le Service Worker est en cours d'implémentation.
 
 Pour suivre l'avancement de l'implémentation de Service Worker, un site : [Is Service Worker Ready?](https://jakearchibald.github.io/isserviceworkerready/)
+
+En bref, en cette fin 2016, tout le potentiel des Progressives Web Apps n'est exploité que sous Android + Chrome.
+Ce n'est pas une raison d'attendre pour l'utiliser ;
+ces technologies sont en cours de propagation ;
+les utilisateurs Android sont majoritaires par rapport à tous les autres OS, autant les adresser maintenant et les autres en profiteront après.
 
 ## Démos
 
