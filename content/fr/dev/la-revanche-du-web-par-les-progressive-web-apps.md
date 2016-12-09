@@ -193,7 +193,7 @@ Les requêtes à ces API peuvent elles-mêmes être mises en cache.
     <img src="/fr/images/posts/2016/pwa/appshell.png" alt="Appshell" style="max-width:80%"/>
 </p>
 
-### C'est réservé aux apps mobile ?
+### C'est réservé aux apps mobiles ?
 
 Il est vrai que le problème de connectivité, on l'a surtout en position de mobilité et grâce à la gestion du cache, une web app reste utilisable même en mode déconnecté.
 Mais rien ne vous empêche d'utiliser un Service Worker pour booster vos applications web *desktop*.
@@ -201,7 +201,7 @@ Les mastodontes tels que Gmail ou Facebook les utilisent couramment.
 
 ## Le Web App Manifest
 
-Le Web App Manifest a pour but de permettre l'installation des applications Web sur l'écran d'accueil d'un appareil, notamment sur les smartphone,
+Le Web App Manifest a pour but de permettre l'installation des applications Web sur l'écran d'accueil d'un appareil, notamment sur les smartphones,
 offrant aux utilisateurs un accès plus rapide.
 
 L'ouverture du site dans le navigateur se présente comme une application native avec également un Splash Screen :
