@@ -24,7 +24,20 @@ Si vous n'êtes pas famillier avec **Ansible**, je vous encourage à [découvrir
 
 ## Pourquoi monitorer
 
-???
+Le **monitoring** consiste à surveiller et logger une série de métrique dans le temps et de les représenter sous forme de graphiques. Le monitoring vous permet de détecter voir d'anticiper des anomalies ou des pannes, que ce soit de votre infrastucture ou de votre applicatif.
+
+Le **monitoring** peut vous permettre de déclanger des alertes sur certains seuils de **métriques** afin de réagir avant qu'un problème devienne critique.
+
+Celà peut être :
+
+- un pique de charge important indiquant un problème de performance ou un pique de visiteurs
+- un pique de trafic anormal causé par une attaque
+- à l'inverse une perte soudaine de traffic pouvant indiquer une panne ou une indisponibilité
+- ...
+
+Vous pouvez également mesurer un gain ou une perte de **performance** à la suite d'une mise à jour.
+
+En conclusion, le monitoring permet de **surveiller** la santé de votre serveur/application.
 
 ## La stack
 
@@ -178,7 +191,7 @@ Par defaut **Grafana** est accesible sur le port ```3000``` avec pour identifian
 
 ### Provisionner les datasources et les dashboards
 
-Une fois que vous avez configuré vos *datasources* et créer vos *dashboard* vous aurez peut-être le souhait de les intégrer à votre provisonning afin d'automatiser leur configuration. Le rôle ```manala.grafana``` permet celà. 
+Une fois que vous avez configuré vos *datasources* et créer vos *dashboards* vous aurez peut-être le souhait de les intégrer à votre provisonning afin d'automatiser leur configuration. Le rôle ```manala.grafana``` permet celà. 
 
 Pour configurer une *datasource*, renseignez les mêmes informations que dans le formulaire de l'administration de **Grafana** :
 
@@ -210,6 +223,8 @@ manala_grafana_dashboards:
       overwrite: true
 {{< /highlight >}}
 
+Cette configuration va associer l'*input* "DS_TELEGRAF" du dashboard à la source `influxdb` de type `datasource` nommée `telegraf`, c'est à dire la source créée juste au dessus. Si vous importer d'autres dashboards, prenez bien soin de regarder les *inputs* requis et associez les de la même manière à vos `datasources`.
+
 ### Proxy pass
 
 Si vous destinez votre instance de **Grafana** à des utilisateurs par forcement téchnique, il peut être intéressant d'avoir une url une peu plus sexy qu'un numéro de port à la fin de votre domain. Vous pouvez opter pour un sous-domaine ou un chemin dédié en [placant **Grafana** derrière un reverse proxy](http://docs.grafana.org/installation/behind_proxy/).
@@ -223,9 +238,6 @@ manala_nginx_config_template: config/http.{{ _env }}.j2
 
 manala_nginx_configs_exclusive: true
 manala_nginx_configs:
-  # Php fpm
-  - file:     app_php_fpm
-    template: configs/app_php_fpm.{{ _env }}.j2
   # Grafana
   - file:     grafana.conf
     template: configs/server.{{ _env }}.j2
@@ -272,10 +284,39 @@ manala_grafana_config:
 
 Pour une configuration encore plus poussée, vous pouvez lire la [documentation de Grafana](http://docs.grafana.org/installation/configuration/).
 
-
 ### Sécuriser InfluxDB
 
-???
+Si vous laisser **Telegraf** créer sa propre base de données **InfluxDB**, celle si n'aura pas de mot de passe. Si vous souhaitez sécuriser votre base de données vous pouvez, la configuration du rôle `manala.influxdb` permet de gérer les utilisateurs et les permissions.
+
+Par exemple pour ajouter un utilisateur à la votre base *telegraf* :
+
+{{< highlight yaml >}}
+manala_influxdb_databases:
+  - telegraf
+
+manala_influxdb_users:
+  - database: telegraf
+    name:     my_user
+    password: nYhvEVsku
+
+manala_influxdb_privileges:
+  - database: telegraf
+    user:     my_user
+    grant:    ALL
+{{< /highlight >}}
+
+N'oubliez pas ensuite de renseigner le *username* et *password* dans la configuration de **Telegraf** :
+
+{{< highlight yaml >}}
+manala_telegraf_configs:
+  - file:     output_influxdb.conf
+    template: configs/output_influxdb.conf.j2
+    config:
+      - urls: ["http://localhost:8086"]
+      - database: telegraf
+      - username: my_user
+      - password: nYhvEVsku
+{{< /highlight >}}
 
 ## Conclusion
 
