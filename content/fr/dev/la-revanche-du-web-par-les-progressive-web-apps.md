@@ -7,14 +7,16 @@ draft:          false
 slug:           "la-revanche-du-web-par-les-progressive-web-apps"
 description:    "Les Progressives Web Apps ont pour objectif de rivaliser avec les apps natives. Voyons comment cela fonctionne et le gain que cela apporte à vos utilisateurs."
 language:       "fr"
-thumbnail:      "/images/posts/2016"
-header_img:     "/images/posts/2016"
+thumbnail:      "/images/posts/2016/pwa/pwa-general.jpg"
+header_img:     "/images/posts/2016/pwa/pwa-general.jpg"
 tags:           ["progressive web app", "service worker", "web", "mobile", "offline"]
 categories:     ["dev"]
 
 author_username: "rhanna"
 
 ---
+
+<small>Temps de lecture : 15 minutes</small>
 
 En 2010, le magazine américain Wired titrait "[The web is dead](https://www.wired.com/2010/08/ff_webrip/)"
 et prédisait que les apps allaient remplacer le web.
@@ -23,25 +25,21 @@ L'installation d'apps n'a finalement pas pris le dessus sur l'utilisation du web
 En réalité la plupart des gens [n'installent ou n'utilisent que très peu d'apps](http://www.recode.net/2016/6/8/11883518/app-boom-over-snapchat-uber), celles des messageries et des réseaux sociaux.
 Au contraire, l'usage du web en position de mobilité a explosé.
 
-La plupart des sources citées dans cet article sont des sites Google ou des blogs des ingénieurs de chez Google,
+La plupart des sources citées dans cet article sont des sites Google ou des blogs de ses ingénieurs,
 tout simplement parce que les contenus sont de qualité.
 Cela s'explique car le mastondonte américain fait un lobby de dingue pour pousser les Progressives web apps et faire plier son rival Apple, qui est en retard en la matière.
-Et honnêtement, ils n'ont pas tout à fait tort. Voici pourquoi.
+Et honnêtement, Google n'a pas tout à fait tort. Voici pourquoi.
 
 ## Qu'est ce qu'une Progressive Web App ?
 
-<p class="text-center">
-    <img src="/fr/images/posts/2016/pwa/pwa-general.jpg" alt="Progressive web app" style="max-width:80%"/>
-</p>
-
-- Amélioration progressive : le site fonctionne pour n'importe quel utilisateur quel que soit le navigateur utilisé. Seuls les navigateurs modernes (comprendre Chrome et Firefox) profiteront de toutes les possibilités.
-- Responsive : s'ajuste à la taille de l'écran, sur ordinateur, mobile ou tablette.
-- Indépendant de la connexion : expérience améliorée grâce au Service Worker qui permettent à l'application de fonctionner hors connexion ou en très bas débit.
-- Sécurité garantie : l'utilisation d'un Service Worker est conditionnée par le fait que le site est délivré en https. 
-- Ré-engagement de l'utilisateur grâce :
+- **Amélioration progressive** : le site fonctionne pour n'importe quel utilisateur quel que soit le navigateur utilisé. Seuls les navigateurs modernes (comprendre Chrome et Firefox) profiteront de toutes les possibilités.
+- **Responsive** : s'ajuste à la taille de l'écran, sur ordinateur, mobile ou tablette.
+- **Indépendant de la connexion** : expérience améliorée grâce au Service Worker qui permettent à l'application de fonctionner hors connexion ou en très bas débit.
+- **Sécurité garantie** : l'utilisation d'un Service Worker est conditionnée par le fait que le site est délivré en https. 
+- **Ré-engagement de l'utilisateur** grâce :
     - aux notifications push,
     - à la possibilité d'installer un bon vieux raccourci sur l'écran d'accueil de l'appareil (sur mobile, tablette...).
-- Légère et rapide : le poids d'une app native est souvent minimum x10 par rapport à son équivalent web optimisé pour mobile.
+- **Légère et rapide** : le poids d'une app native est souvent minimum x10 par rapport à son équivalent web optimisé pour mobile.
 Dans nos contrées où le haut-débit et la 4G sont des normes, il en n'est pas de même dans les pays en voie de développement.
 De plus, nous ne profitons pas toujours d'une connectivité ou d'un débit constant.
 Dans les transports souterrains, dans un lieu confiné ou dans de lointaines campagnes, il n'est pas rare d'être complètement "déconnecté".
@@ -60,7 +58,7 @@ mais celle-ci est dépréciée au profit du [Service Worker](https://developer.m
 
 ### Comment ça marche ?
 
-Un service worker est déclaré ainsi dans le code javascript de vos pages :
+Un service worker est déclaré ainsi dans le code JavaScript de vos pages :
 
 {{< highlight js >}}
 if ('serviceWorker' in navigator) {
@@ -88,10 +86,108 @@ self.addEventListener('activate', event => {
 
 ### Gestion du cache
 
-@todo : Stratégies pour la gestion du cache : Jake Archibald, un des ingénieurs de Google a écrit cet article de blog : [The offline cookbook](https://jakearchibald.com/2014/offline-cookbook/).
-De nombreuses stratégies sont possibles : *Offline-first*, course entre le cache et le réseau... Il n'y a pas de "meilleure solution"; tout dépendra de votre besoin.
+La mise en cache de ressources se fait ainsi dans notre Service Worker :
 
-@todo : App shell, assets de l'interface mis en cache, ressources fetchés mis en cache...
+{{< highlight js >}}
+var CACHE_NAME = 'my-cache-v1';
+var urlsToCache = [
+  '/',
+  '/styles/main.css',
+  '/script/main.js'
+];
+
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
+{{< /highlight >}}
+
+La récupération de ressources en cache se fait en écoutant l'évènement "fetch".
+Si la ressource n'est pas trouvée en cache, on tente notre chance via le réseau :
+
+{{< highlight js >}}
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        if (response) {
+          return response;
+        }
+        
+        // use the network to fetch request
+        return fetch(event.request);
+      }
+    )
+  );
+});
+{{< /highlight >}}
+
+Modifions notre code précédent pour mettre en cache la ressource récupérée du réseau :
+
+{{< highlight js >}}
+// we need to clone the response.
+var fetchRequest = event.request.clone();
+
+return fetch(fetchRequest).then(
+  function(response) {
+    // Check if we received a valid response
+    if (!response || response.status !== 200 || response.type !== 'basic') {
+      return response;
+    }
+
+    // we need to clone it so we have two streams.
+    var responseToCache = response.clone();
+
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        cache.put(event.request, responseToCache);
+      });
+
+    return response;
+  }
+);
+{{< /highlight >}}
+
+Il s'agit ici d'un exemple simple. La gestion du cache n'est pas forcément triviale.
+De nombreuses stratégies de gestion du cache existent.
+Jake Archibald, un des ingénieurs de Google a écrit un article complet à ce sujet : [The offline cookbook](https://jakearchibald.com/2014/offline-cookbook/).
+Il n'y a pas de "meilleure solution"; tout dépendra de votre besoin.
+
+### Mise à jour d'un Service Worker
+
+Pour mettre à jour un Service Worker ou les ressources mises en cache par le Service Worker, il faut supprimer les ressources en cache.
+
+{{< highlight js >}}
+self.addEventListener('activate', function(event) {
+  var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
+
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+{{< /highlight >}}
+
+Les nouvelles versions des fichiers seront alors récupérées au prochain chargement de la page, via l'évènement "install" vu plus haut dans cet article.
+
+### Architecture
+
+Pour booster vos web apps, il est recommandé d'opter pour une architecture de type "App Shell".
+C'est à dire que vous fournissez une coquille vide contenant la présentation de votre app (html, js, css, images).
+Ces ressources sont mis en cache et n'ont pas besoin d'être retéléchargées à chaque requête.
+Ensuite, les données sont récupérées via des *fetch* d'API par exemple et viennent s'insérer dans votre présentation à l'aide par exemple de votre framework Frontend préféré.
+Les requêtes à ces API peuvent elles-mêmes mises en cache.
 
 <p class="text-center">
     <img src="/fr/images/posts/2016/pwa/appshell.png" alt="Appshell" style="max-width:80%"/>
@@ -101,10 +197,11 @@ De nombreuses stratégies sont possibles : *Offline-first*, course entre le cach
 
 Il est vrai que les problèmes de connectivité, on l'a surtout en position de mobilité et grâce à la gestion du cache, une web app reste utilisable même en mode déconnecté.
 Mais rien ne vous empêche d'utiliser un Service Worker pour booster vos applications web *desktop*.
+Les mastodontes tels que Gmail ou Facebook les utilisent couramment.
 
 ## Le Web App Manifest
 
-Le Web App Manifest a pour but d'installer des applications Web sur l'écran d'accueil d'un appareil, notamment sur les smartphone,
+Le Web App Manifest a pour but de permettre l'installation des applications Web sur l'écran d'accueil d'un appareil, notamment sur les smartphone,
 offrant aux utilisateurs un accès plus rapide.
 
 L'ouverture du site dans le navigateur se présente comme une application native avec également un Splash Screen :
@@ -144,7 +241,7 @@ Ce Web App Manifest se présente sous forme d'un fichier json :
 
 À noter :
 
-- Dans notre *start_url* on a inséré un paramètre *utm_source* pour collecter via Analytics par exemple les utilisateurs ayant installé l'app sur leur écran d'accueil.
+- Dans notre *start_url* on a inséré un paramètre *utm_source* pour collecter par exemple via Analytics les stats utilisateurs ayant installé l'app sur leur écran d'accueil.
 - Pour simuler un affichage de style App native dans notre navigateur, c'est à dire sans l'interface du navigateur, on a spécifié pour "display" la valeur "standalone". Sinon on peut utiliser la valeur par défaut "browser".
 - De plus, on peut forcer l'orientation de l'affichage, par exemple en mode paysage cela donne `"orientation": "landscape"`.
 
@@ -154,17 +251,22 @@ Dans votre `<head>` html, il suffit de déclarer votre manifest de la façon sui
 <link rel="manifest" href="/manifest.json">
 {{< /highlight >}}
 
-À quel moment le "prompt" d'installation sur l'écran d'accueil s'affiche ?
+### Bannière d'installation sur l'écran d'accueil
 
-En tant que développeur, il n'est pas possible de déclencer cet évènement. C'est Chrome qui décide de l'afficher sous certaines conditions :
+À quel moment le "prompt" ou bannière d'installation sur l'écran d'accueil s'affiche ?
+
+En tant que développeur, il n'est pas possible de déclencer cet évènement.
+C'est le navigateur qui décide de l'afficher sous certaines conditions.
+Par exemple, les conditions de Chrome sont (liste non exhaustive) :
 
 - l'utilisateur a visité deux fois la page dans les 5 minutes,
 - un web app manifest est déclaré,
 - un Service worker est enregistré.
 
-Et ces conditions peuvent changer dans les futures version du navigateur de Google !
+Et ces conditions peuvent changer dans les futures versions des navigateurs !
 
-En tant que développeur, on peut toutefois attrapé cet évènement et l'afficher plus tard par exemple lorsque l'utilisateur réalise une "action positive" sur notre application.
+En tant que développeur, on peut toutefois attrapé cet évènement et l'afficher plus tard par exemple en attendant que l'utilisateur réalise une "action positive" sur notre application.
+Afin qu'il soit sollicité dans le bon timing.
 Par exemple, dans le code ci-dessous, nous allons sauvegarder le prompt en écoutant l'évènement "beforeinstallprompt"
 et différer l'affichage lorsque l'utilisateur aura cliqué sur un bouton :
 
@@ -204,10 +306,104 @@ Les Push et les Notifications sont deux technologies différentes mais compléme
 - l'[API Push](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) est utilisée lorsqu'un serveur sur Internet envoi une notification attrapée et traitée par le service worker sur notre navigateur
 - l'[API Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API) permet au Service Worker d'afficher la notification à l'utilisateur.
 
-Exemple du contenu d'une notification :
+### Demander à l'utilisateur de souscrire aux notifications
+
+Cela se passe ainsi, non pas dans le Service Worker mais dans le code JavaScript de vos pages :
+
+{{< highlight js >}}
+var swRegistration;
+var isSubscribed = false;
+
+if ('serviceWorker' in navigator && 'PushManager' in window) {
+  // Register the Service Worker
+  navigator.serviceWorker.register('/myserviceworker.js')
+  .then(function(serviceWorkerRegistered) {
+    swRegistration = serviceWorkerRegistered;
+  })
+  .catch(function(error) {
+    console.error('Service Worker Error', error);
+  });
+  
+  // Set the initial subscription value
+  swRegistration.pushManager.getSubscription()
+  .then(function(subscription) {
+    isSubscribed = !(subscription === null);
+
+    if (isSubscribed) {
+      console.log('User IS subscribed.');
+    } else {
+      console.log('User is NOT subscribed.');
+    }
+  });
+
+  // On click on a "Subscribe to notification" button, call the pushManager to subscribe the user
+  myButton.addEventListener('click', function() {
+    if (swRegistration !== undefined) {
+      return;
+    }
+    
+    const applicationServerKey = urlB64ToUint8Array("yourApplicationServerPublicKey");
+    
+    swRegistration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: applicationServerKey
+    })
+    .then(function(subscription) {
+      console.log('User is subscribed:', subscription);
+  
+      // We need to implement something to save the subscription, for example an API call to save it on our database
+      // updateSubscriptionOnServer(subscription);
+  
+      isSubscribed = true;
+    })
+    .catch(function(error) {
+      console.log('Failed to subscribe the user: ', error);
+    });
+  }
+}
+{{< /highlight >}}
+
+Le paramètre "userVisibleOnly: true" est une option mais il est en réalité requis.
+Cela permet de s'engager qu'une notification sera affichée à chaque fois qu'il y aura un Push.
+
+Et pour en savoir plus sur comment obtenir le paramètre *applicationServerKey*,
+consultez cet article : [Generating the applicationServerKey](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/sending-messages#generating-the-key).
+
+Exemple d'objet Subscription généré par le navigateur : 
 
 {{< highlight json >}}
-{
+{  
+  "endpoint": "https://example.com/push-service/send/dbDqU8xX10w:APA91b...",  
+  "keys": {  
+    "auth": "qLAYRzG9TnUwbprns6H2Ew==",  
+    "p256dh": "BILXd-c1-zuEQYXH\\_tc3qmLq52cggfqqTr\\_ZclwqYl6A7-RX2J0NG3icsw..."  
+  }  
+}
+{{< /highlight >}}
+
+Le *endpoint* dépend du navigateur utilisé et c'est lui même qui vous le fourni.
+Par exemple pour Chrome, c'est un endpoint qui ressemble à ça : *https://android.googleapis.com/gcm/send/APA91bHPffi...* 
+
+### Anatomie d'une notification
+
+Pour générer une notification Push, votre serveur devra utiliser l'objet Subscription et donc le endpoint fourni.
+Pour voir en détail comment gérer cela, consultez cet article : [Sending Messages](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/sending-messages).
+
+La prise en compte d'une notification est réalisée par le Service Worker, en écoutant un évènement "push" :
+
+{{< highlight js >}}
+self.addEventListener('push', event => {
+  event.waitUntil(
+    // Display a notification
+    self.registration.showNotification('You got a notification!');
+  );
+});
+{{< /highlight >}}
+
+Une notification ne requis qu'un titre, mais d'autres options sont possibles :
+
+{{< highlight js >}}
+self.registration.showNotification('You got a notification!', {
   "body": "Souhaitez-vous confirmer le rendez-vous du 20/11/2016 avec M. Martin ?",
   "icon": "/images/meeting.png",
   "tag": "meeting",
@@ -215,20 +411,38 @@ Exemple du contenu d'une notification :
     { "action": "yes", "title": "Yes", "icon": "images/yes.png" },
     { "action": "no", "title": "No", "icon": "images/no.png" }
   ]
-}
+ });
 {{< /highlight >}}
 
 Comme vous pouvez le voir, outre le contenu et l'icone de la notification, il est possible :
 
-- de taguer la notification (ici "meeting") afin de permettre à l'OS qui gère la notification de grouper les notifications de même tag.
+- de taguer la notification (ici "meeting") afin de permettre de grouper les notifications de même tag,
 - de proposer différentes actions pour permettre à l'utilisateur d'interagir avec notre web app directement depuis la notification.
 
+Deux autres écouteurs sont disponibles pour réaliser des actions lorsque l'utilisateur ouvre ou ferme la notification :
+
 {{< highlight js >}}
-@todo : exemple code push et notif
+self.addEventListener('notificationclick', event => {  
+  // Do something with the event  
+  event.notification.close();  
+});
+
+self.addEventListener('notificationclose', event => {  
+  // Do something with the event  
+});
 {{< /highlight >}}
 
-https://developers.google.com/web/fundamentals/getting-started/codelabs/push-notifications/
-https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/
+Pour en savoir plus sur la gestion des notifications :
+
+- [Sending Messages](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/sending-messages)
+- [Handling Messages](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/handling-messages).
+
+## Démos
+
+- [Pokedex.org](https://www.pokedex.org/) est une web app que vous pouvez consulter en mode déconnecté.
+- [Wikipedia offline demo](https://wiki-offline.jakearchibald.com/) est une démo montrant les possibilités de concevoir les applications en "offline-first".
+- [Flipkart](https://www.flipkart.com/) est un site marchand qui fonctionne également en hors-ligne. Les contenus sont grisés lorsque le contenu n'est pas caché.
+Un article à lire à ce sujet : [Building Flipkart Lite: A Progressive Web App](https://medium.com/@AdityaPunjani/building-flipkart-lite-a-progressive-web-app-2c211e641883#.zfx2f64ws).
 
 ## Outils
 
@@ -271,7 +485,7 @@ De plus, voici d'autres outils - tous propulsés par Google - pour faciliter le 
 - [Service Worker Toolbox](https://github.com/GoogleChrome/sw-toolbox) est un ensemble d'outils permettant notamment de gérer le *routing* vers du contenu caché ou du contenu en ligne.
 - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) est une extension Chrome permettant d'analyser une page et nous aider à implémenter les bonnes pratiques d'une Progressive Web App.
 
-## Mais ils sont où Safari et iOS ?
+## Ils en sont où Safari et iOS ?
 
 L'arrivée des Progressive Web Apps met clairement en danger le modèle du store d'Apple. La firme à la pomme traine sans doute volontairement des pieds.
 
@@ -283,18 +497,13 @@ Inutile d'utiliser un navigateur Chrome sur votre iPhone ou votre iPad pour prof
 
 Du côté de [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/), bonne nouvelle, le Service Worker est en cours d'implémentation.
 
-Pour suivre l'avancement de l'implémentation de Service Worker, un site : [Is Service Worker Ready?](https://jakearchibald.github.io/isserviceworkerready/)
-
-En bref, en cette fin 2016, tout le potentiel des Progressives Web Apps n'est exploité que sous Android + Chrome ou Firefox ou Opera (oui vous avez bien lu).
+En bref, en cette fin 2016, tout le potentiel des Progressives Web Apps n'est exploité que sous Android + Chrome, Firefox ou Opera (oui Opera, vous avez bien lu).
 
 Ce n'est pas une raison d'attendre pour vous mettre aux Progressives Web Apps ;
 ces technologies sont en cours de propagation ;
 les utilisateurs Android sont majoritaires par rapport à tous les autres OS, autant les adresser maintenant et les autres en profiteront dès que ces technologies seront supportées.
 
-## Démos
-
-- [Pokedex.org](https://www.pokedex.org/) est une web app que vous pouvez consulter en mode déconnecté.
-- [Wikipedia offline demo](https://wiki-offline.jakearchibald.com/) est une démo montrant les possibilités de concevoir les applications en "offline-first".
+Pour suivre l'avancement de l'implémentation de Service Worker, un site : [Is Service Worker Ready?](https://jakearchibald.github.io/isserviceworkerready/)
 
 ## Et après ?
 
