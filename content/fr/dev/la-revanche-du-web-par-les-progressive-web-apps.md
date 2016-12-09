@@ -34,11 +34,11 @@ Et honnêtement, Google n'a pas tout à fait tort. Voici pourquoi.
 
 - **Amélioration progressive** : le site fonctionne pour n'importe quel utilisateur quel que soit le navigateur utilisé. Seuls les navigateurs modernes (comprendre Chrome et Firefox) profiteront de toutes les possibilités.
 - **Responsive** : s'ajuste à la taille de l'écran, sur ordinateur, mobile ou tablette.
-- **Indépendant de la connexion** : expérience améliorée grâce au Service Worker qui permettent à l'application de fonctionner hors connexion ou en très bas débit.
+- **Indépendant de la connexion** : expérience améliorée grâce aux Service Workerx qui permettent à l'application de fonctionner hors connexion ou en très bas débit.
 - **Sécurité garantie** : l'utilisation d'un Service Worker est conditionnée par le fait que le site est délivré en https. 
 - **Ré-engagement de l'utilisateur** grâce :
     - aux notifications push,
-    - à la possibilité d'installer un bon vieux raccourci sur l'écran d'accueil de l'appareil (sur mobile, tablette...).
+    - à la possibilité d'installer un icône de raccourci comme pour une application native sur l'écran d'accueil de l'appareil (sur mobile, tablette...).
 - **Légère et rapide** : le poids d'une app native est souvent minimum x10 par rapport à son équivalent web optimisé pour mobile.
 Dans nos contrées où le haut-débit et la 4G sont des normes, il en n'est pas de même dans les pays en voie de développement.
 De plus, nous ne profitons pas toujours d'une connectivité ou d'un débit constant.
@@ -255,7 +255,7 @@ Dans votre `<head>` html, il suffit de déclarer votre manifest de la façon sui
 
 À quel moment le "prompt" ou bannière d'installation sur l'écran d'accueil s'affiche ?
 
-En tant que développeur, il n'est pas possible de déclencer cet évènement.
+En tant que développeur, il n'est pas possible de déclencher cet évènement.
 C'est le navigateur qui décide de l'afficher sous certaines conditions.
 Par exemple, les conditions de Chrome sont (liste non exhaustive) :
 
@@ -265,7 +265,7 @@ Par exemple, les conditions de Chrome sont (liste non exhaustive) :
 
 Et ces conditions peuvent changer dans les futures versions des navigateurs !
 
-En tant que développeur, on peut toutefois attrapé cet évènement et l'afficher plus tard par exemple en attendant que l'utilisateur réalise une "action positive" sur notre application.
+En tant que développeur, on peut toutefois attraper cet évènement et l'afficher plus tard par exemple en attendant que l'utilisateur réalise une "action positive" sur notre application.
 Afin qu'il soit sollicité dans le bon timing.
 Par exemple, dans le code ci-dessous, nous allons sauvegarder le prompt en écoutant l'évènement "beforeinstallprompt"
 et différer l'affichage lorsque l'utilisateur aura cliqué sur un bouton :
@@ -306,7 +306,7 @@ Les Push et les Notifications sont deux technologies différentes mais compléme
 - l'[API Push](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) est utilisée lorsqu'un serveur sur Internet envoi une notification attrapée et traitée par le service worker sur notre navigateur
 - l'[API Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API) permet au Service Worker d'afficher la notification à l'utilisateur.
 
-### Demander à l'utilisateur de souscrire aux notifications
+### L'API Push ou demander à l'utilisateur de souscrire aux notifications
 
 Cela se passe ainsi, non pas dans le Service Worker mais dans le code JavaScript de vos pages :
 
@@ -384,7 +384,7 @@ Exemple d'objet Subscription généré par le navigateur :
 Le *endpoint* dépend du navigateur utilisé et c'est lui même qui vous le fourni.
 Par exemple pour Chrome, c'est un endpoint qui ressemble à ça : *https://android.googleapis.com/gcm/send/APA91bHPffi...* 
 
-### Anatomie d'une notification
+### L'API Notifications
 
 Pour générer une notification Push, votre serveur devra utiliser l'objet Subscription et donc le endpoint fourni.
 Pour voir en détail comment gérer cela, consultez cet article : [Sending Messages](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/sending-messages).
