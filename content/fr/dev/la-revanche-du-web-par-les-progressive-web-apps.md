@@ -157,11 +157,7 @@ De nombreuses stratégies de gestion du cache existent.
 Jake Archibald, un des ingénieurs de Google a écrit un article complet à ce sujet : [The offline cookbook](https://jakearchibald.com/2014/offline-cookbook/).
 Il n'y a pas de "meilleure solution"; tout dépendra de votre besoin.
 
-### Mise à jour d'un 
-
-
-
-
+### Mise à jour d'un Service Worker
 
 Pour mettre à jour un Service Worker ou les ressources mises en cache par le Service Worker, il faut supprimer les ressources en cache.
 
