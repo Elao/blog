@@ -34,7 +34,7 @@ Et honnêtement, Google n'a pas tout à fait tort. Voici pourquoi.
 
 - **Amélioration progressive** : le site fonctionne pour n'importe quel utilisateur quel que soit le navigateur utilisé. Seuls les navigateurs modernes (comprendre Chrome et Firefox) profiteront de toutes les possibilités.
 - **Responsive** : s'ajuste à la taille de l'écran, sur ordinateur, mobile ou tablette.
-- **Indépendant de la connexion** : expérience améliorée grâce aux Service Workerx qui permettent à l'application de fonctionner hors connexion ou en très bas débit.
+- **Indépendant de la connexion** : expérience améliorée grâce au Service Worker qui permet à l'application de fonctionner hors connexion ou en très bas débit.
 - **Sécurité garantie** : l'utilisation d'un Service Worker est conditionnée par le fait que le site est délivré en https. 
 - **Ré-engagement de l'utilisateur** grâce :
     - aux notifications push,
