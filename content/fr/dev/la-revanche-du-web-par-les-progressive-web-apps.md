@@ -157,7 +157,11 @@ De nombreuses stratégies de gestion du cache existent.
 Jake Archibald, un des ingénieurs de Google a écrit un article complet à ce sujet : [The offline cookbook](https://jakearchibald.com/2014/offline-cookbook/).
 Il n'y a pas de "meilleure solution"; tout dépendra de votre besoin.
 
-### Mise à jour d'un Service Worker
+### Mise à jour d'un 
+
+
+
+
 
 Pour mettre à jour un Service Worker ou les ressources mises en cache par le Service Worker, il faut supprimer les ressources en cache.
 
@@ -185,9 +189,9 @@ Les nouvelles versions des fichiers seront alors récupérées au prochain charg
 
 Pour booster vos web apps, il est recommandé d'opter pour une architecture de type "App Shell".
 C'est à dire que vous fournissez une coquille vide contenant la présentation de votre app (html, js, css, images).
-Ces ressources sont mis en cache et n'ont pas besoin d'être retéléchargées à chaque requête.
+Ces ressources sont mises en cache et n'ont pas besoin d'être retéléchargées à chaque requête.
 Ensuite, les données sont récupérées via des *fetch* d'API par exemple et viennent s'insérer dans votre présentation à l'aide par exemple de votre framework Frontend préféré.
-Les requêtes à ces API peuvent elles-mêmes mises en cache.
+Les requêtes à ces API peuvent elles-mêmes être mises en cache.
 
 <p class="text-center">
     <img src="/fr/images/posts/2016/pwa/appshell.png" alt="Appshell" style="max-width:80%"/>
@@ -195,7 +199,7 @@ Les requêtes à ces API peuvent elles-mêmes mises en cache.
 
 ### C'est réservé aux apps mobile ?
 
-Il est vrai que les problèmes de connectivité, on l'a surtout en position de mobilité et grâce à la gestion du cache, une web app reste utilisable même en mode déconnecté.
+Il est vrai que le problème de connectivité, on l'a surtout en position de mobilité et grâce à la gestion du cache, une web app reste utilisable même en mode déconnecté.
 Mais rien ne vous empêche d'utiliser un Service Worker pour booster vos applications web *desktop*.
 Les mastodontes tels que Gmail ou Facebook les utilisent couramment.
 
@@ -461,7 +465,7 @@ Sous Chrome desktop, l'ajout sera effectivement fait dans les onglets Applicatio
     <img src="/fr/images/posts/2016/pwa/chrome-devtools-manifest.png" alt="service worker" style="max-width:80%"/>
 </p>
 
-Consulter le Service Worker enregistrée et avoir différentes options parmi lesquelles :
+Consulter le Service Worker utilisé et avoir différentes options parmi lesquelles :
 
 - simuler la déconnection avec "offline",
 - mettre à jour le Service Worker notamment en phase de développement avec "Update on reload",
@@ -489,7 +493,7 @@ De plus, voici d'autres outils - tous propulsés par Google - pour faciliter le 
 
 L'arrivée des Progressive Web Apps met clairement en danger le modèle du store d'Apple. La firme à la pomme traine sans doute volontairement des pieds.
 
-Une Progressive Web App fonctionne sous iOS, mais les utilisateur ne profitent ni du Service Worker, ni donc de la mise en cache et des notifications Push. Ils voient un site web responsive "normal".
+Une Progressive Web App fonctionne sous iOS, mais les utilisateurs ne profitent ni du Service Worker, ni donc de la mise en cache et des notifications Push. Ils voient un site web responsive "normal".
 
 L'implémentation du Service Worker dans WebKit, le moteur de rendu de Safari, est "[under consideration](https://webkit.org/status/#specification-service-workers)".
 
