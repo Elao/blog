@@ -38,7 +38,7 @@ Et honnêtement, Google n'a pas tout à fait tort. Voici pourquoi.
 - **Sécurité garantie** : l'utilisation d'un Service Worker est conditionnée par le fait que le site est délivré en https. 
 - **Ré-engagement de l'utilisateur** grâce :
     - aux notifications push,
-    - à la possibilité d'installer un icône de raccourci comme pour une application native sur l'écran d'accueil de l'appareil (sur mobile, tablette...).
+    - à la possibilité d'installer un icône de raccourci comme pour une application native sur l'écran d'accueil de l'appareil (sur mobile, tablette...).
 - **Légère et rapide** : le poids d'une app native est souvent minimum x10 par rapport à son équivalent web optimisé pour mobile.
 Dans nos contrées où le haut-débit, la 4G et le forfait data quasi illimité sont des normes, il en n'est pas de même dans les pays en voie de développement.
 De plus, nous ne profitons pas toujours d'une connectivité ou d'un débit constant.
