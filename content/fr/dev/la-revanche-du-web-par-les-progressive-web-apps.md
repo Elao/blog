@@ -484,6 +484,7 @@ De plus, voici d'autres outils - tous propulsés par Google - pour faciliter le 
 - [Service Worker Precache](https://github.com/GoogleChrome/sw-precache/) est un module node pour faciliter la gestion de la mise en cache des ressouces statiques (HTML, JavaScript, CSS, images, etc.) via un Service Worker. Un [codelab](https://codelabs.developers.google.com/codelabs/sw-precache/index.html) est disponible.
 - [Service Worker Toolbox](https://github.com/GoogleChrome/sw-toolbox) est un ensemble d'outils permettant notamment de gérer le *routing* vers du contenu caché ou du contenu en ligne.
 - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) est une extension Chrome permettant d'analyser une page et nous aider à implémenter les bonnes pratiques d'une Progressive Web App.
+- [Progressive Web App Checklist](https://developers.google.com/web/progressive-web-apps/checklist)
 
 ## Ils en sont où Safari et iOS ?
 
