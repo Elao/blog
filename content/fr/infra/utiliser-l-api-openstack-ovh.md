@@ -1,8 +1,8 @@
 ---
 type:               "post"
 title:              "Utiliser l'API Openstack OVH"
-date:               "2016-12-07"
-publishdate:        "2016-12-07"
+date:               "2016-12-16"
+publishdate:        "2016-12-16"
 draft:              false
 slug:               "utiliser-l-api-openstack-ovh"
 description:        "Préparer son environnement pour utiliser l'API openstack d'OVH, pré-requis et installation du client"
