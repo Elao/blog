@@ -117,4 +117,4 @@ root@97cbc23bcd97:/srv# openstack server list
 Une bonne partie de l'API openstack vous est à présent accessible et couvrira les manques fonctionnels du manager ainsi que les carences de l'API OVH pour la configuration d'environnements un tant soit peu complexes.
 L'utilisation des différents clients s'avère, de prime abord, peu aisée mais on s'y fait vite.
 
-Comme à l'accoutumé cet article est ouvert à toutes critiques, suggestions et corrections.
+Comme à l'accoutumé cet article est ouvert à toutes critiques, suggestions et/ou corrections.
