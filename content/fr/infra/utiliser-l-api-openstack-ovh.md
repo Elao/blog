@@ -122,7 +122,7 @@ Certains l'auront remarqué, il existe une dernière variable d'importance dans 
 * Gravelines (GRA1)
 * ou Beauharnois (BHS1)
 
-Elles est d'importance car pour chacun de ces DC vous ne verrez (et c'est logique) que les instances qui lui sont rattachées.
+Elle est d'importance car pour chacun de ces DC vous ne verrez (et c'est logique) que les instances qui lui sont rattachées.
 
 ----
 Une bonne partie de l'API openstack vous est à présent accessible et couvrira les manques fonctionnels du manager ainsi que les carences de l'API OVH pour la configuration d'environnements un tant soit peu complexes.
