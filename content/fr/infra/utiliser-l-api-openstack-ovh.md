@@ -113,6 +113,17 @@ root@97cbc23bcd97:/srv# openstack server list
 | 73fv7fb4-1234-4fff-9a51-eb4e5fbf654a | GW_XXXXX | ACTIVE | Ext-Net=XXX.XXX.XXX.XXX |
 +--------------------------------------+----------+--------+-------------------------+
 ```
+
+## Zones géographiques
+
+Certains l'auront remarqué, il existe une dernière variable d'importance dans le fichier de configuration. La variable `OS_REGION_NAME` permet, en effet, de spécifier à quel DC vous souhaitez vous connecter:
+
+* Roubaix (RBX1)
+* Gravelines (GRA1)
+* ou Beauharnois (BHS1)
+
+Elle est d'importance car pour chacun de ces DC vous ne verrez (et c'est logique) que les instances qui lui sont rattachées.
+
 ----
 Une bonne partie de l'API openstack vous est à présent accessible et couvrira les manques fonctionnels du manager ainsi que les carences de l'API OVH pour la configuration d'environnements un tant soit peu complexes.
 L'utilisation des différents clients s'avère, de prime abord, peu aisée mais on s'y fait vite.
