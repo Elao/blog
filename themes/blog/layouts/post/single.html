@@ -10,34 +10,35 @@
         {{ partial "navbar.html" . }}
         {{if .PrevInSection}}
         <div class="article-link article-prev">
-            <a href="{{.PrevInSection.Permalink}}">{{ ( index $.Site.Data.translations $.Site.Params.locale ).post_prev }}</a>
+            <a href="{{.PrevInSection.Permalink}}">{{ i18n "post_prev" }}</a>
             <div class="article-infos">
-                <div class="article-img" style="background-image: url('{{ partial "i18n.html" . }}{{ .PrevInSection.Params.thumbnail }}');"></div>
+                <div class="article-img" style="background-image: url('{{ .PrevInSection.Params.thumbnail }}');"></div>
             </div>
         </div>
         {{end}}
         {{if .NextInSection}}
         <div class="article-link article-next">
-            <a href="{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}">{{ ( index $.Site.Data.translations $.Site.Params.locale ).post_next }}</a>
+            <a href="{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}">{{ i18n "post_next" }}</a>
             <div class="article-infos">
-                <div class="article-img" style="background-image: url('{{ partial "i18n.html" . }}{{ .NextInSection.Params.thumbnail }}');"></div>
+                <div class="article-img" style="background-image: url('{{ .NextInSection.Params.thumbnail }}');"></div>
             </div>
         </div>
         {{end}}
         <header>
             {{ $context := . }}
-            <h4>{{ range .Params.tags }}<strong><a href="{{ partial "i18n.html" $context }}/tags/{{ . | urlize }}">{{ . }}</a></strong> {{ end }} - {{ .PublishDate.Format "02 Jan 2006" }}</h4>
+
+            <h4>{{ range .Params.tags }}<strong><a href="{{ $.LanguagePrefix }}/tags/{{ . }}">{{ . }}</a></strong> {{ end }} - {{ .PublishDate.Format "02 Jan 2006" }}</h4>
             <h1>{{ .Title }}</h1>
             <p class="author">
-                <a href="//www.elao.com/fr/la-tribu" class="author"><img src="{{ if $social.avatar }}{{ partial "i18n.html" . }}/images/{{ $social.avatar }}{{ else }}{{ partial "i18n.html" . }}/images/logo.svg{{ end }}" alt="{{ $author.display_name }}"></a>
+                <a href="https://www.elao.com/fr/la-tribu" class="author"><img src="{{ "/images/" }}{{ if $social.avatar }}{{ $social.avatar }}{{ else }}logo.svg{{ end }}" alt="{{ $author.display_name }}"></a>
                 <br/>
-                <span>{{ ( index $.Site.Data.translations $.Site.Params.locale ).post_wrote_by }} <a href="//www.elao.com/fr/la-tribu" class="strong">{{ $author.display_name }}</a></span>
+                <span>{{ i18n "post_wrote_by" }} <a href="https://www.elao.com/fr/la-tribu" class="strong">{{ $author.display_name }}</a></span>
             </p>
             <div class="intro">
                 {{ .Description }}
             </div>
             <div class="hero">
-                <img src="{{ if isset .Params "header_img" }} {{ partial "i18n.html" . }}{{ index .Params "header_img" }}{{ else }}https://placeimg.com/1000/310/any{{ end }}" alt="" />
+                <img src="{{ if isset .Params "header_img" }}{{ index .Params "header_img" }}{{ else }}https://placeimg.com/1000/310/any{{ end }}" alt="" />
             </div>
         </header>
         <div class="container">
@@ -57,7 +58,7 @@
                         {{ partial "social-avatar.html" (dict "context" $context "social" $social "author" $author) }}
                         {{ end }}
                         <div class="job">
-                            <a href="//www.elao.com/fr/la-tribu"><strong>{{ $author.display_name }}</strong></a><br/>
+                            <a href="https://www.elao.com/fr/la-tribu"><strong>{{ $author.display_name }}</strong></a><br/>
                             {{ $author.job_title }}
                         </div>
                         <div class="links">
