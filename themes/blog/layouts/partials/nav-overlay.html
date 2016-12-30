@@ -10,17 +10,17 @@
                 {{ $currentNode := . }}
                 {{ range .Site.Menus.main }}
                     <div class="col-sm-3">
-                        <h3><a href="{{.URL}}">{{ .Name }}</a></h3>
+                        <h3><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></h3>
                         <ul>
                         {{ range .Children }}
-                            <li><a href="{{.URL}}">{{ .Name }}</a></li>
+                            <li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
                         {{ end }}
                         </ul>
                     </div>
                 {{ end }}
             </div>
         </div>
-        <!-- 
+        <!--
         <h3>Derniers articles</h3>
         <div class="last-articles">
             <article>
