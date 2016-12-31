@@ -7,7 +7,6 @@ draft:              false
 slug:               "elao-paris"
 description:        "Elao met un coup d'accélérateur sur Paris et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/haphpybirthday.jpg"
 header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Paris", "Recrutement", "Tribu",]
@@ -18,7 +17,7 @@ co_authors:         []
 
 ---
 
-# TL;DR 
+# TL;DR
 
 Elao met un **coup d'accélérateur sur Paris** et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => [jobs@elao.com](mailto:jobs@elao.com)** <!--more-->
 
@@ -30,7 +29,7 @@ Dans notre développement parisien, nous **recherchons des développeuses et dé
 
 # Une équipe proche du client
 
-Elao Paris est une tribu montée sur le concept d’une équipe de développement et un accompagnant projet. 
+Elao Paris est une tribu montée sur le concept d’une équipe de développement et un accompagnant projet.
 
 Une **équipe est composée de 3-4 développeurs**. Elle a suffisamment d'expérience pour **être force de proposition chez nos clients**. Elle travaille à l'agence et rencontre régulièrement le client pour recueillir le besoin et partager l'avancement. Elle s'organise pour trouver la solution la plus adaptée au projet, au produit.
 
@@ -40,7 +39,7 @@ Cette connaissance du produit nous permet de mieux répondre à nos clients. L'�
 
 Notre socle technique est basé **depuis 2006** sur PHP et le framework **Symfony** sur lequel nous avons beaucoup investi. Nous faisons partie des tout premiers **partenaires officiels de SensioLabs**, l'éditeur de Symfony. Mais le web ne résume pas à la partie backend; nous avons également une affinité grandissante avec l'écosystème **JavaScript**, avec des projets en **React**, **ReactNative**, **EmberJs** ou **Meteor**.
 
-Notre positionnement historique sur Symfony nous confronte à des projets profondément techniques. **Chaque projet est unique**. Nous faisons de l'**application web métier sur mesure**. 
+Notre positionnement historique sur Symfony nous confronte à des projets profondément techniques. **Chaque projet est unique**. Nous faisons de l'**application web métier sur mesure**.
 
 Cette appétence technique et notre recherche de l'efficacité nous ont très rapidement fait monter en compétence sur la partie Ops. Porté par la mouvance **DevOps**, nous avons commencé par **l'optimisation de notre écosystème de développement**, puis de nos environnements de démo, pour finir par la prod et faire émerger un **nouveau métier** chez Elao : **l'hébergement sur mesure** d'application web. Nous sommes positionnés sur la solution **Ansible**.
 
@@ -81,7 +80,7 @@ Nous sommes conscients que les technologies avancent rapidement. Nous souhaitons
 
 Nous appliquons aussi cette recette sur des projets. Notre jeu **[LazerDrive](http://www.lazerdrive.io/)** est né comme un **projet de R&D** sous le nom de **[Curvytron](http://www.curvytron.com)** avant de prendre son envol en tant que projet à part entière. Nous avons aussi **participé aux lancements de startups**.
 
-Vous pouvez nous croiser sur les **conférences techniques** où nous participons et proposons des sujets. Nous sommes **impliqués dans la vie de l'AFUP** depuis 2008 et nous organisons le meetup lyonnais Ansible. 
+Vous pouvez nous croiser sur les **conférences techniques** où nous participons et proposons des sujets. Nous sommes **impliqués dans la vie de l'AFUP** depuis 2008 et nous organisons le meetup lyonnais Ansible.
 
 Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code avec l'**[ouverture de notre stack Symfony](https://github.com/Elao/symfony-standard)**, de certains de nos **[bundles](https://github.com/Elao?query=bundle)** ou de nos **[rôles Ansible](https://github.com/Manala)**.
 

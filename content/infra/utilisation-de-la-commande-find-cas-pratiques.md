@@ -7,7 +7,6 @@ draft:              false
 slug:               "utilisation-de-la-commande-find-cas-pratiques"
 description:        "Utilisation de la commande find - cas pratiques"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/homer-do-not-care.png"
 tags:               ["Linux", "Trucs et astuces", "Tips"]
 categories:         ["Infra", "Linux"]

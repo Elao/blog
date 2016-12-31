@@ -7,7 +7,6 @@ draft:              false
 slug:               "creer-une-autorite-de-certification-et-des-certificats-ssl-auto-signes"
 description:        "Créer une autorité de certification et des certificats SSL auto-signés"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/matryoshka.jpg"
 tags:               ["Linux", "Sécurité"]
 categories:         ["Linux", "Infra"]

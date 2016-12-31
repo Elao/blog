@@ -7,7 +7,6 @@ draft:              false
 slug:               "comment-integrer-vue-js-application-symfony"
 description:        "Guide d'intrégration de Vue.js dans une application Symfony"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/vuejs.jpg"
 header_img:         "/images/posts/headers/vuejs.jpg"
 tags:               ["Vue.js","Javascript","Front","Frontend","Framework","Symfony"]

@@ -7,7 +7,6 @@ draft:              false
 slug:               "installation-d-un-depot-svn"
 description:        "Installation d'un dépôt SVN pour gérer et versioner le code source d'un projet"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/kenny.jpg"
 tags:               ["Linux", "SVN"]
 categories:         ["Infra", "Linux"]

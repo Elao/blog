@@ -7,7 +7,6 @@ draft:              false
 slug:               "le-teletravail-point-de-vue"
 description:        "Pratique encore relativement marginale dans l'entreprise française, le télétravail s'imposera sans doute dans les années à venir comme une réelle alternative aux méthodes traditionnelles. Bilan sur ses avantages et ses inconvénients, de mon point de vue."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/RemoteMountain.jpg"
 header_img:         "/images/posts/headers/elao_babyfoot.jpg"
 tags:               ["teletravail", "vie au travail"]

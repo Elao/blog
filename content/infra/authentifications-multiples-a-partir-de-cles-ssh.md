@@ -7,7 +7,6 @@ draft:              false
 slug:               "authentifications-multiples-a-partir-de-cles-ssh"
 description:        "Authentifications multiples à partir de clés SSH."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/keep-calm-and-connect-to-ssh.png"
 tags:               ["ssh", "Linux","Sécurité","Trucs et astuces","Tips"]
 categories:         ["Infra", "Linux", "SSH"]

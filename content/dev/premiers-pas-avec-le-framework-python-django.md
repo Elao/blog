@@ -7,7 +7,6 @@ draft:              false
 slug:               "premiers-pas-avec-le-framework-python-django"
 description:        "Premiers pas avec le framework Python \"Django\""
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/first_step.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
 categories:         ["Django", "Python"]
@@ -175,9 +174,9 @@ Cette commande a ajouté à la racine de notre projet un répertoire nommé **he
 
 C'est quoi une application au juste ? Quelle est la différence entre "projet" et "application" ?
 
-Bon, je vous avoue que je redoutais un peu cette question, car je manque moi-même du recul nécessaire pour décrire avec exactitude les contours d'une application selon la terminologie employée par Django. Mais je vais m'efforcer tout de même d'y répondre de manière relativement claire en me basant sur un exemple concret et je vous prie de m'excuser par avance si ma réponse reste approximative et/ou trop schématique. 
+Bon, je vous avoue que je redoutais un peu cette question, car je manque moi-même du recul nécessaire pour décrire avec exactitude les contours d'une application selon la terminologie employée par Django. Mais je vais m'efforcer tout de même d'y répondre de manière relativement claire en me basant sur un exemple concret et je vous prie de m'excuser par avance si ma réponse reste approximative et/ou trop schématique.
 
-Admettons que vous souhaitiez développer un site Internet consacré à votre sport préféré, le curling ou le crachat de pépins acrobatique. Votre site se déclinera sans doute en plusieurs grandes fonctionnalités : vous souhaiterez sans doute développer un module principal dans lequel vous afficherez les actualités liées à votre sport favori, un module de vente d'articles et vêtements nécessaires à la pratique de votre sport préféré, une gallerie de photographies ou de vidéos, un forum dans lequel pourront s'exprimer tous ceux qui souhaitent partager leur passion immodérée du curling, et j'en passe. Dans cet exemple, je serais tenté de dire que le site internet constituerait le projet au sens de Django, tandis que le forum, la gallerie photos, le module de news, etc. en constitueraient des applications. 
+Admettons que vous souhaitiez développer un site Internet consacré à votre sport préféré, le curling ou le crachat de pépins acrobatique. Votre site se déclinera sans doute en plusieurs grandes fonctionnalités : vous souhaiterez sans doute développer un module principal dans lequel vous afficherez les actualités liées à votre sport favori, un module de vente d'articles et vêtements nécessaires à la pratique de votre sport préféré, une gallerie de photographies ou de vidéos, un forum dans lequel pourront s'exprimer tous ceux qui souhaitent partager leur passion immodérée du curling, et j'en passe. Dans cet exemple, je serais tenté de dire que le site internet constituerait le projet au sens de Django, tandis que le forum, la gallerie photos, le module de news, etc. en constitueraient des applications.
 
 Mais une des notions qui m'apparaît fondamentale pour définir une application, c'est la possibilité de réutiliser une application dans un autre projet (exemple avec le forum). Noter que chaque application peut contenir ses propres classes du Modèle (au sens MVC du terme). Quant au projet, je serais tenté de le définir comme un ensemble d'applications partageant des paramètrages communs (base de données, définitions de constantes, layout commun, nom de domaine ...). Dans notre exemple, compte tenu de la modestie et de la pauvreté fonctionnelle du projet que nous développons, celui-ci ne comportera qu'une seule application.
 

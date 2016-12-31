@@ -7,7 +7,6 @@ draft:              false
 slug:               "django-3eme-partie-les-templates-et-bien-dautres-choses"
 description:        "Django (3ème partie) : les templates, et bien d'autres choses ..."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/django.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
 categories:         ["Django", "Python"]

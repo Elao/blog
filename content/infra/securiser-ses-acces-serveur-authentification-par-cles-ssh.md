@@ -8,7 +8,6 @@ draft:              false
 slug:               "securiser-ses-acces-serveur-authentification-par-cles-ssh"
 description:        "Sécuriser ses accès serveur: Authentification par clés SSH."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/hdd_partition.jpg"
 tags:               ["ssh", "Sécurité"]
 categories:         ["Infra", "Linux", "SSH"]

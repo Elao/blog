@@ -7,7 +7,6 @@ draft:              false
 slug:               "twig-quelques-pro-tips-issue-du-symfony-live-2013"
 description:        "Twig : Quelques pro-tips issue du Symfony Live 2013"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/badass_vader.jpg"
 header_img:         "/images/posts/headers/php_forum_team_elao.jpg"
 tags:               ["Tips", "Twig", "Symfony 2"]

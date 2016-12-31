@@ -7,7 +7,6 @@ draft:              false
 slug:               "introduction-au-provisioning"
 description:        "Introduction aux principes de base de l'approvisionnement (ou provisoning) d'environnements de développement, d'exécution, de production ou encore de test"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/puppet.jpg"
 header_img:         "/images/posts/headers/php_elao_code.jpg"
 tags:               ["Ansible", "Linux", "Virtualisation"]

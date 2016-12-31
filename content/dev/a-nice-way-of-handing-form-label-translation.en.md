@@ -7,7 +7,6 @@ draft:              false
 slug:               "a-nice-way-of-handing-form-label-translation"
 description:        "A nice way of handling form label translation"
 
-language:           "en"
 thumbnail:          "/images/posts/thumbnails/cool_cat.jpg"
 tags:               ["Symfony", "Form", "Theming", "Translation"]
 categories:         ["Dev", "Form", "Symfony"]

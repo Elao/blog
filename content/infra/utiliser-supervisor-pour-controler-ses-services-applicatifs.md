@@ -8,7 +8,6 @@ draft:              false
 slug:               "utiliser-supervisor-pour-controler-ses-services-applicatifs"
 description:        "Supervisor est un système de contrôle des processus/services applicatifs destiné aux systèmes de types UNIX."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/ice_bulb.jpg"
 tags:               ["Services", "Infra", "Linux", "Debian", "Supervisor"]
 categories:         ["Infra", "Linux"]
@@ -17,9 +16,9 @@ author_username:    "gfaivre"
 
 ---
 
-Bonjour à tous, 
+Bonjour à tous,
 
-Aujourd'hui nous allons faire le tour d'une solution fort sympathique que nous utilisons @elao pour faire tourner certains services applicatifs. 
+Aujourd'hui nous allons faire le tour d'une solution fort sympathique que nous utilisons @elao pour faire tourner certains services applicatifs.
 
 Son petit nom ? [**Supervisor**](http://supervisord.org/).
 
@@ -73,7 +72,7 @@ Après redémarrage de supervisor (```/etc/init.d/supervisor restart```) nous po
 
 ```
 elao@bismuth:/etc/supervisor/conf.d|
-⇒  supervisorctl 
+⇒  supervisorctl
 mailcatcher                      RUNNING    pid 7840, uptime 2 days, 4:51:46
 phantomjs                        RUNNING    pid 7842, uptime 2 days, 4:51:46
 blogd                            RUNNING    pid 11929, uptime 0:02:41

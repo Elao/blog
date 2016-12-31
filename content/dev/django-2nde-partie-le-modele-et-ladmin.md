@@ -7,7 +7,6 @@ draft:              false
 slug:               "django-2nde-partie-le-modele-et-ladmin"
 description:        "Django (2nde partie) : le Modèle et l’Admin"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/django.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
 categories:         ["Django", "Python"]

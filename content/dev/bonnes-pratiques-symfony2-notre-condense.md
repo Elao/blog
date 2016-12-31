@@ -7,7 +7,6 @@ draft:              false
 slug:               "bonnes-pratiques-symfony2-notre-condense"
 description:        "Bonnes pratiques Symfony2 : notre condensé !"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/kafeine.png"
 header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Tips", "Symfony"]

@@ -6,7 +6,7 @@ publishdate:        "2015-11-26"
 draft:              false
 slug:               "forum-php-2015"
 description:        "Nous étions au Forum PHP de l'AFUP, voici ce que l'on a retenu."
-language:           "fr"
+
 thumbnail:          "/images/posts/thumbnails/haphpybirthday.jpg"
 header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Conférence", "ForumPHP"]
@@ -21,7 +21,7 @@ Le Forum PHP de l'<abbr title="Association Française des Utilisateurs de PHP">A
 cette année, des membres de la Core team du développement de PHP et le créateur du langage, le groenlandais Rasmus
 Lerdorf.
 Et pour cause ! Nous fêtons les 15 ans de l'association et les 20 ans du langage. Cerise sur le gâteau, nous fêtons
-également la sortie de PHP7, une version majeure déjà plébiscitée pour les gains en performance par rapport à PHP5. 
+également la sortie de PHP7, une version majeure déjà plébiscitée pour les gains en performance par rapport à PHP5.
 
 <img src="/images/posts/2015/haphpybirthday.jpg" class="text-center">
 
@@ -46,7 +46,7 @@ Nous retenons qu'il est inutile de vouloir tout automatiser.
 Il faut surtout automatiser les processus qui sont à risque.
 De plus il ne faut pas laisser la technique résoudre tous les problèmes.
 L'Humain est au cœur de notre métier. Dans une équipe, il faut des meneurs, des gens motivés qui vont porter un projet
-ou des évolutions, que ce soit au niveau technique ou en terme d'organisation. 
+ou des évolutions, que ce soit au niveau technique ou en terme d'organisation.
 
 ### Comment Ansible et Docker changent notre environnement de mise en production par Simon Constans et Maxime Thoonsen
 
@@ -98,7 +98,7 @@ de même qui permet des poser les bases d'une application réussie.
 [Les slides de Halte à l'anarchitecture !](http://slides.opcoding.eu/anarchitecture/?standalone#/)
 
 ### PHP 7 – What changed internally? par Nikita Popov
- 
+
 Nikita est l'un des développeurs de la *core team* de PHP. Il nous a expliqué très simplement comment PHP7 a gagné en
 performance grâce à une meilleure gestion mémoire des variables, des *array* et des classes.
 
@@ -117,7 +117,7 @@ un seul endroit en étant agnostique de votre framework ou autre CMS que vous ut
 
 Kévin Gomez a créé son implémentation de ce *pattern*, une librairie appelée [RulerZ](https://github.com/K-Phoen/rulerz)
 disponible en bundle pour Symfony.
-La particularité de cette implémentation ? Un langage d'expression proche du SQL pour faire des spécifications lisibles. 
+La particularité de cette implémentation ? Un langage d'expression proche du SQL pour faire des spécifications lisibles.
 Nous avons trouvé cette conférence dynamique et claire avec une présentation de vrais cas concrets.
 
 ### L'architecture événementielle chez Meetic par Matthieu Robin et Benjamin Pineau
@@ -175,4 +175,4 @@ Le pitch des conférences et certains slides sont disponibles sur
 [la page évènement Forum PHP](https://joind.in/event/view/3950) sur Joind.in.
 
 L'organisation animée par des membres de la communauté PHP a été parfaite. Le rendez-vous est pris pour le PHP Tour qui
-se déroulera les 23 et 24 mai prochain à Clermont-Ferrand. 
+se déroulera les 23 et 24 mai prochain à Clermont-Ferrand.

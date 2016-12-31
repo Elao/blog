@@ -7,7 +7,6 @@ draft:              false
 slug:               "symfony-2-doctrine-2-cheat-sheets"
 description:        "Symfony 2 - Doctrine 2 - Cheat Sheets"
 
-language:           "en"
 thumbnail:          "/images/posts/thumbnails/cool_cat.jpg"
 header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Symfony", "Doctrine", "Cheat sheets"]

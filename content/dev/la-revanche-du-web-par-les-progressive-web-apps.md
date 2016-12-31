@@ -6,7 +6,7 @@ publishdate:    "2016-12-05"
 draft:          false
 slug:           "la-revanche-du-web-par-les-progressive-web-apps"
 description:    "Les Progressives Web Apps ont pour objectif de rivaliser avec les apps natives. Voyons comment cela fonctionne et le gain que cela apporte à vos utilisateurs."
-language:       "fr"
+
 thumbnail:      "/images/posts/2016/pwa/pwa-general.jpg"
 header_img:     "/images/posts/2016/pwa/pwa-general.jpg"
 tags:           ["progressive web app", "service worker", "web", "mobile", "offline"]
@@ -35,7 +35,7 @@ Et honnêtement, Google n'a pas tout à fait tort. Voici pourquoi.
 - **Amélioration progressive** : le site fonctionne pour n'importe quel utilisateur quel que soit le navigateur utilisé. Seuls les navigateurs modernes (comprendre Chrome et Firefox) profiteront de toutes les possibilités.
 - **Responsive** : s'ajuste à la taille de l'écran, sur ordinateur, mobile ou tablette.
 - **Indépendant de la connexion** : expérience améliorée grâce au Service Worker qui permet à l'application de fonctionner hors connexion ou en très bas débit.
-- **Sécurité garantie** : l'utilisation d'un Service Worker est conditionnée par le fait que le site est délivré en https. 
+- **Sécurité garantie** : l'utilisation d'un Service Worker est conditionnée par le fait que le site est délivré en https.
 - **Ré-engagement de l'utilisateur** grâce :
     - aux notifications push,
     - à la possibilité d'installer un icône de raccourci comme pour une application native sur l'écran d'accueil de l'appareil (sur mobile, tablette...).
@@ -117,7 +117,7 @@ self.addEventListener('fetch', function(event) {
         if (response) {
           return response;
         }
-        
+
         // use the network to fetch request
         return fetch(event.request);
       }
@@ -323,7 +323,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
   .catch(function(error) {
     console.error('Service Worker Error', error);
   });
-  
+
   // Set the initial subscription value
   swRegistration.pushManager.getSubscription()
   .then(function(subscription) {
@@ -341,19 +341,19 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
     if (swRegistration !== undefined) {
       return;
     }
-    
+
     const applicationServerKey = urlB64ToUint8Array("yourApplicationServerPublicKey");
-    
+
     swRegistration.pushManager.subscribe({
       userVisibleOnly: true,
       applicationServerKey: applicationServerKey
     })
     .then(function(subscription) {
       console.log('User is subscribed:', subscription);
-  
+
       // We need to implement something to save the subscription, for example an API call to save it on our database
       // updateSubscriptionOnServer(subscription);
-  
+
       isSubscribed = true;
     })
     .catch(function(error) {
@@ -369,7 +369,7 @@ Cela permet de s'engager qu'une notification sera affichée à chaque fois qu'il
 Et pour en savoir plus sur comment obtenir le paramètre *applicationServerKey*,
 consultez cet article : [Generating the applicationServerKey](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/sending-messages#generating-the-key).
 
-Exemple d'objet Subscription généré par le navigateur : 
+Exemple d'objet Subscription généré par le navigateur :
 
 {{< highlight json >}}
 {  
@@ -382,7 +382,7 @@ Exemple d'objet Subscription généré par le navigateur :
 {{< /highlight >}}
 
 Le *endpoint* dépend du navigateur utilisé et c'est lui même qui vous le fourni.
-Par exemple pour Chrome, c'est un endpoint qui ressemble à ça : *https://android.googleapis.com/gcm/send/APA91bHPffi...* 
+Par exemple pour Chrome, c'est un endpoint qui ressemble à ça : *https://android.googleapis.com/gcm/send/APA91bHPffi...*
 
 ### L'API Notifications
 
@@ -494,7 +494,7 @@ Une Progressive Web App fonctionne sous iOS, mais les utilisateurs ne profitent 
 
 L'implémentation du Service Worker dans WebKit, le moteur de rendu de Safari, est "[under consideration](https://webkit.org/status/#specification-service-workers)".
 
-Inutile d'utiliser un navigateur Chrome sur votre iPhone ou votre iPad pour profiter des Progressive Web App, cela ne fonctionnera pas. En effet, Chrome sous iOS est en réalité du packaging Google autour d'un WebKit :) 
+Inutile d'utiliser un navigateur Chrome sur votre iPhone ou votre iPad pour profiter des Progressive Web App, cela ne fonctionnera pas. En effet, Chrome sous iOS est en réalité du packaging Google autour d'un WebKit :)
 
 Du côté de [Microsoft Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker/), bonne nouvelle, le Service Worker est en cours d'implémentation.
 
@@ -516,4 +516,3 @@ Que peut-on ajouter à notre Progressive Web Apps pour améliorer encore plus l'
 
 Devinez-quoi ? Ces technologies ne sont disponibles que dans les dernières versions de Chrome.
 Cependant c'est très prometteur. A suivre donc de près !
-

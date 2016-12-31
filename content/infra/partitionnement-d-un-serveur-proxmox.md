@@ -8,7 +8,6 @@ draft:              false
 slug:               "partitionnement-d-un-serveur-proxmox"
 description:        "Petit billet mémo aujourd'hui concernant le partitionnement d'un serveur Proxmox, rien de bien sorcier en soi mais il est toujours bon d'avoir un référentiel auquel se fier."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/hdd_partition.jpg"
 tags:               ["proxmox", "openvz", "partitionnement", "linux"]
 categories:         ["Infra", "Proxmox", "Linux"]
@@ -17,13 +16,13 @@ author_username:    "gfaivre"
 
 ---
 
-Bonjour à tous, 
+Bonjour à tous,
 
 Petit billet mémo aujourd'hui concernant le partitionnement d'un serveur Proxmox, rien de bien sorcier en soi mais il est toujours bon d'avoir un référentiel auquel se fier.<!--more-->
 
 Utilisant depuis un bon moment des solutions de virtualisation, nous avons pour habitude chez ELAO d'utiliser des containers OpenVZ via la distribution [Proxmox](https://www.proxmox.com/).
 
-Nous prendrons pour l'exemple une des machines OVH, machines avec lesquelles nous avons l'habitude de travailler. Pour les moins exigeants le partitionnement par défaut proposé peut parfaitement faire l'affaire. 
+Nous prendrons pour l'exemple une des machines OVH, machines avec lesquelles nous avons l'habitude de travailler. Pour les moins exigeants le partitionnement par défaut proposé peut parfaitement faire l'affaire.
 
 <p class="text-center">
     {{< figure src="/images/posts/2014/proxmox_default_partition_1000.png" title="Partitionnement par défaut OVH" alt="Partitionnement-d-un-serveur-proxmox - Partitionnement par défaut OVH" >}}

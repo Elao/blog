@@ -1,4 +1,4 @@
-{{ $author := index .Site.Data.authors .Params.author_username .Params.language }}
+{{ $author := index .Site.Data.authors .Params.author_username .Lang }}
 {{ $social := (index .Site.Data.authors $.Params.author_username).social }}
 
 {{ partial "head.html" . }}

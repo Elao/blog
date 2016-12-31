@@ -7,7 +7,6 @@ draft:              false
 slug:               "operation-sur-un-fichier-avec-la-commande-find"
 description:        "Opération sur un fichier avec la commande find"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/linux_fix.jpg"
 tags:               ["Linux", "Tips"]
 categories:         ["Infra", "Linux"]

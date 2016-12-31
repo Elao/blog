@@ -7,7 +7,6 @@ draft:              false
 slug:               "utilisation-de-levenement-kernel-terminate-sous-symfony2"
 description:        "Utilisation de l'évènement kernel.terminate sous Symfony2"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/geekon.jpg"
 tags:               ["Bundle","Doctrine","Symfony","Translations"]
 categories:         ["Dev", Symfony", "PHP"]
@@ -28,7 +27,7 @@ Une question que vous vous posez surement si vous n'avez pas eu l'occasion de tr
 Concrètement, vous pouvez quasiment tout faire si vous utilisez cet évènement. A une chose près : votre traitement ne doit pas altérer la réponse. Pourquoi ? Parce qu'il est déclenché après que la réponse soit envoyé au client. Il n'y à donc plus moyen d'y rajouter des informations ou d'en altérer son contenu dans le but de l'envoyer au client. (Attention kernel.terminate a été rajouté en Symfony2.1, donc si vous êtes encore en 2.0, vous pouvez oublier).
 
 {{< highlight php >}}
-<?php 
+<?php
 // ...
 
 $response = $kernel->handle($request);
@@ -143,7 +142,7 @@ class GuzzleExceptionListener
      * Constructor
      *
      * @param StatsManager $manager The stats Manager
-     * @param 
+     * @param
      */
     public function __construct(StatsManager $manager, EventDispatcher $dispatcher)
     {
@@ -157,7 +156,7 @@ class GuzzleExceptionListener
         $statsManager = $this->statsManager;
 
         if ($exception instanceof BadResponseException) {
-            
+
             $this->dispatcher->addListener('kernel.terminate', function (Event $event) use ($statsManager) {
                 $statsManager->addFail();
             });
@@ -166,7 +165,7 @@ class GuzzleExceptionListener
 }
 {{< /highlight >}}
 
-  
+
 {{< highlight xml >}}
 
 <service id="tristanbes_elophant.guzzle_exception_eventlistener" class="%tristanbes_elophant.guzzle.exception.class%">;
@@ -175,4 +174,3 @@ class GuzzleExceptionListener
     <argument type="service" id="event_dispatcher" />;
 </service>
 {{< /highlight >}}
-

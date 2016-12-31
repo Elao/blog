@@ -7,7 +7,6 @@ draft:          false
 slug:           "comprendre-lheritage-des-instructions-de-configuration-de-nginx"
 description:    "Nginx fonctionne avec une notion de contexte autorisant certaines instructions de configuration. Nous évoquons dans cet article comment Nginx traite et organise ces différents blocs."
 
-language:       "fr"
 thumbnail:      "/images/posts/thumbnails/geek_love.jpg"
 header_img:     "/images/posts/headers/stickers.jpg"
 tags:           ["infra", "nginx", "linux"]
@@ -75,16 +74,16 @@ A l'inverse les contextes pouvant être imbriqués les uns dans les autres, Ngin
 {{< highlight nginx >}}
 server {
     root /srv/app/symfony/web;
- 
+
     location /app {
         root /usr/share; # Nous modifions le répertoire racine vers /usr/share/app
-                         # Toutes les URI de type /app/* seront servies 
+                         # Toutes les URI de type /app/* seront servies
                          # à partir de ce répertoire.
     }
- 
+
     location /app2 {
-        # La directive root du contexte "Server" s'applique 
-        # Une URI de type /app2/user/profil sera servie 
+        # La directive root du contexte "Server" s'applique
+        # Une URI de type /app2/user/profil sera servie
         # à partir de /srv/app/symfony/web
     }
 }
@@ -155,10 +154,8 @@ server {
     rewrite ^/elao-lyon(.*) /lyon$1 permanent; # Cette règle est toujours évaluée.
 
     location /lyon {
-        rewrite ^ /index.php; # Ne surcharge pas la précédente et 
+        rewrite ^ /index.php; # Ne surcharge pas la précédente et
                               # PEUT être évaluée en complément de la précédente.
     }
 }
 {{< /highlight >}}
-
-

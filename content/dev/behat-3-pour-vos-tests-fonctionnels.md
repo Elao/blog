@@ -7,7 +7,6 @@ draft:              false
 slug:               "behat-3-test-fonctionnel-symfony"
 description:        "Installation et utilisation de Behat 3 pour vos tests fonctionnels Symfony2"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/behat.png"
 header_img:         "/images/posts/headers/behat_cover.jpg"
 tags:               ["Bundle","Behat","Symfony","Mink","Alice"]
@@ -63,7 +62,7 @@ default:
 {{< /highlight >}}
 
 Afin de faire fonctionner Behat avec Symfony2, nous utilisons Behat\Symfony2Extension.
- 
+
 Concernant la configuration de MinkExtension, nous utilisons les élements par défaut, il nous suffit juste de spécifier l'url de `base_url`, remplacer donc `YOUR_URL` par la route d'index de votre projet.
 
 ***We're all set***

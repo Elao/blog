@@ -7,7 +7,6 @@ draft:              false
 slug:               "symfony-live-2015"
 description:        "La septième édition du SymfonyLive Paris s'est tenue le jeudi 9 avril à la Cité Internationale Universitaire de Paris. Retour sur cet évènement."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/SymfonyLive.png"
 header_img:         "/images/posts/headers/php_forum_team_elao_2.jpg"
 tags:               ["Conférence", "Symfony Live", "Conférence"]

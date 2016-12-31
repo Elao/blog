@@ -7,7 +7,6 @@ draft:              false
 slug:               "subdomains-symfony2-2-session-authentication"
 description:        "Feedback on a side-effect with Symfony 2.2, subdomains and sessions"
 
-language:           "en"
 thumbnail:          "/images/posts/thumbnails/turtle.jpg"
 header_img:         "/images/posts/headers/php_elao_code.jpg"
 tags:               ["Symfony", "PHP"]

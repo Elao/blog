@@ -7,7 +7,6 @@ draft:              false
 slug:               "blendwebmix-2016"
 description:        ""
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/blend2016.jpg"
 header_img:         "/images/posts/headers/blend2016.jpg"
 tags:               ["Web", "conférence", "blend", "lyon", "Développement", "Design", "Business"]

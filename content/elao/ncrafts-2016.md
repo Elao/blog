@@ -7,7 +7,6 @@ draft:              false
 slug:               "ncrafts-2016"
 description:        "Les 12 et 13 mai se déroulait à Paris la nCrafts, une conférence indépendante et internationale sur le développement logiciel."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/ncrafts-2016.jpg"
 header_img:         "/images/posts/headers/ncrafts-2016.jpg"
 tags:               ["Développement", "Web","conference", "nCrafts", "craftsmanship"]

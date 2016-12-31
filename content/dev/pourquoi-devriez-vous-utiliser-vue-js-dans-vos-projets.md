@@ -7,7 +7,6 @@ draft:              false
 slug:               "pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets"
 description:        "Retour d'expérience sur le framework frontend Vue.js et pourquoi l'utiliser"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/vuejs.jpg"
 header_img:         "/images/posts/headers/vuejs.jpg"
 tags:               ["Vue.js","Javascript","Front","Frontend","Framework"]

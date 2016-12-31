@@ -7,7 +7,6 @@ draft:              false
 slug:               "realisez-une-application-vue-js-avec-vue-cli"
 description:        "Introduction à la réalisation d'applications frontend avec Vue.js et vue-cli."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/vuejs.jpg"
 header_img:         "/images/posts/headers/vuejs.jpg"
 tags:               ["Vue.js","Javascript","Front","Frontend","Framework"]
@@ -28,7 +27,7 @@ L'installation se fait simplement grâce à ```npm``` :
 $ npm install -g vue-cli
 ```
 
-L'outil permet en premier lieu d'initialiser votre projet, grâce à la commande suivante : 
+L'outil permet en premier lieu d'initialiser votre projet, grâce à la commande suivante :
 
 ```
 $ vue init <template-name> <project-name>
@@ -90,7 +89,7 @@ h1 {
 
 ## Template
 
-J'ai trouvé les templates par defaut assez complets, néanmoins si vous avez besoin de développer couramment des applications avec une architecture ou des dépendances particulières, **vue-cli** vous permet de créer [vos propres templates](https://github.com/vuejs/vue-cli#custom-templates) afin de *scaffolder* vos applications rapidement. 
+J'ai trouvé les templates par defaut assez complets, néanmoins si vous avez besoin de développer couramment des applications avec une architecture ou des dépendances particulières, **vue-cli** vous permet de créer [vos propres templates](https://github.com/vuejs/vue-cli#custom-templates) afin de *scaffolder* vos applications rapidement.
 
 Un template peut être chargé depuis un repo git ou depuis un chemin local. Vous pouvez forker un template existant ou en créer un de zéro.
 

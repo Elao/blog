@@ -8,7 +8,6 @@ draft:              false
 slug:               "utiliser-les-depots-officiels-nginx-sur-debian-wheezy"
 description:        "Comment configurer et utiliser les dépôts Nginx sur Debian Wheezy."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/server.jpg"
 tags:               ["Infra", "Linux", "Debian", "Nginx"]
 categories:         ["Infra", "Linux", "Nginx"]
@@ -61,6 +60,6 @@ Pin-Priority: 900
 Voila nous sommes parés il ne reste plus qu'a mettre à jour notre index de paquets et installer nginx à l'aide des commandes suivantes:
 
 ```
-apt-get update 
+apt-get update
 apt-get install nginx
 ```

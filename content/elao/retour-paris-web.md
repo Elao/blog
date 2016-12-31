@@ -7,7 +7,6 @@ draft:              false
 slug:               "retour-paris-web"
 description:        "Paris Web, la conférence francophone des gens qui font le web !"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/unicorn.jpg"
 header_img:         "/images/posts/headers/unicorn.jpg"
 tags:               ["ParisWeb", "Conférences"]
