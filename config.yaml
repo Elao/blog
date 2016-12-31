@@ -7,6 +7,11 @@ copyright:          "Everything is mine"
 enableRobotsTXT:    true
 Paginate:           10
 
+taxonomies:
+  tag:      "tags"
+  category: "categories"
+  author:   "authors"
+
 params:
   AuthorName:     "ELAO"
   TwitterUser:    "Elao"
@@ -22,11 +27,6 @@ Languages:
     params:
       Subtitle:       "ELAO - Agence Web, Experts Symfony et Technologies Open Source - PARIS / LYON / MONTPELLIER"
       description:    "Le blog de l'équipe ELAO"
-
-    taxonomies:
-      tag:      "tags"
-      category: "catégories"
-      author:   "authors"
 
     menu:
       main:
@@ -129,11 +129,6 @@ Languages:
     params:
       Subtitle:       "ELAO - Agence Web, Experts Symfony et Technologies Open Source - PARIS / LYON / MONTPELLIER"
       description:    "ELAO's team blog"
-
-    taxonomies:
-      tag:      "tags"
-      category: "categories"
-      author:   "authors"
 
     menu:
       main:
