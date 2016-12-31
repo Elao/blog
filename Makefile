@@ -72,7 +72,7 @@ build_assets:
 		"
 
 ## Build
-build_fr:
+build:
 	docker run \
 		--rm \
 		--volume `pwd`:/srv \
@@ -81,19 +81,7 @@ build_fr:
 		--tty \
 		manala/hugo-debian \
 		bash -c "\
-			hugo --theme=blog --config=config_fr.yaml \
-		"
-
-build_en:
-	docker run \
-		--rm \
-		--volume `pwd`:/srv \
-		--env HOME=/home \
-		--user `id -u` \
-		--tty \
-		manala/hugo-debian \
-		bash -c "\
-			hugo --theme=blog --config=config_en.yaml \
+			hugo --theme=blog --config=config.yaml \
 		"
 
 ## Build and optimize
@@ -113,7 +101,7 @@ watch:
 		--tty -i \
 		--publish 1313:1313 \
 		manala/hugo-debian \
-		hugo server --bind=0.0.0.0 --theme=blog --config=config_fr.yaml --buildDrafts --watch --ignoreCache=true
+		hugo server --bind=0.0.0.0 --theme=blog --config=config.yaml --buildDrafts --watch --ignoreCache=true
 
 ## Images compression
 optimize:

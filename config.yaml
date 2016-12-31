@@ -1,118 +1,169 @@
 ---
+DefaultContentLanguage:         "fr"
+DefaultContentLanguageInSubdir: true
 
-baseurl:        "https://blog.elao.com/"
-languageCode:   "fr-FR"
-title:          "Le blog de la team ELAO"
-Paginate:       10
-contentdir:     "content/fr"
-publishdir:     "public/fr"
-
-#log:            true
-#logFile:        "/var/log/hugo/hugo.log"
-# verbose output
-#verbose:                    true
-# verbose logging
-#verboseLog:                 true
+baseurl:            "https://blog.elao.com/"
+copyright:          "Everything is mine"
+enableRobotsTXT:    true
+Paginate:           10
 
 params:
-  Subtitle:       "ELAO - Agence Web, Experts Symfony et Technologies Open Source - PARIS / LYON / MONTPELLIER"
   AuthorName:     "ELAO"
   TwitterUser:    "Elao"
   GitHubUser:     "Elao"
   InstagramUser:  "elao_agency"
 
-taxonomies:
-  tag:      "tags"
-  category: "categories"
-  author:   "authors"
+Languages:
+  fr:
+    title:          "Le blog de l'équipe ELAO"
+    weight:         1
+    languageCode:   "fr-FR"
 
-menu:
-  main:
-      # INFRA
-      - Name:       "Infra"
-        Identifier: "infra"
-        URL:        "/infra"
-        Weight:     200
-      - Name:       "Proxmox"
-        Identifier: "proxmox"
-        URL:        "/categories/proxmox"
-        Weight:     10
-        parent:     "infra"
-      - Name:       "Nginx"
-        Identifier: "nginx"
-        URL:        "/categories/nginx"
-        Weight:     20
-        parent:     "infra"
-      - Name:       "Linux"
-        Identifier: "linux"
-        URL:        "/categories/linux"
-        Weight:     30
-        parent:     "infra"
-      - Name:       "Monitoring"
-        Identifier: "monitoring"
-        URL:        "/categories/monitoring"
-        Weight:     30
-        parent:     "infra"
-      # DEV
-      - Name:       "Dev"
-        Identifier: "dev"
-        URL:        "/dev"
-        Weight:     220
-      - Name:       "Symfony"
-        Identifier: "Symfony"
-        URL:        "/categories/symfony"
-        Weight:     10
-        parent:     "dev"
-      - Name:       "Web"
-        Identifier: "web"
-        URL:        "/categories/web"
-        Weight:     20
-        parent:     "dev"
-      - Name:       "Javascript"
-        Identifier: "javascript"
-        URL:        "/categories/javascript"
-        Weight:     40
-        parent:     "dev"
-      - Name:       "NodeJS"
-        Identifier: "nodejs"
-        URL:        "/categories/nodejs"
-        Weight:     50
-        parent:     "dev"
-      - Name:       "PHP"
-        Identifier: "php"
-        URL:        "/categories/php"
-        Weight:     60
-        parent:     "dev"
-      - Name:       "Python"
-        Identifier: "python"
-        URL:        "/categories/python"
-        Weight:     70
-        parent:     "dev"
-      # TECH
-      - Name:       "Tech"
-        Identifier: "tech"
-        URL:        "/tech"
-        Weight:     230
-      - Name:       "OSX"
-        Identifier: "osx"
-        URL:        "/categories/osx"
-        Weight:     10
-        parent:     "tech"
-      # ELAO
-      - Name:       "Autour d'ELAO"
-        Identifier: "elao"
-        URL:        "/elao"
-        Weight:     240
-      #- Name:       "Vie au bureau"
-      #  Identifier: "vie-au-bureau"
-      #  URL:        "/categories/vie-au-bureau"
-      #  Weight:     10
-      #  parent:     "elao"
-      - Name:       "Conférences"
-        Identifier: "conference"
-        URL:        "/categories/conference"
-        Weight:     30
-        parent:     "elao"
+    params:
+      Subtitle:       "ELAO - Agence Web, Experts Symfony et Technologies Open Source - PARIS / LYON / MONTPELLIER"
+      description:    "Le blog de l'équipe ELAO"
 
+    taxonomies:
+      tag:      "tags"
+      category: "catégories"
+      author:   "authors"
 
+    menu:
+      main:
+          # INFRA
+          - Name:       "Infra/Ops"
+            Identifier: "infra"
+            URL:        "/infra"
+            Weight:     200
+          - Name:       "Proxmox"
+            Identifier: "proxmox"
+            URL:        "/categories/proxmox"
+            Weight:     10
+            parent:     "infra"
+          - Name:       "Nginx"
+            Identifier: "nginx"
+            URL:        "/categories/nginx"
+            Weight:     20
+            parent:     "infra"
+          - Name:       "Linux"
+            Identifier: "linux"
+            URL:        "/categories/linux"
+            Weight:     30
+            parent:     "infra"
+          - Name:       "Monitoring"
+            Identifier: "monitoring"
+            URL:        "/categories/monitoring"
+            Weight:     30
+            parent:     "infra"
+          # DEV
+          - Name:       "Dev"
+            Identifier: "dev"
+            URL:        "/dev"
+            Weight:     220
+          - Name:       "Symfony"
+            Identifier: "Symfony"
+            URL:        "/categories/symfony"
+            Weight:     10
+            parent:     "dev"
+          - Name:       "Web"
+            Identifier: "web"
+            URL:        "/categories/web"
+            Weight:     20
+            parent:     "dev"
+          - Name:       "Javascript"
+            Identifier: "javascript"
+            URL:        "/categories/javascript"
+            Weight:     40
+            parent:     "dev"
+          - Name:       "NodeJS"
+            Identifier: "nodejs"
+            URL:        "/categories/nodejs"
+            Weight:     50
+            parent:     "dev"
+          - Name:       "PHP"
+            Identifier: "php"
+            URL:        "/categories/php"
+            Weight:     60
+            parent:     "dev"
+          - Name:       "Python"
+            Identifier: "python"
+            URL:        "/categories/python"
+            Weight:     70
+            parent:     "dev"
+          # TECH
+          - Name:       "Tech"
+            Identifier: "tech"
+            URL:        "/tech"
+            Weight:     230
+          - Name:       "OSX"
+            Identifier: "osx"
+            URL:        "/categories/osx"
+            Weight:     10
+            parent:     "tech"
+          # ELAO
+          - Name:       "Autour d'ELAO"
+            Identifier: "elao"
+            URL:        "/elao"
+            Weight:     240
+          - Name:       "Vie au bureau"
+            Identifier: "vie-au-bureau"
+            URL:        "/categories/vie-au-bureau"
+            Weight:     10
+            parent:     "elao"
+          - Name:       "Conférences"
+            Identifier: "conference"
+            URL:        "/categories/conference"
+            Weight:     30
+            parent:     "elao"
+          - Name:       "Méthodo"
+            Identifier: "methodo"
+            URL:        "/categories/methodo"
+            Weight:     30
+            parent:     "elao"
 
+  en:
+    title:          "ELAO technical blog"
+    weight:         2
+    languageCode:   "en-EN"
+
+    params:
+      Subtitle:       "ELAO - Agence Web, Experts Symfony et Technologies Open Source - PARIS / LYON / MONTPELLIER"
+      description:    "ELAO's team blog"
+
+    taxonomies:
+      tag:      "tags"
+      category: "categories"
+      author:   "authors"
+
+    menu:
+      main:
+          # INFRA
+          - Name:       "Infra/Ops"
+            Identifier: "infra"
+            URL:        "/infra"
+            Weight:     200
+          - Name:       "Monitoring"
+            Identifier: "monitoring"
+            URL:        "/categories/monitoring"
+            Weight:     30
+            parent:     "infra"
+          # DEV
+          - Name:       "Dev"
+            Identifier: "dev"
+            URL:        "/dev"
+            Weight:     220
+          - Name:       "Symfony"
+            Identifier: "Symfony"
+            URL:        "/categories/symfony"
+            Weight:     10
+            parent:     "dev"
+          # TECH
+          - Name:       "Tech"
+            Identifier: "tech"
+            URL:        "/tech"
+            Weight:     230
+          - Name:       "OSX"
+            Identifier: "osx"
+            URL:        "/categories/osx"
+            Weight:     10
+            parent:     "tech"
