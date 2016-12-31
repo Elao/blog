@@ -130,7 +130,7 @@ crop-thumbnails:
 		--tty \
 		manala/hugo-debian \
 		bash -c "\
-			find public/fr/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \; \
+			find public/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \; \
 			&& find public/en/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \; \
 		"
 crop-headers:
@@ -142,7 +142,7 @@ crop-headers:
 		--tty \
 		manala/hugo-debian \
 		bash -c "\
-			find public/fr/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \; \
+			find public/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \; \
 			&& find public/en/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \; \
 		"
 ## Deploy app to production (after static build and images optimization)

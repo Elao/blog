@@ -17,7 +17,7 @@ author_username:    "gfaivre"
 
 ---
 
-Suite à la sortie récente de <strong>OSX Yosemite</strong> vous trouverez ci-dessous la marche à suivre pour créer une clé "bootable" à partir de l'image (DMG) récupérée de l'installation de l'AppStore. 
+Suite à la sortie récente de <strong>OSX Yosemite</strong> vous trouverez ci-dessous la marche à suivre pour créer une clé "bootable" à partir de l'image (DMG) récupérée de l'installation de l'AppStore.
 
 Celle-ci permettra entre autre:
 
@@ -34,7 +34,7 @@ Avant de lancer la mise à jour, copier le fichier <strong>InstallESD.dmg</stron
 Attention pour cette partie il faut bien faire attention de sélectionner "GUID Partition Table" dans les options lors de la création de la partition comme ci-dessous:
 
 <p class="text-center">
-    {{< figure src="/fr/fr/images/posts/2014/OSX_Yosemite.png" title="OSX Yosemite options de partition." alt="Créer une clé bootable osx yosemite">}}
+    {{< figure src="/images/posts/2014/OSX_Yosemite.png" title="OSX Yosemite options de partition." alt="Créer une clé bootable osx yosemite">}}
 </p>
 
 
@@ -64,7 +64,7 @@ sudo cp -a /Volumes/OS\ X\ Install\ ESD/BaseSystem.chunklist /Volumes/OS\ X\ Bas
 sudo cp -a /Volumes/OS\ X\ Install\ ESD/BaseSystem.dmg /Volumes/OS\ X\ Base\ System
 ```
 
-Et enfin: 
+Et enfin:
 
 ```
 hdiutil detach /Volumes/OS\ X\ Install\ ESD
