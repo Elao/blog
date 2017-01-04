@@ -48,11 +48,12 @@
                     <div class="author-block">
                         {{ if  .Params.co_authors }}
                             {{ $context := . }}
-                            {{ range .Params.co_authors }}
-                                {{ $author := index $.Site.Data.authors . $.Params.language }}
-                                {{ $social := (index $.Site.Data.authors .).social }}
 
-                                {{ partial "social-avatar.html" (dict "context" $context "social" $social "author" $author) }}&nbsp;
+                            {{ range .Params.co_authors }}
+                              {{ $co_author := . }}
+                              {{ $author := index $.Site.Data.authors $co_author $context.Lang }}
+                              {{ $social := (index $.Site.Data.authors .).social }}
+                              {{ partial "social-avatar.html" (dict "context" $context "social" $social "author" $author) }}&nbsp;
                             {{ end }}
                         {{ else }}
                         {{ partial "social-avatar.html" (dict "context" $context "social" $social "author" $author) }}
