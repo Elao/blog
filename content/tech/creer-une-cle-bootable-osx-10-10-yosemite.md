@@ -8,7 +8,6 @@ draft:              false
 slug:               "creer-une-cle-bootable-osx-10-10-yosemite"
 description:        "Créer une clé bootable OSX 10.10 Yosemite."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/yosemite.jpg"
 tags:               ["OSX"]
 categories:         ["Tech", "OSX"]

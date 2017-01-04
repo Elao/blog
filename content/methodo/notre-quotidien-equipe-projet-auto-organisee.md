@@ -6,7 +6,7 @@ publishdate:    "2016-12-01"
 draft:          false
 slug:           "notre-quotidien-equipe-projet-auto-organisee"
 description:    "Retour d'expérience sur la vie d'une équipe projet auto-organisée. Voici ce que nous avons mis en place progressivement, nos expérimentations, nos succès et nos échecs."
-language:       "fr"
+
 thumbnail:      "/images/posts/2016/equipe-projet/equipe.jpg"
 header_img:     "/images/posts/2016/equipe-projet/equipe.jpg"
 tags:           ["agile", "user stories"]
@@ -29,13 +29,13 @@ Cela dure environ 5 minutes.
 ## Nos outils
 
 - Des [*User Stories*](https://fr.wikipedia.org/wiki/R%C3%A9cit_utilisateur) dans un board Kanban sur Jira.
-- *Confluence* pour consolider les spécifications. En vérité, c'est un échec pour l'instant. On doit s'améliorer à ce sujet. 
+- *Confluence* pour consolider les spécifications. En vérité, c'est un échec pour l'instant. On doit s'améliorer à ce sujet.
 - Board physique contenant :
     - Le numéro et dates début et fin du sprint
     - Le Sprint Backlog : les *users stories* sous forme de Post-it, son numéro Jira, l'estimation en nombre de points
     - Un Kanban avec les colonnes suivantes : Doing (en cours) / To review / Ready to demo / Demo / Done
     - Un Burn Down Chart
-    
+
 <div class="text-center">
     <img src="/images/posts/2016/equipe-projet/board.jpg" alt="Board projet" width="300" />
 </div>
@@ -76,8 +76,8 @@ On essaye d'avoir une [démarche *LEAN*](https://fr.wikipedia.org/wiki/Lean) ou 
 De plus, chaque membre de l'équipe doit participer aux ateliers à tour de rôle ; ceci améliore l'implication et la connaissance du produit de tous les membres de l'équipe.
 
 Cependant, nous n'avons que rarement eu à nos ateliers des utilisateurs de notre application (les parties-prenantes).
-C'est quelque chose sur lequel nous avons beaucoup insisté mais il n'est pas toujours possible d'avoir un cadre idéal. 
-    
+C'est quelque chose sur lequel nous avons beaucoup insisté mais il n'est pas toujours possible d'avoir un cadre idéal.
+
 ## Sprint
 
 Le sprint a une durée fixe de 2 semaines ; durant l'été, nous avons effectué un sprint d'un mois, ce fut un échec.
@@ -101,7 +101,7 @@ Récemment, nous avons mis en place avec notre client 1/2 journée par sprint po
 La célérité d'un sprint n'était pas très bien ou pas du tout suivi au début. Un problème de sous-estimation d'un sprint avec trop de stories et trop de complexité (le fameux sprint d'un mois dont je parle plus haut) nous a fait vite recadrer cela.
 
 Enfin, on a abandonné la définition d'un *Sprint Goal* en cours de route car cela prenait du temps d'en établir un et il ne nous apportait pas grand chose.
-    
+
 ## Definition of done
 
 Voici la définition de fini pour le développement d'une *User Story* que nous avons fait évoluer ensemble au fil du projet.
@@ -119,7 +119,7 @@ Autant vous dire tout de suite : un développeur qui ne respecte pas ce *DoD* pr
 ## Auto organisation et communication
 
 L'équipe projet n'a pas de chef de projet.
-Une personne (moi) joue plus ou moins le rôle de "scrum-master" mais c'est surtout pour organiser et faire le *daily standup*, la *rétrospective*, ... 
+Une personne (moi) joue plus ou moins le rôle de "scrum-master" mais c'est surtout pour organiser et faire le *daily standup*, la *rétrospective*, ...
 A terme ce rôle devrait être tournant dans l'équipe.
 Chaque personne de l'équipe donne son avis, peut déployer en démo ou en prod ou faire quoi que ce soit sur le projet.
 
@@ -134,7 +134,7 @@ Et un mot sur la transparence ?
 On ne se cache rien (ou presque) : à la fois en interne ou vis à vis du client.
 On informe dès qu'il y a un problème ou un changement.
 Le client nous dit quand cela ne va pas ou nous fait des retours utilisateurs dès qu'il en a.
-    
+
 ## Organisation du développement
 
 - Revue de design
@@ -152,10 +152,10 @@ Le client nous dit quand cela ne va pas ou nous fait des retours utilisateurs d�
 Par exemple, dans notre projet, nous avons un moteur de recherche à facettes basé sur Elasticsearch. Chaque développeur de l'équipe a participé à une partie de sa conception.
 - [*Pair programming*](https://fr.wikipedia.org/wiki/Programmation_en_bin%C3%B4me) : nous permet de transmettre des connaissances ou résoudre plus facilement un problème en mutualisant les cerveaux !
 - Nous avons également expérimenté le [*Mob programming*](https://en.wikipedia.org/wiki/Mob_programming). Les points positifs qu'on retient :
-    - Vraiment utile lorsqu'il faut résoudre une fonctionnalité compliquée en mobilisant toute l'équipe derrière un même ordinateur. 
+    - Vraiment utile lorsqu'il faut résoudre une fonctionnalité compliquée en mobilisant toute l'équipe derrière un même ordinateur.
     - Apprendre à écouter les idées de chacun.
     - Cohésion d'équipe++
-    
+
 ## Rétrospective
 
 La rétrospective agile est pour nous un superbe outil d'amélioration continue.

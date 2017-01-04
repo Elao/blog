@@ -7,7 +7,6 @@ draft:              false
 slug:               "plusieurs-mailer-dans-une-application-symfony-2"
 description:        "Plusieurs mailer dans une application Symfony 2"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/mailers.jpg"
 tags:               ["mailer", "PHP", "Symfony", "error-notifier-bundle", "swift-mailer", "Mailer transport"]
 categories:         ["Dev", "Mailer", "Symfony"]
@@ -22,10 +21,10 @@ Voici une petite astuce que j'ai découvert hier et que j'ai pensé utile de par
 **Contexte :**
 
 *   Votre application Symfony2 utilise un service tiers pour envoyer vos e-mails (comme [Mailjet][1] par exemple)
-*   Votre application a besoin d'envoyer des e-mails de notifications aux administrateurs lorsque des erreurs se produisent (Erreurs 500 par exemple)<!--more--> 
+*   Votre application a besoin d'envoyer des e-mails de notifications aux administrateurs lorsque des erreurs se produisent (Erreurs 500 par exemple)<!--more-->
 
-Imaginez qu’une erreur se produise sur l’une de vos pages et que vous ayez des centaines d’utilisateurs en train de visualiser cette même page.Pour chaque affichage de cette dernière, vous allez recevoir un e-mail de notification. 
-Si ces e-mails passent par Mailjet par exemple, votre quota fondra à vue d’œil... 
+Imaginez qu’une erreur se produise sur l’une de vos pages et que vous ayez des centaines d’utilisateurs en train de visualiser cette même page.Pour chaque affichage de cette dernière, vous allez recevoir un e-mail de notification.
+Si ces e-mails passent par Mailjet par exemple, votre quota fondra à vue d’œil...
 Au mieux vous atteindrez une limite de quota et les mails suivants seront bloqués, au pire vous ferez un énorme hors forfait qui pourra vous couter très cher...
 
 # Solution proposée

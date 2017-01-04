@@ -7,7 +7,6 @@ draft:              false
 slug:               "acceder-api-cross-domain-depuis-javascript-avec-cors-reverse-proxy-nginx"
 description:        "Configurer un reverse proxy avec nginx et CORS pour permettre à une application Javascript d'accéder à une API sur un autre domaine en contournant la Same Origin Policy."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/bridge.jpg"
 header_img:         "/images/posts/headers/bridge.jpg"
 tags:               ["nginx","reverse","proxy","infra","cors","api", "javascript"]

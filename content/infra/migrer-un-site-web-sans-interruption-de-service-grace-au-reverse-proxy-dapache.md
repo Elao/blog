@@ -8,7 +8,6 @@ draft:              false
 slug:               "migrer-un-site-web-sans-interruption-de-service-grace-au-reverse-proxy-dapache"
 description:        "Migrer un site web sans interruption de service grâce au reverse proxy d'Apache."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/pulp_starwars.png"
 header_img:         "/images/posts/headers/php_elao_code.jpg"
 tags:               ["Apache","Linux","Trucs et astuces"]

@@ -7,7 +7,6 @@ draft:              false
 slug:               "best-of-web-2015"
 description:        "La première édition du Best Of Web s'est tenue le Vendredi 5 Juin 2015 à Paris, et à rassembler le meilleurs des meetups de l'année. Retour sur cet évènement."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/geek_evolution.jpg"
 header_img:         "/images/posts/headers/forum_php_elao.jpg"
 tags:               ["Javascript", "Web","conference"]
@@ -17,7 +16,7 @@ author_username:    "ndievart"
 ---
 
 La première édition du Best of Web s’est tenue à Paris le vendredi 5 Juin 2015 à la Grande Crypte de Paris.
-L’idée de cette rencontre est de rassembler les meetups parisiens orientés web et permettre à ceux qui les ont loupés de découvrir leurs meilleurs talks. 
+L’idée de cette rencontre est de rassembler les meetups parisiens orientés web et permettre à ceux qui les ont loupés de découvrir leurs meilleurs talks.
 <!--more-->
 Bien évidemment, une grosse majorité des talks étaient tournés vers le JS mais pas seulement, on a pu découvrir pas mal de choses.
 L’événement était sur une seule trame et ce n’est pas plus mal, car cela permet de se confronter à des sujets qu’on n’aurait pas forcément choisi si le choix des conférences était plus ouvert.
@@ -47,13 +46,13 @@ Et comme tout bon projet open-source, n’hésitez pas à apporter votre contrib
 ## [Réactivité et visualisation avec d3.js](http://rluta.github.io/d3-realtime/) par Raphaël Luta
 Pour terminer la matinée, Raphaël Luta nous a fait une petite démonstration de la visualisation avec d3.js et surtout de la réactivité. On a eu le droit à un petit test live avec l’écoute d’un hashtag pour faire une élection du meilleur super-héros et ainsi montrer la réactivité d’un dashboard avec d3.js. Ensuite, une bonne explication de comment optimiser la découpe de son code avec l’usage de workers pour permettre d’optimiser le flux des requêtes entrantes. Pour finir, Raphaël Luta nous a fait une démonstration époustouflante du traitement de près de 100 000 flux par secondes et leur affichage en live via son dashboard. Vraiment très bluffant et intéressant, qui donne envie de s’intéresser encore plus à ce que propose d3.js et l’optimisation des flux.
 
-## [NodeWebkit]( https://speakerdeck.com/jacopodaeli/native-javascript-applications-with-nw-dot-js) par Jacopo Daeli 
+## [NodeWebkit]( https://speakerdeck.com/jacopodaeli/native-javascript-applications-with-nw-dot-js) par Jacopo Daeli
 Pour commencer l’après midi, Jacopo Daeli nous a fait une démonstration de NodeWebkit, rebaptisé NW.js récemment suite à son basculement sur io.js. NW.js est un runtime pour application web basé sur chromium et NodeJs (IO.js maintenant). Il permet de développer des applications javascript, html et css et d’en créer une application native (Linux, OsX, Windows), mais l’avantage surtout est qu’il permet d’utiliser les fonctions de NodeJs directement dans le code html.
 La configuration est assez intéressante, on peut définir les paramètres qu’on veut assigner à la fenêtre de l’application. Jacopo Daeli nous a fait une [petite démonstration]( https://github.com/JacopoDaeli/bestof-web-paris-2015) avec une application qui prend des photos via sa webcam à un intervalle très court et les stream à une url local, ce qui simule une vidéo. Un exemple d’utilisation de NW.js ? La version desktop de Pop Corn Time l’utilisait, ce qui de se rendre compte de toutes les opportunités de NW.js.
 
 ## [CSS Grid]( http://fr.slideshare.net/matparisot/css-grid-layout-le-futur-de-vos-mises-en-page) avec Mathieu Parisot
 La suite est très intéressante malheureusement ce n’est pas utilisable immédiatement étant donné la compatibilité. Mathieu Parisot nous a présenté et fait une démonstration de CSS Grid, la spécification en cours de standardisation au W3C, qui permet enfin de s’affranchir de nombreuses contraintes connues du CSS.  
-Il nous a donc fait un petit récap de la situation actuelle et des solutions pour contourner le problème de faire des grilles en css (Bootstrap, 960 grid, Foundation, Flexbox) mais de la réalité de celles-ci qui ne sont pas encore optimale. On a pu ensuite assister à une démonstration de comment CSS Grid va régler tout cela (une fois supporté) grace à une syntaxe très simple sans avoir à faire appel à des librairies. 
+Il nous a donc fait un petit récap de la situation actuelle et des solutions pour contourner le problème de faire des grilles en css (Bootstrap, 960 grid, Foundation, Flexbox) mais de la réalité de celles-ci qui ne sont pas encore optimale. On a pu ensuite assister à une démonstration de comment CSS Grid va régler tout cela (une fois supporté) grace à une syntaxe très simple sans avoir à faire appel à des librairies.
 
 ## La [« Winning Stack » et l’ES6]( http://fr.slideshare.net/SfeirGroup/es2015-ready-angular-web-stack-bestofweb-2015) par Douglas Duteil
 Douglas Duteil nous a présenté sa winning stack avec angular et ES6. Il nous a parlé de systemJs pour le chargement dynamique de module, JSPM pour la gestion des packages, de quelques différences de ES6 (2015) et ES5 (2009), de babel, Istanbul ainsi que de [Isparta]( https://github.com/douglasduteil/isparta) (créé et maintenu par Douglas). D’ailleurs, si le projet Isparta vous intéresse, il cherche de l’aide pour le merger à Istanbul.
@@ -64,7 +63,7 @@ Une présentation assez captivante et qui donne beaucoup d'idées d'applications
 
 ## Le [Material design avec Polymer](https://docs.google.com/presentation/d/1IzsxsE6HybPAdbrI8iIlF3Qaj9BQGEHmu3zX7xT9o8M/edit#slide=id.g3a6159c6f_024) par Martin Gorner
 Martin Gorner a commencé sa présentation en nous rappelant ce qui constitue le Material Design, ces éléments (paper, touch first, couleur textuelle, animation, bouton flottant, ...). Il nous a ensuite fait une démonstration de Polymer (qui vient de sortir en version 1.0), quelques petits bower install plus tard et c'est parti, on charge polymer dans la balise script et on peut utiliser les paper-card en les important avec des ``<link rel="import" href`` et ils sont ensuite utilisable directement notre code html. La bibliothèque de base de Polymer est déjà bien fournie mais il est également possible de créer ses propres cards et de bien s'amuser avec le Material Design. Polymer donne vraiment envie. Pouvoir créer une interface Material Design en quelque coups d'imports, ça promet de belles choses.
- 
+
 ## Le [Reactive Programming](https://speakerdeck.com/hugocrd/dealing-with-streams-using-rxjs) par Hugo Cordier
 Les événements en Javascript sont l'un des composants importants, d'autant plus maintenant avec les frameworks js. Hugo Cordier nous a fait un petit récap' de ce que sont les événements et les promesses, puis présenté RxJs qui permet de faire du traitement de groupe d'événements (événements multiples, au cours du temps, faire des maps et des filters sur les événements). En bref un vrai petit couteau suisse de la gestion des événements en Javascript (il s'agit d'une librairie donc vous pouvez vous amusez avec à peu près tout: node, angular, backbone). Il nous a ensuite fait une démonstration de cas concret de RxJs comme par exemple de la recherche en temps réelle. N'hésitez pas à jeter un oeil à ses CodePens pour les démos, ils sont présents dans la présentation.
 

@@ -7,7 +7,6 @@ draft:              false
 slug:               "the-browserdetectorbundle-working-with-the-kernel-events"
 description:        "The BrowserDetectorBundle: working with the Kernel events"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/homer.jpg"
 tags:               ["Symfony", "PHP", "Kernel", "Browser"]
 categories:         ["Dev", "Symfony", "PHP"]
@@ -137,7 +136,7 @@ class GuzzleExceptionListener
      * Constructor
      *
      * @param StatsManager $manager The stats Manager
-     * @param 
+     * @param
      */
     public function __construct(StatsManager $manager, EventDispatcher $dispatcher)
     {
@@ -151,7 +150,7 @@ class GuzzleExceptionListener
         $statsManager = $this->statsManager;
 
         if ($exception instanceof BadResponseException) {
-            
+
             $this->dispatcher->addListener('kernel.terminate', function (Event $event) use ($statsManager) {
                 $statsManager->addFail();
             });
@@ -167,4 +166,3 @@ class GuzzleExceptionListener
     <argument type="service" id="event_dispatcher" />;
 </service>
 {{< /highlight >}}
-

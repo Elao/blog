@@ -7,7 +7,6 @@ draft:              false
 slug:               "best-of-web-2016"
 description:        "La seconde édition du Best Of Web s'est tenue le Vendredi 10 Juin 2016 à Paris, et a rassemblé le meilleur des meetups de l'année. Retour sur cet événement."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/best-of-web-2016.jpg"
 header_img:         "/images/posts/headers/best-of-web-2016.jpg"
 tags:               ["Javascript", "Web","conference"]
@@ -36,11 +35,11 @@ Mention spéciale au format sympa de la conf tout en live coding de [Gerard Sans
 
 L'autre sujet qui tenait une bonne place dans ce Best Of Web 2016 concernait les performances. Effectivement avec le développement des applications front de plus en plus lourdes et l'arrivée de fonctionnalités permettant des opérations de plus en plus complexes (transformation, animation, 3D, ...) ainsi que l'utilisation croissante d'API, la question de la performance est devenu cruciale. Les utilisateurs, habitués à la fluidité des applications natives, s'attendent à la même réactivité de la part du web.
 
-[Freddy Harris](https://twitter.com/harrisfreddy) a longuement parlé dans son talk des performances dans l'animation et nous donne de nombreuses astuces sur le fonctionnement des animations dans les navigateurs. 
+[Freddy Harris](https://twitter.com/harrisfreddy) a longuement parlé dans son talk des performances dans l'animation et nous donne de nombreuses astuces sur le fonctionnement des animations dans les navigateurs.
 
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">Astuce : La propriété <a href="https://twitter.com/hashtag/css?src=hash">#css</a> will-change permet d&#39;indiquer au browser que l&#39;élément sera animé <a href="https://twitter.com/hashtag/gpu?src=hash">#gpu</a> <a href="https://twitter.com/hashtag/webperf?src=hash">#webperf</a> <a href="https://twitter.com/hashtag/bestofweb2016?src=hash">#bestofweb2016</a></p>&mdash; Maxime COLIN (@colin_maxime) <a href="https://twitter.com/colin_maxime/status/741179119833079808">10 juin 2016</a></blockquote>
 
-Ensuite [Audrey Neveu](https://twitter.com/audrey_neveu) nous explique comment fonctionne le temps de réaction chez un utilisateur. Le temps de rendu de votre page ne doit pas excéder celui-ci au risque de perdre l'utilisateur. 
+Ensuite [Audrey Neveu](https://twitter.com/audrey_neveu) nous explique comment fonctionne le temps de réaction chez un utilisateur. Le temps de rendu de votre page ne doit pas excéder celui-ci au risque de perdre l'utilisateur.
 
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">Réaction: 100/500ms, interaction: 100/500ms. 1s de chargement = 👍, 4s = perte de patience, &gt;4s = utilisateur perdu <a href="https://twitter.com/hashtag/webperf?src=hash">#webperf</a> <a href="https://twitter.com/hashtag/bestofweb2016?src=hash">#bestofweb2016</a></p>&mdash; Maxime COLIN (@colin_maxime) <a href="https://twitter.com/colin_maxime/status/741185758317424640">10 juin 2016</a></blockquote>
 
@@ -94,7 +93,7 @@ Petit OVNI à travers les différents sujets présentés, l'émulation d'une Gam
 
 # Coup de coeur
 
-Petit coup de coeur pour l'organisation et l'ambiance qui étaient très réussi. 
+Petit coup de coeur pour l'organisation et l'ambiance qui étaient très réussi.
 Les talks bien choisis et correspondaient à l'actualité de notre métier. L'accueil était chaleureux, le repas exceptionnel. Les sponsors ont bien joué le jeu et l'équipe était très sympathique.
 
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">L&#39;inattendu mais très apprécié bar à <a href="https://twitter.com/hashtag/fromage?src=hash">#fromage</a> du <a href="https://twitter.com/hashtag/bestofweb2016?src=hash">#bestofweb2016</a> 😍😋👍 <a href="https://t.co/aa7GZCmfqg">pic.twitter.com/aa7GZCmfqg</a></p>&mdash; Maxime COLIN (@colin_maxime) <a href="https://twitter.com/colin_maxime/status/741222954609053696">10 juin 2016</a></blockquote>

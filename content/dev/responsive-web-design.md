@@ -7,7 +7,6 @@ draft:              false
 slug:               "responsive-web-design"
 description:        "Responsive Web Design"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/html5.jpg"
 header_img:         "/images/posts/headers/elao_team_front.jpg"
 tags:               ["CSS", "Webdesign"]

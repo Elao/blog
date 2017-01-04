@@ -8,7 +8,6 @@ draft:              false
 slug:               "ssl-generer-une-demande-de-signature-de-certificat-csr"
 description:        "Comment générer une demande de signature d'un certificat SSL (CSR) à destination d'une autorité de certification."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/crypto.jpg"
 header_img:         "/images/posts/headers/elao_babyfoot.jpg"
 tags:               ["Infra", "Linux", "SSL", "Certicats", "Sécurité"]
@@ -52,7 +51,7 @@ openssl req -newkey  rsa:2048 -sha256 -nodes -keyout bismuth-elao.key -out bismu
 > - `-sha256`: Que nous souhaitons utilisé SHA-2 pour signer notre CSR (Attention à bien vérifier que votre CA le supporte)
 > - `-nodes`: Comprendre "No DES" indique que la clé privée ne doit pas être cryptée à l'aide d'une "passphrase" ce qui est le cas par défaut, à vous de juger de la pertinence de cette option.
 > - `-keyout`: Indique le fichier qui contiendra la clé générée.
-> - `-out`: Indique le fichier qui contiendra la requête pour signature. 
+> - `-out`: Indique le fichier qui contiendra la requête pour signature.
 
 Vous devriez avoir en réponse la sortie suivante, attention à être particulièrement attentif au champ CN (Common Name) qui doit correspondre au domaine pour lequel vous souhaitez utiliser votre certificat.
 
@@ -83,7 +82,7 @@ A challenge password []:
 An optional company name []:
 ```
 
-## Générer une CSR à partir d'une clé privée 
+## Générer une CSR à partir d'une clé privée
 
 Dans le cas où vous disposez déjà d'une clé privée et que vous souhaitez l'utiliser pour la délivrance d'un certificat à partir d'une CA, il nous faudra utiliser la commande suivante:
 
@@ -106,5 +105,5 @@ openssl x509
        -signkey bismuth-elao.key
        -x509toreq -out bismuth-elao.csr
  ```
- 
+
 L'option ```-x509toreq``` indique que l'on utilise un certificat X509 pour générer la CSR.

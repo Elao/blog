@@ -8,7 +8,6 @@ draft:              false
 slug:               "installer-graphite-sur-debian-wheezy"
 description:        "Installation de graphite avec Gunicorn et Nginx sur debian Wheezy."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/dashboard.png"
 tags:               ["Monitoring", "Infra", "Linux", "Debian", "Nginx"]
 categories:         ["Infra", "Monitoring", "Linux"]
@@ -67,12 +66,12 @@ pip install PyYAML==3.11
 [**Cairo**](http://cairographics.org/pycairo/) est utilisé pour les rendus par Graphite.
 
 ```
-cd /tmp && 
-wget http://cairographics.org/releases/py2cairo-1.8.10.tar.gz && 
+cd /tmp &&
+wget http://cairographics.org/releases/py2cairo-1.8.10.tar.gz &&
 tar xfz py2cairo-1.8.10.tar.gz &&
 cd pycairo-1.8.10 &&
-./configure && 
-make && 
+./configure &&
+make &&
 make install
 ```
 

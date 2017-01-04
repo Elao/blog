@@ -7,7 +7,6 @@ draft:              false
 slug:               "symfony-2-linjection-de-dependances"
 description:        "Symfony 2 – L’injection de dépendances"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/event-dispatcher.jpg"
 tags:               ["Symfony", "PHP"]
 categories:         ["Dev", "PHP", "Symfony"]

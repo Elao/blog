@@ -7,7 +7,6 @@ draft:              false
 slug:               "propel-utiliser-des-champs-calcules"
 description:        "Propel - Utiliser des champs calculés"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/mailers.jpg"
 tags:               ["Propel", "PHP", "ORM", "Symfony"]
 categories:         ["Dev", "PHP", "Propel", "ORM"]

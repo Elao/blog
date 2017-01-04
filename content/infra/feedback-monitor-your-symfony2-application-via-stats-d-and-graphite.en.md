@@ -7,7 +7,6 @@ draft:              false
 slug:               "feedback-monitor-your-symfony2-application-via-stats-d-and-graphite"
 description:        "Feedback : Monitor your Symfony2 application via Stats.d and Graphite"
 
-language:           "en"
 thumbnail:          "/images/posts/thumbnails/rocket.jpg"
 tags:               ["Carbon", "Graphite", "Monitoring", "Stats.d", "Symfony", "Webperf"]
 categories:         ["Infra", "Monitoring", "PHP"]

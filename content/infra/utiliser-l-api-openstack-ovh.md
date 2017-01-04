@@ -7,7 +7,6 @@ draft:              false
 slug:               "utiliser-l-api-openstack-ovh"
 description:        "Préparer son environnement pour utiliser l'API openstack d'OVH, pré-requis et installation du client"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/openstack.png"
 header_img:         "/images/posts/headers/facade.jpg"
 tags:               ["ovh","openstack","docker","infra","api"]

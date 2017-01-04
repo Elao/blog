@@ -7,7 +7,6 @@ draft:              false
 slug:               "monitor-your-symfony2-application-via-stats-d-and-graphite-2"
 description:        "Monitor your Symfony2 application via Stats.d and Graphite Part. 2"
 
-language:           "en"
 thumbnail:          "/images/posts/thumbnails/rocket.jpg"
 header_img:         "/images/posts/headers/minions.jpg"
 tags:               ["Monitoring", "symfony", "Statd", "infra", "ops"]

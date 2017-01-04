@@ -6,7 +6,7 @@ publishdate:        "2015-12-17"
 draft:              false
 slug:               "symfonycon-2015"
 description:        "Nous étions à la SymfonyCon 2015 pour fêter les 10 ans de Symfony"
-language:           "fr"
+
 thumbnail:          "/images/posts/thumbnails/symfonycon-2015.jpg"
 header_img:         "/images/posts/headers/foliesbergeres.jpg"
 tags:               ["Conférence", "Symfony", "SymfonyCon"]
@@ -66,7 +66,7 @@ de cette API de natures différentes : backoffice en Symfony, site web, applicat
 ils se calquent sur l'URI de l'API.
 
 J'ai beaucoup aimé ce retour d'expérience même si l'on peut regretter le manque de spontanéité de la présentation.
- 
+
 [Les slides](https://speakerdeck.com/dunglas/a-high-profile-project-with-symfony-and-api-platform-bein-sports)
 
 ### Symfony routing under the hood by David Buchmann
@@ -120,7 +120,7 @@ facilement personnalisable.
 Contrairement à ce qui se faisait avant avec le composant *Security*, la configuration *yaml* est allégée et la logique
 est davantage dans une classe PHP.
 Ryan Weaver, pédagogue et speaker de qualité, nous donne vraiment envie de vite essayer ce composant.
- 
+
 [Les slides](http://www.slideshare.net/weaverryan/guard-authentication-powerful-beautiful-security)
 
 ### How Symfony 3.0 moves forward without letting anyone behind by Nicolas Grekas
@@ -191,7 +191,7 @@ Jordi Boggiano a créé et maintient Composer. Cet outil de gestion des dépenda
 par les développeurs et l'écosystème PHP. Symfony a sans doute également contribué à populariser Composer.
 Moins qu'une présentation technique, Jordi a fait un retour d'expérience sur plusieurs années de maintenance d'un
  projet Open Source comme Composer :
- 
+
 * la fierté d'avoir développer un outil adopté par beaucoup de développeurs
 * les super retours des développeurs
 
@@ -207,14 +207,14 @@ du code ou la modification du Coding Styles en "Airbnb Code Style";
 ### Comparing Symfony2 perfs in PHP7 migration by Julien Pauli
 
 Julien Pauli nous amène dans les profondeurs du fonctionnement interne de PHP7 pour nous expliquer l'augmentation
-notable de performance de PHP7. 
+notable de performance de PHP7.
 
 Ce qu'il faut retenir :
- 
+
 * La compilation de PHP7 est plus gourmande que PHP5, ce qui n'a pas d'importance au final avec le cache d'opcode
 indispensable sur des frameworks comme Symfony.
 * Beaucoup de travail fait dans le cœur de PHP pour exploiter au mieux les caches L1 & L2 des CPU, ce qui explique la
-plus faible consommation mémoire et la rapidité de ce dernier. 
+plus faible consommation mémoire et la rapidité de ce dernier.
 * Ces changements internes ont eu beaucoup d'impact sur les extensions de PHP qui ont dû être adaptées.
 
 ### Symfony: Your next Microframework by Ryan Weaver

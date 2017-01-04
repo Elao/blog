@@ -7,7 +7,6 @@ draft:              false
 slug:               "ssh-agent-does-not-automatically-load-passphrases-on-the-osx-sierra-keychain"
 description:        "SSH-agent does not automatically load passphrases on the OSX Sierra keychain during startup."
 
-language:           "en"
 thumbnail:          "/images/posts/thumbnails/badass_vader.jpg"
 header_img:         "/images/posts/headers/php_elao_code.jpg"
 tags:               ["SSH", "OSX"]

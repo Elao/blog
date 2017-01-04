@@ -8,7 +8,6 @@ draft:              false
 slug:               "hs-bien-preparer-sa-conference"
 description:        "Comment bien préparer sa conférence ?"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/yosemite.jpg"
 tags:               ["Talk", "Aisance", "Conférence", "Oral", "Préparation"]
 categories:         ["Actualité", "Communication", "conference"]

@@ -7,7 +7,6 @@ draft:              false
 slug:               "mix-it-2015-pt1"
 description:        "L'édition 2015 du Mix-IT s'est tenue les 16 et 17 avril au CPE de Lyon. Retour sur cet événement."
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/unepetitemousse-mixit.jpg"
 header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Conférence", "Mix-IT 2015"]

@@ -7,7 +7,6 @@ draft:              false
 slug:               "maintenabilite-et-performance-avec-sass-et-compass"
 description:        "Maintenabilité et performance avec Sass et Compass"
 
-language:           "fr"
 thumbnail:          "/images/posts/thumbnails/sass.png"
 header_img:         "/images/posts/headers/elao_team_front.jpg"
 tags:               ["CSS", "Webdesign", "Développement"]
