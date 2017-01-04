@@ -62,7 +62,7 @@ author_username:    "elao"
 The new file is located at `content/dev/my-first-post.md`
 
 ### IMPORTANT
-If you wich to write a post in english you need to include the locale as part of the filename like this:
+If you wish to write a post in english you need to include the locale as part of the filename like this:
 
 `my-awesome-blogpost.en.md`
 
