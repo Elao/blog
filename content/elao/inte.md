@@ -4,7 +4,7 @@ title:          "Intégrer... notre agence de Lyon"
 date:           "2017-01-12"
 publishdate:    "2017-01-12"
 draft:          true
-slug:           "slug-of-my-post"
+slug:           "nous-recherchons-notre-integratrice/integrateur-web-a-lyon"
 description:    "Description of my post."
 
 thumbnail:      "/images/posts/thumbnails/path_to_file"
@@ -21,26 +21,26 @@ Nous recherchons pour notre tribu lyonnaise :
 
 
 ## En bref,
-Nous oeuvrons dans un environnement technique à la conception et au développement d’applications web métier sur mesure. C’est le coeur de notre métier.
-Spécialistes open source et experts Symfony, JS avec une grosse culture devops, nous cherchons notre spécialiste Intégration.
+Nous oeuvrons dans un environnement technique dédié à la conception et au développement d’applications web métier sur mesure. C’est le coeur de notre activité.
+Spécialistes open source et experts Symfony/JS avec une grosse culture devops, nous cherchons notre spécialiste en intégration web.
 
-Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite, nous offrons un environnement technique et humain propice et en faveur de projets sur mesure, concrets et innovants. élao reste pragmatique mais ne transige pas sur la qualité au quotidien.
+Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite, nous offrons un environnement technique et humain épanouissant et adapté aux projets complexes, concrets et innovants. Élao reste pragmatique mais ne transige pas sur la qualité au quotidien.
 
 Backend, frontend et/ou devops, les équipes disposent de la marge de manoeuvre et de l’autonomie nécessaires pour travailler ensemble et sont à votre disposition pour témoigner de leur quotidien chez élao. 
 Rien de plus parlant :-)
 
-Dans ce contexte et pour renforcer la tribu dans les besoins d'intégration, nous vous proposons de rejoindre  la team lyonnaise. Une petite structure et une équipe jeune et dynamique.
+Dans ce contexte et pour renforcer la tribu dans les besoins d'intégration, nous vous proposons de rejoindre  l'équipe lyonnaise. Une petite structure et une équipe jeune et dynamique.
 
 ## Humainement
 
-Fort d’une première expérience et du constat que vous aimez l’intégration web, vous êtes organisé(e), méthodique et à l’aise pour challenger votre art. Conçus sur mesure pour nos clients, nos projets sont divers et variés ; il vous faut gérer efficacement votre temps et les priorités au sein des équipes projet.
+Fort d’une première expérience, Junior ou plus expérimenté(e), vous êtes organisé(e), méthodique et à l’aise pour challenger votre art. Conçus sur mesure pour nos clients, nos projets sont divers et variés ; il vous faut gérer efficacement votre temps et les priorités au sein des équipes projet.
 Vous savez construire un code de qualité pour mener à bien une intégration pouvant s’avérer complexe et vous êtes force de proposition au sein des équipes.
 
 Evidemment... une personne efficace, réactive et motivée (l'inverse serait étonnant mais nous le précisons quand même).
 
-Sinon, comme tout le monde aujourd'hui, on a du café, un baby foot, et une piscine <FONT color="red">(*)</FONT>.
+Sinon, comme tout le monde aujourd'hui, on a du café, un baby foot, et une piscine à remous <FONT color="red">(*)</FONT>.
 
-##Techniquement
+## Techniquement
 
 ### Les "basiques" 
 * HTML5
