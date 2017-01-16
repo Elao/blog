@@ -68,6 +68,8 @@ Sinon, comme tout le monde aujourd'hui, on a du café, un baby foot, et une pisc
 ### Rémunération
 On en discute selon votre profil.
 
+--------------------------------------------------------
+
 Au plaisir d’échanger de vive voix et de recevoir votre candidature. 
 N’hésitez pas à vous munir des références à votre actif et n'hésitez pas non plus à solliciter la [Team](https://www.elao.com/fr/la-tribu) pour savoir précisément à quoi vous attendre.
 
