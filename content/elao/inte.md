@@ -5,19 +5,19 @@ date:           "2017-01-12"
 publishdate:    "2017-01-12"
 draft:          true
 slug:           "nous-recherchons-notre-integratrice/integrateur-web-a-lyon"
-description:    "Description of my post."
+description:    "Nous cherchons notre intégratrice/intégrateur web à Lyon."
 
 thumbnail:      "/images/posts/thumbnails/boy.png"
 header_img:     "/images/posts/headers/JobLyon.jpg"
 tags:           ["JOBS", "INTEGRATION", "LYON"]
-categories:     ["x", "y"]
+categories:     ["jobs", "y"]
 
 author_username:    "elao"
 ---
 
 Nous recherchons pour notre tribu lyonnaise :
 
-# Un ou une Intégratrice Web
+# Un Intégrateur ou une Intégratrice Web
 <!--more-->
 
 
@@ -27,7 +27,8 @@ Spécialistes open source et experts Symfony/JS avec une grosse culture devops, 
 
 Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite, nous offrons un environnement technique et humain épanouissant et adapté aux projets complexes, concrets et innovants. Élao reste pragmatique mais ne transige pas sur la qualité au quotidien.
 
-Backend, frontend et/ou devops, les équipes disposent de la marge de manoeuvre et de l’autonomie nécessaires pour travailler ensemble et sont à votre disposition pour témoigner de leur quotidien chez élao. 
+Backend, frontend et/ou devops, [les équipes](https://www.elao.com/fr/la-tribu) disposent de la marge de manoeuvre et de l’autonomie nécessaires pour travailler ensemble et sont à votre disposition pour témoigner de leur quotidien chez élao.
+
 Rien de plus parlant :-)
 
 Dans ce contexte et pour renforcer la tribu dans les besoins d'intégration, nous vous proposons de rejoindre  l'équipe lyonnaise. Une petite structure et une équipe jeune et dynamique.
@@ -68,7 +69,7 @@ Sinon, comme tout le monde aujourd'hui, on a du café, un baby foot, et une pisc
 On en discute selon votre profil.
 
 Au plaisir d’échanger de vive voix et de recevoir votre candidature. 
-N’hésitez pas à vous munir des références à votre actif et n'hésitez pas non plus à solliciter la [Team](https://www.elao.com/fr/la-tribu) pour savoir précisémment à quoi vous attendre.
+N’hésitez pas à vous munir des références à votre actif et n'hésitez pas non plus à solliciter la [Team](https://www.elao.com/fr/la-tribu) pour savoir précisément à quoi vous attendre.
 
 A bientôt sur jobs@elao.com
 
