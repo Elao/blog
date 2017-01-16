@@ -7,7 +7,7 @@ draft:          true
 slug:           "nous-recherchons-notre-integratrice/integrateur-web-a-lyon"
 description:    "Description of my post."
 
-thumbnail:      "/images/posts/thumbnails/path_to_file"
+thumbnail:      "/images/posts/thumbnails/boy.png"
 header_img:     "/images/posts/headers/JobLyon.jpg"
 tags:           ["JOBS", "INTEGRATION", "LYON"]
 categories:     ["x", "y"]
@@ -17,10 +17,11 @@ author_username:    "elao"
 
 Nous recherchons pour notre tribu lyonnaise :
 
-# Un/Une Intégratrice Web 
+# Un ou une Intégratrice Web
+<!--more-->
 
 
-## En bref,
+## En bref
 Nous oeuvrons dans un environnement technique dédié à la conception et au développement d’applications web métier sur mesure. C’est le coeur de notre activité.
 Spécialistes open source et experts Symfony/JS avec une grosse culture devops, nous cherchons notre spécialiste en intégration web.
 
