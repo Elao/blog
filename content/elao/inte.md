@@ -40,7 +40,6 @@ Vous savez construire un code de qualité pour mener à bien une intégration po
 
 Evidemment... une personne efficace, réactive et motivée (l'inverse serait étonnant mais nous le précisons quand même).
 
-Sinon, comme tout le monde, on a du bon café, un baby foot et une piscine à remous <FONT color="red">(*)</FONT>.
 
 ## Techniquement
 
@@ -76,4 +75,3 @@ N’hésitez pas à vous munir des références à votre actif et n'hésitez pas
 
 A bientôt sur jobs@elao.com
 
-<FONT color="red">(*)</FONT> Pour les remous, on déconne...
