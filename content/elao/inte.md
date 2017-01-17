@@ -4,7 +4,7 @@ title:          "Intégrer... notre agence de Lyon"
 date:           "2017-01-12"
 publishdate:    "2017-01-12"
 draft:          true
-slug:           "nous-recherchons-notre-integratrice/integrateur-web-a-lyon"
+slug:           "nous-recherchons-notre-integrateur-web-a-lyon"
 description:    "Nous cherchons notre intégratrice/intégrateur web à Lyon."
 
 thumbnail:      "/images/posts/thumbnails/boy.png"
