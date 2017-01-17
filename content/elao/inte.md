@@ -36,12 +36,15 @@ Dans ce contexte et pour renforcer la tribu dans les besoins d'intégration, nou
 ## Humainement
 
 Fort d’une première expérience, un profil junior ou plus expérimenté(e), vous êtes organisé(e), méthodique et à l’aise pour challenger votre art. Conçus sur mesure pour nos clients, nos projets sont divers et variés ; il vous faut gérer efficacement votre temps et les priorités au sein des équipes projet.
-Vous savez construire un code de qualité pour mener à bien une intégration pouvant s’avérer complexe et vous êtes force de proposition au sein des équipes.
 
-Evidemment... une personne efficace, réactive et motivée (l'inverse serait étonnant mais nous le précisons quand même).
+Evidemment, vous êtes efficace, réactif(ve)et motivé(e). Entre nous, l'inverse serait étonnant mais dans le doute... nous le précisons.
 
 
 ## Techniquement
+
+Pour vous en dire un peu plus, il peut s'agir d'intégrer de simples sites one page ou des interfaces plus complexes pour des sites à contenu, des jeux video, des applications mobiles, etc. 
+
+Vous savez donc construire un code de qualité pour mener à bien une intégration pouvant s’avérer complexe et vous êtes force de proposition au sein des équipes.
 
 ### Les "basiques" 
 * HTML5
