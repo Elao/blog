@@ -31,16 +31,16 @@ Backend, frontend et/ou devops, [les équipes](https://www.elao.com/fr/la-tribu)
 
 Rien de plus parlant :-)
 
-Dans ce contexte et pour renforcer la tribu dans les besoins d'intégration, nous vous proposons de rejoindre  l'équipe lyonnaise. Une petite structure et une équipe jeune et dynamique.
+Dans ce contexte et pour renforcer la tribu dans les besoins d'intégration, nous vous proposons de rejoindre l'équipe lyonnaise. Une petite structure et une équipe jeune et dynamique.
 
 ## Humainement
 
-Fort d’une première expérience, Junior ou plus expérimenté(e), vous êtes organisé(e), méthodique et à l’aise pour challenger votre art. Conçus sur mesure pour nos clients, nos projets sont divers et variés ; il vous faut gérer efficacement votre temps et les priorités au sein des équipes projet.
+Fort d’une première expérience, un profil junior ou plus expérimenté(e), vous êtes organisé(e), méthodique et à l’aise pour challenger votre art. Conçus sur mesure pour nos clients, nos projets sont divers et variés ; il vous faut gérer efficacement votre temps et les priorités au sein des équipes projet.
 Vous savez construire un code de qualité pour mener à bien une intégration pouvant s’avérer complexe et vous êtes force de proposition au sein des équipes.
 
 Evidemment... une personne efficace, réactive et motivée (l'inverse serait étonnant mais nous le précisons quand même).
 
-Sinon, comme tout le monde aujourd'hui, on a du café, un baby foot, et une piscine à remous <FONT color="red">(*)</FONT>.
+Sinon, comme tout le monde, on a du bon café, un baby foot et une piscine à remous <FONT color="red">(*)</FONT>.
 
 ## Techniquement
 
@@ -53,15 +53,16 @@ Sinon, comme tout le monde aujourd'hui, on a du café, un baby foot, et une pisc
 * Sketch ou photoshop
 * Une touche créative et une bonne sensibilité design
 
-### Les “ça serait pas mal” 
+### Les “petits plus” appréciables
 * Javascript (natif ou JQuery)
 * Git
 * Méthodologie (BEM, etc.)
 * Twig
 * Notions UX/UI
 * Gulp
+* JSX (React)
 
-### Les “encore mieux”
+### Les “petits plus" qui peuvent faire la différence
 * Notions d’accessibilité web
 
 
@@ -75,4 +76,4 @@ N’hésitez pas à vous munir des références à votre actif et n'hésitez pas
 
 A bientôt sur jobs@elao.com
 
-<FONT color="red">(*)</FONT> Pour la piscine, on déconne...
+<FONT color="red">(*)</FONT> Pour les remous, on déconne...
