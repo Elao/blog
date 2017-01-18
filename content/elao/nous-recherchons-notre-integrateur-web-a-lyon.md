@@ -3,14 +3,14 @@ type:           "post"
 title:          "Intégrer... notre agence de Lyon"
 date:           "2017-01-12"
 publishdate:    "2017-01-12"
-draft:          true
+draft:          false
 slug:           "nous-recherchons-notre-integrateur-web-a-lyon"
 description:    "Nous cherchons notre intégratrice/intégrateur web à Lyon."
 
 thumbnail:      "/images/posts/thumbnails/boy.png"
 header_img:     "/images/posts/headers/JobLyon.jpg"
-tags:           ["JOBS", "INTEGRATION", "LYON"]
-categories:     ["jobs", "y"]
+tags:           ["jobs", "integration", "lyon"]
+categories:     ["jobs", "recrutement"]
 
 author_username:    "elao"
 ---
@@ -42,11 +42,11 @@ Evidemment, vous êtes efficace, réactif(ve)et motivé(e). Entre nous, l'invers
 
 ## Techniquement
 
-Pour vous en dire un peu plus, il peut s'agir d'intégrer de simples sites one page ou des interfaces plus complexes pour des sites à contenu, des jeux video, des applications mobiles, etc. 
+Pour vous en dire un peu plus, il peut s'agir d'intégrer de simples sites one page ou des interfaces plus complexes pour des sites à contenu, des jeux video, des applications mobiles, etc.
 
 Vous savez donc construire un code de qualité pour mener à bien une intégration pouvant s’avérer complexe et vous êtes force de proposition au sein des équipes.
 
-### Les "basiques" 
+### Les "basiques"
 * HTML5
 * CSS3 / SASS
 * Balisage sémantique
@@ -73,8 +73,7 @@ On en discute selon votre profil.
 
 --------------------------------------------------------
 
-Au plaisir d’échanger de vive voix et de recevoir votre candidature. 
+Au plaisir d’échanger de vive voix et de recevoir votre candidature.
 N’hésitez pas à vous munir des références à votre actif et n'hésitez pas non plus à solliciter la [Team](https://www.elao.com/fr/la-tribu) pour savoir précisément à quoi vous attendre.
 
 A bientôt sur jobs@elao.com
-
