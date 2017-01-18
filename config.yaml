@@ -118,7 +118,12 @@ Languages:
           - Name:       "Méthodo"
             Identifier: "methodo"
             URL:        "/categories/methodo"
-            Weight:     30
+            Weight:     40
+            parent:     "elao"
+          - Name:       "Jobs"
+            Identifier: "jobs"
+            URL:        "/categories/jobs"
+            Weight:     50
             parent:     "elao"
 
   en:
