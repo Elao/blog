@@ -7,7 +7,7 @@ draft:          false
 slug:           "la-revanche-du-web-par-les-progressive-web-apps"
 description:    "Les Progressives Web Apps ont pour objectif de rivaliser avec les apps natives. Voyons comment cela fonctionne et le gain que cela apporte à vos utilisateurs."
 
-thumbnail:      "/images/posts/2016/pwa/pwa-general.jpg"
+thumbnail:      "/images/posts/thumbnails/pwa-general.jpg"
 header_img:     "/images/posts/2016/pwa/pwa-general.jpg"
 tags:           ["progressive web app", "service worker", "web", "mobile", "offline"]
 categories:     ["dev"]
