@@ -15,11 +15,9 @@ categories:     ["jobs", "recrutement"]
 author_username:    "elao"
 ---
 
-Nous recherchons pour notre tribu lyonnaise :
+Nous recherchons pour notre tribu lyonnaise : **Un Intégrateur ou une Intégratrice Web**
 
-# Un Intégrateur ou une Intégratrice Web
 <!--more-->
-
 
 ## En bref
 Nous oeuvrons dans un environnement technique dédié à la conception et au développement d’applications web métier sur mesure. C’est le coeur de notre activité.
