@@ -1,8 +1,8 @@
 ---
 type:           "post"
 title:          "Intégrer... notre agence de Lyon"
-date:           "2017-01-12"
-publishdate:    "2017-01-12"
+date:           "2017-01-20"
+publishdate:    "2017-01-20"
 draft:          false
 slug:           "nous-recherchons-notre-integrateur-web-a-lyon"
 description:    "Nous cherchons notre intégratrice/intégrateur web à Lyon."
