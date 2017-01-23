@@ -344,7 +344,7 @@ Pour l'article et dans un soucis de simplicité, je vous ai fait installer l'ens
 
 Et oui, si votre serveur éprouve quelques difficulés, vous aimeriez bien qu'il n'en soit pas de même pour votre dashboard. Un monitoring qui tombe en panne en même temps que le serveur qu'il surveille n'a plus aucun intérêt.
 
-Concernant les performances, selon la volumétrie de données que vous enregistrer, l'impact peut être non négligeables voir importante. Il vaut donc mieux traiter les données sur un serveur à part.
+Concernant les performances, selon la volumétrie de données que vous enregistrer, l'impact peut être non négligeables voire important. Il vaut donc mieux traiter les données sur un serveur à part.
 
 ### Configuration
 
