@@ -288,7 +288,7 @@ Pour une configuration encore plus poussée, vous pouvez lire la [documentation 
 
 Si vous laisser **Telegraf** créer sa propre base de données **InfluxDB**, celle si n'aura pas de mot de passe. Si vous souhaitez sécuriser votre base de données vous pouvez, la configuration du rôle `manala.influxdb` permet de gérer les utilisateurs et les permissions.
 
-Par exemple pour ajouter un utilisateur à la votre base *telegraf* :
+Par exemple vous pouvez ajouter un utilisateur *telegraf* qui a les droit d'écriture/lecture et un utilisateur *grafana* qui n'a que le droit de lecture
 
 {{< highlight yaml >}}
 manala_influxdb_databases:
@@ -296,16 +296,22 @@ manala_influxdb_databases:
 
 manala_influxdb_users:
   - database: telegraf
-    name:     my_user
+    name:     telegraf
     password: nYhvEVsku
+  - database: telegraf
+    user:     grafana
+    password: fCCWkXemR
 
 manala_influxdb_privileges:
   - database: telegraf
-    user:     my_user
+    user:     telegraf
     grant:    ALL
+  - database: telegraf
+    user:     grafana
+    grant:    READ
 {{< /highlight >}}
 
-N'oubliez pas ensuite de renseigner le *username* et *password* dans la configuration de **Telegraf** :
+N'oubliez pas ensuite de renseigner les *username* et *password* dans la configuration de **Telegraf** :
 
 {{< highlight yaml >}}
 manala_telegraf_configs:
@@ -314,9 +320,70 @@ manala_telegraf_configs:
     config:
       - urls: ["http://localhost:8086"]
       - database: telegraf
-      - username: my_user
+      - username: telegraf
       - password: nYhvEVsku
 {{< /highlight >}}
+
+et dans la *datasource* de **Grafana** :
+
+{{< highlight yaml >}}
+manala_grafana_datasources:
+  - name:      telegraf
+    type:      influxdb
+    isDefault: true
+    access:    proxy
+    basicAuth: false
+    url:       http://localhost:8086
+    database:  telegraf
+    username:  grafana
+    password:  fCCWkXemR
+{{< /highlight >}}
+
+## En production
+
+### Diviser pour mieux reigner
+
+Pour l'article et dans un soucis de simplicité, je vous ai fait insaller l'ensemble des outils sur le même serveur. Généralement, en production, on sépare le collecteur (Telegraf) de la persistence (InfluxDB) et de l'exploitation des données (Grafana) et ce pour des raisons de performance et de disponibilité.
+
+Et oui, si votre serveur éprouve quelques difficulés, vous aimeriez bien qu'il n'en soit pas de même pour votre dashboard. Un monitoring qui tombe en panne en même temps que le serveur qu'il surveille n'a plus aucun intérêt.
+
+Concernant les performances, selon la volumétrie de données que vous enregistrer, l'impact peut être non négligeables voir importante. Il vaut donc mieux traiter les données sur un serveur à part.
+
+### Configuration
+
+Concernant l'installation, pas de grande différence, il suffit de reprendre le provisionning ci dessus et de répartir sur deux playbook, l'un pour le serveur à monitorer avec Telegraf, l'autre pour le serveur de données avec InfluxDB et Grafana. La difficulté sera de permettre à Telegraf d'envoyer ses métriques à un autre serveur.
+
+On va également en profiter pour passer du protocole `HTTP` au protocole `UDP` plus léger :
+
+{{< highlight yaml >}}
+manala_influxdb_config:
+  - reporting-disabled: true
+  - udp:
+    - enabled: true
+    - bind-address: :8090
+    - database: telegraf
+    - batch-size: 5000
+    - batch-timeout: 1s
+    - batch-pending: 10
+    - read-buffer: 0
+{{< /highlight >}}
+
+puis renseignez l'ip (ou le domaine) du serveur **InfluxDB** dans la configuration de **Telegraf** :
+
+{{< highlight yaml >}}
+manala_telegraf_configs:
+  - file:     output_influxdb.conf
+    template: configs/output_influxdb.conf.j2
+    config:
+      - urls: ["udp://123.234.56.78:8086"]
+      - database: telegraf
+      - username: telegraf
+      - password: nYhvEVsku
+{{< /highlight >}}
+
+<div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
+  Attention, il est recommendé de placer votre endpoint InfluxDB derrière un firewall si l'interface est public et le configurer pour n'accepter le traffic entrant pour le port 8086 uniquement depuis l'IP du serveur monitoré. Pour celà vous pouvez utiliser le role <a href="https://github.com/manala/ansible-role-shorewall">manala.shorewall</a>.
+</div>
 
 ## Conclusion
 
