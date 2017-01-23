@@ -382,7 +382,7 @@ manala_telegraf_configs:
 {{< /highlight >}}
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
-  Attention, il est recommendé de placer votre endpoint InfluxDB derrière un firewall si l'interface est public et le configurer pour n'accepter le traffic entrant pour le port 8086 uniquement depuis l'IP du serveur monitoré. Pour celà vous pouvez utiliser le role <a href="https://github.com/manala/ansible-role-shorewall">manala.shorewall</a>.
+  Attention, il est recommendé de placer votre endpoint InfluxDB derrière un firewall si l'interface est public et de le configurer pour n'accepter le traffic entrant pour le port 8086 uniquement depuis l'IP du serveur monitoré. Pour celà vous pouvez utiliser le role <a href="https://github.com/manala/ansible-role-shorewall">manala.shorewall</a>.
 </div>
 
 ## Conclusion
