@@ -18,7 +18,7 @@ author_username:    "mcolin"
 
 ## Manala
 
-[Manala](http://www.manala.io/) est la boîte à outils pour [Ansible](https://www.ansible.com/) créée par [Elao](https://www.elao.com/fr/). Elle se compose d'une multitude de rôles **Ansible** pensés autour de la même phylosophie : une installation et une configuration simple d'un environnement serveur.
+[Manala](http://www.manala.io/) est la boîte à outils pour [Ansible](https://www.ansible.com/) créée par [Elao](https://www.elao.com/fr/). Elle se compose d'une multitude de rôles **Ansible** pensés autour de la même philosophie : une installation et une configuration simple d'un environnement serveur.
 
 Si vous n'êtes pas famillier avec **Ansible**, je vous encourage à [découvrir ce magnifique outil](http://docs.ansible.com/ansible/index.html).
 
@@ -26,7 +26,7 @@ Si vous n'êtes pas famillier avec **Ansible**, je vous encourage à [découvrir
 
 Le **monitoring** consiste à surveiller et logger une série de métrique dans le temps et de les représenter sous forme de graphiques. Le monitoring vous permet de détecter voir d'anticiper des anomalies ou des pannes, que ce soit de votre infrastucture ou de votre applicatif.
 
-Le **monitoring** peut vous permettre de déclanger des alertes sur certains seuils de **métriques** afin de réagir avant qu'un problème devienne critique.
+Le **monitoring** peut vous permettre de déclencher des alertes sur certains seuils de **métriques** afin de réagir avant qu'un problème devienne critique.
 
 Celà peut être :
 
@@ -43,11 +43,11 @@ En conclusion, le monitoring permet de **surveiller** la santé de votre serveur
 
 ### Telegraf
 
-[Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) est un collecteur de données créé par les créateurs d'**InfluxDB** : [InfluxData](https://www.influxdata.com/). Il permet de collecter des données systèmes (CPU, mémoire, I/O, disque, ...) et dispose de très [nombreux plugins](https://github.com/influxdata/telegraf#input-plugins) d'entrées (pour collecter) et de sortie (pour stocker).
+[Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) est un collecteur de données créé par les créateurs d'**InfluxDB** : [InfluxData](https://www.influxdata.com/). Il permet de collecter des données systèmes (CPU, mémoire, I/O, disque, ...) et dispose de très nombreux plugins [d'entrées](https://github.com/influxdata/telegraf#input-plugins) (pour collecter) et [de sortie](https://github.com/influxdata/telegraf#output-plugins) (pour stocker).
 
 ### InfluxDB
 
-[InfluxDB](https://www.influxdata.com/time-series-platform/influxdb/) est une base de données écrite en Go spécialisée dans le stockage de métriques et d'événements. Egalement développé par [InfluxData](https://www.influxdata.com/), l'integration avec **Telegraf** est très facile.
+[InfluxDB](https://www.influxdata.com/time-series-platform/influxdb/) est une base de données écrite en Go spécialisée dans le stockage de métriques et d'événements. Egalement développé par [InfluxData](https://www.influxdata.com/), l'intégration avec **Telegraf** est très facile.
 
 ### Grafana
 
@@ -85,7 +85,7 @@ puis les ajouter à votre playbook :
 
 ### Configuration
 
-Dans ```group_vars```, la configuration suivante permet d'indiquer que nous souhaitons installer InfluxDB, Telegraf et Grafana via les dépôts ```influxdata``` et ```grafana``` plutôt que part les dêpot Debian. Celà nous permet d'obtenir les dernières versions de ces logiciels.
+Dans ```group_vars```, la configuration suivante permet d'indiquer que nous souhaitons installer InfluxDB, Telegraf et Grafana via les dépôts ```influxdata``` et ```grafana```.
 
 {{< highlight yaml >}}
 manala_apt_preferences:
@@ -97,11 +97,6 @@ manala_apt_preferences:
 Il faut ensuite configurer le role [manala.telegraf](https://github.com/manala/ansible-role-telegraf) :
 
 {{< highlight yaml >}}
-manala_telegraf_config:
-  - agent:
-    - hostname: "{{ ansible_fqdn }}"
-    - quiet: true
-
 manala_telegraf_configs_exclusive: true
 manala_telegraf_configs:
   - file:     output_influxdb.conf
