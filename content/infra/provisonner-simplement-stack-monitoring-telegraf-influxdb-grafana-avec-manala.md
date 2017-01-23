@@ -53,6 +53,8 @@ En conclusion, le monitoring permet de **surveiller** la santé de votre serveur
 
 [Grafana](http://grafana.org/) est une des références parmis les dashboards de métriques. Il permet de réaliser des graphiques à partir d'une multitudes de sources de données.
 
+A partir de la version 4, Grafana permet également de faire de l'alerting basique grâce à un système de [règles](http://docs.grafana.org/alerting/rules/) et de [notifications](http://docs.grafana.org/alerting/notifications/).
+
 ## Provisonning
 
 ### Playbook
