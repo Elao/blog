@@ -340,7 +340,7 @@ manala_grafana_datasources:
 
 ### Diviser pour mieux reigner
 
-Pour l'article et dans un soucis de simplicité, je vous ai fait insaller l'ensemble des outils sur le même serveur. Généralement, en production, on sépare le collecteur (Telegraf) de la persistence (InfluxDB) et de l'exploitation des données (Grafana) et ce pour des raisons de performance et de disponibilité.
+Pour l'article et dans un soucis de simplicité, je vous ai fait installer l'ensemble des outils sur le même serveur. Généralement, en production, on sépare le collecteur (Telegraf) de la persistence (InfluxDB) et de l'exploitation des données (Grafana) et ce pour des raisons de performance et de disponibilité.
 
 Et oui, si votre serveur éprouve quelques difficulés, vous aimeriez bien qu'il n'en soit pas de même pour votre dashboard. Un monitoring qui tombe en panne en même temps que le serveur qu'il surveille n'a plus aucun intérêt.
 
