@@ -14,7 +14,7 @@ We finally use Docker to handle the container stuff, so you will need ... [docke
 ### I don't see my assets !!
 `make build && make watch`
 
-(By default the french blog is loaded if you want to work on the english part you will need to change the `--config`option into the makefile (--config=config_en.yml)
+(By default the french blog is loaded, you can easily switch to the english part by updating the locale in the url)
 
 # Writing a post
 
@@ -52,7 +52,6 @@ tags:           ["x", "y"]
 categories:     ["x", "y"]
 
 author_username:    "elao"
-
 ---
 ```
 
@@ -62,19 +61,24 @@ author_username:    "elao"
 
 The new file is located at `content/dev/my-first-post.md`
 
+### IMPORTANT
+If you wish to write a post in english you need to include the locale as part of the filename like this:
+
+`my-awesome-blogpost.en.md`
+
 ## Where to put my media files ?
 
 ALL media files to be stored into `static/images`
-Medias are moved when static files are build in public directory. Be careful to the quality of the media, don't worry about optimization it's handle by the build/optimize tasks.
+Medias are moved when static files are build in public directory. Be careful to the quality and size of the media, don't worry about optimization it's handle by the build/optimize tasks.
 
-## What about my article medias
+## What about my article medias ?
 
 All media files linked to an article need to be stored into the static directory and more precisely into the static/images/posts (Group by year of publication)
 To display a media into a post use Hugo shortcode `figure` like the following:
 
 ```
 <p class="text-center">
-    {{< figure src="[locale]/images/posts/2014/proxmox_partition_elao_1000.png" title="Partitionnement personnalisé" alt="Partitionnement-d-un-serveur-proxmox - Partitionnement personnalisé">}}
+    {{< figure src="/images/posts/2014/proxmox_partition_elao_1000.png" title="Partitionnement personnalisé" alt="Partitionnement-d-un-serveur-proxmox - Partitionnement personnalisé">}}
 </p>
 ```
 

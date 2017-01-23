@@ -3,15 +3,15 @@
 {{ if gt .Paginator.TotalPages 1 }}
 <nav class="pager">
     {{ with .Paginator.First }}
-        <a href="{{ partial "i18n.html" $context }}{{ .URL }}" aria-label="First"><span aria-hidden="true">&larr;</span></a>
+        <a href="{{ .URL }}" aria-label="First"><span aria-hidden="true">&larr;</span></a>
     {{ end }}
 
     {{ range .Paginator.Pagers }}
-        <a href="{{ partial "i18n.html" $context }}{{ .URL }}">{{ .PageNumber }}</a>
+        <a href="{{ .URL }}">{{ .PageNumber }}</a>
     {{ end }}
 
     {{ with .Paginator.Last }}
-        <a href="{{ partial "i18n.html" $context }}{{ .URL }}" aria-label="Last"><span aria-hidden="true">&rarr;</span></a>
+        <a href="{{ .URL }}" aria-label="Last"><span aria-hidden="true">&rarr;</span></a>
     {{ end }}
 </nav>
 {{ end }}

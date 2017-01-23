@@ -57,8 +57,17 @@ install:
 #########
 # Build #
 #########
-build: install build_assets build_fr build_en
-
+build: install build_assets
+	docker run \
+		--rm \
+		--volume `pwd`:/srv \
+		--env HOME=/home \
+		--user `id -u` \
+		--tty \
+		manala/hugo-debian \
+		bash -c "\
+			hugo --theme=blog --config=config.yaml \
+		"
 build_assets:
 	docker run \
 		--rm \
@@ -69,31 +78,6 @@ build_assets:
 		manala/hugo-debian \
 		bash -c "\
 			node_modules/.bin/gulp build \
-		"
-
-## Build
-build_fr:
-	docker run \
-		--rm \
-		--volume `pwd`:/srv \
-		--env HOME=/home \
-		--user `id -u` \
-		--tty \
-		manala/hugo-debian \
-		bash -c "\
-			hugo --theme=blog --config=config_fr.yaml \
-		"
-
-build_en:
-	docker run \
-		--rm \
-		--volume `pwd`:/srv \
-		--env HOME=/home \
-		--user `id -u` \
-		--tty \
-		manala/hugo-debian \
-		bash -c "\
-			hugo --theme=blog --config=config_en.yaml \
 		"
 
 ## Build and optimize
@@ -113,7 +97,7 @@ watch:
 		--tty -i \
 		--publish 1313:1313 \
 		manala/hugo-debian \
-		hugo server --bind=0.0.0.0 --theme=blog --config=config_fr.yaml --buildDrafts --watch --ignoreCache=true
+		hugo server --bind=0.0.0.0 --theme=blog --config=config.yaml --buildDrafts --watch --ignoreCache=true
 
 ## Images compression
 optimize:
@@ -125,10 +109,10 @@ optimize:
 		--tty \
 		manala/hugo-debian \
 		bash -c "\
-			find public/fr/images -iname "*.png" -type f -exec optipng -o7 {} \; \
-			&& find public/en/images -iname "*.png" -type f -exec optipng -o7 {} \; \
-			&& find public/fr/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \; \
-			&& find public/en/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \; \
+			find public/images -iname "*.png" -type f -exec optipng -o7 {} \; \
+			&& find public/images -iname "*.png" -type f -exec optipng -o7 {} \; \
+			&& find public/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \; \
+			&& find public/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \; \
 		"
 ## Crop thumbnail and header files
 crop: crop-thumbnails crop-headers
@@ -142,8 +126,8 @@ crop-thumbnails:
 		--tty \
 		manala/hugo-debian \
 		bash -c "\
-			find public/fr/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \; \
-			&& find public/en/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \; \
+			find public/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \; \
+			&& find public/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \; \
 		"
 crop-headers:
 	docker run \
@@ -154,8 +138,8 @@ crop-headers:
 		--tty \
 		manala/hugo-debian \
 		bash -c "\
-			find public/fr/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \; \
-			&& find public/en/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \; \
+			find public/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \; \
+			&& find public/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \; \
 		"
 ## Deploy app to production (after static build and images optimization)
 deploy_and_optimize@prod: build-and-optimize
