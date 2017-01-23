@@ -1,8 +1,8 @@
 ---
 type:               "post"
 title:              "Provisionner simplement une stack de monitoring Telegraf + InfluxDB + Grafana avec Manala"
-date:               "2016-11-16"
-publishdate:        "2016-11-16"
+date:               "2017-01-23"
+publishdate:        "2017-01-23"
 draft:              false
 slug:               "provisonner-simplement-stack-monitoring-telegraf-influxdb-grafana-avec-manala"
 description:        "Comment utiliser les roles Ansible de Manala pour provisionner simplement une stack de monitoring Telegraf + InfluxDB + Grafana"
@@ -183,7 +183,7 @@ Par defaut **Grafana** est accesible sur le port ```3000``` avec pour identifian
 À partir de la vous pouvez créer votre premier *dashboard* (Menu > Dashboard > New). Pour avoir rapidement une base, vous pouvez également importer (Menu > Dashboard > Import) <a href="https://gist.github.com/maximecolin/ae5876ff844ce6a5dca95bc179bfa72d" target="_blank">cette configuration de dashboard</a> que j'ai configuré pour vous.
 
 <figure>
-    <img src="/fr/images/posts/2016/monitoring-grafana.jpg" alt="Dashboard Grafana de monitoring système" />
+    <img src="/images/posts/2016/monitoring-grafana.jpg" alt="Dashboard Grafana de monitoring système" />
     <figcaption style="text-align:center;font-style:italic;">Dashboard Grafana de monitoring système</figcaption>
 </figure>
 
