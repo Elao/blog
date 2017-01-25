@@ -1,8 +1,8 @@
 ---
 type:               "post"
 title:              "Provisionner simplement une stack de monitoring Telegraf + InfluxDB + Grafana avec Manala"
-date:               "2017-01-23"
-publishdate:        "2017-01-23"
+date:               "2017-01-25"
+publishdate:        "2017-01-25"
 draft:              false
 slug:               "provisonner-simplement-stack-monitoring-telegraf-influxdb-grafana-avec-manala"
 description:        "Comment utiliser les roles Ansible de Manala pour provisionner simplement une stack de monitoring Telegraf + InfluxDB + Grafana"
@@ -170,7 +170,7 @@ system
 Vous devriez voir la liste des métriques que vous aviez configurées plus haut dans le rôle ```manala.telegraf```
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
-    Je ne parle intentionnellement pas de l'interface web d'InfluxDB habituellement disponible sur le port 8083 car celle-ci est <a  href="https://docs.influxdata.com/influxdb/v1.1/administration/differences/#deprecations">actuellement dépréciée et désactivée par defaut</a> (version 1.1) et disparaîtra des versions suivantes.
+    Je ne parle intentionnellement pas de l'interface web d'InfluxDB habituellement disponible sur le port 8083 car celle-ci est <a  href="https://docs.influxdata.com/influxdb/v1.1/administration/differences/#deprecations">actuellement dépréciée et désactivée par défaut</a> (version 1.1) et disparaîtra des versions suivantes.
 </div>
 
 ### Grafana
@@ -340,15 +340,15 @@ manala_grafana_datasources:
 
 ### Diviser pour mieux régner
 
-Pour l'article et dans un soucis de simplicité, je vous ai fait installer l'ensemble des outils sur le même serveur. Généralement, en production, on sépare le collecteur (Telegraf) de la persistence (InfluxDB) et de l'exploitation des données (Grafana) et ce pour des raisons de performance et de disponibilité.
+Pour l'article et dans un soucis de simplicité, je vous ai fait installer l'ensemble des outils sur le même serveur. Généralement, en production, on sépare le collecteur (Telegraf) de la persistance (InfluxDB) et de l'exploitation des données (Grafana) et ce pour des raisons de performance et de disponibilité.
 
 Et oui, si votre serveur éprouve quelques difficulés, vous aimeriez bien qu'il n'en soit pas de même pour votre dashboard. Un monitoring qui tombe en panne en même temps que le serveur qu'il surveille n'a plus aucun intérêt.
 
-Concernant les performances, selon la volumétrie de données que vous enregistrer, l'impact peut être non négligeables voire important. Il vaut donc mieux traiter les données sur un serveur à part.
+Concernant les performances, selon la volumétrie de données que vous enregistrez, l'impact peut être non négligeable voire important. Il vaut donc mieux traiter les données sur un serveur à part.
 
 ### Configuration
 
-Concernant l'installation, pas de grande différence, il suffit de reprendre le provisionning ci dessus et de répartir sur deux playbook, l'un pour le serveur à monitorer avec Telegraf, l'autre pour le serveur de données avec InfluxDB et Grafana. La difficulté sera de permettre à Telegraf d'envoyer ses métriques à un autre serveur.
+Concernant l'installation, pas de grande différence, il suffit de reprendre le provisionning ci-dessus et de répartir sur deux playbook, l'un pour le serveur à monitorer avec Telegraf, l'autre pour le serveur de données avec InfluxDB et Grafana. La difficulté sera de permettre à Telegraf d'envoyer ses métriques à un autre serveur.
 
 On va également en profiter pour passer du protocole `HTTP` au protocole `UDP` plus léger :
 
