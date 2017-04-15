@@ -9,8 +9,8 @@ description:        "Guide d'intrégration de Vue.js dans une application Symfon
 
 thumbnail:          "/images/posts/thumbnails/vuejs.jpg"
 header_img:         "/images/posts/headers/vuejs.jpg"
-tags:               ["Vue.js","Javascript","Front","Frontend","Framework","Symfony"]
-categories:         ["Dev", "Vue.js", "Javascript", "Symfony"]
+tags:               ["Vuejs","Javascript","Front","Frontend","Framework","Symfony"]
+categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 
 author_username:    "mcolin"
 ---

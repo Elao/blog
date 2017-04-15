@@ -9,8 +9,8 @@ description:        "Retour d'expérience sur le framework frontend Vue.js et po
 
 thumbnail:          "/images/posts/thumbnails/vuejs.jpg"
 header_img:         "/images/posts/headers/vuejs.jpg"
-tags:               ["Vue.js","Javascript","Front","Frontend","Framework"]
-categories:         ["Dev", "Vue.js", "Javascript"]
+tags:               ["Vuejs","Javascript","Front","Frontend","Framework"]
+categories:         ["Dev", "Vuejs", "Javascript"]
 
 author_username:    "mcolin"
 ---
