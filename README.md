@@ -1,6 +1,8 @@
 # Hugo
 
-We finally use Docker to handle the container stuff, so you will need ... [docker](http://www.docker.com/products/docker#/mac) to be able to work on the blog.
+Reference : [https://gohugo.io/overview/quickstart/](https://gohugo.io/overview/quickstart/)
+
+We finally use Docker to handle the container stuff, so you will need ... [docker](http://www.docker.com/products/docker#/mac) to be able to write articles for the blog.
 
 ## Launching hugo (watch mode)
 
@@ -14,26 +16,27 @@ We finally use Docker to handle the container stuff, so you will need ... [docke
 ### I don't see my assets !!
 `make build && make watch`
 
-(By default the french blog is loaded, you can easily switch to the english part by updating the locale in the url)
+(By default the french blog is loaded, you can easily switch to the english version by updating the locale in the url)
 
 # Writing a post
 
 ## Categories
 
-4 main categories are available into two i18n folders (EN/FR)
+5 main categories are available in the `content` folder:
 
-* Infra (content/infra)
-* Dev   (content/dev)
-* Elao  (content/news)
-* Tech  (content/tech)
+* Infra   (content/infra)
+* Dev     (content/dev)
+* Elao    (content/news)
+* Tech    (content/tech)
+* Methods (content/methodo)
 
-You need to create your post inside one of them.
+You must create your post inside one of them.
 
 ## Create a new post
 
 ### Yourself
 
-Simply create your markdown file (.md extension) into the choosen category (content/infra, content/dev ... )
+Simply create your markdown file (.md extension) into the chosen category (content/infra, content/dev ... )
 And add the front matter skeleton:
 
 ```
@@ -68,17 +71,17 @@ If you wish to write a post in english you need to include the locale as part of
 
 ## Where to put my media files ?
 
-ALL media files to be stored into `static/images`
-Medias are moved when static files are build in public directory. Be careful to the quality and size of the media, don't worry about optimization it's handle by the build/optimize tasks.
+All media files must be stored into `static/images`
+Media are moved when static files are built into the `public` directory. Be careful to the quality and size of the media, don't worry about optimization it's handled by the `build/optimize` tasks.
 
-## What about my article medias ?
+## What about my article media ?
 
-All media files linked to an article need to be stored into the static directory and more precisely into the static/images/posts (Group by year of publication)
-To display a media into a post use Hugo shortcode `figure` like the following:
+All media files linked to an article need to be stored into the static directory and more precisely into the `static/images/posts` (Grouped by year of publication)
+To display a media into a post, use Hugo shortcode `figure` like the following:
 
 ```
 <p class="text-center">
-    {{< figure src="/images/posts/2014/proxmox_partition_elao_1000.png" title="Partitionnement personnalisé" alt="Partitionnement-d-un-serveur-proxmox - Partitionnement personnalisé">}}
+    {{< figure class="text-center" src="/images/posts/2014/proxmox_partition_elao_1000.png" title="Partitionnement personnalisé" alt="Partitionnement-d-un-serveur-proxmox - Partitionnement personnalisé">}}
 </p>
 ```
 
@@ -93,7 +96,7 @@ Hugo is using `Python Pygments` package for code highlighting so you can highlig
 
 ## Add a new author file
 
-You need to add a new yaml file into data/authors with the following informations:
+You need to add a new yaml file into `data/authors` with the following information:
 
 ```
 en:
@@ -126,16 +129,16 @@ Launch a local serveur on port 8080
 The blog is now accessible by everyone in the open-space on [http://192.168.1.xx:8080/fr](http://192.168.1.xx:8080/fr) (where xx is your local IP address).
 
 ## You have an old version of the docker image
-If you have cloned the repository a long time ago, your docker image could be an old one.
-To have the last version of the image, you can execute the following command:
+If you have cloned the repository a long time ago, your docker image could be deprecated.
+In order to obtain the last version of the image, you can execute the following command:
 `docker pull manala/hugo-debian`
 
 ## Publish an article
-Your post is good to go ? Create a PR and ask for review to a team member once it's done you're ready going to production.
+Your post is ready to be published ? Create a PR and ask for review to a team member. Once it's done, you're ready for production.
 
 ### Going to production
 
-#### Sync only files (you don't had any images)
+#### Sync only files (you don't have any image)
 `make deploy@prod`
 
 #### Sync files and optimize images
