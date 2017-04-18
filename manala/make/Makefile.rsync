@@ -1,0 +1,5 @@
+RSYNC = rsync \
+		--verbose --human-readable --itemize-changes \
+		--archive --cvs-exclude --delete --delete-excluded --force \
+		--compress \
+		$(if $(RSYNC_RSH),--rsh="$(RSYNC_RSH)") \

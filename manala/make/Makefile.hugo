@@ -1,0 +1,13 @@
+HUGO = hugo \
+	--verbose \
+	$(if $(HUGO_THEME),--theme $(HUGO_THEME)) \
+	$(HUGO_OPTIONS)
+
+HUGO_SERVER = hugo server \
+	--verbose \
+	$(if $(HUGO_THEME),--theme $(HUGO_THEME)) \
+	$(HUGO_OPTIONS) \
+	--watch \
+	--bind 0.0.0.0
+
+MAKE_HUGO_THEME = make --silent --directory themes/$(HUGO_THEME)

@@ -1,0 +1,103 @@
+.DEFAULT_GOAL := help
+.PHONY: help confirm manala
+
+# Dir
+DIR = $(CURDIR)
+
+# Colors
+COLOR_RESET   = \033[0m
+COLOR_ERROR   = \033[31m
+COLOR_INFO    = \033[32m
+COLOR_WARNING = \033[33m
+COLOR_COMMENT = \033[36m
+
+########
+# Help #
+########
+
+# Help
+HELP = \
+	$(COLOR_COMMENT)Usage:$(COLOR_RESET)\
+	\n  make [target]\n\
+	\n$(COLOR_COMMENT)Help:$(COLOR_RESET)\
+	\n  $(COLOR_INFO)help:$(COLOR_RESET) This help\
+	\n
+
+help:
+	@printf "$(HELP)"
+ifneq ($(DIR),$(MANALA_DIR))
+	@printf "\n$(COLOR_COMMENT)Application:$(COLOR_RESET)\n"
+	@awk '/^[a-zA-Z\-\_0-9\.@]+:/ { \
+		helpMessage = match(lastLine, /^## (.*)/); \
+		if (helpMessage) { \
+			helpCommand = substr($$1, 0, index($$1, ":")); \
+			helpMessage = substr(lastLine, RSTART + 3, RLENGTH); \
+			printf "  $(COLOR_INFO)%-20s$(COLOR_RESET) %s\n", helpCommand, helpMessage; \
+		} \
+	} \
+	{ lastLine = $$0 }' $(MAKEFILE_LIST)
+endif
+	@printf "\n"
+
+#######
+# Log #
+#######
+
+define log
+    printf "\n[$(COLOR_COMMENT)$(shell date +"%T")$(COLOR_RESET)][$(COLOR_COMMENT)$(@)$(COLOR_RESET)] $(COLOR_INFO)$(1)$(COLOR_RESET)\n\n"
+endef
+
+# Warning
+define log_warning
+    printf "\n[$(COLOR_COMMENT)¯\_(ツ)_/¯$(COLOR_RESET)] $(COLOR_WARNING)$(1)$(COLOR_RESET)\n\n"
+endef
+
+# Error
+define log_error
+    printf "\n[$(COLOR_COMMENT)(╯°□°)╯︵ ┻━┻$(COLOR_RESET)] $(COLOR_ERROR)$(1)$(COLOR_RESET)\n\n"
+endef
+
+###########
+# Confirm #
+###########
+
+confirm:
+	@printf "\n$(COLOR_INFO) ༼ つ ◕_◕ ༽つ $(COLOR_WARNING)Please confirm (y/N)$(COLOR_RESET): "
+	@read CONFIRM ; if [ "$$CONFIRM" != "y" ]; then exit 1; fi
+
+##########
+# Manala #
+##########
+
+manala:
+	@curl -s -L http://bit.ly/10hA8iC | bash
+
+############
+# Manifest #
+############
+
+# See: https://gist.github.com/pkuczynski/8665367
+define manifest_parse_new_line
+
+
+endef
+define manifest_parse
+    $(subst [[|]],$(manifest_parse_new_line),$(shell prefix=$2 ; \
+		space='[[:space:]]*' ; \
+		word='[a-zA-Z0-9_]*' ; \
+		fs=$(shell echo @|tr @ '\034') ; \
+		sed -ne "s|^\($$space\)\($$word\)$$space:$$space\"\(.*\)\"$$space\$$|\1$$fs\2$$fs\3|p" \
+			-e "s|^\($$space\)\($$word\)$$space:$$space\(.*\)$$space\$$|\1$$fs\2$$fs\3|p" $1 | \
+		awk -F$$fs '{ \
+		  indent = length($$1)/2; \
+		  vname[indent] = $$2; \
+		  for (i in vname) {if (i > indent) {delete vname[i]}} \
+		  if (length($$3) > 0) { \
+			 vn=""; for (i=0; i<indent; i++) {vn=(vn)(vname[i])("_")} \
+			 printf("%s%s%s=\"%s\"[[|]]", "'$$prefix'",vn, $$2, $$3); \
+		  } \
+		}' \
+	))
+endef
+
+$(eval $(call manifest_parse,$(MANALA_DIR)/manifest.yaml))

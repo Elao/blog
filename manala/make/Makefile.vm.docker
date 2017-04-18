@@ -1,0 +1,48 @@
+.PHONY: setup sh
+
+# Help
+ifeq ($(DOCKER),)
+HELP += \
+	\n$(COLOR_COMMENT)Virtual machine:$(COLOR_RESET)\
+	\n  $(COLOR_INFO)setup:$(COLOR_RESET) Setup virtual machine\
+	\n  $(COLOR_INFO)sh:$(COLOR_RESET)    Shell to machine shell\
+	\n
+endif
+
+################
+# Environments #
+################
+
+@local:
+ifneq ($(DOCKER),)
+	@$(call log_error,Must be run locally)
+	@exit 1
+endif
+
+###################
+# Virtual machine #
+###################
+
+setup: @local
+setup: setup@development
+
+sh: @local
+sh:
+	@$(DOCKER_RUN)
+
+#########
+# Proxy #
+#########
+
+ifneq ($(DOCKER),)
+define proxy
+	$(1)@development
+endef
+else
+define proxy
+	$(1)@proxy
+endef
+endif
+
+%@proxy:
+	@$(DOCKER_RUN) $(if $(DOCKER_SHELL),$(DOCKER_SHELL),sh) -c "make --silent --directory=$(app_dir) $(*)@development"
