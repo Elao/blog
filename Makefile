@@ -5,17 +5,6 @@
 HUGO_THEME = 2015
 
 include  manala/make/Makefile
--include Makefile.local
-
-################
-# Environments #
-################
-
-# Development
-%@development: HUGO_OPTIONS += --buildDrafts --buildFuture
-
-# Staging
-%@staging: HUGO_OPTIONS += --buildDrafts --buildFuture
 
 #########
 # Setup #
@@ -56,10 +45,10 @@ build: $(call proxy,build)
 build@development:
 	# Theme
 	$(MAKE_HUGO_THEME) build@development
-	
+
 	$(call log,Hugo)
 	$(HUGO)
-	
+
 	$(call log,Crop images)
 	find public/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \;
 	find public/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \;
@@ -68,14 +57,14 @@ build@development:
 build@staging:
 	# Theme
 	$(MAKE_HUGO_THEME) build@staging
-	
+
 	$(call log,Hugo)
 	$(HUGO)
-	
+
 	$(call log,Crop images)
 	find public/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \;
 	find public/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \;
-	
+
 	$(call log,Optimize images)
 	find public/images -iname "*.png" -type f -exec optipng -quiet -o7 {} \;
 	find public/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \;
@@ -84,10 +73,10 @@ build@staging:
 build@production:
 	# Theme
 	$(MAKE_HUGO_THEME) build@production
-	
+
 	$(call log,Hugo)
 	$(HUGO)
-	
+
 	$(call log,Crop images)
 	find public/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \;
 	find public/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \;

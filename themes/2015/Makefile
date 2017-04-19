@@ -3,20 +3,6 @@
 
 include ../../manala/make/Makefile
 
-################
-# Environments #
-################
-
-# Development
-%@development: export NODE_ENV     = development
-%@development: LARAVEL_MIX_OPTIONS = --progress
-
-# Staging
-%@staging: export NODE_ENV = production
-
-# Production
-%@production: export NODE_ENV = production
-
 ###########
 # Install #
 ###########
