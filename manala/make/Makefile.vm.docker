@@ -45,4 +45,4 @@ endef
 endif
 
 %@proxy:
-	@$(DOCKER_RUN) $(if $(DOCKER_SHELL),$(DOCKER_SHELL),sh) -c "make --silent --directory=$(app_dir) $(*)@development"
+	@$(DOCKER_RUN) sh -c "make --silent --directory=$(app_dir) $(*)@development"
