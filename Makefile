@@ -58,7 +58,7 @@ build@development:
 	$(MAKE_HUGO_THEME) build@development
 	
 	$(call log,Hugo)
-	rm -Rf public && $(HUGO)
+	$(HUGO)
 	
 	$(call log,Crop images)
 	find public/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \;
@@ -70,7 +70,7 @@ build@staging:
 	$(MAKE_HUGO_THEME) build@staging
 	
 	$(call log,Hugo)
-	rm -Rf public && $(HUGO)
+	$(HUGO)
 	
 	$(call log,Crop images)
 	find public/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \;
@@ -86,7 +86,7 @@ build@production:
 	$(MAKE_HUGO_THEME) build@production
 	
 	$(call log,Hugo)
-	rm -Rf public && $(HUGO)
+	$(HUGO)
 	
 	$(call log,Crop images)
 	find public/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \;
