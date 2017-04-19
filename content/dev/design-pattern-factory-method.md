@@ -58,9 +58,10 @@ Enfin, je ne peux passer sous silence deux autres ouvrages qui me paraissent fon
 
 ## <a name="not-a-pipe"></a> Ceci n'est pas une pipe
 
-Après un préambule assez verbeux j'en conviens, laissez-moi à présent vous gratifier d'une remarque liminaire : cet article est avant tout destiné à  présenter le Design Pattern _Factory Method_, alors précisons d'emblée que ce qui suit n'est pas un pattern (et encore moins une pipe, mais ça, c'est un autre débat ...) : 
+Après un préambule assez verbeux j'en conviens, laissez-moi à présent vous gratifier d'une remarque liminaire : cet article est avant tout destiné à présenter le Design Pattern _Factory Method_, alors précisons d'emblée que ce qui suit n'est pas un pattern (et encore moins une pipe, mais ça, c'est un autre débat ...) :
 
 {{< highlight php >}}
+    <?php
     class MyFactory {
         public static function getInstance($type = null) {
             switch($type) {
@@ -127,6 +128,7 @@ On distingue sur le schéma ci-dessus les participants suivants :
 ### Exposé de la problématique
 
 {{< highlight php >}}
+    <?php
     class OrderHandler {
         public function orderProduct(Order $order, int $qty = 1): Product {
             $orderedProduct = new Product();
@@ -154,6 +156,7 @@ Il est possible qu'en l'état actuel de l'application, ce code fasse parfaitemen
 Nous allons à présent modifier notre classe `OrderHandler` pour nous rapprocher du pattern : 
 
 {{< highlight php >}}
+    <?php
     class OrderHandler {
         public function orderProduct(
             Order $order, 
@@ -180,7 +183,7 @@ Les modifications apportées consistent à :
 
 ### Commentaires
 
-On note tout d'abord, comme le laisse deviner la classe `OrderHandler`, que le pattern `Factory Method` est souvent implémentée par des classes dont la création de produit n'est pas la principale responsabilité ; ici `OrderHandler` est une classe métier qui ne se contente pas d'instancier un produit ; elle est par exemple plus riche fonctionnellement que la classe `MyFactory` que j'avais présentée tout à l'heure.
+On note tout d'abord, comme le laisse deviner la classe `OrderHandler`, que le pattern `Factory Method` est souvent implémenté par des classes dont la création de produit n'est pas la principale responsabilité ; ici `OrderHandler` est une classe métier qui ne se contente pas d'instancier un produit ; elle est par exemple plus riche fonctionnellement que la classe `MyFactory` que j'avais présentée tout à l'heure.
 
 En résumé, et comme son nom l'indique, le pattern `Factory Method` consiste tout simplement à déporter dans une méthode dédiée l'instanciation de l'objet attendu. Cette méthode se résume finalement à un simple `return new Product();`. Concept d'une extrême simplicité mais qui nous permet d'obtenir une classe ouverte à l'extension, en permettant le cas échéant à ses enfants d'instancier un autre type.
 
