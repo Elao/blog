@@ -36,7 +36,7 @@ Le fichier de configuration principal de Vagrant. Ecrit en ruby, il sert à déf
 
 Vagrant utilise des boites prêtes à l’emploi pour accélérer la construction de son environnement virtuel. Le principe est similaire aux images sous [Docker](https://www.docker.com/). Une vagrant box peut contenir une simple installation d'Ubuntu, mais elle peut aussi embarquer d'autres applications pré-installées. Si vous utilisez régulièrement les mêmes briques applicatives pour vos projets, il peut être intéressant de les compiler dans une même box que vous pourrez réutiliser par la suite.
 
-Vous trouverez une liste de boxs sur [Atlas](https://atlas.hashicorp.com/boxes/search) le catalogue de boxs officiel de Vagrant.
+Vous trouverez une liste de boxs sur [Atlas](https://atlas.hashicorp.com/boxes/search) le catalogue de boxs officiel de Vagrant. A titre d'exemple, voici [la box standard](https://atlas.hashicorp.com/manala/boxes/app-dev-debian) que nous utilisons chez Elao pour initier nos projets.
 
 - Le Provider
 
@@ -107,7 +107,9 @@ Pour terminer, entrez l'addresse *http://localhost:8080/* dans votre navigateur,
 
 # Conclusion
 
-En résumé, Vagrant est une solution fiable pour instancier rapidement un environnement de développement et le partager entre plusieurs développeurs. Bien que l'exemple que nous avons vu reste simple, il est possible de faire bien des choses avec Vagrant, comme du provisioning à l'aide d'**Ansible** (ce que nous utilisons chez Elao) ou de la configuration réseau plus poussée en passant par un réseau privé et un serveur DNS comme **landrush**.
+En résumé, Vagrant est une solution fiable pour instancier rapidement un environnement de développement et le partager entre développeurs. L'exemple que nous avons vu reste simple, mais il est possible de faire bien des choses avec Vagrant, comme du provisioning à l'aide d'**Ansible** (ce que nous utilisons chez Elao) ou de la configuration réseau plus poussée en passant par un réseau privé et un serveur DNS comme **landrush**.
+
+Si les sujets de l'automatisastion et de la virtualisation vous intéressent, je vous invite à aller faire un tour sur le projet [Manala](http://www.manala.io/): la boite à outils pour Ansible maintenue par Elao.
 
 N'hésitez pas à poster vos questions ou remarques dans la section commentaires.
 
