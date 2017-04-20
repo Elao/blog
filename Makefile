@@ -4,7 +4,7 @@
 # Hugo
 HUGO_THEME = 2015
 
-include  manala/make/Makefile
+include manala/make/Makefile
 
 #########
 # Setup #
