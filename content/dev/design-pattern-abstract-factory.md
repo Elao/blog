@@ -7,9 +7,9 @@ draft:          false
 slug:           "design-pattern-abstract-factory"
 description:    "Deuxième article d'une série consacrée aux Design Patterns. Aujourd'hui : le pattern Abstract Factory"
 
-thumbnail:      "/images/posts/design-pattern/creation-abstract-factory.png"
-header_img:     "/images/posts/design-pattern/creation-abstract-factory.png"
-tags:           ["Design Pattern"]
+thumbnail:      "/images/posts/thumbnails/schema.jpg"
+header_img:     "/images/posts/headers/header_schema.jpg"
+tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 
 author_username:    "xavierr"
@@ -55,7 +55,7 @@ En résumé, le pattern `Abstract Factory` va nous permettre d'instancier des fa
 
 Ne vous laissez pas impressionner par la densité du schéma et le nombre de participants. Le pattern n'a rien d'insurmontable et peut s'avérer utile dans de nombreuses situations.
 
-Pour l'heure, et pour y voir un peu plus clair, je vous suggère de diviser mentalement le schéma en deux : 
+Pour l'heure, et pour y voir un peu plus clair, je vous suggère de diviser mentalement le schéma en deux :
 
 * à gauche figurent les fabriques
 * à droite les produits à instancier
@@ -68,7 +68,7 @@ Je suis sûr qu'au cours de votre carrière de développeur vous avez été amen
 
 J'ai développé une extension Chrome qui permet de présenter des statistiques structurées à partir du détail d'un commit sur Github : nom du projet, nom de l'auteur, liste des fichiers concernés par les modifications, nombre de lignes supprimées, nombre de lignes ajoutées, etc.
 
-Pour ce faire, j'ai développé une librairie qui contient deux classes qui analysent le contenu HTML d'une page Github et en extraient les données pertinentes : 
+Pour ce faire, j'ai développé une librairie qui contient deux classes qui analysent le contenu HTML d'une page Github et en extraient les données pertinentes :
 
 - la première classe `GithubCrawler` parse le DOM (cette classe connaît les chemins XPATH qui permettent d'extraire les données brutes au format HTML)
 - la seconde classe `GithubParser` sait parser les données brutes retournées par mon crawler pour en extraire les données épurées (débarrassées des tags HTML notamment) et les structurer
