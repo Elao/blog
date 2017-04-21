@@ -7,9 +7,9 @@ draft:          false
 slug:           "design-pattern-factory-method"
 description:    "Premier article d'une série consacrée aux Design Patterns. Aujourd'hui : le pattern Factory Method"
 
-thumbnail:      "/images/posts/design-pattern/creation-factory-method.jpg"
-header_img:     "/images/posts/design-pattern/creation-factory-method.jpg"
-tags:           ["Design Pattern"]
+thumbnail:      "/images/posts/thumbnails/scientist.jpg"
+header_img:     "/images/posts/headers/scientist.jpg"
+tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 
 author_username:    "xavierr"
@@ -31,7 +31,7 @@ Avant d'entrer dans le vif du sujet en abordant notre premier Design Pattern, pe
     <figcaption style="text-align: center;font-style: italic;">Design Patterns: Elements of Reusable Object-Oriented Software</figcaption>
 </p>
 
-En effet, difficile d'entamer une série d'articles consacrés aux Design Patterns sans faire référence à la bible en la matière : _Design Patterns: Elements of Reusable Object-Oriented Software_. Ce livre publié en 1994 par quatre développeurs, Gamma, Helm, Johnson et Vlissides, plus connus sous le nom du _Gang of Four_, recense 23 Design Patterns classés en trois catégories : 
+En effet, difficile d'entamer une série d'articles consacrés aux Design Patterns sans faire référence à la bible en la matière : _Design Patterns: Elements of Reusable Object-Oriented Software_. Ce livre publié en 1994 par quatre développeurs, Gamma, Helm, Johnson et Vlissides, plus connus sous le nom du _Gang of Four_, recense 23 Design Patterns classés en trois catégories :
 
 * les Design Patterns de création
 * les Design Patterns comportementaux (_Behavior_)
@@ -68,7 +68,7 @@ Après un préambule assez verbeux j'en conviens, laissez-moi à présent vous g
                 case "a":
                     return new A();
                     break;
-                case "b": 
+                case "b":
                     return new B();
                     break;
                 /* etc. */
@@ -77,7 +77,7 @@ Après un préambule assez verbeux j'en conviens, laissez-moi à présent vous g
     }
 {{< /highlight >}}
 
-Ne me faites pas dire ce que je n'ai pas dit ... Je ne prétends pas du tout que le code ci-dessus relève d'une mauvaise conception. Ni que cette classe n'est pas une _factory_. Simplement, si l'on se réfère à la définition exacte du pattern `Factory Method`, on s'apercevra que l'on n'est pas en présence d'un pattern. 
+Ne me faites pas dire ce que je n'ai pas dit ... Je ne prétends pas du tout que le code ci-dessus relève d'une mauvaise conception. Ni que cette classe n'est pas une _factory_. Simplement, si l'on se réfère à la définition exacte du pattern `Factory Method`, on s'apercevra que l'on n'est pas en présence d'un pattern.
 
 Pour autant, cela ne signifie pas que ce code mérite l'anathème, loin de là. J'évoquais tout à l'heure les principes d'une bonne conception objet, et parmi les bonnes pratiques, il est préconisé d'isoler ce qui varie (_encapsulate what varies_). Or c'est exactement ce que fait cette classe : elle isole en son sein un pan de code qui repose sur un embranchement (_switch_). De ce point de vue, ce code est parfaitement valide.
 
@@ -85,7 +85,7 @@ Noter que cette bonne pratique objet qui consiste à isoler ce qui varie est men
 
 * favoriser la composition plutôt que l'héritage (citée également par le _Gang of Four_)
 * programmer pour des interfaces plutôt que pour des implémentations (_idem_)
-* s'efforcer de limiter le couplage entre les objets qui collaborent (_strive for loosely couple designs between objects that interact_) 
+* s'efforcer de limiter le couplage entre les objets qui collaborent (_strive for loosely couple designs between objects that interact_)
 * les classes devraient être ouvertes à l'extension mais fermées à la modification
 * etc.
 
@@ -118,7 +118,7 @@ Cette définition peut paraître assez obscure à première vue, mais croyez-moi
 
 ### Participants
 
-On distingue sur le schéma ci-dessus les participants suivants : 
+On distingue sur le schéma ci-dessus les participants suivants :
 
 * Le créateur : classe concrète ou abstraite notamment chargée de _fabriquer_ l'objet attendu
 * Le créateur concret : il étend _Creator_ et instancie l'objet attendu
@@ -143,23 +143,23 @@ On distingue sur le schéma ci-dessus les participants suivants :
 
 La classe `OrderHandler` contient notamment une méthode `orderProduct` qui retourne un produit commandé après l'avoir instancié. Par rapport à notre schéma ci-dessus, `OrderHandler` correspondrait au `Creator` tandis que `Product` correspondrait à `ConcreteProduct`.
 
-Nous pouvons craindre que cette classe `OrderHandler` et la classe concrète `Product` soient trop étroitement liées. En effet, que se passe-t-il si nous devons gérer d'autres types de produits (des produits matériels, mais aussi des prestations de services par exemple) ? Dans son état actuel, la classe `OrderHandler` nous lie trop fortement à la classe `Product`. Nous avons notamment enfreint plusieurs recommandations : 
+Nous pouvons craindre que cette classe `OrderHandler` et la classe concrète `Product` soient trop étroitement liées. En effet, que se passe-t-il si nous devons gérer d'autres types de produits (des produits matériels, mais aussi des prestations de services par exemple) ? Dans son état actuel, la classe `OrderHandler` nous lie trop fortement à la classe `Product`. Nous avons notamment enfreint plusieurs recommandations :
 
-* notre classe n'est pas ouverte à l'extension, 
-* nous n'avons pas développé pour des interfaces, 
+* notre classe n'est pas ouverte à l'extension,
+* nous n'avons pas développé pour des interfaces,
 * nous avons créé un couplage très fort (trop fort ?) entre nos deux classes.
 
 Il est possible qu'en l'état actuel de l'application, ce code fasse parfaitement l'affaire. Mais il est préférable de rendre son code ouvert aux évolutions, et c'est particulièrement vrai lorsque l'on développe des services destinés à être consommés par des tiers (librairie _open source_ par exemple) ou bien des classes métiers dont les spécifications sont susceptibles d'évoluer fréquemment.
 
 ### Le design pattern `Factory Method` à la rescousse
 
-Nous allons à présent modifier notre classe `OrderHandler` pour nous rapprocher du pattern : 
+Nous allons à présent modifier notre classe `OrderHandler` pour nous rapprocher du pattern :
 
 {{< highlight php >}}
     <?php
     class OrderHandler {
         public function orderProduct(
-            Order $order, 
+            Order $order,
             int $qty = 1
         ): OrderableInterface {
             $orderedProduct = $this->createProduct();
@@ -196,6 +196,5 @@ Il existe un autre Design pattern _Factory_, plus riche que le design pattern `F
         border-left: 5px solid #ffa600;
         padding: 20px;
         margin: 20px 0;
-    } 
+    }
 </style>
-
