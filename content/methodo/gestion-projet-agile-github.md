@@ -1,8 +1,8 @@
 ---
 type:           "post"
 title:          "Gérer un projet AGILE avec GitHub"
-date:           "2017-02-16"
-publishdate:    "2017-02-16"
+date:           "2017-04-24"
+publishdate:    "2017-04-24"
 draft:          false
 slug:           "gestion-projet-agile-github"
 description:    "Retour d'expérience sur la gestion d'un projet avec GitHub."
