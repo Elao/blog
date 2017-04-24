@@ -63,21 +63,21 @@ Cela manque encore un peu de fonctionnalités, comme le fait de pouvoir masquer 
 
 ### Les spécifications
 
-Concernant les spécifications, las d'avoir des documents Word lourds dont on ne sait jamais où est la dernière version, et toujours dans l'optique de tout centraliser sur GitHub, j'ai proposé de les écrires en *markdown* directement dans les sources du projet dans un répertoire `specs`. Ainsi elles seraient versionnées au même titre que les sources et il serait possible de conserver l'historique des modifications.
+Concernant les spécifications, las d'avoir des documents Word lourds dont on ne sait jamais où est la dernière version, et toujours dans l'optique de tout centraliser sur GitHub, j'ai proposé de les écrire en *markdown* directement dans les sources du projet dans un répertoire `specs`. Ainsi elles seraient versionnées au même titre que les sources et il serait possible de conserver l'historique des modifications.
 
 La création d'une *pull request* pour les soumettre permet d'ouvrir une discussion avant de les *merger*. On peut même pousser l'idée en soumettant le code correspondant aux spécifications ajoutées ou modifiées dans la même *pull request*.
 
 Bien sûr, une telle pratique nécessite un minimum de connaissances techniques (markdown, git, ...) mais en utilisant l'interface de GitHub pour créer les fichiers, les connaissances requises sont minimes.
 
-Alternativement vous pouvez utiliser la fonction wiki de GitHub, plus simple, et qui dispose également d'une fonctionnalité de versioning. GitHub créé un *repository* supplémentaire pour ce wiki. Vous pouvez récupérer les sources sous forme de fichier markdown en ajoutant `.wiki` dans l'url de votre repository. En l'ajoutant aux *submodules* de votre *repository* principal vous pourrez le récupérer en même temps que vos sources.
+Alternativement vous pouvez utiliser la fonction wiki de GitHub, plus simple, et qui dispose également d'une fonctionnalité de versioning. GitHub crée un *repository* supplémentaire pour ce wiki. Vous pouvez récupérer les sources sous forme de fichier markdown en ajoutant `.wiki` dans l'url de votre repository. En l'ajoutant aux *submodules* de votre *repository* principal vous pourrez le récupérer en même temps que vos sources.
 
 > `git@github.com:Elao/blog.wiki.git`
 
-Vous pouvez même ajouter un [webhook github](https://developer.github.com/v3/activity/events/types/#gollumevent) pour vous avertir à chaque modification du wiki.
+Vous pouvez même ajouter un [webhook github](https://developer.github.com/v3/activity/events/types/#gollumevent) afin d'être averti à chaque modification du wiki.
 
 ## Conclusion
 
-J'ai utilisé cette méthode sur un projet de 3 mois avec un développeur (moi), une intégratrice et un <abbr title="Product Owner">PO</abbr> client déjà familier avec GitHub. Le PO s'est bien pris au jeu et a lui-même ouvert de nombreuses discussions sur ses fonctionnalités, qualifiait et priorisait lui-même ses stories et a ainsi complètement géré la direction de son projet. De mon côté je pouvais donner un avis technique sur la faisabilité et la complexité de la fonctionnalité.
+J'ai utilisé cette méthode sur un projet de 3 mois avec un développeur (moi), une intégratrice et un <abbr title="Product Owner">PO</abbr> client déjà familier avec GitHub. Le PO s'est bien pris au jeu et a lui-même ouvert de nombreuses discussions sur ses fonctionnalités, qualifié et priorisé ses stories et a ainsi complètement géré la direction de son projet. De mon côté je pouvais donner un avis technique sur la faisabilité et la complexité de la fonctionnalité.
 
 Il n'y a pas une façon unique de faire de l'**AGILE**, de nombreuses solutions et méthodes existent.
 Pour être efficaces choisissez vos outils avec soin et adaptez vos méthodes à votre client et à votre équipe.
