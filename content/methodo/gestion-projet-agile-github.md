@@ -77,7 +77,7 @@ Vous pouvez même ajouter un [webhook github](https://developer.github.com/v3/ac
 
 ## Conclusion
 
-J'ai utilisé cette méthode sur un projet de 3 mois avec 1 développeur (moi), une intégratrice et un <abbr title="Product Owner">PO</abbr> client déjà familier avec GitHub. Le PO s'est bien pris au jeu et lui même ouvert de nombreuses discutions sur ses fonctionnalités, qualifiait et priorisait lui même ses stories et a ainsi complètement géré la direction de son projet. De mon côté je pouvais donner un avis technique sur la faisabilité et la complexité de la fonctionnalité.
+J'ai utilisé cette méthode sur un projet de 3 mois avec un développeur (moi), une intégratrice et un <abbr title="Product Owner">PO</abbr> client déjà familier avec GitHub. Le PO s'est bien pris au jeu et a lui-même ouvert de nombreuses discussions sur ses fonctionnalités, qualifiait et priorisait lui-même ses stories et a ainsi complètement géré la direction de son projet. De mon côté je pouvais donner un avis technique sur la faisabilité et la complexité de la fonctionnalité.
 
 Il n'y a pas une façon unique de faire de l'**AGILE**, de nombreuses solutions et méthodes existent.
-Pour être efficace choissiez vos outils avec soins et adaptez vos méthodes à votre client et à votre équipe.
+Pour être efficaces choisissez vos outils avec soin et adaptez vos méthodes à votre client et à votre équipe.
