@@ -41,7 +41,7 @@ Pour chaque **sprint** j'ai créé une *milestone* à laquelle j'ai assigné les
 
 ![GitHub Project](/images/posts/2017/github-milestones.jpg)
 
-Pour la **qualification**, j'ai utilisé les *labels*. J'ai créé trois labels de priorité (prio haute rouge, prio normale jaune et prio faible vert), des labels *question*, *bug*, *feature*, *enhancement* pour indiquer la nature du ticket, des labels *dev*, *inte* et *infra* pour indentifier les corps de métier impliqués ainsi que des labels de qualification métiers.
+Pour la **qualification**, j'ai utilisé les *labels*. J'ai créé trois labels de priorité (prio haute rouge, prio normale jaune et prio faible vert), des labels *question*, *bug*, *feature*, *enhancement* pour indiquer la nature du ticket, des labels *dev*, *inte* et *infra* pour identifier les corps de métier impliqués ainsi que des labels de qualification métiers.
 
 L'onglet conversation des *issues* est très pratique pour discuter de la *story* avec le *product owner*. L'interface permet simplement d'ajouter texte, liens, documents et images. L'historique permet de visualiser la vie de la *story* (fermeture, réouverture, changement de priorité, commentaires, assignations, ...).
 
