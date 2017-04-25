@@ -1,6 +1,6 @@
 ---
 type:           "post"
-title:          "Amélirorez la pertinence de vos résultats Elastic Search grâce au score"
+title:          "Améliorez la pertinence de vos résultats Elastic Search grâce au score"
 date:           "2017-04-24"
 publishdate:    "2017-04-24"
 draft:          false
@@ -26,7 +26,7 @@ Deux choses vont impacter les résultats de vos recherches : l'**indexation** de
 
 ## Une histoire de score
 
-Lors d'une recherche ElasticSearch, un score est calculé pour chaque document du résultat. Ce score est sencé représenter la pertinence du document afin de pouvoir ordonner les résultats. Néanmoins il ne représente que la pertinence des résultats face aux paramètres de la recherche et d'indexation.
+Lors d'une recherche ElasticSearch, un score est calculé pour chaque document du résultat. Ce score est censé représenter la pertinence du document afin de pouvoir ordonner les résultats. Néanmoins il ne représente que la pertinence des résultats face aux paramètres de la recherche et d'indexation.
 
 Pour calculer ce score, ElasticSearch va faire appel à trois règles :
 
@@ -36,19 +36,19 @@ Pour calculer ce score, ElasticSearch va faire appel à trois règles :
 
 Par defaut, ElasticSearch combine ces 3 règles pour obtinir un score, mais certaines peuvent être désactivées si elles ne vous semblent pas correspondre à vos données. Pour plus d'information sur le calcul du score, lisez la [théory du score](https://www.elastic.co/guide/en/elasticsearch/guide/current/scoring-theory.html) sur le site d'ElasticSearch.
 
-Ces règles permettent déjà d'avoir une bonne notion de pertinences mais reste assez simple et ne prennent pas en compte le métier de vos données. Pour ajouter plus de logiques dans les scores, vous devrez introduire vos propres règles qui influenceront voire remplaceront le score 
+Ces règles permettent déjà d'avoir une bonne notion de pertinence mais reste assez simple et ne prennent pas en compte le métier de vos données. Pour ajouter plus de logique dans les scores, vous devrez introduire vos propres règles qui influenceront voire remplaceront le score 
 
 ## Indexation
 
-L'indexation est la première étape lorsque qu'il s'agit d'optimiser la pertinence de son moteur de recherche. Car c'est grâce aux données indéxées qu'ElasticSearch va répondre à votre requête.
+L'indexation est la première étape lorsque qu'il s'agit d'optimiser la pertinence de son moteur de recherche. Car c'est grâce aux données indéxées qu'ElasticSearch va calculer les scores.
 
 ### Typage
 
-ElasticSearch propose un [large choix de type](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-types.html) pour vos données. Il a de nombreux types spécials qui n'existe pas dans les languages de programmation tels que `geo_point` ou `ip`. Il est important de typer correctement ses données car ElasticSearch dispose de traitement optimiser pour chaque type.
+ElasticSearch propose un [large choix de types](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-types.html) pour vos données. Il a de nombreux types spéciaux qui n'existe pas dans les languages de programmation tels que `geo_point` ou `ip`. Il est important de typer correctement ses données car ElasticSearch dispose de traitements optimisés pour chaque type.
 
 ### Analyser
 
-L'`analyser` est chargé d'analyser les donner a indéxer afin de les stockers de la façon la plus optimale pour les recherches. Cette partie est très importante car des données mal indéxées ne permettront pas une recherche pertinente. Il faut donc choisir avec soin l'`analyser` pour chaque type de donnée que vous souhaité indéxé. Ce choix est d'autant plus important pour les données complexe telle qu'un texte.
+L'`analyser` est chargé d'analyser les donner a indéxer afin de les stocker de la façon la plus optimale pour les recherches. Cette partie est très importante car des données mal indéxées ne permettront pas une recherche pertinente. Il faut donc choisir avec soin l'`analyser` pour chaque type de donnée que vous souhaitez indéxer. Ce choix est d'autant plus important pour les données complexe telle qu'un texte.
 
 ElasticSearch propose [plusieurs `analysers`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html) configurable. Chaque `analyzer` est une combinaison d'un [`tokeniser`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html) chargé de découper votre donnée en tokens, de `char filters` chargés filtrer les charactères et de `token filters` chargés de filtrer les tokens.
  
@@ -56,16 +56,16 @@ Vous pouvez également [créer votre propre `analyzer`](https://www.elastic.co/g
 
 Par exemple une indéxation efficace d'un texte il y a quelques filtres très important à mettre en place :
 
-* [`stemmer`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-stemmer-tokenfilter.html#analysis-stemmer-tokenfilter) : Permet une analyse linguistique de votre texte basé sur les racines des mots dans une langue donnée (Une recherche sur le mot "collection" trouvera ainsi les mots "collectionner" ou "collectionneur" par exemple).
-* [`stop`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-stop-tokenfilter.html) : Permet de filtrer les *stop words*, c'est à dire les mots liaison qui ne sont pas porteur de sens et qui ne ferais que polluer l'index (en français par exemple : "de", "en", "à", "le", "la", ...).
+* [`stemmer`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-stemmer-tokenfilter.html#analysis-stemmer-tokenfilter) : Permet une analyse linguistique de votre texte basé sur les racines des mots dans une langue donnée (une recherche sur le mot "collection" trouvera ainsi les mots "collectionner" ou "collectionneur" par exemple).
+* [`stop`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-stop-tokenfilter.html) : Permet de filtrer les *stop words*, c'est à dire les mots de liaisons qui ne sont pas porteur de sens et qui ne feraient que polluer l'index (en français par exemple : "de", "en", "à", "le", "la", ...).
 * [`keyword_marker`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-keyword-marker-tokenfilter.html) : Permet d'indiquer des mots clés à considérer comme un seul token et non comme plusieurs mots. (Par exemple "service worker" ou "sous domaine" sont des mots clés)
-* [`lowercase`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lowercase-tokenfilter.html) : Permet de tout indexé en *lowercase* afin de ne pas être semsible à la casse.
+* [`lowercase`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lowercase-tokenfilter.html) : Permet de tout indexer en *lowercase* afin de ne pas être sensible à la casse.
 
-Il existe bien évidemment [des `analyser` par langue déjà tout fait](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html#french-analyzer), mais l'idée est de vous montrer qu'il est important de bien indiquer à **ElasticSearch** comment analyser vos données.
+Il existe bien évidemment [des `analyser` par langue déjà prêt à l'emploi](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-lang-analyzer.html#french-analyzer), mais l'idée est de vous montrer qu'il est important de bien indiquer à **ElasticSearch** comment analyser vos données.
 
 ### Boost
 
-Vous pouvez ajouter dans votre mapping des [boost](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-boost.html) sur certaines propriétés afin d'automatiquement privilégié ces propriété lors du calcul de pertinance.
+Vous pouvez ajouter dans votre mapping des [boost](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-boost.html) sur certaines propriétés afin d'automatiquement privilégier ces propriétés lors du calcul de pertinence.
 
 ```
 {
@@ -88,7 +88,7 @@ Vous pouvez ajouter dans votre mapping des [boost](https://www.elastic.co/guide/
 Dans cet exemple, le titre aura 3 fois plus de poids que le contenu lors du calcul de pertinence.
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
-    Attention, les `boosts` indiqués au `mapping` ne fonctionneront que sur le requête de type `term`. Pour les requêtes de type `range` ou `match` par exemple, il faudra précisé les `boosts` dans la requête comme expliqué dans la suite de l'article. 
+    Attention, les `boosts` indiqués au `mapping` ne fonctionneront que sur les requêtes de type `term`. Pour les requêtes de type `range` ou `match` par exemple, il faudra préciser les `boosts` dans la requête comme expliqué dans la suite de l'article. 
 </div>
 
 ## Requêter
@@ -116,7 +116,7 @@ Dans l'exemple suivant, nous faisons une recherche de la chaine `Foobar` sur un 
 }
 ```
 
-Vous pouvez également utiliser plusieurs `boost` sur la même propriété mais plusieurs valeurs afin d'avoir d'augmenter le score par palier.
+Vous pouvez également utiliser plusieurs `boost` sur la même propriété mais avec plusieurs valeurs afin d'avoir d'augmenter le score par palier.
 
 ```
 {
@@ -154,7 +154,7 @@ Je vais surtout détailler les fonctions `script` et `decay` car ce sont celles 
 
 #### Les scripts de score
 
-Les scripts de score ([`script_score`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html#function-script-score)) vous permettent de modifier score de vos résultats à partir d'un script ou d'une formule de votre choix. Vous avez accès au document dont vous modifier le score et pouvez donc utilisé l'une de ses propriétés dans le calcul. `_score` contient le score original.
+Les scripts de score ([`script_score`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html#function-script-score)) vous permettent de modifier score de vos résultats à partir d'un script ou d'une formule de votre choix. Vous avez accès au document dont vous modifiez le score et pouvez donc utiliser l'une de ses propriétés dans le calcul. `_score` contient le score original.
  
 ```
 "script_score" : {
@@ -169,7 +169,7 @@ Vous pouvez ainsi utiliser une valeur ou une formule métier pour calculer la pe
 
 #### Facteur
 
-Cette fonction de score ([`field_value_factor`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html#function-field-value-factor)) vous permet d'appliquer un facteur de multiplication (`factor`), une valeur par defaut (`missing`) ainsi que fonction mathématique (`modifier`) à une propriété de votre document. Plusieurs fonctions mathématique sont disponibles (`log`, `sqrt`, `ln`, ...). 
+Cette fonction de score ([`field_value_factor`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html#function-field-value-factor)) vous permet d'appliquer un facteur de multiplication (`factor`), une valeur par defaut (`missing`) ainsi que fonction mathématique (`modifier`) à une propriété de votre document. Plusieurs fonctions mathématiques sont disponibles (`log`, `sqrt`, `ln`, ...). 
 
 ```
 "field_value_factor": {
@@ -199,7 +199,7 @@ Les fonctions de décroissance ([`decay function`](https://www.elastic.co/guide/
 
 Chaque fonction de décroissance est caratérisée par les propriétés `origin`, `offset`, `scale` et `decay`.
 
-* `origin` est la valeur centrale à partir de laquelle sera calculer la distance de vos résultats. D'une manière générale, plus vos résultat s'éloigneront de cette valeur centrale, plus la fonction de décroissance d'appliquera.
+* `origin` est la valeur centrale à partir de laquelle sera calculer la distance de vos résultats. D'une manière générale, plus vos résultat s'éloigneront de cette valeur centrale, plus le score sera réduit.
 * `offset` est la distance à partir de laquel s'appliquera votre fonction de décroissance. Avant cette distance le score ne sera pas modifié.
 * `scale` est la valeur à laquelle votre fonction de décroissance appliquera la réduction souhaité.
 * `decay` est la valeur de réduction de score souhaité (pourcentage de 0 à 1).
@@ -212,5 +212,5 @@ La fonction linéaire est une droite, le décroissance est proportionelle à la 
 
 ![Decay functions](https://www.elastic.co/guide/en/elasticsearch/reference/current/images/decay_2d.png)
 
-Les fonctions de décroissance peuvent être appliqué sur des valeurs numériques, des dates (`offset` et `scale` sont alors exprimés en durée : 5h ou 1d par exemple) ou des géopoints (`offset` et `scale` sont alors exprimés en distance : 100m ou 5km par exemple).
+Les fonctions de décroissance peuvent être appliquées sur des valeurs numériques, des dates (`offset` et `scale` sont alors exprimés en durée : 5h ou 1d par exemple) ou des géopoints (`offset` et `scale` sont alors exprimés en distance : 100m ou 5km par exemple).
 
