@@ -431,6 +431,12 @@ La fonction linéaire est une droite, la décroissance est proportionelle à la 
 
 Les fonctions de décroissance peuvent être appliquées sur des valeurs numériques, des dates (`offset` et `scale` sont alors exprimés en durée : 5h ou 1d par exemple) ou des géopoints (`offset` et `scale` sont alors exprimés en distance : 100m ou 5km par exemple).
 
+## Conclusion
+
+Avec toutes ces fonctionnalités, vous dévriez être capable de gérer la pertinence de votre moteur de recherche assez finement. Attention néanmoins, cet article n'est pas exhaustif, **ElasticSearch** propose bien d'autres possibilités.
+
+L'important est de ne pas se limiter à la configuration de base et d'adapter l'algorithme de score à vos données et vos besoins.
+
 <style type="text/css">
     .detail article#article .tabs .nav { background: #ccc; }
     .detail article#article .tabs .nav:before, .tabs .nav:after { content: ""; display: table; clear: both; }
