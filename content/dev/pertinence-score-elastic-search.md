@@ -113,6 +113,57 @@ Dans cet exemple, le titre aura 3 fois plus de poids que le contenu lors du calc
 
 ## Requêter
 
+### Analyzer
+
+Pour utiliser votre `analyser` lors de la recherche, vous devez le préciser dans votre requête. Vous pouvez compléter votre requête avec les options `fuzziness` et `minimum_should_match`.
+
+[`minimum_should_match`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-minimum-should-match.html) permet d'indiquer le pourcentage minimum de votre recherche qui doit être trouvé dans vos document.
+
+[`fuzziness`](https://www.elastic.co/guide/en/elasticsearch/reference/current/common-options.html#fuzziness) permet de rechercher des termes malgrés des fautes de frappe (inversion de lettre, lettre manquante, ...) en utilisant la [Distance de Levenshtein](https://fr.wikipedia.org/wiki/Distance_de_Levenshtein).
+
+Les scores des résultats seront bien évidemment impactés par ses options.
+
+<div class="tabs">
+<div class="nav">
+<a href="#query-analyzer-json" class="active">json</a>
+<a href="#query-analyzer-php">php</a>
+</div>
+<div class="tab active" id="query-analyzer-json">
+{{< highlight json >}}
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "match": {
+          "title": { 
+            "query": "Foobar", 
+            "analyser": "my_analyser", 
+            "fuzziness": "AUTO", 
+            "minimum_should_match": "70%"
+          }
+        }}
+      ]
+    }
+  }
+}
+{{< /highlight >}}
+</div>
+<div class="tab" id="query-analyzer-php">
+{{< highlight php >}}
+<?php
+use Elastica\Query;
+
+$query = (new Query\Match())
+    ->setFieldQuery('title', $search)
+    ->setFieldAnalyzer('title', 'my_analyzer')
+    ->setFieldFuzziness('title', 'AUTO')
+    ->setFieldMinimumShouldMatch('title', '70%')
+);
+
+{{< /highlight >}}
+</div>
+</div>
+
 ### Boost
 
 Les [`boost`](https://www.elastic.co/guide/en/elasticsearch/guide/current/_boosting_query_clauses.html) permettent également d'augmenter le poids d'une clause de votre rêquete. Plus le boost est élevé, plus votre clause pèsera sur le score.
