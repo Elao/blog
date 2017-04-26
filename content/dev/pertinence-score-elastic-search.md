@@ -1,11 +1,11 @@
 ---
 type:           "post"
-title:          "Améliorez la pertinence de vos résultats Elastic Search grâce au score"
+title:          "Améliorez la pertinence de vos résultats ElasticSearch grâce au score"
 date:           "2017-04-24"
 publishdate:    "2017-04-24"
 draft:          false
 slug:           "ameliorez-pertinence-resultat-elastic-search-score"
-description:    "Améliorez la pertinence de vos résultats Elastic Search grâce au score."
+description:    "Améliorez la pertinence de vos résultats ElasticSearch grâce au score."
 
 thumbnail:      "/images/posts/thumbnails/elasticsearch.png"
 header_img:     "/images/posts/headers/elasticsearch.jpg"
