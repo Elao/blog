@@ -91,8 +91,12 @@ Hugo is using `Python Pygments` package for code highlighting so you can highlig
 
 ```
 {{< highlight php >}}
+  <?php
+    // Your code goes here ...
 {{< /highlight >}}
 ```
+
+> :warning: for PHP language, make sure you open a php tag `<?php` in order to obtain syntax coloration
 
 ## Add a new author file
 
@@ -137,6 +141,13 @@ In order to obtain the last version of the image, you can execute the following 
 Your post is ready to be published ? Create a PR and ask for review to a team member. Once it's done, you're ready for production.
 
 ### Going to production
+
+> :warning: The deploy tasks will first run the build (assets, image optimization, compiling blog posts to HTML, etc) **locally** and push compiled files to production from your local filesystem. So make sure that your current branch is `master` and that you are up-to-date with `origin/master`.
+
+```shell
+  git checkout master
+  git pull
+```
 
 #### Sync only files (you don't have any image)
 `make deploy@prod`
