@@ -16,8 +16,8 @@ author_username:    "mbernard"
 
 ---
 
-Vagrant est un outil qui simplifie la création et la gestion d’environnements virtualisés. 
-Si par le passé on avait recours à des plateformes comme LAMP/MAMP/XAMP pour gérer son environnement de développement, <!--more--> cela posait souvent problème car les versions des dépendances logicielles pouvaient varier une fois l’application déployée sur un environnement externe, notamment en production. On se retrouvait alors à perdre un temps considérable pour corriger des bugs en production qui n’étaient pas reproductibles en développement, et inversement.
+Vagrant est un outil qui simplifie la création et la gestion d’environnements virtualisés.
+Si par le passé on avait recours à des plateformes comme LAMP/MAMP/XAMP pour gérer son environnement de développement, <!-- more --> cela posait souvent problème car les versions des dépendances logicielles pouvaient varier une fois l’application déployée sur un environnement externe, notamment en production. On se retrouvait alors à perdre un temps considérable pour corriger des bugs en production qui n’étaient pas reproductibles en développement, et inversement.
 
 Vagrant permet de travailler dans un environnement reproductible avec les mêmes versions pour toutes vos dépendances. Parce qu’il utilise le principe de virtualisation, il est donc compatible avec la majorité des OS actuels. Ainsi, un développeur travaillant sous Mac aura accès au même environnement qu'un développeur sous Windows ou Linux tout en conservant son IDE favori.
 
