@@ -110,8 +110,6 @@ optimize:
 		manala/hugo-debian \
 		bash -c "\
 			find public/images -iname "*.png" -type f -exec optipng -o7 {} \; \
-			&& find public/images -iname "*.png" -type f -exec optipng -o7 {} \; \
-			&& find public/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \; \
 			&& find public/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \; \
 		"
 ## Crop thumbnail and header files
