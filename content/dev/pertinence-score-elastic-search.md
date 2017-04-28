@@ -117,11 +117,11 @@ Dans cet exemple, le titre aura 3 fois plus de poids que le contenu lors du calc
 
 Pour utiliser votre `analyser` lors de la recherche, vous devez le préciser dans votre requête. Vous pouvez compléter votre requête avec les options `fuzziness` et `minimum_should_match`.
 
-[`minimum_should_match`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-minimum-should-match.html) permet d'indiquer le pourcentage minimum de votre recherche qui doit être trouvé dans vos document.
+[`minimum_should_match`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-minimum-should-match.html) permet d'indiquer le pourcentage minimum de votre recherche qui doit être trouvé dans vos documents.
 
-[`fuzziness`](https://www.elastic.co/guide/en/elasticsearch/reference/current/common-options.html#fuzziness) permet de rechercher des termes malgrés des fautes de frappe (inversion de lettre, lettre manquante, ...) en utilisant la [Distance de Levenshtein](https://fr.wikipedia.org/wiki/Distance_de_Levenshtein).
+[`fuzziness`](https://www.elastic.co/guide/en/elasticsearch/reference/current/common-options.html#fuzziness) permet de rechercher des termes malgré des fautes de frappe (inversion de lettre, lettre manquante, ...) en utilisant la [Distance de Levenshtein](https://fr.wikipedia.org/wiki/Distance_de_Levenshtein).
 
-Les scores des résultats seront bien évidemment impactés par ses options.
+Les scores des résultats seront bien évidemment impactés par ces options.
 
 <div class="tabs">
 <div class="nav">
@@ -433,7 +433,7 @@ Les fonctions de décroissance peuvent être appliquées sur des valeurs numéri
 
 ## Conclusion
 
-Avec toutes ces fonctionnalités, vous dévriez être capable de gérer la pertinence de votre moteur de recherche assez finement. Attention néanmoins, cet article n'est pas exhaustif, **ElasticSearch** propose bien d'autres possibilités.
+Avec toutes ces fonctionnalités, vous dévriez être capables de gérer la pertinence de votre moteur de recherche assez finement. Attention néanmoins, cet article n'est pas exhaustif, **ElasticSearch** propose bien d'autres possibilités.
 
 L'important est de ne pas se limiter à la configuration de base et d'adapter l'algorithme de score à vos données et vos besoins.
 
