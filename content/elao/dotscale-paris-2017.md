@@ -54,9 +54,9 @@ L'idée des «lightning talks» après le déjeuner est très bonne, leur format
 
 # Conclusion
 
-Les conférences DotScale 2017 sont plutôt une réussite, même si le dynamisme et l'enchainement des conférences ne laissent pas vraiment le temps d'assimiler un sujet, l'environnement est très agréable et il s'en dégage un sentiment de fluidité et de professionalisme très agréable.
+Les conférences DotScale 2017 sont plutôt une réussite, même si le dynamisme et l'enchainement des conférences ne laissent pas vraiment le temps d'assimiler un sujet, l'environnement est très agréable et il s'en dégage un sentiment de fluidité et de professionalisme appréciable.
 
-> Les vidéos des conférences devraient être publiées.
+> Les vidéos des conférences devraient être publiées d'ici peu de temps.
 
 > Pour plus d'informations: https://www.dotconferences.com/, il y en a pour tous les goûts ;)
 
