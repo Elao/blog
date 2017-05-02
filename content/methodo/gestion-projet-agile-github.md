@@ -2,7 +2,7 @@
 type:           "post"
 title:          "Gérer un projet AGILE avec GitHub"
 date:           "2017-04-24"
-publishdate:    "2017-04-24"
+publishdate:    "2017-04-26"
 draft:          false
 slug:           "gestion-projet-agile-github"
 description:    "Retour d'expérience sur la gestion d'un projet avec GitHub."
@@ -26,7 +26,7 @@ Mon envie était donc de trouver un moyen d'adresser tous mes besoins à l'aide 
 
 Les besoins que j'ai au quotidien sur un projet sont :
 
-* Système de story/feature (AGILE) 
+* Système de story/feature (AGILE)
 * Notion de sprint
 * Qualification (priorités, tags/categories, estimation)
 * Kanban board

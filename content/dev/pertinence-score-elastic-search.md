@@ -2,7 +2,7 @@
 type:           "post"
 title:          "Améliorez la pertinence de vos résultats ElasticSearch grâce au score"
 date:           "2017-04-24"
-publishdate:    "2017-04-24"
+publishdate:    "2017-04-27"
 draft:          false
 slug:           "ameliorez-pertinence-resultat-elastic-search-score"
 description:    "Améliorez la pertinence de vos résultats ElasticSearch grâce au score."
@@ -51,7 +51,7 @@ ElasticSearch propose un [large choix de types](https://www.elastic.co/guide/en/
 L'`analyser` est chargé d'examiner les données a indéxer afin de les stocker de la façon la plus optimale pour les recherches. Cette partie est très importante car des données mal indéxées ne permettront pas une recherche pertinente. Il faut donc choisir avec soin l'`analyser` pour chaque type de donnée que vous souhaitez indéxer. Ce choix est d'autant plus important pour les données complexes telles qu'un texte.
 
 ElasticSearch propose [plusieurs `analysers`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html) configurables. Chaque `analyzer` est une combinaison d'un [`tokeniser`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-tokenizers.html) chargé de découper votre donnée en tokens, de `char filters` chargés de filtrer les caractères et de `token filters` chargés de filtrer les tokens.
- 
+
 Vous pouvez également [créer votre propre `analyzer`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-custom-analyzer.html) en combinant vous-même `tokeniser`, `char filters` et `token filters`. Pour configurer un moteur de recherche efficace, il est donc recommandé de choisir ou créer un `analyser` adapté à chacune des données indéxées.
 
 Par exemple, pour obtenir une indexation efficace d'un texte, il existe quelques filtres très importants à mettre en place :
@@ -80,7 +80,7 @@ Vous pouvez ajouter dans votre mapping des [boost](https://www.elastic.co/guide/
       "properties": {
         "title": {
           "type": "text",
-          "boost": 3 
+          "boost": 3
         },
         "content": {
           "type": "text"
@@ -108,7 +108,7 @@ fos_elastica:
 Dans cet exemple, le titre aura 3 fois plus de poids que le contenu lors du calcul de pertinence.
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
-    Attention, les `boosts` indiqués au `mapping` ne fonctionneront que sur les requêtes de type `term`. Pour les requêtes de type `range` ou `match` par exemple, il faudra préciser les `boosts` dans la requête comme expliqué dans la suite de l'article. 
+    Attention, les `boosts` indiqués au `mapping` ne fonctionneront que sur les requêtes de type `term`. Pour les requêtes de type `range` ou `match` par exemple, il faudra préciser les `boosts` dans la requête comme expliqué dans la suite de l'article.
 </div>
 
 ## Requêter
@@ -135,10 +135,10 @@ Les scores des résultats seront bien évidemment impactés par ces options.
     "bool": {
       "must": [
         { "match": {
-          "title": { 
-            "query": "Foobar", 
-            "analyser": "my_analyser", 
-            "fuzziness": "AUTO", 
+          "title": {
+            "query": "Foobar",
+            "analyser": "my_analyser",
+            "fuzziness": "AUTO",
             "minimum_should_match": "70%"
           }
         }}
@@ -278,7 +278,7 @@ Il existe plusieurs types de fonctions de score :
 * `field_value_factor`
 * `decay functions`
 
-Je vais surtout détailler les fonctions `script` et `decay` car ce sont celles qui permettent le plus d'implémenter une logique de pertinence. Pour les autres vous pouvez lire [la documentation sur les fonctions de score](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html#score-functions). 
+Je vais surtout détailler les fonctions `script` et `decay` car ce sont celles qui permettent le plus d'implémenter une logique de pertinence. Pour les autres vous pouvez lire [la documentation sur les fonctions de score](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html#score-functions).
 
 #### Les scripts de score
 
@@ -324,7 +324,7 @@ Vous pouvez ainsi utiliser une valeur ou une formule métier pour calculer la pe
 
 #### Facteur
 
-Cette fonction de score ([`field_value_factor`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html#function-field-value-factor)) vous permet d'appliquer un facteur de multiplication (`factor`), une valeur par defaut (`missing`) ainsi qu'une fonction mathématique (`modifier`) à une propriété de votre document. Plusieurs fonctions mathématiques sont disponibles (`log`, `sqrt`, `ln`, ...). 
+Cette fonction de score ([`field_value_factor`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html#function-field-value-factor)) vous permet d'appliquer un facteur de multiplication (`factor`), une valeur par defaut (`missing`) ainsi qu'une fonction mathématique (`modifier`) à une propriété de votre document. Plusieurs fonctions mathématiques sont disponibles (`log`, `sqrt`, `ln`, ...).
 
 <div class="tabs">
 <div class="nav">
@@ -379,8 +379,8 @@ Les fonctions de décroissance ([`decay function`](https://www.elastic.co/guide/
 <div class="tab active" id="decay-functions-json">
 {{< highlight json >}}
 {
-    "DECAY_FUNCTION": { 
-        "FIELD_NAME": { 
+    "DECAY_FUNCTION": {
+        "FIELD_NAME": {
               "origin": "2017-04-24",
               "offset": "1d",
               "scale": "5d",
@@ -421,7 +421,7 @@ Chaque fonction de décroissance est caratérisée par les propriétés `origin`
 * `scale` est la valeur à laquelle votre fonction de décroissance appliquera la réduction souhaitée.
 * `decay` est la valeur de réduction de score souhaitée (pourcentage de 0 à 1).
 
-Dans l'exemple ci-dessus, la valeur centrale est le 24 avril 2017 et on souhaite qu'à 6 jours (1 jour d'offset + 5 jours de scale) de cette date, soit le 18 et le 30 avril, le score soit réduit de moitié. La réduction du score des autres résultats sera calculée par la fonction de décroissance choisie. 
+Dans l'exemple ci-dessus, la valeur centrale est le 24 avril 2017 et on souhaite qu'à 6 jours (1 jour d'offset + 5 jours de scale) de cette date, soit le 18 et le 30 avril, le score soit réduit de moitié. La réduction du score des autres résultats sera calculée par la fonction de décroissance choisie.
 
 Il existe 3 fonctions de décroissances, [linéaire](https://fr.wikipedia.org/wiki/Fonction_lin%C3%A9aire), [exponentielle](https://fr.wikipedia.org/wiki/Fonction_exponentielle) et [gaussienne](https://fr.wikipedia.org/wiki/Fonction_gaussienne).
 
@@ -452,7 +452,7 @@ L'important est de ne pas se limiter à la configuration de base et d'adapter l'
         this.element = element;
         this.links   = element.querySelectorAll('.nav a');
         this.tabs    = element.querySelectorAll('.tab');
-        
+
         [].forEach.call(this.links, function (link) {
             link.addEventListener('click', function (event) {
                 event.preventDefault();
@@ -465,7 +465,7 @@ L'important est de ne pas se limiter à la configuration de base et d'adapter l'
     {
         [].forEach.call(this.links, function (link) { link.classList.remove('active'); });
         [].forEach.call(this.tabs, function (tab) { tab.classList.remove('active'); });
-    
+
         link.classList.add('active');
         this.element.querySelector(link.getAttribute('href')).classList.add('active');
     };

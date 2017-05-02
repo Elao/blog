@@ -2,7 +2,7 @@
 type:               "post"
 title:              "Introduction à Vagrant"
 date:               "2017-04-24"
-publishdate:        "2017-04-24"
+publishdate:        "2017-04-23"
 draft:              false
 slug:               "introduction-a-vagrant"
 description:        "Le fonctionnement et les principes utilisés par Vagrant. Comment installer une VM contenant une version minimale d'Ubuntu et la provisionner avec nginx."
