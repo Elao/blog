@@ -2,21 +2,21 @@
 type:           "post"
 title:          "Le Design Pattern 'Decorator'"
 date:           "2017-04-14"
-publishdate:    "2017-04-14"
+publishdate:    "2017-05-04"
 draft:          false
 slug:           "design-pattern-decorator"
 description:    "Présentation du pattern 'Decorator' dans le cadre d'une série consacrée aux Design Patterns"
 
-thumbnail:      "/images/posts/design-pattern/structural-decorator.jpg"
-header_img:     "/images/posts/design-pattern/structural-decorator.jpg"
-tags:           ["Design Pattern"]
+thumbnail:      "/images/posts/thumbnails/decorator_pattern.jpg"
+header_img:     "/images/posts/headers/decorator_pattern.jpg"
+tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 
 author_username:    "xavierr"
 
 ---
 
-Le _Gang of Four_ a classé les design patterns dans trois catégories : les DP de création, les DP structurels et les DP comportementaux (_behavior_). 
+Le _Gang of Four_ a classé les design patterns dans trois catégories : les DP de création, les DP structurels et les DP comportementaux (_behavior_).
 
 Au début de cette série, nous avons abordé deux design patterns de création : la [`Factory Method`](/fr/dev/design-pattern-factory-method) et le pattern [`Abstract Factory`](/fr/dev/design-pattern-abstract-factory). Je vous propose aujourd'hui de nous pencher sur notre premier design pattern structurel : le `Decorator`.
 
@@ -58,7 +58,7 @@ Vous avez développé une application Web qui met en relation des vendeurs et de
 
 Votre application rencontre un franc succès mais des dérives ont été constatées dans l'utilisation de la messagerie (spam, injures, etc.). Il apparaît donc nécessaire de développer un système de modération, automatisé compte tenu des volumes d'échanges à traiter.
 
-Voici le code de la classe responsable de la modération : 
+Voici le code de la classe responsable de la modération :
 
 {{< highlight php >}}
 <?php
@@ -85,7 +85,7 @@ class Moderator implements ModeratorInterface
 
 {{< /highlight >}}
 
-Exemple d'utilisation : 
+Exemple d'utilisation :
 
 {{< highlight php >}}
 <?php
@@ -106,7 +106,7 @@ Il nous faut donc renforcer le système de modération pour empêcher les vendeu
 
 ## Le pattern `Decorator` en action
 
-Nous allons rédiger une classe qui va ajouter des fonctionnalités de modération en décorant notre classe initiale `Moderator` : 
+Nous allons rédiger une classe qui va ajouter des fonctionnalités de modération en décorant notre classe initiale `Moderator` :
 
 {{< highlight php >}}
 
@@ -193,5 +193,3 @@ C'est notamment le cas de la classe [`HttpCache`](https://github.com/symfony/sym
 Source : http://symfony.com/doc/current/http_cache.html#symfony-reverse-proxy
 
 La classe `AppCache` de Symfony implémente l'interface `HttpKernelInterface` (via son parent `HttpCache`), tout comme la classe `AppKernel` qu'elle décore.
-
-
