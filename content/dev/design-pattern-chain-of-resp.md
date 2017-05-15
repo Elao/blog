@@ -78,11 +78,8 @@ Voici à quoi ressemble un _extractor_ avant que nous n'appliquions le pattern _
 {{< highlight php >}}
     <?php
     class ProductXmlExtractor implements ProductExtractorInterface {
-        /**
-         * @param SplFileObject $file
-         * @return ProductDto[]|array
-         */
-        public function extractProducts(SplFileObject $file): array {
+
+        public function extractProducts(\SplFileObject $file): array {
             $content = $file->fread($file->getSize());
             $xml = simplexml_load_string($content);
             $products = [];
@@ -103,7 +100,7 @@ Voici à quoi ressemble un _extractor_ avant que nous n'appliquions le pattern _
 
 Rien de compliqué, cette classe reçoit un fichier en entrée et en extrait une liste de produits.
 
-Noter que pour l'heure, `ProductXmlExtractor` (tout comme les deux autres _extractors_) implémente une interface `ProductExtractorInterface` qui expose simplement une méthode `extractProducts`. J'utilise également pour les valeurs de retour un bête DTO `ProductDto` (pardonnez-moi le pléonasme ...), qui ne présente pas de difficulté particulière (c'est un simple conteneur de données).
+Noter que pour l'heure, `ProductXmlExtractor` (tout comme les deux autres _extractors_) implémente une interface `ProductExtractorInterface` qui expose simplement une méthode `extractProducts`. J'utilise également pour les valeurs de retour une classe `ProductDto` (c'est un bête conteneur de données, pardonnez-moi le pléonasme).
 
 Voici à présent ce que nous allons faire :
 
@@ -169,13 +166,13 @@ abstract class AbstractProductExtractor
      * if it supports its format.
      * Else it transmits the request to the next handler.
      *
-     * @param SplFileObject $file
+     * @param \SplFileObject $file
      *
      * @return mixed
      *
      * @throws \InvalidArgumentException If no handler can handle the request
      */
-    public function extractProducts(SplFileObject $file)
+    public function extractProducts(\SplFileObject $file)
     {
         if ($this->support($file)) {
             return $this->handle($file);
@@ -201,9 +198,9 @@ abstract class AbstractProductExtractor
      *
      * @param  SplFileObject $file
      *
-     * @return array|ProductDto[]
+     * @return ProductDto[]
      */
-    protected function handle(SplFileObject $file): array
+    protected function handle(\SplFileObject $file): array
     {
         // The following line of code is only for debug & demo purposes:
         echo static::CLASS." is the handler for {$file->getExtension()} files\n";
@@ -267,18 +264,18 @@ Enfin (et ce n'est pas trop tôt, me direz-vous), voici le code qui permet d'ins
     // new ProductCsvExtractor(new ProductXmlExtractor(new ProductJsonExtractor()));
 
     // Secondly, use it:
-    $xmlFile = new SplFileObject('/path/to/products.xml');
+    $xmlFile = new \SplFileObject('/path/to/products.xml');
     $products = $handlerChain->extractProducts($xmlFile);
 
-    $csvFile = new SplFileObject('/path/to/products.csv');
+    $csvFile = new \SplFileObject('/path/to/products.csv');
     $products = $handlerChain->extractProducts($csvFile);
 
-    $jsonFile = new SplFileObject('/path/to/products.json');
+    $jsonFile = new \SplFileObject('/path/to/products.json');
     $products = $handlerChain->extractProducts($jsonFile);
 
     // Thirdly, try to parse an unsupported format:
     try {
-        $unsupportedFile = new SplFileObject('/path/to/unsupported/format/file');
+        $unsupportedFile = new \SplFileObject('/path/to/unsupported/format/file');
         $handlerChain->extractProducts($unsupportedFile);
     } catch (\InvalidArgumentException $e) {
         echo "Exception (as expected !) : {$e->getMessage()}\n";
