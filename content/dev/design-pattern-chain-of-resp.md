@@ -19,7 +19,7 @@ author_username:    "xavierr"
 >"_Quelqu'un pourrait me passer le sel, s'il vous plaît ?_" (Martin Fowler, sept. 2015)
 
 Aujourd'hui, nous allons nous amuser à enfiler des objets comme des perles grâce au Design Pattern `Chain of Responsibility`.
-<!-- more -->
+<!--more-->
 
 ## Classification
 
