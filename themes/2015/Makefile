@@ -1,5 +1,4 @@
 .SILENT:
-.PHONY: install build watch
 
 include ../../manala/make/Makefile
 
@@ -7,18 +6,8 @@ include ../../manala/make/Makefile
 # Install #
 ###########
 
-## Install - Development
-install@development:
-	$(call log,Yarn)
-	yarn install
-
-## Install - Staging
-install@staging:
-	$(call log,Yarn)
-	yarn install
-
-## Install - Production
-install@production:
+## Install - All
+install@%:
 	$(call log,Yarn)
 	yarn install
 
@@ -26,18 +15,8 @@ install@production:
 # Build #
 #########
 
-## Build - Development
-build@development:
-	$(call log,Laravel mix)
-	rm -Rf static/assets && $(LARAVEL_MIX)
-
-## Build - Staging
-build@staging:
-	$(call log,Laravel mix)
-	rm -Rf static/assets && $(LARAVEL_MIX)
-
-## Build - Production
-build@production:
+## Build - All
+build@%:
 	$(call log,Laravel mix)
 	rm -Rf static/assets && $(LARAVEL_MIX)
 
