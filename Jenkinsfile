@@ -10,6 +10,11 @@ pipeline {
     ansiColor('xterm')
     timestamps()
   }
+  environment {
+    APP_URL            = credentials('APP_URL')
+    DEPLOY_DESTINATION = credentials('DEPLOY_DESTINATION')
+    DEPLOY_RSYNC_RSH   = credentials('DEPLOY_RSYNC_RSH')
+  }
   stages {
     stage('Install') {
       agent { docker {
@@ -26,7 +31,16 @@ pipeline {
         reuseNode true
       } }
       steps {
-        sh "make build@$app.env"
+        sh "make build@$app.env APP_URL_SUBDOMAIN=$BRANCH_NAME"
+      }
+    }
+    stage('Optimize') {
+      agent { docker {
+        image 'manala/hugo'
+        reuseNode true
+      } }
+      steps {
+        sh "make optimize@$app.env -j"
       }
     }
     stage('Deploy - Staging') {
@@ -34,15 +48,16 @@ pipeline {
         image 'manala/deploy'
         reuseNode true
       } }
-      environment {
-          DEPLOY_DESTINATION = credentials('DEPLOY_DESTINATION')
-          DEPLOY_RSH = credentials('DEPLOY_RSH')
-      }
       steps {
         sshagent (credentials: ['deploy']) {
-          sh "make deploy-staging DEPLOY_DESTINATION=${env.DEPLOY_DESTINATION + '/' + env.BRANCH_NAME}"
+          sh "make deploy.staging DEPLOY_DESTINATION_SUFFIX=$BRANCH_NAME"
         }
       }
+    }
+  }
+  post {
+    always {
+      cleanWs()
     }
   }
 }
