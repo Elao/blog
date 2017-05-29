@@ -3,7 +3,7 @@ let mix = require('laravel-mix');
 mix
     .setResourceRoot('/assets/')
     .setPublicPath('static/assets')
-    .sourceMaps()
+    .sourceMaps(false)
     .options({
         clearConsole: false
     })
