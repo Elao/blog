@@ -2,7 +2,7 @@
 DefaultContentLanguage:         "fr"
 DefaultContentLanguageInSubdir: true
 
-baseURL:            "https://blog.elao.com/"
+baseURL:            https://blog.elao.com/
 copyright:          "Everything is mine"
 enableRobotsTXT:    true
 Paginate:           10
