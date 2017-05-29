@@ -1,42 +1,47 @@
 .PHONY: setup sh
 
-# Help
-ifeq ($(DOCKER),)
-HELP += \
-	\n$(COLOR_COMMENT)Virtual machine:$(COLOR_RESET)\
-	\n  $(COLOR_INFO)setup:$(COLOR_RESET) Setup virtual machine\
-	\n  $(COLOR_INFO)sh:$(COLOR_RESET)    Shell to machine shell\
+########
+# Help #
+########
+
+ifndef MANALA
+MANALA_HELP += \
+	\n$(MANALA_COLOR_COMMENT)Virtual machine:$(MANALA_COLOR_RESET)\
+	\n  $(MANALA_COLOR_INFO)setup:$(MANALA_COLOR_RESET) Setup virtual machine\
+	\n  $(MANALA_COLOR_INFO)sh:$(MANALA_COLOR_RESET)    Shell to virtual machine\
 	\n
 endif
 
-################
-# Environments #
-################
+#########
+# Setup #
+#########
 
-@local:
-ifneq ($(DOCKER),)
-	@$(call log_error,Must be run locally)
-	@exit 1
-endif
-
-###################
-# Virtual machine #
-###################
+ifndef MANALA
 
 setup: @local
-setup: setup@development
+setup: setup@$(MANALA_ENV)
+
+endif
+
+######
+# Sh #
+######
+
+ifndef MANALA
 
 sh: @local
 sh:
-	@$(DOCKER_RUN)
+	@$(MANALA_DOCKER_RUN)
+
+endif
 
 #########
 # Proxy #
 #########
 
-ifneq ($(DOCKER),)
+ifdef MANALA
 define proxy
-	$(1)@development
+	$(1)@$(MANALA_ENV)
 endef
 else
 define proxy
@@ -45,4 +50,4 @@ endef
 endif
 
 %@proxy:
-	@$(DOCKER_RUN) sh -c "make --silent --directory=$(app_dir) $(*)@development"
+	@$(MANALA_DOCKER_RUN) sh -c "make --silent --directory=$(app_dir) $(*)@$(MANALA_ENV)"

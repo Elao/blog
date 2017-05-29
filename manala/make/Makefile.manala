@@ -1,60 +1,95 @@
 .DEFAULT_GOAL := help
 .PHONY: help confirm manala
 
-# Dir
-DIR = $(CURDIR)
+#############
+# Variables #
+#############
+
+# !!! Please, don't expose MANALA_* variables in your project, !!!
+# !!! use your template Makefile to define custom mapped ones  !!!
+
+# MANALA             [Empty]|1 Run in manala powered platform
+# MANALA_CURRENT_DIR [String]  Current directory
+# MANALA_DIR         [String]  Manala base directory
+# MANALA_ENV         [String]  Environment
+# MANALA_HELP        [String]  Help content
+# MANALA_INTERACTIVE [Empty]|1 Run in interactive mode
+
+# Current dir
+MANALA_CURRENT_DIR = $(CURDIR)
 
 # Colors
-COLOR_RESET   = \033[0m
-COLOR_ERROR   = \033[31m
-COLOR_INFO    = \033[32m
-COLOR_WARNING = \033[33m
-COLOR_COMMENT = \033[36m
+MANALA_COLOR_RESET   = \033[0m
+MANALA_COLOR_ERROR   = \033[31m
+MANALA_COLOR_INFO    = \033[32m
+MANALA_COLOR_WARNING = \033[33m
+MANALA_COLOR_COMMENT = \033[36m
 
 ########
 # Help #
 ########
 
-# Help
-HELP = \
-	$(COLOR_COMMENT)Usage:$(COLOR_RESET)\
+MANALA_HELP = \
+	$(MANALA_COLOR_COMMENT)Usage:$(MANALA_COLOR_RESET)\
 	\n  make [target]\n\
-	\n$(COLOR_COMMENT)Help:$(COLOR_RESET)\
-	\n  $(COLOR_INFO)help:$(COLOR_RESET) This help\
+	\n$(MANALA_COLOR_COMMENT)Help:$(MANALA_COLOR_RESET)\
+	\n  $(MANALA_COLOR_INFO)help:$(MANALA_COLOR_RESET) This help\
 	\n
 
 help:
-	@printf "$(HELP)"
-ifneq ($(DIR),$(MANALA_DIR))
-	@printf "\n$(COLOR_COMMENT)Application:$(COLOR_RESET)\n"
-	@awk '/^[a-zA-Z\-\_0-9\.@]+:/ { \
+	@printf "$(MANALA_HELP)"
+ifneq ($(MANALA_CURRENT_DIR),$(MANALA_DIR))
+	@printf "\n$(MANALA_COLOR_COMMENT)Application:$(MANALA_COLOR_RESET)\n"
+	@awk '/^[a-zA-Z\-\_0-9\.@%]+:/ { \
 		helpMessage = match(lastLine, /^## (.*)/); \
 		if (helpMessage) { \
 			helpCommand = substr($$1, 0, index($$1, ":")); \
 			helpMessage = substr(lastLine, RSTART + 3, RLENGTH); \
-			printf "  $(COLOR_INFO)%-20s$(COLOR_RESET) %s\n", helpCommand, helpMessage; \
+			printf "  $(MANALA_COLOR_INFO)%-20s$(MANALA_COLOR_RESET) %s\n", helpCommand, helpMessage; \
 		} \
 	} \
 	{ lastLine = $$0 }' $(MAKEFILE_LIST)
 endif
 	@printf "\n"
 
+###############
+# Environment #
+###############
+
+MANALA_ENV ?= development
+
+# Target prerequisite to force it to be run locally
+# 
+# foo: @local
+# 	bar
+@local:
+ifneq ($(MANALA),)
+	@$(call log_error,Must be run locally)
+	@exit 1
+endif
+
+###############
+# Interactive #
+###############
+
+MANALA_INTERACTIVE := $(shell [ -t 0 ] && echo 1)
+
 #######
 # Log #
 #######
 
 define log
-    printf "\n[$(COLOR_COMMENT)$(shell date +"%T")$(COLOR_RESET)][$(COLOR_COMMENT)$(@)$(COLOR_RESET)] $(COLOR_INFO)$(1)$(COLOR_RESET)\n\n"
+    printf "\n[$(MANALA_COLOR_COMMENT)$(shell date +"%T")$(MANALA_COLOR_RESET)][$(MANALA_COLOR_COMMENT)$(@)$(MANALA_COLOR_RESET)] $(MANALA_COLOR_INFO)$(1)$(MANALA_COLOR_RESET)\n\n"
 endef
 
 # Warning
 define log_warning
-    printf "\n[$(COLOR_COMMENT)¯\_(ツ)_/¯$(COLOR_RESET)] $(COLOR_WARNING)$(1)$(COLOR_RESET)\n\n"
+    printf "\n[$(MANALA_COLOR_COMMENT)¯\_(ツ)_/¯$(MANALA_COLOR_RESET)] $(MANALA_COLOR_WARNING)$(1)$(MANALA_COLOR_RESET)\n\n"
 endef
 
 # Error
 define log_error
-    printf "\n[$(COLOR_COMMENT)(╯°□°)╯︵ ┻━┻$(COLOR_RESET)] $(COLOR_ERROR)$(1)$(COLOR_RESET)\n\n"
+    printf "\n[$(MANALA_COLOR_COMMENT)(╯°□°)╯︵ ┻━┻$(MANALA_COLOR_RESET)] $(MANALA_COLOR_ERROR)$(1)$(MANALA_COLOR_RESET)\n\n"
 endef
 
 ###########
@@ -62,7 +97,7 @@ endef
 ###########
 
 confirm:
-	@printf "\n$(COLOR_INFO) ༼ つ ◕_◕ ༽つ $(COLOR_WARNING)Please confirm (y/N)$(COLOR_RESET): "
+	@printf "\n$(MANALA_COLOR_INFO) ༼ つ ◕_◕ ༽つ $(MANALA_COLOR_WARNING)Please confirm (y/N)$(MANALA_COLOR_RESET): "
 	@read CONFIRM ; if [ "$$CONFIRM" != "y" ]; then exit 1; fi
 
 ##########
@@ -72,17 +107,17 @@ confirm:
 manala:
 	@curl -s -L http://bit.ly/10hA8iC | bash
 
-############
-# Manifest #
-############
+########
+# Yaml #
+########
 
 # See: https://gist.github.com/pkuczynski/8665367
-define manifest_parse_new_line
+define yaml_parse_new_line
 
 
 endef
-define manifest_parse
-    $(subst [[|]],$(manifest_parse_new_line),$(shell prefix=$2 ; \
+define yaml_parse
+    $(subst [[|]],$(yaml_parse_new_line),$(shell prefix=$2 ; \
 		space='[[:space:]]*' ; \
 		word='[a-zA-Z0-9_]*' ; \
 		fs=$(shell echo @|tr @ '\034') ; \
@@ -100,4 +135,5 @@ define manifest_parse
 	))
 endef
 
-$(eval $(call manifest_parse,$(MANALA_DIR)/manifest.yaml))
+$(eval $(call yaml_parse,$(MANALA_DIR)/manifest.yaml))
+$(eval $(call yaml_parse,$(MANALA_DIR)/../manala.yaml))
