@@ -65,17 +65,18 @@ body {
     text-align: center;
 }
 
-%logo {
+%nav-btn {
     position: fixed;
-    width: 100px;
     height: 100px;
     z-index: 200;
     top: 0;
 }
 
-.logo-agency {
-    @extend %logo;
-    left: 0;
+.logo {
+    @extend %nav-btn;
+    left: 30px;
+    width: 100px;
+    background-color: #fff;
 
     img {
         width: 100px;
@@ -83,13 +84,19 @@ body {
     }
 }
 
-.logo-blog {
-    @extend %logo;
-    left: 100px;
+.link-blog {
+    @extend %nav-btn;
+    left: 0;
+    width: 30px;
+    height: 100px;
+    background-color: $main-color;
 
     img {
-        width: 100px;
+        width: 16px;
         display: block;
+        position: relative;
+        top: 36px;
+        left: 6px;
     }
 }
 
