@@ -65,13 +65,27 @@ body {
     text-align: center;
 }
 
-.logo {
+%logo {
     position: fixed;
     width: 100px;
     height: 100px;
     z-index: 200;
     top: 0;
+}
+
+.logo-agency {
+    @extend %logo;
     left: 0;
+
+    img {
+        width: 100px;
+        display: block;
+    }
+}
+
+.logo-blog {
+    @extend %logo;
+    left: 100px;
 
     img {
         width: 100px;

@@ -113,12 +113,15 @@
         height: 60px;
     }
 
-    .logo {
+    .logo-agency,
+    .logo-blog {
         &, img {
             height: 60px;
             width: 60px;
         }
     }
+
+    .logo-blog { left: 60px; }
 
     .nav-button {
         top: 30px;
