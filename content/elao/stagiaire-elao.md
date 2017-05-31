@@ -58,14 +58,14 @@ Cette méthode nous a permit de rapidement **monter en compétences** sur le pro
 
 Une journée de stagiaire à Elao Paris est déjà **riche de contenu** de part la quantité de connaissance à **appréhender, comprendre et essayer de maîtriser** et les projets sur lesquels avancer!
 
-Mais en plus de ça, une à plusieurs par semaine, l'équipe organise des **ateliers** (ou dojos) autour d'un mini-projet interne, d'une nouvelle technologie ou d'une explication de code particulièrement complexe.  
+Mais en plus de ça, une à plusieurs fois par semaine, l'équipe organise des **ateliers** (ou dojos) autour d'un mini-projet interne, d'une nouvelle technologie ou d'une explication de code particulièrement complexe.  
 Une grande partie de l'équipe est aussi assidue aux différents **meetups** de la capitale, ce qui permait des débriefs supers intéressants lors de la pause café. 
 
 ### Conclusion
 
-Il me reste encore quelques mois à passer en leurs compagnie, mais je peux déjà dire que ce stage aura été enrichissant de plusieurs façons :  
+Il me reste encore quelques mois à passer en leur compagnie, mais je peux déjà dire que ce stage aura été enrichissant de plusieurs façons :  
 
 * De manière technique, j'ai découvert de nouvelles technos et méthodologies. Grâce à mes collègues et leurs code review j'ai pu progresser en php et symfony.  
 * Ma première expérience professionnelle dans le monde des développeurs, en agence web, aura été pour moi une réussite, des projets intéressants, des collègues bienveillants avec les débutants.
 
-Une bonne ambiance de tout les jours, des projets et de la nouveauté, il n'en fallait pas plus pour lancer une vocation professionnelle (espérons fructueuse).
+Une bonne ambiance de tous les jours, des projets et de la nouveauté, il n'en fallait pas plus pour lancer une vocation professionnelle (espérons fructueuse).
