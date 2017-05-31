@@ -52,7 +52,7 @@ Malgré des erreurs dues pour la plupart à l'inexpérience, nous avons pu avanc
 
 Heureusement pour nous, nous avons été suivis tout le long du projet par un **développeur expérimenté** qui nous a permit d'éviter un certain nombre d'erreurs, de nous aiguiller sur les principales difficultés tout en nous laissant la main sur le projet.
 Assez présent pour que le projet ne parte pas en vrille, mais nous laissant des moments de réflexion afin d'apprendre de nos erreurs.  
-Cette méthode nous a permit de rapidement **monter en compétences** sur le projet.
+Cette méthode nous a permis de rapidement **monter en compétences** sur le projet.
 
 ### Le quotidien chez Elao Paris
 
