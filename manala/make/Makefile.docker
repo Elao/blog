@@ -1,0 +1,11 @@
+MANALA_DOCKER_RUN = docker run \
+	--rm \
+	--volume $(MANALA_CURRENT_DIR):$(app_dir) \
+	--workdir $(app_dir) \
+	$(if $(MANALA_INTERACTIVE),--tty --interactive) \
+	--env MANALA=1 \
+	--env USER_ID=$(shell id -u) \
+	--env GROUP_ID=$(shell id -g) \
+	--hostname $(app_name).dev\
+	$(MANALA_DOCKER_OPTIONS) \
+	$(MANALA_DOCKER_IMAGE):$(if $(MANALA_DOCKER_TAG),$(MANALA_DOCKER_TAG),latest)

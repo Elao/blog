@@ -1,0 +1,12 @@
+MANALA_LARAVEL_MIX = node_modules/webpack/bin/webpack.js \
+	--color \
+	--hide-modules \
+	$(if $(MANALA_LARAVEL_MIX_OPTIONS),$(MANALA_LARAVEL_MIX_OPTIONS)) \
+	--config=node_modules/laravel-mix/setup/webpack.config.js
+
+MANALA_LARAVEL_MIX_WATCH = node_modules/webpack/bin/webpack.js \
+	--color \
+	--hide-modules \
+	$(if $(MANALA_LARAVEL_MIX_OPTIONS),$(MANALA_LARAVEL_MIX_OPTIONS)) \
+	--watch \
+	--config=node_modules/laravel-mix/setup/webpack.config.js

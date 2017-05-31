@@ -1,154 +1,82 @@
 .SILENT:
-.PHONY: help
+.PHONY: install build watch
 
-## Colors
-COLOR_RESET   = \033[0m
-COLOR_INFO    = \033[32m
-COLOR_COMMENT = \033[33m
+##########
+# Manala #
+##########
 
-## Help
-help:
-	printf "${COLOR_COMMENT}Usage:${COLOR_RESET}\n"
-	printf " make [target]\n\n"
-	printf "${COLOR_COMMENT}Available targets:${COLOR_RESET}\n"
-	awk '/^[a-zA-Z\-\_0-9\.@]+:/ { \
-		helpMessage = match(lastLine, /^## (.*)/); \
-		if (helpMessage) { \
-			helpCommand = substr($$1, 0, index($$1, ":")); \
-			helpMessage = substr(lastLine, RSTART + 3, RLENGTH); \
-			printf " ${COLOR_INFO}%-16s${COLOR_RESET} %s\n", helpCommand, helpMessage; \
-		} \
-	} \
-	{ lastLine = $$0 }' $(MAKEFILE_LIST)
+# Hugo
+HUGO_THEME = 2015
 
-#############
-# Dev tools #
-#############
+# Optimize
+OPTIMIZE_IMAGES = public
 
-## Make me God
-shell:
-	docker run \
-		--hostname blog.dev \
-		--rm \
-		--volume `pwd`:/srv \
-		--env HOME=/home \
-		--user root \
-		--publish 1313:1313 \
-		--tty --interactive \
-		manala/hugo-debian \
-		bash
+include manala/make/Makefile
+
+#########
+# Setup #
+#########
+
+setup@development: install
 
 ###########
 # Install #
 ###########
 
 ## Install
-install:
-	docker run \
-		--rm \
-		--volume `pwd`:/srv \
-		--env HOME=/home \
-		--user `id -u` \
-		--tty \
-		manala/hugo-debian \
-		bash -c "\
-			NPM_CONFIG_CACHE=/tmp/npm npm install \
-		"
+install: $(call proxy,install)
+
+## Install - All
+install@%:
+	# Theme
+	$(MAKE_HUGO_THEME) install@$*
+
 #########
 # Build #
 #########
-build: install build_assets
-	docker run \
-		--rm \
-		--volume `pwd`:/srv \
-		--env HOME=/home \
-		--user `id -u` \
-		--tty \
-		manala/hugo-debian \
-		bash -c "\
-			hugo --theme=blog --config=config.yaml \
-		"
-build_assets:
-	docker run \
-		--rm \
-		--volume `pwd`:/srv \
-		--env HOME=/home \
-		--user `id -u` \
-		--tty \
-		manala/hugo-debian \
-		bash -c "\
-			node_modules/.bin/gulp build \
-		"
 
-## Build and optimize
-build-and-optimize: build crop optimize
+## Build
+build: $(call proxy,build)
+
+## Build - All
+build@%:
+	# Theme
+	$(MAKE_HUGO_THEME) build@$*
+
+	$(call log,Hugo)
+	$(HUGO)
+
+	$(call log,Crop images - Thumbnails)
+	find public/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f \
+		-exec echo {} \; \
+		-exec mogrify -resize 400x {} \;
+
+	$(call log,Crop images - Headers)
+	find public/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f \
+		-exec echo {} \; \
+		-exec mogrify -resize 2000x {} \;
 
 #########
 # Watch #
 #########
 
 ## Watch
-watch:
-	docker run \
-		--rm \
-		--volume `pwd`:/srv \
-		--env HOME=/srv \
-		--user `id -u` \
-		--tty -i \
-		--publish 1313:1313 \
-		manala/hugo-debian \
-		hugo server --bind=0.0.0.0 --theme=blog --config=config.yaml --buildDrafts --watch --ignoreCache=true
+watch: $(call proxy,watch)
 
-## Images compression
-optimize:
-	docker run \
-		--rm \
-		--volume `pwd`:/srv \
-		--env HOME=/srv \
-		--user `id -u` \
-		--tty \
-		manala/hugo-debian \
-		bash -c "\
-			find public/images -iname "*.png" -type f -exec optipng -o7 {} \; \
-			&& find public/images \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec jpegtran -copy none -optimize -progressive -outfile {} {} \; \
-		"
-## Crop thumbnail and header files
-crop: crop-thumbnails crop-headers
+## Watch - Development
+watch@development: SHELL = dumb-init sh
+watch@development:
+	# Theme
+	$(MAKE_HUGO_THEME) watch@development & \
+	$(call log,Hugo - Server) && \
+	$(HUGO_SERVER)
 
-crop-thumbnails:
-	docker run \
-		--rm \
-		--volume `pwd`:/srv \
-		--env HOME=/srv \
-		--user `id -u` \
-		--tty \
-		manala/hugo-debian \
-		bash -c "\
-			find public/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \; \
-			&& find public/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 400x {} \; \
-		"
-crop-headers:
-	docker run \
-		--rm \
-		--volume `pwd`:/srv \
-		--env HOME=/srv \
-		--user `id -u` \
-		--tty \
-		manala/hugo-debian \
-		bash -c "\
-			find public/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \; \
-			&& find public/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f -exec mogrify -resize 2000x {} \; \
-		"
-## Deploy app to production (after static build and images optimization)
-deploy_and_optimize@prod: build-and-optimize
-	echo "google-site-verification: google98e08ccbf4b44d9b.html" > public/google98e08ccbf4b44d9b.html
-	rsync -arzv --delete public app@blog.elao.elao.local:/srv/app
+##########
+# Deploy #
+##########
 
-## Deploy app to production (after static build)
-deploy@prod: build
-	echo "google-site-verification: google98e08ccbf4b44d9b.html" > public/google98e08ccbf4b44d9b.html
-	rsync -arzv --delete --exclude '*/images' public app@blog.elao.elao.local:/srv/app
-
-## Expose the site on local network
-expose: build
-	php -S 0.0.0.0:8080 -t public
+## Deploy - Staging
+deploy.staging: RSYNC_RSH = $(DEPLOY_RSYNC_RSH)
+deploy.staging:
+	$(call log,Rsync)
+	$(RSYNC) public/ $(DEPLOY_DESTINATION)$(if $(DEPLOY_DESTINATION_SUFFIX),/$(DEPLOY_DESTINATION_SUFFIX))

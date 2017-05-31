@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "laravel-mix": "^0.12.1"
+  }
+}

@@ -1,0 +1,53 @@
+.PHONY: setup sh
+
+########
+# Help #
+########
+
+ifndef MANALA
+MANALA_HELP += \
+	\n$(MANALA_COLOR_COMMENT)Virtual machine:$(MANALA_COLOR_RESET)\
+	\n  $(MANALA_COLOR_INFO)setup:$(MANALA_COLOR_RESET) Setup virtual machine\
+	\n  $(MANALA_COLOR_INFO)sh:$(MANALA_COLOR_RESET)    Shell to virtual machine\
+	\n
+endif
+
+#########
+# Setup #
+#########
+
+ifndef MANALA
+
+setup: @local
+setup: setup@$(MANALA_ENV)
+
+endif
+
+######
+# Sh #
+######
+
+ifndef MANALA
+
+sh: @local
+sh:
+	@$(MANALA_DOCKER_RUN)
+
+endif
+
+#########
+# Proxy #
+#########
+
+ifdef MANALA
+define proxy
+	$(1)@$(MANALA_ENV)
+endef
+else
+define proxy
+	$(1)@proxy
+endef
+endif
+
+%@proxy:
+	@$(MANALA_DOCKER_RUN) sh -c "make --silent --directory=$(app_dir) $(*)@$(MANALA_ENV)"

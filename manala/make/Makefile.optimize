@@ -1,0 +1,83 @@
+.PHONY: optimize
+
+########
+# Help #
+########
+
+ifneq ($(MANALA_OPTIMIZE_IMAGES),)
+MANALA_HELP += \
+	\n$(MANALA_COLOR_COMMENT)Optimize:$(MANALA_COLOR_RESET)\
+	\n  $(MANALA_COLOR_INFO)optimize:$(MANALA_COLOR_RESET)            Optimize
+endif
+
+ifdef MANALA_OPTIMIZE_IMAGES
+MANALA_HELP += \
+	\n  $(MANALA_COLOR_INFO)optimize-images:$(MANALA_COLOR_RESET)     Optimize Images\
+	\n  $(MANALA_COLOR_INFO)gifsicle:$(MANALA_COLOR_RESET)            Gifsicle\
+	\n  $(MANALA_COLOR_INFO)jpegtran:$(MANALA_COLOR_RESET)            Jpegtran\
+	\n  $(MANALA_COLOR_INFO)optipng:$(MANALA_COLOR_RESET)             OptiPNG\
+	\n  $(MANALA_COLOR_INFO)svgo:$(MANALA_COLOR_RESET)                Svgo
+endif
+
+ifneq ($(MANALA_OPTIMIZE_IMAGES),)
+MANALA_HELP += \
+	\n
+endif
+
+############
+# Optimize #
+############
+
+ifneq ($(MANALA_OPTIMIZE_IMAGES),)
+
+optimize: $(call proxy,optimize)
+
+optimize@%:
+
+endif
+
+ifdef MANALA_OPTIMIZE_IMAGES
+
+optimize@%: optimize-images@% ;
+
+optimize-images: $(call proxy,optimize-images)
+
+optimize-images@%: gifsicle@% jpegtran@% optipng@% svgo@% ;
+
+gifsicle: $(call proxy,gifsicle)
+
+gifsicle@%:
+	$(call log,Optimize - Images - Gifsicle)
+	find $(MANALA_OPTIMIZE_IMAGES) -iname "*.gif" -type f \
+		-exec echo {} \; \
+		-exec gifsicle --batch --interlace --optimize=3 {} \;
+	printf "\n"
+
+jpegtran: $(call proxy,jpegtran)
+
+jpegtran@%:
+	$(call log,Optimize - Images - Jpegtran)
+	find $(MANALA_OPTIMIZE_IMAGES) \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f \
+		-exec echo {} \; \
+		-exec jpegtran -copy none -progressive -optimize -outfile {} {} \;
+	printf "\n"
+
+optipng: $(call proxy,optipng)
+
+optipng@%:
+	$(call log,Optimize - Images - Optipng)
+	find $(MANALA_OPTIMIZE_IMAGES) -iname "*.png" -type f \
+		-exec echo {} \; \
+		-exec optipng -quiet -strip all -o5 {} \;
+	printf "\n"
+
+svgo: $(call proxy,svgo)
+
+svgo@%:
+	$(call log,Optimize - Images - Svgo)
+	find $(MANALA_OPTIMIZE_IMAGES) -iname "*.svg" -type f \
+		-exec echo {} \; \
+		-exec svgo --quiet {} \;
+	printf "\n"
+
+endif

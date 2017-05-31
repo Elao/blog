@@ -1,0 +1,9 @@
+MANALA_HUGO = hugo \
+	--verbose \
+	$(MANALA_HUGO_OPTIONS)
+
+MANALA_HUGO_SERVER = hugo server \
+	--verbose \
+	$(MANALA_HUGO_OPTIONS) \
+	--watch \
+	--bind 0.0.0.0
