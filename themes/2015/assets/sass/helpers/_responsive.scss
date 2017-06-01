@@ -113,18 +113,51 @@
         height: 60px;
     }
 
-    .logo-agency,
-    .logo-blog {
-        &, img {
+    .nav-brand {
+        height: 60px;
+
+        .link-elao {
             height: 60px;
+            width: 70px;
+            display: flex;
+
+            img {
+                top: 0;
+                left: 2px;
+                width: 7px;
+            }
+
+            span {
+                position: relative;
+                top: 20px;
+                left: 4px;
+                font-size: 14px;
+                line-height: 1.3;
+                display: inline-block;
+                text-align: center;
+            }
+
+            &:hover {
+                width: 70px;
+
+                span { animation: none; }
+            }
+        }
+
+        .logo {
             width: 60px;
+
+            img {
+                height: 60px;
+                width: 60px;
+            }
         }
     }
 
-    .logo-blog { left: 60px; }
-
     .nav-button {
         top: 30px;
+        right: 15px;
+        left: unset;
     }
 
     .container {

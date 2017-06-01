@@ -65,31 +65,58 @@ body {
     text-align: center;
 }
 
-%logo {
-    position: fixed;
-    width: 100px;
+.nav-brand {
     height: 100px;
-    z-index: 200;
+    position: fixed;
     top: 0;
-}
-
-.logo-agency {
-    @extend %logo;
     left: 0;
+    display: flex;
+    z-index: 999;
 
-    img {
+    .logo {
         width: 100px;
-        display: block;
+        left: 30px;
+        background-color: #fff;
+
+        img {
+            width: 100px;
+            display: block;
+        }
     }
-}
 
-.logo-blog {
-    @extend %logo;
-    left: 100px;
+    .link-elao {
+        width: 30px;
+        height: 100px;
+        background-color: $main-color;
+        transition: ease .3s;
 
-    img {
-        width: 100px;
-        display: block;
+        img {
+            width: 16px;
+            position: relative;
+            top: 36px;
+            left: 6px;
+            display: block;
+        }
+
+        span {
+            position: relative;
+            top: 5px;
+            left: 35px;
+            display: none;
+            color: #fff;
+        }
+
+
+        &:hover {
+            width: 130px;
+
+            img { animation: pulsate-fwd 0.5s ease-in-out both; }
+
+            span {
+                display: inline-block;
+                animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+        }
     }
 }
 
@@ -111,7 +138,6 @@ body {
         width: 40px;
         display: block;
         position: absolute;
-        top: 50%;
         left: 0;
         transform: translate(0, -50%);
         transition: all 0.2s ease;
