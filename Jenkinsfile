@@ -1,7 +1,10 @@
 #!groovy
 
+@Library('manala') _
+
 def app = [
-  env: (env.BRANCH_NAME == 'master') ? 'production' : 'staging'
+  env:     (env.BRANCH_NAME == 'master') ? 'production' : 'staging',
+  release: manalaDomainize(env.BRANCH_NAME)
 ]
 
 pipeline {
@@ -31,7 +34,7 @@ pipeline {
         reuseNode true
       } }
       steps {
-        sh "make build@$app.env APP_URL_SUBDOMAIN=$BRANCH_NAME"
+        sh "make build@$app.env APP_URL_SUBDOMAIN=$app.release"
       }
     }
     stage('Optimize') {
@@ -50,7 +53,7 @@ pipeline {
       } }
       steps {
         sshagent (credentials: ['deploy']) {
-          sh "make deploy.staging DEPLOY_DESTINATION_SUFFIX=$BRANCH_NAME"
+          sh "make deploy.staging DEPLOY_DESTINATION_SUFFIX=$app.release"
         }
       }
     }
