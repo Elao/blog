@@ -1,14 +1,14 @@
 ---
 
-# - name: Build
-#   hosts: localhost
-#   any_errors_fatal: true
-#   environment:
-#     ENV: production
-#   tasks:
-#     - command: make --directory {{ playbook_dir }}/.. install
-#     - command: make --directory {{ playbook_dir }}/.. build
-#     - command: make --directory {{ playbook_dir }}/.. optimize
+- name: Build
+  hosts: localhost
+  any_errors_fatal: true
+  environment:
+    ENV: production
+  tasks:
+    - command: make --directory {{ playbook_dir }}/.. install
+    - command: make --directory {{ playbook_dir }}/.. build
+    - command: make --directory {{ playbook_dir }}/.. optimize
 
 - name: Deploy
   hosts: production
