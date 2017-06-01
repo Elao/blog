@@ -10,10 +10,11 @@
             </div>
             <img src="/images/lost-hedgedog.gif" alt="">
             <div>
-                <a href="" class="btn">Revenir au blog</a>
+                <a href="{{ .Site.BaseURL }}" class="btn">Revenir au blog</a>
             </div>
         </div>
     </div>
+    <div class="container">
+        {{ partial "footer.html" . }}
+    </div>
 </body>
-
-{{ partial "footer.html" . }}
