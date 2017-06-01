@@ -2,7 +2,7 @@
 type:               "post"
 title:              "Retour d'un stagiaire Elao"
 date:               "2017-05-29"
-publishdate:        "2017-06-01"
+publishdate:        "2017-06-03"
 draft:              false
 slug:               "stagiaire-elao"
 description:        "Cela fait maintenant 4 mois que je suis au sein de la tribu Elao Paris et je pense qu'il est intéressant de prendre un peu de recul sur les mois écoulés"
@@ -46,13 +46,13 @@ Au bout de 3 semaines j'ai commencé avec l'aide d'une autre stagiaire un projet
 Suivant les conseils de nos collègues, nous avons commencé le projet en **[TDD](http://igm.univ-mlv.fr/~dr/XPOSE2009/TDD/pagesHTML/PresentationTDD.html)**, méthode que je n'avais jamais pratiqué et qui se révèle très intéressante.
 
 J'avais au cours de ma formation été initié aux **méthodes agiles** et à **[SCRUM](https://fr.atlassian.com/agile/scrum)**, j'ai donc pu sans trop de difficultés me lancer dans ce projet.
-Je n'avais jamais en dehors de ma formation pu pratiquer ces méthodes, j'ai pu lors de ce projet discuter avec le client, **comprendre, analyser et répondre** au mieux à ses besoins. (en oubliant à chaque fois de poser une ou plusieurs questions importantes, mais ça, je pense que cela vient avec l'expérience )
+Je n'avais jamais en dehors de ma formation pu pratiquer ces méthodes, j'ai pu lors de ce projet discuter avec le client, **comprendre, analyser et répondre** au mieux à ses besoins, (en oubliant à chaque fois de poser une ou plusieurs questions importantes, mais ça, je pense que cela vient avec l'expérience ).
 
 Malgré des erreurs dues pour la plupart à l'inexpérience, nous avons pu avancer de manière efficace tout le long du projet.  
 
 Heureusement pour nous, nous avons été suivis tout le long du projet par un **développeur expérimenté** qui nous a permit d'éviter un certain nombre d'erreurs, de nous aiguiller sur les principales difficultés tout en nous laissant la main sur le projet.
-Assez présent pour que le projet ne parte pas en vrille, mais nous laissant des moments de réflexion afin d'apprendre de nos erreurs.  
-Cette méthode nous a permis de rapidement **monter en compétences** sur le projet.
+Assez présent pour cadrer le projet, mais nous laissant des moments de réflexion afin d'apprendre de nos erreurs.  
+Cette méthode nous a permit de rapidement **monter en compétences** sur le projet.
 
 ### Le quotidien chez Elao Paris
 
@@ -61,6 +61,8 @@ Une journée de stagiaire à Elao Paris est déjà **riche de contenu** de part 
 Mais en plus de ça, une à plusieurs fois par semaine, l'équipe organise des **ateliers** (ou dojos) autour d'un mini-projet interne, d'une nouvelle technologie ou d'une explication de code particulièrement complexe.  
 Une grande partie de l'équipe est aussi assidue aux différents **meetups** de la capitale, ce qui permait des débriefs supers intéressants lors de la pause café. 
 
+L'équipe sait aussi se faire plaisir : <blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">On a notre mini potager de fraises et de tomates ! ☀️ <a href="https://t.co/cnmwUR8nnN">pic.twitter.com/cnmwUR8nnN</a></p>&mdash; Elao (@Elao) <a href="https://twitter.com/Elao/status/866682522347950082">22 mai 2017</a></blockquote>
+                                       <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 ### Conclusion
 
 Il me reste encore quelques mois à passer en leur compagnie, mais je peux déjà dire que ce stage aura été enrichissant de plusieurs façons :  
