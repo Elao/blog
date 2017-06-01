@@ -1,9 +1,16 @@
 {{ partial "head.html" . }}
 
-<section id="main">
-  <div>
-   <h1 id="title">{{ .Title }}</h1>
-  </div>
-</section>
+<body class="detail">
+    <div id="all">
+        {{ partial "navbar.html" . }}
+        <div class="page-404">
+            <h1 id="title">404</h1>
+            <p>Vous êtes perdu.</p>
+            <div>
+                <a href="" class="btn">Revenir au blog</a>
+            </div>
+        </div>
+    </div>
+</body>
 
 {{ partial "footer.html" . }}
