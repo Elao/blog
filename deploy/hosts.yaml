@@ -1,0 +1,6 @@
+# Production
+production:
+  hosts:
+    production-1:
+      ansible_ssh_host: blog.elao.elao.local
+      ansible_ssh_user: app

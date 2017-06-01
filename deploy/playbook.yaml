@@ -1,0 +1,25 @@
+---
+
+# - name: Build
+#   hosts: localhost
+#   any_errors_fatal: true
+#   environment:
+#     ENV: production
+#   tasks:
+#     - command: make --directory {{ playbook_dir }}/.. install
+#     - command: make --directory {{ playbook_dir }}/.. build
+#     - command: make --directory {{ playbook_dir }}/.. optimize
+
+- name: Deploy
+  hosts: production
+  any_errors_fatal: true
+  vars:
+    # Dir
+    manala_deploy_dir: /srv/app
+    # Releases
+    manala_deploy_releases: 5
+    # Strategy
+    manala_deploy_strategy: synchronize
+    manala_deploy_strategy_synchronize_src: "{{ playbook_dir }}/../public/"
+  roles:
+    - manala.deploy

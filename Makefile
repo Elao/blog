@@ -80,3 +80,11 @@ deploy.staging: RSYNC_RSH = $(DEPLOY_RSYNC_RSH)
 deploy.staging:
 	$(call log,Rsync)
 	$(RSYNC) public/ $(DEPLOY_DESTINATION)$(if $(DEPLOY_DESTINATION_SUFFIX),/$(DEPLOY_DESTINATION_SUFFIX))
+
+## Deploy - Production
+deploy.production:
+	$(call log,Ansible)
+	ansible-playbook \
+		--inventory deploy/hosts.yaml \
+		--limit localhost,production \
+		deploy/playbook.yaml
