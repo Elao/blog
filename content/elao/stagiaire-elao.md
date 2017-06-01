@@ -2,7 +2,7 @@
 type:               "post"
 title:              "Retour d'un stagiaire Elao"
 date:               "2017-05-29"
-publishdate:        "2017-06-03"
+publishdate:        "2017-06-01"
 draft:              false
 slug:               "stagiaire-elao"
 description:        "Cela fait maintenant 4 mois que je suis au sein de la tribu Elao Paris et je pense qu'il est intéressant de prendre un peu de recul sur les mois écoulés"
@@ -42,17 +42,20 @@ Je rencontrais des technologies comme node, yarn, le javascript (que j'avais vag
 
 Au niveau des méthodologies, je découvrais le **[DDD](http://blog.infosaurus.fr/public/docs/DDDViteFait.pdf)** et le **[CQRS](http://blog.octo.com/cqrs-larchitecture-aux-deux-visages-partie-1/)**, et pour moi, pour qui l'architecture d'un code était encore très abstraite, devoir créer une infrastructure séparant le domaine de l'application ainsi que la séparation du traitement métier (command) et de la restitution (query) était totalement nouveau.
 
-Au bout de 3 semaines j'ai commencé avec l'aide d'une autre stagiaire un projet client regroupant l'ensemble des méthodologies vues précédemment.
-Suivant les conseils de nos collègues, nous avons commencé le projet en **[TDD](http://igm.univ-mlv.fr/~dr/XPOSE2009/TDD/pagesHTML/PresentationTDD.html)**, méthode que je n'avais jamais pratiqué et qui se révèle très intéressante.
+Au bout de 3 semaines, j'ai rejoint en pair programming avec une autre stagiaire, un projet regroupant l'ensemble des méthodologies vues précédemment.
+Ce projet était en **[TDD](http://igm.univ-mlv.fr/~dr/XPOSE2009/TDD/pagesHTML/PresentationTDD.html)**, méthode que je n'avais jamais pratiqué et qui se révèle très intéressante.
 
 J'avais au cours de ma formation été initié aux **méthodes agiles** et à **[SCRUM](https://fr.atlassian.com/agile/scrum)**, j'ai donc pu sans trop de difficultés me lancer dans ce projet.
-Je n'avais jamais en dehors de ma formation pu pratiquer ces méthodes, j'ai pu lors de ce projet discuter avec le client, **comprendre, analyser et répondre** au mieux à ses besoins, (en oubliant à chaque fois de poser une ou plusieurs questions importantes, mais ça, je pense que cela vient avec l'expérience ).
+Je n'avais jamais en dehors de ma formation, pu pratiquer ces méthodes, j'ai pu lors de ce projet discuter avec le client, **comprendre, analyser et répondre** au mieux à ses besoins, (en oubliant à chaque fois de poser une ou plusieurs questions importantes, mais ça, je pense que cela vient avec l'expérience ).
 
-Malgré des erreurs dues pour la plupart à l'inexpérience, nous avons pu avancer de manière efficace tout le long du projet.  
+Malgré des erreurs dues pour la plupart à l'inexpérience, nous avons pu avancer de manière efficace tout le long du projet grâce au support des **développeurs expérimentés**.  
 
-Heureusement pour nous, nous avons été suivis tout le long du projet par un **développeur expérimenté** qui nous a permit d'éviter un certain nombre d'erreurs, de nous aiguiller sur les principales difficultés tout en nous laissant la main sur le projet.
-Assez présent pour cadrer le projet, mais nous laissant des moments de réflexion afin d'apprendre de nos erreurs.  
+Nous avons pu éviter un certain nombre d’erreurs mais aussi avoir des moments de réflexion afin d'apprendre de nos erreurs.
 Cette méthode nous a permit de rapidement **monter en compétences** sur le projet.
+
+J'ai pu aussi monter en compétence en **[provisionning](https://blog.elao.com/fr/infra/introduction-au-provisioning/)**, lors des différents déploiements du projet.  
+
+De plus, Elao travaille sur la base de machine virtuelle, précisément **[Manala](http://www.manala.io/)**. J'ai donc appris tout au long du stage à me servir (plus ou moins correctement) de cet outil.
 
 ### Le quotidien chez Elao Paris
 
