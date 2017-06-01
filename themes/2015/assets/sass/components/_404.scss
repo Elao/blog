@@ -1,13 +1,21 @@
 .page-404 {
-    padding: 100px 0;
+    padding: 10px 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-grow: .25;
+    > div {
+        h1 {
+            margin: 0;
+            line-height: 1;
+        }
+    }
 
-    h1 { margin: 0; }
-    p { margin-bottom: 50px; }
+    img {
+        width: 350px;
+        margin-bottom: 35px;
+    }
 }
 
 header.homepage-slider {
