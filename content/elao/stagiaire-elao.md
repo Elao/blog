@@ -51,7 +51,7 @@ Je n'avais jamais en dehors de ma formation, pu pratiquer ces méthodes, j'ai pu
 Malgré des erreurs dues pour la plupart à l'inexpérience, nous avons pu avancer de manière efficace tout le long du projet grâce au support des **développeurs expérimentés**.  
 
 Nous avons pu éviter un certain nombre d’erreurs mais aussi avoir des moments de réflexion afin d'apprendre de nos erreurs.
-Cette méthode nous a permit de rapidement **monter en compétences** sur le projet.
+Cette méthode nous a permis de rapidement **monter en compétences** sur le projet.
 
 J'ai pu aussi monter en compétence en **[provisionning](https://blog.elao.com/fr/infra/introduction-au-provisioning/)**, lors des différents déploiements du projet.  
 
