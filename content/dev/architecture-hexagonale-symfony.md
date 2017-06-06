@@ -169,4 +169,4 @@ Enfin, **utilisez l'injection de dépendance** de Symfony pour injecter vos adap
 
 Pour conclure, je dirai que l'architecture hexagonale n'est pas une fin en soit ni l'architecture ultime. Je la vois davantage comme un cadre permettant de se contraindre à respecter le principe de séparation entre le code métier et l'infrastructure.
  
-Comme tout paradigme, il a ses faiblesses et ses exceptions, mais pour l'utiliser sur tout mes projets depuis quelques années, il m'a beaucoup fait progresser vers une conception propre, solide, testable et maintenable.
+Comme tout paradigme, il a ses faiblesses et ses exceptions, mais pour l'utiliser sur tous mes projets depuis quelques années, il m'a beaucoup fait progresser vers une conception propre, solide, testable et maintenable.
