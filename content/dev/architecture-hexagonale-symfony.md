@@ -121,7 +121,7 @@ doctrine:
             entity:
                 type: yml
                 prefix: App\Domain\Model
-                dir: "%kernel.root_dir%/../app/config/doctrine/entity"
+                dir: "%kernel.project_dir%/app/config/doctrine/entity"
                 alias: App
                 is_bundle: false
 {{< /highlight >}}
