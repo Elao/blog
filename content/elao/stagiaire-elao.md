@@ -2,7 +2,7 @@
 type:               "post"
 title:              "Retour d'expérience d'un stagiaire Elao"
 date:               "2017-05-29"
-publishdate:        "2017-06-01"
+publishdate:        "2017-06-19"
 draft:              false
 slug:               "stagiaire-elao"
 description:        "Cela fait maintenant 4 mois que je travaille en tant que stagiaire au sein de la tribu Elao Paris et je pense qu'il est intéressant de prendre un peu de recul sur les mois écoulés"
