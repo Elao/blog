@@ -126,11 +126,15 @@ social:
 
 ## Expose your current branch (for review)
 
-Launch a local serveur on port 8080
+Every branch pushed to remote `origin` is deployed to staging in order to share your work in progress with the rest of the team :
 
-    make expose
+`http://<my-branch>.blog.elao.elao.ninja/`
 
-The blog is now accessible by everyone in the open-space on [http://192.168.1.xx:8080/fr](http://192.168.1.xx:8080/fr) (where xx is your local IP address).
+> :warning: The branch name is normalized : all special characters such as `/` or `_` are replaced with an hyphen (`-`).
+
+As an example, here is the staging URL for the `master` branch :
+
+http://master.blog.elao.elao.ninja/
 
 ## You have an old version of the docker image
 If you have cloned the repository a long time ago, your docker image could be deprecated.
