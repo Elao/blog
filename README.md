@@ -135,7 +135,7 @@ The blog is now accessible by everyone in the open-space on [http://192.168.1.xx
 ## You have an old version of the docker image
 If you have cloned the repository a long time ago, your docker image could be deprecated.
 In order to obtain the last version of the image, you can execute the following command:
-`make update-image`
+`make update`
 
 ## Publish an article
 Your post is ready to be published ? Create a PR and ask for review to a team member. Once it's done, you're ready for production.

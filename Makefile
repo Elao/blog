@@ -31,14 +31,6 @@ install@%:
 	# Theme
 	$(MAKE_HUGO_THEME) install@$*
 
-##########
-# Update #
-##########
-
-## Update Docker image
-update-image:
-	docker pull manala/hugo-debian
-
 #########
 # Build #
 #########
