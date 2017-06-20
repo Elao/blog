@@ -7,8 +7,9 @@
 ifndef MANALA
 MANALA_HELP += \
 	\n$(MANALA_COLOR_COMMENT)Virtual machine:$(MANALA_COLOR_RESET)\
-	\n  $(MANALA_COLOR_INFO)setup:$(MANALA_COLOR_RESET) Setup virtual machine\
-	\n  $(MANALA_COLOR_INFO)sh:$(MANALA_COLOR_RESET)    Shell to virtual machine\
+	\n  $(MANALA_COLOR_INFO)setup:$(MANALA_COLOR_RESET)  Setup virtual machine\
+	\n  $(MANALA_COLOR_INFO)sh:$(MANALA_COLOR_RESET)     Shell to virtual machine\
+	\n  $(MANALA_COLOR_INFO)update:$(MANALA_COLOR_RESET) Update virtual machine\
 	\n
 endif
 
@@ -32,6 +33,18 @@ ifndef MANALA
 sh: @local
 sh:
 	@$(MANALA_DOCKER_RUN)
+
+endif
+
+##########
+# Update #
+##########
+
+ifndef MANALA
+
+update: @local
+update:
+	docker pull $(MANALA_DOCKER_IMAGE):$(if $(MANALA_DOCKER_TAG),$(MANALA_DOCKER_TAG),latest)
 
 endif
 
