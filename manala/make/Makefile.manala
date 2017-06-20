@@ -97,7 +97,7 @@ endef
 ###########
 
 confirm:
-	@printf "\n$(MANALA_COLOR_INFO) ༼ つ ◕_◕ ༽つ $(MANALA_COLOR_WARNING)Please confirm (y/N)$(MANALA_COLOR_RESET): "
+	@printf "\n$(MANALA_COLOR_INFO) ༼ つ ◕_◕ ༽つ $(MANALA_COLOR_WARNING)$(if $(CONFIRM_MESSAGE),$(CONFIRM_MESSAGE),Please confirm) (y/N)$(MANALA_COLOR_RESET): "
 	@read CONFIRM ; if [ "$$CONFIRM" != "y" ]; then exit 1; fi
 
 ##########
