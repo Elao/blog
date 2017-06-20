@@ -1,4 +1,4 @@
-.PHONY: setup sh
+.PHONY: setup sh update
 
 ########
 # Help #
