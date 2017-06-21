@@ -146,6 +146,12 @@ Your post is ready to be published ? Create a PR and ask for review to a team me
 
 ### Going to production
 
+Ensure you have installed ansible deploy role:
+
+```shell
+ansible-galaxy install --roles-path deploy/roles --role-file deploy/roles/requirements.yaml --force
+```
+
 > :warning: The deploy tasks will first run the build (assets, image optimization, compiling blog posts to HTML, etc) **locally** and push compiled files to production from your local filesystem. So make sure that your current branch is `master` and that you are up-to-date with `origin/master`.
 
 ```shell
@@ -153,8 +159,6 @@ Your post is ready to be published ? Create a PR and ask for review to a team me
   git pull
 ```
 
-#### Sync only files (you don't have any image)
-`make deploy@prod`
+Then:
 
-#### Sync files and optimize images
-`make deploy_and_optimize@prod`
+`make deploy.production`
