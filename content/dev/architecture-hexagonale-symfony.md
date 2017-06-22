@@ -94,7 +94,7 @@ Certes cette architecture est plus complexe, implique un peu plus de code et dem
 
 5. Un code metier plus stable et pérenne.
 
-6. En début de projet, vous pouvez mettre en place une architecture simple (persistance en mémoire/fichier, API mockée, ...) afin de vous concentrer sur la valeur ajoutée : les fonctionnalités métier.
+6. En début de projet, vous pouvez mettre en place une infrastructure simple (persistance en mémoire/fichier, API mockée, ...) afin de vous concentrer sur la valeur ajoutée : les fonctionnalités métier.
 
 Au final, l'investissement de départ est un peu plus grand, quoiqu'avec l'habitude pas tant, mais est largement amorti sur la durée de vie du projet tant les évolutions et la testabilité sont simplifiées.
 
