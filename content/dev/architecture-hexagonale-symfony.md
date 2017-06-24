@@ -17,23 +17,39 @@ author_username:    "mcolin"
 
 # Introduction
 
-L'architecture hexagonale, également appelée *Ports & Adapters*, présente deux caratéristiques lorsqu'on la schématise : une forme **hexagonale** (d'où son nom) et une réprésentation en **couches** ou en **oignon**.
+L'architecture hexagonale, également appelée *Ports & Adapters*, présente deux caratéristiques lorsqu'on la schématise : une forme **hexagonale** (d'où son nom) et une séparation entre l'**application**, l'**extérieur** et une partie contenant des **adapteurs** permettant aux deux de communiquer.
+
+Elle a été pensé par [Alistair Cockburn](http://alistair.cockburn.us/Hexagonal+architecture) dans les années 2000. Son but est de permettre à une application d'être pilotée sans distinction par des utilisateurs, des programmes, des tests automatisés ou des scripts ainsi que d'être développée et testée de façon isolée de son context d'exécution et des ses bases de donées.
 
 ![Architecture hexagonale](/images/posts/2017/hexagonal-architecture.png)
 
 ## Une architecture hexagonale
 
-Le grand principe de l'architecture hexagonale est la **séparation entre le code métier et l'infrastructure**. Le but est de rendre votre code métier **agnostique** de l'architecture sur laquelle votre application sera exécutée. Pour cela vous allez massivement utiliser le **design pattern adapter** et l'**inversion de dépendance**.
+Les deux grands principes de base de l'architecture hexagonale sont :
+
+* La **séparation entre le code métier et le code technique**. Le but est de rendre votre code métier **agnostique** de l'architecture technique dans laquelle votre application sera exécutée. 
+* L'**inversion de dépendance** : votre code technique dépend de votre code métier et non l'inverse comme dans une architecture plus classique. Pour cela vous allez massivement utiliser le **design pattern adapter**.
 
 La forme hexagonale — qui aurait tout aussi bien pu être octogonale ou pentagonale — est là pour mettre en évidence les différentes facettes par lesquelles votre application communique avec l'extérieur via des adapteurs.
 
-L'**infrastructure** c'est tout l'environnement nécessaire à votre application sans faire partie de son coeur métier. Tout ou partie de l'infrastructure peut être remplacé sans impacter votre métier. Cela comprend — entre autres — la persistance (base de données), le système de fichier, le cache, l'applicatif externe (API, binaires, ...), les bibliothèques et frameworks, etc.
+Le **code technique** c'est tout l'environnement nécessaire à votre application sans faire partie de son coeur métier. Tout ou partie de ce code peut être remplacé sans impacter votre métier. Cela comprend — entre autres — la persistance (base de données), le système de fichier, le cache, l'applicatif externe (API, binaires, ...), les bibliothèques et frameworks, etc.
 
 Le **code métier** c'est tout le code qui traduit le métier de votre client. Il s'agit des règles métier, de la logique métier, du code purement applicatif, ... Ce code est irremplaçable et constitue le coeur de votre application.
 
 ## Une architecture en couches (ou en oignon)
 
-L'autre grand principe de l'architecture hexagonale est la séparation du code en couches. Le nombre de couches dépendra de la complexité de votre application et jusqu'où vous souhaitez pousser le découpage, mais vous retrouverez dans sa version complète au moins les couches suivantes (de la plus profonde à la moins profonde) :
+<p class=text-center>
+    <img src="/images/posts/2017/onionman.jpg" alt="Onion man" />
+</p>
+
+Afin d'aller encore un peu plus loin dans le découplage de mon code et de me donner un cadre facilitant la séparation du code technique et du code métier, je me suis également inspiré de deux autres architectures proche dans l'idée :
+ 
+* [The Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) de Uncle Bob
+* [The Onion Architecture](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/) de Jeffrey Palermo
+
+Ces deux architectures séparent le code en différentes couches imbriquées. Le nombre de couches dépendra de la complexité de votre application et jusqu'où vous souhaitez pousser le découplage. 
+
+Pour ma part je suis partie sur les quatres couches suivantes qui représentes assez bien les différentes parties d'une application **Symfony** (de la plus profonde à la moins profonde) :
 
 * Domain
 * Application
@@ -43,14 +59,14 @@ L'autre grand principe de l'architecture hexagonale est la séparation du code e
 L'idée est que chaque couche peut utiliser une couche inférieure mais jamais une couche supérieure, ou en tout cas pas directement.
 
 <p class=text-center>
-    <img src="/images/posts/2017/onionman.jpg" alt="Onion man" />
+    <img src="/images/posts/2017/clean-architecture.png" alt="Clean architecture" />
 </p>
 
 Les seules moyens de traverser une couche supérieure sont les **événements**, les **exceptions** et les **adapteurs**.
 
 Les **événements** et les **exceptions** peuvent être lancés dans une couche inférieure et traités dans une couche supérieure. Quand au design pattern **adapter**, il permet de définir une interface du service dont vous avez besoin mais située dans une couche supérieure. L'adapteur correspondant sera implémenté dans ladite couche et l'injection de dépendances permettra d'assembler le tout en conservant le principe de séparation des couches.
 
-Cette séparation en couches n'est pas indispensable à l'architecture hexagonale mais offre un cadre strict permettant de bien séparer votre code applicatif de votre infrastructure ainsi que les différentes parties de votre code. Une version simplifiée pourrait se contenter de séparer Domain/Application de Infrastructure/UI.
+Cette séparation en couches n'est pas indispensable à l'architecture hexagonale mais offre un cadre strict permettant de bien séparer votre code applicatif de votre infrastructure ainsi que les différentes parties de votre code. Vous pouvez vous contenter de séparer Domain/Application (code métier) de Infrastructure/UI (code technique).
 
 ## Qu'est ce qu'on met dedans ?
 
@@ -167,6 +183,6 @@ Enfin, **utilisez l'injection de dépendance** de Symfony pour injecter vos adap
 
 # Conclusion
 
-Pour conclure, je dirai que l'architecture hexagonale n'est pas une fin en soi ni l'architecture ultime. Je la vois davantage comme un cadre permettant de se contraindre à respecter le principe de séparation entre le code métier et l'infrastructure.
+Pour conclure, je dirai que l'architecture hexagonale n'est pas une fin en soi ni l'architecture ultime. Je la vois davantage comme un cadre permettant de se contraindre à respecter le principe de séparation entre le code métier et code technique.
  
 Comme tout paradigme, il a ses faiblesses et ses exceptions, mais pour l'utiliser sur tous mes projets depuis quelques années, il m'a beaucoup fait progresser vers une conception propre, solide, testable et maintenable.
