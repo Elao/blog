@@ -1,66 +1,65 @@
-#!groovy
-
 @Library('manala') _
 
-def app = [
-  env:     (env.BRANCH_NAME == 'master') ? 'production' : 'staging',
-  release: manalaDomainize(env.BRANCH_NAME)
-]
-
 pipeline {
-  agent { label 'docker' }
-  options {
-    ansiColor('xterm')
-    timestamps()
-  }
-  environment {
-    APP_URL            = credentials('APP_URL')
-    DEPLOY_DESTINATION = credentials('DEPLOY_DESTINATION')
-    DEPLOY_RSYNC_RSH   = credentials('DEPLOY_RSYNC_RSH')
-  }
-  stages {
-    stage('Install') {
-      agent { docker {
-        image 'manala/hugo'
-        reuseNode true
-      } }
-      steps {
-        sh "make install@$app.env"
-      }
-    }
-    stage('Build') {
-      agent { docker {
-        image 'manala/hugo'
-        reuseNode true
-      } }
-      steps {
-        sh "make build@$app.env APP_URL_SUBDOMAIN=$app.release"
-      }
-    }
-    stage('Optimize') {
-      agent { docker {
-        image 'manala/hugo'
-        reuseNode true
-      } }
-      steps {
-        sh "make optimize@$app.env -j"
-      }
-    }
-    stage('Deploy - Staging') {
-      agent { docker {
-        image 'manala/deploy'
-        reuseNode true
-      } }
-      steps {
-        sshagent (credentials: ['deploy']) {
-          sh "make deploy.staging DEPLOY_DESTINATION_SUFFIX=$app.release"
+    agent {
+        docker {
+            image 'manala/hugo'
+            args  '--volume ${JENKINS_CACHE_DIR}:/srv/cache'
+            alwaysPull true
         }
-      }
     }
-  }
-  post {
-    always {
-      cleanWs()
+    environment {
+        YARN_CACHE_FOLDER         = '/srv/cache/all/yarn'
+        MANALA_CACHE_DIR          = "/srv/cache/${manalaPathize(env.GIT_URL)}/manala"
+        APP_URL                   = credentials('APP_URL')
+        APP_URL_SUBDOMAIN         = manalaDomainize(env.BRANCH_NAME)
+        DEPLOY_DESTINATION        = credentials('DEPLOY_DESTINATION')
+        DEPLOY_DESTINATION_SUFFIX = manalaDomainize(env.BRANCH_NAME)
+        DEPLOY_RSYNC_RSH          = credentials('DEPLOY_RSYNC_RSH')
     }
-  }
+    stages {
+        stage('Install - Staging') {
+            when { not { branch 'master' } }
+            steps {
+                sh 'make install@staging'
+            }
+        }
+        stage('Install - Production') {
+            when { branch 'master' }
+            steps {
+                sh 'make install@production'
+            }
+        }
+        stage('Build - Staging') {
+            when { not { branch 'master' } }
+            steps {
+                sh 'make build@staging'
+            }
+        }
+        stage('Build - Production') {
+            when { branch 'master' }
+            steps {
+                sh 'make build@production'
+            }
+        }
+        stage('Optimize - Staging') {
+            when { not { branch 'master' } }
+            steps {
+                sh 'make optimize@staging'
+            }
+        }
+        stage('Optimize - Production') {
+            when { branch 'master' }
+            steps {
+                sh 'make optimize@production'
+            }
+        }
+        stage('Deploy - Staging') {
+            steps {
+                sshagent (credentials: ['deploy']) {
+                  sh 'make deploy.staging'
+                }
+            }
+        }
+    }
 }

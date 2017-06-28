@@ -48,36 +48,38 @@ gifsicle: $(call proxy,gifsicle)
 
 gifsicle@%:
 	$(call log,Optimize - Images - Gifsicle)
-	find $(MANALA_OPTIMIZE_IMAGES) -iname "*.gif" -type f \
-		-exec echo {} \; \
-		-exec gifsicle --batch --interlace --optimize=3 {} \;
+	find $(MANALA_OPTIMIZE_IMAGES) -iname "*.gif" -type f | while read image; do \
+		printf "Optimize \"$${image}\"\n" ; \
+		$(call gifsicle_optimize,$${image}) ; \
+	done
 	printf "\n"
 
 jpegtran: $(call proxy,jpegtran)
 
 jpegtran@%:
 	$(call log,Optimize - Images - Jpegtran)
-	find $(MANALA_OPTIMIZE_IMAGES) \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f \
-		-exec echo {} \; \
-		-exec jpegtran -copy none -progressive -optimize -outfile {} {} \;
+	find $(MANALA_OPTIMIZE_IMAGES) \( -iname "*.jpg" -o -iname "*.jpeg" \) -type f | while read image; do \
+		printf "Optimize \"$${image}\"\n" ; \
+		$(call jpegtran_optimize,$${image}) ; \
+	done
 	printf "\n"
 
 optipng: $(call proxy,optipng)
 
 optipng@%:
 	$(call log,Optimize - Images - Optipng)
-	find $(MANALA_OPTIMIZE_IMAGES) -iname "*.png" -type f \
-		-exec echo {} \; \
-		-exec optipng -quiet -strip all -o5 {} \;
+	find $(MANALA_OPTIMIZE_IMAGES) -iname "*.png" -type f | while read image; do \
+		printf "Optimize \"$${image}\"\n" ; \
+		$(call optipng,$${image}) ; \
+	done
 	printf "\n"
 
 svgo: $(call proxy,svgo)
 
 svgo@%:
 	$(call log,Optimize - Images - Svgo)
-	find $(MANALA_OPTIMIZE_IMAGES) -iname "*.svg" -type f \
-		-exec echo {} \; \
-		-exec svgo --quiet {} \;
-	printf "\n"
-
+	find $(MANALA_OPTIMIZE_IMAGES) -iname "*.svg" -type f | while read image; do \
+		printf "Optimize \"$${image}\"\n" ; \
+		$(call svgo,$${image}) ; \
+	done
 endif

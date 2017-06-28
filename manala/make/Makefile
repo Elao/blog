@@ -82,6 +82,7 @@ include $(MANALA_DIR)/make/Makefile.docker
 include $(MANALA_DIR)/make/Makefile.vm.docker
 include $(MANALA_DIR)/make/Makefile.hugo
 include $(MANALA_DIR)/make/Makefile.laravel-mix
+include $(MANALA_DIR)/make/Makefile.images
 include $(MANALA_DIR)/make/Makefile.optimize
 include $(MANALA_DIR)/make/Makefile.rsync
 
