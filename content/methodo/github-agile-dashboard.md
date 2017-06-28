@@ -5,7 +5,7 @@ date:           "2017-06-28"
 publishdate:    "2017-06-28"
 draft:          true
 slug:           "github-agile-dashboard"
-description:    "Comment j'ai créer un petit outil en ligne de commande pour m'aider dans mon quotidien agile"
+description:    "Comment j'ai créé un petit outil en ligne de commande pour m'aider dans mon quotidien agile"
 
 thumbnail:      "/images/posts/thumbnails/github-agile.jpg"
 header_img:     "/mages/posts/2017/github-agile-dashboard/sprint.png"
@@ -39,7 +39,7 @@ _Et puis un jour, on en a eu marre de faire ces totaux à la main_ 😇
 
 ## GAD, notre ligne de command agile
 
-Alors j'ai pris un moment pour faire un petit outils en ligne de commande qui nous calculerais notre avancement en terme de points.
+Alors j'ai pris un moment pour faire un petit outil en ligne de commande qui nous calculerais notre avancement en terme de points.
 
 - On récupère la liste des issues du projet via [l'API GitHub](https://developer.github.com/v3/).
 - On obtient les issues, milestone, labels, users et pull-request du projet en un seul appel HTTP !
@@ -78,11 +78,32 @@ __Note :__ lorsqu'il est exécuté, gad récupère de précieuses informations, 
 
 ## Ce qu'on en retire
 
-`gad sprint` devient petit à petit une réflexe (comme `git status`) et nous permet d'avoir un rapide aperçu de l'avancement du sprint, directement dans le terminal, sans même avoir besoin de prendre en main la souris 😬
+### Retour sur investissement
 
 La première version fonctionnelle de GAD était prête après une petite après-midi de travail et accélérait déjà quelques tâches rébarbatives de notre quotidien agile. Un investissement vite "remboursé" !
 
-GAD n'est probablement pas l'outils qui va révolutionner votre façon de travailler et multiplier la productivité de vos équipe, notamment car il à été conçu _sur-mesure_ pour nos besoin et notre façon de travailler. Mais puisqu'il est open-source, je vous propose toute de même de l'essayer et de [jettez un oeil à son code](https://github.com/Elao/github-agile-dashboard).
+### Les joies simple de la ligne de commande
 
-Et je vous invite à être attentif·ve : vous repérez une tâche que vous répétez tous les jours et ou l'humain n'a pas de valeur ajoutée ? Développez votre propre petit outils en ligne de commande pour adresser le problème et observez son adhésion par le reste de votre équipe !
+`gad sprint` devient petit à petit un réflex (comme `git status`) et nous permet d'avoir un rapide aperçu de l'avancement du sprint, directement dans le terminal, sans même avoir besoin de prendre en main la souris 😬
+
+L'avantage de la ligne de commande, c'est qu'on bénéficie directement de la puissance du terminal :
+
+> Est-ce que la story #42 à bien été réalisée dans le dernier sprint ?
+
+```shell
+gad changelog --sprint=-1 | grep 42
+```
+
+😎
+
+### Et moi dans tout ça ?
+
+GAD n'est probablement pas l'outil qui va révolutionner votre façon de travailler et multiplier la productivité de vos équipe, notamment car il à été conçu _sur-mesure_ pour nos besoin et notre façon de travailler.
+
+Mais puisqu'il est open-source, je vous propose toute de même de [l'essayer](https://www.npmjs.com/package/@elao/github-agile-dashboard) ou de [jettez un oeil à son code](https://github.com/Elao/github-agile-dashboard).
+
+Je vous invite aussi à être attentif·ve :
+
+Vous repérez une tâche que vous répétez tous les jours et ou l'humain n'a pas de valeur ajoutée ?
+Alors pourquoi ne pas développer votre propre utilitaire en ligne de commande pour adresser le problème et observez son adhésion par le reste de votre équipe ! 🙌
 
