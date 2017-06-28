@@ -8,6 +8,8 @@ We finally use Docker to handle the container stuff, so you will need ... [docke
 
 ### First run
 
+Make sure _docker is running_! Then:
+
 `make install`
 
 ### Server launch
