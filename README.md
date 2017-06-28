@@ -10,13 +10,10 @@ We finally use Docker to handle the container stuff, so you will need ... [docke
 
 Make sure _docker is running_! Then:
 
-`make install`
+`make setup`
 
 ### Server launch
 `make watch`
-
-### I don't see my assets !!
-`make build && make watch`
 
 (By default the french blog is loaded, you can easily switch to the english version by updating the locale in the url)
 
