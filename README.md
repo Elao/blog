@@ -15,6 +15,8 @@ Make sure _docker is running_! Then:
 ### Server launch
 `make watch`
 
+The blog is now available at [http://localhost:1313/](http://localhost:1313/)
+
 (By default the french blog is loaded, you can easily switch to the english version by updating the locale in the url)
 
 # Writing a post
