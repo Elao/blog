@@ -84,7 +84,7 @@ La première version fonctionnelle de GAD était prête après une petite après
 
 ### Les joies simple de la ligne de commande
 
-`gad sprint` devient petit à petit un réflex (comme `git status`) et nous permet d'avoir un rapide aperçu de l'avancement du sprint, directement dans le terminal, sans même avoir besoin de prendre en main la souris 😬
+`gad sprint` devient petit à petit un réflexe (comme `git status`) et nous permet d'avoir un rapide aperçu de l'avancement du sprint, directement dans le terminal, sans même avoir besoin de prendre en main la souris 😬
 
 L'avantage de la ligne de commande, c'est qu'on bénéficie directement de la puissance du terminal :
 
@@ -100,9 +100,9 @@ gad changelog --sprint=-1 | grep 42
 
 GAD n'est probablement pas l'outil qui va révolutionner votre façon de travailler et multiplier la productivité de vos équipes, notamment car il a été conçu _sur-mesure_ pour nos besoins et notre façon de travailler.
 
-Mais puisqu'il est open-source, je vous propose tout de même de [l'essayer](https://www.npmjs.com/package/@elao/github-agile-dashboard) ou de [jetez un oeil à son code](https://github.com/Elao/github-agile-dashboard).
+Mais puisqu'il est open-source, je vous propose tout de même de [l'essayer](https://www.npmjs.com/package/@elao/github-agile-dashboard) ou de [jeter un oeil à son code](https://github.com/Elao/github-agile-dashboard).
 
 Je vous invite aussi à être attentif·ve :
 
-Vous repérez une tâche que vous répétez tous les jours et où l'humain n'a pas de valeur ajoutée ?
-Alors pourquoi ne pas développer votre propre utilitaire en ligne de commande pour adresser le problème et observez son adhésion par le reste de votre équipe ! 🙌
+Vous repérez une tâche que vous répétez tous les jours et pour laquelle l'humain n'a pas de valeur ajoutée ?
+Alors pourquoi ne pas développer votre propre utilitaire en ligne de commande pour adresser le problème et observer son adhésion par le reste de votre équipe ! 🙌
