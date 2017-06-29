@@ -18,7 +18,7 @@ author_username: "tjarrand"
 
 Sur notre projet du moment, mon équipe et moi on utilise beaucoup _GitHub_ comme support agile.
 
-De manière assez similaire à ce que [Maxime a mit en place de son coté](/methodo/gestion-projet-agile-github/).
+De manière assez similaire à ce que [Maxime a mis en place de son coté](/methodo/gestion-projet-agile-github/).
 
 En bref :
 
@@ -27,7 +27,7 @@ En bref :
 - On inscrit l'estimation en point d'une story dans son titre :  `Ma story [3]`
 - Une milestone "Backlog" contient toutes les autres stories.
 
-Ça nous convient bien et GitHub nous fournis un aperçu de l'avancée de la milestone (et donc du sprint) en cours :
+Ça nous convient bien et GitHub nous fournit un aperçu de l'avancée de la milestone (et donc du sprint) en cours :
 
 ![github-milestone](/images/posts/2017/github-agile-dashboard/github-milestone.png)
 
@@ -100,7 +100,7 @@ gad changelog --sprint=-1 | grep 42
 
 GAD n'est probablement pas l'outil qui va révolutionner votre façon de travailler et multiplier la productivité de vos équipes, notamment car il à été conçu _sur-mesure_ pour nos besoins et notre façon de travailler.
 
-Mais puisqu'il est open-source, je vous propose toute de même de [l'essayer](https://www.npmjs.com/package/@elao/github-agile-dashboard) ou de [jettez un oeil à son code](https://github.com/Elao/github-agile-dashboard).
+Mais puisqu'il est open-source, je vous propose tout de même de [l'essayer](https://www.npmjs.com/package/@elao/github-agile-dashboard) ou de [jetez un oeil à son code](https://github.com/Elao/github-agile-dashboard).
 
 Je vous invite aussi à être attentif·ve :
 
