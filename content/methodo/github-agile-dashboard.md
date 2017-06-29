@@ -8,7 +8,7 @@ slug:           "github-agile-dashboard"
 description:    "Comment j'ai créé un petit outil en ligne de commande pour m'aider dans mon quotidien agile"
 
 thumbnail:      "/images/posts/thumbnails/github-agile.jpg"
-header_img:     "/mages/posts/2017/github-agile-dashboard/sprint.png"
+header_img:     "/images/posts/2017/github-agile-dashboard/sprint.png"
 tags:           ["agile", "scrum", "kanban", "gestion de projet", "github", "git", "node", "cli"]
 categories:     ["methodo", "dev"]
 
@@ -98,7 +98,7 @@ gad changelog --sprint=-1 | grep 42
 
 ### Et moi dans tout ça ?
 
-GAD n'est probablement pas l'outil qui va révolutionner votre façon de travailler et multiplier la productivité de vos équipes, notamment car il à été conçu _sur-mesure_ pour nos besoins et notre façon de travailler.
+GAD n'est probablement pas l'outil qui va révolutionner votre façon de travailler et multiplier la productivité de vos équipes, notamment car il a été conçu _sur-mesure_ pour nos besoins et notre façon de travailler.
 
 Mais puisqu'il est open-source, je vous propose tout de même de [l'essayer](https://www.npmjs.com/package/@elao/github-agile-dashboard) ou de [jetez un oeil à son code](https://github.com/Elao/github-agile-dashboard).
 
@@ -106,4 +106,3 @@ Je vous invite aussi à être attentif·ve :
 
 Vous repérez une tâche que vous répétez tous les jours et où l'humain n'a pas de valeur ajoutée ?
 Alors pourquoi ne pas développer votre propre utilitaire en ligne de commande pour adresser le problème et observez son adhésion par le reste de votre équipe ! 🙌
-
