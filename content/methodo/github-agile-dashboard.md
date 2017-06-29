@@ -16,7 +16,7 @@ author_username: "tjarrand"
 
 ---
 
-Sur notre projet du moment, mon équipe et moi on utilise beaucoup _GitHub_ comme support agile.
+Sur notre projet du moment, notre équipe utilise beaucoup _GitHub_ comme support agile.
 
 De manière assez similaire à ce que [Maxime a mis en place de son coté](/methodo/gestion-projet-agile-github/).
 
@@ -47,13 +47,13 @@ Alors j'ai pris un moment pour faire un petit outil en ligne de commande qui nou
 
 À partir de ces données, il est très simple de classer les stories du sprint en cours par état (_todo_, _doing_, _ready-to-review_ et _done_) et de calculer les sommes de points respectives.
 
-En fait, puisque toutes ces données sont horodatées, on a même de quoi générer un petit __burndown chart__ !
+Comme toutes ces données sont horodatées, on a même de quoi générer un petit __burndown chart__ !
 
-Ainsi, dans le répertoire de notre projet, si on tape `gad sprint` on obtient :
+Dans le répertoire de notre projet, si on tape `gad sprint`, on obtient :
 
 ![gad sprint](/images/posts/2017/github-agile-dashboard/sprint.png)
 
-Par la suite, dès que nous avons identifié un besoin qui revenait souvent, on a rajouté une commande à GAD :
+Dès que nous avons identifié un besoin qui revenait souvent, on a rajouté une commande à GAD :
 
 > Combien de points reste-t-il dans le backlog ?
 
