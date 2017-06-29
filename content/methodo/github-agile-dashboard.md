@@ -31,7 +31,7 @@ En bref :
 
 ![github-milestone](/images/posts/2017/github-agile-dashboard/github-milestone.png)
 
-Le problème, c'est que GitHub ne connais pas notre convention décrivant la valeur en point des stories et  ne peut donc pas l'exploiter.
+Le problème, c'est que GitHub ne connait pas notre convention décrivant la valeur en point des stories et ne peut donc pas l'exploiter.
 
 L'avancement proposé en nombre de ticket clos n'est pas représentatif de l'avancement en terme de points, qu'on doit obtenir en additionnant les points de toutes les issues.
 
@@ -39,7 +39,7 @@ _Et puis un jour, on en a eu marre de faire ces totaux à la main_ 😇
 
 ## GAD, notre ligne de command agile
 
-Alors j'ai pris un moment pour faire un petit outil en ligne de commande qui nous calculerais notre avancement en terme de points.
+Alors j'ai pris un moment pour faire un petit outil en ligne de commande qui nous calculerait notre avancement en terme de points.
 
 - On récupère la liste des issues du projet via [l'API GitHub](https://developer.github.com/v3/).
 - On obtient les issues, milestone, labels, users et pull-request du projet en un seul appel HTTP !
@@ -98,12 +98,12 @@ gad changelog --sprint=-1 | grep 42
 
 ### Et moi dans tout ça ?
 
-GAD n'est probablement pas l'outil qui va révolutionner votre façon de travailler et multiplier la productivité de vos équipe, notamment car il à été conçu _sur-mesure_ pour nos besoin et notre façon de travailler.
+GAD n'est probablement pas l'outil qui va révolutionner votre façon de travailler et multiplier la productivité de vos équipes, notamment car il à été conçu _sur-mesure_ pour nos besoins et notre façon de travailler.
 
 Mais puisqu'il est open-source, je vous propose toute de même de [l'essayer](https://www.npmjs.com/package/@elao/github-agile-dashboard) ou de [jettez un oeil à son code](https://github.com/Elao/github-agile-dashboard).
 
 Je vous invite aussi à être attentif·ve :
 
-Vous repérez une tâche que vous répétez tous les jours et ou l'humain n'a pas de valeur ajoutée ?
+Vous repérez une tâche que vous répétez tous les jours et où l'humain n'a pas de valeur ajoutée ?
 Alors pourquoi ne pas développer votre propre utilitaire en ligne de commande pour adresser le problème et observez son adhésion par le reste de votre équipe ! 🙌
 
