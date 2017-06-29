@@ -39,7 +39,7 @@ _Et puis un jour, on en a eu marre de faire ces totaux à la main_ 😇
 
 ## GAD, notre ligne de command agile
 
-Alors j'ai pris un moment pour faire un petit outil en ligne de commande qui nous calculerait notre avancement en terme de points.
+Alors j'ai pris un moment pour faire un petit outil en ligne de commande qui ferait ce travail pour nous.
 
 - On récupère la liste des issues du projet via [l'API GitHub](https://developer.github.com/v3/).
 - On obtient les issues, milestone, labels, users et pull-request du projet en un seul appel HTTP !
