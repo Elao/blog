@@ -302,7 +302,15 @@
             }
         }
 
-        iframe { margin: 40px auto !important; }
+        iframe,
+        twitterwidget { margin: 40px auto !important; }
+
+        p {
+            img {
+                display: block;
+                margin: 40px auto;
+            }
+        }
 
         #socials {
             margin-bottom: 60px;
