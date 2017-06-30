@@ -2,16 +2,16 @@ en:
   display_name: Thomas JARRAND
   short_bio:    "⚓️ French Web Developer ☕️"
   long_bio:     ""
-  job_title:    "Web developer - Certified Symfony Expert"
+  job_title:    "Lead Web developer"
 
 fr:
   display_name: Thomas JARRAND
   short_bio:    "⚓️ French Web Developer ☕️"
   long_bio:     ""
-  job_title:    "Développeur Web - Expert Symfony certifié"
+  job_title:    "Lead Développeur Web"
 
 social:
-  website:         http://www.elao.com
+  website:         http://thomas.jarrand.fr
   twitter:         tom32i
   github:          Tom32i
   email:           thomas.jarrand@elao.com
