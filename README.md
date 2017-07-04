@@ -8,13 +8,14 @@ We finally use Docker to handle the container stuff, so you will need ... [docke
 
 ### First run
 
-`make install`
+Make sure _docker is running_! Then:
+
+`make setup`
 
 ### Server launch
 `make watch`
 
-### I don't see my assets !!
-`make build && make watch`
+The blog is now available at [http://localhost:1313/](http://localhost:1313/)
 
 (By default the french blog is loaded, you can easily switch to the english version by updating the locale in the url)
 
