@@ -7,8 +7,8 @@ draft:          false
 slug:           "github-agile-dashboard"
 description:    "Comment j'ai créé un petit outil en ligne de commande pour m'aider dans mon quotidien agile"
 
-thumbnail:      "/images/posts/thumbnails/github-agile.jpg"
-header_img:     "/images/posts/2017/github-agile-dashboard/sprint.png"
+thumbnail:      "/images/posts/thumbnails/github-agile-dashboard.jpg"
+header_img:     "/images/posts/headers/github-agile-dashboard.jpg"
 tags:           ["agile", "scrum", "kanban", "gestion de projet", "github", "git", "node", "cli"]
 categories:     ["methodo", "dev"]
 
