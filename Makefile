@@ -31,6 +31,10 @@ install@%:
 	# Theme
 	$(MAKE_HUGO_THEME) install@$*
 
+## Install roles (for deployment)
+install-roles:
+	ansible-galaxy install --roles-path deploy/roles --role-file deploy/roles/requirements.yaml --force
+
 #########
 # Build #
 #########
