@@ -18,7 +18,7 @@ author_username: "tjarrand"
 
 Sur notre projet du moment, notre équipe utilise beaucoup _GitHub_ comme support agile.
 
-De manière assez similaire à ce que [Maxime a mis en place de son coté](/methodo/gestion-projet-agile-github/).
+De manière assez similaire à ce que [Maxime a mis en place de son coté](/fr/methodo/gestion-projet-agile-github/).
 
 En bref :
 
