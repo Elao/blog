@@ -3,7 +3,7 @@ type:           "post"
 title:          "GAD : Github Agile Dashboard"
 date:           "2017-06-28"
 publishdate:    "2017-07-04"
-draft:          true
+draft:          false
 slug:           "github-agile-dashboard"
 description:    "Comment j'ai créé un petit outil en ligne de commande pour m'aider dans mon quotidien agile"
 
