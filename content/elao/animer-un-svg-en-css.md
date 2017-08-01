@@ -46,7 +46,7 @@ La fonction `scale()` permet permet de modifier la taille d'un élément selon u
 }
 ```
 
-Sur la figure 1, on rétrécit l'élément sur l'axe Y à l'échelle 0.5, cela créé une déformation. Sur la figure 0.5, on le rétrécit sur les 2 axes, X et Y.
+Sur la figure 1, on rétrécit l'élément sur l'axe Y à l'échelle 0.5, cela créé une déformation. Sur la figure 0.5, on le rétrécit sur les 2 axes, X et Y, il conserve sa forme d'origine.
 
 <figure class="text-center">
     <img src="/images/posts/2017/svg/scale.svg" alt="">
@@ -58,19 +58,19 @@ La règle css `@keyframes` permet de gérer les étapes de cette animation de 0%
 
 ```
 @keyframes animation {
-  0% { // Mon état au début de l'animation }
-  20% { // Mon état intermédiaire, placé dans le temps de 1% à 99% de la durée de l'animation }
-  100% { // Mon état à la fin de l'animation }
+  0% { // État au début de l'animation }
+  20% { // État intermédiaire, situé entre 0% et 100% de la durée de l'animation }
+  100% { // État à la fin de l'animation }
 }
 ou
 @keyframes animation {
-  from { // Mon état au début de l'animation }
+  from { // État au début de l'animation }
   // Pas d'étape intermédiaire
-  to { // Mon état à la fin de l'animation }
+  to { // État à la fin de l'animation }
 }
 ```
 
-Ici, nous jouons avec le transform `scale()` pour agrandir puis rétrécir les paths du logo Elao sur les deux axes X et Y pour créer l'illusion d'un rebond.
+Ici, nous jouons avec le transform `scale()` pour agrandir puis rétrécir les paths du logo Elao sur les deux axes X et Y et créer l'illusion d'un rebond.
 ```
 @keyframes bounce {
   0% { transform: scale(1); }
@@ -83,13 +83,13 @@ Ici, nous jouons avec le transform `scale()` pour agrandir puis rétrécir les p
 }
 ```
 
-Pour compléter l'animation, on lui ajoute une durée en seconde, `1s`. `infinite` indique à l'animation CSS qu'elle doit se répéter à l'infini.
+Pour compléter l'animation, on lui ajoute une durée en seconde, `1s`. Plus loin, `infinite` indique à l'animation qu'elle doit se répéter à l'infini.
 
 ```
   animation: bounce 1s infinite;
 ```
 
-Enfin, on définit l'origine du `transform: scale()`. L'axe Y dirige le `scale()` de haut en bas et l'axe X de gauche à droite, dans le sens de lecture d'une page web. Quand l'origine du transform (transform-origin`) n'est pas précisée, elle se place à l'origine des 2 axes : en haut à gauche. Pour que la déformation à l'échelle soit centrée, on place son origine à 50% sur les 2 axes.
+Enfin, on définit l'origine du `transform: scale()`. L'axe Y dirige le `scale()` de haut en bas et l'axe X de gauche à droite, dans le sens de lecture d'une page web. Quand l'origine du `transform (`transform-origin`) n'est pas précisée, elle se place à l'origine des 2 axes : en haut à gauche. Pour que l'animation soit centrée, on place son origine à 50% sur les 2 axes.
 
 ```
 transform-origin: 50% 50%;
@@ -123,22 +123,22 @@ En SVG, la couleur d'un élément est inscrite en attribut de cet élément. Il 
 
 ## Ce qu’on ne peut pas faire en CSS
 
-Même si l’animation en css offre déjà de larges possibilités d’animation, elle se confronte à certaines limites, auxquelles on peut toutefois pallier grâce à SMIL ou Javascript.
+Même si l’animation en CSS offre déjà de larges possibilités d’animation, elle se confronte à certaines limites, auxquelles on peut toutefois pallier grâce à SMIL ou Javascript.
 
-La plus flagrante est l’absence d’interactivité avec l’animation : difficile à priori de faire réagir un élément svg à des événements uniquement en css. Impossible également de déformer complètement le path d’un élément.
+La plus flagrante est l’absence d’interactivité avec l’animation : difficile à priori de faire réagir un élément svg à des événements uniquement en CSS. Impossible également de déformer complètement le `path` d’un élément.
 
 ### Bonus
-#### Animer un élément le long d'un path à l'intérieur d'un SVG avec SMIL
+#### Animer un élément le long d'un path directement à l'intérieur d'un SVG avec SMIL
 Il est possible d'animer directement un SVG grâce à 6 éléments :
 
 * `animate` pour animer des attributs
 * `set`, raccourci d'`animate`
-* `animateMotion` déplace un élément le long d’un path
+* `animateMotion` déplace un élément le long d’un `path`
 * `animateColor` modifie la valeur de couleur d’attributs
 * `animateTransform` anime les attributs de transformation SVG
-* `mPath` s'utilise avec l’élément `animateMotion` pour définir le path suivi pendant l'animation
+* `mPath` s'utilise avec l’élément `animateMotion` pour définir le `path` suivi pendant l'animation
 
-Un avantage d'utiliser SMIL pour animer le SVG est que les animations fonctionnent même lorsque le SVG est embarqué en tant qu’img ou utilisé comme background-image dans CSS.
+Un avantage d'utiliser SMIL pour animer le SVG est que les animations fonctionnent même lorsque le SVG est embarqué en tant qu’`img` ou utilisé comme `background-image` dans CSS.
 
 #### Démonstration : animer des éléments le long d'un `path`
 D'abord, il nous un path le long duquel notre logo va glisser. Je créé le mien sur Illustrator, et je l'importe directement dans le SVG. J'ai choisi une ellipse, pour que le logo tourne à l'infini. Pour l'exercice, ce path a un `stroke`, un contour visible.
@@ -165,7 +165,7 @@ Ensuite j'ai besoin de l'élément `animateMotion` pour déplacer le logo le lon
 
 ## Le mot de la fin
 
-L'éventail de mouvements et d'animations possibles en css ouvre énormément de possibilités, lorsque cette animation est décorative et n'impacte pas le fonctionnel. L'animation en css est largement supportée sur les navigateurs récents (source : [CanIUse](https://caniuse.com/#search=svg)). Pour le reste, il existe d'excellentes alternatives grâce à SMIL -- attention toutefois : pas de support sur IE ni sur Edge, ou en Javascript grâce notamment à Snap.svg.
+L'éventail de mouvements et d'animations possibles en CSS ouvre énormément de possibilités, lorsque cette animation est décorative et n'impacte pas le fonctionnel, car il y a très peu d'interaction possible. L'animation en CSS est largement supportée sur les navigateurs récents (source : [CanIUse](https://caniuse.com/#search=svg)). Pour le reste, il existe d'excellentes alternatives grâce à SMIL -- attention toutefois : pas de support sur IE ni sur Edge, ou en Javascript grâce notamment à [Snap.svg](http://snapsvg.io/) pour décomposer et recomposer des paths, gérer des événements, etc...
 
 
 
