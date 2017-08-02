@@ -128,6 +128,11 @@ La plus flagrante est l’absence d’interactivité avec l’animation : diffic
 
 Ce trick est tiré du [blog de Tobias Ahlin](http://tobiasahlin.com/blog/curved-path-animations-in-css/). Il montre qu'il est possible de suivre une trajectoire non-linéaire en animant simultanément un élément et son conteneur invisible -- comme si l'on bougeait dans des sens différents deux calques superposés. En donnant la même durée aux deux animations mais en décalant leur `animation-timing-function` pour qu'elles soient désynchronisées, on obtient l'illusion que l'objet se déplace sur une courbe.
 
+<figure class="text-center">
+    <img src="/images/posts/2017/svg/curve.gif" alt="">
+    <figcaption>Source : Curved path animations in css, Tobias Ahlin</figcaption>
+</figure>
+
 
 ## Le mot de la fin
 
