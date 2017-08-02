@@ -20,7 +20,7 @@ author_username:    "adefrance"
 
 ## Avant l'animation : définir la viewbox
 
-Le svg est limité dans l’espace par sa viewbox. Dans Illustrator ou sketch, la viewbox correspond au canvas ou à _l’artboard_ dans lequel nous dessinons. Si un élément sort de la viewbox, par exemple lors de l'animation, il se sera plus visible. Les dimensions de la viewbox sont donc à réfléchir avant de commencer à animer.
+Le svg est limité dans l’espace par sa viewbox. Dans Illustrator ou sketch, la viewbox correspond au canvas ou à _l’artboard_ dans lequel nous dessinons. Si un élément sort de la viewbox, par exemple lors de l'animation, il ne sera plus visible. Les dimensions de la viewbox sont donc à réfléchir avant de commencer à animer.
 
 ```
 <svg width="500px" height="500px" viewBox="0 0 500 500">
@@ -75,11 +75,7 @@ Ici, nous jouons avec le transform `scale()` pour agrandir puis rétrécir les p
 @keyframes bounce {
   0% { transform: scale(1); }
   30% { transform: scale(1.06); }
-  40% { transform: scale(0.95); }
-  50% { transform: scale(1.05); }
-  65% { transform: scale(0.95); }
-  75% { transform: scale(1.03); }
-  100% { transform: scale(1);}
+  ...
 }
 ```
 
@@ -128,44 +124,14 @@ Même si l’animation en CSS offre déjà de larges possibilités d’animation
 La plus flagrante est l’absence d’interactivité avec l’animation : difficile à priori de faire réagir un élément svg à des événements uniquement en CSS. Impossible également de déformer complètement le `path` d’un élément.
 
 ### Bonus
-#### Animer un élément le long d'un path directement à l'intérieur d'un SVG avec SMIL
-Il est possible d'animer directement un SVG grâce à 6 éléments :
+#### Suivre une trajectoire courbée
 
-* `animate` pour animer des attributs
-* `set`, raccourci d'`animate`
-* `animateMotion` déplace un élément le long d’un `path`
-* `animateColor` modifie la valeur de couleur d’attributs
-* `animateTransform` anime les attributs de transformation SVG
-* `mPath` s'utilise avec l’élément `animateMotion` pour définir le `path` suivi pendant l'animation
-
-Un avantage d'utiliser SMIL pour animer le SVG est que les animations fonctionnent même lorsque le SVG est embarqué en tant qu’`img` ou utilisé comme `background-image` dans CSS.
-
-#### Démonstration : animer des éléments le long d'un `path`
-D'abord, il nous un path le long duquel notre logo va glisser. Je créé le mien sur Illustrator, et je l'importe directement dans le SVG. J'ai choisi une ellipse, pour que le logo tourne à l'infini. Pour l'exercice, ce path a un `stroke`, un contour visible.
-
-```
-<path id="animation-path" fill="none" stroke="#fff" opacity=".2" stroke-width="4" stroke-miterlimit="10" d="M280.982,265.061c0,2.958-2.175,5.338-4.424,6.986c-3.435,2.516-7.6,4.006-11.684,5.071c-10.871,2.834-22.799,2.964-33.783,0.698c-4.438-0.915-8.921-2.262-12.85-4.57c-2.559-1.504-5.3-3.663-6.066-6.682c-1.786-7.033,8.05-11.117,13.115-12.748c10.604-3.415,22.46-3.799,33.413-2.085c4.765,0.746,9.554,1.938,13.919,4.03c2.924,1.401,6.087,3.355,7.614,6.339C280.705,263.016,280.982,264.028,280.982,265.061L280.982,265.061z"/>
-```
-
-Ensuite j'ai besoin de l'élément `animateMotion` pour déplacer le logo le long du path que j'ai créé. `xlink:href` me permet de cibler l'élément à animer. `dur` correspond à la durée de l'animation, `begin` à son démarrage (on pourrait remplacer `0s` par `click` pour que l'animation démarre au clic, ou encore par `click + 2s` pour qu'elle démarre 2s après le clic). `repeatCount` donne le nombre de répétition de l'animation. Enfin, `mpath` cible le path à suivre.
-
-```
-<animateMotion
-  xlink:href="#animated"
-  dur="3s"
-  begin="0s"
-  repeatCount="indefinite" >
-  <mpath xlink:href="#animation-path" />
-</animateMotion>
-```
-
-<p data-height="345" data-theme-id="0" data-slug-hash="MvyamN" data-default-tab="html,result" data-user="ameliedefrance" data-embed-version="2" data-pen-title="Elao move along path" class="codepen">See the Pen <a href="https://codepen.io/ameliedefrance/pen/MvyamN/">Elao move along path</a> by Amelie Defrance (<a href="https://codepen.io/ameliedefrance">@ameliedefrance</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+Ce trick est tiré du [blog de Tobias Ahlin](http://tobiasahlin.com/blog/curved-path-animations-in-css/). Il montre qu'il est possible de suivre une trajectoire non-linéaire en animant simultanément un élément et son conteneur invisible -- comme si l'on bougeait dans des sens différents deux calques superposés. En donnant la même durée aux deux animations mais en décalant leur `animation-timing-function` pour qu'elles soient désynchronisées, on obtient l'illusion que l'objet se déplace sur une courbe.
 
 
 ## Le mot de la fin
 
-L'éventail de mouvements et d'animations possibles en CSS ouvre énormément de possibilités, lorsque cette animation est décorative et n'impacte pas le fonctionnel, car il y a très peu d'interaction possible. L'animation en CSS est largement supportée sur les navigateurs récents (source : [CanIUse](https://caniuse.com/#search=svg)). Pour le reste, il existe d'excellentes alternatives grâce à SMIL -- attention toutefois : pas de support sur IE ni sur Edge, ou en Javascript grâce notamment à [Snap.svg](http://snapsvg.io/) pour décomposer et recomposer des paths, gérer des événements, etc...
+L'éventail de mouvements et d'animations possibles en CSS ouvre énormément de possibilités, lorsque cette animation est décorative et n'impacte pas le fonctionnel, car il y a très peu d'interaction possible. L'animation en CSS est largement supportée sur les navigateurs récents (source : [CanIUse](https://caniuse.com/#search=svg)). Pour le reste, il existe d'excellentes alternatives en SMIL -- attention toutefois : pas de support sur IE ni sur Edge, ou en Javascript grâce notamment à [Snap.svg](http://snapsvg.io/) pour décomposer et recomposer des paths, gérer des événements, etc...
 
 
 
