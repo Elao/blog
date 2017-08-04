@@ -41,7 +41,7 @@ Correspond à :
     <img src="/images/posts/2017/svg/viewbox.svg" alt="">
 </figure>
 
-Maintenant qu'on a défini notre viewbox dans le body de la page, nous allons y ajouter tous les éléments SVG qui composent l'image. Dans notre cas ce sont 5 `path` exportés depuis Illustrator.
+Maintenant qu'on a défini notre viewbox dans le `body` de la page, nous allons y ajouter tous les éléments SVG qui composent l'image. Dans notre cas ce sont 5 `path` exportés depuis Illustrator.
 
 Le SVG est en place, on peut commencer à l'animer.
 
@@ -51,7 +51,7 @@ Les transformations css permettent 4 mouvements : la translation, la rotation, l
 
 ### Démo: animer la transformation `scale()`
 #### La théorie
-La fonction `scale()` permet permet de modifier la taille d'un élément selon une échelle sur 2 dimensions : c'est-à-dire sur les axes X et/ou Y. Par défaut, tous les élements sont à l'échelle 1. Soit `scale(1)`.
+La fonction `scale()` permet de modifier la taille d'un élément selon une échelle sur 2 dimensions : c'est-à-dire sur les axes X et/ou Y. Par défaut, tous les élements sont à l'échelle 1. Soit `scale(1)`.
 
 #### Démonstration
 ```
@@ -113,15 +113,6 @@ transform-origin: 50% 50%;
 
 Essayez de modifier l'animation en lui ajoutant une étape où vous voulez avec un `transform: scale(2)` par exemple, et dérèglez le battement régulier !
 
-### Trick : suivre une trajectoire courbée avec `translate()`
-
-Ce trick est tiré du [blog de Tobias Ahlin](http://tobiasahlin.com/blog/curved-path-animations-in-css/). Il montre qu'il est possible de suivre une trajectoire non-linéaire en animant simultanément un élément et son conteneur invisible -- comme si l'on bougeait dans des sens différents deux calques superposés. En donnant la même durée aux deux animations mais en décalant leur fonction de progression (`animation-timing-function`) pour qu'elles soient désynchronisées, on obtient l'illusion que l'objet se déplace sur une courbe.
-
-<figure class="text-center">
-    <img src="/images/posts/2017/svg/curve.gif" alt="">
-    <figcaption>Source : Curved path animations in css, Tobias Ahlin</figcaption>
-</figure>
-
 ## Animer des propriétés définies dans le SVG
 
 On a vu que l'on pouvait animer un ou plusieurs éléments SVG grâce aux transformations CSS.
@@ -159,10 +150,16 @@ Même si l’animation en CSS offre déjà de larges possibilités d’animation
 
 La plus flagrante est l’absence d’interactivité avec l’animation : difficile à priori de faire réagir un élément svg à des événements uniquement en CSS. Impossible également de déformer complètement le `path` d’un élément.
 
+### Trick : suivre une trajectoire courbée avec `translate()`
+
+Impossible à priori de faire translater un élément autrement que selon une ligne droite ?
+Ce trick est tiré du [blog de Tobias Ahlin](http://tobiasahlin.com/blog/curved-path-animations-in-css/). Il montre qu'il est possible de suivre une trajectoire non-linéaire en animant simultanément un élément et son conteneur invisible -- comme si l'on bougeait dans des sens différents deux calques superposés. En donnant la même durée aux deux animations mais en décalant leur fonction de progression (`animation-timing-function`) pour qu'elles soient désynchronisées, on obtient l'illusion que l'objet se déplace sur une courbe.
+
+<figure class="text-center">
+    <img src="/images/posts/2017/svg/curve.gif" alt="">
+    <figcaption>Source : Curved path animations in css, Tobias Ahlin</figcaption>
+</figure>
 
 ## Le mot de la fin
 
 L'éventail de mouvements et d'animations possibles en CSS ouvre énormément de possibilités, lorsque cette animation est décorative et n'impacte pas le fonctionnel, car il y a très peu d'interaction possible. L'animation en CSS est largement supportée sur les navigateurs récents (source : [CanIUse](https://caniuse.com/#search=svg)). Pour le reste, il existe d'excellentes alternatives en SMIL -- attention toutefois : pas de support sur IE ni sur Edge, ou en Javascript grâce notamment à [Snap.svg](http://snapsvg.io/) pour décomposer et recomposer des paths, gérer des événements, etc...
-
-
-
