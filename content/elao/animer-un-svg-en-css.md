@@ -9,23 +9,41 @@ description:        ""
 
 thumbnail:          "/images/posts/thumbnails/animation.jpg"
 header_img:         "/images/posts/headers/animation.jpg"
-tags:               ["svg","animation","css", "integration"]
+tags:               ["svg", "animation", "css", "integration"]
 categories:         ["elao"]
 
 author_username:    "adefrance"
 ---
 
-> Le SVG est un langage XML utilisé pour décrire des graphiques en 2 dimensions. Il     permet 3 types d'objet graphiques : des formes vectorielles, des images et du texte.  -- W3C
+> Le SVG est un langage XML utilisé pour décrire des graphiques en 2 dimensions. Il permet 3 types d'objet graphiques : des formes vectorielles, des images et du texte.  -- W3C
 
+Dans la première partie de cet article nous allons chercher à réaliser une animation très simple. Nous allons contracter puis dilater le logo élao, pour créer un effet de rebond ou de battement.
+
+<figure class="text-center">
+    <img src="/images/posts/2017/svg/bounce.gif" alt="">
+    <figcaption>Effet de battement</figcaption>
+</figure>
 
 ## Avant l'animation : définir la viewbox
 
-Le svg est limité dans l’espace par sa viewbox. Dans Illustrator ou sketch, la viewbox correspond au canvas ou à _l’artboard_ dans lequel nous dessinons. Si un élément sort de la viewbox, par exemple lors de l'animation, il ne sera plus visible. Les dimensions de la viewbox sont donc à réfléchir avant de commencer à animer.
+Le svg est limité dans l’espace par sa viewbox. Dans Illustrator ou Sketch, la viewbox correspond au canvas ou à _l’artboard_ dans lequel nous dessinons. Si un élément sort de la viewbox, par exemple lors de l'animation, il ne sera plus visible. Les dimensions de la viewbox sont donc à réfléchir avant de commencer à animer. Pour notre exemple, on choisit une viewbox de 500px sur 500px.
+
+Les valeurs dans la viewbox indiquent son origine sur X et Y, sa `width` et sa `height`.
 
 ```
 <svg width="500px" height="500px" viewBox="0 0 500 500">
 </svg>
 ```
+
+Correspond à :
+
+<figure class="text-center">
+    <img src="/images/posts/2017/svg/viewbox.svg" alt="">
+</figure>
+
+Maintenant qu'on a défini notre viewbox dans le body de la page, nous allons y ajouter tous les éléments SVG qui composent l'image. Dans notre cas ce sont 5 `path` exportés depuis Illustrator.
+
+Le SVG est en place, on peut commencer à l'animer.
 
 ## Animer grâce aux transformations CSS
 
@@ -33,7 +51,7 @@ Les transformations css permettent 4 mouvements : la translation, la rotation, l
 
 ### Démo: animer la transformation `scale()`
 #### La théorie
-La fonction `scale()` permet permet de modifier la taille d'un élément selon une échelle sur 2 dimensions : c'est à dire sur les axes X et/ou Y. Par défaut, tous les élements sont à l'échelle 1. Soit `scale(1)`.
+La fonction `scale()` permet permet de modifier la taille d'un élément selon une échelle sur 2 dimensions : c'est-à-dire sur les axes X et/ou Y. Par défaut, tous les élements sont à l'échelle 1. Soit `scale(1)`.
 
 #### Démonstration
 ```
@@ -58,15 +76,15 @@ La règle css `@keyframes` permet de gérer les étapes de cette animation de 0%
 
 ```
 @keyframes animation {
-  0% { // État au début de l'animation }
-  20% { // État intermédiaire, situé entre 0% et 100% de la durée de l'animation }
-  100% { // État à la fin de l'animation }
+  0%    // État au début de l'animation
+  20%   // État intermédiaire, situé entre 0% et 100% de la durée de l'animation
+  100%  // État à la fin de l'animation
 }
 ou
 @keyframes animation {
-  from { // État au début de l'animation }
-  // Pas d'étape intermédiaire
-  to { // État à la fin de l'animation }
+  from  // État au début de l'animation
+        // Pas d'étape intermédiaire
+  to    // État à la fin de l'animation
 }
 ```
 
@@ -85,7 +103,7 @@ Pour compléter l'animation, on lui ajoute une durée en seconde, `1s`. Plus loi
   animation: bounce 1s infinite;
 ```
 
-Enfin, on définit l'origine du `transform: scale()`. L'axe Y dirige le `scale()` de haut en bas et l'axe X de gauche à droite, dans le sens de lecture d'une page web. Quand l'origine du `transform (`transform-origin`) n'est pas précisée, elle se place à l'origine des 2 axes : en haut à gauche. Pour que l'animation soit centrée, on place son origine à 50% sur les 2 axes.
+Enfin, on définit l'origine du `transform: scale()`. L'axe Y dirige le `scale()` de haut en bas et l'axe X de gauche à droite, dans le sens de lecture d'une page web. Quand l'origine de la transformation (`transform-origin`) n'est pas précisée, elle se place à l'origine des 2 axes : en haut à gauche. Pour que l'animation soit centrée, on place son origine à 50% sur les 2 axes.
 
 ```
 transform-origin: 50% 50%;
@@ -93,9 +111,27 @@ transform-origin: 50% 50%;
 <p data-height="345" data-theme-id="0" data-slug-hash="PKNZvq" data-default-tab="css,result" data-user="ameliedefrance" data-embed-version="2" data-pen-title="Elao heart beat" class="codepen">See the Pen <a href="https://codepen.io/ameliedefrance/pen/PKNZvq/">Elao heart beat</a> by Amelie Defrance (<a href="https://codepen.io/ameliedefrance">@ameliedefrance</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-## Animer certaines propriétés définies dans le SVG
+Essayez de modifier l'animation en lui ajoutant une étape où vous voulez avec un `transform: scale(2)` par exemple, et dérèglez le battement régulier !
 
-Il est aussi possible de modifier certaines propriétés des éléments directement inscrites en attribut dans le svg, comme la couleur de remplissage d’une forme, son opacité, la couleur et l'épaisseur de son contour.
+### Trick : suivre une trajectoire courbée avec `translate()`
+
+Ce trick est tiré du [blog de Tobias Ahlin](http://tobiasahlin.com/blog/curved-path-animations-in-css/). Il montre qu'il est possible de suivre une trajectoire non-linéaire en animant simultanément un élément et son conteneur invisible -- comme si l'on bougeait dans des sens différents deux calques superposés. En donnant la même durée aux deux animations mais en décalant leur fonction de progression (`animation-timing-function`) pour qu'elles soient désynchronisées, on obtient l'illusion que l'objet se déplace sur une courbe.
+
+<figure class="text-center">
+    <img src="/images/posts/2017/svg/curve.gif" alt="">
+    <figcaption>Source : Curved path animations in css, Tobias Ahlin</figcaption>
+</figure>
+
+## Animer des propriétés définies dans le SVG
+
+On a vu que l'on pouvait animer un ou plusieurs éléments SVG grâce aux transformations CSS.
+
+Il est également possible de modifier certaines propriétés d'un élément directement inscrites en attribut dans le SVG, comme la couleur de remplissage d’une forme, son opacité, la couleur et l'épaisseur de son contour.
+
+<figure class="text-center">
+    <img src="/images/posts/2017/svg/color.gif" alt="">
+    <figcaption>Très simplement, nous allons inverser les couleurs du logo élao.</figcaption>
+</figure>
 
 ### Démo : animer la couleur d'un élément
 En SVG, la couleur d'un élément est inscrite en attribut de cet élément. Il s'agit de l'attribut `fill`.
@@ -105,7 +141,7 @@ En SVG, la couleur d'un élément est inscrite en attribut de cet élément. Il 
 ```
 
 ```
-@keyframes fill {
+@keyframes to-red {
   0%,
   50%,
   100% { fill: #fff; }
@@ -122,16 +158,6 @@ En SVG, la couleur d'un élément est inscrite en attribut de cet élément. Il 
 Même si l’animation en CSS offre déjà de larges possibilités d’animation, elle se confronte à certaines limites, auxquelles on peut toutefois pallier grâce à SMIL ou Javascript.
 
 La plus flagrante est l’absence d’interactivité avec l’animation : difficile à priori de faire réagir un élément svg à des événements uniquement en CSS. Impossible également de déformer complètement le `path` d’un élément.
-
-### Bonus
-#### Suivre une trajectoire courbée
-
-Ce trick est tiré du [blog de Tobias Ahlin](http://tobiasahlin.com/blog/curved-path-animations-in-css/). Il montre qu'il est possible de suivre une trajectoire non-linéaire en animant simultanément un élément et son conteneur invisible -- comme si l'on bougeait dans des sens différents deux calques superposés. En donnant la même durée aux deux animations mais en décalant leur `animation-timing-function` pour qu'elles soient désynchronisées, on obtient l'illusion que l'objet se déplace sur une courbe.
-
-<figure class="text-center">
-    <img src="/images/posts/2017/svg/curve.gif" alt="">
-    <figcaption>Source : Curved path animations in css, Tobias Ahlin</figcaption>
-</figure>
 
 
 ## Le mot de la fin
