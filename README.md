@@ -131,7 +131,9 @@ Every branch pushed to remote `origin` is deployed to staging in order to share 
 
 `http://<my-branch>.blog.elao.elao.ninja/`
 
-> :warning: The branch name is normalized : all special characters such as `/` or `_` are replaced with an hyphen (`-`).
+> :warning: The branch name is normalized : 
+> - all special characters such as `_` are replaced with an hyphen (`-`)
+> - slash-separated parts (`/`) are reversed and made dot-separated. Example: `dev/vue-js-with-symfony` will translate into `vue-js-with-symfony.dev`
 
 As an example, here is the staging URL for the `master` branch :
 
