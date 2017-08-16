@@ -1,11 +1,11 @@
 ---
 type:           "post"
-title:          "Nous recherchons un développeur (ou une développeuse) Frontend pour notre agence de Lyon"
+title:          "Nous recherchons un développeur ou une développeuse Frontend pour notre agence de Lyon"
 date:           "2017-08-16"
 publishdate:    "2017-08-16"
 draft:          false
 slug:           "job-frontend-developer-agence-lyon"
-description:    "Nous recherchons un(e) développeur(se) Frontend pour notre agence de Lyon."
+description:    "Nous recherchons un développeur ou une développeuse Frontend pour notre agence de Lyon."
 
 thumbnail:      "/images/posts/thumbnails/boy.png"
 header_img:     "/images/posts/headers/JobLyon.jpg"
@@ -17,26 +17,34 @@ author_username:    "elao"
 
 Nous recherchons pour renforcer le pôle Frontend de notre tribu lyonnaise :
 
-## Un développeur (ou une développeuse) Frontend (Javascript, Mobile)
+## Un développeur ou une développeuse Javascript Frontend
 <!--more-->
 
-[Elao](https://www.elao.com/fr/) recherche pour son agence lyonnaise un développeur (ou une développeuse) Frontend expérimenté, spécialiste des technologies mobile et Javascript.
+[Élao](https://www.elao.com/fr/) est une agence Web qui propose à ses clients la conception et le développement d’applications web métier sur mesure. C’est là que réside notre coeur d'activité.
 
-Au sein de [notre tribu](https://www.elao.com/fr/la-tribu/), vous serez en charge des développements mobile et Javascript : analyse des besoins, conception, développement des fonctionnalités et rédaction des tests.
+Spécialistes open source et experts Symfony/JS dotés d'une grosse culture devops, nous cherchons un spécialiste en développement Javascript Frontend.
+
+Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite, nous offrons un environnement technique et humain épanouissant et adapté aux projets complexes, concrets et innovants. Élao reste pragmatique mais ne transige pas sur la qualité au quotidien.
+
+Backend, frontend et/ou devops, [les équipes](https://www.elao.com/fr/la-tribu) disposent de la marge de manoeuvre et de l’autonomie nécessaires pour travailler ensemble. Elles sont à votre disposition pour témoigner de leur quotidien chez élao.
+
+Nous souhaitons donc accueillir dans notre agence lyonnaise un développeur ou une développeuse Frontend expérimenté(e), spécialiste en Javascript.
+
+Au sein d'une équipe jeune et dynamique à taille humaine, vous serez en charge des développements Web en Javascript : analyse des besoins, conception, développement des fonctionnalités et rédaction des tests.
 
 ## Profil recherché
 
-Nous recherchons un développeur possédant au minimum deux ans d'expérience sur un framework Frontend majeur (Angular, React, Vue.js, etc.).
+Nous recherchons un développeur possédant au minimum deux ans d'expérience sur un framework Frontend majeur (React, Vue.js, etc.).
 
-Si vous êtes curieux, doté d'un esprit d'équipe et d'une bonne capacité d'analyse, votre profil nous intéresse. 
+Vous êtes curieux, doté d'un esprit d'équipe et d'une bonne capacité d'analyse. 
 
-L'exigence de qualité, la connaissance des bonnes pratiques et l'écriture de tests sont des pré-requis très forts pour postuler.
+L'exigence de qualité, l'application des bonnes pratiques et l'écriture de tests font partie de votre _credo_.
 
 Enfin, nous recherchons un développeur qui ne craint pas les défis techniques impliquant des technologies émergentes lorsqu'elles répondent aux besoins clients.
 
 ## Aspects techniques
 
-Vous devez posséder une bonne connaissance de l'éco-système Javascript (NPM/Yarn, Webpack, ES6, Babel, etc.) et être à l'aise avec la consommation d'API REST. Par ailleurs, la connaissance de Git nous apparaît nécessaire.
+Vous devez posséder une bonne connaissance de l'éco-système Javascript (Webpack, ES6, Babel, etc.) et être à l'aise avec la consommation d'API REST. Par ailleurs, la connaissance de Git est nécessaire.
 
 Les connaissances et expériences suivantes seront appréciées et pourront faire la différence : 
 
@@ -44,6 +52,7 @@ Les connaissances et expériences suivantes seront appréciées et pourront fair
 - connaissance des méthodes agiles
 - structuration du code pour des applications fonctionnellement riches
 - capacité à estimer les charges de travail
+- connaissance de SASS
 
 ## Rémunération
 
