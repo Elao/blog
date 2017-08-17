@@ -17,20 +17,20 @@ author_username:    "elao"
 
 Nous recherchons pour renforcer le pôle Frontend de notre tribu lyonnaise :
 
-## Un développeur ou une développeuse Javascript Frontend
+## Un développeur ou une développeuse JavaScript Frontend
 <!--more-->
 
-[Élao](https://www.elao.com/fr/) est une agence Web qui propose à ses clients la conception et le développement d’applications web métier sur mesure. C’est là que réside notre coeur d'activité.
+[Élao](https://www.elao.com/fr/) est une agence Web qui propose à ses clients la conception et le développement d’applications Web/Mobile métier sur mesure. C’est là que réside notre coeur d'activité.
 
-Spécialistes open source et experts Symfony/JS dotés d'une grosse culture devops, nous cherchons un spécialiste en développement Javascript Frontend.
+Spécialistes open source et experts Symfony/JS dotés d'une grosse culture devops, nous cherchons un spécialiste en développement JavaScript Frontend.
 
 Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite, nous offrons un environnement technique et humain épanouissant et adapté aux projets complexes, concrets et innovants. Élao reste pragmatique mais ne transige pas sur la qualité au quotidien.
 
 Backend, frontend et/ou devops, [les équipes](https://www.elao.com/fr/la-tribu) disposent de la marge de manoeuvre et de l’autonomie nécessaires pour travailler ensemble. Elles sont à votre disposition pour témoigner de leur quotidien chez élao.
 
-Nous souhaitons donc accueillir dans notre agence lyonnaise un développeur ou une développeuse Frontend expérimenté(e), spécialiste en Javascript.
+Nous souhaitons donc accueillir dans notre agence lyonnaise un développeur ou une développeuse Frontend expérimenté(e), spécialiste en JavaScript.
 
-Au sein d'une équipe jeune et dynamique à taille humaine, vous serez en charge des développements Web en Javascript : analyse des besoins, conception, développement des fonctionnalités et rédaction des tests.
+Au sein d'une équipe jeune et dynamique à taille humaine, vous serez en charge des développements Web/Mobile en JavaScript : analyse des besoins, conception, développement des fonctionnalités et rédaction des tests.
 
 ## Profil recherché
 
@@ -40,16 +40,17 @@ Vous êtes curieux, doté d'un esprit d'équipe et d'une bonne capacité d'analy
 
 L'exigence de qualité, l'application des bonnes pratiques et l'écriture de tests font partie de votre _credo_.
 
-Enfin, nous recherchons un développeur qui ne craint pas les défis techniques impliquant des technologies émergentes lorsqu'elles répondent aux besoins clients.
+Enfin, nous recherchons une personne qui ne craint pas les défis techniques impliquant des technologies émergentes lorsqu'elles répondent aux besoins clients.
 
 ## Aspects techniques
 
-Vous devez posséder une bonne connaissance de l'éco-système Javascript (Webpack, ES6, Babel, etc.) et être à l'aise avec la consommation d'API REST. Par ailleurs, la connaissance de Git est nécessaire.
+Vous devez posséder une bonne connaissance de l'éco-système JavaScript (Webpack, ES6, Babel, etc.) et être à l'aise avec la consommation d'API REST.
 
 Les connaissances et expériences suivantes seront appréciées et pourront faire la différence : 
 
 - expérience en développement mobile (React Native)
 - connaissance des méthodes agiles
+- connaissance de Git
 - structuration du code pour des applications fonctionnellement riches
 - capacité à estimer les charges de travail
 - connaissance de SASS
