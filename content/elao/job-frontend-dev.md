@@ -7,7 +7,7 @@ draft:          false
 slug:           "job-frontend-developer-agence-lyon"
 description:    "Nous recherchons un développeur ou une développeuse Frontend pour notre agence de Lyon."
 
-thumbnail:      "/images/posts/thumbnails/boy.png"
+thumbnail:      "/images/posts/thumbnails/join_us.png"
 header_img:     "/images/posts/headers/JobLyon.jpg"
 tags:           ["JOBS", "FRONTEND", "JAVASCRIPT", "MOBILE", "LYON"]
 categories:     ["jobs"]
@@ -15,10 +15,11 @@ categories:     ["jobs"]
 author_username:    "elao"
 ---
 
+<!--more-->
+
 Nous recherchons pour renforcer le pôle Frontend de notre tribu lyonnaise :
 
 ## Un développeur ou une développeuse JavaScript Frontend
-<!--more-->
 
 [Élao](https://www.elao.com/fr/) est une agence Web qui propose à ses clients la conception et le développement d’applications Web/Mobile métier sur mesure. C’est là que réside notre coeur d'activité.
 
@@ -36,7 +37,7 @@ Au sein d'une équipe jeune et dynamique à taille humaine, vous serez en charge
 
 Nous recherchons un développeur possédant au minimum deux ans d'expérience sur un framework Frontend majeur (React, Vue.js, etc.).
 
-Vous êtes curieux, doté d'un esprit d'équipe et d'une bonne capacité d'analyse. 
+Vous êtes curieux, doté d'un esprit d'équipe et d'une bonne capacité d'analyse.
 
 L'exigence de qualité, l'application des bonnes pratiques et l'écriture de tests font partie de votre _credo_.
 
@@ -46,7 +47,7 @@ Enfin, nous recherchons une personne qui ne craint pas les défis techniques imp
 
 Vous devez posséder une bonne connaissance de l'éco-système JavaScript (Webpack, ES6, Babel, etc.) et être à l'aise avec la consommation d'API REST.
 
-Les connaissances et expériences suivantes seront appréciées et pourront faire la différence : 
+Les connaissances et expériences suivantes seront appréciées et pourront faire la différence :
 
 - expérience en développement mobile (React Native)
 - connaissance des méthodes agiles
