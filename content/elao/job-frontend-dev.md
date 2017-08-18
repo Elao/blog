@@ -21,7 +21,7 @@ Nous recherchons pour renforcer le pôle Frontend de notre tribu lyonnaise :
 
 ## Un développeur ou une développeuse JavaScript Frontend
 
-[Élao](https://www.elao.com/fr/) est une agence Web qui propose à ses clients la conception et le développement d’applications Web/Mobile métier sur mesure. C’est là que réside notre coeur d'activité.
+[Élao](https://www.elao.com/fr/) est une agence Web qui propose à ses clients la conception et le développement d’applications Web/Mobile métier sur mesure.
 
 Spécialistes open source et experts Symfony/JS dotés d'une grosse culture devops, nous cherchons un spécialiste en développement JavaScript Frontend.
 
@@ -29,13 +29,13 @@ Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite
 
 Backend, frontend et/ou devops, [les équipes](https://www.elao.com/fr/la-tribu) disposent de la marge de manoeuvre et de l’autonomie nécessaires pour travailler ensemble. Elles sont à votre disposition pour témoigner de leur quotidien chez élao.
 
-Nous souhaitons donc accueillir dans notre agence lyonnaise un développeur ou une développeuse Frontend expérimenté(e), spécialiste en JavaScript.
+Nous souhaitons donc accueillir dans notre agence lyonnaise un développeur ou une développeuse Frontend expérimenté(e).
 
 Au sein d'une équipe jeune et dynamique à taille humaine, vous serez en charge des développements Web/Mobile en JavaScript : analyse des besoins, conception, développement des fonctionnalités et rédaction des tests.
 
 ## Profil recherché
 
-Nous recherchons un développeur possédant au minimum deux ans d'expérience sur un framework Frontend majeur (React, Vue.js, etc.).
+Nous recherchons une personne possédant une expérience significative sur un framework Frontend majeur (React, Vue.js, etc.).
 
 Vous êtes curieux, doté d'un esprit d'équipe et d'une bonne capacité d'analyse.
 
@@ -45,7 +45,7 @@ Enfin, nous recherchons une personne qui ne craint pas les défis techniques imp
 
 ## Aspects techniques
 
-Vous devez posséder une bonne connaissance de l'éco-système JavaScript (Webpack, ES6, Babel, etc.) et être à l'aise avec la consommation d'API REST.
+Vous avez une bonne connaissance de l'éco-système JavaScript (Webpack, ES6, Babel, etc.) et êtes à l'aise avec la consommation d'API REST.
 
 Les connaissances et expériences suivantes seront appréciées et pourront faire la différence :
 
@@ -54,7 +54,7 @@ Les connaissances et expériences suivantes seront appréciées et pourront fair
 - connaissance de Git
 - structuration du code pour des applications fonctionnellement riches
 - capacité à estimer les charges de travail
-- connaissance de SASS
+- Sass
 
 ## Rémunération
 
