@@ -1,8 +1,8 @@
 ---
 type:           "post"
 title:          "Nous recherchons un développeur ou une développeuse Frontend pour notre agence de Lyon"
-date:           "2017-08-16"
-publishdate:    "2017-08-16"
+date:           "2017-08-18"
+publishdate:    "2017-08-18"
 draft:          false
 slug:           "job-frontend-developer-agence-lyon"
 description:    "Nous recherchons un développeur ou une développeuse Frontend pour notre agence de Lyon."
@@ -29,8 +29,6 @@ Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite
 
 Backend, frontend et/ou devops, [les équipes](https://www.elao.com/fr/la-tribu) disposent de la marge de manoeuvre et de l’autonomie nécessaires pour travailler ensemble. Elles sont à votre disposition pour témoigner de leur quotidien chez élao.
 
-Nous souhaitons donc accueillir dans notre agence lyonnaise un développeur ou une développeuse Frontend expérimenté(e).
-
 Au sein d'une équipe jeune et dynamique à taille humaine, vous serez en charge des développements Web/Mobile en JavaScript : analyse des besoins, conception, développement des fonctionnalités et rédaction des tests.
 
 ## Profil recherché
@@ -51,7 +49,7 @@ Les connaissances et expériences suivantes seront appréciées et pourront fair
 
 - expérience en développement mobile (React Native)
 - connaissance des méthodes agiles
-- connaissance de Git
+- Workflow Git
 - structuration du code pour des applications fonctionnellement riches
 - capacité à estimer les charges de travail
 - Sass
