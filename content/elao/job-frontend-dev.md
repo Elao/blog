@@ -29,7 +29,9 @@ Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite
 
 Backend, frontend et/ou devops, [les équipes](https://www.elao.com/fr/la-tribu) disposent de la marge de manoeuvre et de l’autonomie nécessaires pour travailler ensemble. Elles sont à votre disposition pour témoigner de leur quotidien chez élao.
 
-Au sein d'une équipe jeune et dynamique à taille humaine, vous serez en charge des développements Web/Mobile en JavaScript : analyse des besoins, conception, développement des fonctionnalités et rédaction des tests.
+Au sein d'une équipe jeune et dynamique à taille humaine, vous serez en charge des développements Web/Mobile en JavaScript : analyse des besoins, conception, développement des fonctionnalités et rédaction des tests. Vous évoluerez au sein de l'équipe lyonnaise sur des projets à forte orientation applicative et technique. Nous travaillons essentiellement en interne avec des équipes de 3 personnes dédiées à un projet.
+
+Tournés vers l’open source et le partage, nous invitons nos collaborateurs et collaboratrices à partager leurs différentes problématiques, sujets et contributions techniques.
 
 ## Profil recherché
 
@@ -57,6 +59,14 @@ Les connaissances et expériences suivantes seront appréciées et pourront fair
 ## Rémunération
 
 A discuter en fonction de votre profil.
+
+## Infos supplémentaires
+
+Vous disposerez d'une cagnotte annuelle pour la prise en charge, entre autres, des frais de conférences techniques que nous vous encourageons à suivre et pour lesquelles vous ne poserez pas de jour de congé.
+
+Vous avez également la liberté de faire quelques jours de télétravail par mois si cela n'impacte pas l'organisation des projets.
+
+Nous limitons nos effectifs pour garantir un vrai esprit d'équipe avec une volonté forte à mettre en avant les iniatives perso et l’auto-organisation. Pour votre intégration, l'équipe aura le dernier mot quant à votre intégration car vous passerez beaucoup de temps ensemble. L'équipe est soudée la journée mais aussi parfois en dehors : apéros, pique-nique à la tête d'or, tournois de babyfoot voire même rando à la montagne !
 
 ## Le poste m'intéresse !
 
