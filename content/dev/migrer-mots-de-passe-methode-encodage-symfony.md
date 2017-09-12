@@ -1,7 +1,7 @@
 ---
 type:               "post"
 title:              "Migrer les mots de passe utilisateur vers une autre méthode d'encodage avec Symfony"
-date:               "2017-06-05"
+date:               "2017-09-12"
 publishdate:        "2017-09-12"
 draft:              false
 slug:               "migrer-mots-de-passe-utilisateur-autre-methode-encodage-symfony"
