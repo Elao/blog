@@ -2,7 +2,7 @@
 type:               "post"
 title:              "Migrer les mots de passe utilisateur vers une autre méthode d'encodage avec Symfony"
 date:               "2017-06-05"
-publishdate:        "2017-06-21"
+publishdate:        "2017-09-12"
 draft:              false
 slug:               "migrer-mots-de-passe-utilisateur-autre-methode-encodage-symfony"
 description:        "migration continuee de mots de passe legacy d'une méthode d'encodage à une autre dans Symfony. Par exemple, migrer de md5 vers bcrypt."
@@ -25,7 +25,7 @@ Les standards de sécurité évoluent, là où hier on se contentait d'un hash m
 
 Par définition, il n'est pas possible de retrouver simplement le mot de passe à partir du hash. Vous ne pouvez donc pas simplement migrer l'ensemble de mots de passe au moment d'importer les données dans le nouveau système. La seul personne a connaitre le mot de passe en clair est l'utilisateur lui-même.
 
-L'idée est donc de réaliser une migration continue lorsque l'utilisateur rentre son mot de passe. 
+L'idée est donc de réaliser une migration continue lorsque l'utilisateur rentre son mot de passe.
 
 Par exemple, pour une migration de mots de passe de `md5` vers `bcrypt`, lors d'une tentative de connexion :
 
@@ -38,7 +38,7 @@ Ainsi, chaque utilisateur migrera son mot de passe lors de sa première connexio
     <a href="/images/posts/2017/password-encoding-switch.png">
         <img src="/images/posts/2017/password-encoding-switch.png" style="max-width: 600px;" alt="Logique de migration" />
     </a>
-    <figcaption>Processus d'authentifcation</figcaption>
+    <figcaption>Processus d'authentification</figcaption>
 </figure>
 
 # Symfony
@@ -48,13 +48,13 @@ Il est possible de réaliser une méthode d'authentification intégrant ce proce
 * [Créer un Authentication Provider](http://symfony.com/doc/current/security/custom_authentication_provider.html)
 * [Créer un système d'authentification avec Guard](http://symfony.com/doc/current/security/guard_authentication.html)
 * [Créer un Form Password Authenticator](http://symfony.com/doc/current/security/custom_password_authenticator.html)
- 
+
 Si vous utilisez un formulaire de connexion simple, de type login/password avec l'option `form_login`, la dernière solution est la plus simple. A la place d'utiliser `form_login`, nous allons utiliser `simple_form` qui fonctionne de la même façon hormis qu'il faudra lui fournir un service dédié à l'authentification grâce à la clé `authenticator`.
 
 Ce service doit implémenter la classe [`SimpleFormAuthenticatorInterface`](http://api.symfony.com/3.0/Symfony/Component/Security/Http/Authentication/SimpleFormAuthenticatorInterface.html) qui requiert l'implémentation des trois méthodes suivantes :
 
 * `createToken` : le formulaire est de type login/password, nous allons donc créer un `UsernamePasswordToken`
-* `supportsToken` : l'autentifcator supportera les `UsernamePasswordToken`
+* `supportsToken` : l'authenticator supportera les `UsernamePasswordToken`
 * `authenticateToken` : et enfin, c'est ici que nous allons mettre notre logique d'authentification.
 
 Dans l'exemple suivant, la méthode d'encodage "legacy" est la suivante : `HASH = MD5(PASSWORD + SALT)`. Si l'application à refondre est déjà une application Symfony utilisant un encodeur de Symfony, vous pouvez le reproduire dans votre refonte et l'injecter dans votre service.
@@ -95,9 +95,9 @@ class MigrationAuthenticator implements SimpleFormAuthenticatorInterface
                 $this->em->flush($user);
 
                 return new UsernamePasswordToken(
-                    $user, 
-                    $user->getPassword(), 
-                    $providerKey, 
+                    $user,
+                    $user->getPassword(),
+                    $providerKey,
                     $user->getRoles()
                 );
             }
@@ -105,9 +105,9 @@ class MigrationAuthenticator implements SimpleFormAuthenticatorInterface
             // Check password with the current encoder
             if ($this->encoder->isPasswordValid($user, $password)) {
                 return new UsernamePasswordToken(
-                    $user, 
-                    $user->getPassword(), 
-                    $providerKey, 
+                    $user,
+                    $user->getPassword(),
+                    $providerKey,
                     $user->getRoles()
                 );
             }
@@ -118,7 +118,7 @@ class MigrationAuthenticator implements SimpleFormAuthenticatorInterface
 
     public function supportsToken(TokenInterface $token, $providerKey)
     {
-        return $token instanceof UsernamePasswordToken 
+        return $token instanceof UsernamePasswordToken
             && $token->getProviderKey() === $providerKey;
     }
 
@@ -158,8 +158,8 @@ security:
                 check_path: login_check
 {{< /highlight >}}
 
-Si vous avez besoin de créer un `Authentication Provider` ou d'utiliser le composant `Guard`, reportez vous à la documentation de Symfony pour savoir où integrer le processus d'authentification, mais le principe reste le même. 
+Si vous avez besoin de créer un `Authentication Provider` ou d'utiliser le composant `Guard`, reportez vous à la documentation de Symfony pour savoir où integrer le processus d'authentification, mais le principe reste le même.
 
 # Bonus
 
-En bonus, après un certain temps, vous pourrez identifier les utilisateurs qui ne sont plus actif, ils correspondront aux utilisateurs qui n'auront pas migré leur mot de passe.
+En bonus, après un certain temps, vous pourrez identifier les utilisateurs qui ne sont plus actifs, ils correspondront aux utilisateurs qui n'auront pas migré leur mot de passe.
