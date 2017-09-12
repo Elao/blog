@@ -5,7 +5,7 @@ date:               "2017-06-05"
 publishdate:        "2017-06-21"
 draft:              false
 slug:               "migrer-mots-de-passe-utilisateur-autre-methode-encodage-symfony"
-description:        "Migration continue de mots de passe legacy d'une méthode d'encodage à une autres dans Symfony. Migrez par exemple de md5 vers bcrypt."
+description:        "migration continuee de mots de passe legacy d'une méthode d'encodage à une autre dans Symfony. Par exemple, migrer de md5 vers bcrypt."
 
 thumbnail:          "/images/posts/thumbnails/password.jpg"
 header_img:         "/images/posts/headers/password.jpg"
@@ -17,20 +17,20 @@ author_username:    "mcolin"
 
 # Contexte
 
-Si vous avez un jour travaillé sur la refonte d'une application, vous avez surement du importer des données dites "legacy" provennant de l'application existante. Ces données contiennent bien souvent des comptes utilisateurs et donc des hashs de mots de passe qu'il faudra réintégrer à la nouvelle application.
+Si vous avez un jour travaillé sur la refonte d'une application, vous avez sûrement dû importer des données dites "legacy" provenant de l'application existante. Ces données contiennent bien souvent des comptes utilisateurs et donc des hashs de mots de passe qu'il faudra réintégrer à la nouvelle application.
 
-Les standards de sécurité évolues, là où hier on se contentait d'un hash md5 ou sha1, on utilise plutôt bcrypt aujoud'hui. Afin de maintenir votre application aux standards actuels vous allez devoir migrer ses hashs de mots de passe.
+Les standards de sécurité évoluent, là où hier on se contentait d'un hash md5 ou sha1, on utilise plutôt bcrypt aujoud'hui. Afin de maintenir votre application aux standards actuels vous allez devoir migrer ses hashs de mots de passe.
 
 # Solution
 
-Par définition, il n'est pas possible de retrouver simplement le mot de passe à partir du hash. Vous ne pouvez donc pas simplement migrer l'ensemble de mots de passe au moment d'importer les données dans le nouveau système. La seul personne a connaitre le mot de passe en clair est l'utilisateur lui même.
+Par définition, il n'est pas possible de retrouver simplement le mot de passe à partir du hash. Vous ne pouvez donc pas simplement migrer l'ensemble de mots de passe au moment d'importer les données dans le nouveau système. La seul personne a connaitre le mot de passe en clair est l'utilisateur lui-même.
 
-L'idée est donc de réaliser une migration continu lorsque l'utilisateur rentre son mot de passe. 
+L'idée est donc de réaliser une migration continue lorsque l'utilisateur rentre son mot de passe. 
 
 Par exemple, pour une migration de mots de passe de `md5` vers `bcrypt`, lors d'une tentative de connexion :
 
 - Si l'utilisateur n'a pas été migré, on vérifie que le mot de passe fourni correspond au hash `md5`. Si c'est le cas, on calcul le hash `bcrypt` à partir du mot de passe puis on le stock.
-- Si l'utilisateur a été déjà migré, on vérifie le mot de passe avec le hash `bcrypt`
+- Si l'utilisateur a déjà été migré, on vérifie le mot de passe avec le hash `bcrypt`
 
 Ainsi, chaque utilisateur migrera son mot de passe lors de sa première connexion à la nouvelle plateforme. Une fois que tous les utilisateurs auront été migrés, nous pourront effacer complètement les hashs `md5` de la base de données et n'utiliser que `bcrypt`.
 
@@ -49,15 +49,15 @@ Il est possible de réaliser une méthode d'authentification intégrant ce proce
 * [Créer un système d'authentification avec Guard](http://symfony.com/doc/current/security/guard_authentication.html)
 * [Créer un Form Password Authenticator](http://symfony.com/doc/current/security/custom_password_authenticator.html)
  
-Si vous utilisez un formulaire de connexion simple type login/password avec l'option `form_login`, la dernière solution est la plus simple. A la place d'utiliser `form_login`, nous allons utiliser `simple_form` qui fonctionne de la même façon hormis qu'il faudra lui fournir un service dédié à l'authentification grace à la clé `authenticator`.
+Si vous utilisez un formulaire de connexion simple, de type login/password avec l'option `form_login`, la dernière solution est la plus simple. A la place d'utiliser `form_login`, nous allons utiliser `simple_form` qui fonctionne de la même façon hormis qu'il faudra lui fournir un service dédié à l'authentification grâce à la clé `authenticator`.
 
-Ce service doit implémenter la classe [`SimpleFormAuthenticatorInterface`](http://api.symfony.com/3.0/Symfony/Component/Security/Http/Authentication/SimpleFormAuthenticatorInterface.html) qui requière l'implémentation des trois méthodes suivantes :
+Ce service doit implémenter la classe [`SimpleFormAuthenticatorInterface`](http://api.symfony.com/3.0/Symfony/Component/Security/Http/Authentication/SimpleFormAuthenticatorInterface.html) qui requiert l'implémentation des trois méthodes suivantes :
 
 * `createToken` : le formulaire est de type login/password, nous allons donc créer un `UsernamePasswordToken`
 * `supportsToken` : l'autentifcator supportera les `UsernamePasswordToken`
 * `authenticateToken` : et enfin, c'est ici que nous allons mettre notre logique d'authentification.
 
-Dans l'exemple suivant, la méthode d'encodage "legacy" est la suivante : `HASH = MD5(PASSWORD + SALT)`. Si l'application a refondre est déjà une application Symfony utilisant un encodeur de Symfony, vous pouvez le reproduire dans votre refonte et l'injecter dans votre service.
+Dans l'exemple suivant, la méthode d'encodage "legacy" est la suivante : `HASH = MD5(PASSWORD + SALT)`. Si l'application à refondre est déjà une application Symfony utilisant un encodeur de Symfony, vous pouvez le reproduire dans votre refonte et l'injecter dans votre service.
 
 {{< highlight php >}}
 <?php
