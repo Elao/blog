@@ -5,7 +5,7 @@ date:               "2017-09-12"
 publishdate:        "2017-09-12"
 draft:              false
 slug:               "migrer-mots-de-passe-utilisateur-autre-methode-encodage-symfony"
-description:        "migration continuee de mots de passe legacy d'une méthode d'encodage à une autre dans Symfony. Par exemple, migrer de md5 vers bcrypt."
+description:        "Migration continue de mots de passe legacy d'une méthode d'encodage à une autre dans Symfony. Par exemple, migrer de md5 vers bcrypt."
 
 thumbnail:          "/images/posts/thumbnails/password.jpg"
 header_img:         "/images/posts/headers/password.jpg"
