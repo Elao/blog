@@ -7,8 +7,8 @@ draft:          false
 slug:           "job-frontend-developer-agence-lyon"
 description:    "Nous recherchons un développeur ou une développeuse Frontend pour notre agence de Lyon."
 
-thumbnail:      "/images/posts/thumbnails/join_us.png"
-header_img:     "/images/posts/headers/JobLyon.jpg"
+thumbnail:      "/images/posts/thumbnails/Chatfocus.jpg"
+header_img:     "/images/posts/headers/Chatfocus.jpg"
 tags:           ["JOBS", "FRONTEND", "JAVASCRIPT", "MOBILE", "LYON"]
 categories:     ["jobs"]
 
@@ -21,7 +21,7 @@ Nous recherchons pour renforcer le pôle Frontend de notre tribu lyonnaise :
 
 ## Un développeur ou une développeuse JavaScript Frontend
 
-[Élao](https://www.elao.com/fr/) est une agence Web qui propose à ses clients la conception et le développement d’applications Web/Mobile métier sur mesure.
+Elao est une agence Web qui propose à ses clients la conception et le développement d’applications Web/Mobile métier sur mesure.
 
 Spécialistes open source et experts Symfony/JS dotés d'une grosse culture devops, nous cherchons un spécialiste en développement JavaScript Frontend.
 
@@ -62,7 +62,7 @@ A discuter en fonction de votre profil.
 
 Vous disposerez d'un budget annuel pour la prise en charge, entre autres, des frais de conférences. Elao encourage votre présence à des conférences et prend en charge les congés et certains déplacements.
 
-Vous avez également la liberté de faire quelques jours de télétravail par mois si cela n'impacte pas l'organisation des projets.
+Vous aurez également la liberté de faire quelques jours de télétravail par mois si cela n'impacte pas l'organisation des projets.
 
 Nous limitons nos effectifs pour garantir un vrai esprit d'équipe avec une volonté forte à mettre en avant les iniatives perso et l’auto-organisation. L'équipe est soudée au travail comme en dehors : apéros, pique-nique à la tête d'or, tournois de babyfoot et même rando à la montagne !
 
