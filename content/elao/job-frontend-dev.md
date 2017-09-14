@@ -1,10 +1,10 @@
 ---
 type:           "post"
 title:          "Nous recherchons un développeur ou une développeuse Frontend pour notre agence de Lyon"
-date:           "2017-08-18"
-publishdate:    "2017-08-18"
+date:           "2017-09-14"
+publishdate:    "2017-09-14"
 draft:          false
-slug:           "job-frontend-developer-agence-lyon"
+slug:           "job-frontend-developpeur-agence-lyon"
 description:    "Nous recherchons un développeur ou une développeuse Frontend pour notre agence de Lyon."
 
 thumbnail:      "/images/posts/thumbnails/Chatfocus.jpg"
