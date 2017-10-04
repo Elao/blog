@@ -228,8 +228,22 @@ public class Meeting {
 
 ## Demo
 
+Vsualisation de la génération des plannings pour tous les participants de l'évènement
+- Spot : les lieux
+- Sheet : les rendez-vous par fiche de participation (généralement équivalent à une fiche Société)
+- User : les rendez-vous des participants
+
 <p class="text-center">
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/planner-real-event.gif" alt="Demo" />
+</p>
+
+Le participant a ensuite son agenda des rendez-vous accessible sur son ordinateur ou sur mobile :
+
+<p class="text-center">
+    <img
+        src="/images/posts/2017/planification-de-rdv-avec-optaplanner/vimeet-agenda-mobile.png"
+        alt="Agenda utilisateur"
+    />
 </p>
 
 ## Bilan
