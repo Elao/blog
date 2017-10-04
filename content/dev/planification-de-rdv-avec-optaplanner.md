@@ -7,8 +7,8 @@ draft:          false
 slug:           "planification-de-rdv-avec-optaplanner"
 description:    ""
 
-thumbnail:      ""
-header_img:     ""
+thumbnail:      "/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png"
+header_img:     "/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-logo.png"
 tags:           [""]
 categories:     ["dev"]
 
@@ -236,6 +236,10 @@ public class Meeting {
 
 - Aujourd’hui : on a enlevé l’UI de l’app, c’est une app qu’on appelle en Cli runné par Jenkins. Les organisateurs d’évent cliquent sur un bouton depuis l’app vimeet et 30min plus tard ont leur rdv créés
 - Bilan précédent / now
+
+<p class="text-center">
+    <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/stats-planifications.png" alt="Planifications" />
+</p>
 
 ## Améliorations futures
 
