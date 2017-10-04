@@ -43,7 +43,8 @@ pendant une journée dédiée.
 
 ## La problématique
 
-- Définition du besoin et Règles de positionnement rdv : priorité des types, lieu du rdv attribué à la fiche, ...Satisfaction : rdv > 70%, pour l’orga Max de rdv, lieu...
+- Définition du besoin et Règles de positionnement rdv : priorité des types, lieu du rdv attribué à la fiche,
+...Satisfaction : rdv > 70%, pour l’orga Max de rdv, lieu...
 
 - Ce n'est pas un problème résolvable avec du Machine Learning ou de l'Intelligence Artificielle.
 
@@ -61,15 +62,14 @@ En conséquence, il vaut mieux chercher des solutions approchées et acceptables
     />
 </p>
 
-POC en php positionnement des rdv séquentiels puis évaluation de la solution -> trop lent
+- POC en PHP positionnement séquentiels des rdv puis évaluation de la solution -> trop lent
 
 ## Choix d'une solution Open Source, OptaPlanner
 
 Solution Open Source [OptaPlanner](https://www.optaplanner.org/),
 décrit comme un __solveur de satisfaction decontraintes__.
 Sous licence Apache Software et chapoté par Red Hat, OptaPlanner est écrit en Java et Drools, un meta langage de règles
-Business.
-
+de gestion.
 
 OptaPlanner est livré avec des exemples variés : 
 
@@ -101,15 +101,25 @@ Et même l' optimisation du plan de tables d'un mariage :
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-wedding.png" alt="Optimisation du plan de table de mariage" />
 </p>
 
+- CH et LS. Auto. Tabu search ... algo utilisés
 - Erreur : créer un nouveau cas from scratch, très compliqué
 - Good idea : partir d’un exemple proche et l’adapter
-- Présentation des éléments principaux : le modèle,
+
+### Modéliser le problème
+
+Définir :
+
+- Objectif
+- Ressources
+- Contraintes
+
+et modéliser le problème :
 
 <p class="text-center">
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/model.png" alt="Modèle" />
 </p>
 
-- les annotations (solution, entity...),
+### Les annotations de OptaPlanner
 
 <p class="text-center">
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/model-annotations.png" alt="Modèle" />
@@ -184,7 +194,24 @@ public class Meeting {
     }
 {{< /highlight >}}
 
-- les règles Drools : contraintes hard, contraintes soft
+### Les règles de gestion et les contraintes
+
+#### Contrainte "Medium"
+
+Il s'agit de l'objectif : ici on souhaite maximiser le nombre de rendez-vous positionnés lors d'un évènement.
+
+{{< highlight java >}}
+rule "Assign every meeting"
+    when
+        Meeting(isNotAssigned())
+    then
+        scoreHolder.addMediumConstraintMatch(kcontext, -1);
+end
+{{< /highlight >}}
+
+#### Contrainte "Hard"
+
+Ce sont des contraintes ne permettant pas de positionner un rendez-vous.
 
 {{< highlight java >}}
 rule "Unavailability conflict"
@@ -223,8 +250,40 @@ public class Meeting {
     }
 {{< /highlight >}}
 
-- CH et LS. Auto. Tabu search ... algo utilisés
-- et la configuration du solver.
+Exemple un peu plus complexe d'une contrainte "Hard" qui empêche la création d'un rendez-vous lorsque la fiche de
+participant a consommé tous ses crédits de rendez-vous :
+
+{{< highlight java >}}
+rule "Sheet do not have enought meetings quantity conflict"
+    when
+        $sheet : Sheet($possibleMeetingsQuantity : possibleMeetingsQuantity)
+        accumulate(
+            $meeting : Meeting(isAssigned(), sheetList contains $sheet);
+            $totalMeetingBySheet : count($meeting);
+            $totalMeetingBySheet > $possibleMeetingsQuantity
+        )
+    then
+        scoreHolder.addHardConstraintMatch(kcontext, -1);
+end
+{{< /highlight >}}
+
+#### Contrainte "Soft"
+
+Ce sont les contraintes qui permettent d'optimiser la satisfaction des participants ou d'optimiser l'utilisation des
+ressources.
+
+{{< highlight java >}}
+rule "Satisfaction : add -1 point penalty per 10% satisfaction = meetings assigned / possibleMeetingsQuantity"
+    when
+        $sheet : Sheet(possibleMeetingsQuantity > 0, $possibleMeetingsQuantity : possibleMeetingsQuantity)
+        accumulate(
+            $meeting : Meeting(isAssigned(), sheetList contains $sheet);
+            $meetingCount : count($meeting)
+        )
+    then
+        scoreHolder.addSoftConstraintMatch(kcontext, - (int) Math.ceil(10 - 10 * (float) $meetingCount / $possibleMeetingsQuantity));
+end
+{{< /highlight >}}
 
 ## Demo
 
@@ -257,5 +316,12 @@ Le participant a ensuite son agenda des rendez-vous accessible sur son ordinateu
 
 ## Améliorations futures
 
-- Améliorations possibles : rendre le solver plus rapide, affectation intelligente des participants lorsque ceux ci n’ont pas de préférence, à la fois diluer les rdv d’un participant sur la journée mais aussi réduire les écarts entre rdv (pas de rdv en début et fin de journée), faire tourner la planification en continue quelques jours avant l’évent et même pendant l’évent pour positionner des rdvs et satisfaire encore plus les participants.
+- Améliorations possibles : rendre le solver plus rapide
+- A la fois diluer les rdv d’un participant sur la journée mais aussi réduire les écarts entre rdv (pas de rdv en début et fin de journée)
+- faire tourner la planification en continue quelques jours avant l’évènement et même pendant l’évènement pour positionner des rdvs et satisfaire encore plus les participants.
+
+## Quand utiliser OptaPlanner ?
+
+Lorsqu'un problème possède des objectifs, des règles de gestion et tout cela avec des ressources limitées,
+c'est très probablement un problème de planification auquel OptaPlanner peut répondre.
 
