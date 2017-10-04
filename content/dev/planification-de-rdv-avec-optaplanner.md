@@ -9,7 +9,7 @@ description:    ""
 
 thumbnail:      "/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png"
 header_img:     "/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-logo.png"
-tags:           [""]
+tags:           ["Planification", "OptaPlanner"]
 categories:     ["dev"]
 
 author_username: "rhanna"
@@ -18,7 +18,7 @@ author_username: "rhanna"
 
 ## Le contexte
 
-Notre client, Proximum Group avec sa plateforme [Vimeet](https://www.elao.com/fr/etudes-de-cas/vimeet/) propose à des
+Notre client, Proximum Group avec son produit [Vimeet](https://www.elao.com/fr/etudes-de-cas/vimeet/) propose à des
 organisateurs d’événements une plateforme de gestion de rendez-vous B2B.
 
 Avant l’événement les participants s’inscrivent sur la plateforme et consultent le catalogue des participants :
@@ -27,33 +27,49 @@ Avant l’événement les participants s’inscrivent sur la plateforme et consu
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/vimeet-catalogue.png" alt="Catalogue Vimeet" />
 </p>
 
-Les participants demandent en rendez-vous d'autres participanst, acceptent ou refusent des propositions de rendez-vous :
+Les participants demandent en rendez-vous d'autres participants, acceptent ou refusent des propositions de rendez-vous :
 
 <p class="text-center">
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/vimeet-gdr.png" alt="Catalogue Vimeet" />
 </p>
 
 Avant l’ouverture de l’événement l’agenda des rendez-vous de chaque participant est généré.
-Toutes les demandes de rendez-vous acceptées ne sont pas satisfaits faute de disponibilité commune entre les
+Toutes les demandes de rendez-vous acceptées ne sont pas satisfaites faute de disponibilité commune entre les
 participants.
 
-Un événement dure un à plusieurs jours durant lequel des professionnels vont se rencontrer en rdv.
-La plateforme permet également de gérer d’autres types de rdv comme des recruteurs qui rencontrent des candidats
+Un événement dure un à plusieurs jours durant lequel des professionnels vont se rencontrer en rendez-vous.
+La plateforme permet également de gérer d’autres types de rendez-vous comme des recruteurs qui rencontrent des candidats
 pendant une journée dédiée.
 
 ## La problématique
 
-- Définition du besoin et Règles de positionnement rdv : priorité des types, lieu du rdv attribué à la fiche,
-...Satisfaction : rdv > 70%, pour l’orga Max de rdv, lieu...
+L'évènement dure un ou plusieurs jours et des créneaux de rendez-vous sont définis par l'organisateur.
+Une demande de rendez-vous acceptée est transformée en rendez-vous en lui allouant __un créneau de rendez-vous__ et
+__un lieu de rendez-vous__.
 
-- Ce n'est pas un problème résolvable avec du Machine Learning ou de l'Intelligence Artificielle.
+L'objectif de l'organisateur est __de maximiser le nombre de rendez-vous__.
 
-Il s'agit d'un [problème NP-complet](https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet) car le problème est
+L'objectif d'un participant est __d'avoir le maximum de ses demandes de rendez-vous positionnées en rendez-vous__.
+
+A celà s'ajoute quelques règles de gestion :
+
+* chaque participant a un nombre limité de rendez-vous selon le forfait qu'il a choisi,
+* des priorités entre les types de participants,
+* priorisation du positionnement d'un rendez-vous sur le lieu attribué au participant plutôt que sur un lieu
+mutualisé,
+* le participant et les lieux peuvent être en indisponibilité pour certains créneaux de rendez-vous.
+
+## Problème difficile à résoudre
+
+Il s'agit d'un __[problème NP-complet](https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet)__ car le problème est
 difficile à résoudre : pour avoir la solution idéale, il faudrait calculer toutes les combinaisons possibles.
 Ce qui pourrait prendre des années voire une éternité.
-En conséquence, il vaut mieux chercher des solutions approchées et acceptables en limitant le temps de calcul.
 
-- Étude de  algo colonie de fourmi (schéma) et l’algorithme génétique
+En conséquence, il vaut mieux chercher des __solutions approchées__ en limitant le temps de calcul.
+
+Pour cela, nous avons étudié des algorithmes comme
+l'[algorithme de colonies de fourmis](https://fr.wikipedia.org/wiki/Algorithme_de_colonies_de_fourmis)
+ou l'[algorithme génétique](https://fr.wikipedia.org/wiki/Algorithme_g%C3%A9n%C3%A9tique).
 
 <p class="text-center">
     <img
@@ -62,68 +78,103 @@ En conséquence, il vaut mieux chercher des solutions approchées et acceptables
     />
 </p>
 
-- POC en PHP positionnement séquentiels des rdv puis évaluation de la solution -> trop lent
+Ce sont des algorithmes difficiles à maîtriser.
 
-## Choix d'une solution Open Source, OptaPlanner
+Un _proof of concept_ en PHP a été codé pour positionner
+séquentiellement des rendez-vous puis d'évaluer la solution globale. Cela a été intéressant pour comprendre comment
+modéliser le problème, mais la lenteur des itérations nous a poussé à aller vers d'autres langages ou vers des 
+librairies Open Source.
 
-Solution Open Source [OptaPlanner](https://www.optaplanner.org/),
-décrit comme un __solveur de satisfaction decontraintes__.
-Sous licence Apache Software et chapoté par Red Hat, OptaPlanner est écrit en Java et Drools, un meta langage de règles
-de gestion.
+## OptaPlanner
 
-OptaPlanner est livré avec des exemples variés : 
+Solution Open Source, [OptaPlanner](https://www.optaplanner.org/),
+est décrit comme un __solveur de satisfaction de contraintes__.
+Sous licence Apache Software et chapoté par Red Hat, OptaPlanner est écrit en Java et [Drools](https://www.drools.org/),
+un meta langage pour écrire des règles de gestion.
+
+OptaPlanner est livré avec des exemples variés :
 
 <p class="text-center">
-    <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-examples.png" alt="Optaplanner exemples" />
+    <img
+        src="/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-examples.png"
+        alt="Optaplanner exemples"
+    />
 </p>
 
 Dont, l'optimisation de l'agenda des professeurs :
 
 <p class="text-center">
-    <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png" alt="Optimisation agenda de profs" />
+    <img
+        src="/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png"
+        alt="Optimisation agenda de profs"
+    />
 </p>
 
 L'affectation des lits d'un hôpital :
 
 <p class="text-center">
-    <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-hospital.png" alt="Optimisation lits d'hôpital" />
+    <img
+        src="/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-hospital.png"
+        alt="Optimisation lits d'hôpital"
+    />
 </p>
 
 La minimisation du trajet d'un voyageur de commerce :
 
 <p class="text-center">
-    <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-traveller.png" alt="Optimisation trajet du voyageur de commerce" />
+    <img
+        src="/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-traveller.png"
+        alt="Optimisation trajet du voyageur de commerce"
+    />
 </p>
 
-Et même l' optimisation du plan de tables d'un mariage :
+Et même l'optimisation du plan de tables d'un mariage :
 
 <p class="text-center">
-    <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-wedding.png" alt="Optimisation du plan de table de mariage" />
+    <img
+        src="/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-wedding.png"
+        alt="Optimisation du plan de table de mariage"
+    />
 </p>
 
-- CH et LS. Auto. Tabu search ... algo utilisés
-- Erreur : créer un nouveau cas from scratch, très compliqué
-- Good idea : partir d’un exemple proche et l’adapter
+Sous le capot, OptaPlanner implémente de nombreux algorithmes de
+[construction heuristique](https://fr.wikipedia.org/wiki/Heuristique_(math%C3%A9matiques))
+et de
+[recherche locale](https://fr.wikipedia.org/wiki/Recherche_locale_(optimisation)).
+
+> Une heuristique est une méthode de calcul qui fournit rapidement une solution réalisable,
+pas nécessairement optimale, pour un problème d'optimisation difficile.
+
+### Comment démarrer avec OptaPlanner ?
+
+Notre erreur a été de créer notre problème _from scratch_. La courbe d'apprentissage d'OptaPlanner semble plutôt
+une falaise à gravir par avis de tempête. La bonne idée est de partir d’un exemple proche fourni par OptaPlanner
+et l’adapter petit à petit.
 
 ### Modéliser le problème
 
-Définir :
+Il n'est jamais simple de modéliser un problème de planification. Le moyen d'y arriver est de définir :
 
-- Objectif
-- Ressources
-- Contraintes
-
-et modéliser le problème :
-
-<p class="text-center">
-    <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/model.png" alt="Modèle" />
-</p>
+- __l'Objectif__ : ici, maximiser le nombre de rendez-vous positionnés c'est à dire avec un créneau et un lieu.
+- __les ressources__ : ici, les __créneaux__ de rendez-vous et les __lieux__ de rendez-vous.
+- __Contraintes__ :
+    - "__Hard__" : celles qui empêchent la tenue d'un rendez-vous
+    - "__Soft__" : celles permettant d'optimiser le positionnement des rendez-vous
 
 ### Les annotations de OptaPlanner
 
 <p class="text-center">
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/model-annotations.png" alt="Modèle" />
 </p>
+
+Après avoir défini notre modèle en Java, des annotations fournies par OptaPlanner sont disponibles :
+
+- __@PlanningSolution__ : défini l'entité d'une solution optimale contenant tous les rendez-vous.
+- __@PlanningEntity__ : défini l'élément d'une solution, ici un rendez-vous (_meeting_). 
+- __@PlanningVariable__ : défini la variable (la ressource) que OptaPlanner attribue au PlanningEntity grâce à ses
+algorithmes de construction heuristique. Ici le créneau (_slot_) et le lieu (_spot_).
+
+Voici un extrait du code de MeetingSchedule :
 
 {{< highlight java >}}
 import org.optaplanner.core.api.domain.solution.PlanningEntityCollectionProperty;
@@ -169,6 +220,7 @@ public class MeetingSchedule {
     }
 {{< /highlight >}}
 
+Et un extrait du code de Meeting :
 
 {{< highlight java >}}
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
@@ -196,9 +248,14 @@ public class Meeting {
 
 ### Les règles de gestion et les contraintes
 
+Décrire les contraintes de notre problème au solveur d'OptaPlanner est fait en Drools.
+OptaPlanner évalue le score d'une solution.
+L'idée est que chaque règle va permettre d'agir sur ce score, en pénalisant la solution plus ou moins fortement.
+
 #### Contrainte "Medium"
 
-Il s'agit de l'objectif : ici on souhaite maximiser le nombre de rendez-vous positionnés lors d'un évènement.
+Il s'agit de l'__objectif__ : on souhaite maximiser le nombre de rendez-vous positionnés lors d'un évènement.
+Le score de la solution est __pénalisée de -1__ pour chaque rendez-vous non positionné :
 
 {{< highlight java >}}
 rule "Assign every meeting"
@@ -213,6 +270,11 @@ end
 
 Ce sont des contraintes ne permettant pas de positionner un rendez-vous.
 
+Prenons un exemple : le rendez-vous ne peut pas être positionné sur un créneau de rendez-vous si les participants sont
+indisponibles durant ce créneau.
+
+En langage Drools, on peut appeler une méthode du modèle :
+
 {{< highlight java >}}
 rule "Unavailability conflict"
     when
@@ -222,7 +284,7 @@ rule "Unavailability conflict"
 end
 {{< /highlight >}}
 
-Dans le modèle Meeting:
+et dans le modèle Meeting :
 
 {{< highlight java >}}
 @PlanningEntity()
@@ -250,8 +312,9 @@ public class Meeting {
     }
 {{< /highlight >}}
 
-Exemple un peu plus complexe d'une contrainte "Hard" qui empêche la création d'un rendez-vous lorsque la fiche de
-participant a consommé tous ses crédits de rendez-vous :
+Prenons un exemple un peu plus complexe :
+lorsque la fiche de participant a consommé tous ses crédits de rendez-vous, il n'est pas possible de lui positionner un
+nouveau rendez-vous :
 
 {{< highlight java >}}
 rule "Sheet do not have enought meetings quantity conflict"
@@ -272,6 +335,10 @@ end
 Ce sont les contraintes qui permettent d'optimiser la satisfaction des participants ou d'optimiser l'utilisation des
 ressources.
 
+Par exemple, nous allons satisfaire équitablement chaque participant en fonction du nombre de rendez-vous possibles.
+Pour cela, il faut calculer un ratio de nombre de rendez-vous positionnés sur le nombre de rendez-vous à positionner et
+pénaliser de -1 par palier de 10% :
+
 {{< highlight java >}}
 rule "Satisfaction : add -1 point penalty per 10% satisfaction = meetings assigned / possibleMeetingsQuantity"
     when
@@ -288,9 +355,10 @@ end
 ## Demo
 
 Vsualisation de la génération des plannings pour tous les participants de l'évènement
-- Spot : les lieux
-- Sheet : les rendez-vous par fiche de participation (généralement équivalent à une fiche Société)
-- User : les rendez-vous des participants
+
+* _Spot_ : les lieux
+* _User_ : les participants
+* _Sheet_ : les rendez-vous par fiche de participation (généralement équivalent à une fiche Société).
 
 <p class="text-center">
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/planner-real-event.gif" alt="Demo" />
@@ -302,26 +370,37 @@ Le participant a ensuite son agenda des rendez-vous accessible sur son ordinateu
     <img
         src="/images/posts/2017/planification-de-rdv-avec-optaplanner/vimeet-agenda-mobile.png"
         alt="Agenda utilisateur"
+        style="height: 600px"
     />
 </p>
 
 ## Bilan
 
-- Aujourd’hui : on a enlevé l’UI de l’app, c’est une app qu’on appelle en Cli runné par Jenkins. Les organisateurs d’évent cliquent sur un bouton depuis l’app vimeet et 30min plus tard ont leur rdv créés
-- Bilan précédent / now
+Notre instance d'OptaPlanner pour Vimeet a maintenant réalisé la planification de dizaines d'évènements depuis début
+2017. Les organisateurs ont noté en moyenne une __augmentation de 10%__ des rendez-vous positionnés par rapport à
+l'ancienne application de planification des rendez-vous.
+
+De plus, les organisateurs d’évènements sont maintenant __autonomes__ pour réaliser la planification de
+rendez-vous. Depuis le backoffice Vimeet, ils cliquent sur un bouton "Planifier" et quelques minutes plus tard,
+les agendas de rendez-vous sont créés.
+Notre instance d'OptaPlanner pour Vimeet est maintenant dépourvue d'UI (Swing) et est appelé comme une API.
 
 <p class="text-center">
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/stats-planifications.png" alt="Planifications" />
+    <i>Les statistiques et les planifications successives réalisées pour un évènement</i>
 </p>
 
-## Améliorations futures
+## Axes d'amélioration
 
-- Améliorations possibles : rendre le solver plus rapide
-- A la fois diluer les rdv d’un participant sur la journée mais aussi réduire les écarts entre rdv (pas de rdv en début et fin de journée)
-- faire tourner la planification en continue quelques jours avant l’évènement et même pendant l’évènement pour positionner des rdvs et satisfaire encore plus les participants.
+- Améliorer la vitesse du solveur : améliorer le modèle, ré-écrire les règles,
+[benchmarker](https://docs.optaplanner.org/7.3.0.Final/optaplanner-docs/html_single/index.html#benchmarker)
+les algorithmes...
+- Ajouter des règles métiers pour satisfaire encore plus le participant : par exemple à la fois diluer les rendez-vous
+d’un participant sur la journée mais aussi réduire les écarts entre rendez-vous
+(pas de rendez-vous en début puis en fin de journée).
+- Faire de la planification en continu même pendant l’évènement pour positionner des rendez-vous en temps-réel.
 
 ## Quand utiliser OptaPlanner ?
 
-Lorsqu'un problème possède des objectifs, des règles de gestion et tout cela avec des ressources limitées,
+Lorsqu'un problème possède des __objectifs__, des __règles de gestion__ et tout cela avec des __ressources limitées__,
 c'est très probablement un problème de planification auquel OptaPlanner peut répondre.
-
