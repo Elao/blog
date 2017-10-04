@@ -226,6 +226,12 @@ public class Meeting {
 - CH et LS. Auto. Tabu search ... algo utilisés
 - et la configuration du solver.
 
+## Demo
+
+<p class="text-center">
+    <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/planner-real-event.gif" alt="Demo" />
+</p>
+
 ## Bilan
 
 - Aujourd’hui : on a enlevé l’UI de l’app, c’est une app qu’on appelle en Cli runné par Jenkins. Les organisateurs d’évent cliquent sur un bouton depuis l’app vimeet et 30min plus tard ont leur rdv créés
