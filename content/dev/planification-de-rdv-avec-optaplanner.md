@@ -352,17 +352,87 @@ rule "Satisfaction : add -1 point penalty per 10% satisfaction = meetings assign
 end
 {{< /highlight >}}
 
+## Le solveur
+
+Notre configuration du solveur solver-config.xml :
+
+{{< highlight xml >}}
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+  <solutionClass>org.vimeet.meetings.domain.MeetingSchedule</solutionClass>
+  <entityClass>org.vimeet.meetings.domain.Meeting</entityClass>
+
+  <scoreDirectorFactory>
+    <scoreDrl>org/vimeet/meetings/solver/meetingsScoreRules.drl</scoreDrl>
+  </scoreDirectorFactory>
+
+  <constructionHeuristic/>
+
+  <localSearch>
+    <termination>
+      <minutesSpentLimit>4</minutesSpentLimit>
+    </termination>
+  </localSearch>
+
+  <constructionHeuristic/>
+
+  <localSearch />
+
+  <termination>
+    <minutesSpentLimit>30</minutesSpentLimit>
+  </termination>
+</solver>
+{{< /highlight >}}
+
+Le solveur peut être configuré finement. Ici on alterne les phases de construction heuristique et la recherche
+locale.
+Enfin avec le paramètre _termination / minutesSpentLimit_ on fixe le temps total de calcul à 30 minutes.
+
+On injecte au solveur nos données _meetings-not-solved.xml_ contenant notre modèle de données avec des rendez-vous
+sans créneau ni lieu (_spot_ et _slot_ à null) et les ressources disponibles (créneaux, lieux, utilisateurs...) :
+
+{{< highlight java >}}
+import org.optaplanner.core.api.solver.Solver;
+import org.optaplanner.core.api.solver.SolverFactory;
+import org.optaplanner.meetings.common.persistence.SolutionDao;
+import org.optaplanner.meetings.meetings.domain.Meeting;
+import org.optaplanner.meetings.meetings.domain.MeetingSchedule;
+import org.optaplanner.meetings.meetings.persistence.MeetingsDao;
+
+import java.io.File;
+
+public class MeetingsCliApp {
+
+    public static void main(String[] args) {
+        // Build the Solver
+        SolverFactory<MeetingSchedule> solverFactory = SolverFactory.createFromXmlResource('path/to/solver-config.xml');
+        Solver<MeetingSchedule> solver = solverFactory.buildSolver();
+
+        // Load a problem
+        SolutionDao<MeetingSchedule> meetingsDao = new MeetingsDao();
+
+        // Read the input data
+        MeetingSchedule unsolvedMeetingSchedule = meetingsDao.readSolution(new File('path/to/meetings-not-solved.xml'));
+
+        // Solve the problem
+        MeetingSchedule solvedMeetingSchedule = solver.solve(unsolvedMeetingSchedule);
+
+        // Write the solution
+        meetingsDao.writeSolution(solvedMeetingSchedule, new File('path/to/meetings-solved.xml'));
+    }
+{{< /highlight >}}
+
 ## Demo
 
-Vsualisation de la génération des plannings pour tous les participants de l'évènement
-
-* _Spot_ : les lieux
-* _User_ : les participants
-* _Sheet_ : les rendez-vous par fiche de participation (généralement équivalent à une fiche Société).
+Visualisation d'une solution optimale des plannings de rendez-vous des participants d'un évènement :
 
 <p class="text-center">
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/planner-real-event.gif" alt="Demo" />
 </p>
+
+* _Spot_ : les lieux
+* _User_ : les participants
+* _Sheet_ : les rendez-vous par fiche de participation (généralement équivalent à une fiche Société).
 
 Le participant a ensuite son agenda des rendez-vous accessible sur son ordinateur ou sur mobile :
 
