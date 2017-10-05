@@ -405,20 +405,20 @@ public class MeetingsCliApp {
 
     public static void main(String[] args) {
         // Build the Solver
-        SolverFactory<MeetingSchedule> solverFactory = SolverFactory.createFromXmlResource('path/to/solver-config.xml');
+        SolverFactory<MeetingSchedule> solverFactory = SolverFactory.createFromXmlResource("path/to/solver-config.xml");
         Solver<MeetingSchedule> solver = solverFactory.buildSolver();
 
         // Load a problem
         SolutionDao<MeetingSchedule> meetingsDao = new MeetingsDao();
 
         // Read the input data
-        MeetingSchedule unsolvedMeetingSchedule = meetingsDao.readSolution(new File('path/to/meetings-not-solved.xml'));
+        MeetingSchedule unsolvedMeetingSchedule = meetingsDao.readSolution(new File("path/to/meetings-not-solved.xml"));
 
         // Solve the problem
         MeetingSchedule solvedMeetingSchedule = solver.solve(unsolvedMeetingSchedule);
 
         // Write the solution
-        meetingsDao.writeSolution(solvedMeetingSchedule, new File('path/to/meetings-solved.xml'));
+        meetingsDao.writeSolution(solvedMeetingSchedule, new File("path/to/meetings-solved.xml"));
     }
 {{< /highlight >}}
 
