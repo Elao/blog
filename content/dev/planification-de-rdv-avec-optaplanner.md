@@ -37,13 +37,13 @@ Avant l’ouverture de l’événement l’agenda des rendez-vous de chaque part
 Toutes les demandes de rendez-vous acceptées ne sont pas satisfaites faute de disponibilité commune entre les
 participants.
 
-Un événement dure un à plusieurs jours durant lequel des professionnels vont se rencontrer en rendez-vous.
+Un événement dure un à plusieurs jours durant le(s)quel(s) des professionnels vont se rencontrer en rendez-vous.
 La plateforme permet également de gérer d’autres types de rendez-vous comme des recruteurs qui rencontrent des candidats
 pendant une journée dédiée.
 
 ## La problématique
 
-L'évènement dure un ou plusieurs jours et des créneaux de rendez-vous sont définis par l'organisateur.
+L'événement dure un ou plusieurs jours et des créneaux de rendez-vous sont définis par l'organisateur.
 Une demande de rendez-vous acceptée est transformée en rendez-vous en lui allouant __un créneau de rendez-vous__ et
 __un lieu de rendez-vous__.
 
@@ -51,7 +51,7 @@ L'objectif de l'organisateur est __de maximiser le nombre de rendez-vous__.
 
 L'objectif d'un participant est __d'avoir le maximum de ses demandes de rendez-vous positionnées en rendez-vous__.
 
-A celà s'ajoute quelques règles de gestion :
+À cela s'ajoutent quelques règles de gestion :
 
 * chaque participant a un nombre limité de rendez-vous selon le forfait qu'il a choisi,
 * des priorités entre les types de participants,
@@ -80,16 +80,16 @@ ou l'[algorithme génétique](https://fr.wikipedia.org/wiki/Algorithme_g%C3%A9n%
 
 Ce sont des algorithmes difficiles à maîtriser.
 
-Un _proof of concept_ en PHP a été codé pour positionner
-séquentiellement des rendez-vous puis d'évaluer la solution globale. Cela a été intéressant pour comprendre comment
-modéliser le problème, mais la lenteur des itérations nous a poussé à aller vers d'autres langages ou vers des 
-librairies Open Source.
+Un _proof of concept_ en PHP a été codé pour positionner séquentiellement des rendez-vous puis évaluer la solution
+globale. Cela a été intéressant pour comprendre comment modéliser le problème, mais la lenteur des itérations nous a
+poussés à aller vers d'autres langages ou vers des librairies Open Source.
 
 ## OptaPlanner
 
-Solution Open Source, [OptaPlanner](https://www.optaplanner.org/),
-est décrit comme un __solveur de satisfaction de contraintes__.
-Sous licence Apache Software et chapoté par Red Hat, OptaPlanner est écrit en Java et [Drools](https://www.drools.org/),
+Solution Open Source, [OptaPlanner](https://www.optaplanner.org/), est décrit comme un
+__solveur de satisfaction de contraintes__.
+
+Sous licence Apache Software et chapeauté par Red Hat, OptaPlanner est écrit en Java et [Drools](https://www.drools.org/),
 un meta langage pour écrire des règles de gestion.
 
 OptaPlanner est livré avec des exemples variés :
@@ -167,11 +167,11 @@ Il n'est jamais simple de modéliser un problème de planification. Le moyen d'y
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/model-annotations.png" alt="Modèle" />
 </p>
 
-Après avoir défini notre modèle en Java, des annotations fournies par OptaPlanner sont disponibles :
+Après avoir établi notre modèle en Java, des annotations fournies par OptaPlanner sont disponibles :
 
-- __@PlanningSolution__ : défini l'entité d'une solution optimale contenant tous les rendez-vous.
-- __@PlanningEntity__ : défini l'élément d'une solution, ici un rendez-vous (_meeting_). 
-- __@PlanningVariable__ : défini la variable (la ressource) que OptaPlanner attribue au PlanningEntity grâce à ses
+- __@PlanningSolution__ : définit l'entité d'une solution optimale contenant tous les rendez-vous.
+- __@PlanningEntity__ : définit l'élément d'une solution, ici un rendez-vous (_meeting_). 
+- __@PlanningVariable__ : définit la variable (la ressource) que OptaPlanner attribue au PlanningEntity grâce à ses
 algorithmes de construction heuristique. Ici le créneau (_slot_) et le lieu (_spot_).
 
 Voici un extrait du code de MeetingSchedule :
@@ -432,7 +432,7 @@ Visualisation d'une solution optimale des plannings de rendez-vous des participa
 
 * _Spot_ : les lieux
 * _User_ : les participants
-* _Sheet_ : les rendez-vous par fiche de participation (généralement équivalent à une fiche Société).
+* _Sheet_ : les rendez-vous par fiche de participation (généralement équivalente à une fiche société).
 
 Le participant a ensuite son agenda des rendez-vous accessible sur son ordinateur ou sur mobile :
 
@@ -446,14 +446,47 @@ Le participant a ensuite son agenda des rendez-vous accessible sur son ordinateu
 
 ## Bilan
 
-Notre instance d'OptaPlanner pour Vimeet a maintenant réalisé la planification de dizaines d'évènements depuis début
+Notre instance d'OptaPlanner pour [Vimeet](https://www.elao.com/fr/etudes-de-cas/vimeet/) a maintenant réalisé la planification de dizaines d'événements depuis début
 2017. Les organisateurs ont noté en moyenne une __augmentation de 10%__ des rendez-vous positionnés par rapport à
 l'ancienne application de planification des rendez-vous.
 
-De plus, les organisateurs d’évènements sont maintenant __autonomes__ pour réaliser la planification de
+Le temps de calcul pour obtenir une solution acceptable est variable.
+Il est fonction des ressources en créneaux et en lieux de l'événement et du nombre de demandes acceptées.
+En réalité, on pourrait faire tourner le planificateur autant qu'on souhaite. Plus on lui laisse du temps de calcul,
+plus il va tendre vers une meilleure solution.
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Demandes de Rdv acceptées</th>
+            <th>Rdv positionnés</th>
+            <th>% transformation</th>
+            <th>Temps de calcul</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Event X</th>
+            <td>630</td>
+            <td>560</td>
+            <td>89%</td>
+            <td>3 minutes</td>
+        </tr>
+        <tr>
+            <th>Event Y</th>
+            <td>6700</td>
+            <td>5400</td>
+            <td>80%</td>
+            <td>6 heures</td>
+        </tr>
+    </tbody>
+</table>
+
+De plus, les organisateurs d’événements sont maintenant __autonomes__ pour réaliser la planification de
 rendez-vous. Depuis le backoffice Vimeet, ils cliquent sur un bouton "Planifier" et quelques minutes plus tard,
-les agendas de rendez-vous sont créés.
-Notre instance d'OptaPlanner pour Vimeet est maintenant dépourvue d'UI (Swing) et est appelé comme une API.
+les agendas de rendez-vous sont créés. L'application de planification est maintenant dépourvue d'UI (Java Swing) et est
+appelée comme une API.
 
 <p class="text-center">
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/stats-planifications.png" alt="Planifications" />
@@ -468,7 +501,7 @@ les algorithmes...
 - Ajouter des règles métiers pour satisfaire encore plus le participant : par exemple à la fois diluer les rendez-vous
 d’un participant sur la journée mais aussi réduire les écarts entre rendez-vous
 (pas de rendez-vous en début puis en fin de journée).
-- Faire de la planification en continu même pendant l’évènement pour positionner des rendez-vous en temps-réel.
+- Faire de la planification en continu même pendant l’évènement pour positionner des rendez-vous en temps réel.
 
 ## Quand utiliser OptaPlanner ?
 
