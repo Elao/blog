@@ -241,7 +241,7 @@ public class Meeting {
     }
 {{< /highlight >}}
 
-On peut voir que ce code comportent des annotations fournies par OptaPlanner :
+On peut voir que ce code comporte des annotations fournies par OptaPlanner :
 
 - __@PlanningSolution__ : définit l'entité d'une solution optimale contenant tous les rendez-vous.
 - __@PlanningEntityCollectionProperty__ : définit une collection de _PlanningEntity_. 
@@ -463,7 +463,7 @@ appelée comme une API.
 
 Le __temps de calcul__ pour obtenir une solution acceptable est variable.
 Il est fonction des ressources en créneaux et en lieux de l'événement et du nombre de demandes acceptées.
-En réalité, on pourrait faire tourner le planificateur autant qu'on souhaite. __Plus il a de temps de calcul,
+En réalité, on pourrait faire tourner le planificateur autant qu'on le souhaite. __Plus il a de temps de calcul,
 plus il va tendre vers une meilleure solution.__
 
 <table border="1" style="width: 100%">
@@ -503,7 +503,7 @@ plus il va tendre vers une meilleure solution.__
 
 - __Améliorer la vitesse du solveur__ : améliorer le modèle, ré-écrire les règles,
 [benchmarker les algorithmes](https://docs.optaplanner.org/7.3.0.Final/optaplanner-docs/html_single/index.html#benchmarker)...
-- __Ajouter des règles métiers pour satisfaire encore plus le participant__ : par exemple à la fois diluer les rendez-vous
+- __Ajouter des règles métier pour satisfaire encore plus le participant__ : par exemple à la fois diluer les rendez-vous
 d’un participant sur la journée mais aussi réduire les écarts entre rendez-vous
 (par exemple pas de rendez-vous en début puis en fin de journée).
 - __Faire de la planification en continu__ même pendant l’événement pour positionner des rendez-vous en temps réel.
