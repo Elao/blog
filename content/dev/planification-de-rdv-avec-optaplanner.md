@@ -456,12 +456,17 @@ Notre instance d'OptaPlanner pour [Vimeet](https://www.elao.com/fr/etudes-de-cas
 2017. Les organisateurs ont noté en moyenne une __augmentation de 10%__ des rendez-vous positionnés par rapport à
 l'ancienne application de planification des rendez-vous.
 
-Le temps de calcul pour obtenir une solution acceptable est variable.
-Il est fonction des ressources en créneaux et en lieux de l'événement et du nombre de demandes acceptées.
-En réalité, on pourrait faire tourner le planificateur autant qu'on souhaite. Plus on lui laisse du temps de calcul,
-plus il va tendre vers une meilleure solution.
+De plus, les organisateurs d’événements sont maintenant __autonomes__ pour réaliser la planification de
+rendez-vous. Depuis le backoffice Vimeet, ils cliquent sur un bouton "Planifier" et quelques minutes plus tard,
+les agendas de rendez-vous sont créés. L'application de planification est maintenant dépourvue d'UI et est
+appelée comme une API.
 
-<table>
+Le __temps de calcul__ pour obtenir une solution acceptable est variable.
+Il est fonction des ressources en créneaux et en lieux de l'événement et du nombre de demandes acceptées.
+En réalité, on pourrait faire tourner le planificateur autant qu'on souhaite. __Plus il a de temps de calcul,
+plus il va tendre vers une meilleure solution.__
+
+<table border="1" style="width: 100%">
     <thead>
         <tr>
             <th></th>
@@ -474,25 +479,20 @@ plus il va tendre vers une meilleure solution.
     <tbody>
         <tr>
             <th>Event X</th>
-            <td>630</td>
-            <td>560</td>
-            <td>89%</td>
-            <td>3 minutes</td>
+            <td class="text-center">630</td>
+            <td class="text-center">560</td>
+            <td class="text-center">89%</td>
+            <td class="text-center">3 minutes</td>
         </tr>
         <tr>
             <th>Event Y</th>
-            <td>6700</td>
-            <td>5400</td>
-            <td>80%</td>
-            <td>6 heures</td>
+            <td class="text-center">6700</td>
+            <td class="text-center">5400</td>
+            <td class="text-center">80%</td>
+            <td class="text-center">6 heures</td>
         </tr>
     </tbody>
 </table>
-
-De plus, les organisateurs d’événements sont maintenant __autonomes__ pour réaliser la planification de
-rendez-vous. Depuis le backoffice Vimeet, ils cliquent sur un bouton "Planifier" et quelques minutes plus tard,
-les agendas de rendez-vous sont créés. L'application de planification est maintenant dépourvue d'UI (Java Swing) et est
-appelée comme une API.
 
 <p class="text-center">
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/stats-planifications.png" alt="Planifications" />
@@ -501,13 +501,12 @@ appelée comme une API.
 
 ## Axes d'amélioration
 
-- Améliorer la vitesse du solveur : améliorer le modèle, ré-écrire les règles,
-[benchmarker](https://docs.optaplanner.org/7.3.0.Final/optaplanner-docs/html_single/index.html#benchmarker)
-les algorithmes...
-- Ajouter des règles métiers pour satisfaire encore plus le participant : par exemple à la fois diluer les rendez-vous
+- __Améliorer la vitesse du solveur__ : améliorer le modèle, ré-écrire les règles,
+[benchmarker les algorithmes](https://docs.optaplanner.org/7.3.0.Final/optaplanner-docs/html_single/index.html#benchmarker)...
+- __Ajouter des règles métiers pour satisfaire encore plus le participant__ : par exemple à la fois diluer les rendez-vous
 d’un participant sur la journée mais aussi réduire les écarts entre rendez-vous
-(pas de rendez-vous en début puis en fin de journée).
-- Faire de la planification en continu même pendant l’évènement pour positionner des rendez-vous en temps réel.
+(par exemple pas de rendez-vous en début puis en fin de journée).
+- __Faire de la planification en continu__ même pendant l’évènement pour positionner des rendez-vous en temps réel.
 
 ## Quand utiliser OptaPlanner ?
 
