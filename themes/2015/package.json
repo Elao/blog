@@ -1,6 +1,9 @@
 {
   "dependencies": {
+    "copy-webpack-plugin": "^4.0.1",
     "jquery": "^2.2.4",
-    "laravel-mix": "^0.12.1"
+    "laravel-mix": "^0.12.1",
+    "workbox-sw": "^1.0.1",
+    "workbox-webpack-plugin": "^1.0.1"
   }
 }
