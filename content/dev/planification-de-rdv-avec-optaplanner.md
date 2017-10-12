@@ -490,7 +490,7 @@ appelée comme une API.
 
 <p class="text-center">
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/stats-planifications.png" alt="Planifications" />
-    <i>Les statistiques et les planifications successives réalisées pour un évènement</i>
+    <i>Les statistiques et les planifications successives réalisées pour un événement</i>
 </p>
 
 ## Axes d'amélioration
