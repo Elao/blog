@@ -59,6 +59,12 @@ author_username:    "elao"
 ---
 ```
 
+#### Header and thumbnail
+
+The recommanded format for your post's illustrations are:
+- __Header__: `2000 × 600`
+- __Thumbnail__: `400 × 400`
+
 ### With Hugo
 
 `hugo new dev/my-first-post.md`
