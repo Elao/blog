@@ -169,13 +169,6 @@ Il n'est jamais simple de modéliser un problème de planification. Le moyen d'y
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/model-annotations.png" alt="Modèle" />
 </p>
 
-Après avoir établi notre modèle en Java, des annotations fournies par OptaPlanner sont disponibles :
-
-- __@PlanningSolution__ : définit l'entité d'une solution optimale contenant tous les rendez-vous.
-- __@PlanningEntity__ : définit l'élément d'une solution, ici un rendez-vous (_meeting_). 
-- __@PlanningVariable__ : définit la variable (la ressource) que OptaPlanner attribue au PlanningEntity grâce à ses
-algorithmes de construction heuristique. Ici le créneau (_slot_) et le lieu (_spot_).
-
 Voici un extrait du code de MeetingSchedule :
 
 {{< highlight java >}}
@@ -248,10 +241,21 @@ public class Meeting {
     }
 {{< /highlight >}}
 
+On peut voir que ce code comportent des annotations fournies par OptaPlanner :
+
+- __@PlanningSolution__ : définit l'entité d'une solution optimale contenant tous les rendez-vous.
+- __@PlanningEntityCollectionProperty__ : définit une collection de _PlanningEntity_. 
+- __@ProblemFactCollectionProperty__ : définit qu'une propriété sur une classe _PlanningSolution_ est une collection
+de données qui sert au planificateur mais qui ne changent pas lors de la résolution.
+- __@ValueRangeProvider__ : fournit les valeurs pouvant être utilisées dans une annotation _@PlanningVariable_.
+- __@PlanningEntity__ : définit l'élément d'une solution, ici un rendez-vous (_meeting_). 
+- __@PlanningVariable__ : définit la variable (la ressource) que OptaPlanner attribue au PlanningEntity grâce à ses
+algorithmes de construction heuristique. Ici le créneau (_slot_) et le lieu (_spot_).
+
 ### Les règles de gestion et les contraintes
 
-Décrire les contraintes de notre problème au solveur d'OptaPlanner est fait en Drools.
-OptaPlanner évalue le score d'une solution.
+__Décrire les contraintes__ de notre problème au solveur d'OptaPlanner est fait en __Drools__.
+Grâce à ces règles, OptaPlanner évalue __le score d'une solution__.
 L'idée est que chaque règle va permettre d'agir sur ce score, en pénalisant la solution plus ou moins fortement.
 
 #### Contrainte "Medium"
