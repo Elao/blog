@@ -142,8 +142,10 @@ Sous le capot, OptaPlanner implémente de nombreux algorithmes de
 et de
 [recherche locale](https://fr.wikipedia.org/wiki/Recherche_locale_(optimisation)).
 
-> Une heuristique est une méthode de calcul qui fournit rapidement une solution réalisable,
-pas nécessairement optimale, pour un problème d'optimisation difficile.
+> __Une heuristique__ est une méthode de calcul par l'exploration et qui fournit rapidement une solution acceptable.
+
+> __Un algorithme de recherche locale__ permet de découper le problème en plus petits problèmes pour découvrir des optimums
+locaux.
 
 ### Comment démarrer avec OptaPlanner ?
 
