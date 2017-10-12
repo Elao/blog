@@ -260,7 +260,7 @@ L'idée est que chaque règle va permettre d'agir sur ce score, en pénalisant l
 
 #### Contrainte "Medium"
 
-Il s'agit de l'__objectif__ : on souhaite maximiser le nombre de rendez-vous positionnés lors d'un évènement.
+Il s'agit de l'__objectif__ : on souhaite maximiser le nombre de rendez-vous positionnés lors d'un événement.
 Le score de la solution est __pénalisée de -1__ pour chaque rendez-vous non positionné :
 
 {{< highlight java >}}
@@ -430,7 +430,7 @@ public class MeetingsCliApp {
 
 ## Demo
 
-Visualisation d'une solution optimale des plannings de rendez-vous des participants d'un évènement :
+Visualisation d'une solution optimale des plannings de rendez-vous des participants d'un événement :
 
 <p class="text-center">
     <img src="/images/posts/2017/planification-de-rdv-avec-optaplanner/planner-real-event.gif" alt="Demo" />
@@ -506,7 +506,7 @@ plus il va tendre vers une meilleure solution.__
 - __Ajouter des règles métiers pour satisfaire encore plus le participant__ : par exemple à la fois diluer les rendez-vous
 d’un participant sur la journée mais aussi réduire les écarts entre rendez-vous
 (par exemple pas de rendez-vous en début puis en fin de journée).
-- __Faire de la planification en continu__ même pendant l’évènement pour positionner des rendez-vous en temps réel.
+- __Faire de la planification en continu__ même pendant l’événement pour positionner des rendez-vous en temps réel.
 
 ## Quand utiliser OptaPlanner ?
 
