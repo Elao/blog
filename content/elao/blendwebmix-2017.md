@@ -2,7 +2,7 @@
 type:               "post"
 title:              "Le Blend Web Mix 2017 arrive !"
 date:               "2017-10-18"
-publishdate:        "2017-10-08"
+publishdate:        "2017-10-18"
 draft:              false
 slug:               "blendwebmix-2017"
 description:        ""
