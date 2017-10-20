@@ -237,6 +237,15 @@
             }
         }
 
+        p, li, td {
+            > code {
+                background: #ccc;
+                color: #333;
+                border-radius: 0.2em;
+                padding: 0 0.2em;
+            }
+        }
+
         a {
             &, &:visited {
                 text-decoration: underline;
