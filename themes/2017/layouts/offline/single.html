@@ -1,0 +1,16 @@
+{{ partial "head.html" . }}
+<body>
+  {{ partial "nav-overlay.html" . }}
+  <div id="all">
+      {{ partial "navbar.html" . }}
+
+      <div class="container">
+          <h1>You are offline</h1>
+
+          <p>This post is not available offline.</p>
+
+          {{ partial "footer.html" . }}
+      </div>
+  </div>
+</body>
+</html>

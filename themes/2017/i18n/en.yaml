@@ -1,0 +1,14 @@
+- id: post_read_more
+  translation: "Read more"
+- id: post_read_post
+  translation: "Read"
+- id: post_wrote_by
+  translation: "Wrote by"
+- id: post_prev
+  translation: "Previous"
+- id: post_next
+  translation: "Next"
+- id: header_follow_elao_news
+  translation: "Follow all ELAO news"
+- id: footer_all_rights_reserved
+  translation: "All rights reserved"

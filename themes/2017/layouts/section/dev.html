@@ -1,0 +1,28 @@
+{{ partial "head.html" . }}
+<body>
+    {{ partial "nav-overlay.html" . }}
+    <div id="all">
+        {{ partial "navbar.html" . }}
+        <header class="category-header dev">
+            <div class="inner">
+                <h1>Dev</h1>
+                {{ partial "social-links.html" . }}
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="articles-list compact">
+                <div class="col-1"></div>
+                <div class="col-2"></div>
+                <div class="col-3"></div>
+                <div class="clearfix"></div>
+                {{ range .Paginator.Pages }}
+                    {{ partial "article-thumbnail.html" . }}
+                {{ end }}
+            </div>
+            {{ partial "pagination.html" . }}
+            {{ partial "footer.html" . }}
+        </div>
+    </div>
+</body>
+</html>

@@ -6,7 +6,7 @@
 ##########
 
 # Hugo
-HUGO_THEME = 2015
+HUGO_THEME = 2017
 
 # Optimize
 OPTIMIZE_IMAGES = public
