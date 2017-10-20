@@ -19,7 +19,7 @@ author_username:    "mcolin"
 
 L'architecture hexagonale, également appelée *Ports & Adapters*, présente deux caratéristiques lorsqu'on la schématise : une forme **hexagonale** (d'où son nom) et une séparation entre l'**application**, l'**extérieur** et une partie contenant des **adapteurs** permettant aux deux de communiquer.
 
-Elle a été pensé par [Alistair Cockburn](http://alistair.cockburn.us/Hexagonal+architecture) dans les années 2000. Son but est de permettre à une application d'être pilotée sans distinction par des utilisateurs, des programmes, des tests automatisés ou des scripts ainsi que d'être développée et testée de façon isolée de son contexte d'exécution et des ses bases de données.
+Elle a été pensé par [Alistair Cockburn](http://alistair.cockburn.us/Hexagonal+architecture) dans les années 2000. Son but est de permettre à une application d'être pilotée sans distinction par des utilisateurs, des programmes, des tests automatisés ou des scripts ainsi que d'être développée et testée de façon isolée de son contexte d'exécution et de ses bases de données.
 
 ![Architecture hexagonale](/images/posts/2017/hexagonal-architecture.png)
 
