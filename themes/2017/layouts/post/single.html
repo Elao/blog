@@ -1,0 +1,108 @@
+{{ $author := index .Site.Data.authors .Params.author_username .Lang }}
+{{ $social := (index .Site.Data.authors $.Params.author_username).social }}
+
+{{ partial "head.html" . }}
+
+<body class="detail">
+    {{ partial "nav-overlay.html" . }}
+    <div id="read-progress"><div></div></div>
+    <div id="all">
+        {{ partial "navbar.html" . }}
+        {{if .PrevInSection}}
+        <div class="side-link side-link--prev">
+            <a href="{{.PrevInSection.Permalink}}">{{ i18n "post_prev" }}</a>
+            <div class="side-link__infos">
+                <div class="side-link__img" style="background-image: url('{{ .PrevInSection.Params.thumbnail }}');"></div>
+            </div>
+        </div>
+        {{end}}
+        {{if .NextInSection}}
+        <div class="side-link side-link--next">
+            <a href="{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}">{{ i18n "post_next" }}</a>
+            <div class="side-link__infos">
+                <div class="side-link__img" style="background-image: url('{{ .NextInSection.Params.thumbnail }}');"></div>
+            </div>
+        </div>
+        {{end}}
+        <header>
+            {{ $context := . }}
+
+            <h4>{{ range .Params.tags }}<strong><a href="{{ $.LanguagePrefix }}/tags/{{ . | urlize }}">{{ . }}</a></strong> {{ end }} - {{ .PublishDate.Format "02 Jan 2006" }}</h4>
+            <h1>{{ .Title }}</h1>
+            <p class="author">
+                <a href="https://www.elao.com/fr/la-tribu" class="author"><img src="{{ "/images/" }}{{ if $social.avatar }}{{ $social.avatar }}{{ else }}elao_60x60.jpg{{ end }}" alt="{{ $author.display_name }}"></a>
+                <br/>
+                <span>{{ i18n "post_wrote_by" }} <a href="https://www.elao.com/fr/la-tribu" class="strong">{{ $author.display_name }}</a></span>
+            </p>
+            <div class="intro">
+                {{ .Description }}
+            </div>
+            <div class="hero">
+                <img src="{{ if isset .Params "header_img" }}{{ index .Params "header_img" }}{{ else }}https://placeimg.com/1000/310/any{{ end }}" alt="" />
+            </div>
+        </header>
+        <div class="container">
+            <article id="article">
+                {{ .Content }}
+                <div id="socials">
+                    <div class="author-block">
+                        {{ if  .Params.co_authors }}
+                            {{ $context := . }}
+
+                            {{ range .Params.co_authors }}
+                              {{ $co_author := . }}
+                              {{ $author := index $.Site.Data.authors $co_author $context.Lang }}
+                              {{ $social := (index $.Site.Data.authors .).social }}
+                              {{ partial "social-avatar.html" (dict "context" $context "social" $social "author" $author) }}&nbsp;
+                            {{ end }}
+                        {{ else }}
+                        {{ partial "social-avatar.html" (dict "context" $context "social" $social "author" $author) }}
+                        {{ end }}
+                        <div class="job">
+                            <a href="https://www.elao.com/fr/la-tribu"><strong>{{ $author.display_name }}</strong></a><br/>
+                            {{ $author.job_title }}
+                        </div>
+                        <div class="links">
+                            <a href="https://twitter.com/{{ $social.twitter }}" target="_blank"><i class="icon-twitter"></i></a>
+                            <a href="https://github.com/{{ $social.github }}" target="_blank"><i class="icon-github"></i></a>
+
+                            {{ with $social.google_plus_id }}
+                            <a href="https://plus.google.com/{{ $social.google_plus_id }}?rel=author" target="_blank"><i class="icon-gplus"></i></a>
+                            {{ end }}
+                        </div>
+                    </div>
+
+                    <div id="disqus_thread"></div>
+                    <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                    */
+                    if (window.location.hostname != "blog.elao.com") {
+                      console.log("Local dev, so no Disqus comments.");
+
+                    } else {
+                      var disqus_config = function () {
+                          this.page.url        = {{ .Permalink }};  // Replace PAGE_URL with your page's canonical URL variable
+                          this.page.identifier = {{ .Slug }}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                      };
+
+                      (function() {  // DON'T EDIT BELOW THIS LINE
+                      var d = document, s = d.createElement('script');
+
+                      s.src = '//elao.disqus.com/embed.js';
+
+                      s.setAttribute('data-timestamp', +new Date());
+                          (d.head || d.body).appendChild(s);
+                          })();
+                    }
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                </div>
+            </article>
+            {{ partial "structured-data.html" . }}
+            {{ partial "footer.html" . }}
+        </div>
+    </div>
+</body>
+</html>

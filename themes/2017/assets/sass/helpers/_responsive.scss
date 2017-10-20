@@ -1,4 +1,4 @@
-@media (max-width: 1200px) {
+@media (max-width: $screen-md-max) {
     .detail {
         article#article {
             img.outside-left {
@@ -18,7 +18,7 @@
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: $screen-sm-max) {
     .detail {
         article#article {
             img.outside-left {
@@ -100,7 +100,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $screen-xs-max) {
     #all {
         padding-top: 60px;
     }
