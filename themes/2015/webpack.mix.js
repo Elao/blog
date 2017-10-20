@@ -18,19 +18,22 @@ if (mix.config.inProduction) {
     .webpackConfig({
       plugins: [
         new WorkboxBuildWebpackPlugin({
+          // preload assets
           globDirectory: 'static',
           globPatterns: ['**\/*.{js,css,jpg,svg,png,gif}'],
-          swDest: 'static/service-worker.js',
-          swSrc: 'service-worker/service-worker.template.js',
+          // preload offline page
           templatedUrls: {
             '/en/offline/offline/': [
               '../../../content/offline/offline.en.md',
               '../layouts/offline/single.html'
             ]
-          }
+          },
+          // build service worker
+          swDest: 'static/service-worker.js',
+          swSrc: 'assets/service-worker/service-worker.template.js'
         }),
         new CopyWebpackPlugin([
-          // copy WorkboxSW production build file to assets/js/workbox-sw.prod.js
+          // copy WorkboxSW production build file to assets/js/workbox-sw.prod.js, needed by service worker
           {
             from: require.resolve('workbox-sw'),
             to: 'js/workbox-sw.prod.js'
