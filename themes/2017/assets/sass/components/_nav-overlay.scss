@@ -104,23 +104,14 @@
 
 @media (max-width: $screen-sm-max) {
     #nav-overlay {
-        padding: 0 15px;
+        padding: 100px 30px 30px 30px;
 
         .container {
-            margin-top: 0;
-
             .categories {
-                margin: 0;
-                padding: 80px 0;
-                border: none;
+                margin: 60px 0;
+                padding: 60px 0;
 
                 h3 { font-size: 23px; }
-
-                ul {
-                    margin-top: 0;
-
-                    li { font-size: 16px !important; }
-                }
             }
         }
     }
@@ -128,7 +119,11 @@
 
 @media (max-width: $screen-xs-max) {
     #nav-overlay {
+        padding: 0 15px;
+
         .container {
+            margin-top: 0;
+
             .last-articles {
                 display: block;
                 margin-left: 0;
@@ -141,6 +136,17 @@
                     > div.col-img {
                         display: none;
                     }
+                }
+            }
+
+            .categories {
+                padding: 90px 0 0;
+                border: none;
+
+                ul {
+                    margin-top: 0;
+
+                    li { font-size: 16px !important; }
                 }
             }
         }

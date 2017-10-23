@@ -17,6 +17,16 @@ body {
     }
 }
 
+footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: bold;
+
+    &,
+    a,
+    a:visited { color: transparentize($text-color, 0.6); }
+}
+
 ::-webkit-input-placeholder {
    color: lighten($text-color, 50%);
 }
@@ -205,27 +215,27 @@ body {
 }
 
 @media (max-width: $screen-xs-max) {
-    #all { padding-top: 60px; }
+    #all { padding-top: 70px; }
 
     .container {
         padding-left: 0;
         padding-right: 0;
     }
 
-    .navbar { height: 60px; }
+    .navbar { height: 70px; }
 
     .nav-button {
-        top: 30px;
+        top: 36px;
         right: 15px;
         left: unset;
     }
 
     .nav-brand {
-        height: 60px;
+        height: 70px;
 
         .link-elao {
-            height: 60px;
-            width: 70px;
+            height: 70px;
+            width: 80px;
             display: flex;
 
             img {
@@ -236,8 +246,8 @@ body {
 
             span {
                 position: relative;
-                top: 20px;
-                left: 4px;
+                top: 25px;
+                left: 9px;
                 font-size: 14px;
                 line-height: 1.3;
                 display: inline-block;
@@ -252,11 +262,11 @@ body {
         }
 
         .logo {
-            width: 60px;
+            width: 70px;
 
             img {
-                height: 60px;
-                width: 60px;
+                height: 70px;
+                width: 70px;
             }
         }
     }

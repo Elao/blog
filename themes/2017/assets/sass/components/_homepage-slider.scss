@@ -4,10 +4,13 @@
 .homepage-slider {
     margin-top: 15px;
     margin-bottom: 50px;
+    width: 100%;
+    height: 550px;
+    position: relative;
 
     .owl-theme {
         position: relative;
-        height: 600px;
+        height: 550px;
 
         .owl-dots {
             position: absolute;
@@ -40,7 +43,7 @@
             position: relative;
 
             .item {
-                height: 600px;
+                height: 550px;
                 background: #222;
                 position: relative;
 
@@ -75,12 +78,19 @@
                     h4 {
                         color: #DFDFDF;
                         margin: 0;
+                        font-size: 16px;
+                        font-weight: 400;
+                        font-family: "Work Sans","Helvetica Neue",Helvetica;
+                        text-transform: uppercase;
+
+                        strong { text-transform: uppercase; }
                     }
 
                     h1 {
                         letter-spacing: -0.05em;
                         margin: 20px 0;
                         padding: 0 40px;
+                        text-transform: uppercase;
 
                         &,
                         a,
@@ -109,5 +119,17 @@
 
 
 @media (max-width: $screen-xs-max) {
-    .homepage-slider { margin-bottom: 0; }
+    .homepage-slider {
+        margin-bottom: 0;
+
+        .owl-carousel {
+            .owl-item {
+                .item {
+                    .inner {
+                        h1 { font-size: 20px; }
+                    }
+                }
+            }
+        }
+    }
 }
