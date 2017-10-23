@@ -1,4 +1,8 @@
+@import "owl-carousel/owl.theme.default";
+@import "owl-carousel/owl.carousel";
+
 .homepage-slider {
+    margin-top: 15px;
     margin-bottom: 50px;
 
     .owl-theme {
@@ -78,12 +82,12 @@
                         margin: 20px 0;
                         padding: 0 40px;
 
-                        &, a, a:visited {
+                        &,
+                        a,
+                        a:visited {
                             color: #FFF;
 
-                            &:hover {
-                                text-decoration: none;
-                            }
+                            &:hover { text-decoration: none; }
                         }
                     }
 
@@ -94,6 +98,8 @@
                             border-radius: 60px;
                             border: 2px solid #FFF;
                         }
+
+                        &:hover { text-decoration: none; }
                     }
                 }
             }
@@ -101,110 +107,7 @@
     }
 }
 
-.articles-list {
-    padding: 0;
 
-    article {
-        margin: 40px 0;
-        display: table;
-        width: 100%;
-        position: relative;
-        background: none;
-        transition: all 0.2s linear;
-
-        > div {
-            display: table-cell;
-            vertical-align: middle;
-            padding: 40px;
-
-            &.col-text {
-                width: 60%;
-            }
-
-            &.col-img {
-                padding-right: 0;
-
-                img {
-                    display: block;
-                    max-width: 100%;
-                    transition: all 0.1s linear;
-
-                    &:hover {
-                        opacity: 0.7;
-                    }
-                }
-
-            }
-        }
-
-        > .col-text + .col-img {
-            padding-left: 0;
-            padding-right: 40px;
-        }
-
-        h4 {
-            color: #999;
-
-            a, a:visited {
-                color: #999;
-                transition: color 0.1s linear;
-
-                &:hover {
-                    text-decoration: none;
-                    color: $main-color;
-                }
-            }
-        }
-
-        h2 {
-            line-height: 1.2;
-            margin-top: 25px;
-            margin-bottom: 15px;
-
-            a, a:visited {
-                color: $headings-color;
-                transition: all 0.2s linear;
-
-                &:hover {
-                    color: $main-color;
-                    text-decoration: none;
-                }
-            }
-        }
-
-        p {
-            padding: 0 0 20px 0;
-        }
-
-        .btn {
-            float: left;
-        }
-
-        &:hover {
-            background: #FFF;
-        }
-    }
-}
-
-.pager {
-    text-align: center;
-    margin: 50px 0;
-    font-family: $headings-font-family;
-
-    a {
-        color: $text-color;
-        background: none;
-        transition: all 0.1s linear;
-        display: inline-block;
-        margin: 0 2px;
-        width: 40px;
-        height: 40px;
-        line-height: 44px;
-
-        &.active, &:hover {
-            color: $main-color;
-            background: #FFF;
-            text-decoration: none;
-        }
-    }
+@media (max-width: $screen-xs-max) {
+    .homepage-slider { margin-bottom: 0; }
 }

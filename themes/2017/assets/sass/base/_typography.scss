@@ -77,7 +77,10 @@ pre {
 }
 
 @media (max-width: $screen-xs-max) {
-    h1 { font-size: 46px; }
+    h1, h2 {
+        font-size: 30px;
+        line-height: 50px;
+    }
 
-    h2 { font-size: 34px; }
+    h3 { font-size: 28px; }
 }

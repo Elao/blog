@@ -1,0 +1,23 @@
+.pager {
+    text-align: center;
+    margin: 50px 0;
+    font-family: $headings-font-family;
+
+    a {
+        color: $text-color;
+        background: none;
+        transition: all 0.1s linear;
+        display: inline-block;
+        margin: 0 2px;
+        width: 40px;
+        height: 40px;
+        line-height: 44px;
+
+        &.active,
+        &:hover {
+            color: $main-color;
+            background: #FFF;
+            text-decoration: none;
+        }
+    }
+}

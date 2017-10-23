@@ -7,17 +7,17 @@
 @import "layout/grid";
 @import "layout/layout";
 
-@import "components/animation";
-@import "components/side-link";
 @import "components/404";
+@import "components/animation";
+@import "components/article-content";
+@import "components/article-header";
+@import "components/article-footer";
+@import "components/articles-list";
 @import "components/buttons";
-@import "components/owl-carousel";
-@import "components/article";
+@import "components/homepage-slider";
+@import "components/read-progress";
+@import "components/side-link";
 @import "components/socials";
-
-@import "pages/nav";
-@import "pages/homepage";
-@import "pages/detail";
-@import "pages/category";
-
-@import "helpers/responsive";
+@import "components/nav-overlay";
+@import "components/pager";
+@import "components/category-header";
