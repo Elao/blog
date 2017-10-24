@@ -1,6 +1,6 @@
 /**
  * service-worker.js is a generated file.
- * Please edit /themes/2015/service-worker/service-worker.template.js
+ * Please edit /themes/2017/assets/service-worker.template.js
  */
 
 importScripts('/assets/js/workbox-sw.prod.js');

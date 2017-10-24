@@ -18,7 +18,7 @@ install@%:
 ## Build - All
 build@%:
 	$(call log,Laravel mix)
-	rm -Rf static/assets && $(LARAVEL_MIX)
+	rm -Rf static/assets static/service-worker.js && $(LARAVEL_MIX)
 
 #########
 # Watch #
@@ -27,4 +27,4 @@ build@%:
 ## Watch - Development
 watch@development:
 	$(call log,Laravel mix - Watch)
-	rm -Rf static/assets && $(LARAVEL_MIX_WATCH)
+	rm -Rf static/assets static/service-worker.js && $(LARAVEL_MIX_WATCH)
