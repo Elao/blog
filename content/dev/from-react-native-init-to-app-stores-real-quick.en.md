@@ -31,14 +31,14 @@ So let's get to it.
 
 ###  iOs
 
-Ensure [Xcode is installed on you mac](https://facebook.github.io/react-native/docs/getting-started.html#xcode) and that you agreed to Apple's latest terms and conditions (just launch Xcode and click _Agree_).
+You'll need a [Apple ID](https://appleid.apple.com/#!&page=signin) and [Xcode is installed on you mac](https://facebook.github.io/react-native/docs/getting-started.html#xcode).
+
+Also ensure that you agreed to Apple's latest terms and conditions (just launch Xcode and click _Agree_).
 
 ### Android
 
 1. Get Android Studio with [tools required by React Native](https://facebook.github.io/react-native/docs/getting-started.html#1-install-android-studio)
-
 2. Launch Android Studio and install [Android SDK and other required libraries](https://facebook.github.io/react-native/docs/getting-started.html#2-install-the-android-sdk) _React Native requires Android 6.0 and SDK 23.0.1_
-
 3. Configure your [Android Home environment variable](https://facebook.github.io/react-native/docs/getting-started.html#3-configure-the-android-home-environment-variable) by adding the following lines in your bash profile file:
 
 {{< highlight bash >}}
@@ -224,8 +224,8 @@ defaultConfig {
 -    versionName "1.0"
 +    versionName project.env.get("APP_VERSION")
     // ...
-}
-{{< /highlight >}}
+    }
+    {{< /highlight >}}
 
 Between the `splits` and `buildTypes` blocks (should be line 118) add the following block :
 
@@ -308,7 +308,7 @@ export default class App extends Component {
     const { styles } = App;
     const { APP_ENV, APP_VERSION, APP_BUILD } = Config;
     const { OS } = Platform;
-
+    
     return (
       <View style={styles.container}>
         <Text style={styles.infos}>
@@ -375,6 +375,26 @@ Here's a aworking example of all we discussed above : https://github.com/Elao/Ac
 Note the handy [Makefile](https://github.com/Elao/AcmeApp/blob/master/Makefile) that hide all complexe build and release commands behind simple make tasks like:  `make run android` or `make release-ios`
 
 ## Store configuration
+
+### Generate store icons
+
+Apple's App Store and the Google Play Store both require that you provide icons for you app in various formats.
+
+Fortunatly, there's a few online-services that will generate those icons for you from a high-res source icon. 
+
+I personnaly use https://makeappicon.com
+
+- Upload a high-res square icon (ideally `1536x1536 `).
+- Enter an email (you don't have to subscribe to the newsletter).
+- You will receive the icons by email.
+
+#### Setup icons for iOs
+
+Move the content of `ios` in the following path in your project folder: `ios/AcmeApp/Images.xcassets/`  (if asked, replace existing content with the new icons).
+
+#### Setup icons for Android
+
+Move the content of `android` in the following path in your projet folder: `android/app/src/main/res`  (if asked, replace existing content with the new icons).
 
 ### Google Play
 
