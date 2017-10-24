@@ -58,7 +58,8 @@
                     {{ partial "social-avatar.html" (dict "context" $context "social" $social "author" $author) }}
                     {{ end }}
                     <div class="article-footer__job">
-                        <a href="https://www.elao.com/fr/la-tribu"><strong>{{ $author.display_name }}</strong></a><br/>
+                        <strong>{{ $author.display_name }}</strong>
+                        <br/>
                         {{ $author.job_title }}
                     </div>
                     <div class="article-footer__links">
