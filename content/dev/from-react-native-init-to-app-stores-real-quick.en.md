@@ -16,7 +16,7 @@ author_username: "tjarrand"
 
 ---
 
-Hi, I'm Thomas and I'm gonna show you how to build and release a React Native app to iOs and Android stores on macOS.
+Hi, I'm Thomas and I'm gonna show you how to build and release a React Native app to iOS and Android stores on macOS.
 
 ## Our goals
 
@@ -29,7 +29,7 @@ So let's get to it.
 
 ## Prerequisite
 
-###  iOs
+###  iOS
 
 You'll need a [Apple ID](https://appleid.apple.com/#!&page=signin) and [Xcode is installed on you mac](https://facebook.github.io/react-native/docs/getting-started.html#xcode).
 
@@ -80,12 +80,12 @@ To build a release of the app, we need to give it a few pieces of information:
 
 Note the format of the unique identifier: a reverse domain name, starting with `com`, then the vendor name and then the app name.
 
-I strongly recommand that you follow this format and avoid any special character.
+I strongly recommend that you follow this format and avoid any special character.
 
-This idientifier must not be already use on Google Play Store or Apple's App Store.
+This idientifier must not be already used on Google Play Store or Apple's App Store.
 
-Once published once, an app can't change its identifier, so choose a name that can live through the whole life of the app.
-Don't worry though, it's only a technical identifier, it will not be displayed to the public anywere and you'll have and _Display name_ for that and this one can change anytime you need.
+Once published, an app can't change its identifier, so choose a name that can live through the whole life of the app.
+Don't worry though, it's only a technical identifier, it will not be displayed to the public anywhere and you'll have a _Display name_ for that and this one can change anytime you need.
 
 #### Version Number
 
@@ -96,13 +96,13 @@ The version number must follow the semver format `major.minor.patch`.
 The build number is just an integer as simple as `1`.
 
 You'll increment build number _every time you publish a release_.
-You can't upload a release that has a build number infirior or equal to any build you ever uploaded for this app.
+You can't upload a release that has a build number inferior or equal to any build you ever uploaded for this app.
 
 #### App related variables
 
 We might also need some __app-releated variables__ like the address of the API providing the data for the app.
 
-Such variables will likelly have different values in different environments.
+Such variables will likely have different values in different environments.
 
 For example, we want to call `http://api.app.acme.test` in development mode in the simulator, and `https://api.app.acme.com` in a production release for the stores.
 
@@ -119,7 +119,7 @@ mv android/app/src/main/java/com/acmeapp android/app/src/main/java/com/acme/app
 
 ### React Native Config
 
-For setting and accessing these variables whereever we need it, I recommand using [react-native-config](https://github.com/luggit/react-native-config)
+For setting and accessing these variables whereever we need it, I recommend using [react-native-config](https://github.com/luggit/react-native-config)
 
 Install it with:
 
@@ -251,9 +251,9 @@ buildTypes {
 }
 {{< /highlight >}}
 
-### Configure the iOs build
+### Configure the iOS build
 
-Open your iOs project `ios/AcmeApp.xcodeproj` with Xcode and select the root item __AcmeApp__ in the file browser on the left.
+Open your iOS project `iOS/AcmeApp.xcodeproj` with Xcode and select the root item __AcmeApp__ in the file browser on the left.
 
 #### In the _General_ tab
 
@@ -284,7 +284,8 @@ _If you don't see those settings, verify that "All" is selected at the top (inst
 
 ## Test our setup
 
-Here's a simple homepage that display the app version, build number, environment and platform:
+Here's a simple homepage that displays the app version, build number, environment and platform.
+You can open your `./App.js` file and replace its content with the following code:
 
 {{< highlight javascript >}}
 import React, { Component } from 'react';
@@ -308,7 +309,7 @@ export default class App extends Component {
     const { styles } = App;
     const { APP_ENV, APP_VERSION, APP_BUILD } = Config;
     const { OS } = Platform;
-    
+
     return (
       <View style={styles.container}>
         <Text style={styles.infos}>
@@ -325,13 +326,13 @@ export default class App extends Component {
 
 Start the react-native packager manually : `react-native start`
 
-Now a simple `react-native run-ios` should start your app in iOs simulator.
+Now a simple `react-native run-iOS` should start your app in iOS simulator.
 
-- `react-native run-ios --simulator 'iPhone SE'`
+- `react-native run-iOS --simulator 'iPhone SE'`
   Run the app in the simulator on a specific device.
-- `react-native run-ios --device`
+- `react-native run-iOS --device`
   Run the app on a real iPhone (that must be connected to the mac by USB).
-- `react-native run-ios --device --configuration Release`
+- `react-native run-iOS --device --configuration Release`
   Run the app on a real iPhone as a release (fast and no debug, just like it will be in the store).
 - `react-native run-android `
   Run the app on a any simulated or real android device found.
@@ -342,23 +343,23 @@ What's more, we can now run the app in a _certain_ environment by specifying the
 
 | Develoment                               | Staging                                  | Production                               |
 | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| `ENVFILE=.env.development react-native run-ios` | `ENVFILE=.env.staging react-native run-ios ` | `ENVFILE=.env.production react-native run-ios ` |
+| `ENVFILE=.env.development react-native run-iOS` | `ENVFILE=.env.staging react-native run-iOS ` | `ENVFILE=.env.production react-native run-iOS ` |
 | ![](/images/posts/2017/from-react-native-init-to-app-stores-real-quick/AcmeApp_dev.png) | ![](/images/posts/2017/from-react-native-init-to-app-stores-real-quick/AcmeApp_staging.png) | ![](/images/posts/2017/from-react-native-init-to-app-stores-real-quick/AcmeApp_production.png) |
 
 ### Build store release
 
-#### iOs release
+#### iOS release
 
 {{< highlight bash >}}
 ENVFILE=.env.production xcodebuild \
-    -workspace ./ios/AcmeApp.xcodeproj/project.xcworkspace \
+    -workspace ./iOS/AcmeApp.xcodeproj/project.xcworkspace \
     -scheme AcmeApp \
     -sdk iphoneos \
     -configuration AppStoreDistribution archive \
-    -archivePath ./ios/release/AcmeApp.xcarchive
+    -archivePath ./iOS/release/AcmeApp.xcarchive
 {{< /highlight >}}
 
-The archive will be available at `./ios/release/AcmeApp.xcarchive` and you can open it in Xcode to build an IPA for development purpose or upload it to the App Store.
+The archive will be available at `./iOS/release/AcmeApp.xcarchive` and you can open it in Xcode to build an IPA for development purpose or upload it to the App Store.
 
 #### Android release
 
@@ -372,7 +373,7 @@ The APK will be available at `./android/app/build/outputs/apk/app-release.apk` a
 
 Here's a aworking example of all we discussed above : https://github.com/Elao/AcmeApp
 
-Note the handy [Makefile](https://github.com/Elao/AcmeApp/blob/master/Makefile) that hide all complexe build and release commands behind simple make tasks like:  `make run android` or `make release-ios`
+Note the handy [Makefile](https://github.com/Elao/AcmeApp/blob/master/Makefile) that hides all complex build and release commands behind simple make tasks like:  `make run android` or `make release-iOS`
 
 ## Store configuration
 
@@ -380,7 +381,7 @@ Note the handy [Makefile](https://github.com/Elao/AcmeApp/blob/master/Makefile) 
 
 Apple's App Store and the Google Play Store both require that you provide icons for you app in various formats.
 
-Fortunatly, there's a few online-services that will generate those icons for you from a high-res source icon. 
+Fortunately, there are a few online-services that will generate those icons for you from a high-res source icon.
 
 I personnaly use https://makeappicon.com
 
@@ -388,9 +389,9 @@ I personnaly use https://makeappicon.com
 - Enter an email (you don't have to subscribe to the newsletter).
 - You will receive the icons by email.
 
-#### Setup icons for iOs
+#### Setup icons for iOS
 
-Move the content of `ios` in the following path in your project folder: `ios/AcmeApp/Images.xcassets/`  (if asked, replace existing content with the new icons).
+Move the content of `iOS` in the following path in your project folder: `iOS/AcmeApp/Images.xcassets/`  (if asked, replace existing content with the new icons).
 
 #### Setup icons for Android
 

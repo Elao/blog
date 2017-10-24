@@ -61,8 +61,8 @@ author_username:    "elao"
 
 #### Header and thumbnail
 
-The recommanded format for your post's illustrations are:
-- __Header__: `2000 × 600`
+The recommended format for your post's illustrations are:
+- __Header__: `2000 × 600` (at least, but can be larger)
 - __Thumbnail__: `400 × 400`
 
 ### With Hugo
