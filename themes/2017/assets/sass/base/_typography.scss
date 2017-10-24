@@ -76,6 +76,15 @@ pre {
     }
 }
 
+p, li, td {
+    > code {
+        background: #ccc;
+        color: #333;
+        border-radius: 0.2em;
+        padding: 0 0.2em;
+    }
+}
+
 @media (max-width: $screen-xs-max) {
     h1, h2 {
         font-size: 30px;
