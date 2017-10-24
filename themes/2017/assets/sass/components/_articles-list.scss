@@ -216,4 +216,12 @@
             > div { padding: 25px; }
         }
     }
+
+    .articles-list.compact {
+        .content {
+            h3 {
+                a { word-wrap: break-word; }
+            }
+        }
+    }
 }

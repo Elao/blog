@@ -60,6 +60,15 @@
 
 @media (max-width: $screen-sm-max) {
     .category-header {
+        padding: 0;
+
         img { margin: 20px 0 0 0; }
+
+        .inner {
+            h1 {
+                font-size: 50px;
+                line-height: 55px;
+            }
+        }
     }
 }
