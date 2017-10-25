@@ -298,6 +298,7 @@ export default class App extends Component {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
+      backgroundColor: '#ffffff',
     },
     infos: {
       textAlign: 'center',
@@ -309,7 +310,7 @@ export default class App extends Component {
     const { styles } = App;
     const { APP_ENV, APP_VERSION, APP_BUILD } = Config;
     const { OS } = Platform;
-
+    
     return (
       <View style={styles.container}>
         <Text style={styles.infos}>
@@ -397,15 +398,80 @@ Move the content of `iOS` in the following path in your project folder: `iOS/Acm
 
 Move the content of `android` in the following path in your projet folder: `android/app/src/main/res`  (if asked, replace existing content with the new icons).
 
-### Google Play
+### Setting up a launch screen
 
-#### Add an user
+#### Generation
 
-#### Create app
+For splash screen, I use: http://apetools.webprofusion.com/tools/imagegorilla
 
-####  Handle Alpha / Beta Users
+- Upload a hight-res square splash screen (ideally `2048x2048`).
+- Press `Kapow`.
+- Download the zip file.
 
-#### Generate icon and launch screens
+Then place the generated launch screen in the same folder as the store icons described above.
 
-Illustration by
-<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="https://unsplash.com/@neonbrand?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from NeONBRAND"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title></title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">NeONBRAND</span></a>
+#### Configuration
+
+##### iOS
+
+Open your project in XCode:
+
+- In the _General_ tab, go to the _App Icons and Launch Images_ section.
+- On the _Launch Images Source_ line, click the _User Asset Catalog_ button, then click _migrate_.
+- Once done, click the little grey arrow at the end of the _App Icons Source_ line.
+
+Click on the newly created _LaunchImage_ catalog, and fill every required launch screen with the corresponding format from the generated image forlder.
+
+_Note:_ If you're having trouble figuring out which format correspond to wich case, the alert tab on the left will tell you exactly what size is expected for each image.
+
+![](/images/posts/2017/from-react-native-init-to-app-stores-real-quick/notice.png)
+
+Finally, go back in the _General_ tab, in the _App Icons and Launch Images_ section, do the follwing:
+
+* As _Launch Images Source_ select __LaunchImage__.
+* Empty the __Launch Screen File__.
+
+![](/images/posts/2017/from-react-native-init-to-app-stores-real-quick/launch_screen_setup.png)
+
+_Note:_ You can now delete the `LAunchScreen.xib` in the _AcmeApp_ folder.
+
+##### Android
+
+Create a `android/app/src/main/res/drawable/splash_screen.xml` file:
+
+{{< highlight xml >}}
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/screen"/>
+    </item>
+</layer-list>
+{{< /highlight >}}
+
+Create a `a`ndroid/app/src/main/res/values/colors.xml` file:
+{{< highlight xml >}}
+<resources>
+    <color name="primary">#ffffff</color>
+</resources>
+{{< /highlight >}}
+
+_Note:_ here `#ffffff` is there to set a white background to the app, feel free to replace it with the color of your choice.
+
+Then edit `android/app/src/main/res/values/styles.xml` to add the following node in the _style_ tag:
+
+{{< highlight diff >}}
+<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
++    <item name="android:windowBackground">@drawable/splash_screen</item>
+</style>
+{{< /highlight >}}
+
+## iTunes Connect
+
+## Google Play
+
+### Add an user
+
+### Create app
+
+### Handle Alpha / Beta Users
