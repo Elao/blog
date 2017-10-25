@@ -1,0 +1,21 @@
+{{ partial "head.html" . }}
+
+<body class="detail">
+    {{ partial "nav-overlay.html" . }}
+    <div id="all">
+        {{ partial "navbar.html" . }}
+        <div class="page-404">
+            <div>
+                <h1 id="title">404</h1>
+                <p>Vous êtes perdu.</p>
+            </div>
+            <img src="/images/lost-hedgedog.gif" alt="">
+            <div>
+                <a href="{{ .Site.BaseURL }}" class="btn">Revenir au blog</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {{ partial "footer.html" . }}
+    </div>
+</body>

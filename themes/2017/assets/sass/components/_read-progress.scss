@@ -1,0 +1,19 @@
+#read-progress {
+    position: fixed;
+    top: 0;
+    left: 100px;
+    z-index: 500;
+    transition: all 0.15s linear;
+
+    > div {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 3px;
+        background-color: $main-color;
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    #read-progress { left: 60px; }
+}

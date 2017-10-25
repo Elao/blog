@@ -1,0 +1,40 @@
+{{ $author := index .Site.Data.authors .Params.author_username .Lang }}
+{{ $social := (index .Site.Data.authors $.Params.author_username).social }}
+
+{{ if eq .Type "post" }}
+    <script type="application/ld+json">
+    {
+      "@context":       "http://schema.org",
+      "@type":          "BlogPosting",
+      "mainEntityOfPage":{
+        "@type":"WebPage",
+        "@id":"{{ .Permalink }}"
+      },
+      "name":           "{{ .Title }}",
+      "headline":       "{{ .Title }}",
+      "articleSection": "{{ .Section }}",
+      "datePublished":  "{{ .PublishDate.Format "02 Jan 2006" }}",
+      "dateModified":   "{{ if isset .Params "modifiedDate" }}{{ .Params.modifiedDate | dateFormat "02 Jan 2006" }}{{ else }}{{ .PublishDate.Format "02 Jan 2006" }}{{ end }}",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{ .Site.BaseURL }}{{ slicestr .Params.thumbnail 1 }}",
+        "height": 800,
+        "width": 800
+      },
+      "inLanguage":     "{{ .Site.Params.locale }}",
+      "author":         "{{ $author.display_name }}",
+      "publisher": {
+        "@type":        "Organization",
+        "name":         "ELAO",
+        "logo": {
+          "@type":      "ImageObject",
+          "url":        "{{ .Site.BaseURL }}images/elao_60x60.jpg",
+          "width":      60,
+          "height":     60
+        }
+      },
+      "url":            "{{ .Permalink }}"
+    }
+    </script>
+
+{{ end }}

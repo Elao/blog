@@ -1,0 +1,21 @@
+.btn {
+    padding: 5px 25px;
+    background: transparent;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 2px solid $main-color;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+    transition: all 0.15s linear;
+
+    &, &:visited {
+        color: $main-color;
+    }
+
+    &:hover {
+        background: $main-color;
+        text-decoration: none;
+        color: #FFF;
+    }
+}
