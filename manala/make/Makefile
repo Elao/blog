@@ -22,8 +22,8 @@ MANALA_HUGO_OPTIONS  = --theme $(HUGO_THEME)
 MANALA_HUGO_OPTIONS += $(if $(APP_URL),--baseURL $(subst ://,://$(if $(APP_URL_SUBDOMAIN),$(APP_URL_SUBDOMAIN).),$(APP_URL)))
 MANALA_HUGO_OPTIONS += --cleanDestinationDir
 
-HUGO            = $(MANALA_HUGO) 
-HUGO_SERVER     = $(MANALA_HUGO_SERVER) 
+HUGO            = $(MANALA_HUGO)
+HUGO_SERVER     = $(MANALA_HUGO_SERVER)
 MAKE_HUGO_THEME = make --silent --directory themes/$(HUGO_THEME)
 
 # Development
@@ -85,4 +85,4 @@ include $(MANALA_DIR)/make/Makefile.laravel-mix
 include $(MANALA_DIR)/make/Makefile.optimize
 include $(MANALA_DIR)/make/Makefile.rsync
 
--include $(MANALA_DIR)/../Makefile.local
+-include $(MANALA_DIR)/../.env
