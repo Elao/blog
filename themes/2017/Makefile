@@ -8,6 +8,8 @@ include ../../manala/make/Makefile
 
 ## Install - All
 install@%:
+	$(call log,Clean)
+	rm -Rf node_modules
 	$(call log,Yarn)
 	yarn install
 
