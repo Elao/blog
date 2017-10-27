@@ -2,7 +2,7 @@
   translation: "Lire la suite ..."
 - id: post_read_post
   translation: "Lire l'article"
-- id: post_wrote_by
+- id: post_written_by
   translation: "Écrit par"
 - id: post_prev
   translation: "Précédent"
