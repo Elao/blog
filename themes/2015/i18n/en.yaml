@@ -2,8 +2,8 @@
   translation: "Read more"
 - id: post_read_post
   translation: "Read"
-- id: post_wrote_by
-  translation: "Wrote by"
+- id: post_written_by
+  translation: "Written by"
 - id: post_prev
   translation: "Previous"
 - id: post_next
