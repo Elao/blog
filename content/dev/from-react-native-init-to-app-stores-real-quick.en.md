@@ -82,7 +82,7 @@ Note the format of the unique identifier: a reverse domain name, starting with `
 
 I strongly recommend that you follow this format and avoid any special character.
 
-This idientifier must not be already used on Google Play Store or Apple's App Store.
+This identifier must not be already used on Google Play Store or Apple's App Store.
 
 Once published, an app can't change its identifier, so choose a name that can live through the whole life of the app.
 Don't worry though, it's only a technical identifier, it will not be displayed to the public anywhere and you'll have a _Display name_ for that and this one can change anytime you need.
@@ -128,7 +128,7 @@ yarn add react-native-config
 react-native link react-native-config
 {{< /highlight >}}
 
-Then create an Env file for each environnment in the root folder of the project, with the following suggested variables:
+Then create an Env file for each environment in the root folder of the project, with the following suggested variables:
 
 __.env.development__
 
@@ -310,7 +310,7 @@ export default class App extends Component {
     const { styles } = App;
     const { APP_ENV, APP_VERSION, APP_BUILD } = Config;
     const { OS } = Platform;
-    
+
     return (
       <View style={styles.container}>
         <Text style={styles.infos}>
@@ -336,9 +336,9 @@ Now a simple `react-native run-iOS` should start your app in iOS simulator.
 - `react-native run-iOS --device --configuration Release`
   Run the app on a real iPhone as a release (fast and no debug, just like it will be in the store).
 - `react-native run-android `
-  Run the app on a any simulated or real android device found.
+  Run the app on any simulated or real android device found.
 - `react-native run-android --variant=release `
-  Run the app on a any simulated or real android device found, as a release.
+  Run the app on any simulated or real android device found, as a release.
 
 What's more, we can now run the app in a _certain_ environment by specifying the `ENVFILE` that React Native must use:
 
@@ -380,11 +380,11 @@ Note the handy [Makefile](https://github.com/Elao/AcmeApp/blob/master/Makefile) 
 
 ### Generate store icons
 
-Apple's App Store and the Google Play Store both require that you provide icons for you app in various formats.
+Apple's App Store and the Google Play Store both require that you provide icons for your app in various formats.
 
 Fortunately, there are a few online-services that will generate those icons for you from a high-res source icon.
 
-I personnaly use https://makeappicon.com
+I personally use https://makeappicon.com
 
 - Upload a high-res square icon (ideally `1536x1536 `).
 - Enter an email (you don't have to subscribe to the newsletter).
