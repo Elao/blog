@@ -23,7 +23,7 @@ Hi, I'm Thomas and I'm gonna show you how to build and release a React Native ap
 What we aim to accomplish:
 
 * Automated build process that generates signed and __ready-for-stores__ release builds.
-* Handling different environments (development, staging, production) with different variables (e.g. URL of the back-end API).
+* Handling different environments (development, staging, production) with different domain-related variables (e.g. URL of the back-end API).
 
 So let's get to it.
 
@@ -37,9 +37,11 @@ Also ensure that you agreed to Apple's latest terms and conditions (just launch 
 
 ### Android
 
-1. Get Android Studio with [tools required by React Native](https://facebook.github.io/react-native/docs/getting-started.html#1-install-android-studio)
-2. Launch Android Studio and install [Android SDK and other required libraries](https://facebook.github.io/react-native/docs/getting-started.html#2-install-the-android-sdk) _React Native requires Android 6.0 and SDK 23.0.1_
-3. Configure your [Android Home environment variable](https://facebook.github.io/react-native/docs/getting-started.html#3-configure-the-android-home-environment-variable) by adding the following lines in your bash profile file:
+<span class="side-note">🔧</span> Get Android Studio with [tools required by React Native](https://facebook.github.io/react-native/docs/getting-started.html#1-install-android-studio)
+
+<span class="side-note">🔧</span> Launch Android Studio and install [Android SDK and other required libraries](https://facebook.github.io/react-native/docs/getting-started.html#2-install-the-android-sdk) _React Native requires Android 6.0 and SDK 23.0.1_
+
+<span class="side-note">🔧</span> Configure your [Android Home environment variable](https://facebook.github.io/react-native/docs/getting-started.html#3-configure-the-android-home-environment-variable) by adding the following lines in your bash profile file:
 
 {{< highlight bash >}}
 export ANDROID_HOME=${HOME}/Library/Android/sdk
@@ -48,19 +50,19 @@ export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
 ## Create your app
 
-We won't be using [the default react-native way](https://facebook.github.io/react-native/docs/getting-started.html) that relies on [Expo](https://expo.io), a container to run your React-Native in.
+We won't be using [the default react-native way](https://facebook.github.io/react-native/docs/getting-started.html) that relies on [Expo](https://expo.io) (a container to run your React-Native code in).
 
 While [Expo](https://expo.io) might be fine for experimenting and quickly bootstraping an App, it's not compatible with setting up a _real release process_ as stated in our goals.
 
-So instead, let's go to the [Building Projects with Native Code](https://facebook.github.io/react-native/docs/getting-started.html#the-react-native-cli) documentation:
+So instead, let's go to the [Building Projects with Native Code](https://facebook.github.io/react-native/docs/getting-started.html#the-react-native-cli) section of the documentation:
 
-Install the Rect Native init tool:
+<span class="side-note">🔧</span> Install the React Native cli tool:
 
 {{< highlight bash >}}
 npm install -g react-native-cli
 {{< /highlight >}}
 
-Create your app and be careful to __choose a name that contains no dots, spaces or other special characters__.
+<span class="side-note">🔧</span> Create your app and be careful to __choose a name that contains no dots, spaces or other special characters__.
 
 {{< highlight bash >}}
 react-native init AcmeApp
@@ -74,7 +76,7 @@ To build a release of the app, we need to give it a few pieces of information:
 - A __unique identifier__: `com.acme.app`
 - A __version number__: `1.0.0`
 - A __build number__: `1`
-- Any __app-releted variables__ we need.
+- Any __domain-releted variables__ we need.
 
 #### Unique identifier
 
@@ -98,9 +100,9 @@ The build number is just an integer as simple as `1`.
 You'll increment build number _every time you publish a release_.
 You can't upload a release that has a build number inferior or equal to any build you ever uploaded for this app.
 
-#### App related variables
+#### Domain related variables
 
-We might also need some __app-releated variables__ like the address of the API providing the data for the app.
+We might also need some __domain-releated variables__ like the address of the API providing the data for the app.
 
 Such variables will likely have different values in different environments.
 
@@ -108,27 +110,36 @@ For example, we want to call `http://api.app.acme.test` in development mode in t
 
 ### Enable vendor name in Android
 
-In the `/android` folder, replace all occurrences of `com.acmeapp` by `com.acme.app`
+Before anything else, we need to configure Android to support the unique identifer we chose for the app.
 
-Then change the directory structure with the following commands:
+The init script generated a unique identifier for Android based on the name you gave it (e.g. `com.acmeapp` for `AcmeApp`).
+
+<span class="side-note light">💡</span> _You can see what name was generated by looking for the `applicationId` key in `android/app/build.gradle`._
+
+If you need to change that unique identifer, do it now as described below:
+
+<span class="side-note">🔧</span> In the `/android` folder, replace all occurrences of `com.acmeapp` by `com.acme.app`
+
+<span class="side-note">🔧</span> Then change the directory structure with the following commands:
 
 {{< highlight bash >}}
 mkdir android/app/src/main/java/com/acme
 mv android/app/src/main/java/com/acmeapp android/app/src/main/java/com/acme/app
 {{< /highlight >}}
+<span class="side-note light">💡</span> _You need a folder level for each dot in the app identifier._
 
 ### React Native Config
 
-For setting and accessing these variables whereever we need it, I recommend using [react-native-config](https://github.com/luggit/react-native-config)
+For setting and accessing the variables described above wherever we need it, I recommend using [react-native-config](https://github.com/luggit/react-native-config)
 
-Install it with:
+<span class="side-note">🔧</span> Install it with:
 
 {{< highlight bash >}}
 yarn add react-native-config
 react-native link react-native-config
 {{< /highlight >}}
 
-Then create an Env file for each environment in the root folder of the project, with the following suggested variables:
+<span class="side-note">🔧</span> Then create an Env file for each environment in the root folder of the project, with the following suggested variables:
 
 __.env.development__
 
@@ -162,13 +173,12 @@ API_HOST=http://api.app.acme.com
 
 ### Generate an Adroid Signing Key
 
-Edit your local gradle config file:
+Android require that you sign APK before releasing them on the Play Store.
+To do so you will need to generate a personal signing key and to configure your Gradle build to use that key.
 
-{{< highlight bash >}}
-vim ~/.gradle/gradle.properties
-{{< /highlight >}}
+Edit your local gradle config file `~/.gradle/gradle.properties`:
 
-Fill it with the following lines:
+<span class="side-note">🔧</span> Fill it with the following lines:
 
 {{< highlight ini >}}
 MY_RELEASE_STORE_FILE=my_release.keystore
@@ -176,15 +186,16 @@ MY_RELEASE_KEY_ALIAS=my_release
 MY_RELEASE_STORE_PASSWORD={Generate a 32 characters password}
 MY_RELEASE_KEY_PASSWORD={Generate another 32 characters password}
 {{< /highlight >}}
-_Note: you'll need to [generate 2 passwords](https://passwordsgenerator.net/)_
 
-Now generate the keystore key file:
+<span class="side-note light">💡</span> _You'll need to [generate 2 passwords](https://passwordsgenerator.net/)_
+
+<span class="side-note">🔧</span> Now generate the keystore key file:
 
 {{< highlight bash >}}
 keytool -genkey -v -keystore ~/.gradle/my_release.keystore -alias my_release -keyalg RSA -keysize 2048 -validity 10000
 {{< /highlight >}}
 
-Follow the instructions as below:
+<span class="side-note">🔧</span> Follow the instructions as below:
 
 {{< highlight bash >}}
 Entrez le mot de passe du fichier de clés: {MY_RELEASE_STORE_PASSWORD}
@@ -200,22 +211,23 @@ Entrez le mot de passe de la clé pour <my_release> {MY_RELEASE_KEY_PASSWORD}
 Ressaisissez le nouveau mot de passe : {MY_RELEASE_KEY_PASSWORD}
 {{< /highlight >}}
 
-Finally, link the keystore to the project with a symbolic link:
+<span class="side-note">🔧</span> Finally, link the keystore to the project with a symbolic link:
 
 {{< highlight bash >}}
 ln -s ~/.gradle/my_release.keystore android/app/my_release.keystore
 {{< /highlight >}}
+
 ### Configure the gradle build
 
-Edit `android/app/build.gradle` and apply the following changes
+Edit the `android/app/build.gradle` file and apply the following changes:
 
-Insert the following line on _line 2:_
+<span class="side-note">🔧</span> Insert the following line on _line 2:_
 
 {{< highlight groovy >}}
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 {{< /highlight >}}
 
-In the config block, replace the following lines:
+<span class="side-note">🔧</span> In the config block, replace the following lines:
 
 {{< highlight diff >}}
 defaultConfig {
@@ -223,11 +235,11 @@ defaultConfig {
 +    versionCode project.env.get("APP_BUILD") as Integer
 -    versionName "1.0"
 +    versionName project.env.get("APP_VERSION")
-    // ...
-    }
-    {{< /highlight >}}
+  // ...
+}
+{{< /highlight >}}
 
-Between the `splits` and `buildTypes` blocks (should be line 118) add the following block :
+<span class="side-note">🔧</span> Between the `splits` and `buildTypes` blocks (should be line 118) add the following block :
 
 {{< highlight groovy >}}
 signingConfigs {
@@ -240,7 +252,7 @@ signingConfigs {
 }
 {{< /highlight >}}
 
-Then add the `signingConfig` property in the `buildTypes > release` section (should be line 131)
+<span class="side-note">🔧</span> Then add the `signingConfig` property in the `buildTypes > release` section (should be line 131)
 
 {{< highlight groovy >}}
 buildTypes {
@@ -257,30 +269,40 @@ Open your iOS project `iOS/AcmeApp.xcodeproj` with Xcode and select the root ite
 
 #### In the _General_ tab
 
-In the _Identity_ section input the following values:
+<span class="side-note">🔧</span> In the _Identity_ section input the following values:
 
 - __Bundle Identifier__: Your app unique identifier `com.acme.app` (instead of _org.reactjs.native.example.AcmeApp_)
 - __Version__: `__RN_CONFIG_APP_VERSION`
 - __Build__: `__RN_CONFIG_APP_BUILD`
 
-In the _General_ > _Signing_ section:
-
-- Select a __Team__
+<span class="side-note">🔧</span> In the _Signing_ section, select a __Team__
 
 ![](/images/posts/2017/from-react-native-init-to-app-stores-real-quick/xcode_config.png)
 
 #### In the _Build Settings_ tab
 
-In the _All_ section:
+<span class="side-note">🔧</span> In the _All_ section:
 
 * Search for "preprocess"
 * Set __Preprocess Info.plist File__ to `Yes`
 * Set __Info.plist Preprocessor Prefix File__ to `${BUILD_DIR}/GeneratedInfoPlistDotEnv.h`
 * Set __Info.plist Other Preprocessor Flags__ to `-traditional`
 
-_If you don't see those settings, verify that "All" is selected at the top (instead of "Basic")._
-
 ![](/images/posts/2017/from-react-native-init-to-app-stores-real-quick/xcode_build_settings.png)
+
+<span class="side-note light">💡</span> _If you don't see those settings, verify that "All" is selected at the top (instead of "Basic")._
+
+### Change the public app name
+
+To change the name that will be displayed to the public on the stores:
+
+#### On iOS
+
+<span class="side-note">🔧</span> Open your project with XCode and set a __Display Name__ in the _General_ > _Identify_ section.
+
+#### On Android
+
+<span class="side-note">🔧</span> Set the `displayName` property in the the `app.json` file at the root of the project.
 
 ## Test our setup
 
@@ -321,6 +343,8 @@ export default class App extends Component {
         </Text>
       </View>
     );
+  }
+}
 {{< /highlight >}}
 
 ### Quick launch commands
@@ -347,35 +371,6 @@ What's more, we can now run the app in a _certain_ environment by specifying the
 | `ENVFILE=.env.development react-native run-iOS` | `ENVFILE=.env.staging react-native run-iOS ` | `ENVFILE=.env.production react-native run-iOS ` |
 | ![](/images/posts/2017/from-react-native-init-to-app-stores-real-quick/AcmeApp_dev.png) | ![](/images/posts/2017/from-react-native-init-to-app-stores-real-quick/AcmeApp_staging.png) | ![](/images/posts/2017/from-react-native-init-to-app-stores-real-quick/AcmeApp_production.png) |
 
-### Build store release
-
-#### iOS release
-
-{{< highlight bash >}}
-ENVFILE=.env.production xcodebuild \
-    -workspace ./iOS/AcmeApp.xcodeproj/project.xcworkspace \
-    -scheme AcmeApp \
-    -sdk iphoneos \
-    -configuration AppStoreDistribution archive \
-    -archivePath ./iOS/release/AcmeApp.xcarchive
-{{< /highlight >}}
-
-The archive will be available at `./iOS/release/AcmeApp.xcarchive` and you can open it in Xcode to build an IPA for development purpose or upload it to the App Store.
-
-#### Android release
-
-{{< highlight bash >}}
-. ./.env.production && cd android && ./gradlew assembleRelease
-{{< /highlight >}}
-
-The APK will be available at `./android/app/build/outputs/apk/app-release.apk` and you can [upload it directly to the Play Store](https://play.google.com/apps/publish).
-
-## Troubles?
-
-Here's a aworking example of all we discussed above : https://github.com/Elao/AcmeApp
-
-Note the handy [Makefile](https://github.com/Elao/AcmeApp/blob/master/Makefile) that hides all complex build and release commands behind simple make tasks like:  `make run android` or `make release-iOS`
-
 ## Store configuration
 
 ### Generate store icons
@@ -392,11 +387,11 @@ I personally use https://makeappicon.com
 
 #### Setup icons for iOS
 
-Move the content of `iOS` in the following path in your project folder: `iOS/AcmeApp/Images.xcassets/`  (if asked, replace existing content with the new icons).
+<span class="side-note">🔧</span> Move the content of `iOS` in the following path in your project folder: `iOS/AcmeApp/Images.xcassets/`  (if asked, replace existing content with the new icons).
 
 #### Setup icons for Android
 
-Move the content of `android` in the following path in your projet folder: `android/app/src/main/res`  (if asked, replace existing content with the new icons).
+<span class="side-note">🔧</span> Move the content of `android` in the following path in your projet folder: `android/app/src/main/res`  (if asked, replace existing content with the new icons).
 
 ### Setting up a launch screen
 
@@ -408,7 +403,7 @@ For splash screen, I use: http://apetools.webprofusion.com/tools/imagegorilla
 - Press `Kapow`.
 - Download the zip file.
 
-Then place the generated launch screen in the same folder as the store icons described above.
+<span class="side-note light">🔧</span> Then place the generated launch screen in the same folder as the store icons described above.
 
 #### Configuration
 
@@ -420,24 +415,24 @@ Open your project in XCode:
 - On the _Launch Images Source_ line, click the _User Asset Catalog_ button, then click _migrate_.
 - Once done, click the little grey arrow at the end of the _App Icons Source_ line.
 
-Click on the newly created _LaunchImage_ catalog, and fill every required launch screen with the corresponding format from the generated image forlder.
+<span class="side-note">🔧</span> Click on the newly created _LaunchImage_ catalog, and fill every required launch screen with the corresponding format from the generated image forlder.
 
-_Note:_ If you're having trouble figuring out which format correspond to wich case, the alert tab on the left will tell you exactly what size is expected for each image.
+<span class="side-note light">💡</span> _If you're having trouble figuring out which format correspond to wich case, the alert tab on the left will tell you exactly what size is expected for each image._
 
 ![](/images/posts/2017/from-react-native-init-to-app-stores-real-quick/notice.png)
 
-Finally, go back in the _General_ tab, in the _App Icons and Launch Images_ section, do the follwing:
+<span class="side-note">🔧</span> Finally, go back in the _General_ tab, in the _App Icons and Launch Images_ section, do the follwing:
 
 * As _Launch Images Source_ select __LaunchImage__.
 * Empty the __Launch Screen File__.
 
 ![](/images/posts/2017/from-react-native-init-to-app-stores-real-quick/launch_screen_setup.png)
 
-_Note:_ You can now delete the `LAunchScreen.xib` in the _AcmeApp_ folder.
+<span class="side-note light">💡</span> _You can now delete the `LaunchScreen.xib` in the `AcmeApp` folder._
 
 ##### Android
 
-Create a `android/app/src/main/res/drawable/splash_screen.xml` file:
+<span class="side-note">🔧</span> Create a `android/app/src/main/res/drawable/splash_screen.xml` file:
 
 {{< highlight xml >}}
 <?xml version="1.0" encoding="utf-8"?>
@@ -448,16 +443,17 @@ Create a `android/app/src/main/res/drawable/splash_screen.xml` file:
 </layer-list>
 {{< /highlight >}}
 
-Create a `a`ndroid/app/src/main/res/values/colors.xml` file:
+<span class="side-note">🔧</span> Create a `android/app/src/main/res/values/colors.xml` file:
+
 {{< highlight xml >}}
 <resources>
     <color name="primary">#ffffff</color>
 </resources>
 {{< /highlight >}}
 
-_Note:_ here `#ffffff` is there to set a white background to the app, feel free to replace it with the color of your choice.
+<span class="side-note light">💡</span> _Here `#ffffff` is there to set a white background to the app, feel free to replace it with the color of your choice._
 
-Then edit `android/app/src/main/res/values/styles.xml` to add the following node in the _style_ tag:
+<span class="side-note">🔧</span> Then edit `android/app/src/main/res/values/styles.xml` to add the following node in the _style_ tag:
 
 {{< highlight diff >}}
 <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -466,12 +462,37 @@ Then edit `android/app/src/main/res/values/styles.xml` to add the following node
 </style>
 {{< /highlight >}}
 
-## iTunes Connect
+## Build store release
 
-## Google Play
+### iOS release
 
-### Add an user
+The following commande will generate your iOS release:
 
-### Create app
+{{< highlight bash >}}
+ENVFILE=.env.production xcodebuild \
+    -workspace ./iOS/AcmeApp.xcodeproj/project.xcworkspace \
+    -scheme AcmeApp \
+    -sdk iphoneos \
+    -configuration AppStoreDistribution archive \
+    -archivePath ./iOS/release/AcmeApp.xcarchive
+{{< /highlight >}}
 
-### Handle Alpha / Beta Users
+The archive will be available at `./iOS/release/AcmeApp.xcarchive` and you can open it in Xcode to build an IPA for development purpose or upload it to the App Store.
+
+### Android release
+
+The following commande will generate your Android release:
+
+{{< highlight bash >}}
+. ./.env.production && cd android && ./gradlew assembleRelease
+{{< /highlight >}}
+
+The APK will be available at `./android/app/build/outputs/apk/app-release.apk` and you can [upload it directly to the Play Store](https://play.google.com/apps/publish).
+
+## Troubles?
+
+Here's a working example of all we discussed above : https://github.com/Elao/AcmeApp
+
+<span class="side-note light">💡</span> _Note the handy [Makefile](https://github.com/Elao/AcmeApp/blob/master/Makefile) that hides all complex build and release commands behind simple make tasks like:  `make run android` or `make release-iOS`_
+
+Also don't hesitate to reach out for help in the comment or on social medias.
