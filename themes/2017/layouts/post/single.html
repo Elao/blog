@@ -41,7 +41,10 @@
                 <img src="{{ if isset .Params "header_img" }}{{ index .Params "header_img" }}{{ else }}https://placeimg.com/1000/310/any{{ end }}" alt="" />
             </div>
         </header>
-        <article class="article container">
+        <article class="article single container">
+            {{ if .Params.summary }}
+            <div class="summary"></div>
+            {{ end }}
             {{ .Content }}
             <div class="socials">
                 <div class="article-footer">

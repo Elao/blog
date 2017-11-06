@@ -1,4 +1,6 @@
 var $ = window.jQuery = require('jquery');
+var Anchor = require('./Anchor');
+var Summary = require('./Summary');
 
 require('./owl.carousel.min');
 
@@ -76,8 +78,15 @@ $(window).load(function(){
     }
 });
 
-$(window).load(function(){
-    // TODO: Summary
+$(window).load(() => {
+    const titles = Array.from($('article.single').find('h1, h2, h3, h4, h5, h6'));
+    const summary = $('article.single .summary');
+
+    titles.forEach(title => new Anchor(title));
+
+    if (summary) {
+        new Summary(summary[0], titles);
+    }
 });
 
 (function() {
