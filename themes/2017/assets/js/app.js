@@ -76,6 +76,10 @@ $(window).load(function(){
     }
 });
 
+$(window).load(function(){
+    // TODO: Summary
+});
+
 (function() {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js');
