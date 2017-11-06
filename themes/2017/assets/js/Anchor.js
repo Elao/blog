@@ -14,7 +14,7 @@ class Anchor {
         const { id } = this.element;
         const link = document.createElement('a');
 
-        link.setAttribute('href', `#${id}`);
+        link.href = `#${id}`;
         link.className = 'anchor';
 
         return link;

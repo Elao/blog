@@ -14,7 +14,7 @@ class Summary {
         const { id, innerText, tagName } = title;
         const link = document.createElement('a');
 
-        link.setAttribute('href', `#${id}`);
+        link.href = `#${id}`;
         link.innerText = innerText;
         link.className = tagName.toLowerCase();
 
