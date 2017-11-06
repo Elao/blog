@@ -125,13 +125,25 @@ social:
   google_plus_id:  "~"
 ```
 
+## Summary
+
+You can generate a summary for your article by setting this variable in the header:
+
+```diff
+slug:           "my-article"
+description:    "My article"
++ summary:        true
+```
+
+The summary will be constructed based on all the titles in your article.
+
 ## Expose your current branch (for review)
 
 Every branch pushed to remote `origin` is deployed to staging in order to share your work in progress with the rest of the team :
 
 `http://<my-branch>.blog.elao.elao.ninja/`
 
-> :warning: The branch name is normalized : 
+> :warning: The branch name is normalized :
 > - all special characters such as `_` are replaced with an hyphen (`-`)
 > - slash-separated parts (`/`) are reversed and made dot-separated. Example: `dev/vue-js-with-symfony` will translate into `vue-js-with-symfony.dev`
 
