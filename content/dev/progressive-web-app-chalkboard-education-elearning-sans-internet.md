@@ -144,6 +144,11 @@ const networkInterface = createNetworkInterface({
 });
 {{< /highlight >}}
 
+*\#protips* : pour gérer l'accès à des contenus avec du routing et à la fois que ces contenus soient disponibles
+hors-ligne sans que l'url ait été visitée au préalable, il est quasi indispensable d'utiliser des urls avec un
+[hash](https://developer.mozilla.org/fr/docs/Web/API/window/location#Propri.C3.A9t.C3.A9s)
+(/#/whatever) et le [HashRouter](https://reacttraining.com/react-router/web/api/HashRouter) de React Router fait le boulot.
+
 ### API GraphQL ♥️
 
 Nous avons choisi d'implémenter une API [GraphQL](http://graphql.org/) au lieu de REST :
