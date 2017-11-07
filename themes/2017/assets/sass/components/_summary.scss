@@ -2,6 +2,7 @@
     width: 100%;
     border-left: solid 3px $main-color;
     padding-left: 20px;
+    margin-bottom: 20px;
 
     a {
         display: block;
@@ -73,13 +74,23 @@
     }
 }
 
-@media (min-width: 1590px) {
+@media (min-width: $screen-lg + 250px) {
     .summary {
         position: absolute;
-        top: 50px;
-        left: -320px;
+        top: 0;
+        padding-left: 0;
+        margin-top: 100px;
+        margin-left: -320px;
+        margin-bottom: 0;
         width: 250px;
         border-left: none;
-        padding-left: 0;
+
+        a {
+            line-height: 1.75em;
+        }
+    }
+
+    .summary.fixed {
+        position: fixed;
     }
 }

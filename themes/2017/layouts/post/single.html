@@ -43,7 +43,7 @@
         </header>
         <article class="article single container">
             {{ if .Params.summary }}
-            <div class="summary"></div>
+            <div class="summary" data-summary="{{ .Params.summary }}"></div>
             {{ end }}
             {{ .Content }}
             <div class="socials">

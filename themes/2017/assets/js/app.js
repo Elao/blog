@@ -79,13 +79,17 @@ $(window).load(function(){
 });
 
 $(window).load(() => {
-    const titles = Array.from($('article.single').find('h1, h2, h3, h4, h5, h6'));
-    const summary = $('article.single .summary');
+    const article = $('article.single');
+    const summary = article.find('.summary');
+    const titles = Array.from(article.find('h1, h2, h3, h4, h5, h6'));
 
     titles.forEach(title => new Anchor(title));
 
     if (summary) {
-        new Summary(summary[0], titles);
+        const limit = typeof summary.data('summary') === 'number' ? summary.data('summary') : 6;
+        const titleQuery = new Array(limit).fill(true).map((value, index) => `h${index+1}`).join(', ');
+
+        new Summary(article[0], summary[0], Array.from(article.find(titleQuery)));
     }
 });
 
