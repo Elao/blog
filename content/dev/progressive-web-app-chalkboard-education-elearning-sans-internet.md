@@ -5,10 +5,10 @@ date:           "2017-11-27"
 publishdate:    "2017-11-27"
 draft:          false
 slug:           "progressive-web-app-chalkboard-education-elearning-sans-internet"
-description:    "Retour d'expérience sur la progressive web app Chalkboard Education"
+description:    "Retour d'expérience sur la conception de la progressive web app de Chalkboard Education"
 
-thumbnail:      "/images/posts/2017/chalkboard-education/courses-list.png"
-header_img:     "/images/posts/2017/chalkboard-education/courses-list.png"
+thumbnail:      "/images/posts/2017/chalkboard-education/woman-phone.jpg"
+header_img:     "/images/posts/2017/chalkboard-education/woman-phone.jpg"
 tags:           ["progressive web app", "service worker", "web", "mobile", "offline", "React", "Symfony", "GraphQL"]
 categories:     ["dev", "Symfony", "javascript"]
 
@@ -19,17 +19,17 @@ author_username: "rhanna"
 ## Le contexte
 
 Dans certains pays africains, le nombre de places disponibles à l'université est très limité.
-Par conséquent de nombreux étudiants n'ont pas accès à l'université.
+Par conséquent de nombreux.ses étudiant.e.s n'ont pas accès à l'université.
 La startup [Chalkboard Education](https://chalkboard.education/) implantée au Ghana et en Côte d'Ivoire a pour but de
 résoudre ce problème en diffusant les cours d'universités via les téléphones mobiles.
-Les étudiants africains n'ont certes pas forcément le dernier modèle de smartphone ni une connexion Internet fiable mais
-cela est suffisant pour accéder à la connaissance.
+Les étudiant.e.s africains n'ont certes pas forcément le dernier modèle de smartphone ni une connexion Internet fiable
+mais cela est suffisant pour accéder à la connaissance.
 
 ## Application native
 
 Elao accompagne Chalkboard Education depuis 2015 sur la conception de son produit.
 Une première preuve de concept a été réalisée en [React Native](https://facebook.github.io/react-native/) avec pour
-résultat une application Android déployée sur Google Play Store à destination de plusieurs centaines d'étudiants de
+résultat une application Android déployée sur Google Play Store à destination de plusieurs centaines d'étudiant.e.s de
 l'University Of Ghana.
 
 ## Progressive Web App
@@ -46,104 +46,80 @@ populations ayant un accès limité à Internet.
 - La fréquence de mise à jour est plus simple et ne dépend pas de la bonne volonté des stores d'applications.
 
 En quoi Chalkboard Education est une Progressive Web App ?
-- Le *front* déclare dun [manifeste d'une application web](https://developer.mozilla.org/fr/docs/Web/Manifest) permettant
+
+- Le *front* déclare un [manifeste d'une application web](https://developer.mozilla.org/fr/docs/Web/Manifest) permettant
 d'installer Chalkboard Education sur l'écran d'accueil du smartphone ou tablette.
-- Utilisation hors-ligne de l'application : tous les contenus pré-chargés et mis en cache permettant la consulation des
-cours par les étudiants sans Internet.
+- Utilisation hors-ligne de l'application : tous les contenus sont pré-chargés et mis en cache permettant la consulation
+des cours par les étudiant.e.s sans Internet.
 
-## Front office avec React et Redux ♥️
+## Application web avec React et Redux ♥️
 
-[Create React App](https://github.com/facebookincubator/create-react-app)
-Web app front en SPA avec React, Redux, Redux-persist et Webpack
+Il était évident pour nous que l'application front devrait être autonome et mise en cache navigateur.
+Nous avons fait le choix de
+[React](https://github.com/facebookincubator/create-react-app), avec du routing géré par
+[react-router](https://github.com/ReactTraining/react-router)
+et des états gérés par [Redux](https://github.com/reactjs/redux).
 
 ### Démo
 
-<div style="text-align:center; background: #333; padding: 20px">
-<video src="/images/posts/2017/chalkboard-education/demo.mp4" controls autoplay></video>
+L'étudiant.e reçoit son accès par SMS contenant un lien permettant de l'identifier, par exemple :
+https://www.chalkedu.co/#/login/PPQVY3B
+
+A l'ouverture de l'application, le contenu des cours est préchargé. La progression du chargement est affichée en haut de
+l'interface :
+
+<div style="text-align:center;">
+<video src="/images/posts/2017/chalkboard-education/demo-chalkboard.mp4" loop autoplay style="height:500px; border:1px solid #333"></video>
 </div>
 
 ### UI/UX inspirées des applications natives
 
-Material UI
-
-Eviter les formulaires.
-Centrer à l'écran les actions à faire par l'utilisateur.
+Pour l'UI de l'application, nous avons utilisé [Material UI](http://www.material-ui.com/), un ensemble de composants
+React qui implémente les bonnes pratiques *Material Design* édictées par Google.
 
 <p class="text-center">
-    <img src="/images/posts/2017/chalkboard-education/submit-progression.png" alt="Submit progression" style="max-width:80%"/>
+    <img src="/images/posts/2017/chalkboard-education/submit-progression.png" alt="Submit progression" style="height:500px; border:1px solid #333"/>
 </p>
 
-Ecran simple avec une seule action à faire:
-- choisir un cours dans une liste,
-- lire un cours et passer à la suite
-- valider sa progression en choisissant parmi SMS ou Internet.
+Nous avons également travaillé l'UX pour mobile afin de s'approcher de l'UX des applications natives. Pour cela, nous
+nous sommes inspirés d'applications existantes et nous nous sommes fixés quelques règles :
 
-### API GraphQL ♥️
+- Barre de navigation fixée en haut.
+- Éviter les formulaires : un formulaire avec deux champs radio a été remplacé par deux boutons par exemple.
+- Centrer à l'écran les actions à faire par l'utilisateur.
+- Ecran simple avec une seule action à faire:
+    - choisir un cours dans une liste,
+    - lire un cours et passer à la suite
+    - valider sa progression en choisissant parmi SMS ou Internet...
 
-Nous avons choisi d'implémenter une API GraphQL au lieu de REST :
-- pour réduire le nombre de requêtes HTTP,
-- laisser le front choisir les contenus qu'il souhaite utiliser,
-- parce que GraphQL c'est quand même bien cool.
-
-Par exemple dans la requête suivante le *front* demande à la fois :
-- un *currentDate* (une date serveur),
-- la liste des *courses* (ses *folders*, les *sessions* des *folders*, les *files* des *sessions*),
-- et le *user* courant. 
-
-{{< highlight js >}}
-// src/graphql/query/CoursesQuery.js
-import gql from 'graphql-tag';
-
-export default gql`
-  {
-    currentDate
-    user {
-      uuid
-      firstName
-      lastName
-      country
-      phoneNumber
-      locale
-    }
-    courses {
-      uuid
-      title
-      updatedAt
-      folders {
-        uuid
-        title
-        updatedAt
-        sessions {
-          uuid
-          title
-          updatedAt
-          files {
-            url
-            updatedAt
-          }
-        }
-      }
-    }
-  }
-`;
-{{< /highlight >}}
+Le développement était testé sur un ancien smartphone Android avec une ancienne version de Chrome afin de se mettre en
+"condition réelle".
 
 ### Mobile-first et Offline-first
 
-Check mise à jour toutes les 24h si l'utilisateur a une connexion.
-Nombre de Ko à télécharger pour chaque mise à jour.
-Les contenus sont stockés de différentes manières:
-le contenu du cours est dans le store Redux et persisté en localStorage
-les médias (images) du cours sont stockés en cache storage Service Worker
-Auth User
-HasUpdates
-Get Courses
-Fetch session content
-Fetch images URL
+L'application web de Chalkboard Education a été conçue à la fois pour un usage en *Mobile-first* et un usage en
+*Offline-first*.
+
+L'étudiant.e avec son téléphone connecté à un *hotspot wifi* télécharge les contenus, cours et images à la première
+connexion.
+
+Les contenus sont stockés de différentes manières dans le navigateur de l'étudiant.e:
+
+- le contenu du cours est dans le store Redux et persisté en
+[localStorage](https://developer.mozilla.org/fr/docs/Web/API/Storage/LocalStorage),
+- les médias (images) du cours sont stockés en
+[CacheStorage](https://developer.mozilla.org/fr/docs/Web/API/CacheStorage)
+grâce au
+[Service Worker](https://developer.mozilla.org/fr/docs/Web/API/ServiceWorker) déclarée par l'application.
+
+L'étudiant.e peut ainsi consulter les cours hors connexions.
+
+Une vérification de mise à jour est faites toutes les 24h si l'utilisateur a une connexion internet.
+Il est indiqué le nombre de Ko à télécharger pour chaque mise à jour.
 
 [Redux Persist](https://github.com/rt2zz/redux-persist) permet de persister le *store Redux* en
 [LocalStorage](https://developer.mozilla.org/fr/docs/Web/API/Storage/LocalStorage) et de réhydrater le *store* dès lors
-que la page web est rechargée.
+que la page web est rechargée :
 
 {{< highlight js >}}
 // store.js
@@ -188,6 +164,63 @@ networkInterface.use([
   }
 ]);
 {{< /highlight >}}
+
+### API GraphQL ♥️
+
+Nous avons choisi d'implémenter une API GraphQL au lieu de REST :
+
+- pour minimiser le nombre de requêtes HTTP,
+- laisser le *front* choisir les contenus qu'il souhaite utiliser,
+- parce que GraphQL c'est quand même bien cool.
+
+Par exemple dans la requête suivante le *front* demande à la fois :
+
+- un *currentDate* (une date serveur),
+- la liste des *courses* (ses *folders*, les *sessions* des *folders*, les *files* des *sessions*),
+- et le *user* courant. 
+
+{{< highlight js >}}
+// src/graphql/query/CoursesQuery.js
+import gql from 'graphql-tag';
+
+export default gql`
+  {
+    currentDate
+    user {
+      uuid
+      firstName
+      lastName
+      country
+      phoneNumber
+      locale
+    }
+    courses {
+      uuid
+      title
+      updatedAt
+      folders {
+        uuid
+        title
+        updatedAt
+        sessions {
+          uuid
+          title
+          updatedAt
+          files {
+            url
+            updatedAt
+          }
+        }
+      }
+    }
+  }
+`;
+{{< /highlight >}}
+
+Nous avons utilisé le très bon client GraphQL [Apollo client](https://github.com/apollographql/apollo-client).
+Il existe aussi une implémentation [Apollo pour React](https://github.com/apollographql/react-apollo) mais nous
+ne l'avons pas utilisé étant donné que notre application n'est pas *API-centric* : toutes les *datas* sont récupérées
+à la première connexion puis à la mise à jour.
 
 ### Service worker
 
@@ -235,38 +268,79 @@ module.exports = {
 };
 {{< /highlight >}}
 
-### Le SMS pour transporter de la donnée sans Internet
+### Le SMS pour transporter de la donnée à la place d'Internet
 
-Login via token unique par user envoyé par sms. Peu email. Identifiant téléphone
-Validation progression par sms
-Validation d'une session par internet ou par SMS. L'app front génère un code, envoyée par SMS.
-Sms lu par le back.
-Code décodé pour identifier l'utilisateur et la session validée
+Sur Chalkboard Education, l'étudiant.e doit valider sa progression. Pour cela il lui ai laissé le choix d'utiliser
+internet ou... le SMS.
+
+<p class="text-center">
+    <img src="/images/posts/2017/chalkboard-education/submit-validation.png" alt="Submit validation by SMS" style="height:500px; border:1px solid #333" />
+</p>
+
+Un code est généré par l'application web. Ce code est envoyé par SMS par l'étudiant.e à un numéro donné.
+
+A noter que pour déclencher la rédaction d'un SMS sous Android, il est possible d'utiliser un lien html avec
+le *scheme* `sms:`
+
+ `<a href="sms:+63344556677?body=Message">Send SMS</a>`
+
+Le back-office reçoit le code, identifie l'étudiant.e et la session concernée. Un SMS contenant un lien + code lui est
+envoyé en retour. L'étudiant.e clique sur le lien reçu, même hors-ligne, l'application web décode le code reçu et valide
+la session. L'étudiant.e peut ainsi valider la session courante et passer à la session suivante.
+
+### Poids de la PWA
+
+Lorsqu'on a pour projet de réaliser une progressice web app, il est important de surveiller le poids des fichiers css et
+javascript *buildés*. Sur ce projet, nous avons essayé d'avoir le minimum de dépendances.
+
+`$ yarn build`
+
+{{< highlight cli >}}
+  276.43 KB (+142 B)  build/static/js/main.8502d0fb.js
+  587 B (+11 B)       build/static/css/main.7edcdc8b.css 
+{{< /highlight >}}
+
+L'application *front* pèse ainsi moins de 300 Ko !
+
+### Audit
+
+Le panel Audit de Chrome indique qu'on est plutôt pas mal :
+
+<p class="text-center">
+    <img src="/images/posts/2017/chalkboard-education/audit.png" alt="Audit" />
+</p>
 
 ## Back office et API avec Symfony ♥️
 
 Chalkboard Education a besoin d'un back-office d'administration permettant de :
-- gérer les étudiants (créer, importer),
+
+- gérer les étudiant.e.s (créer, importer),
 - saisir les contenus des cours,
-- assigner des cours aux étudiants,
-- envoyer un SMS contenant l'url d'accèsà un étudiant,
-- voir la progression des étudiants pour chaque cours.
+- assigner des cours aux étudiant.e.s,
+- envoyer un SMS contenant l'url d'accès à un.e étudiant.e,
+- voir la progression des étudiant.s pour chaque cours.
+
+Le back-office permet aussi de traiter automatiquement des SMS reçu contenant des codes de validation de session et
+d'envoyer à l'étudiant.e un SMS en retour contenant un lien d'activation.
 
 Etant donné que l'on connait bien Symfony, c'était la solution idéale pour rapidement *bootstraper* le back office
-d'administration et l'API permettant d'accéder aux informations par le *front*.
+d'administration et l'API.
 
-Toutes nos classes métiers et tous les controllers Symfony sont testés unitairement par Phpunit.
-Des scénarios Behat permettent de couvrir également la quasi totalité des fonctionnalités du Back-Office.
+Toutes nos classes métiers et tous les *controllers* Symfony sont testés unitairement par Phpunit.
+Des scénarios [Behat](https://github.com/Behat/Behat) permettent de couvrir également la quasi totalité des
+fonctionnalités du Back-Office.
 
 ### Back office
 
 Pour tous nos *controllers*, nous nous sommes inspirés du *pattern Action-Domain-Response (ADR)* avec les
 [Invokable Controllers](http://symfony.com/doc/current/controller/service.html#invokable-controllers).
+
 Cela a beaucoup d'avantages :
-- Une classe *controller* = une action
-- Peu de ligne de code dans un *controller* : *Keep It Simple Stupid*
-- Cela pousse à découpler le code, et toute logique hors controller est codée dans des services du domaine
-- Une classe de *controller* est ainsi facilement testable unitairement
+
+- Une classe *controller* = une action.
+- Peu de ligne de code dans un *controller* : *Keep It Simple Stupid*.
+- Cela pousse à découpler le code, et toute logique hors *controller* est déportée dans des services du domaine.
+- Une classe de *controller* est ainsi facilement testable unitairement.
 
 Exemple de "nouveau" *controller* :
 
@@ -354,22 +428,13 @@ services:
         autowire: true
 {{< /highlight >}}
 
-Et pour 
-
-{{< highlight yaml >}}
-    App\Ui\Admin\Action\User\ConfirmImportAction:
-        autowire: true
-        arguments:
-            $importDir: '%infrastructure.user_import_dir%'
-{{< /highlight >}}
-
-
 ### GraphQL et Symfony
 
-https://github.com/overblog/GraphQLBundle
-et https://github.com/webonyx/graphql-php
+Pour concevoir un serveur d'API GraphQL, nous avons utilisé le bundle Symfony
+[overblog/GraphQLBundle](https://github.com/overblog/GraphQLBundle)
+lui même utilisant l'implémentation en PHP de [webonyx/graphql-php](https://github.com/webonyx/graphql-php).
 
-Schema
+Déclaration d'un schéma d'un cours :
 
 {{< highlight yaml >}}
 Course:
@@ -390,7 +455,7 @@ Course:
                 type: "[Folder]"
 {{< /highlight >}}
 
-Resolver
+Déclaration d'un *resolver* d'un cours :
 
 {{< highlight yaml >}}
 services:
@@ -399,3 +464,15 @@ services:
         tags:
             - { name: overblog_graphql.resolver, alias: "courses", method: "resolveCourses" }
 {{< /highlight >}}
+
+Nous avions des besoins assez simples. La mise en place d'un serveur GraphQL n'est vraiment pas plus compliqué que REST.
+
+## Conclusion
+
+Nous avons adoré travailler sur React / Redux / GraphQL, en faisant attention de bien penser l'UI/UX pour mobile.
+
+Nous avons adoré travailler avec le *pattern Action-Domain-Response* pour des *controllers* Symfony sexy.
+
+Mais ce que nous avons adoré par dessus tout, c'est que notre travail permet à des étudiant.e.s d'accéder à la
+connaissance.
+
