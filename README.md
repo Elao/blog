@@ -133,9 +133,13 @@ You can generate a summary for your article by setting this variable in the head
 slug:           "my-article"
 description:    "My article"
 + summary:        true
+// or
++ summary:        3 // h1 to h3
 ```
 
 The summary will be constructed based on all the titles in your article.
+
+You can specify the maximum level of title to include in the summary: e.g. `summary: 3` will include h1 to h3 titles.
 
 ## Expose your current branch (for review)
 
