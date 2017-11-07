@@ -484,7 +484,8 @@ Nous avions des besoins assez simples. La mise en place d'un serveur GraphQL n'e
 
 ## Conclusion
 
-Nous avons adoré travailler sur React / Redux / GraphQL, en faisant attention de bien penser l'UI/UX pour mobile.
+Nous avons adoré travailler sur React / Redux / GraphQL, à réfléchir l'utilisation d'une application web en hors-ligne
+tout en faisant attention de bien penser l'UI/UX pour mobile.
 
 Nous avons adoré travailler avec le *pattern Action-Domain-Response* pour des *controllers* Symfony sexy.
 
