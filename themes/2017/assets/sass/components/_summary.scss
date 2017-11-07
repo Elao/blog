@@ -2,7 +2,7 @@
     width: 100%;
     border-left: solid 3px $main-color;
     padding-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 
     a {
         display: block;
@@ -78,19 +78,20 @@
     .summary {
         position: absolute;
         top: 0;
-        padding-left: 0;
-        margin-top: 100px;
+        padding-left: 15px;
+        margin-top: 150px;
         margin-left: -320px;
         margin-bottom: 0;
-        width: 250px;
-        border-left: none;
+        width: 230px;
 
         a {
             line-height: 1.75em;
+
+            &.h1 { font-size: 16px; }
+            &.h2 { font-size: 15px; }
+            &.h3 { font-size: 14px; }
         }
     }
 
-    .summary.fixed {
-        position: fixed;
-    }
+    .summary.fixed { position: fixed; }
 }

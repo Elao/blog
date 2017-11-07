@@ -22,27 +22,25 @@
                 color: $text-color;
             }
 
-            &:hover { color: $main-color; }
+            &:hover {
+                color: $main-color;
+
+                .anchor { color: rgba(34, 34, 34, 0.4); }
+            }
         }
 
         a.anchor {
-            position: absolute;
-            left: -1em;
-            opacity: 0.3;
-            color: 'grey';
+            color: rgba(34, 34, 34, 0.4);
             text-decoration: none;
-            line-height: 1em;
+            margin-left: .3em;
 
             &::before {
-                content: '◆';
-                font-size: 0.8em;
+                content: '\e9cb';
+                font-family: 'icomoon';
+                font-size: .8em;
             }
-        }
 
-        &:hover {
-            a.anchor {
-                opacity: 1;
-            }
+            &:hover { color: $main-color; }
         }
     }
 
