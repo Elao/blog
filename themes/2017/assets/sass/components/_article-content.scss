@@ -120,19 +120,6 @@
             margin: 40px auto;
         }
     }
-
-    .summary {
-        a {
-            display: block;
-
-            &.h1 { margin-left: 0em; }
-            &.h2 { margin-left: 1em; }
-            &.h3 { margin-left: 2em; }
-            &.h4 { margin-left: 3em; }
-            &.h5 { margin-left: 4em; }
-            &.h6 { margin-left: 5em; }
-        }
-    }
 }
 
 @media (max-width: $screen-md-max) {
