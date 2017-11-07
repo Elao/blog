@@ -80,16 +80,19 @@ $(window).load(function(){
 
 $(window).load(() => {
     const article = $('article.single');
-    const summary = article.find('.summary');
-    const titles = Array.from(article.find('h1, h2, h3, h4, h5, h6'));
 
-    titles.forEach(title => new Anchor(title));
+    if (article[0]) {
+        const summary = article.find('.summary');
+        const titles = Array.from(article.find('h1, h2, h3, h4, h5, h6'));
 
-    if (summary) {
-        const limit = typeof summary.data('summary') === 'number' ? summary.data('summary') : 6;
-        const titleQuery = new Array(limit).fill(true).map((value, index) => `h${index+1}`).join(', ');
+        titles.forEach(title => new Anchor(title));
 
-        new Summary(article[0], summary[0], Array.from(article.find(titleQuery)));
+        if (summary[0]) {
+            const limit = typeof summary.data('summary') === 'number' ? summary.data('summary') : 6;
+            const titleQuery = new Array(limit).fill(true).map((value, index) => `h${index+1}`).join(', ');
+
+            new Summary(article[0], summary[0], Array.from(article.find(titleQuery)));
+        }
     }
 });
 
