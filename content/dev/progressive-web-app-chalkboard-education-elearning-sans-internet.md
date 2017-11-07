@@ -19,17 +19,17 @@ author_username: "rhanna"
 ## Le contexte
 
 Dans certains pays africains, le nombre de places disponibles à l'université est très limité.
-Par conséquent de nombreux.ses étudiant.e.s n'ont pas accès à l'université.
+Par conséquent de nombreux•ses étudiant•e•s n'ont pas accès à l'université.
 La startup [Chalkboard Education](https://chalkboard.education/) implantée au Ghana et en Côte d'Ivoire a pour but de
 résoudre ce problème en diffusant les cours d'universités via les téléphones mobiles.
-Les étudiant.e.s africains n'ont certes pas forcément le dernier modèle de smartphone ni une connexion Internet fiable
+Les étudiant•e•s africains n'ont certes pas forcément le dernier modèle de smartphone ni une connexion Internet fiable
 mais cela est suffisant pour accéder à la connaissance.
 
 ## Application native
 
 Elao accompagne Chalkboard Education depuis 2015 sur la conception de son produit.
 Une première preuve de concept a été réalisée en [React Native](https://facebook.github.io/react-native/) avec pour
-résultat une application Android déployée sur Google Play Store à destination de plusieurs centaines d'étudiant.e.s de
+résultat une application Android déployée sur Google Play Store à destination de plusieurs centaines d'étudiant•e•s de
 l'University Of Ghana.
 
 ## Progressive Web App
@@ -50,7 +50,7 @@ En quoi Chalkboard Education est une Progressive Web App ?
 - Le *front* déclare un [manifeste d'une application web](https://developer.mozilla.org/fr/docs/Web/Manifest) permettant
 d'installer Chalkboard Education sur l'écran d'accueil du smartphone ou tablette.
 - Utilisation hors-ligne de l'application : tous les contenus sont pré-chargés et mis en cache permettant la consulation
-des cours par les étudiant.e.s sans Internet.
+des cours par les étudiant•e•s sans Internet.
 
 ## Application web avec React et Redux ♥️
 
@@ -62,7 +62,7 @@ et des états gérés par [Redux](https://github.com/reactjs/redux).
 
 ### Démo
 
-L'étudiant.e reçoit son accès par SMS contenant un lien permettant de l'identifier, par exemple :
+L'étudiant•e reçoit son accès par SMS contenant un lien permettant de l'identifier, par exemple :
 https://www.chalkedu.co/#/login/PPQVY3B
 
 A l'ouverture de l'application, le contenu des cours est préchargé. La progression du chargement est affichée en haut de
@@ -100,10 +100,10 @@ Le développement était testé sur un ancien smartphone Android avec une ancien
 L'application web de Chalkboard Education a été conçue à la fois pour un usage en *Mobile-first* et un usage en
 *Offline-first*.
 
-L'étudiant.e avec son téléphone connecté à un *hotspot wifi* télécharge les contenus, cours et images à la première
+L'étudiant•e avec son téléphone connecté à un *hotspot wifi* télécharge les contenus, cours et images à la première
 connexion.
 
-Les contenus sont stockés de différentes manières dans le navigateur de l'étudiant.e:
+Les contenus sont stockés de différentes manières dans le navigateur de l'étudiant•e:
 
 - le contenu du cours est dans le store Redux et persisté en
 [localStorage](https://developer.mozilla.org/fr/docs/Web/API/Storage/LocalStorage),
@@ -112,7 +112,7 @@ Les contenus sont stockés de différentes manières dans le navigateur de l'ét
 grâce au
 [Service Worker](https://developer.mozilla.org/fr/docs/Web/API/ServiceWorker) déclarée par l'application.
 
-L'étudiant.e peut ainsi consulter les cours hors connexions.
+L'étudiant•e peut ainsi consulter les cours hors connexions.
 
 Une vérification de mise à jour est faites toutes les 24h si l'utilisateur a une connexion internet.
 Il est indiqué le nombre de Ko à télécharger pour chaque mise à jour.
@@ -142,32 +142,11 @@ const store = createStore(
 const networkInterface = createNetworkInterface({
   uri: 'https://api.chalkboard.education'
 });
-
-const GraphqlClient = new ApolloClient({ networkInterface });
-
-networkInterface.use([
-  {
-    applyMiddleware(req, next) {
-      // Create the header object if needed
-      if (!req.options.headers) {
-        req.options.headers = {};
-      }
-
-      const userToken = store.getState().currentUser.token;
-      
-      req.options.headers.authorization = userToken
-        ? `Bearer ${userToken}`
-        : null;
-      
-      next();
-    }
-  }
-]);
 {{< /highlight >}}
 
 ### API GraphQL ♥️
 
-Nous avons choisi d'implémenter une API GraphQL au lieu de REST :
+Nous avons choisi d'implémenter une API [GraphQL](http://graphql.org/) au lieu de REST :
 
 - pour minimiser le nombre de requêtes HTTP,
 - laisser le *front* choisir les contenus qu'il souhaite utiliser,
@@ -222,6 +201,37 @@ Il existe aussi une implémentation [Apollo pour React](https://github.com/apoll
 ne l'avons pas utilisé étant donné que notre application n'est pas *API-centric* : toutes les *datas* sont récupérées
 à la première connexion puis à la mise à jour.
 
+Et pour l'identification de l'étudiant•e, on passe le *token user* dans l'entête HTTP
+[Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization) de cette façon :
+
+{{< highlight js >}}
+// store.js
+import ApolloClient, { createNetworkInterface } from 'apollo-client';
+
+// ...
+
+const GraphqlClient = new ApolloClient({ networkInterface });
+
+networkInterface.use([
+  {
+    applyMiddleware(req, next) {
+      // Create the header object if needed
+      if (!req.options.headers) {
+        req.options.headers = {};
+      }
+
+      const userToken = store.getState().currentUser.token;
+      
+      req.options.headers.authorization = userToken
+        ? `Bearer ${userToken}`
+        : null;
+      
+      next();
+    }
+  }
+]);
+{{< /highlight >}}
+
 ### Service worker
 
 [Create React App](https://github.com/facebookincubator/create-react-app) permet facilement de *bootstraper* un front
@@ -270,23 +280,23 @@ module.exports = {
 
 ### Le SMS pour transporter de la donnée à la place d'Internet
 
-Sur Chalkboard Education, l'étudiant.e doit valider sa progression. Pour cela il lui ai laissé le choix d'utiliser
+Sur Chalkboard Education, l'étudiant•e doit valider sa progression. Pour cela il lui ai laissé le choix d'utiliser
 internet ou... le SMS.
 
 <p class="text-center">
     <img src="/images/posts/2017/chalkboard-education/submit-validation.png" alt="Submit validation by SMS" style="height:500px; border:1px solid #333" />
 </p>
 
-Un code est généré par l'application web. Ce code est envoyé par SMS par l'étudiant.e à un numéro donné.
+Un code est généré par l'application web. Ce code est envoyé par SMS par l'étudiant•e à un numéro donné.
 
 A noter que pour déclencher la rédaction d'un SMS sous Android, il est possible d'utiliser un lien html avec
 le *scheme* `sms:`
 
  `<a href="sms:+63344556677?body=Message">Send SMS</a>`
 
-Le back-office reçoit le code, identifie l'étudiant.e et la session concernée. Un SMS contenant un lien + code lui est
-envoyé en retour. L'étudiant.e clique sur le lien reçu, même hors-ligne, l'application web décode le code reçu et valide
-la session. L'étudiant.e peut ainsi valider la session courante et passer à la session suivante.
+Le back-office reçoit le code, identifie l'étudiant•e et la session concernée. Un SMS contenant un lien + code lui est
+envoyé en retour. L'étudiant•e clique sur le lien reçu, même hors-ligne, l'application web décode le code reçu et valide
+la session. L'étudiant•e peut ainsi valider la session courante et passer à la session suivante.
 
 ### Poids de la PWA
 
@@ -314,14 +324,14 @@ Le panel Audit de Chrome indique qu'on est plutôt pas mal :
 
 Chalkboard Education a besoin d'un back-office d'administration permettant de :
 
-- gérer les étudiant.e.s (créer, importer),
+- gérer les étudiant•e•s (créer, importer),
 - saisir les contenus des cours,
-- assigner des cours aux étudiant.e.s,
-- envoyer un SMS contenant l'url d'accès à un.e étudiant.e,
-- voir la progression des étudiant.s pour chaque cours.
+- assigner des cours aux étudiant•e•s,
+- envoyer un SMS contenant l'url d'accès à un.e étudiant•e,
+- voir la progression des étudiant•e•s pour chaque cours.
 
 Le back-office permet aussi de traiter automatiquement des SMS reçu contenant des codes de validation de session et
-d'envoyer à l'étudiant.e un SMS en retour contenant un lien d'activation.
+d'envoyer à l'étudiant•e un SMS en retour contenant un lien d'activation.
 
 Etant donné que l'on connait bien Symfony, c'était la solution idéale pour rapidement *bootstraper* le back office
 d'administration et l'API.
@@ -473,6 +483,6 @@ Nous avons adoré travailler sur React / Redux / GraphQL, en faisant attention d
 
 Nous avons adoré travailler avec le *pattern Action-Domain-Response* pour des *controllers* Symfony sexy.
 
-Mais ce que nous avons adoré par dessus tout, c'est que notre travail permet à des étudiant.e.s d'accéder à la
+Et par dessus tout, ce que nous avons adoré est que notre travail permet à des étudiant•e•s d'accéder à la
 connaissance.
 
