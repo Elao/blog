@@ -489,6 +489,11 @@ tout en faisant attention de bien penser l'UI/UX pour mobile.
 
 Nous avons adoré travailler avec le *pattern Action-Domain-Response* pour des *controllers* Symfony sexy.
 
-Et par dessus tout, ce que nous avons adoré est que notre travail permet à des étudiant•e•s d'accéder à la
+Et par dessus tout, nous avons adoré que notre travail permet à des étudiant•e•s d'accéder à la
 connaissance.
 
+<blockquote> 
+« J'espère qu'avec Chalkboard Education chacun aura accès à l'éducation dont il rêve et qu'à mon échelle,
+je vais faire progresser le monde. »
+</blockquote>
+Adrien, cofondateur de Chalkboard Education
