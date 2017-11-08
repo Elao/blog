@@ -71,11 +71,8 @@ et des états gérés par [Redux](https://github.com/reactjs/redux).
 
 ### Démo
 
-L'étudiant•e reçoit son accès par SMS contenant un lien permettant de l'identifier, par exemple :
-https://www.chalkedu.co/#/login/PPQVY3B
-
-A l'ouverture de l'application, le contenu des cours est préchargé. La progression du chargement est affichée en haut de
-l'interface :
+L'étudiant•e reçoit son accès par SMS contenant un lien permettant de l'identifier. A l'ouverture de l'application, le
+contenu des cours est préchargé. La progression du chargement est affichée en haut de l'interface :
 
 <div style="text-align:center;">
 <video src="/images/posts/2017/chalkboard-education/demo-chalkboard.mp4" loop autoplay style="height:500px; border:1px solid #333"></video>
