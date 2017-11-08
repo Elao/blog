@@ -8,22 +8,6 @@
     <div id="read-progress"><div></div></div>
     <div id="all">
         {{ partial "navbar.html" . }}
-        {{if .PrevInSection}}
-        <div class="side-link side-link--prev">
-            <a href="{{.PrevInSection.Permalink}}">{{ i18n "post_prev" }}</a>
-            <div class="side-link__infos">
-                <div class="side-link__img" style="background-image: url('{{ .PrevInSection.Params.thumbnail }}');"></div>
-            </div>
-        </div>
-        {{end}}
-        {{if .NextInSection}}
-        <div class="side-link side-link--next">
-            <a href="{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}">{{ i18n "post_next" }}</a>
-            <div class="side-link__infos">
-                <div class="side-link__img" style="background-image: url('{{ .NextInSection.Params.thumbnail }}');"></div>
-            </div>
-        </div>
-        {{end}}
         <header class="article-header">
             {{ $context := . }}
 
@@ -41,7 +25,10 @@
                 <img src="{{ if isset .Params "header_img" }}{{ index .Params "header_img" }}{{ else }}https://placeimg.com/1000/310/any{{ end }}" alt="" />
             </div>
         </header>
-        <article class="article container">
+        <article class="article single container">
+            {{ if .Params.summary }}
+            <div class="summary" data-summary="{{ .Params.summary }}"></div>
+            {{ end }}
             {{ .Content }}
             <div class="socials">
                 <div class="article-footer">

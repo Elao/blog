@@ -14,10 +14,30 @@
     h3,
     h4,
     h5 {
+        position: relative;
+
         a {
             &, &:visited {
                 text-decoration: underline;
                 color: $text-color;
+            }
+
+            &:hover {
+                color: $main-color;
+
+                .anchor { color: rgba(34, 34, 34, 0.4); }
+            }
+        }
+
+        a.anchor {
+            color: rgba(34, 34, 34, 0.4);
+            text-decoration: none;
+            margin-left: .3em;
+
+            &::before {
+                content: '\e9cb';
+                font-family: 'icomoon';
+                font-size: .8em;
             }
 
             &:hover { color: $main-color; }

@@ -9,7 +9,7 @@
   font-style: normal;
 }
 
- [class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before {
     font-family: "elaoblog";
     font-style: normal;
     font-weight: normal;
@@ -31,6 +31,27 @@
 .icon-gplus:before { content: '\e803'; }
 .icon-instagram:before { content: '\e804'; }
 .icon-love:before { content: '\e805'; }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icons/icomoon.woff?8kqr52') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="i-"], [class*=" i-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-link:before { content: "\e9cb"; }
 
 @font-face {
     font-family: 'League Spartan';

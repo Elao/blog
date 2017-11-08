@@ -6,6 +6,7 @@ publishdate:        "2017-06-21"
 draft:              false
 slug:               "architecture-hexagonale-symfony"
 description:        "Présentation de l'architecture hexagonale et de son implémentation avec le framework Symfony."
+summary:            true
 
 thumbnail:          "/images/posts/thumbnails/hexagons.jpg"
 header_img:         "/images/posts/headers/hexagons.jpg"
@@ -27,7 +28,7 @@ Elle a été pensé par [Alistair Cockburn](http://alistair.cockburn.us/Hexagona
 
 Les deux grands principes de base de l'architecture hexagonale sont :
 
-* La **séparation entre le code métier et le code technique**. Le but est de rendre votre code métier **agnostique** de l'architecture technique dans laquelle votre application sera exécutée. 
+* La **séparation entre le code métier et le code technique**. Le but est de rendre votre code métier **agnostique** de l'architecture technique dans laquelle votre application sera exécutée.
 * L'**inversion de dépendance** : votre code technique dépend de votre code métier et non l'inverse comme dans une architecture plus classique. Pour cela vous allez massivement utiliser le **design pattern adapter**.
 
 La forme hexagonale — qui aurait tout aussi bien pu être octogonale ou pentagonale — est là pour mettre en évidence les différentes facettes par lesquelles votre application communique avec l'extérieur via des adapteurs.
@@ -43,11 +44,11 @@ Le **code métier** c'est tout le code qui traduit le métier de votre client. I
 </p>
 
 Afin d'aller encore un peu plus loin dans le découplage de mon code et de me donner un cadre facilitant la séparation du code technique et du code métier, je me suis également inspiré de deux autres architectures proches dans l'idée :
- 
+
 * [The Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) de Uncle Bob
 * [The Onion Architecture](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/) de Jeffrey Palermo
 
-Ces deux architectures séparent le code en différentes couches imbriquées. Le nombre de couches dépendra de la complexité de votre application et jusqu'où vous souhaitez pousser le découplage. 
+Ces deux architectures séparent le code en différentes couches imbriquées. Le nombre de couches dépendra de la complexité de votre application et jusqu'où vous souhaitez pousser le découplage.
 
 Pour ma part je suis partie sur les quatres couches suivantes qui représentes assez bien les différentes parties d'une application **Symfony** (de la plus profonde à la moins profonde) :
 
@@ -75,8 +76,8 @@ Dans la couche **Domain** je mets le coeur métier de mon code. Sans être exhau
 Dans la couche **Application** je place tout mon code applicatif. Généralement cela se traduit par des *commands* et des *queries* (cf CQRS et CommandBus). Cette couche se situant au-dessus de la couche Domain, je pourrais utiliser tout ce qui s'y trouve. Si j'ai besoin de faire appel à des composants de l'infrastructure tels que la persistance, une API ou une bibliothèque, je créerai des interfaces pour chacun de ces composants.
 
 La couche **Infrastructure** contient majoritairement toutes les implémentations des adapteurs décrites dans les interfaces des couches inférieures ainsi que tous les services nécessaires pour faire communiquer mon application avec mon infrastructure.
- 
-Enfin la couche **Ui** est une couche un peu particulière. Comme on peut le voir sur le schéma au début de l'article, elle occupe une facette de l'hexagone et n'entoure pas les autres couches. Il s'agit d'une sorte d'adapteur géant qui permet à l'utilisateur de communiquer avec votre application. Elle contient donc tout ce qui touche à l'interface utilisateur comme les contrôleurs, les vues, les formulaires, ... 
+
+Enfin la couche **Ui** est une couche un peu particulière. Comme on peut le voir sur le schéma au début de l'article, elle occupe une facette de l'hexagone et n'entoure pas les autres couches. Il s'agit d'une sorte d'adapteur géant qui permet à l'utilisateur de communiquer avec votre application. Elle contient donc tout ce qui touche à l'interface utilisateur comme les contrôleurs, les vues, les formulaires, ...
 
 ```
 src
@@ -184,5 +185,5 @@ Enfin, **utilisez l'injection de dépendance** de Symfony pour injecter vos adap
 # Conclusion
 
 Pour conclure, je dirai que l'architecture hexagonale n'est pas une fin en soi ni l'architecture ultime. Je la vois davantage comme un cadre permettant de se contraindre à respecter le principe de séparation entre le code métier et code technique.
- 
+
 Comme tout paradigme, il a ses faiblesses et ses exceptions, mais pour l'utiliser sur tous mes projets depuis quelques années, il m'a beaucoup fait progresser vers une conception propre, solide, testable et maintenable.
