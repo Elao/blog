@@ -28,7 +28,7 @@ mais cela est suffisant pour accéder à la connaissance.
 
 Reportage de France 24 à propos de Chalkboard Education :
 
-<iframe style="width:100%; height:400px; margin: 0 !important" src="https://www.youtube.com/embed/DWWXSP5YFaw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe style="width:100%; height:400px; margin: 0 !important" src="https://www.youtube.com/embed/DWWXSP5YFaw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
 ## Application native
 
