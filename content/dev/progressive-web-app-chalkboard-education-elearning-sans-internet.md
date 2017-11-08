@@ -1,6 +1,6 @@
 ---
 type:           "post"
-title:          "Du e-learning sans internet ou presque"
+title:          "E-learning sans internet ou presque"
 date:           "2017-11-07"
 publishdate:    "2017-11-07"
 draft:          false
