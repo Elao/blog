@@ -6,7 +6,7 @@ publishdate:    "2017-10-31"
 draft:          false
 slug:           "from-react-native-init-to-app-stores-real-quick"
 description:    "From react-native init to stores real quick"
-summary:        true
+summary:        3
 
 thumbnail:      "/images/posts/thumbnails/from-react-native-init-to-app-stores-real-quick.jpg"
 header_img:     "/images/posts/headers/from-react-native-init-to-app-stores-real-quick.jpg"
