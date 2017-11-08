@@ -37,6 +37,10 @@ Une première preuve de concept a été réalisée en [React Native](https://fac
 résultat une application Android déployée sur Google Play Store à destination de plusieurs centaines d'étudiant•e•s de
 l'University Of Ghana.
 
+<p class="text-center">
+    <img src="/images/posts/2017/chalkboard-education/app-react-native.png" alt="React native app" />
+</p>
+
 ## Progressive Web App
 
 Avec l'émergence des [Progressive Web Apps](/fr/dev/la-revanche-du-web-par-les-progressive-web-apps/), nous avons
