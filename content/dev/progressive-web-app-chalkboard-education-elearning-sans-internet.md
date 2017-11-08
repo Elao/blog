@@ -26,6 +26,10 @@ résoudre ce problème en diffusant les cours d'universités via les téléphone
 Les étudiant•e•s africains n'ont certes pas forcément le dernier modèle de smartphone ni une connexion Internet fiable
 mais cela est suffisant pour accéder à la connaissance.
 
+Reportage de France 24 à propos de Chalkboard Education :
+
+<iframe style="width:100%; height:400px; margin: 0 !important" src="https://www.youtube.com/embed/DWWXSP5YFaw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
 ## Application native
 
 Elao accompagne Chalkboard Education depuis 2015 sur la conception de son produit.
@@ -53,7 +57,7 @@ d'installer Chalkboard Education sur l'écran d'accueil du smartphone ou tablett
 - Utilisation hors-ligne de l'application : tous les contenus sont pré-chargés et mis en cache permettant la consulation
 des cours par les étudiant•e•s sans Internet.
 
-## Application web avec React et Redux ♥️
+### React et Redux ♥️
 
 Il était évident pour nous que l'application front devrait être autonome et mise en cache navigateur.
 Nous avons fait le choix de
