@@ -1,8 +1,8 @@
 ---
 type:               "post"
 title:              "Animer un SVG avec CSS"
-date:               "2017-10-25"
-publishdate:        "2017-10-25"
+date:               "2017-11-07"
+publishdate:        "2017-11-07"
 draft:              false
 slug:               "animer-un-svg-en-css"
 description:        ""
@@ -152,7 +152,7 @@ La plus flagrante est l’absence d’interactivité avec l’animation : diffic
 
 ### Trick : suivre une trajectoire courbée avec `translate()`
 
-Impossible _a_ priori_ d'appliquer une translation à un élément autrement que selon une ligne droite ?
+Impossible _a priori_ d'appliquer une translation à un élément autrement que selon une ligne droite ?
 Ce trick est tiré du [blog de Tobias Ahlin](http://tobiasahlin.com/blog/curved-path-animations-in-css/). Il montre qu'il est possible de suivre une trajectoire non-linéaire en animant simultanément un élément et son conteneur invisible -- comme si l'on bougeait dans des sens différents deux calques superposés. En donnant la même durée aux deux animations mais en décalant leur fonction de progression (`animation-timing-function`) pour qu'elles soient désynchronisées, on obtient l'illusion que l'objet se déplace sur une courbe.
 
 <figure class="text-center">
