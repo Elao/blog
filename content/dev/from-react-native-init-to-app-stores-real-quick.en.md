@@ -1,8 +1,8 @@
 ---
 type:           "post"
 title:          "From react-native init to app stores real quick"
-date:           "2017-10-31"
-publishdate:    "2017-10-31"
+date:           "2017-11-09"
+publishdate:    "2017-11-09"
 draft:          false
 slug:           "from-react-native-init-to-app-stores-real-quick"
 description:    "From react-native init to stores real quick"
