@@ -94,6 +94,21 @@ p, span, li, i, em, strong, td {
     }
 }
 
+.side-note {
+    float: left;
+    width: 2em;
+    margin-left: -3em;
+    margin-right: 1em;
+    font-size: 0.8em;
+    overflow: visible;
+    opacity: 0.8;
+    text-align: center;
+
+    &.light {
+        text-shadow: 0 0 0 #000000, 0 0 2px #000000;
+    }
+}
+
 @media (max-width: $screen-xs-max) {
     h1, h2 {
         font-size: 30px;
