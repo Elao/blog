@@ -1,8 +1,8 @@
 ---
 type:           "post"
 title:          "E-learning sans internet ou presque"
-date:           "2017-11-09"
-publishdate:    "2017-11-09"
+date:           "2017-11-22"
+publishdate:    "2017-11-22"
 draft:          false
 slug:           "progressive-web-app-chalkboard-education-elearning-sans-internet"
 description:    "Retour d'expérience sur la conception de la progressive web app de Chalkboard Education"
