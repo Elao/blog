@@ -1,8 +1,8 @@
 ---
 type:           "post"
 title:          "Le Design Pattern 'Observer'"
-date:           "2017-10-26"
-publishdate:    "2017-10-26"
+date:           "2017-11-24"
+publishdate:    "2017-11-24"
 draft:          false
 slug:           "design-pattern-observer"
 description:    "Dans le cadre de notre série consacrée aux Design Patterns, nous nous intéressons aujourd'hui au DP 'Observer'"
@@ -28,7 +28,7 @@ Le pattern `Observer` appartient aux Design patterns dits "comportementaux" (`Be
 
 > The observer pattern is a design pattern that defines a link between objects so that when one object's state changes, all dependent objects are updated automatically. This pattern allows communication between objects in a loosely coupled manner.
 
-En résumé, le DP `Observer` est utile lorsque un ou plusieurs objets (les _observateurs_) doivent réagir au changement d'état d'un objet donné (le _sujet_).
+En résumé, le DP `Observer` est utile lorsqu'un ou plusieurs objets (les _observateurs_) doivent réagir au changement d'état d'un objet donné (le _sujet_).
 
 ## Diagramme des participants
 
@@ -74,7 +74,7 @@ interface Observer {
 }
 {{< /highlight >}}
 
-<div class="side-note">
+<div class="aside-note">
     Noter que la SPL (Standard PHP Library) propose deux interfaces assez similaires : 
 
     <ul class="fragment">
@@ -130,6 +130,7 @@ class CheckoutOrderHandler implements Subject
             $this->observers[] = $observer;
         }
     }
+
     public function removeObserver(Observer $observer) { /* Unimplemented yet */ }
 
     public function handle(Order $order) {
@@ -145,9 +146,11 @@ class CheckoutOrderHandler implements Subject
 }
 {{< /highlight >}}
 
-* Cette classe implémente bien entendu l'interface `Subject`.
-* Elle possède en propriété la liste de ses observateurs.
-* Elle invoque sa méthode `notifyObservers` lorsqu'elle modifie l'état de la commande (`$order->checkout()`).
+Cette classe `CheckoutOrderHandler` :
+
+* implémente bien entendu l'interface `Subject`,
+* possède en propriété la liste de ses observateurs,
+* invoque sa méthode `notifyObservers` lorsqu'elle modifie l'état de la commande (`$order->checkout()`).
 
 ### Les observateurs (`OrderConfirmationMailer` et `StockUpdater`)
 
@@ -227,7 +230,7 @@ Le framework Symfony propose un composant dédié pour réagir aux événements,
 Nous aurons sans doute l'occasion d'y revenir ...
 
 <style>
-    .side-note {
+    .aside-note {
         border-left: 5px solid #ffa600;
         padding: 20px;
         margin: 20px 0;
