@@ -20,7 +20,7 @@ author_username: "rhanna"
 ## Le contexte
 
 Dans certains pays africains, le nombre de places disponibles à l'université est très limité.
-Par conséquent de nombreux•ses étudiant•e•s n'ont pas accès à l'université.
+Par conséquent de nombreux étudiants n'ont pas accès à l'université.
 La startup [Chalkboard Education](https://chalkboard.education/) implantée au Ghana et en Côte d'Ivoire a pour but de
 résoudre ce problème en diffusant les cours d'universités via les téléphones mobiles.
 Les étudiant•e•s africains n'ont certes pas forcément le dernier modèle de smartphone ni une connexion Internet fiable
@@ -48,7 +48,7 @@ conseillé Chalkboard Education de revenir au web pour plusieurs raisons :
 
 - Le public visé est majoritairement sur Android, OS pour lequel actuellement les navigateurs supportent le mieux le
 Service Worker et le Web App Manifest, éléments clés du concept de Progressive Web App.
-- La couverture des appareils ciblés est beaucoup plus large du fait qu'il s'agisse d'une application web.
+- Avec une application web, la couverture des appareils ciblés est beaucoup plus large.
 - Le coût du développement est moins important que le développement d'applications natives pour Android et iOS.
 - Le poids d'une web app est beaucoup moins important qu'une application native ce qui est un avantage pour des
 populations ayant un accès limité à Internet.
@@ -88,7 +88,7 @@ React qui implémente les bonnes pratiques *Material Design* édictées par Goog
 </p>
 
 Nous avons également travaillé l'UX pour mobile afin de s'approcher de l'UX des applications natives. Pour cela, nous
-nous sommes inspirés d'applications existantes et nous nous sommes fixés quelques règles :
+nous sommes inspirés d'applications existantes et nous nous sommes fixé quelques règles :
 
 - Barre de navigation fixée en haut.
 - Éviter les formulaires : un formulaire avec deux champs radio a été remplacé par deux boutons par exemple.
@@ -98,8 +98,8 @@ nous sommes inspirés d'applications existantes et nous nous sommes fixés quelq
     - lire un cours et passer à la suite
     - valider sa progression en choisissant parmi SMS ou Internet...
 
-Le développement était testé sur un ancien smartphone Android avec une ancienne version de Chrome afin de se mettre en
-"condition réelle".
+Le développement était testé sur un ancien smartphone Android avec une ancienne version de Chrome afin de se mettre
+quasi en conditions réelles.
 
 ### Mobile-first et Offline-first
 
@@ -116,11 +116,11 @@ Les contenus sont stockés de différentes manières dans le navigateur de l'ét
 - les médias (images) du cours sont stockés en
 [CacheStorage](https://developer.mozilla.org/fr/docs/Web/API/CacheStorage)
 grâce au
-[Service Worker](https://developer.mozilla.org/fr/docs/Web/API/ServiceWorker) déclarée par l'application.
+[Service Worker](https://developer.mozilla.org/fr/docs/Web/API/ServiceWorker) déclaré par l'application.
 
 L'étudiant•e peut ainsi consulter les cours hors connexions.
 
-Une vérification de mise à jour est faites toutes les 24h si l'utilisateur a une connexion internet.
+Une vérification de mise à jour est faite toutes les 24h si l'utilisateur a une connexion internet.
 Il est indiqué le nombre de Ko à télécharger pour chaque mise à jour.
 
 [Redux Persist](https://github.com/rt2zz/redux-persist) permet de persister le *store Redux* en
@@ -209,7 +209,7 @@ export default gql`
 
 Nous avons utilisé le très bon client GraphQL [Apollo client](https://github.com/apollographql/apollo-client).
 Il existe aussi une implémentation [Apollo pour React](https://github.com/apollographql/react-apollo) mais nous
-ne l'avons pas utilisé étant donné que notre application n'est pas *API-centric* : toutes les *datas* sont récupérées
+ne l'avons pas utilisée étant donné que notre application n'est pas *API-centric* : toutes les *data* sont récupérées
 à la première connexion puis à la mise à jour.
 
 Et pour l'identification de l'étudiant•e, on passe le *token user* dans l'entête HTTP
@@ -249,7 +249,7 @@ networkInterface.use([
 avec React et un service worker qui pré charge en cache les assets de l'application (index.html, javascript et css).
 
 Pour mettre en cache les urls chargées au *runtime* il faut surcharger la configuration du *builder* du Service Worker
-avec [sw-precache](https://github.com/GoogleChromeLabs/sw-precache). On a rajouté une commande "generate-sw" dans notre
+avec [sw-precache](https://github.com/GoogleChromeLabs/sw-precache). On a ajouté une commande "generate-sw" dans notre
 fichier package.json :
 
 {{< highlight json >}}
@@ -291,7 +291,7 @@ module.exports = {
 
 ### Le SMS pour transporter de la donnée à la place d'Internet
 
-Sur Chalkboard Education, l'étudiant•e doit valider sa progression. Pour cela il lui ai laissé le choix d'utiliser
+Sur Chalkboard Education, l'étudiant•e doit valider sa progression. Pour cela il lui est laissé le choix d'utiliser
 internet ou... le SMS.
 
 <p class="text-center">
@@ -300,7 +300,7 @@ internet ou... le SMS.
 
 Un code est généré par l'application web. Ce code est envoyé par SMS par l'étudiant•e à un numéro donné.
 
-A noter que pour déclencher la rédaction d'un SMS sous Android, il est possible d'utiliser un lien html avec
+A noter que pour déclencher la rédaction d'un SMS sous Android, il est possible d'utiliser un lien HTML avec
 le *scheme* `sms:`
 
  `<a href="sms:+63344556677?body=Message">Send SMS</a>`
@@ -348,7 +348,7 @@ Etant donné que l'on connait bien Symfony, c'était la solution idéale pour ra
 d'administration et l'API.
 
 Toutes nos classes métiers et tous les *controllers* Symfony sont testés unitairement par Phpunit.
-Des scénarios [Behat](https://github.com/Behat/Behat) permettent de couvrir également la quasi totalité des
+Des scénarios [Behat](https://github.com/Behat/Behat) permettent de couvrir également la quasi-totalité des
 fonctionnalités du Back-Office.
 
 ### Back office
@@ -453,7 +453,7 @@ services:
 
 Pour concevoir un serveur d'API GraphQL, nous avons utilisé le bundle Symfony
 [overblog/GraphQLBundle](https://github.com/overblog/GraphQLBundle)
-lui même utilisant l'implémentation en PHP de [webonyx/graphql-php](https://github.com/webonyx/graphql-php).
+lui-même utilisant l'implémentation en PHP de [webonyx/graphql-php](https://github.com/webonyx/graphql-php).
 
 Déclaration d'un schéma d'un cours :
 
@@ -495,8 +495,7 @@ tout en faisant attention de bien penser l'UI/UX pour mobile.
 
 Nous avons adoré travailler avec le *pattern Action-Domain-Response* pour des *controllers* Symfony sexy.
 
-Et par dessus tout, nous avons adoré que notre travail permet à des étudiant•e•s d'accéder à la
-connaissance.
+Et par dessus tout, nous avons adoré que notre travail permette à des étudiant•e•s d'accéder à la connaissance.
 
 <blockquote> 
 « J'espère qu'avec Chalkboard Education chacun aura accès à l'éducation dont il rêve et qu'à mon échelle,
