@@ -19,7 +19,7 @@ author_username:    "mcolin"
 
 ## La timezone c'est quoi
 
-La timezone est une information associée à une date permettant connaitre son fuseau horraire. Cette timezone est décrite par un nom de continent et un nom de ville.
+La timezone est une information associée à une date permettant de connaitre son fuseau horaire. Cette timezone est décrite par un nom de continent et un nom de ville.
 
 ```
 Europe/Paris
@@ -28,11 +28,13 @@ America/New_York
 Australia/Sydney
 ```
 
-La timezone permet également de savoir si on doit appliquer l'heure d'été ou d'hiver. En effet, il peut exister plusieurs timezones correspondant au même fuseau horraire car elles n'appliquent pas l'heure d'été ou d'hiver aux mêmes dates, voir l'une d'elle ne la pratique pas du tout.
+### DST Rules
+
+La timezone permet également de savoir si on doit appliquer l'heure d'été ou d'hiver. En effet, il peut exister plusieurs timezones correspondant au même fuseau horaire car elles n'appliquent pas l'heure d'été ou d'hiver aux mêmes dates, voir l'une d'elle ne la pratique pas du tout.
 
 ## PHP
 
-Si vous avez déjà travaillé avec des dates en PHP, vous avez surement été confronté à des problèmes de timezone. La plupart du temps, vous avez résolut le problème en remplaçant la timezone par defaut par la votre.
+Si vous avez déjà travaillé avec des dates en PHP, vous avez surement été confronté à des problèmes de timezone. La plupart du temps, vous avez résolu le problème en remplaçant la timezone par defaut par la votre.
 
 {{< highlight ini >}}
 date.timezone = Europe/Paris
@@ -44,15 +46,15 @@ Si cette solution règle votre soucis immédiatement, nous allons voir que sur l
 
 Si vous persistez vos dates dans une base de données, sachez que la plupart des SGBD ne stockent pas la timezone sur les champs de type `datetime` ou `timestamp`. Vous perdez donc cette information.
 
-Dans le cas où vos utilisateurs peuvent provenir de plusieurs pays, vous allez être confronté a des incohérences de date. Les heures entrées par un utilisateur dans sa timezone n'auront pas la même signification pour un autre utilisateur ou pour votre système.
+Dans le cas où vos utilisateurs peuvent provenir de plusieurs pays, vous allez être confronté à des incohérences de date. Les heures entrées par un utilisateur dans sa timezone n'auront pas la même signification pour un autre utilisateur ou pour votre système.
 
-Ainsi il sera impossible faire des comparaisons de date sans erreur.
+Ainsi il sera impossible de faire des comparaisons de date sans erreur.
 
 ### Franco-français
 
 > Mon application est en français, il n'y aura pas d'autre timezone, autant rester en Europe/Paris.
 
-Le français est parlé dans plus de 50 pays a travers plusieurs continents (dont une trentaines de pays ayant le français comme langue officiel). Le territoire français compte également plusieurs régions d'Outre-mer dans différentes **timezones**.
+Le français est parlé dans plus de 50 pays à travers plusieurs continents (dont une trentaine de pays ayant le français comme langue officielle). Le territoire français compte également plusieurs régions d'Outre-mer dans différentes **timezones**.
 
 Je rajouterais que le web est mondial et à l'heure du microservice, du SAAS et du cloud, vous pourrez être ammené à interconnecter votre application avec des services internationnaux.
 
@@ -84,21 +86,21 @@ $date->setTimezone(new \DateTimeZone('UTC'));
 $date = new \DateTime('2017-10-17', new \DateTimeZone('Europe/Paris'));
 // Conversion en UTC
 $date->setTimezone(new \DateTimeZone('UTC'));
-// 2017-10-16 23:17 => 2017-10-17 00:17
+// 2017-10-17 00:17 => 2017-10-16 23:17
 // enregistrement de 2017-10-16 dans la base de données
 {{< /highlight >}}
 
-Dans l'exemple si dessus, si en base de données vous ne stockez que la date, vous perdrez l'information vous permettant d'appliquer correctement votre timezone et vous resquez d'avoir des décalages de jour en fonction de l'heure à laquelle votre code est exécuté. Sans heure, il est impossible de changer correctement de timezone.
+Dans l'exemple ci-dessus, si en base de données vous ne stockez que la date, vous perdrez l'information vous permettant d'appliquer correctement votre timezone et vous resquez d'avoir des décalages de jour en fonction de l'heure à laquelle votre code est exécuté. Sans heure, il est impossible de changer correctement de timezone.
 
 ## Symfony
 
 ### La saisie
 
-Pour la saisie de date dans vos formulaire, si vous utilisez les formulaires de date natif à Symfony comme le  [DateTimeType](https://symfony.com/doc/current/reference/forms/types/datetime.html), penchez vous sur les options [`model_timezone`](https://symfony.com/doc/current/reference/forms/types/datetime.html#model-timezone) et [`view_timezone`](https://symfony.com/doc/current/reference/forms/types/datetime.html#view-timezone).
+Pour la saisie de date dans vos formulaires, si vous utilisez les formulaires de date natif à Symfony comme le  [DateTimeType](https://symfony.com/doc/current/reference/forms/types/datetime.html), penchez vous sur les options [`model_timezone`](https://symfony.com/doc/current/reference/forms/types/datetime.html#model-timezone) et [`view_timezone`](https://symfony.com/doc/current/reference/forms/types/datetime.html#view-timezone).
 
-L'option `model_timezone` vous permet de préciser la timezone dans laquelle les dates seront stocké. Normalement pas besoin d'y toucher, sa valeur par defaut correspond à la timezone de PHP.
+L'option `model_timezone` vous permet de préciser la timezone dans laquelle les dates seront stockées. Normalement pas besoin d'y toucher, sa valeur par defaut correspond à la timezone de PHP.
 
-L'option `view_timezone` vous permet de préciser la timezone dans laquelle l'utilisateur saisi les dates. Il faut donc la renseigner avec la timezone souhaitée, celle de l'utilisateur que vous stocker sur son profil par exemple.
+L'option `view_timezone` vous permet de préciser la timezone dans laquelle l'utilisateur saisit les dates. Il faut donc la renseigner avec la timezone souhaitée, celle de l'utilisateur que vous stockez sur son profil par exemple.
 
 {{< highlight php >}}
 public function buildForm(FormBuilderInterface $builder, array $options)
@@ -111,7 +113,7 @@ public function buildForm(FormBuilderInterface $builder, array $options)
 
 ### L'affichage
 
-Pour l'affichage, vous pouvez configurer la timezone par defaut de twig. Ainsi tout les dates passant par le filtre `|date` seront automatiquement converti dans cette timezone.
+Pour l'affichage, vous pouvez configurer la timezone par defaut de twig. Ainsi toutes les dates passant par le filtre `|date` seront automatiquement converties dans cette timezone.
 
 {{< highlight yaml >}}
 # config.yml
@@ -120,7 +122,7 @@ twig:
         timezone: Europe/Paris
 {{< /highlight >}}
 
-Si la timezone change en fonction de l'utilisateur, vous devez passer la timezone souhaité au filtre :
+Si la timezone change en fonction de l'utilisateur, vous devez passer la timezone souhaitée au filtre :
 
 {{< highlight twig >}}
 {{ my_date|date('d/m/Y', my_timezone) }}
@@ -141,8 +143,8 @@ Si vous développez l'API qui accepte des dates, la meilleure solution est d'uti
 2017-11-17T12:51:11+00:00
 ```
 
-Utilisez ce type format pour serialiser vos date en sortie afin d'éviter toute ambiguité pour les consomateurs de votre API et en entrée afin de permettre la saisie dans n'importe quelle timezone.
+Utilisez ce type format pour serialiser vos dates en sortie afin d'éviter toute ambiguïté pour les consommateurs de votre API et en entrée afin de permettre la saisie dans n'importe quelle timezone.
 
 ## Conclusion
 
-Ne pas gérer ou mal gérer les **timezones** sur une application manipulant des dates peut entrainer des bugs assez sérieux, difficile à identifier et couteux corriger après coup (imaginez migrer les dates de 500k lignes en prod). Prendre en compte cette problématique dés le début des développements vous évitera donc de vous arracher les cheveux ;)
+Ne pas gérer ou mal gérer les **timezones** sur une application manipulant des dates peut entrainer des bugs assez sérieux, difficiles à identifier et couteux à corriger après coup (imaginez migrer les dates de 500k lignes en prod). Prendre en compte cette problématique dés le début des développements vous évitera donc de vous arracher les cheveux ;)
