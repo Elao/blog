@@ -54,7 +54,7 @@ Ainsi il sera impossible faire des comparaisons de date sans erreur.
 
 Le français est parlé dans plus de 50 pays a travers plusieurs continents (dont une trentaines de pays ayant le français comme langue officiel). Le territoire français compte également plusieurs régions d'Outre-mer dans différentes **timezones**.
 
-Je rajouterais que le web est mondial et l'heure du microservice, du SAAS et du cloud, vous pourrez être ammené à interconnecter votre application avec des services internationnaux.
+Je rajouterais que le web est mondial et à l'heure du microservice, du SAAS et du cloud, vous pourrez être ammené à interconnecter votre application avec des services internationnaux.
 
 ## La solution
 
