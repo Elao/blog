@@ -1,0 +1,78 @@
+###############
+# Directories #
+###############
+
+MANALA_IMAGES_CACHE_DIR ?= $(MANALA_CACHE_DIR)/images
+
+#############
+# Functions #
+#############
+
+define mogrify_resize
+	IMAGE_CACHE=$(MANALA_IMAGES_CACHE_DIR)/$$(md5 -qs "$$(stat -c "%n:%Y:mogrify:resize:$(2)" $(1))") ; \
+	if [ ! -f $${IMAGE_CACHE} ]; then \
+		mkdir -p $$(dirname $${IMAGE_CACHE}) ; \
+		mogrify -resize \
+			$(2) \
+			-write $${IMAGE_CACHE} \
+			$(1) ; \
+		touch -r $(1) $${IMAGE_CACHE} ; \
+	fi ; \
+	cp -p $${IMAGE_CACHE} $(1)
+endef
+
+define gifsicle_optimize
+	IMAGE_CACHE=$(MANALA_IMAGES_CACHE_DIR)/$$(md5 -qs "$$(stat -c "%n:%Y:gifsicle:optimize" $(1))") ; \
+	if [ ! -f $${IMAGE_CACHE} ]; then \
+		mkdir -p $$(dirname $${IMAGE_CACHE}) ; \
+		gifsicle --optimize=3 \
+			--batch \
+			--interlace \
+			--output $${IMAGE_CACHE} \
+			$(1) ; \
+		touch -r $(1) $${IMAGE_CACHE} ; \
+	fi ; \
+	cp -p $${IMAGE_CACHE} $(1)
+endef
+
+define jpegtran_optimize
+	IMAGE_CACHE=$(MANALA_IMAGES_CACHE_DIR)/$$(md5 -qs "$$(stat -c "%n:%Y:jpegtran:optimize" $(1))") ; \
+	if [ ! -f $${IMAGE_CACHE} ]; then \
+		mkdir -p $$(dirname $${IMAGE_CACHE}) ; \
+		jpegtran -optimize \
+			-copy none \
+			-progressive \
+			-outfile $${IMAGE_CACHE} \
+			$(1) ; \
+		touch -r $(1) $${IMAGE_CACHE} ; \
+	fi ; \
+	cp -p $${IMAGE_CACHE} $(1)
+endef
+
+define optipng
+	IMAGE_CACHE=$(MANALA_IMAGES_CACHE_DIR)/$$(md5 -qs "$$(stat -c "%n:%Y:optipng" $(1))") ; \
+	if [ ! -f $${IMAGE_CACHE} ]; then \
+		mkdir -p $$(dirname $${IMAGE_CACHE}) ; \
+		optipng \
+			-quiet \
+			-strip all \
+			-o5 \
+			-out $${IMAGE_CACHE} \
+			$(1) ; \
+		touch -r $(1) $${IMAGE_CACHE} ; \
+	fi ; \
+	cp -p $${IMAGE_CACHE} $(1)
+endef
+
+define svgo
+	IMAGE_CACHE=$(MANALA_IMAGES_CACHE_DIR)/$$(md5 -qs "$$(stat -c "%n:%Y:svgo" $(1))") ; \
+	if [ ! -f $${IMAGE_CACHE} ]; then \
+		mkdir -p $$(dirname $${IMAGE_CACHE}) ; \
+		svgo \
+			--quiet \
+			--output $${IMAGE_CACHE} \
+			$(1) ; \
+		touch -r $(1) $${IMAGE_CACHE} ; \
+	fi ; \
+	cp -p $${IMAGE_CACHE} $(1)
+endef

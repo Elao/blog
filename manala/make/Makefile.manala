@@ -15,8 +15,9 @@
 # MANALA_HELP        [String]  Help content
 # MANALA_INTERACTIVE [Empty]|1 Run in interactive mode
 
-# Current dir
+# Dirs
 MANALA_CURRENT_DIR = $(CURDIR)
+MANALA_CACHE_DIR   ?= $(MANALA_DIR)/cache
 
 # Colors
 MANALA_COLOR_RESET   = \033[0m
@@ -59,7 +60,7 @@ endif
 MANALA_ENV ?= development
 
 # Target prerequisite to force it to be run locally
-# 
+#
 # foo: @local
 # 	bar
 @local:

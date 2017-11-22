@@ -46,15 +46,17 @@ build@%:
 	$(call log,Hugo)
 	$(HUGO)
 
-	$(call log,Crop images - Thumbnails)
-	find public/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f \
-		-exec echo {} \; \
-		-exec mogrify -resize 400x {} \;
+	$(call log,Resize images - Thumbnails)
+	find public/images/posts/thumbnails \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f | while read image; do \
+		printf "Resize \"$${image}\"\n" ; \
+		$(call mogrify_resize,$${image},400x) ; \
+	done
 
-	$(call log,Crop images - Headers)
-	find public/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f \
-		-exec echo {} \; \
-		-exec mogrify -resize 2000x {} \;
+	$(call log,Resize images - Headers)
+	find public/images/posts/headers \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) -type f | while read image; do \
+		printf "Resize \"$${image}\"\n" ; \
+		$(call mogrify_resize,$${image},2000x) ; \
+	done
 
 #########
 # Watch #
