@@ -8,8 +8,8 @@ slug:               "api-design-elao-team-interview"
 description:        "Interview croisée des développeurs d'Élao à propos de leurs diverses expériences en conception et développement d'API"
 summary:            2
 
-thumbnail:          "/images/posts/thumbnails/hexagons.jpg"
-header_img:         "/images/posts/headers/hexagons.jpg"
+thumbnail:          "/images/posts/thumbnails/api-interview-micro-phone.png"
+header_img:         "/images/posts/headers/api-interview-micro-phone.png"
 tags:               ["API", "Conception", "REST", "API Design"]
 categories:         ["Dev"]
 
@@ -40,6 +40,10 @@ __Yves__ : J'utilise souvent la méthode `PUT` dans le cadre d'une relation 0:1 
 
 __Maxime S.__ : J'essaie au maximum de respecter la sémantique des méthodes HTTP telles qu'elles sont définies dans la spécification. Comme je l'ai dit tout à l'heure, je m'autorise à utiliser des verbes dans mes URI avec la méthode `PATCH` pour coller au mieux à la logique métier (Exemple d'URI pour activer/désactiver un utilisateur : `PATCH /users/{id}/lock|unlock`).
 
+<p class="text-center">
+    {{< figure class="text-center" src="/images/posts/2017/api-interview/postman.png" title="Credits: https://www.getpostman.com/" alt="Postman">}}
+</p>
+
 ## Formats de sortie : privilégiez-vous le tout JSON ?
 
 __Yves__ : J'ai effectivement pour habitude de privilégier ce format par défaut, mais les contraintes métiers vous obligent parfois à prévoir d'autres formats de sortie, comme le PDF par exemple. Lorsque je travaille sur des API assez complexes, j'ai tendance à favoriser le format json:api.
@@ -61,6 +65,10 @@ __Maxime S.__ : Lorsque j'utilisais le JMS Serializer, j'implémentais ses annot
 ## Documenter votre API : quels outils ?
 
 __Maxime S.__ : Aujourd'hui j'utilise principalement le bundle [NelmioApiDocBundle](https://github.com/nelmio/NelmioApiDocBundle) pour générer la documentation de mes API. Il est parfois utile de générer la documentation à la main lorsque l'on souhaite fournir une documentation d'API plus complète. La documentation générée est généralement suffisante pour des API consommées par des développeurs, mais me semble trop sommaire pour des API publiques. Je profite également de cette question pour mentionner la librairie PHP [elao/api-resources-metadata](https://packagist.org/packages/elao/api-resources-metadata) que nous avons initiée. Elle est encore embryonnaire, mais pour l'heure, elle s'interface avec le bundle de Nelmio pour générer des ressources PHP à partir d'un schéma YML ou des _doc blocks_. Elle sera sans doute enrichie, pour s'interfacer avec d'autres librairies et ajouter d'autres fonctionnalités, telles que la génération de _normalizers_ par exemple.
+
+<p class="text-center">
+    {{< figure class="text-center" src="/images/posts/2017/api-interview/swagger.png" title="Credits: https://swagger.io/" alt="Swagger">}}
+</p>
 
 ## Comment tester son API ?
 
@@ -93,6 +101,10 @@ __Yves__ : J'ai plutôt tendance à privilégier la discussion orale plutôt qu'
 __Yves__ : C'est une philosophie différente de REST, qui mérite que l'on s'y intéresse. Mais j'attends également avec impatience les apports du protocole HTTP/2 et je souhaite notamment voir s'il permettra de limiter les appels HTTP, qui est une des problématiques qu'entend adresser GraphQL.
 
 __Maxime S.__ : Hormis quelques articles de François Zaninotto sur le sujet, je n'ai pas encore pris le temps de me pencher sérieusement sur la question. GraphQL laisse entrevoir de très belles promesses, mais je m'interroge notamment sur la sécurisation des API et les performances, en raison des requêtes potentiellement lourdes qu'autorise GraphQL à un client.
+
+<p class="text-center">
+    {{< figure class="text-center" src="/images/posts/2017/api-interview/graphql-logo.png" title="Credits: https://commons.wikimedia.org" alt="Logo GraphQL">}}
+</p>
 
 ## Un ouvrage ou un site de référence à conseiller ?
 
