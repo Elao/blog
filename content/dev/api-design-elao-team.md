@@ -34,6 +34,10 @@ __Yves__ : J'utilise régulièrement le code 422 (extension du protocole HTTP [W
 
 __Maxime S.__ : Yves m'a fait découvrir le code 422, qui est le principal code d'erreur que j'utilise depuis. Je réserve le code 400 aux requêtes mal formées (lorsque la requête n'est pas au format JSON, par exemple).
 
+<div class="aside-note">
+    Voir la <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank">liste complète des codes HTTP</a>
+</div>
+
 ## Choisir entre les méthodes `POST`/`PATCH`/`PUT` : conseils, critères de choix ?
 
 __Yves__ : J'utilise souvent la méthode `PUT` dans le cadre d'une relation 0:1 : si la ressource n'existe pas, elle est créée, dans le cas contraire, la totalité de la ressources est mise à jour. Cela permet d'implémenter pleinement l'idempotence de la méthode `PUT` (l'URI peut être appelée plusieurs fois, elle laissera toujours la ressource dans le même état). J'essaie dans la mesure du possible d'éviter l'utilisation de la méthode `PATCH`, car c'est un format d'opération somme toute assez complexe (cf. [RFC 6902](https://tools.ietf.org/html/rfc6902#section-4)). Quant à la méthode `POST`, je l'utilise pour la création de ressource, comme une méthode _factory_. Noter d'ailleurs que je m'autorise parfois quelques infractions aux principes REST, mais sans en abuser. Il m'arrive par exemple d'utiliser la méthode `POST` avec une URI qui comporte un verbe, même s'il ne s'agit pas à proprement parler d'une création de ressource. Exemple : `POST  /ma-resource/{id}/changeAddress`. Je m'autorise cette infraction lorsque j'estime qu'elle apporte une meilleure compréhension du métier, et également pour obtenir des logs plus parlants.
@@ -120,3 +124,14 @@ __Maxime S.__ : S'efforcer de faire simple et surtout, quels que soient vos choi
 
 __Yves__ : N'hésitez pas à consulter la liste des headers HTTP natifs. Nous connaissons tous les headers d'authentification, mais il en existe bien d'autres qui peuvent être tout-à-fait adaptés aux informations que l'on souhaite retourner. Exemples : les headers d'authentification, les headers de langue et d'internationalisation. Il faut également savoir qu'il existe des headers proposés par des extensions HTTP et il arrive parfois que ces headers entrent dans la spécification HTTP (comme par exemple le header `x-forwarded-by` objet de la RFC 7239). En revanche, avant d'adopter un header, qu'il soit standard ou extrait d'une extension, assurez-vous que vos proxies HTTP les supportent. On peut parfois être amené à enfreindre des standards lorsque l'outillage ou l'infrastructure nous y contraint. En résumé, il ne faut jamais perdre de vue l'infrastructure qui accueillera votre API au moment de la concevoir et c'est un piège que l'on a souvent tendance à négliger.
 
+<div class="aside-note">
+    Voir la <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields" target="_blank">liste complète des headers HTTP</a>
+</div>
+
+<style>
+    .aside-note {
+        border-left: 5px solid #ffa600;
+        padding: 20px;
+        margin: 20px 0;
+    }
+</style>
