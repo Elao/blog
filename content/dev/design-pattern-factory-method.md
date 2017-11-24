@@ -43,7 +43,7 @@ Bien qu'écrit il y a plus de vingt ans, ce livre fait toujours autorité et c'e
 
 Je ne m'étendrai pas sur la définition exacte d'un Design Pattern, ni sur le formalisme à adopter pour présenter un pattern (le livre le fait très bien), ni sur les principes qui sous-tendent une bonne conception objet (comme l'acronyme SOLID par exemple) car nous aurons l'occasion d'y revenir au moment d'aborder certains patterns.
 
-<div class="side-note">
+<div class="aside-note">
 On peut déplorer que la plupart des exemples du livre s'appuient sur le langage <strong>Smalltalk</strong> qui est tombé en désuétude (mais notez tout de même que ce langage fut pionnier dans bien des domaines !) ... <strong>Java</strong> pourrait sembler aujourd'hui plus adapté et/ou fédérateur pour un ouvrage consacré à la conception objet, mais lors de la première édition du livre (1994), la première version de Java n'existait pas encore ...
 </div>
 
@@ -192,7 +192,7 @@ En résumé, et comme son nom l'indique, le pattern `Factory Method` consiste to
 Il existe un autre Design pattern _Factory_, plus riche que le design pattern `Factory Method` car il implique plus de participants (mais il n'est pas nécessairement plus compliqué pour autant) : l'`Abstact Factory`. Il y a fort à parier qu'il fasse l'objet du prochain article de cette série consacrée aux Design Patterns.
 
 <style>
-    .side-note {
+    .aside-note {
         border-left: 5px solid #ffa600;
         padding: 20px;
         margin: 20px 0;
