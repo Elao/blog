@@ -36,7 +36,7 @@ __Yves__ : J'utilise régulièrement le code 422 (extension du protocole HTTP [W
 
 __Maxime S.__ : Yves m'a fait découvrir le code 422, qui est le principal code d'erreur que j'utilise depuis. Je réserve le code 400 aux requêtes mal formées (lorsque la requête n'est pas au format JSON, par exemple).
 
-__Nicolas__ : J'utilise également assez régulièrement le code 422 pour les APIs REST. Par contre, pour le développement d'API GraphQL, il est beaucoup plus difficile de retourner de code spécifique étant donné la nature même de GraphQL qui permet de faire plusieurs requêtes en simultanée. Donc le code ne serait pas pertinent si une partie des requêtes arrivent à leur terme.
+__Nicolas__ : J'utilise également assez régulièrement le code 422 pour les APIs REST. Par contre, pour le développement d'API GraphQL, il est beaucoup plus difficile de retourner des codes spécifiques étant donné la nature même de GraphQL qui permet de faire plusieurs requêtes en simultanées. Donc le code ne serait pas pertinent si une partie des requêtes arrive à leur terme.
 
 <div class="aside-note">
     Voir la <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank">liste complète des codes HTTP</a>
@@ -66,7 +66,7 @@ __Yves__ : J'ai eu l'occasion de tester plusieurs formats de sortie, et au final
 
 __Maxime S.__ : J'utilise énormément le code 422 et tout comme Yves, j'implémente le format `application/problem+json`. Pour le contenu de la réponse, je m'inspire de l'implémentation d'[API Platform](https://api-platform.com/) et complète le corps de la réponse JSON avec une liste de violations, que je construis en m'appuyant sur l'interface `ConstraintViolationListInterface` de Symfony. En ce qui concerne les autres codes d'erreur, je retourne le code d'erreur HTTP qui décrit le mieux la situation et j'évite d'introduire des codes d'erreur _custom_.
 
-__Nicolas__ : Tout comme Yves et Maxime S., le format de sortie est essentiellement du `application/problem+json` avec un code HTTP spécifique, et il est assez fréquent également que je liste dans le retour la liste des violations rencontrées lors de l'appel. Concernant GraphQL, la chose est assez simple à gérer car les schémas de requêtes sont définis en amont et donc une grande partie des problèmes sont gérés directement par l'implémentation de GraphQL utilisée.
+__Nicolas__ : Tout comme Yves et Maxime S., le format de sortie est essentiellement du `application/problem+json` avec un code HTTP spécifique, et il est assez fréquent également que je liste dans le retour la liste des violations rencontrées lors de l'appel. Concernant GraphQL, la chose est assez simple à gérer car les schémas de requêtes sont définis en amont et donc une grande partie des problèmes est gérée directement par l'implémentation de GraphQL utilisée.
 
 ## Le versioning d'API : quelle stratégie préconisez-vous ?
 
@@ -78,7 +78,7 @@ __Maxime S.__ : Lorsque j'utilisais le JMS Serializer, j'implémentais ses annot
 
 __Maxime S.__ : Aujourd'hui j'utilise principalement le bundle [NelmioApiDocBundle](https://github.com/nelmio/NelmioApiDocBundle) pour générer la documentation de mes API. Il est parfois utile de générer la documentation à la main lorsque l'on souhaite fournir une documentation d'API plus complète. La documentation générée est généralement suffisante pour des API consommées par des développeurs, mais me semble trop sommaire pour des API publiques. Je profite également de cette question pour mentionner la librairie PHP [elao/api-resources-metadata](https://packagist.org/packages/elao/api-resources-metadata) que nous avons initiée. Elle est encore embryonnaire, mais pour l'heure, elle s'interface avec le bundle de Nelmio pour générer des ressources PHP à partir d'un schéma YML ou des _doc blocks_. Elle sera sans doute enrichie, pour s'interfacer avec d'autres librairies et ajouter d'autres fonctionnalités, telles que la génération de _normalizers_ par exemple.
 
-__Nicolas__ : Pour ma part, lors des développements d'API GraphQL, j'utilise [GraphiQL](https://github.com/graphql/graphiql) qui met à disposition directement dans le navigateur un outil de requêtage auto documenté grace à la description que l'on rédige lors de l'exposition des schémas. Les requêtes disponibles ainsi que leur format sont alors proposés directement à l'utilisateur et il peut même les tester immédiatemment grace à au requêtage intégré.
+__Nicolas__ : Pour ma part, lors des développements d'API GraphQL, j'utilise [GraphiQL](https://github.com/graphql/graphiql) qui met à disposition directement dans le navigateur un outil de requêtage auto documenté grace à la description que l'on rédige lors de l'exposition des schémas. Les requêtes disponibles ainsi que leur format sont alors proposés directement à l'utilisateur et il peut même les tester immédiatemment grâce au requêtage intégré.
 
 <p class="text-center">
     {{< figure class="text-center" src="/images/posts/2017/api-interview/swagger.png" title="Credits: https://swagger.io/" alt="Swagger">}}
@@ -104,19 +104,19 @@ __Yves__ : J'avais eu l'occasion de tester [api blueprint](https://apiblueprint.
 
 __Maxime S.__ : J'avais eu l'occasion de tester [API Platform](https://api-platform.com/) à l'époque où il était encore en _beta_ et j'avais également été contributeur à cette époque. Aujourd'hui, je continue de suivre l'évolution du projet, et le travail entrepris me semble gigantesque. A l'heure actuelle, je n'utilise pas de bibliothèque dédiée, je travaille sur une stack Elao que nous améliorons et enrichissons progressivement au fil des projets. En outre, je n'aime pas du tout mapper les entités métiers à l'API car nous privilégions une conception du code orientée métier. Ne pas lier ses entités à l'API permet de limiter les adhérences entre le métier qui peut évoluer fréquemment et l'API qui exige un minimum de stabilité. Je tiens toutefois à dire qu'API Platform est un excellent outil dans le contexte de développements RAD orientés CRUD.
 
-__Nicolas__ : Pour ne pas trop répéter les propos de Yves et Maxime S., je vais plus parler de GraphQL. Nous avons utilisé [le bundle GraphQL réalisé par Overblog](https://github.com/overblog/GraphQLBundle) qui utilise [l'implémentaion php de GraphQL par webonyx](https://github.com/webonyx/graphql-php). Cela permet de facilement intégrer GraphQL dans nos projets ainsi que de décrire nos schémas de _queries_ et _mutations_ en Yaml.
+__Nicolas__ : Pour ne pas trop répéter les propos de Yves et Maxime S., je vais plus parler de GraphQL. Nous avons utilisé [le bundle GraphQL réalisé par Overblog](https://github.com/overblog/GraphQLBundle) qui s'appuie sur [l'implémentaion PHP de GraphQL par webonyx](https://github.com/webonyx/graphql-php). Cela permet de facilement intégrer GraphQL dans nos projets ainsi que de décrire nos schémas de _queries_ et _mutations_ en Yaml.
 
 ## Normalizers/Serializers : composant `Serializer` de Symfony ou JMSSerializer ?
 
 __Maxime S.__ : Aujourd'hui je n'utilise plus que le composant `Serializer` de Symfony, mais seulement comme un outil technique. J'entends par là que je ne mets plus aucune logique métier dans mes _normalizers_. Si je dois sérializer un objet complexe (comme des données agrégées par exemple), c'est un service dédié qui sera chargé de le construire et c'est cet objet que je passe ensuite directement au _Serializer_. Je n'écris quasiment plus de _normalizers_. Pour retourner des données après un appel `GET` (_queries_), je m'appuie sur des _converters_ qui créent la ressource à partir de la requête, laquelle est transmise au _Serializer_ de Symfony pour la retourner au format JSON. Pour les appels en écriture (_commands_), j'hydrate/désérialize au moyen du _Serializer_  Symfony un DTO de payload à partir de la requête, passé ensuite au validateur de Symfony, puis injecté dans une _command_ pour être traité par le _handler_ approprié. Noter que la désérialization doit être permissive, car je confie la validation du payload aux validateurs de Symfony et on s'autorise donc à instancier un payload invalide. Pour cela, je tire parti d'une mise à jour incluse dans Symfony 3.4 qui permet de passer outre la vérification du typage lors de la sérialization (Cf. [PR 8515](https://github.com/symfony/symfony-docs/pull/8515)).
 
-__Nicolas__ : Tout comme Maxime S., je me sers exclusivement du composant `Serializer` de Symfony comme passe-plat. L'ensemble de ma logique est présente dans la couche métier et dans mes _query handlers_ ou _command handlers_.
+__Nicolas__ : Tout comme Maxime S., je me sers exclusivement du composant `Serializer` de Symfony comme passe-plat. L'ensemble de ma logique est présent dans la couche métier et dans mes _query handlers_ ou _command handlers_.
 
 ## Communication développeurs Backend/Frontend : des conseils ?
 
 __Yves__ : J'ai plutôt tendance à privilégier la discussion orale plutôt qu'une documentation "anémique" à outrance. Mais je dois avouer que j'ai essentiellement travaillé dans des petites équipes où la communication n'était pas entravée.
 
-__Nicolas__ : Lors des développements GraphQL que j'ai pu faire récemment, l'utilisation de GraphiQL a permis de simplement documenter l'utilisation de l'api fournis par le backend et ainsi de permettre aux développeurs frontend de facilement savoir ce qu'ils pouvaient et comment ils pouvaient le requêter. Après, comme Yves le dit, nous travaillons essentiellement dans des petits équipes où la communication orale est très régulièrement utilisée. Donc quand un problème était rencontré, nous embrayions à l'oral pour facilité les échanges et léver les incertitudes rapidement.
+__Nicolas__ : Lors des développements GraphQL que j'ai pu faire récemment, l'utilisation de GraphiQL a permis de simplement documenter l'utilisation de l'API fournie par le backend et ainsi de permettre aux développeurs frontend de facilement savoir ce qu'ils pouvaient et comment ils pouvaient le requêter. Après, comme Yves le dit, nous travaillons essentiellement dans des petits équipes où la communication orale est très régulièrement utilisée. Donc quand un problème était rencontré, nous embrayions à l'oral pour faciliter les échanges et léver les incertitudes rapidement.
 
 ## Et GraphQL dans tout ça ?
 
@@ -134,7 +134,7 @@ __Nicolas__ : Définitivement testé et adopté!
 
 __Maxime S.__ : Il y a quelques années, je consultais régulièrement le [blog de William Durand](https://williamdurand.fr/). En ce moment, je suis avec intérêt les [articles de blog](https://marmelab.com/blog/2017/09/04/dive-into-graphql-part-i-what-s-wrong-with-rest.html) de François Zaninotto au sujet de GraphQL. Et je continue également à suivre régulièrement l'activité du [dépôt Github d'API Platform](https://github.com/api-platform/api-platform).
 
-__Nicolas__ : Le [site de GraphQL](http://graphql.org/) est assez bien fait et propose une rubrique _Learn_ bien fourni qui permet une première rentrée en matière. La [démo](http://graphql.org/swapi-graphql/) proposée par l'outil GraphiQl est aussi très intéressante pour faire ses premières requêtes GraphQL sans rien avoir à installer.
+__Nicolas__ : Le [site de GraphQL](http://graphql.org/) est assez bien fait et propose une rubrique _Learn_ bien fournie qui permet une première entrée en matière. La [démo](http://graphql.org/swapi-graphql/) proposée par l'outil GraphiQl est aussi très intéressante pour faire ses premières requêtes GraphQL sans rien n'avoir à installer.
 
 ## Quel conseil donneriez-vous à un développeur qui débute dans les API ?
 
@@ -142,7 +142,7 @@ __Yves__ : Il ne faut pas hésiter à s'inspirer des API existantes développée
 
 __Maxime S.__ : S'efforcer de faire simple et surtout, quels que soient vos choix techniques et les principes qui ont guidé votre conception, s'y tenir tout au long du projet pour maintenir une cohérence globale.
 
-__Nicolas__ : Je pense que Yves et Maxime S. ont bien résumé ce que j'aurai pu dire: éviter de changer de façon de faire en cours de projet pour garder une cohérence. Après, si vous débutez dans les APIs, n'hésitez pas à jeter un oeil à GraphQL qui, selon moi, est assez mature pour être utilisé sur de nouveaux projets.
+__Nicolas__ : Je pense que Yves et Maxime S. ont bien résumé ce que j'aurais pu dire: éviter de changer de façon de faire en cours de projet pour garder une cohérence. Après, si vous débutez dans les APIs, n'hésitez pas à jeter un oeil à GraphQL qui, selon moi, est assez mature pour être utilisé sur de nouveaux projets.
 
 ## Une question que vous auriez aimé que l'on vous pose à propos des API ? Ou bien quelque chose à ajouter ?
 
