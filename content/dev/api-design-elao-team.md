@@ -1,8 +1,8 @@
 ---
 type:               "post"
 title:              "Conception et développement d'API : l'interview croisée de l'équipe Élao"
-date:               "2017-11-21"
-publishdate:        "2017-11-21"
+date:               "2017-11-27"
+publishdate:        "2017-11-27"
 draft:              false
 slug:               "api-design-elao-team-interview"
 description:        "Interview croisée des développeurs d'Élao à propos de leurs diverses expériences en conception et développement d'API"
@@ -36,7 +36,7 @@ __Yves__ : J'utilise régulièrement le code 422 (extension du protocole HTTP [W
 
 __Maxime S.__ : Yves m'a fait découvrir le code 422, qui est le principal code d'erreur que j'utilise depuis. Je réserve le code 400 aux requêtes mal formées (lorsque la requête n'est pas au format JSON, par exemple).
 
-__Nicolas__ : J'utilise également assez régulièrement le code 422 pour les APIs REST. Par contre, pour le développement d'API GraphQL, il est beaucoup plus difficile de retourner des codes spécifiques étant donné la nature même de GraphQL qui permet de faire plusieurs requêtes en simultanées. Donc le code ne serait pas pertinent si une partie des requêtes arrive à leur terme.
+__Nicolas__ : J'utilise également assez régulièrement le code 422 pour les APIs REST. Par contre, pour le développement d'API GraphQL, il est beaucoup plus difficile de retourner des codes spécifiques étant donné la nature même de GraphQL qui permet de faire plusieurs requêtes simultanées. Donc le code ne serait pas pertinent si une partie des requêtes arrive à leur terme.
 
 <div class="aside-note">
     Voir la <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank">liste complète des codes HTTP</a>
@@ -44,7 +44,7 @@ __Nicolas__ : J'utilise également assez régulièrement le code 422 pour les AP
 
 ## Choisir entre les méthodes `POST`/`PATCH`/`PUT` : conseils, critères de choix ?
 
-__Yves__ : J'utilise souvent la méthode `PUT` dans le cadre d'une relation 0:1 : si la ressource n'existe pas, elle est créée, dans le cas contraire, la totalité de la ressources est mise à jour. Cela permet d'implémenter pleinement l'idempotence de la méthode `PUT` (l'URI peut être appelée plusieurs fois, elle laissera toujours la ressource dans le même état). J'essaie dans la mesure du possible d'éviter l'utilisation de la méthode `PATCH`, car c'est un format d'opération somme toute assez complexe (cf. [RFC 6902](https://tools.ietf.org/html/rfc6902#section-4)). Quant à la méthode `POST`, je l'utilise pour la création de ressource, comme une méthode _factory_. Noter d'ailleurs que je m'autorise parfois quelques infractions aux principes REST, mais sans en abuser. Il m'arrive par exemple d'utiliser la méthode `POST` avec une URI qui comporte un verbe, même s'il ne s'agit pas à proprement parler d'une création de ressource. Exemple : `POST  /ma-resource/{id}/changeAddress`. Je m'autorise cette infraction lorsque j'estime qu'elle apporte une meilleure compréhension du métier, et également pour obtenir des logs plus parlants.
+__Yves__ : J'utilise souvent la méthode `PUT` dans le cadre d'une relation 0:1 : si la ressource n'existe pas, elle est créée, dans le cas contraire, la totalité de la ressources est mise à jour. Cela permet d'implémenter pleinement l'idempotence de la méthode `PUT` (l'URI peut être appelée plusieurs fois, elle laissera toujours la ressource dans le même état). J'essaie dans la mesure du possible d'éviter l'utilisation de la méthode `PATCH`, car c'est un format d'opération somme toute assez complexe (cf. [RFC 6902](https://tools.ietf.org/html/rfc6902#section-4)). Quant à la méthode `POST`, je l'utilise pour la création de ressource, comme une méthode _factory_. Noter d'ailleurs que je m'autorise parfois quelques infractions aux principes REST, mais sans en abuser. Il m'arrive par exemple d'utiliser la méthode `POST` avec une URI qui comporte un verbe, même s'il ne s'agit pas à proprement parler d'une création de ressource. Exemple : `POST  /ma-resource/{id}/change-address`. Je m'autorise cette infraction lorsque j'estime qu'elle apporte une meilleure compréhension du métier, et également pour obtenir des logs plus parlants.
 
 __Maxime S.__ : J'essaie au maximum de respecter la sémantique des méthodes HTTP telles qu'elles sont définies dans la spécification. Comme je l'ai dit tout à l'heure, je m'autorise à utiliser des verbes dans mes URI avec la méthode `PATCH` pour coller au mieux à la logique métier (Exemple d'URI pour activer/désactiver un utilisateur : `PATCH /users/{id}/lock|unlock`).
 
@@ -76,9 +76,9 @@ __Maxime S.__ : Lorsque j'utilisais le JMS Serializer, j'implémentais ses annot
 
 ## Documenter votre API : quels outils ?
 
-__Maxime S.__ : Aujourd'hui j'utilise principalement le bundle [NelmioApiDocBundle](https://github.com/nelmio/NelmioApiDocBundle) pour générer la documentation de mes API. Il est parfois utile de générer la documentation à la main lorsque l'on souhaite fournir une documentation d'API plus complète. La documentation générée est généralement suffisante pour des API consommées par des développeurs, mais me semble trop sommaire pour des API publiques. Je profite également de cette question pour mentionner la librairie PHP [elao/api-resources-metadata](https://packagist.org/packages/elao/api-resources-metadata) que nous avons initiée. Elle est encore embryonnaire, mais pour l'heure, elle s'interface avec le bundle de Nelmio pour générer des ressources PHP à partir d'un schéma YML ou des _doc blocks_. Elle sera sans doute enrichie, pour s'interfacer avec d'autres librairies et ajouter d'autres fonctionnalités, telles que la génération de _normalizers_ par exemple.
-
 __Nicolas__ : Pour ma part, lors des développements d'API GraphQL, j'utilise [GraphiQL](https://github.com/graphql/graphiql) qui met à disposition directement dans le navigateur un outil de requêtage auto documenté grace à la description que l'on rédige lors de l'exposition des schémas. Les requêtes disponibles ainsi que leur format sont alors proposés directement à l'utilisateur et il peut même les tester immédiatemment grâce au requêtage intégré.
+
+__Maxime S.__ : Aujourd'hui j'utilise principalement le bundle [NelmioApiDocBundle](https://github.com/nelmio/NelmioApiDocBundle) pour générer la documentation de mes API. Il est parfois utile de générer la documentation à la main lorsque l'on souhaite fournir une documentation d'API plus complète. La documentation générée est généralement suffisante pour des API consommées par des développeurs, mais me semble trop sommaire pour des API publiques. Je profite également de cette question pour mentionner la librairie PHP [elao/api-resources-metadata](https://packagist.org/packages/elao/api-resources-metadata) que nous avons initiée. Elle est encore embryonnaire, mais pour l'heure, elle s'interface avec le bundle de Nelmio pour générer des ressources PHP à partir d'un schéma YML ou des _doc blocks_. Elle sera sans doute enrichie, pour s'interfacer avec d'autres librairies et ajouter d'autres fonctionnalités, telles que la génération de _normalizers_ par exemple.
 
 <p class="text-center">
     {{< figure class="text-center" src="/images/posts/2017/api-interview/swagger.png" title="Credits: https://swagger.io/" alt="Swagger">}}
@@ -142,7 +142,7 @@ __Yves__ : Il ne faut pas hésiter à s'inspirer des API existantes développée
 
 __Maxime S.__ : S'efforcer de faire simple et surtout, quels que soient vos choix techniques et les principes qui ont guidé votre conception, s'y tenir tout au long du projet pour maintenir une cohérence globale.
 
-__Nicolas__ : Je pense que Yves et Maxime S. ont bien résumé ce que j'aurais pu dire: éviter de changer de façon de faire en cours de projet pour garder une cohérence. Après, si vous débutez dans les APIs, n'hésitez pas à jeter un oeil à GraphQL qui, selon moi, est assez mature pour être utilisé sur de nouveaux projets.
+__Nicolas__ : Je pense que Yves et Maxime S. ont bien résumé ce que j'aurais pu dire : éviter de changer de façon de faire en cours de projet pour garder une cohérence. Après, si vous débutez dans les APIs, n'hésitez pas à jeter un oeil à GraphQL qui, selon moi, est assez mature pour être utilisé sur de nouveaux projets.
 
 ## Une question que vous auriez aimé que l'on vous pose à propos des API ? Ou bien quelque chose à ajouter ?
 
