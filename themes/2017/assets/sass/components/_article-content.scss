@@ -15,6 +15,7 @@
     h4,
     h5 {
         position: relative;
+        z-index: -1;
 
         a {
             &, &:visited {
