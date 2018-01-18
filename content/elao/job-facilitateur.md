@@ -31,9 +31,9 @@ Chaque projet comme chaque client est **unique**, nous sommes donc en perpétuel
 
 Votre rôle sera d'épauler aussi bien l'équipe de dev que les clients dans cette quête:
 
- * En challengant avec l'équipe les besoins client en amont, en **l'aidant à prioriser** ses attentes, ou bien en le **rassurant** et en lui tenant la main dans sa découverte de la réalisation de projet en mode itératif.
+ * En challengant avec l'équipe les besoins client en amont, en **l'aidant à prioriser** ses attentes, ou bien en le **rassurant** et en l'accompagnant dans sa découverte de la réalisation de projet en mode itératif.
  * Vous serez là aussi pour aider l'équipe à prendre du recul sur la **vision projet** lorsque la technique prend trop le pas sur le métier.
- *  Pour fluidifier les échanges entre le besoin et la solution. Tout ceci en garantissant que **l'utilisateur final** du produit reste bien au centre des priorités dans la réalisation du **produit**.
+ * Pour fluidifier les échanges entre le besoin et la solution. Tout ceci en garantissant que **l'utilisateur final** du produit reste bien au centre des priorités dans la réalisation du **produit**.
 
 Pour mener à bien cette tâche à **haute valeur ajoutée**, vous devez vous être «cassé les dents» sur un nombre significatif de projets web/mobile pour faire bénéficier tous les acteurs du projet de **vos expériences**.
 Il vous sera également nécessaire d'avoir le goût de l'expérimentation et de ne pas avoir peur de **l'échec**.
