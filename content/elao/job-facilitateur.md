@@ -66,4 +66,4 @@ Nous limitons nos effectifs pour garantir un vrai **esprit d'équipe** avec une 
 Si vous vous reconnaissez dans le profil recherché et que vous avez envie d'en savoir un peu plus, n'hésitez pas à nous pousser un petit email sur [jobs@elao.com](mailto:jobs@elao.com) ou de passer par la  [page contact](https://www.elao.com/fr/nous-contacter/), nous serons heureux de faire votre connaissance !
 
 
-*Photo by [Riccardo Chiarini](https://unsplash.com/photos/p7huyfLrdzc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
+*Photo par [Riccardo Chiarini](https://unsplash.com/photos/p7huyfLrdzc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
