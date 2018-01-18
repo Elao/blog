@@ -1,11 +1,11 @@
 ---
 type:           "post"
-title:          "Facilitateur.ice projet, j'ai besoin d'aide."
-date:           "2017-02-01"
-publishdate:    "2017-02-01"
+title:          "Facilitateur(trice) projet, j'ai besoin d'aide."
+date:           "2018-01-19"
+publishdate:    "2018-01-19"
 draft:          true
 slug:           "job-facilitateur-agence-lyon"
-description:    "Nous recherchons un.e facilitateur.ice projet pour notre agence de Lyon."
+description:    "Nous recherchons un facilitateur(trice) projet pour notre agence de Lyon."
 
 thumbnail:      "/images/posts/thumbnails/riccardo-chiarini-247364.jpg"
 header_img:     "/images/posts/headers/riccardo-chiarini-247364.jpg"
@@ -16,7 +16,7 @@ author_username:    "xgorse"
 ---
 
 <!--more-->
-## Un.e facilitateur.ice projet
+## Un facilitateur(trice) projet
 
 Elao est un **atelier de développement logiciel** qui propose à ses clients la conception et le développement d’applications Web/Mobile métier **sur mesure**. Nous apprécions particulièrement les projets de 3 à 6 mois où l'on peut mettre une équipe de 3 personnes dédiée au projet.
 
