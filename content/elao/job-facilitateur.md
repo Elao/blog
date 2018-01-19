@@ -3,7 +3,7 @@ type:           "post"
 title:          "Facilitateur(trice) projet, j'ai besoin d'aide."
 date:           "2018-01-19"
 publishdate:    "2018-01-19"
-draft:          true
+draft:          false
 slug:           "job-facilitateur-agence-lyon"
 description:    "Nous recherchons un facilitateur(trice) projet pour notre agence de Lyon."
 
