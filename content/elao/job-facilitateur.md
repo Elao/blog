@@ -20,14 +20,14 @@ author_username:    "xgorse"
 
 ## Facilitateur(trice) projet
 
-Je m'appelle **Xavier** et j'ai besoin d'un coup de main, mon quotidien est de tout mettre en oeuvre pour que les projets qu'on réalise chez **Elao** se passe le mieux possible. Aujourd'hui le nombre de projets simultanés que l'on traite ne me permettent pas d'être **efficace** et m'oblige trop souvent à intervenir en **curatif** sur certain sujet alors que ce serait beaucoup plus efficace d'intervenir en amont en **préventif**.
+Je m'appelle **Xavier** et j'ai besoin d'un coup de main. Mon quotidien est de tout mettre en oeuvre pour que les projets qu'on réalise chez **Elao** se passe le mieux possible. Aujourd'hui le nombre de projets simultanés que l'on traite ne me permettent pas d'être **efficace** et m'oblige trop souvent à intervenir en **curatif** sur certains sujets alors que ce serait beaucoup plus efficace d'intervenir de façon **proactive**.
 
-Nous recherchons donc quelqu'un nous permettant de continuer à **progresser** dans notre quête de l'efficacité.
+Nous recherchons donc quelqu'un nous permettant de continuer à **progresser** dans notre quête d'efficacité.
 
 Elao est un **atelier de développement logiciel** qui propose à ses clients la conception et le développement d’applications Web/Mobile métier **sur mesure**. Nous apprécions particulièrement les projets de 3 à 6 mois confiés et pris en charge par une équipe dédiée.
 
 Notre **promesse** est de chercher à fournir les solutions techniques et une organisation projet les plus **efficaces** pour délivrer un maximum de **valeur ajoutée** aux produits que l'on développe pour nos clients.
-Chaque projet comme chaque client est **unique**, nous sommes donc en perpétuelle **expérimentation** dans cette quête de l'efficacité.
+Chaque projet comme chaque client est **unique**, nous sommes donc en perpétuelle **expérimentation** dans cette quête d'efficacité.
 
 Votre rôle sera d'épauler aussi bien l'équipe de dev que les clients dans cette quête:
 
@@ -41,7 +41,7 @@ Il vous sera également nécessaire d'avoir le goût de l'expérimentation et de
 En bref nous recherchons un nouveau membre pour notre équipe qui est **passionné** par ce qu'il fait et qui cherche à faire **partager** cette passion, comme nous nous efforçons tous de le faire au quotidien.
 Pour cela vous devez savoir **écouter** les autres tout autant que leur **transmettre** vos connaissances.
 
-Vous ne serez pas tout seul dans cette tâche, car je la pratique au **quotidien**, j'ai donc besoin d'un **pair** avec lequel je pourrais continuer à expérimenter et faire **progresser** tous les intervenants des projets que l'on réalise.
+Vous ne serez pas tout seul dans cette tâche, car je la pratique au **quotidien**. J'ai donc besoin d'un **pair** avec lequel je pourrais continuer à expérimenter et faire **progresser** tous les intervenants des projets que l'on réalise.
 
 ## La culture Elao
 
