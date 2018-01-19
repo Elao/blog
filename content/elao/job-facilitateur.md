@@ -20,7 +20,7 @@ author_username:    "xgorse"
 
 ## Facilitateur(trice) projet
 
-Je m'appelle **Xavier** et j'ai besoin d'un coup de main. Mon quotidien est de tout mettre en oeuvre pour que les projets qu'on réalise chez **Elao** se passe le mieux possible. Aujourd'hui le nombre de projets simultanés que l'on traite ne me permettent pas d'être **efficace** et m'oblige trop souvent à intervenir en **curatif** sur certains sujets alors que ce serait beaucoup plus efficace d'intervenir de façon **proactive**.
+Je m'appelle **Xavier** et j'ai besoin d'un coup de main. Mon quotidien est de tout mettre en oeuvre pour que les projets qu'on réalise chez **Elao** se passent le mieux possible. Aujourd'hui le nombre de projets simultanés que l'on traite ne me permet pas d'être **efficace** et m'oblige trop souvent à intervenir en **curatif** sur certains sujets alors qu'il serait beaucoup plus efficace d'intervenir de façon **proactive**.
 
 Nous recherchons donc quelqu'un nous permettant de continuer à **progresser** dans notre quête d'efficacité.
 
@@ -59,11 +59,11 @@ Vous disposerez d'un **budget annuel** pour la prise en charge, entre autres, de
 
 Vous aurez également la liberté de faire quelques jours de télétravail par mois si cela n'impacte pas l'organisation des projets.
 
-Nous limitons nos effectifs pour garantir un vrai **esprit d'équipe** avec une volonté forte à mettre en avant les iniatives perso et l’auto-organisation. L'équipe est soudée au travail comme en dehors : apéros, pique-nique à la tête d'or, tournois de babyfoot et même rando à la montagne !
+Nous limitons nos effectifs pour garantir un vrai **esprit d'équipe** avec une volonté forte de mettre en avant les iniatives perso et l’auto-organisation. L'équipe est soudée au travail comme en dehors : apéros, pique-nique à la tête d'or, tournois de babyfoot et même rando à la montagne !
 
 ## Le poste m'intéresse !
 
-Si vous vous reconnaissez dans le profil recherché et que vous avez envie d'en savoir un peu plus, n'hésitez pas à nous pousser un petit email sur [jobs@elao.com](mailto:jobs@elao.com) ou de passer par la  [page contact](https://www.elao.com/fr/nous-contacter/), nous serons heureux de faire votre connaissance !
+Si vous vous reconnaissez dans le profil recherché et que vous avez envie d'en savoir un peu plus, n'hésitez pas à nous pousser un petit email sur [jobs@elao.com](mailto:jobs@elao.com) ou de passer par la [page contact](https://www.elao.com/fr/nous-contacter/), nous serons heureux de faire votre connaissance !
 
 
 *Photo par [Riccardo Chiarini](https://unsplash.com/photos/p7huyfLrdzc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
