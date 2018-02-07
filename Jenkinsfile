@@ -4,7 +4,7 @@ pipeline {
     agent {
         docker {
             image 'manala/hugo'
-            args  '--volume ${JENKINS_CACHE_DIR}:/srv/cache'
+            args  '--volume ${JENKINS_CACHE_DIR}:/srv/cache --entrypoint='
             alwaysPull true
         }
     }
