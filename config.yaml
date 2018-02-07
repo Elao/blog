@@ -55,6 +55,11 @@ Languages:
             URL:        "/categories/monitoring"
             Weight:     30
             parent:     "infra"
+          - Name:       "Devops"
+            Identifier: "devops"
+            URL:        "/categories/devops"
+            Weight:     30
+            parent:     "infra"
           # DEV
           - Name:       "Dev"
             Identifier: "dev"
@@ -120,9 +125,9 @@ Languages:
             URL:        "/categories/methodo"
             Weight:     40
             parent:     "elao"
-          - Name:       "Jobs"
-            Identifier: "jobs"
-            URL:        "/categories/jobs"
+          - Name:       "Recrutement"
+            Identifier: "recrutement"
+            URL:        "/categories/recrutement"
             Weight:     50
             parent:     "elao"
 

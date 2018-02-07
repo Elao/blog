@@ -1,16 +1,16 @@
 ---
 type:           "post"
-title:          "Nous recherchons un développeur ou une développeuse Frontend pour notre agence de Lyon"
-date:           "2017-09-14"
-publishdate:    "2017-09-14"
+title:          "A la recherche d'un développeur ou d'une développeuse Frontend pour notre agence de Lyon"
+date:           "2018-02-14"
+publishdate:    "2018-02-27"
 draft:          false
-slug:           "job-frontend-developpeur-agence-lyon"
+slug:           "job-frontend-developpeur-agence-lyon-2018"
 description:    "Nous recherchons un développeur ou une développeuse Frontend pour notre agence de Lyon."
 
 thumbnail:      "/images/posts/thumbnails/Chatfocus.jpg"
 header_img:     "/images/posts/headers/Chatfocus.jpg"
 tags:           ["JOBS", "FRONTEND", "JAVASCRIPT", "MOBILE", "LYON"]
-categories:     ["jobs"]
+categories:     ["jobs", "recrutement"]
 
 author_username:    "elao"
 ---
@@ -69,3 +69,10 @@ Nous limitons nos effectifs pour garantir un vrai esprit d'équipe avec une volo
 ## Le poste m'intéresse !
 
 Si vous vous reconnaissez dans le profil recherché, n'hésitez pas à postuler auprès de jobs@elao.com, nous serons heureux de faire votre connaissance !
+
+[**Facilitateur(trice)**](/fr/elao/job-facilitateur-agence-lyon-2018)
+
+[**Sysadmin/Devops**](/fr/elao/job-adminsys-agence-lyon-2018)
+
+[**Développeur(se) Backend**](/fr/elao/job-developpeur-backend-agence-lyon-2018)
+
