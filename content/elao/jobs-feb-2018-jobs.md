@@ -3,7 +3,7 @@
 type:           "post"
 title:          "Session recrutements chez élao !"
 date:           "2018-02-08"
-publishdate:    "2018-02-15"
+publishdate:    "2018-02-16"
 draft:          false
 slug:           "jobs-agence-lyon"
 description:    "4 postes à pourvoir au sein de notre tribu lyonnaise"
@@ -16,8 +16,8 @@ categories:     ["jobs"]
 author_username:    "elao"
 ---
 
-## Rejoignez-nous !
- Nous recrutons pour notre tribu lyonnaise **4 nouveaux profils**. Nous sommes impatients d'enrichir les rangs pour continuer à concrétiser de beaux projets et, ensemble, à relever les challenges techniques que l'on apprécie tant \o/
+**Rejoignez-nous !**
+ Nous recrutons pour notre tribu lyonnaise **4 nouveaux passionnés**. Nous sommes impatients d'enrichir les rangs pour continuer à concrétiser de beaux projets et ensemble, relever les challenges techniques que l'on apprécie tant \o/
 
  <!--more-->
 
@@ -79,5 +79,15 @@ _Vous disposez d’un budget annuel pour la participation, entre autres, aux con
 Vous avez la liberté de faire quelques jours de télétravail par mois dans le respect de l’organisation des projets._
 
 
+-----------------------------------------------------------------------------------------------------------------
+Venez échanger avec nous, nous faire part de vos objectifs et découvrir les nôtres  -> jobs@elao.com
+
+[**Facilitateur(trice)**](/fr/elao/job-facilitateur-agence-lyon) 
+
+[**Développeur(se) Frontend**](/fr/elao/job-developer-frontend-agence-lyon) 
+
+[**Sysadmin/Devops**](/fr/elao/job-adminsys-agence-lyon) 
+
+[**Développeur(se) Backend**](/fr/elao/job-developer-backend-agence-lyon)
 
 

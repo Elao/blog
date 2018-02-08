@@ -6,23 +6,22 @@ date:           "2018-02-09"
 publishdate:    "2018-02-15"
 draft:          false
 slug:           "job-developer-frontend-agence-lyon"
-description:    "élao recherche une ou une Développeuse frontend pour notre tribu lyonnaise."
+description:    "élao recherche une ou une Développeuse frontend à Lyon."
 
 thumbnail:      "/images/posts/thumbnails/jobs-feb-2018-front.jpg"
-header_img:     "/images/posts/headers/"
+header_img:     "/images/posts/headers/front.jpg"
 tags:           ["job", "web", "mobile", "lyon", "frontend", "ReactJS", "ReactNative"]
 categories:     ["elao", "jobs", "Javascript"]
 
 author_username:    "elao"
 ---
 
-ELAO - Tribu lyonnaise
+Nous recherchons **une ou une développeuse frontend** pour notre tribu lyonnaise. Passionné(e) d'abord, voici le cadre et la mission que nous vous proposons. Notre site et notre blog vous apporterons également plus de précisions et l'équipe @elao se fera une joie de compléter au besoin et/ou de témoigner de son quotidien !
+<!--more-->
 
-Nous recherchons une ou une Développeuse Frontend pour notre tribu lyonnaise
+## Notre, votre mission
 
-## Notre mission
-
-Dans un cadre dynamique, nous prenons en charge des projets  d'applications web et mobile. Une mission commune à tous :
+Dans un cadre dynamique, nous prenons en charge des projets d'applications web et mobile. Une mission commune à tous :
 - Analyser les besoins et le travail menant à leur expression,
 - Challenger ses besoins
 - Concevoir et innover
@@ -47,15 +46,8 @@ Sass
 Familiarisation avec la POO et le framework PHP Symfony
 Javascript / React, 
 HTML5 / Bootstrap / CSS, 
-
-                  
-[**Facilitateur(trice)**](/fr/elao/job-facilitateur-agence-lyon) 
-
-[**Sysadmin/Devops**](/fr/elao/job-adminsys-agence-lyon) 
-
-[**Développeur(se) Backend**](/fr/elao/job-developer-backend-agence-lyon)
-
-Et toujours parce que ....
+                
+## Et toujours parce que ....
 - Vous êtes passionné(e),
 - Vous êtes curieux(se), avec un bel esprit d’équipe et une bonne capacité d’analyse,
 - Vous n'avez pas peur de prendre des initiatives, d'être force de proposition, 
@@ -69,3 +61,19 @@ Enfin, vous avez un goût prononcé pour les défis techniques, la découverte d
 _(*)**Vie dans l’entreprise**_
 _Vous disposez d’un budget annuel pour la participation, entre autres, aux conférences. Nous encourageons votre présence aux conférences et autres évènements riches d'échanges et de partage. 
 Vous avez la liberté de faire quelques jours de télétravail par mois dans le respect de l’organisation des projets._
+
+-----------------------------------------------------------------------------------------------------------------
+Venez échanger avec nous, nous faire part de vos objectifs et découvrir les nôtres  -> jobs@elao.com
+
+[**Facilitateur(trice)**](/fr/elao/job-facilitateur-agence-lyon) 
+
+[**Sysadmin/Devops**](/fr/elao/job-adminsys-agence-lyon) 
+
+[**Développeur(se) Backend**](/fr/elao/job-developer-backend-agence-lyon)
+
+
+
+
+
+
+
