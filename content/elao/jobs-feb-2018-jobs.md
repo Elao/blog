@@ -3,7 +3,7 @@
 type:           "post"
 title:          "Session recrutements chez élao !"
 date:           "2018-02-08"
-publishdate:    "2018-02-14"
+publishdate:    "2018-02-15"
 draft:          false
 slug:           "jobs-agence-lyon"
 description:    "4 postes à pourvoir au sein de notre tribu lyonnaise"
@@ -16,11 +16,11 @@ categories:     ["jobs"]
 author_username:    "elao"
 ---
 
-# Rejoignez-nous, nous recrutons 4 profils \o/
+Rejoignez-nous, nous recrutons pour notre tribu lyonnaise 4 nouveaux profils. Les postes sont à découvrir à la lecture de cet article. Nous sommes impatients d'enrichir les rangs pour continuer à concrétiser de beaux projets et, ensemble, à relever les challenges techniques qu'on apprécie tant \o/
 
-Nos recherchons 4 profils pour nous aider à répondre aux besoins de nos projets et relever les challenges techniques qu'on apprécie tant.
+ <!--more-->
 
-Nous recherchons  4 personnes :
+## Nous recherchons  4 ~~personnes~~ passionné(e)s avant tout ! 
                    
 [**Facilitateur(trice)**](/fr/elao/job-facilitateur-agence-lyon) 
 
@@ -64,7 +64,7 @@ Parce que... :
 
 - Vous êtes passionné(e),
 - Vous êtes curieux(se), avec un bel esprit d’équipe et une bonne capacité d’analyse,
-- Vous n'avez pas peur de prendre des Initiatives, d'être force de proposition, 
+- Vous n'avez pas peur de prendre des initiatives, d'être force de proposition, 
 - Vous êtes soucieux(se) de comprendre les besoins métiers et fonctionnels de chaque projet,
 - Vous appliquez les bonnes pratiques et vous ne passez pas à côté de l’écriture de tests.
 

@@ -56,7 +56,7 @@ Respect des standard et bonnes pratiques
 Et toujours parce que ....
 - Vous êtes passionné(e),
 - Vous êtes curieux(se), avec un bel esprit d’équipe et une bonne capacité d’analyse,
-- Vous n'avez pas peur de prendre des Initiatives, d'être force de proposition, 
+- Vous n'avez pas peur de prendre des initiatives, d'être force de proposition, 
 - Vous êtes soucieux de comprendre les besoins métiers et fonctionnels de chaque projet,
 - Vous appliquez les bonnes pratiques et vous ne passez pas à côté de l’écriture de tests.
 
