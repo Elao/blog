@@ -55,6 +55,11 @@ Languages:
             URL:        "/categories/monitoring"
             Weight:     30
             parent:     "infra"
+          - Name:       "Devops"
+            Identifier: "devops"
+            URL:        "/categories/devops"
+            Weight:     30
+            parent:     "infra"
           # DEV
           - Name:       "Dev"
             Identifier: "dev"

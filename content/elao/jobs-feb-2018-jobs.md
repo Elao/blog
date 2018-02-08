@@ -1,17 +1,17 @@
 ﻿
 ---
 type:           "post"
-title:          "My title"
+title:          "Session recrutements chez élao !"
 date:           "2018-02-08"
 publishdate:    "2018-02-14"
 draft:          false
 slug:           "jobs-agence-lyon"
 description:    "4 postes à pourvoir au sein de notre tribu lyonnaise"
 
-thumbnail:      "/images/posts/thumbnails/path_to_file"
+thumbnail:      "/images/posts/thumbnails/jobs-feb-2018.jpg"
 header_img:     "/images/posts/headers/path_to_file"
 tags:           ["job", "web", "mobile", "lyon", "frontend", "backend", adminsys", "devops"]
-categories:     ["x", "y"]
+categories:     ["jobs"]
 
 author_username:    "elao"
 ---
@@ -22,15 +22,13 @@ Nos recherchons 4 profils pour nous aider à répondre aux besoins de nos projet
 
 Nous recherchons  4 personnes :
                    
-[**Facilitateur(trice)**](job-facilitateur-agence-lyon) 
+[**Facilitateur(trice)**](/fr/elao/job-facilitateur-agence-lyon) 
 
-[**Développeur(se) Frontend**](job-developer-frontend-agence-lyon) 
+[**Développeur(se) Frontend**](/fr/elao/job-developer-frontend-agence-lyon) 
 
-[**Sysadmin/Devops**](job-adminsys-agence-lyon) 
+[**Sysadmin/Devops**](/fr/elao/job-adminsys-agence-lyon) 
 
-[**Développeur(se) Backend**](job-developer-backend-agence-lyon)
-
-
+[**Développeur(se) Backend**](/fr/elao/job-developer-backend-agence-lyon)
 
 ## Qui sommes nous ? 
 

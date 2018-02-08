@@ -1,17 +1,17 @@
 ﻿
 ---
 type:           "post"
-title:          "My title"
-date:           "2015-01-16"
-publishdate:    "2015-01-16"
+title:          "À la recherche d'un ou d'une Sysadmin"
+date:           "2018-02-09"
+publishdate:    "2018-01-15"
 draft:          false
 slug:           "job-adminsys-agence-lyon"
 description:    "Description of my post."
 
-thumbnail:      "/images/posts/thumbnails/path_to_file"
+thumbnail:      "/images/posts/thumbnails/jobs-feb-2018-adminsys.jpg"
 header_img:     "/images/posts/headers/path_to_file"
-tags:           ["x", "y"]
-categories:     ["x", "y"]
+tags:           ["job", "web", "cloud", "adminsys", "devops", "virtualisation"]
+categories:     ["devops", "jobs", "infra"]
 
 author_username:    "elao"
 ---
@@ -20,7 +20,7 @@ author_username:    "elao"
 
 Nous recherchons une ou une Adminsys/Devops pour notre tribu lyonnaise
                    
-**Notre mission**
+## Notre mission
 
 Dans ce cadre dynamique, nous prenons en charge des projets  d'applications web et mobile. Une mission commune à tous :
 - Analyser les besoins et le travail menant à leur expression,
@@ -30,11 +30,9 @@ Dans ce cadre dynamique, nous prenons en charge des projets  d'applications web 
 - Travailler "Agilement" avec une bonne dose de pragmatisme
 
 Nous travaillons sur des projets à forte orientation applicative et technique. Les projets sont principalement menés à bien en interne avec toute la proximité nécessaire avec nos clients.
+Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https://www.elao.com/fr/nos-experiences/). 
 
-
-**Votre profil **
-
-PROFIL ADMINSYS --> "Pot pourri" pour Guewen
+## Votre savoir-faire
 
 - Grosse expérience de serveur web et bonnes connaissances du développement : scripts et automatisation
 - Mise en oeuvre d'architectures haute dispo,
@@ -68,15 +66,12 @@ La connaissance et maîtrise des environnements UNIX/Linux est un pré-requis. U
 
 Venez échanger avec nous, nous faire part de vos objectifs et découvrir les nôtres  -> jobs@elao.com
 
-| [Facilitateur(trice)](https://blog.elao.com/fr/elao/job-facilitateur-agence-lyon/) |
-|--------------------------|
+                  
+[**Facilitateur(trice)**](/fr/elao/job-facilitateur-agence-lyon) 
 
-| Développeur(se) Frontend |
-|--------------------------|
+[**Développeur(se) Frontend**](/fr/elao/job-developer-frontend-agence-lyon) 
 
-
-| Développeur(se) Backend |
-|--------------------------|
+[**Développeur(se) Backend**](/fr/elao/job-developer-backend-agence-lyon)
 
 Et toujours parce que ....
 - Vous êtes passionné(e),
@@ -85,7 +80,7 @@ Et toujours parce que ....
 - Vous êtes soucieux de comprendre les besoins métiers et fonctionnels de chaque projet,
 - Vous appliquez les bonnes pratiques et vous ne passez pas à côté de l’écriture de tests.
 
-Nous compterons également sur vous pour prendre part aux différents ateliers de réflexion techniques, enrichir/vous enrichir lors des cycles de conférences.(*)
+Nous compterons également sur vous pour prendre part aux différents ateliers de réflexion techniques, enrichir/vous enrichir lors des cycles de conférences.*
 
 Enfin, vous avez un goût prononcé pour les défis techniques, la découverte des technologies émergentes et la veille et l'analyse technique en réponse aux besoins clients.
 

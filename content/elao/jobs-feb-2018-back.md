@@ -1,17 +1,17 @@
 ﻿
 ---
 type:           "post"
-title:          "My title"
-date:           "2015-01-16"
-publishdate:    "2015-01-16"
+title:          "À la recherche d'un ou d'une Développeuse Back"
+date:           "2018-02-09"
+publishdate:    "2018-02-15"
 draft:          false
 slug:           "job-developer-backend-agence-lyon"
 description:    "Description of my post."
 
-thumbnail:      "/images/posts/thumbnails/path_to_file"
+thumbnail:      "/images/posts/thumbnails/jobs-feb-2018-back.jpg"
 header_img:     "/images/posts/headers/path_to_file"
-tags:           ["x", "y"]
-categories:     ["x", "y"]
+tags:           ["job", "web", "mobile", "lyon", "backend", "symfony", "PHP"]
+categories:     ["elao", "jobs", "Symfony"]
 
 author_username:    "elao"
 ---
@@ -20,7 +20,7 @@ ELAO - Tribu lyonnaise
 
 Nous recherchons une ou une Développeuse Backend pour notre tribu lyonnaise
 
-**Notre mission**
+## Notre mission
 
 Dans ce cadre dynamique, nous prenons en charge des projets  d'applications web et mobile. Une mission commune à tous :
 - Analyser les besoins et le travail menant à leur expression,
@@ -30,8 +30,9 @@ Dans ce cadre dynamique, nous prenons en charge des projets  d'applications web 
 - Travailler "Agilement" avec une bonne dose de pragmatisme
 
 Nous travaillons sur des projets à forte orientation applicative et technique. Les projets sont principalement menés à bien en interne avec toute la proximité nécessaire avec nos clients.
+Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https://www.elao.com/fr/nos-experiences/). 
 
-** Votre profil **
+## Votre savoir-faire
 
 Conception et développement
 Web Services (API REST)
@@ -45,14 +46,13 @@ Qualité (pair programming, code review, documentation)
 Respect des standard et bonnes pratiques
 ++ : Devops
 
-| [Facilitateur(trice)](https://blog.elao.com/fr/elao/job-facilitateur-agence-lyon/) |
-|--------------------------|
+                  
+[**Facilitateur(trice)**](/fr/elao/job-facilitateur-agence-lyon) 
 
-| Développeur(se) Frontend |
-|--------------------------|
+[**Développeur(se) Frontend**](/fr/elao/job-developer-frontend-agence-lyon) 
 
-| Sysadmin/Devops |
-|--------------------------|
+[**Sysadmin/Devops**](/fr/elao/job-adminsys-agence-lyon) 
+
 Et toujours parce que ....
 - Vous êtes passionné(e),
 - Vous êtes curieux(se), avec un bel esprit d’équipe et une bonne capacité d’analyse,
