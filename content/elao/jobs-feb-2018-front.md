@@ -6,7 +6,7 @@ date:           "2018-02-09"
 publishdate:    "2018-02-15"
 draft:          false
 slug:           "job-developer-frontend-agence-lyon"
-description:    "Nous recherchons un développeur ou une développeuse Frontend pour notre agence de Lyon"
+description:    "élao recherche une ou une Développeuse frontend pour notre tribu lyonnaise."
 
 thumbnail:      "/images/posts/thumbnails/jobs-feb-2018-front.jpg"
 header_img:     "/images/posts/headers/"

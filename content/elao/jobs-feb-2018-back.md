@@ -6,7 +6,7 @@ date:           "2018-02-09"
 publishdate:    "2018-02-15"
 draft:          false
 slug:           "job-developer-backend-agence-lyon"
-description:    "Description of my post."
+description:    "élao recherche une ou une Développeuse backend pour notre tribu lyonnaise."
 
 thumbnail:      "/images/posts/thumbnails/jobs-feb-2018-back.jpg"
 header_img:     "/images/posts/headers/path_to_file"

@@ -9,7 +9,7 @@ slug:           "job-adminsys-agence-lyon"
 description:    "Description of my post."
 
 thumbnail:      "/images/posts/thumbnails/jobs-feb-2018-adminsys.jpg"
-header_img:     "/images/posts/headers/path_to_file"
+header_img:     "/images/posts/headers/sysadmin.jpg"
 tags:           ["job", "web", "cloud", "adminsys", "devops", "virtualisation"]
 categories:     ["devops", "jobs", "infra"]
 

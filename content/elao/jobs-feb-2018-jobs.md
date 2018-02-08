@@ -9,14 +9,15 @@ slug:           "jobs-agence-lyon"
 description:    "4 postes à pourvoir au sein de notre tribu lyonnaise"
 
 thumbnail:      "/images/posts/thumbnails/jobs-feb-2018.jpg"
-header_img:     "/images/posts/headers/path_to_file"
+header_img:     "/images/posts/headers/stand-up.jpg"
 tags:           ["job", "web", "mobile", "lyon", "frontend", "backend", adminsys", "devops"]
 categories:     ["jobs"]
 
 author_username:    "elao"
 ---
 
-Rejoignez-nous, nous recrutons pour notre tribu lyonnaise 4 nouveaux profils. Les postes sont à découvrir à la lecture de cet article. Nous sommes impatients d'enrichir les rangs pour continuer à concrétiser de beaux projets et, ensemble, à relever les challenges techniques qu'on apprécie tant \o/
+## Rejoignez-nous !
+ Nous recrutons pour notre tribu lyonnaise **4 nouveaux profils**. Nous sommes impatients d'enrichir les rangs pour continuer à concrétiser de beaux projets et, ensemble, à relever les challenges techniques que l'on apprécie tant \o/
 
  <!--more-->
 
