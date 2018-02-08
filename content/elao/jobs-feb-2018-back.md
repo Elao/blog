@@ -36,8 +36,10 @@ Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https:
 Conception et développement
 Web Services (API REST)
 GIT
-Connaissances solides en PHP 7.1 (framework Symfony),
-Bonnes bases en MySQL / GraphQL
+Symfony
+Connaissances solides en PHP
+Webservices (GrapQL, etc.)
+Bonnes bases en MySQL
 Architecture Rest
 Intégration continue
 Tests unitaires et fonctionnels
