@@ -14,6 +14,7 @@ tags:           ["x", "y"]
 categories:     ["x", "y"]
 
 author_username:    "elao"
+---
 
 ELAO - Tribu lyonnaise
 
@@ -30,7 +31,7 @@ Dans ce cadre dynamique, nous prenons en charge des projets  d'applications web 
 
 Nous travaillons sur des projets à forte orientation applicative et technique. Les projets sont principalement menés à bien en interne avec toute la proximité nécessaire avec nos clients.
 
-**Votre profil **
+** Votre profil **
 
 Conception et développement
 Web Services (API REST)
@@ -59,7 +60,7 @@ Et toujours parce que ....
 - Vous êtes soucieux de comprendre les besoins métiers et fonctionnels de chaque projet,
 - Vous appliquez les bonnes pratiques et vous ne passez pas à côté de l’écriture de tests.
 
-Nous compterons également sur vous pour prendre part aux différents ateliers de réflexion techniques, enrichir/vous enrichir lors des cycles de conférences.(*)
+Nous compterons également sur vous pour prendre part aux différents ateliers de réflexion techniques, enrichir/vous enrichir lors des cycles de conférences.*
 
 Enfin, vous avez un goût prononcé pour les défis techniques, la découverte des technologies émergentes et la veille et l'analyse technique en réponse aux besoins clients.
 
