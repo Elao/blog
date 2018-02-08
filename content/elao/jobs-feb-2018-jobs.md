@@ -67,9 +67,9 @@ Principalement parce que... :
 - Vous êtes soucieux(se) de comprendre les besoins métiers et fonctionnels de chaque projet,
 - Vous appliquez les bonnes pratiques et vous ne passez pas à côté de l’écriture de tests.
 
-Nous compterons également sur vous pour prendre part aux différents ateliers de réflexion techniques, enrichir/vous enrichir lors des cycles de conférences.*
+Nous comptons également sur vous pour prendre part aux différents ateliers de réflexion techniques, enrichir/vous enrichir lors des cycles de conférences.*
 
-Enfin, vous avez un goût prononcé pour les défis techniques, la découverte des technologies émergentes et la veille et l'analyse technique en réponse aux besoins clients.
+Rajoutons que vous avez un goût prononcé pour les défis techniques, la découverte des technologies émergentes et la veille et l'analyse technique en réponse aux besoins clients.
 
 Venez échanger avec nous, nous faire part de vos objectifs et découvrir les nôtres  -> jobs@elao.com
 
