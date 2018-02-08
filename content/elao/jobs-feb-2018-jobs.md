@@ -20,7 +20,7 @@ Rejoignez-nous, nous recrutons pour notre tribu lyonnaise 4 nouveaux profils. Le
 
  <!--more-->
 
-## Nous recherchons  4 ~~personnes~~ passionné(e)s avant tout ! 
+## Nous sommes à la recherche de ~~personnes~~ passionné(e)s ! 
                    
 [**Facilitateur(trice)**](/fr/elao/job-facilitateur-agence-lyon) 
 
@@ -32,12 +32,11 @@ Rejoignez-nous, nous recrutons pour notre tribu lyonnaise 4 nouveaux profils. Le
 
 ## Qui sommes nous ? 
 
-Elao propose à ses clients la conception et le développement d’applications web et mobile métier sur mesure. Notre métier suit une très forte orientation technique depuis plus de 12 ans.
-Spécialistes open source, nous sommes aujourd'hui experts des frameworks Symfony, ReactJS et React Native, nous avons une  culture Devops riche et proposons
-des solutions d'hébergement sur mesure à forte valeur ajoutée.
-Un éco-système auquel nous contribuons tout autant que nous prenons d'ailleurs.
+Elao réalise pour ses clients la conception et le développement d’applications web et mobile métier sur mesure. Notre métier suit une très forte orientation technique depuis plus de 12 ans.
+Spécialistes open source, nous sommes aujourd'hui experts des frameworks Symfony, ReactJS et React Native. Nous avons une  culture Devops riche et proposons des solutions d'hébergement sur mesure à forte valeur ajoutée.
+Au sein de cet éco-système depuis tant d'années, nous avons à coeur de contribuer tout autant que d'en bénéficier.
 
-Nous renforçons notre équipe de Lyon tout en restant une petite équipe parce que c'est selon nous ainsi qu'on travaille le mieux. 
+Nous renforçons notre tribu de Lyon qui restera malgré tout une petite équipe parce que c'est selon nous ainsi qu'on travaille le mieux. 
 
 ## Quel est notre environnement de travail ?
 
@@ -47,20 +46,20 @@ Nous disposons d'un environnement technique et humain épanouissant en réponse 
 
 Dans la réalisation de nos projets, nous restons pragmatiques mais ne transigeons pas sur la qualité au quotidien. 
 
-## Quelles sont nos prestations ? 
+## Quels sont nos dynamiques ? 
 
-Dans ce cadre dynamique, nous prenons en charge des projets  d'applications web et mobile. Une mission commune à tous :
+Nous prenons en charge des projets d'applications web et mobile spécifiques pensés et optimiser pour leurs utilisateurs et leur contexte métier et environnemental. Pour mener à bien cette mission, nous sommes tous challengé pour :
 - Analyser les besoins et le travail menant à leur expression,
-- Challenger ses besoins
-- Concevoir et innover
-- Réaliser dans le respect de la qualité et de la satisfaction utilisateurs
-- Travailler "Agilement" avec une bonne dose de pragmatisme
+- Ne pas s'arrêter à l'interprétation initiale des besoins,
+- Concevoir et innover,
+- Réaliser toujours dans le respect de la qualité et de la satisfaction utilisateurs,
+- Travailler "Agilement" avec une bonne dose de pragmatisme.
 
-Nous travaillons sur des projets à forte orientation applicative et technique. Les projets sont principalement menés à bien en interne avec toute la proximité nécessaire avec nos clients.
+Nous travaillons sur des projets à forte orientation applicative et technique. Les projets sont principalement réalisés en interne avec toute la proximité nécessaire avec nos clients.
 
 ## Pourquoi nous rejoindre ?
 
-Parce que... :
+Principalement parce que... :
 
 - Vous êtes passionné(e),
 - Vous êtes curieux(se), avec un bel esprit d’équipe et une bonne capacité d’analyse,
