@@ -1,16 +1,16 @@
 ---
 type:           "post"
 title:          "Facilitateur(trice) projet, j'ai besoin d'aide."
-date:           "2018-01-19"
-publishdate:    "2018-01-19"
+date:           "2018-02-14"
+publishdate:    "2018-02-26"
 draft:          false
-slug:           "job-facilitateur-agence-lyon"
+slug:           "job-facilitateur-agence-lyon-2018"
 description:    "Nous recherchons un facilitateur(trice) projet pour notre agence de Lyon."
 
 thumbnail:      "/images/posts/thumbnails/riccardo-chiarini-247364.jpg"
 header_img:     "/images/posts/headers/riccardo-chiarini-247364.jpg"
 tags:           ["agile", "jobs", "lyon", "gestion de projet", "facilitateur"]
-categories:     ["jobs"]
+categories:     ["elao", "recrutement"]
 
 author_username:    "xgorse"
 ---
@@ -65,5 +65,10 @@ Nous limitons nos effectifs pour garantir un vrai **esprit d'équipe** avec une 
 
 Si vous vous reconnaissez dans le profil recherché et que vous avez envie d'en savoir un peu plus, n'hésitez pas à nous pousser un petit email sur [jobs@elao.com](mailto:jobs@elao.com) ou de passer par la [page contact](https://www.elao.com/fr/nous-contacter/), nous serons heureux de faire votre connaissance !
 
+[**Développeur(se) Frontend**](/fr/elao/job-frontend-developpeur-agence-lyon-2018)
+
+[**Sysadmin/Devops**](/fr/elao/job-adminsys-agence-lyon-2018)
+
+[**Développeur(se) Backend**](/fr/elao/job-developpeur-backend-agence-lyon-2018)
 
 *Photo par [Riccardo Chiarini](https://unsplash.com/photos/p7huyfLrdzc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*

@@ -9,8 +9,8 @@ description:    "Nous cherchons notre intégratrice/intégrateur web à Lyon."
 
 thumbnail:      "/images/posts/thumbnails/boy.png"
 header_img:     "/images/posts/headers/JobLyon.jpg"
-tags:           ["jobs", "integration", "lyon"]
-categories:     ["jobs", "recrutement"]
+tags:           ["recrutement", "jobs", "integration", "lyon"]
+categories:     ["elao", "jobs", "recrutement"]
 
 author_username:    "elao"
 ---
