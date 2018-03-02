@@ -77,7 +77,7 @@ $(window).load(function(){
 });
 
 (function() {
-  if ('serviceWorker' in navigator) {
+  if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js');
   }
 })();

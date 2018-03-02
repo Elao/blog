@@ -11,27 +11,35 @@ mix
     })
     .js('assets/js/app.js', 'js')
     .sass('assets/sass/app.scss', 'css')
-    .webpackConfig({
-        plugins: [
-            new WorkboxBuildWebpackPlugin({
-                globDirectory: 'static',
-                globPatterns: ['**\/*.{js,css,jpg,svg,png,gif}'],
-                swDest: 'static/service-worker.js',
-                swSrc: 'service-worker/service-worker.template.js',
-                templatedUrls: {
-                  '/en/offline/offline/': [
-                    '../../../content/offline/offline.en.md',
-                    '../layouts/offline/single.html'
-                  ]
-                }
-            }),
-            new CopyWebpackPlugin([
-                // copy WorkboxSW production build file to assets/js/workbox-sw.prod.js
-                {
-                    from: require.resolve('workbox-sw'),
-                    to: 'js/workbox-sw.prod.js'
-                }
-            ]),
-        ]
-    })
 ;
+
+if (mix.config.inProduction) {
+  mix
+    .webpackConfig({
+      plugins: [
+        new WorkboxBuildWebpackPlugin({
+          // preload assets
+          globDirectory: 'static',
+          globPatterns: ['**\/*.{js,css,jpg,svg,png,gif}'],
+          // preload offline page
+          templatedUrls: {
+            '/en/offline/offline/': [
+              '../../../content/offline/offline.en.md',
+              '../layouts/offline/single.html'
+            ]
+          },
+          // build service worker
+          swDest: 'static/service-worker.js',
+          swSrc: 'assets/service-worker/service-worker.template.js'
+        }),
+        new CopyWebpackPlugin([
+          // copy WorkboxSW production build file to assets/js/workbox-sw.prod.js, needed by service worker
+          {
+            from: require.resolve('workbox-sw'),
+            to: 'js/workbox-sw.prod.js'
+          }
+        ]),
+      ]
+    })
+  ;
+}
