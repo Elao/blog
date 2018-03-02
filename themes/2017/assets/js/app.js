@@ -1,8 +1,9 @@
-var $ = window.jQuery = require('jquery');
-var Anchor = require('./Anchor');
-var Summary = require('./Summary');
+var
+    $ = window.jQuery = require('jquery'),
+    Anchor = require('./components/Anchor'),
+    Summary = require('./components/Summary');
 
-require('./owl.carousel.min');
+require('owl.carousel');
 
 $(document).ready(function(){
     $('.nav-button').on('click', function(){
@@ -42,7 +43,7 @@ $(document).ready(function(){
 
 });
 
-$(window).load(function(){
+$(window).on('load', function(){
     if ($('#read-progress').length > 0) {
         var documentHeight = $('#disqus_thread').offset().top;
         var windowHeight = $(window).height();
@@ -78,7 +79,7 @@ $(window).load(function(){
     }
 });
 
-$(window).load(() => {
+$(window).on('load', () => {
     const article = $('article.single');
 
     if (article[0]) {

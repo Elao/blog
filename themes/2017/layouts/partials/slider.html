@@ -1,5 +1,5 @@
 <header class="homepage-slider">
-    <div class="owl-carousel">
+    <div class="owl-carousel owl-theme">
         {{ range first 3 .Data.Pages.ByPublishDate.Reverse }}
           {{ $author := index .Site.Data.authors .Params.author_username .Lang }}
           {{ $social := (index .Site.Data.authors .Params.author_username).social }}
