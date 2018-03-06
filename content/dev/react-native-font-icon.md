@@ -27,36 +27,36 @@ Les avantages du vectoriel pour intégrer une suite d'icônes dans une applicati
 
 Malheureusement pour nous, React Native ne suporte pas nativement le format SVG, principal format vectoriel que nous utilisons sur le web.
 
-Le développement mobile avec React Native nous contraint donc à fournir chaque illustration en plusieurs exemplaires pour supporter les différentes résolutions d'écrans. Et chaque changement de couleur donne lieu à une nouvelle série d'image pour le même pictogramme.
+Le développement mobile avec React Native nous contraint donc à fournir chaque illustration en plusieurs exemplaires pour supporter les différentes résolutions d'écrans. Et chaque changement de couleur donne lieu à une nouvelle série d'images pour le même pictogramme.
 
 ### Solution !
 
 Heureusement pour nous, ce que React Native supporte bien, ce sont les polices de caractères personnalisées.
 
-Et ça tombe bien, car on a déjà les outils web qui nous permettent de fournir une suite d'icônes sous forme de police de caractère (également un format vectoriel).
+Et ça tombe bien, car on a déjà les outils web qui nous permettent de fournir une suite d'icônes sous forme de police de caractères (également un format vectoriel).
 
-Voici donc les étapes pour intégrer nos icônes SVG dans une application react-native grêce aux polices personnalisées !
+Voici donc les étapes pour intégrer nos icônes SVG dans une application react-native grâce aux polices personnalisées !
 
 ## Générer une police d'icônes
 
 Pour générer une police de caractères à partir d'icônes au format SVG, plusieurs outils existent déjà.
 Chez élao, nous travaillons généralement avec [IcoMoon](https://icomoon.io/app/#/select).
 
-1 . Créez votre suite d'icônes en selectionnant parmis les polices proposées et/ou en uploadant vos propres pictogrammes au format SVG.
+1 . Créez votre suite d'icônes en sélectionnant parmis les polices proposées et/ou en uploadant vos propres pictogrammes au format SVG.
 
 ![](/images/posts/2018/react-native-font-icon/compose_font.png)
 
-2 . Cliquez sur _Generate Font_ puis ouvrez les propriétés de la police (à coté du bouton _Download_) et saisissez un nom pour votre police qui ne contienne que des lettres standards [a-z], minuscule et/ou majuscle (ex : `acmeIcon`).
+2 . Cliquez sur _Generate Font_ puis ouvrez les propriétés de la police (à côté du bouton _Download_) et saisissez un nom pour votre police qui ne contienne que des lettres standards [a-z], minuscule et/ou majuscle (ex : `acmeIcon`).
 
 ![](/images/posts/2018/react-native-font-icon/customize_font_name.png)
 
-3 . Fermer la pop-in pour valider votre changement puis téléchargez votre police grâce au bouton _Download_. Enfin decompressez le fichier ZIP téléchargé.
+3 . Fermez la pop-in pour valider votre changement puis téléchargez votre police grâce au bouton _Download_. Enfin décompressez le fichier ZIP téléchargé.
 
-4 . Dans le dossier obtenu, récuperez la police au format `ttf` contenu dans le repertoire `fonts` et placez-la dans votre projet dans un repertoire de votre choix (ex: `./assets/fonts/acmeIcon.ttf`).
+4 . Dans le dossier obtenu, récuperez la police au format `ttf` contenu dans le répertoire `fonts` et placez-la dans votre projet dans un répertoire de votre choix (ex: `./assets/fonts/acmeIcon.ttf`).
 
 ![](/images/posts/2018/react-native-font-icon/icon.ttf.png)
 
-⚠️ _Note :_ Attention, pour bien fonctionner sur iOS et Android, le nom du fichier `.ttf` doit correspondre __exactement__ au nom de la police choisie dans l'étape 2.
+⚠️ _Note :_ Attention, pour bien fonctionner sur iOS et Android, le nom du fichier `.ttf` doit correspondre __exactement__ au nom de la police choisi dans l'étape 2.
 
 ## Intégrer la police au build React-Native
 
@@ -87,7 +87,7 @@ $ ls ./android/app/src/main/assets/fonts
 > acmeIcon.ttf
 ```
 
-Coté iOS, votre fichier `ios/AcmeApp/Info.plist` devrait comprendre les nouvelles lignes qui suivent :
+Côté iOS, votre fichier `ios/AcmeApp/Info.plist` devrait comprendre les nouvelles lignes qui suivent :
 
 {{< highlight xml >}}
 <key>UIAppFonts</key>
@@ -96,13 +96,13 @@ Coté iOS, votre fichier `ios/AcmeApp/Info.plist` devrait comprendre les nouvell
 </array>
 {{< /highlight >}}
 
-_Note :_ La suite d'icônes est ammenée à évoluer durant la vie de votre app. Pour la mettre à jour, remplacez votre fichier `./assets/fonts/acmeIcon.ttf` par sa nouvelle version puis exécutez `react-native link` à nouveau.
+_Note :_ La suite d'icônes est amenée à évoluer durant la vie de votre app. Pour la mettre à jour, remplacez votre fichier `./assets/fonts/acmeIcon.ttf` par sa nouvelle version puis exécutez `react-native link` à nouveau.
 
 ## Afficher les icônes dans notre app
 
 En CSS, pour afficher une icône à partir d'une police, on s'y prend de la manière suivante :
 
-On définie d'abord une classe pour notre pictogramme et on lui attribut un pseudo-élement contenant le caractère UTF-8 correspondant à l'icône voulu dans la police générée.
+On définit d'abord une classe pour notre pictogramme et on lui attribut un pseudo-élément contenant le caractère UTF-8 correspondant à l'icône voulue dans la police générée.
 
 {{< highlight css >}}
 .icon-home:before {
@@ -117,7 +117,7 @@ Puis on l'affiche en HTML comme ceci :
 <span class="icon-home"></span>
 {{< /highlight >}}
 
-Coté React-Native, l'équivalent de cette technique s'écrirait ainsi :
+Côté React Native, l'équivalent de cette technique s'écrirait ainsi :
 
 {{< highlight jsx >}}
 <Text style={{ fontFamily: 'acmeIcon' }}>{'\u{e902}'}</Text>
@@ -160,7 +160,7 @@ export default class Icon extends Component {
   });
 
   static propTypes = () => ({
-    // On déclare une propType "icon" qui servira à selectionner le pictogramme
+    // On déclare une propType "icon" qui servira à sélectionner le pictogramme
     icon: PropTypes.oneOf(Object.keys(Icon.icons)).isRequired,
     // On reprend la propType "style" du composant Text
     style: Text.propTypes.style,
@@ -198,7 +198,7 @@ Nous pouvons maintenant afficher des icônes dans notre app comme ceci :
 <Icon icon="home" style={{ fontSize: 16, color: 'green' }} />
 {{< /highlight >}}
 
-_Note :_ Le composant `Icon` se comportera comme le composant `Text` de React-Native, notamment concernant l'héritage des styles lorsqu'il est contenu dans un composant `Text` stylisé. Voir exemple ci-dessous :
+_Note :_ Le composant `Icon` se comportera comme le composant `Text` de React Native, notamment concernant l'héritage des styles lorsqu'il est contenu dans un composant `Text` stylisé. Voir exemple ci-dessous :
 
 {{< highlight jsx >}}
 <Text style={styles.title}
