@@ -14,8 +14,13 @@
     h3,
     h4,
     h5 {
-        position: relative;
-        z-index: -1;
+        &::before {
+            display: block;
+            padding-top: 110px;
+            margin-top: -110px;
+            visibility: hidden;
+            content: '';
+        }
 
         a {
             &, &:visited {

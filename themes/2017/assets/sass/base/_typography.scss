@@ -16,15 +16,6 @@ h1, h2, h3, h4, h5 {
     a, a:visited { color: $headings-color; }
 }
 
-h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
-    display: block;
-    content: '';
-    height: 110px;
-    margin-top: -110px;
-    visibility: hidden;
-    content: '';
-}
-
 h1, h2, h3 , h4 {
     margin: 0;
 
