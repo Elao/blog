@@ -47,7 +47,7 @@ Nous disposons d'un environnement technique et humain épanouissant en réponse 
 
 Dans la réalisation de nos projets, nous restons pragmatiques mais ne transigeons pas sur la qualité.
 
-## Quels sont nos dynamiques ?
+## Quelles sont nos dynamiques ?
 
 ### Conception applicative
 
