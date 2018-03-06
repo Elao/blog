@@ -1,12 +1,12 @@
 ---
 type:           "post"
-title:          "Intégrer des icônes vectorielles dans React-Native"
+title:          "Intégrer des icônes vectorielles dans React Native"
 date:           "2018-03-02"
 publishdate:    "2018-03-06"
 draft:          false
 summary:        true
 slug:           "react-native-font-icon"
-description:    "Comment intégrer des icônes vectorielles dans une app React-Native grâce à une police de caractères personnalisée."
+description:    "Comment intégrer des icônes vectorielles dans une app React Native grâce à une police de caractères personnalisée."
 
 thumbnail:      "/images/posts/thumbnails/harpal-singh-396280-unsplash.jpg"
 header_img:     "/images/posts/headers/harpal-singh-396280-unsplash.jpg"
@@ -20,12 +20,12 @@ author_username:    "tjarrand"
 Les avantages du vectoriel pour intégrer une suite d'icônes dans une application sont assez nombreux :
 
 - Varier la __taille__ du pictogramme sans perte de qualité.
-- Modifier sa __couleur__ avec une simple propriété CSS (changement d'état au survol, ect).
-- Supporter "automatiquement" les différentes __densités de pixels__ des écrans (écrans retina, ect).
+- Modifier sa __couleur__ avec une simple propriété CSS (changement d'état au survol, etc).
+- Supporter "automatiquement" les différentes __densités de pixels__ des écrans (écrans retina, etc).
 
 ### Problème
 
-Malheureusement pour nous, React Native ne suporte pas nativement le format SVG, principal format vectoriel que nous utilisons sur le web.
+Malheureusement pour nous, React Native ne supporte pas nativement le format SVG, principal format vectoriel que nous utilisons sur le web.
 
 Le développement mobile avec React Native nous contraint donc à fournir chaque illustration en plusieurs exemplaires pour supporter les différentes résolutions d'écrans. Et chaque changement de couleur donne lieu à une nouvelle série d'images pour le même pictogramme.
 
@@ -33,20 +33,20 @@ Le développement mobile avec React Native nous contraint donc à fournir chaque
 
 Heureusement pour nous, ce que React Native supporte bien, ce sont les polices de caractères personnalisées.
 
-Et ça tombe bien, car on a déjà les outils web qui nous permettent de fournir une suite d'icônes sous forme de police de caractères (également un format vectoriel).
+Et ça tombe bien, car on dispose déjà les outils web qui nous permettent de fournir une suite d'icônes sous forme de police de caractères (également un format vectoriel).
 
-Voici donc les étapes pour intégrer nos icônes SVG dans une application react-native grâce aux polices personnalisées !
+Voici donc les étapes pour intégrer nos icônes SVG dans une application React Native grâce aux polices personnalisées !
 
 ## Générer une police d'icônes
 
 Pour générer une police de caractères à partir d'icônes au format SVG, plusieurs outils existent déjà.
 Chez élao, nous travaillons généralement avec [IcoMoon](https://icomoon.io/app/#/select).
 
-1 . Créez votre suite d'icônes en sélectionnant parmis les polices proposées et/ou en uploadant vos propres pictogrammes au format SVG.
+1 . Créez votre suite d'icônes en sélectionnant parmi les polices proposées et/ou en uploadant vos propres pictogrammes au format SVG.
 
 ![](/images/posts/2018/react-native-font-icon/compose_font.png)
 
-2 . Cliquez sur _Generate Font_ puis ouvrez les propriétés de la police (à côté du bouton _Download_) et saisissez un nom pour votre police qui ne contienne que des lettres standards [a-z], minuscule et/ou majuscle (ex : `acmeIcon`).
+2 . Cliquez sur _Generate Font_ puis ouvrez les propriétés de la police (à côté du bouton _Download_) et saisissez un nom pour votre police qui ne contienne que des lettres standards [a-z], minuscules et/ou majuscules (ex : `acmeIcon`).
 
 ![](/images/posts/2018/react-native-font-icon/customize_font_name.png)
 
@@ -56,9 +56,9 @@ Chez élao, nous travaillons généralement avec [IcoMoon](https://icomoon.io/ap
 
 ![](/images/posts/2018/react-native-font-icon/icon.ttf.png)
 
-⚠️ _Note :_ Attention, pour bien fonctionner sur iOS et Android, le nom du fichier `.ttf` doit correspondre __exactement__ au nom de la police choisi dans l'étape 2.
+⚠️ _Note :_ Attention, pour bien fonctionner sur iOS et Android, le nom du fichier `.ttf` doit correspondre __exactement__ au nom de la police choisie dans l'étape 2.
 
-## Intégrer la police au build React-Native
+## Intégrer la police au build React Native
 
 _Note :_ Ici je ne fais que répéter les étapes décrites dans cet article assez complet ["React Native Custom Fonts" 🇬🇧](https://medium.com/react-native-training/react-native-custom-fonts-ccc9aacf9e5e)
 
@@ -92,7 +92,7 @@ Côté iOS, votre fichier `ios/AcmeApp/Info.plist` devrait comprendre les nouvel
 {{< highlight xml >}}
 <key>UIAppFonts</key>
 <array>
-	<string>acmeIcon.ttf</string>
+  <string>acmeIcon.ttf</string>
 </array>
 {{< /highlight >}}
 
@@ -102,7 +102,7 @@ _Note :_ La suite d'icônes est amenée à évoluer durant la vie de votre app. 
 
 En CSS, pour afficher une icône à partir d'une police, on s'y prend de la manière suivante :
 
-On définit d'abord une classe pour notre pictogramme et on lui attribut un pseudo-élément contenant le caractère UTF-8 correspondant à l'icône voulue dans la police générée.
+On définit d'abord une classe pour notre pictogramme et on lui attribue un pseudo-élément contenant le caractère UTF-8 correspondant à l'icône voulue dans la police générée.
 
 {{< highlight css >}}
 .icon-home:before {
@@ -202,8 +202,8 @@ _Note :_ Le composant `Icon` se comportera comme le composant `Text` de React Na
 
 {{< highlight jsx >}}
 <Text style={styles.title}
-	<Icon icon="home"/>
-	Retour à l'accueil
+  <Icon icon="home"/>
+  Retour à l'accueil
 </Text>
 {{< /highlight >}}
 
