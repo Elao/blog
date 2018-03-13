@@ -75,6 +75,8 @@ Malgré quelques embûches, nous avons trouvé cette méthode d'authentification
 
 L'authentification par "lien magique" s'intègre particulièrement bien avec l'expérience utilisateur mobile où il est toujours difficile de taper des mots de passe et où l'authentification est généralement persistante.
 
+Est-ce que cette méthodes d'authentification peut remplacer définitivement l'authentification classique par mot de passe ou doit elle seulement être proposé comme alternative ? L'avenir nous le dira :)
+
 ---
 
 <div>Bearded man and mobile phone icons made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
