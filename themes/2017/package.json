@@ -1,10 +1,7 @@
 {
   "dependencies": {
-    "copy-webpack-plugin": "4.4.2",
     "jquery": "3.3.1",
     "laravel-mix": "1.7.2",
-    "owl.carousel": "2.2.0",
-    "workbox-sw": "1.3.0",
-    "workbox-webpack-plugin": "1.3.0"
+    "owl.carousel": "2.2.0"
   }
 }
