@@ -27,7 +27,7 @@ Pour ce projet, avons utilisé cette méthode d'authentification sur deux app mo
 
 ## Fonctionnement
 
-L'authentification par lien magique déporte toute la gestion des mots de passe sur la boîte mail de l'utilisateur. Celui ci fournis son adresse email à l'application lorsqu'il souhaite s'y connecter, un lien d'authentification contenant un token lui est envoyé. L'utilisateur se connecte ensuite à sa boite mail puis clique sur le lien et est ensuite connecté sur l'application.
+L'authentification par lien magique déporte toute la gestion des mots de passe sur la boîte mail de l'utilisateur. Celui-ci fournit son adresse email à l'application lorsqu'il souhaite s'y connecter, un lien d'authentification contenant un token lui est envoyé. L'utilisateur se connecte ensuite à sa boite mail puis clique sur le lien et est ensuite connecté sur l'application.
 
 [![](/images/posts/2018/magic-link.png)](/images/posts/2018/magic-link.png)
 
@@ -35,7 +35,7 @@ L'authentification par lien magique déporte toute la gestion des mots de passe 
 
 Qu'est ce qui nous a poussé à mettre en place ce système ? C'est d'abord une idée qui a germé face à un constat.
 
-En tant que développeurs et utilisateurs d'internet, nous sommes plusieurs à avoir fait le constat que beaucoup d'utilisateurs oublient très fréquement leur mot de passe. En effet, une fois connecté à une application, grâce à des mécanismes comme le "Remember Me" ou les sessions longues, il peut nécessiter plusieurs semaines voir mois avant de devoir resaisir son mot de passe. Un grand nombre de connexions passent alors par une procédure d'oubli de mot de passe et donc par la boite email de l'utilisateur.
+En tant que développeurs et utilisateurs d'internet, nous sommes plusieurs à avoir fait le constat que beaucoup d'utilisateurs oublient très fréquemment leur mot de passe. En effet, une fois connecté à une application, grâce à des mécanismes comme le "Remember Me" ou les sessions longues, il peut se passer plusieurs semaines voir mois avant de devoir resaisir son mot de passe. Un grand nombre de connexions passent alors par une procédure d'oubli de mot de passe et donc par la boite email de l'utilisateur.
 
 [![You can't leak passwords if you don't store passwords.](/images/posts/2018/you-cant-leak-passwords-meme.png)](/images/posts/2018/you-cant-leak-passwords-meme.png)
 
@@ -55,7 +55,7 @@ Ce temps gagné a été amplifié par le fait que, dans le cadre de ce projet, c
 
 ## A plus long terme
 
-Au fur et à mesure de notre utilisation, nous avons fait plusieurs ajustements et perfectionnements qui fait qu'à plus long terme, la mise en place de cette authentification par "lien magique" a été un peu plus coûteuse que l'authentification classique que nous utilisons d'habitude. Mais ce coût sera rapidement lissé si nous la mettons en place sur d'autres projets.
+Au fur et à mesure de notre utilisation, nous avons fait plusieurs ajustements et perfectionnements qui font qu'à plus long terme, la mise en place de cette authentification par "lien magique" a été un peu plus coûteuse que l'authentification classique que nous utilisons d'habitude. Mais ce coût sera rapidement lissé si nous la mettons en place sur d'autres projets.
 
 ## Validation Apple
 
