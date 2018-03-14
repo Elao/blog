@@ -1,8 +1,8 @@
 ---
 type:               "post"
 title:              "Authentification par lien magique"
-date:               "2018-03-06"
-publishdate:        "2018-03-06"
+date:               "2018-03-14"
+publishdate:        "2018-03-14"
 draft:              false
 slug:               "authentification-par-lien-magique"
 description:        "Retour d'expérience sur la mise en place d'authentification par lien de connexion."
