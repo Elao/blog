@@ -21,7 +21,7 @@ Nous avons récemment pris le parti pour l'un de nos dernier projet de proposer 
 
 L'authentification par "lien magique" est notamment utilisée par Slack qui propose cette fonctionnalité dans son client et qui nous a grandement inspiré.
 
-[![](/images/posts/2018/magic-link-slack.png)](/images/posts/2018/magic-link-slack.pgn)
+[![](/images/posts/2018/magic-link-slack.png)](/images/posts/2018/magic-link-slack.png)
 
 Pour ce projet, avons utilisé cette méthode d'authentification sur deux app mobile ainsi que sur une app backend.
 
