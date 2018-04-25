@@ -98,3 +98,5 @@ L'attribution des rôles est moins courante. Elle permet l'implication de toute 
 Les équipes Elao ont l'habitude de mener des revues sur ce format. En plus des échanges bénéfiques au produit, nous pouvons travailler sur la confiance qui permettra à nos partenaires de développer le produit dont ils ont besoin.
 
 N'hésitez pas à nous faire vos retours sur vos pratiques de revue produit.
+
+En parlant de retour, vous pouvez consulter la chaine Scrum Life : https://youtu.be/qWRrW9_h3DU 
