@@ -40,6 +40,8 @@ L'équipe peut aussi avoir des retours sur des éléments qui l'impactent :
 
 Toutes les personnes impliquées dans le produit directement ou indirectement ont la possibilité d'échanger. Le product owner peut donc s'appuyer sur ces échanges pour continuer le développement produit et encourager ces échanges aussi en dehors de la revue produit.
 
+Les parties prenantes ne peuvent pas participer, on peut filmer la revue pour la diffuser en interne.
+
 ### Parler du travail de l'équipe
 
 L'équipe peut faire un bilan de ce qui était prévu, de ce qui n'a pas pu être livré et des difficultés rencontrées. Ceci permet de recadrer la planification etle budget avec les éléments les plus à jour.
