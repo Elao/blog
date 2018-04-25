@@ -28,9 +28,9 @@ Tout le monde peut donc prendre connaissance de ce qui a été fait, décidé. C
 
 ### Impliquer les parties prenantes
 
-Impliquer les parties prenantes peut générer des interrogations de la part de personnes qui n'ont pas participé activement à la création du produit. Il vaut mieux les laisser s'exprimer; il sera alors encore temps pour le product owner d'inclure des modifications en discussion avec l'équipe si ces débats sont pertinents.
+Impliquer les parties prenantes peut générer des interrogations de la part de personnes qui n'ont pas participé activement à la création du produit. Il vaut mieux les laisser s'exprimer; il sera alors encore temps pour le product owner (PO) d'inclure des modifications en discussion avec l'équipe si ces débats sont pertinents.
 
-S'il y a des divergences fortes, le product owner peut choisir de traiter ces points pendant un atelier dédié.
+S'il y a des divergences fortes, le PO peut choisir de traiter ces points pendant un atelier dédié.
 
 L'équipe peut aussi avoir des retours sur des éléments qui l'impactent :
 
@@ -38,13 +38,13 @@ L'équipe peut aussi avoir des retours sur des éléments qui l'impactent :
 * les utilisateurs ou leurs représentants peuvent parler de leurs attentes
 * les experts peuvent présenter des problématiques futures à adresser dans le produit
 
-Toutes les personnes impliquées dans le produit directement ou indirectement ont la possibilité d'échanger. Le product owner peut donc s'appuyer sur ces échanges pour continuer le développement produit et encourager ces échanges aussi en dehors de la revue produit.
+Toutes les personnes impliquées dans le produit directement ou indirectement ont la possibilité d'échanger. Le PO peut donc s'appuyer sur ces échanges pour continuer le développement produit et encourager ces échanges aussi en dehors de la revue produit.
 
-Les parties prenantes ne peuvent pas participer, on peut filmer la revue pour la diffuser en interne.
+Les parties prenantes ne peuvent pas participer : on peut filmer la revue pour la diffuser en interne.
 
 ### Parler du travail de l'équipe
 
-L'équipe peut faire un bilan de ce qui était prévu, de ce qui n'a pas pu être livré et des difficultés rencontrées. Ceci permet de recadrer la planification etle budget avec les éléments les plus à jour.
+L'équipe peut faire un bilan de ce qui était prévu, de ce qui n'a pas pu être livré et des difficultés rencontrées. Ceci permet de recadrer la planification et le budget avec les éléments les plus à jour.
 
 Il ne s'agit pas de se dédouaner, de se flageler ou de chercher un coupable.  Cette transparence permet de bien faire comprendre les contraintes du développement d'un produit aux personnes qui ne sont pas directement impliquées.
 
@@ -54,17 +54,17 @@ Les équipes impactées par le produit peuvent alors s'organiser, planifier leur
 
 Une revue préparée permettra de laisser plus de place aux échanges plutôt qu'à la démonstration du produit.
 
-Il est alors conseillé de préparer cette revue en amont : ce qui doit être présenté, qui doit le présenter. Pour fluidifier encore plus la revue, on peut aussi organiser les rôles de chaque membre de l'équipe.
+Il est alors conseillé de préparer cette revue en amont : ce qui doit être présenté, qui doit le présenter, quelles données présentées. Pour fluidifier encore plus la revue, on peut aussi organiser les rôles de chaque membre de l'équipe.
 
 ### Présenter l'avancement
 
-Avant la démonstration du produit, le product owner présente ce qui a été fait et ce qui n'a pas pu être fait sur l'itération. Il expliquera les problèmes  rencontrés à son niveau mais laissera le soin à l'équipe de présenter le travail réalisé ainsi que l'organisation de l'itération. 
+Avant la démonstration du produit, le PO présente ce qui a été fait et ce qui n'a pas pu être fait sur l'itération. Il expliquera les problèmes rencontrés à son niveau mais laissera le soin à l'équipe de présenter le travail réalisé ainsi que l'organisation de l'itération. 
 
-Il intervient en fin de revue pour se projeter sur les futures itérations à partir des éléments apportés pendant le sprint et de retours du la revue. 
+Il intervient en fin de revue pour se projeter sur les futures itérations à partir des éléments apportés pendant le sprint et à partir des retours de la revue. 
 
 ### Scénariser la revue
 
-Pour faciliter un atelier, on peut attribuer des rôles dédiés. La fluidité permettra d'aller à l'essentiel. Le product owner peut alors être en retrait pour être disponible pour des discussions liées au produit.
+Pour faciliter un atelier, on peut attribuer des rôles dédiés. La fluidité permettra d'aller à l'essentiel. Le PO peut alors être en retrait pour être disponible pour des discussions liées au produit.
 
 On introduit alors 3 rôles principaux qu'on peut faire tourner :
 
@@ -73,9 +73,9 @@ On introduit alors 3 rôles principaux qu'on peut faire tourner :
 	* il organise le fil conducteur de la démo
 	* il recueille les données utilisées pour cette démo
 	* il aiguille l'acteur durant la démonstration et peut répondre aux questions du groupe
-	* il ne s'agit par forcément du prduct owner mais le PO peut aider le scénariste dans cette tâche
+	* il ne s'agit pas forcément du PO mais le PO peut aider le scénariste dans cette tâche
 	* il travaille avec les autres rôles pour faciliter cet atelier
-* un rôle de scribe : le scribe suit les déroulement de la démo
+* un rôle de scribe : le scribe suit le déroulement de la démo
 	* il note les bugs et les micro-évolutions
 	* il note les échanges à avoir sur des fonctionnalités
 	* il peut aussi cumuler le rôle de gardien du temps et s'assure que les échanges trop longs soient traités au cours d'un autre atelier
