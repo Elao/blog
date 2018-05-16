@@ -1,15 +1,15 @@
 ---
 type:               "post"
 title:              "Utiliser une IP statique et un loadbalancer «Ingress» avec Kubernetes"
-date:               "2018-01-26"
-publishdate:        "2018-01-26"
+date:               "2018-05-16"
+publishdate:        "2018-05-16"
 draft:              false
 summary:            true
 slug:               "kubernetes-ip-statique-ingress-loadbalancer"
 description:        "Affecter une IP statique dédiée à un Ingress Kubernetes et répartir la charge."
 
-thumbnail:          "/images/posts/thumbnails/openstack.png"
-header_img:         "/images/posts/headers/facade.jpg"
+thumbnail:          "/images/posts/thumbnails/kubernetes.png"
+header_img:         "/images/posts/headers/to_the_moon.png"
 tags:               ["kubernetes","k8s","infra","docker", "ingress"]
 categories:         ["Infra", "Kubernetes"]
 
@@ -18,9 +18,12 @@ author_username:    "gfaivre"
 
 Bonjour à tou(te)s !
 
-Au menu aujourdhui, comment créer une IP publique statique avec Google Cloud et l'affecter à un **«Ingress»** (J'ai choisi de ne pas traduire le terme n'ayant pas trouvé d'équivalent français satisfaisant et «point d'entrée» me paraissant avoir moins de sens).
+Au menu aujourdhui, comment créer une IP publique statique avec Google Cloud et l'affecter à un **«Ingress»**
 
-<span class="side-note light">🚧</span>Cet article suppose que vous disposez d'un cluster [Kubernetes](https://kubernetes.io/) fonctionnel sur Google Cloud Platform et que vous avez déjà créé un projet (au sens GCP) si ça n'est pas le cas rendez-vous [ici](https://console.cloud.google.com/projectselector/kubernetes)<!--more-->
+N.B.: J'ai choisi de ne pas traduire le terme n'ayant pas trouvé d'équivalent français satisfaisant et «point d'entrée» me paraissant avoir moins de sens.
+<!--more-->
+
+<span class="side-note light">🚧</span>Cet article suppose que vous disposez d'un cluster [Kubernetes](https://kubernetes.io/) fonctionnel sur Google Cloud Platform et que vous avez déjà créé un projet (au sens GCP) si ça n'est pas le cas rendez-vous [ici](https://console.cloud.google.com/projectselector/kubernetes)
 
 ---
 ## Avant propos
@@ -29,7 +32,7 @@ Au menu aujourdhui, comment créer une IP publique statique avec Google Cloud et
 
 - **Ingress**: «Point d'entrée» dédié permettant de centraliser l'accès à divers services.
 - **GCP**: [Google Cloud Platform](https://cloud.google.com)
-- **Service**: Au sens Kubernetes c'est une couche d'abstraction qui permet d'exposer un (ou un groupe) de «**Pods**».
+- **Service**: Au sens Kubernetes c'est une couche d'abstraction qui permet d'exposer un (ou un groupe de) «**Pods**».
 
 ### Objectifs
 
@@ -44,7 +47,7 @@ Au menu aujourdhui, comment créer une IP publique statique avec Google Cloud et
 ### Pré-requis client
 
 * [Google Cloud SDK](https://cloud.google.com/sdk/docs/quickstarts)
-* kubctl (À installer avec la commande `gcloud components install kubectl`)
+* kubctl - À installer avec la commande `gcloud components install kubectl`
 
 ## Création d'une IP statique
 
@@ -52,7 +55,7 @@ Avant de réserver notre IP, assurez-vous que la configuration projet est correc
 
 ## Définir le projet par défaut qui va être utilisé
 
-<span class="side-note light">📌</span>Si vous souhaitez savoir quelle sont les variables déjà configurées sur votre poste un `gcloud config list` devrait faire l'affaire.
+<span class="side-note light">📌</span>Si vous souhaitez savoir quelles sont les variables déjà configurées sur votre poste un `gcloud config list` devrait faire l'affaire.
 
 Pour consulter une clé particulière (par exemple le projet configuré) nous utiliserons le flag `get-value`.
 
@@ -73,7 +76,7 @@ gcloud config set compute/zone europe-west1
 ## Création de l'adresse
 
 <span class="side-note light">🚧</span>**Attention subtilité !**
-Si vous passez le flag `--global` votre IP ne sera pas affectée à une zone géographique, si vous souhaitez avoir une l'IP localisée il faut spécifier la zone à laquelle elle sera rattachée:
+Si vous passez le flag `--global` votre IP ne sera pas affectée à une zone géographique, si vous souhaitez avoir une IP localisée il faut spécifier la zone à laquelle elle sera rattachée:
 
 {{< highlight shell >}}
 gcloud compute addresses create cramaillote-endpoint --global
@@ -105,7 +108,7 @@ status: RESERVED
 
 
 Première étape terminée !
-Il ne nous reste plus qu'à utiliser cette IP afin de pouvoir exposer notre application nous allons donc créer:
+Il ne nous reste plus qu'à utiliser cette IP afin de pouvoir exposer notre application, nous allons donc créer:
 
 * Un **«Service»** de type `NodePort`
 * Un **«Ingress»** avec notre IP publique et qui aura pour «backends» notre **«Pod»** Nginx (constitué donc, de 2 instances).
@@ -116,7 +119,7 @@ L'objectif final étant d'avoir un **Ingress** avec une IP publique statique qui
 
 Nous créons rapidement les instances applicatives qui seront chargées de nous répondre.
 
-Pour cet exemple je suis parti sur une image faisant tourner un nginx qui doit me retourer le nom de l'instance sur laquelle il fonctionne.
+Pour cet exemple je suis parti sur une image faisant tourner un nginx qui doit me retourner le nom de l'instance sur laquelle il fonctionne.
 
 {{< highlight nginx >}}
 server {
@@ -187,7 +190,7 @@ default backend - 404
 {{< /highlight >}}
 
 On notera l'affectation de notre IP statique grâce à l'annotation `kubernetes.io/ingress.global-static-ip-name`.
-Si rien n'est spécifié l'**«Ingress»** se verra affecter une adresse IP temporaire (qui changera donc à chaque fois qu'il sera détruit / recréé).
+Si rien n'est spécifié, l'**«Ingress»** se verra affecter une adresse IP temporaire (qui changera donc à chaque fois qu'il sera détruit / recréé).
 
 <span class="side-note light">💡</span>**Astuce**: Si vous avez déjà créé votre **«Ingress»** et souhaitez conserver votre IP, il est possible de promouvoir une IP temporaire en statique avec le flag `--addresses` de la manière suivante:
 
