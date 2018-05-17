@@ -1,11 +1,11 @@
 ---
 type:               "post"
 title:              "La tribu Elao Paris"
-date:               "2016-05-31"
-publishdate:        "2016-05-31"
+date:               "2018-05-31"
+publishdate:        "2018-05-31"
 draft:              false
 slug:               "elao-paris"
-description:        "Elao met un coup d'accélérateur sur Paris et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre."
+description:        "Elao recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre."
 
 thumbnail:          "/images/posts/thumbnails/haphpybirthday.jpg"
 header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
@@ -19,27 +19,27 @@ co_authors:         []
 
 # TL;DR
 
-Elao met un **coup d'accélérateur sur Paris** et recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => [jobs@elao.com](mailto:jobs@elao.com)** <!--more-->
+Elao recherche des gens passionnés pour **développer la tribu parisienne**. Nos piliers : satisfaction client/utilisateur et communication, tout ça saupoudré d'agilité et de challenges techniques. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => [jobs@elao.com](mailto:jobs@elao.com)** <!--more-->
 
 # Elao à Paris
 
-Elao a été créé par 3 développeurs à Lyon il y a 10 ans. Aujourd'hui installé à Lyon, Paris et Montpellier, nous renforçons plus particulièrement notre équipe **Elao Paris**  pour continuer à **accompagner nos clients de la région parisienne**.
+Elao a été créé par 3 développeurs à Lyon il y a plus de 10 ans et est présente sur Paris depuis 3 ans. Nous renforçons plus particulièrement notre équipe **Elao Paris** pour continuer à **accompagner nos clients localement**.
 
-Dans notre développement parisien, nous **recherchons des développeuses et développeurs** sensibilisés aux méthodologies agiles et Lean. Nous voulons clairement des **personnalités motivées**, capables d'apporter leur diversité et leur univers. C’est une garantie essentielle à la richesse de l'équipe, tant sur le plan humain que professionnel.
+Dans notre développement parisien, nous **recherchons des développeuses et développeurs** sensibilisés aux méthodologies agiles et Lean. Nous recherchons - comme tout le monde - des **personnalités motivées**, capables d'apporter leur diversité et leur univers. C’est une garantie essentielle à la richesse de l'équipe, tant sur le plan humain que professionnel.
 
 # Une équipe proche du client
 
-Elao Paris est une tribu montée sur le concept d’une équipe de développement et un accompagnant projet.
+Elao Paris est une tribu montée sur le concept d’une équipe capable d'accompagner nos clients en toute autonomie.
 
-Une **équipe est composée de 3-4 développeurs**. Elle a suffisamment d'expérience pour **être force de proposition chez nos clients**. Elle travaille à l'agence et rencontre régulièrement le client pour recueillir le besoin et partager l'avancement. Elle s'organise pour trouver la solution la plus adaptée au projet, au produit.
+Une **équipe est composée de 3-4 développeurs**. Elle a suffisamment d'expérience pour **être force de proposition chez nos clients**. Elle rencontre régulièrement le client pour recueillir le besoin et partager l'avancement; que l'équipe soit co-localisée chez le client ou à l'agence. Elle s'organise pour **trouver la solution la plus adaptée au projet, au produit**.
 
-Cette connaissance du produit nous permet de mieux répondre à nos clients. L'équipe peut être accompagnée d'autres compétences (intégration, design, UX) quand le projet le nécessite. Un accompagnant projet intervient pour **fluidifier la relation avec nos clients** comme un Scrum Master et aide l'équipe à s'auto-organiser.
+Cette connaissance du produit nous permet de mieux répondre à nos clients. L'équipe peut être accompagnée d'autres compétences (intégration, design, UX) quand le projet le nécessite. Un **accompagnant projet** intervient pour **fluidifier la relation avec nos clients** comme un Scrum Master et aide l'équipe à s'auto-organiser.
 
 # Environnement technique
 
-Notre socle technique est basé **depuis 2006** sur PHP et le framework **Symfony** sur lequel nous avons beaucoup investi. Nous faisons partie des tout premiers **partenaires officiels de SensioLabs**, l'éditeur de Symfony. Mais le web ne résume pas à la partie backend; nous avons également une affinité grandissante avec l'écosystème **JavaScript**, avec des projets en **React**, **ReactNative**, **EmberJs** ou **Meteor**.
+Notre socle technique backend est basé sur PHP et le framework **Symfony depuis 2006** sur lequel nous avons beaucoup investi. Pour le frontend, après être passé par EmberJS et Meteor, nous avons sélectionné **React pour le web et ReactNative pour le mobile** dans l'écosystème **JavaScript**. Nous travaillons aussi autour des **Progressive Web Apps (PWA)** pour la rencontre du web et des apps mobile.
 
-Notre positionnement historique sur Symfony nous confronte à des projets profondément techniques. **Chaque projet est unique**. Nous faisons de l'**application web métier sur mesure**.
+Notre positionnement historique sur Symfony nous confronte à des projets profondément techniques. **Chaque projet est unique**. Nous faisons de l'**application web métier sur mesure**. Si nous estimons qu'une technologie peut être plus efficace pour un projet et que nous avons la capacité de monter en compétence dessus, nous n'hésiterons à le faire ensemble.
 
 Cette appétence technique et notre recherche de l'efficacité nous ont très rapidement fait monter en compétence sur la partie Ops. Porté par la mouvance **DevOps**, nous avons commencé par **l'optimisation de notre écosystème de développement**, puis de nos environnements de démo, pour finir par la prod et faire émerger un **nouveau métier** chez Elao : **l'hébergement sur mesure** d'application web. Nous sommes positionnés sur la solution **Ansible**.
 
@@ -72,13 +72,13 @@ Pour garantir la **qualité** dans le temps et la **non-régression**, nous mett
 
 **Chaque nouveau développement est revu** par un autre membre de l'équipe avant de partir en production. Cette méthode, même si elle consomme un peu de temps, assure un **code homogène** sur le projet et surtout permet à l'équipe de **partager la connaissance produit**.
 
-Pour garantir et suivre les indicateurs qualité tout au long du projet, nous mettons en place les outils de qualité de type CodeSniffer, SensioLabs Insight, Scrutinizer.
+Pour garantir et suivre les indicateurs qualité tout au long du projet, nous mettons en place les outils de qualité de type CodeSniffer, SensioLabs Insight, Scrutinizer en tournant sur un IDE PHPStorm bien équipé.
 
 # Le partage
 
 Nous sommes conscients que les technologies avancent rapidement. Nous souhaitons **dédier du temps pour monter en compétence** et nous échangeons à travers des Dojos/Katas, des Elao Talks où nous expérimentons des nouvelles technologies ou des nouveaux design patterns.
 
-Nous appliquons aussi cette recette sur des projets. Notre jeu **[LazerDrive](http://www.lazerdrive.io/)** est né comme un **projet de R&D** sous le nom de **[Curvytron](http://www.curvytron.com)** avant de prendre son envol en tant que projet à part entière. Nous avons aussi **participé aux lancements de startups**.
+Nous appliquons aussi cette recette sur des projets internes. Notre jeu **[LazerDrive](http://www.lazerdrive.io/)** est né comme un **projet de R&D** sous le nom de **[Curvytron](http://www.curvytron.com)** avant de prendre son envol en tant que projet à part entière. Nous avons aussi **participé aux lancements de startups**.
 
 Vous pouvez nous croiser sur les **conférences techniques** où nous participons et proposons des sujets. Nous sommes **impliqués dans la vie de l'AFUP** depuis 2008 et nous organisons le meetup lyonnais Ansible.
 
@@ -99,22 +99,20 @@ Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partage
 
 # Nous rejoindre
 
-Nous espérons que vous avez une bonne idée de ce qu'est Elao. Nous vous proposons de **vous rencontrer sur Paris près de la Bourse** pour en discuter plus en détail. Nous recherchons des **personnes avec un bon niveau de programmation**, encore mieux sur du PHP, toujours plus mieux, sur du Symfony. Nous pouvons **assurer la montée en compétences** des personnes moins expérimentées mais avec de bonnes bases.
+Nous espérons que vous avez une bonne idée de ce qu'est Elao. Nous vous proposons de **vous rencontrer sur Paris près de Saint-Lazare** pour en discuter plus en détail. Nous recherchons des **personnes avec un bon niveau de programmation**, encore mieux sur du PHP, toujours "plus mieux", sur du Symfony. Nous pouvons **assurer la montée en compétence** des personnes moins expérimentées qui ont de bonnes bases techniques.
 
 Nous attachons beaucoup d'importance à l'intégration de nouveaux collaborateurs et nous espérons le retranscrire dans notre **processus de recrutement**. Nous évaluons votre **niveau technique et notre capacité à vous intégrer** dans nos équipes. Après une première rencontre, nous préférons rapidement entrer dans un mode plus relax pour **vous donner une bonne impression du travail en équipe chez Elao**.
 
 Vous voulez en savoir plus ? N'hésitez pas à nous contacter sur [jobs@elao.com](mailto:jobs@elao.com) ou en discuter directement avec nous sur Twitter ; rien de plus pertinent pour vous faire une idée précise d'Elao Paris.
 
-* Maxime Colin [@colin_maxime](https://twitter.com/colin_maxime)
+* Cindy Liwenge [@kinedie](https://twitter.com/kinedie)
+* Mathieu Marchois [@mmarchois](https://twitter.com/mmarchois)
 * Nicolas Dievart [@nicolasdievart](https://twitter.com/nicolasdievart)
 * Richard Hanna [@richardhanna](https://twitter.com/richardhanna)
-* Xavier Gorse [@xgorse](https://twitter.com/xgorse)
 * Sébastien Solère [@sebsolere](https://twitter.com/sebsolere)
 
-# Des envies d'ailleurs
+# Plus au sud
 
-Vous vous retrouvez dans ce que nous partageons mais vous préféreriez vivre dans le sud ?
+Vous vous retrouvez dans ce que nous partageons mais vous préférez vivre du côté de Lyon ? Notre **tribu lyonnaise** est toujours à la recherche de nouveaux profils. **Parlez-en avec Xavier Gorse [@xgorse](https://twitter.com/xgorse)**.
 
-Notre **tribu montpelliéraine** est aussi en pleine construction. **Parlez-en avec Johan [@y0h34](https://twitter.com/y0h34)**.
-
-Dans tous les cas, que ce soit sur Lyon, Montpellier ou Paris, nous sommes toujours prêt à partager, écouter et apprendre. **N'hésitez pas à nous contacter ou à passer nous voir !**
+Dans tous les cas, que ce soit sur Lyon ou Paris, nous sommes toujours prêt à partager, écouter et apprendre. **N'hésitez pas à nous contacter ou à passer nous voir !**
