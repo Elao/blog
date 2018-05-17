@@ -28,17 +28,19 @@ Tout le monde peut donc prendre connaissance de ce qui a été fait, décidé. C
 
 ### Impliquer les parties prenantes
 
-Impliquer les parties prenantes peut générer des interrogations de la part de personnes qui n'ont pas participé activement à la création du produit. Il vaut mieux les laisser s'exprimer; il sera alors encore temps pour le product owner (PO) d'inclure des modifications en discussion avec l'équipe si ces débats sont pertinents.
+Toutes les personnes impliquées dans le produit directement ou indirectement ont la possibilité d'échanger pendant la reuvue d'itération. Le PO peut donc s'appuyer sur ces échanges pour continuer le développement produit et encourager ces échanges aussi en dehors de la revue produit.
+
+Impliquer les parties prenantes permet d'interagir avec elles directement. Cela peut générer des interrogations de la part de personnes qui n'ont pas participé activement à la création du produit. Il vaut mieux les laisser s'exprimer; il sera alors encore temps pour le product owner (PO) d'inclure des modifications en discussion avec l'équipe si ces débats sont pertinents.
 
 S'il y a des divergences fortes, le PO peut choisir de traiter ces points pendant un atelier dédié.
+
+### S'aligner avec les parties prenantes
 
 L'équipe peut aussi avoir des retours sur des éléments qui l'impactent :
 
 * le juridique peut évoquer une nouvelle loi qui impacte le produit (RGPD par exemple),
 * les utilisateurs ou leurs représentants peuvent parler de leurs attentes
 * les experts peuvent présenter des problématiques futures à adresser dans le produit
-
-Toutes les personnes impliquées dans le produit directement ou indirectement ont la possibilité d'échanger. Le PO peut donc s'appuyer sur ces échanges pour continuer le développement produit et encourager ces échanges aussi en dehors de la revue produit.
 
 Les parties prenantes ne peuvent pas participer : on peut filmer la revue pour la diffuser en interne.
 
@@ -54,7 +56,7 @@ Les équipes impactées par le produit peuvent alors s'organiser, planifier leur
 
 Une revue préparée permettra de laisser plus de place aux échanges plutôt qu'à la démonstration du produit.
 
-Il est alors conseillé de préparer cette revue en amont : ce qui doit être présenté, qui doit le présenter, quelles données présentées. Pour fluidifier encore plus la revue, on peut aussi organiser les rôles de chaque membre de l'équipe.
+On peut préparer cette revue en amont. Pour fluidifier encore plus la revue, on peut aussi organiser les rôles de chaque membre de l'équipe.
 
 ### Présenter l'avancement
 
@@ -95,8 +97,10 @@ La préparation de la revue est importante et permet de se concentrer sur les é
 
 L'attribution des rôles est moins courante. Elle permet l'implication de toute l'équipe. Une équipe en difficulté peut y trouver un cadre pour se recentrer.
 
+Une préparation ne devrait pas durer plus d'une heure. On fera attention si cette préparation est longue. C'est sans doute le signe d'autres problèmes au niveau de l'organisation de l'équipe.
+
 Les équipes Elao ont l'habitude de mener des revues sur ce format. En plus des échanges bénéfiques au produit, nous pouvons travailler sur la confiance qui permettra à nos partenaires de développer le produit dont ils ont besoin.
 
 N'hésitez pas à nous faire vos retours sur vos pratiques de revue produit.
 
-En parlant de retour, vous pouvez consulter la chaine Scrum Life : https://youtu.be/qWRrW9_h3DU 
+En parlant de retour, vous pouvez consulter la chaine Scrum Life. Jean-Pierre parle plus en détails de la revue et de ses travers : https://youtu.be/qWRrW9_h3DU et https://youtu.be/zeXpOHpohso
