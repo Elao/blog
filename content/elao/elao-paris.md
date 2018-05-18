@@ -39,7 +39,7 @@ Cette connaissance du produit nous permet de mieux répondre à nos clients. L'�
 
 Notre socle technique backend est basé **depuis 2006** sur PHP et le framework **Symfony** sur lequel nous avons beaucoup investi. Pour le frontend, après être passé par EmberJS et Meteor, nous avons sélectionné dans l'écosystème **JavaScript**  **React / ReactNative**.
 
-Notre positionnement historique sur Symfony nous confronte à des projets profondément techniques. **Chaque projet est unique**. Nous faisons des **applications web et mobile métier sur mesure**. Si nous estimons qu'une technologie peut être plus efficace pour un projet et que nous avons la capacité de monter en compétence dessus, nous n'hésiterons à le faire ensemble.
+Notre positionnement historique sur Symfony nous confronte à des projets profondément techniques. **Chaque projet est unique**. Nous faisons des **applications web et mobile métier sur mesure**. Si nous estimons qu'une technologie peut être plus efficace pour un projet et que nous avons la capacité à monter en compétence dessus, nous n'hésiterons pas à le faire ensemble.
 
 Cette appétence technique et notre recherche de l'efficacité nous ont très rapidement fait monter en compétence sur la partie Ops. Porté par la mouvance **DevOps**, nous avons commencé par **l'optimisation de notre écosystème de développement**, puis de nos environnements de démo, pour finir par la prod et faire émerger un **nouveau métier** chez Elao : **l'hébergement sur mesure** d'application web. Nous sommes positionnés sur la solution **Ansible**.
 
@@ -114,4 +114,4 @@ Vous voulez en savoir plus ? N'hésitez pas à nous contacter sur [jobs@elao.com
 
 Vous vous retrouvez dans ce que nous partageons mais vous préférez vivre du côté de Lyon ? Notre **tribu lyonnaise** est toujours à la recherche de nouveaux profils. **Parlez-en avec Xavier Gorse [@xgorse](https://twitter.com/xgorse)**.
 
-Dans tous les cas, que ce soit sur Lyon ou Paris, nous sommes toujours prêt à partager, écouter et apprendre. **N'hésitez pas à nous contacter ou à passer nous voir !**
+Dans tous les cas, que ce soit sur Lyon ou Paris, nous sommes toujours prêt à partager, écouter et apprendre. **Contactez nous ou passez nous voir !**
