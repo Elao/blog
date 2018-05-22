@@ -1,8 +1,8 @@
 ---
 type:               "post"
 title:              "La tribu Elao Paris"
-date:               "2018-05-31"
-publishdate:        "2018-05-31"
+date:               "2018-05-20"
+publishdate:        "2018-05-20"
 draft:              false
 slug:               "elao-paris"
 description:        "Elao recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao à Paris, nous espérons vous donner de bonnes raisons de nous rejoindre."
@@ -93,12 +93,13 @@ Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partage
 
 # Nous rejoindre
 
-Nous recherchons comme tout le monde des **personnalités motivées**, capables d'apporter leur diversité et leur univers. C’est une garantie essentielle à la richesse de l'équipe, tant sur le plan humain que professionnel.
+Nous recherchons, comme tout le monde, des **personnalités motivées**, capables d'**apporter leur diversité et leur univers**. C’est une garantie essentielle à la richesse de l'équipe, tant sur le plan humain que professionnel. Nous souhaitons être content de nous retrouver au travail, tant que cela reste à un **rythme soutenable**. Horaires flexibles, télétravail équilibré bienvenus tant que l'équipe peut avancer sereinement.
 
-Pour rencontrer notre équipe, **passez nous voir dans le quartier Saint-Lazare**. Nous attachons beaucoup d'importance à l'intégration de nouveaux collaborateurs et nous espérons le retranscrire dans notre **processus de recrutement**. Nous évaluons votre **niveau technique et notre capacité à vous intégrer** dans nos équipes. Après une première rencontre, nous préférons rapidement entrer dans un mode plus relax pour **vous donner une bonne impression du travail en équipe chez Elao**.
+Nous attachons beaucoup d'importance à l'intégration de nouveaux collaborateurs et nous espérons le retranscrire dans notre **processus de recrutement**. Nous évaluons votre **niveau technique et notre capacité à vous intégrer** dans nos équipes. Après une première rencontre, nous préférons rapidement entrer dans un mode plus relax pour **vous donner une bonne impression du travail en équipe chez Elao**.
 
-Vous voulez en savoir plus ? N'hésitez pas à nous contacter sur [jobs@elao.com](mailto:jobs@elao.com) ou en discuter directement avec nous sur Twitter ; rien de plus pertinent pour vous faire une idée précise d'Elao Paris.
+Vous voulez en savoir plus ? N'hésitez pas à venir nous voir **au bureau dans le quartier Saint-Lazare**, nous contacter sur [jobs@elao.com](mailto:jobs@elao.com) ou en discuter directement avec nous sur Twitter ; rien de plus pertinent pour vous faire une idée précise d'Elao Paris.
 
+* Cindy Liwenge [@hellokinedie](https://twitter.com/hellokinedie)
 * Mathieu Marchois [@mmarchois](https://twitter.com/mmarchois)
 * Nicolas Dievart [@nicolasdievart](https://twitter.com/nicolasdievart)
 * Richard Hanna [@richardhanna](https://twitter.com/richardhanna)
