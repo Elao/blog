@@ -5,7 +5,7 @@ date:               "2018-05-31"
 publishdate:        "2018-05-31"
 draft:              false
 slug:               "elao-paris"
-description:        "Elao recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre."
+description:        "Elao recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao à Paris, nous espérons vous donner de bonnes raisons de nous rejoindre."
 
 thumbnail:          "/images/posts/thumbnails/haphpybirthday.jpg"
 header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
@@ -17,15 +17,11 @@ co_authors:         []
 
 ---
 
-# TL;DR
-
-Elao recherche des développeuses et développeurs pour **sa tribu parisienne**. Nos piliers : satisfaction client/utilisateur et communication, tout ça saupoudré d'agilité et de challenges techniques. A travers cette présentation d'Elao, nous espérons vous donner de bonnes raisons de nous rejoindre. **Si l'aventure vous tente => [jobs@elao.com](mailto:jobs@elao.com)** <!--more-->
-
 # Elao à Paris
 
-Elao a été créé par 3 développeurs à Lyon il y a plus de 10 ans et est présente sur Paris depuis 3 ans. Nous renforçons plus particulièrement notre équipe **Elao Paris** pour continuer à **accompagner nos clients localement**.
+Elao a été créé par 3 développeurs à Lyon il y a plus de 10 ans et est présente sur Paris depuis 2015. A travers cet article, nous voulons vous présenter notre cadre de travail Elao et l'environnement parisien.
 
-Dans notre développement parisien, nous **recherchons des développeuses et développeurs** sensibilisés aux méthodologies agiles et Lean. Nous recherchons comme tout le monde des **personnalités motivées**, capables d'apporter leur diversité et leur univers. C’est une garantie essentielle à la richesse de l'équipe, tant sur le plan humain que professionnel.
+Elao, ce sont des tribus **de développeuses et développeurs** sensibilisés aux méthodologies agiles et Lean. 
 
 # Une équipe proche du client
 
@@ -72,8 +68,6 @@ Pour garantir la **qualité** dans le temps et la **non-régression**, nous mett
 
 **Chaque nouveau développement est revu** par un autre membre de l'équipe avant de partir en production. Cette méthode, même si elle consomme un peu de temps, assure un **code homogène** sur le projet et surtout permet à l'équipe de **partager la connaissance produit**.
 
-Pour garantir et suivre les indicateurs qualité tout au long du projet, nous mettons en place les outils de qualité de type CodeSniffer, SensioLabs Insight, Scrutinizer en tournant sur un IDE PHPStorm bien équipé.
-
 # Le partage
 
 Nous sommes conscients que les technologies avancent rapidement. Nous souhaitons **dédier du temps pour monter en compétence** et nous échangeons à travers des Dojos/Katas, des Elao Talks où nous expérimentons des nouvelles technologies ou des nouveaux design patterns.
@@ -99,9 +93,9 @@ Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partage
 
 # Nous rejoindre
 
-Nous espérons que vous avez une bonne idée de ce qu'est Elao. Nous vous proposons de **vous rencontrer sur Paris près de la Bourse** pour en discuter plus en détail. Nous recherchons des **personnes avec un bon niveau de programmation**, encore mieux sur du PHP, toujours plus mieux, sur du Symfony. Nous pouvons **assurer la montée en compétences** des personnes moins expérimentées mais avec de bonnes bases.
+Nous recherchons comme tout le monde des **personnalités motivées**, capables d'apporter leur diversité et leur univers. C’est une garantie essentielle à la richesse de l'équipe, tant sur le plan humain que professionnel.
 
-Nous attachons beaucoup d'importance à l'intégration de nouveaux collaborateurs et nous espérons le retranscrire dans notre **processus de recrutement**. Nous évaluons votre **niveau technique et notre capacité à vous intégrer** dans nos équipes. Après une première rencontre, nous préférons rapidement entrer dans un mode plus relax pour **vous donner une bonne impression du travail en équipe chez Elao**.
+Pour rencontrer notre équipe, **passez nous voir dans le quartier Saint-Lazare**. Nous attachons beaucoup d'importance à l'intégration de nouveaux collaborateurs et nous espérons le retranscrire dans notre **processus de recrutement**. Nous évaluons votre **niveau technique et notre capacité à vous intégrer** dans nos équipes. Après une première rencontre, nous préférons rapidement entrer dans un mode plus relax pour **vous donner une bonne impression du travail en équipe chez Elao**.
 
 Vous voulez en savoir plus ? N'hésitez pas à nous contacter sur [jobs@elao.com](mailto:jobs@elao.com) ou en discuter directement avec nous sur Twitter ; rien de plus pertinent pour vous faire une idée précise d'Elao Paris.
 
@@ -112,6 +106,6 @@ Vous voulez en savoir plus ? N'hésitez pas à nous contacter sur [jobs@elao.com
 
 # Plus au sud
 
-Vous vous retrouvez dans ce que nous partageons mais vous préférez vivre du côté de Lyon ? Notre **tribu lyonnaise** est toujours à la recherche de nouveaux profils. **Parlez-en avec Xavier Gorse [@xgorse](https://twitter.com/xgorse)**.
+Vous vous retrouvez dans ce que nous partageons mais vous préférez vivre du côté de Lyon ? Notre **tribu lyonnaise** est toujours à la recherche de nouveaux profils. **Parlez-en avec Xavier Gorse [@xgorse](https://twitter.com/xgorse)** ou tout membre de la tribu lyonnaise.
 
 Dans tous les cas, que ce soit sur Lyon ou Paris, nous sommes toujours prêt à partager, écouter et apprendre. **Contactez nous ou passez nous voir !**

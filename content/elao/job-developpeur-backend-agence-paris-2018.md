@@ -16,7 +16,7 @@ categories:     ["elao", "recrutement", "Symfony"]
 author_username:    "elao"
 ---
 
-Nous recherchons **une développeuse ou un développeur backend** pour notre tribu parisienne. En quelques mots, voici le cadre et la mission que nous vous proposons. Notre site et notre blog vous apporteront également plus de précisions et l'équipe se fera une joie de compléter au besoin et/ou de témoigner de son quotidien !
+Nous recherchons **des développeuses ou développeurs backend** pour notre tribu parisienne. En quelques mots, voici le cadre et la mission que nous vous proposons. Notre site et notre blog vous apporteront également plus de précisions et l'équipe se fera une joie de compléter au besoin et/ou de témoigner de son quotidien !
 <!--more-->
 
 ## La mission
@@ -29,7 +29,8 @@ Nous prenons en charge des projets d'applications web et mobile. Cette mission c
 - Travailler de manière lean-agile avec une bonne dose de pragmatisme
 
 Nous travaillons sur des projets à forte orientation applicative et technique. Nous faisons essentiellement du symfony en back et du React en front mais nous sommes ouverts à toute autre technlogie. 
-Les projets sont menés avec la proximité nécessaire avec nos clients.
+
+Nos clients vont des grands groupes aux startups. Les projets sont menés avec la proximité nécessaire avec nos clients.
 Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https://www.elao.com/fr/nos-experiences/).
 
 ## Votre savoir-faire
@@ -47,23 +48,24 @@ Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https:
 - Des affinités avec le monde «Ops» sont les bienvenues
 - Des connaissances des méthodologies agiles (Scrum pour ne pas le citer)
 
-## Et toujours parce que ....
+## Venez comme vous êtes
 
 - Vous êtes passionné(e),
-- Vous êtes curieux(se), avec un bel __esprit d’équipe__ et une bonne capacité d’analyse,
+- Vous êtes curieux(se), avec un bel esprit d’équipe et une bonne capacité d’analyse,
 - Vous n'avez pas peur de prendre des initiatives, d'être force de proposition,
 - Vous êtes soucieux(se) de comprendre les besoins métiers et fonctionnels de chaque projet,
 - Vous appliquez les bonnes pratiques et vous ne passez pas à côté de l’écriture de tests,
 - Vous voulez participer à l'évolution d'une petite structure.
 
-Nous comptons également sur vous pour prendre part aux différents ateliers de réflexion technique et organisationnelle, enrichir/vous enrichir lors des cycles de conférences.
+Partager : nous organisons régulièrement des ateliers et dojos, techniques et organisationnelles. Nous encourageons votre présence et votre participation active aux conférences et autres évènements riches d'échanges et de partage.
 
-Enfin, vous avez un goût prononcé pour les défis techniques et la découverte des technologies émergentes.
+Apprendre : à travers nos partages, nous souhaitons toujours apprendre. Nous privilégions les projets avec des défis techniques. Nous restons ouverts à toute autre technologie qui nous permettra d'apprendre en répondant au mieux au besoin de notre client.
 
 **Vie dans l’entreprise**
 
-Vous disposez d’un budget annuel pour la participation, entre autres, aux conférences. Nous encourageons votre présence aux conférences et autres évènements riches d'échanges et de partage.
-Vous avez la liberté de faire quelques jours de télétravail par mois dans le respect de l’organisation des projets.
+Pour en savoir plus sur l'environnement de travail de la tribu parisienne, vous pouvez retrouver nos articles : [**La tribu Elao Paris**](https://blog.elao.com/fr/elao/elao-paris/) et [**Notre quotidien d'équipe projet auto-organisée**](https://blog.elao.com/fr/methodo/notre-quotidien-equipe-projet-auto-organisee/)
+
+Vous voulez travailler au calme de temps en temps ? Vous pouvez télé-travailler en vous organisant avec le reste de l'équipe et en utilisant des outils comme appear.in pour continuer à admirer vos collègues.
 
 -----------------------------------------------------------------------------------------------------------------
 <span class="side-note">📨</span>  Venez échanger avec nous, nous faire part de vos objectifs et découvrir les nôtres: **jobs@elao.com**
