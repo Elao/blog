@@ -1,8 +1,8 @@
 ---
 type:               "post"
 title:              "La tribu Elao Paris"
-date:               "2018-05-20"
-publishdate:        "2018-05-20"
+date:               "2018-05-22"
+publishdate:        "2018-05-22"
 draft:              false
 slug:               "elao-paris"
 description:        "Elao recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao à Paris, nous espérons vous donner de bonnes raisons de nous rejoindre."
@@ -21,25 +21,28 @@ co_authors:         []
 
 Elao a été créé par 3 développeurs à Lyon il y a plus de 10 ans et est présente sur Paris depuis 2015. A travers cet article, nous voulons vous présenter notre cadre de travail Elao et l'environnement parisien.
 
-Elao, ce sont des tribus **de développeuses et développeurs** sensibilisés aux méthodologies agiles et Lean. 
+Elao, ce sont des tribus **de développeuses et développeurs** :
 
-# Une équipe proche du client
+- qui aiment les challenges techniques
+- capables d'accompagner nos clients
+- sensibilisés aux méthodologies agiles et Lean
+- qui souhaitent progresser et transmettre leurs savoirs et expériences
 
-Elao Paris est une tribu montée sur le concept d’une équipe capable d'accompagner nos clients en toute autonomie.
+# Proche du client
 
-Une **équipe est composée de 3-4 développeurs**. Elle a suffisamment d'expérience pour **être force de proposition chez nos clients**. Elle rencontre régulièrement le client pour recueillir le besoin et partager l'avancement. Elle s'organise pour trouver la solution la plus adaptée au projet, au produit.
+Elao Paris est une tribu montée sur le concept d’ équipes capables d'accompagner nos clients en toute autonomie. Une **équipe est composée de 3-4 développeurs**. Elle a suffisamment d'expérience pour **être force de proposition pour nos clients**. Elle rencontre régulièrement le client pour recueillir le besoin et partager l'avancement. Elle s'organise pour trouver la solution la plus adaptée au projet, au produit.
 
-Cette connaissance du produit nous permet de mieux répondre à nos clients. L'équipe est accompagnée d'autres compétences (intégration, design, UX) en fonction des projets. Un accompagnant projet intervient pour **fluidifier la relation avec nos clients** comme un Scrum Master et aide l'équipe à s'auto-organiser.
+Cette connaissance du produit nous permet de mieux répondre à nos clients. L'équipe est accompagnée d'autres compétences (intégration, design, UX) en fonction des projets. Un accompagnant projet intervient pour **fluidifier la relation avec nos clients** comme un Scrum Master. Il aide l'équipe à s'auto-organiser et/ou le client à monter en compétence sur les méthodologies agiles.
 
 # Environnement technique
 
-Notre socle technique backend est basé **depuis 2006** sur PHP et le framework **Symfony** sur lequel nous avons beaucoup investi. Pour le frontend, après être passé par EmberJS et Meteor, nous avons sélectionné dans l'écosystème **JavaScript**  **React / ReactNative**.
+Notre socle technique backend est basé **depuis 2006** sur PHP et le framework **Symfony** sur lequel nous avons beaucoup investi. Pour le frontend, après être passé par EmberJS et Meteor, nous avons sélectionné dans l'écosystème JavaScript, **React / ReactNative**.
 
-Notre positionnement historique sur Symfony nous confronte à des projets profondément techniques. **Chaque projet est unique**. Nous faisons des **applications web et mobile métier sur mesure**. Si nous estimons qu'une technologie peut être plus efficace pour un projet et que nous avons la capacité à monter en compétence dessus, nous n'hésiterons pas à le faire ensemble.
+Notre positionnement historique sur Symfony nous confronte à des projets techniquement complexes. Chaque projet est unique. Nous faisons des **applications web et mobile métier sur mesure**. Si nous estimons qu'une technologie peut être plus efficace pour un projet et que nous avons la capacité à monter en compétence dessus, nous n'hésiterons pas à le faire ensemble.
 
-Cette appétence technique et notre recherche de l'efficacité nous ont très rapidement fait monter en compétence sur la partie Ops. Porté par la mouvance **DevOps**, nous avons commencé par **l'optimisation de notre écosystème de développement**, puis de nos environnements de démo, pour finir par la prod et faire émerger un **nouveau métier** chez Elao : **l'hébergement sur mesure** d'application web. Nous sommes positionnés sur la solution **Ansible**.
+Cette appétence technique et notre recherche de l'efficacité nous ont très rapidement fait monter en compétence sur la partie Ops. Porté par la mouvance **DevOps**, nous avons commencé par **l'optimisation de notre écosystème de développement**, puis de nos environnements de démonstration, pour finir par la production et faire émerger un **nouveau métier** chez Elao : **l'hébergement sur mesure** d'application web. Nous sommes positionnés sur la solution **Ansible**.
 
-Nous sommes des **artisans passionnés** par cet écosystème qui avance vite… très vite.
+Nous sommes des **artisans passionnés** par ces écosystèmes qui avancent vite… très vite.
 
 <div class=row>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -74,7 +77,7 @@ Nous sommes conscients que les technologies avancent rapidement. Nous souhaitons
 
 Nous appliquons aussi cette recette sur des projets internes. Notre jeu **[LazerDrive](http://www.lazerdrive.io/)** est né comme un **projet de R&D** sous le nom de **[Curvytron](http://www.curvytron.com)** avant de prendre son envol en tant que projet à part entière. Nous avons aussi **participé aux lancements de startups**.
 
-Vous pouvez nous croiser sur les **conférences techniques** où nous participons et proposons des sujets. Nous sommes **impliqués dans la vie de l'AFUP** depuis 2008 et nous organisons le meetup lyonnais Ansible.
+Vous pouvez nous croiser sur les **conférences techniques et agilité** où nous participons et proposons des sujets. Nous sommes **impliqués dans la vie de l'AFUP** depuis 2008.
 
 Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code avec l'**[ouverture de notre stack Symfony](https://github.com/Elao/symfony-standard)**, de certains de nos **[bundles](https://github.com/Elao?query=bundle)** ou de nos **[rôles Ansible](https://github.com/Manala)**.
 
