@@ -1,9 +1,9 @@
 ﻿
 ---
 type:           "post"
-title:          "À la recherche d'un Sysadmin ou d'une Sysadmin"
-date:           "2018-02-15"
-publishdate:    "2018-02-27"
+title:          "À la recherche d'un(e) «Sysadmin»"
+date:           "2018-05-29"
+publishdate:    "2018-05-29"
 draft:          false
 slug:           "job-adminsys-agence-lyon-2018"
 description:    "Élao recherche un ou une Sysadmin à Lyon"
@@ -16,12 +16,23 @@ categories:     ["elao", "recrutement"]
 author_username:    "elao"
 ---
 
-Nous recherchons **un ou une sysadmin pour renforcer notre tribu lyonnaise**. <br/>Notre [site](https://www.elao.com) et notre [blog](https://blog.elao.com) vous apporteront plus de précisions sur nos domaines de compétences et l'équipe [@elao](https://twitter.com/Elao) se fera une joie de compléter au besoin et/ou de témoigner de son quotidien !
+Nous recherchons **un ou une sysadmin, ascendant Ops pour renforcer notre tribu lyonnaise**.
+<br/>Pour plus d'informations sur nos métiers vous pouvez parcourir, notre [site](https://www.elao.com) et notre [blog](https://blog.elao.com) qui vous apporteront (normalement) plus de précisions sur nos domaines de compétences.
+<br/>L'équipe est interpellable sur twitter [@elao](https://twitter.com/Elao) et saura répondre à vos questions et témoigner de son quotidien !
 <!--more-->
+
+Nous sommes très attachés aux valeurs des communautés OpenSource dans lesquels nous nous efforçons de nous appliquer (Symfony, Ansible, AFUP, Meetups ...)
 
 ## Notre, votre mission
 
-Dans un cadre dynamique, nous prenons en charge des projets d'applications web et mobile.
+Nous prenons en charge des projets back (PHP, essentiellement Symfony) et front (ReactJS) pour lesquels nous proposons des infrastructures sur-mesure allant de conteneurs «standalone» pour les plus modestes à des infrastructures haute disponibilité pour les plus critiques.
+
+Proches des équipes de développement notre mission est de leur apporter un maximum de valeur à l'aide d'outils:
+
+* De monitoring (Sensu / Uchiwa)
+* De métriques (Telegraf / InfluxDB / Grafana)
+* De logs (Graylog)
+* D'industrialisation (Ansible), nous sommes porteur du projet OpenSource [Manala](https://github.com/manala/ansible-roles)
 
 __Une mission commune à tous :__
 
@@ -33,6 +44,9 @@ __Une mission commune à tous :__
 
 Nous travaillons sur des projets à forte orientation applicative et technique. Les projets sont principalement menés à bien en interne avec toute la proximité nécessaire avec nos clients.
 <br/> Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https://www.elao.com/fr/nos-experiences/).
+
+Nous apportons un soin particulier, et ce avant même les dernières législations, à la protection des données.
+<br/>Nous avons une bonne sensibilité à la sécurité même s'il ne s'agit pas de notre métier premier (Nous avons des partenaires spécialisés).
 
 ## Votre savoir-faire
 
@@ -46,7 +60,7 @@ Nous travaillons sur des projets à forte orientation applicative et technique. 
 - Sécurité des données
 - Sécurité des systèmes d'exploitation
 - Intégration de sondes de monitoring dans les outils existants
-- Participation à l'évolution globale des infrastructures.
+- Participation à l'évolution globale des infrastructures (Et ça bouge __beaucoup__ !).
 - Vous maîtrisez un (ou plusieurs) language de «scripting» (Shell, Python, Go ...)
 
 Vous êtes capable de déterminer les raisons sous-jacentes des problèmes pouvant impacter la production.
@@ -54,19 +68,18 @@ Vous êtes capable de déterminer les raisons sous-jacentes des problèmes pouva
 ## Les plus
 
 * Vous êtes sensible au monde du développement
-* Vous avez quelques (ou de bonnes) connaissances PHP
+* Vous avez quelques connaissances PHP
 * Vous vous reconnaissez dans les mots clés suivants: HAproxy, KeepaliveD, LXC, Cloudflare, Varnish, InfluxDB, Grafana, Telegraf...
-* Vous connaissez différents «Cloud provider» (AWS, GCP ...)
-* Vous avez des connaissances Docker/Kubernetes
-* Vous êtes très sensible aux bonnes pratiques et notamment à la protection des données liées à la vie privée.
+* Vous connaissez différents «Cloud provider» comme AWS, GCP ... ( Nous sommes agnostiques ;) )
+* Vous avez des connaissances Docker/Kubernetes (Nous en faisons de plus en plus.)
+* Vous êtes très sensible aux «bonnes pratiques» et notamment à la protection des données liées à la vie privée.
 
 ## Et toujours parce que ....
 
 - Vous êtes passionné(e),
 - Vous êtes curieux(se), avec un bel esprit d’équipe et une bonne capacité d’analyse,
 - Vous n'avez pas peur de prendre des initiatives, d'être force de proposition,
-- Vous êtes soucieux(se) de comprendre les besoins métiers et fonctionnels de chaque projet,
-- Vous appliquez les bonnes pratiques et vous ne passez pas à côté de l’écriture de tests.
+- Vous êtes soucieux(se) de comprendre les besoins métiers de chaque projet,
 
 Nous compterons également sur vous pour prendre part aux différents ateliers de réflexion techniques, enrichir/vous enrichir lors des cycles de conférences. ✻
 
