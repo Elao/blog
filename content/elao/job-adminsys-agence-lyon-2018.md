@@ -21,7 +21,7 @@ Nous recherchons **un ou une sysadmin, ascendant Ops pour renforcer notre tribu 
 <br/>L'équipe est interpellable sur twitter [@elao](https://twitter.com/Elao) et saura répondre à vos questions et témoigner de son quotidien !
 <!--more-->
 
-Nous sommes très attachés aux valeurs des communautés OpenSource dans lesquels nous nous efforçons de nous appliquer (Symfony, Ansible, AFUP, Meetups ...)
+Nous sommes très attachés aux valeurs des communautés OpenSource dans lesquels nous nous efforçons de nous impliquer (Symfony, Ansible, AFUP, Meetups ...)
 
 ## Notre, votre mission
 
