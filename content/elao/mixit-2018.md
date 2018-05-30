@@ -57,6 +57,7 @@ Ils nous ont présenté comment leurs équipes ont travaillé pour faire cela, q
 En conclusion, l'équipe doit s'approprier les process AGILE et non les subir.
 
 **Anne-Laure >** Retour d'expérience très intéressante des coulisses de France télévisions, dont j'ai retenu quelques idées fortes :
+
 * Le passage au management visuel des équipes s'est aussi accompagné de procédures documentées
 * Journée "off" pour tout le monde, où chacun peut préparer son travail, écrire les spécifications et surtout ...
 communiquer avec les autres équipes !
@@ -72,6 +73,7 @@ de la part de la direction
 
 N'a-t-on jamais demandé de l'aide et estimé que la personne nous avait répondu "à côté"? Julie nous a donné quelques
 clés pour améliorer sa posture de demandeur et d'aide.
+
 * celui qui aide : être attentif à la demande et aux réponses de la personne, notamment si elles commencent par un
 "oui, mais ..." qui révèle une incompréhension. Apprendre à ralentir le rythme, prendre le temps d'aider.
 Rendre les personnes autonomes, ne pas faire à leur place.
@@ -80,6 +82,7 @@ derrière notre question, la préciser au maximum.
 
 Au sujet des personnes qui se trouvent dans la position du "sauveur", c'est à dire qu'elles aident une personne
 qui n'en a pas besoin ou qui apportent une aide toxique :
+
 * Prendre conscience de ses sentiments et de ses besoins,
 * Accepter ces derniers et les dires,
 * Faire disparaître l'inquiétude pour "prendre soin de nous".
@@ -110,6 +113,7 @@ Au final, les estimations donnent une fausse impression de maîtrise et détourn
 **Anne-Laure >** Je rejoins l'avis de Maxime : coup de cœur !
 
 Ce que j'ajoute, au sujet des deadlines, qui :
+
 * génèrent des bugs et de la dette technique,
 * transforment les développeurs en simples exécutants,
 * limitent les prises d'initiative,
