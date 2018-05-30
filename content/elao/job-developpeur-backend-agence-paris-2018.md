@@ -8,8 +8,8 @@ draft:          false
 slug:           "job-developpeur-backend-agence-paris-2018"
 description:    "élao recherche un développeur ou une développeuse backend à Paris."
 
-thumbnail:      "/images/posts/thumbnails/back.jpg"
-header_img:     "/images/posts/headers/back.jpg"
+thumbnail:      "/images/posts/thumbnails/back-2.jpg"
+header_img:     "/images/posts/headers/back-2.jpg"
 tags:           ["job", "web", "mobile", "paris", "backend", "symfony", "PHP"]
 categories:     ["elao", "recrutement", "Symfony"]
 
@@ -75,3 +75,9 @@ Si vous êtes plutôt intéressé(e) par la région lyonnaise, nous recherchons 
 [**Développeur(se) Backend**](/fr/elao/job-backend-agence-lyon-2018)
 
 [**Développeur(se) Frontend**](/fr/elao/job-frontend-developpeur-agence-lyon-2018)
+
+
+---
+
+<div>Photo by <a href="https://unsplash.com/photos/7Yn3AbB9NU0">Vincent van Zalinge</a> on <a href="https://unsplash.com">Unsplash</a></div>
+
