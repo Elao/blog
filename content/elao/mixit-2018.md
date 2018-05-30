@@ -240,3 +240,9 @@ Il commence Docker, il va d'abord créer un container pour son application lui p
 J'ai été particulièrement séduit par **Istio** qui lui permet simplement d'orchestrer ses containers, de faire très simplement de l'A/B testing au fil de ses améliorations, du blue/green deployment, du clone de traffic, du log système, ...
 
 À la fin de sa démonstration, il obtient une application moderne, monitorée et évolutive.
+
+## Conclusion
+
+A côté des conférences, tout est là pour rendre ces deux jours agréables. Les repas proposés aux déjeuners étaient très bon, un broyeur/composteur mécanique permettait de recycler la majorité des emballages, les conférences étaient accessibles aux handicapés et retranscrite en temps réel, des crêpes maisons étaient proposées pour le goûter, et enfin un atelier Mixteen était dédié aux enfants.
+
+Pour conclure, MiXiT est une conférence incontournable et on encourage tout les développeurs lyonnais à tenter sa change à la loterie des places l'année prochaine. En tout cas nous, on tentera la notre :)
