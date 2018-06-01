@@ -1,12 +1,12 @@
 
 ---
 type:           "post"
-title:          "À la recherche d'un développeur ou d'une développeuse Back"
+title:          "À la recherche de développeurs.euses Back"
 date:           "2018-05-23"
 publishdate:    "2018-05-23"
 draft:          false
 slug:           "job-developpeur-backend-agence-paris-2018"
-description:    "élao recherche un développeur ou une développeuse backend à Paris."
+description:    "élao recherche des développeurs backend à Paris."
 
 thumbnail:      "/images/posts/thumbnails/back-2.jpg"
 header_img:     "/images/posts/headers/back-2.jpg"
@@ -16,7 +16,7 @@ categories:     ["elao", "recrutement", "Symfony"]
 author_username:    "elao"
 ---
 
-Nous recherchons **des développeuses ou développeurs backend** pour notre tribu parisienne. En quelques mots, voici le cadre et la mission que nous vous proposons. Notre site et notre blog vous apporteront également plus de précisions et l'équipe se fera une joie de compléter au besoin et/ou de témoigner de son quotidien !
+Nous recherchons **des développeuses ou développeurs** pour notre tribu parisienne. En quelques mots, voici le cadre et la mission que nous vous proposons. Notre site et notre blog vous apporteront également plus de précisions et l'équipe se fera une joie de compléter au besoin et/ou de témoigner de son quotidien !
 <!--more-->
 
 ## La mission
@@ -28,7 +28,7 @@ Nous prenons en charge des projets d'applications web et mobile. Cette mission c
 - Réaliser dans le respect de la qualité et de la satisfaction des parties prenantes
 - Travailler de manière lean-agile avec une bonne dose de pragmatisme
 
-Nous travaillons sur des projets à forte orientation applicative et technique. Nous faisons essentiellement du symfony en back et du React en front mais nous sommes ouverts à toute autre technlogie. 
+Nous travaillons sur des projets à forte orientation applicative et technique. Nous faisons essentiellement du symfony en back et du React en front mais nous sommes ouverts à toute autre technlogie.
 
 Nos clients vont des grands groupes aux startups. Les projets sont menés avec la proximité nécessaire avec nos clients.
 Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https://www.elao.com/fr/nos-experiences/).
@@ -80,4 +80,3 @@ Si vous êtes plutôt intéressé(e) par la région lyonnaise, nous recherchons 
 ---
 
 <div>Photo by <a href="https://unsplash.com/photos/7Yn3AbB9NU0">Vincent van Zalinge</a> on <a href="https://unsplash.com">Unsplash</a></div>
-
