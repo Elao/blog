@@ -73,7 +73,7 @@ Pour garantir la **qualité** dans le temps et la **non-régression**, nous mett
 
 # Le partage
 
-Nous sommes conscients que les technologies avancent rapidement. Nous souhaitons **dédier du temps pour monter en compétence** et nous échangeons à travers des Dojos/Katas, des Elao Talks où nous expérimentons des nouvelles technologies ou des nouveaux design patterns.
+Nous sommes conscients que les technologies avancent rapidement. Nous souhaitons **dédier du temps pour monter en compétence** et nous échangeons à travers des Dojos/Katas, des Elao Talks et du **[podcast Echo](https://podcastecho.github.io/)**. Nous expérimentons des nouvelles technologies ou des nouveaux design patterns.
 
 Nous appliquons aussi cette recette sur des projets internes. Notre jeu **[LazerDrive](http://www.lazerdrive.io/)** est né comme un **projet de R&D** sous le nom de **[Curvytron](http://www.curvytron.com)** avant de prendre son envol en tant que projet à part entière. Nous avons aussi **participé aux lancements de startups**.
 
