@@ -223,11 +223,11 @@ J'ai trouvé la conf particulièrement interessante et très instructive.
 
 *par Sarah Haïm-Lubczanski et Eric Daspet*
 
-**Anne-Laure >** Sarah et Éric ont proposé un atelier dont l'un des principaux objectifs est de  s'interroger sur nos propres valeurs,
+**Anne-Laure >** Sarah et Éric ont proposé un atelier dont l'un des principaux objectifs est de s'interroger sur nos propres valeurs,
 et ce qu'on attend de l'entreprise dans laquelle nous travaillons.
 
 Nous avons pu réfléchir, discuter et parfois débattre en équipe de 4 ou 5 personnes autour de ces notions,
-et établir notre propre liste et partager avec le reste des participants sur ce qui est collectivement ressorti.
+établir notre propre liste et partager avec le reste des participants sur ce qui est collectivement ressorti.
 Grâce aux différents documents et pistes de réflexions fournis par les animateurs, nous avons été amenés
 à questionner nos positions ...
 
@@ -249,4 +249,4 @@ J'ai été particulièrement séduit par **Istio** qui lui permet simplement d'o
 
 A côté des conférences, tout est là pour rendre ces deux jours agréables. Les repas proposés aux déjeuners étaient très bon, un broyeur/composteur mécanique permettait de recycler la majorité des emballages, les conférences étaient accessibles aux handicapés et retranscrite en temps réel, des crêpes maisons étaient proposées pour le goûter, et enfin un atelier Mixteen était dédié aux enfants.
 
-Pour conclure, MiXiT est une conférence incontournable et on encourage tout les développeurs lyonnais à tenter sa change à la loterie des places l'année prochaine. En tout cas nous, on tentera la notre :)
+Pour conclure, MiXiT est une conférence incontournable et on encourage tout les développeurs lyonnais à tenter sa chance à la loterie des places l'année prochaine. En tout cas nous, on tentera la notre :)
