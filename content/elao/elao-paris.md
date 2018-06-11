@@ -61,7 +61,7 @@ Nous sommes des **artisans passionnés** par ces écosystèmes qui avancent vite
 
 **Le coût de la qualité reste bien inférieur à celui de la non-qualité**.
 
-Depuis plus de **10 ans** et quelques **200 projets** web, nous avons construit en interne une culture du **génie logiciel**. Notre niveau de **qualité** est devenu un **standard** chez Elao. Un investissement raisonnable au début du projet et une architecte logicielle flexible nous permettent des **gains importants** en temps et en sérénité sur l'ensemble du projet.
+Depuis plus de **10 ans** et quelques **200 projets** web, nous avons construit en interne une culture du **génie logiciel**. Notre niveau de **qualité** est devenu un **standard** chez Elao. Un investissement raisonnable au début du projet et une architecture logicielle flexible nous permettent des **gains importants** en temps et en sérénité sur l'ensemble du projet.
 
 Notre **culture** centrée sur le **produit** impacte également la structure de notre code. Nous essayons de **découpler le code métier**, qui porte le plus de valeur ajoutée, du framework, qui sert à le mettre en oeuvre. Ce **type de conception DDD** (Domain Driven Design) couplé à **l'architecture hexagonale** permet de faciliter la mise en place de tests automatiques et de se rendre moins dépendant des montées de version du framework.
 
@@ -79,7 +79,7 @@ Nous appliquons aussi cette recette sur des projets internes. Notre jeu **[Lazer
 
 Vous pouvez nous croiser sur les **conférences techniques et agilité** où nous participons et proposons des sujets. Nous sommes **impliqués dans la vie de l'AFUP** depuis 2008.
 
-Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code comme nos librairies ([PhpEnums](https://github.com/Elao/PhpEnums), [ReactNativeRealmConnect](https://github.com/Elao/ReactNativeRealmConnect), [Github Agile Dashboard] (https://github.com/Elao/github-agile-dashboard) ) ou de nos **[rôles Ansible](https://github.com/Manala)**.
+Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code comme nos librairies ([PhpEnums](https://github.com/Elao/PhpEnums), [ReactNativeRealmConnect](https://github.com/Elao/ReactNativeRealmConnect), [Github Agile Dashboard] (https://github.com/Elao/github-agile-dashboard) ) ou nos **[rôles Ansible](https://github.com/Manala)**.
 
 <div class=row>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -98,7 +98,7 @@ Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partage
 
 Nous recherchons des **personnalités motivées** (comme tout le monde), capables d'**apporter leur diversité et leur univers**. C’est une garantie essentielle à la richesse de l'équipe, tant sur le plan humain que professionnel. Nous souhaitons être content de nous retrouver au travail, tant que cela reste à un **rythme soutenable**. Horaires flexibles, télétravail équilibré bienvenus tant que l'équipe peut avancer sereinement.
 
-Nous attachons beaucoup d'importance à l'intégration de nouveaux collaborateurs et nous espérons le retranscrire dans notre **processus de recrutement**. Nous évaluons votre **niveau technique et notre capacité à vous intégrer** dans nos équipes. Après une première rencontre, nous souhaitons que toute l'équipe vous rencontrer pour **vous donner une bonne impression du travail en équipe chez Elao**.
+Nous attachons beaucoup d'importance à l'intégration de nouveaux collaborateurs et nous espérons le retranscrire dans notre **processus de recrutement**. Nous évaluons votre **niveau technique et notre capacité à vous intégrer** dans nos équipes. Après une première rencontre, nous souhaitons que toute l'équipe vous rencontre pour **vous donner une bonne impression du travail en équipe chez Elao**.
 
 Vous voulez en savoir plus ? N'hésitez pas à venir nous voir **au bureau dans le quartier Saint-Lazare**, nous contacter sur [jobs@elao.com](mailto:jobs@elao.com) ou en discuter directement avec nous sur Twitter ; rien de plus pertinent pour vous faire une idée précise d'Elao Paris.
 

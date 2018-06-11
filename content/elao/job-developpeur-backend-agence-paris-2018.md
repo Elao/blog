@@ -28,7 +28,7 @@ Nous prenons en charge des projets d'applications web et mobile. Cette mission c
 - Réaliser dans le respect de la qualité et de la satisfaction des parties prenantes
 - Travailler de manière lean-agile avec une bonne dose de pragmatisme
 
-Nous travaillons sur des projets à forte orientation applicative et technique. Nous faisons essentiellement du symfony en back et du React en front mais nous sommes ouverts à toute autre technlogie.
+Nous travaillons sur des projets à forte orientation applicative et technique. Nous faisons essentiellement du symfony en back et du React en front mais nous sommes ouverts à toute autre technologie.
 
 Nos clients vont des grands groupes aux startups. Les projets sont menés avec la proximité nécessaire avec nos clients.
 Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https://www.elao.com/fr/nos-experiences/).
@@ -57,7 +57,7 @@ Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https:
 - Vous appliquez les bonnes pratiques et vous ne passez pas à côté de l’écriture de tests,
 - Vous voulez participer à l'évolution d'une petite structure.
 
-Partager : nous organisons régulièrement des ateliers et dojos, techniques et organisationnelles. Nous encourageons votre présence et votre participation active aux conférences et autres évènements riches d'échanges et de partage.
+Partager : nous organisons régulièrement des ateliers et dojos, techniques et organisationnels. Nous encourageons votre présence et votre participation active aux conférences et autres évènements riches d'échanges et de partage.
 
 Apprendre : à travers nos partages, nous souhaitons toujours apprendre. Nous privilégions les projets avec des défis techniques. Nous restons ouverts à toute autre technologie qui nous permettra d'apprendre en répondant au mieux au besoin de notre client.
 
