@@ -2,8 +2,8 @@
 ---
 type:           "post"
 title:          "À la recherche de développeurs.euses Back"
-date:           "2018-06-05"
-publishdate:    "2018-06-05"
+date:           "2018-06-11"
+publishdate:    "2018-06-11"
 draft:          false
 slug:           "job-developpeur-backend-agence-paris-2018"
 description:    "élao recherche des développeurs backend à Paris."
