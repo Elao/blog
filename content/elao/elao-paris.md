@@ -19,13 +19,13 @@ co_authors:         []
 
 # Elao à Paris
 
-Elao a été créé par 3 développeurs à Lyon il y a plus de 10 ans et est présente sur Paris depuis 2015. A travers cet article, nous voulons vous présenter notre cadre de travail Elao et l'environnement parisien.
+Elao a été créé par 3 développeurs à Lyon il y a plus de 10 ans et est présente sur Paris depuis 2015. A travers cet article, nous voulons vous présenter notre cadre de travail et l'environnement parisien.
 
 Elao, ce sont des tribus **de développeuses et développeurs** :
 
 - qui aiment les challenges techniques
 - capables d'accompagner nos clients
-- sensibilisés aux méthodologies agiles et Lean
+- sensibilisées aux méthodologies agiles et Lean
 - qui souhaitent progresser et transmettre leurs savoirs et expériences
 
 # Proche du client
@@ -63,7 +63,7 @@ Nous sommes des **artisans passionnés** par ces écosystèmes qui avancent vite
 
 Depuis plus de **10 ans** et quelques **200 projets** web, nous avons construit en interne une culture du **génie logiciel**. Notre niveau de **qualité** est devenu un **standard** chez Elao. Un investissement raisonnable au début du projet et une architecte logicielle flexible nous permettent des **gains importants** en temps et en sérénité sur l'ensemble du projet.
 
-Notre **culture** centrée sur le **produit** impacte également la structure de notre code. Nous essayons de **découpler le code métier**, qui porte le plus de valeur ajoutée, du framework qui sert juste à le mettre en oeuvre. Ce **type de conception DDD** (Domain Driven Design) couplé à **l'architecture hexagonale** permet de faciliter la mise en place de tests automatiques et de se rendre moins dépendant des montées de version du framework.
+Notre **culture** centrée sur le **produit** impacte également la structure de notre code. Nous essayons de **découpler le code métier**, qui porte le plus de valeur ajoutée, du framework, qui sert à le mettre en oeuvre. Ce **type de conception DDD** (Domain Driven Design) couplé à **l'architecture hexagonale** permet de faciliter la mise en place de tests automatiques et de se rendre moins dépendant des montées de version du framework.
 
 # Tester, auditer et revoir son code
 
@@ -79,7 +79,7 @@ Nous appliquons aussi cette recette sur des projets internes. Notre jeu **[Lazer
 
 Vous pouvez nous croiser sur les **conférences techniques et agilité** où nous participons et proposons des sujets. Nous sommes **impliqués dans la vie de l'AFUP** depuis 2008.
 
-Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code avec l'**[ouverture de notre stack Symfony](https://github.com/Elao/symfony-standard)**, de certains de nos **[bundles](https://github.com/Elao?query=bundle)** ou de nos **[rôles Ansible](https://github.com/Manala)**.
+Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code comme nos librairies ([PhpEnums](https://github.com/Elao/PhpEnums), [ReactNativeRealmConnect](https://github.com/Elao/ReactNativeRealmConnect), [Github Agile Dashboard] (https://github.com/Elao/github-agile-dashboard) ) ou de nos **[rôles Ansible](https://github.com/Manala)**.
 
 <div class=row>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -96,9 +96,9 @@ Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partage
 
 # Nous rejoindre
 
-Nous recherchons, comme tout le monde, des **personnalités motivées**, capables d'**apporter leur diversité et leur univers**. C’est une garantie essentielle à la richesse de l'équipe, tant sur le plan humain que professionnel. Nous souhaitons être content de nous retrouver au travail, tant que cela reste à un **rythme soutenable**. Horaires flexibles, télétravail équilibré bienvenus tant que l'équipe peut avancer sereinement.
+Nous recherchons des **personnalités motivées** (comme tout le monde), capables d'**apporter leur diversité et leur univers**. C’est une garantie essentielle à la richesse de l'équipe, tant sur le plan humain que professionnel. Nous souhaitons être content de nous retrouver au travail, tant que cela reste à un **rythme soutenable**. Horaires flexibles, télétravail équilibré bienvenus tant que l'équipe peut avancer sereinement.
 
-Nous attachons beaucoup d'importance à l'intégration de nouveaux collaborateurs et nous espérons le retranscrire dans notre **processus de recrutement**. Nous évaluons votre **niveau technique et notre capacité à vous intégrer** dans nos équipes. Après une première rencontre, nous préférons rapidement entrer dans un mode plus relax pour **vous donner une bonne impression du travail en équipe chez Elao**.
+Nous attachons beaucoup d'importance à l'intégration de nouveaux collaborateurs et nous espérons le retranscrire dans notre **processus de recrutement**. Nous évaluons votre **niveau technique et notre capacité à vous intégrer** dans nos équipes. Après une première rencontre, nous souhaitons que toute l'équipe vous rencontrer pour **vous donner une bonne impression du travail en équipe chez Elao**.
 
 Vous voulez en savoir plus ? N'hésitez pas à venir nous voir **au bureau dans le quartier Saint-Lazare**, nous contacter sur [jobs@elao.com](mailto:jobs@elao.com) ou en discuter directement avec nous sur Twitter ; rien de plus pertinent pour vous faire une idée précise d'Elao Paris.
 
