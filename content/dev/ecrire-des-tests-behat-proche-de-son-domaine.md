@@ -1,8 +1,8 @@
 ---
 type:               "post"
 title:              "Ecrire des tests behat proche de son domaine"
-date:               "2017-11-20"
-publishdate:        "2017-11-20"
+date:               "2018-06-10"
+publishdate:        "2018-06-10"
 draft:              false
 slug:               "ecrire-des-tests-behat-proche-de-son-domaine"
 description:        ""
@@ -15,16 +15,19 @@ categories:         ["Dev", Symfony", "PHP"]
 author_username:    "ndievart"
 ---
 
-Il y a quelque temps nous publions un article sur [l'utilisation Behat 3 pour l'écriture des tests fonctionnels Symfony](/fr/dev/behat-3-pour-vos-tests-fonctionnels/). Depuis les choses ont beaucoup changé sur les différents projets où nous posons du Behat pour nos tests fonctionnels.
+Il y a quelque temps nous publiions un article sur [l'utilisation Behat 3 pour l'écriture des tests fonctionnels Symfony](/fr/dev/behat-3-pour-vos-tests-fonctionnels/). Depuis les choses ont beaucoup changé sur les différents projets où nous posons du Behat pour nos tests fonctionnels.
 Dans cet article nous allons voir comment nous écrivons nos tests désormais en partant d'une approche Domaine.
 
 # Cheminement
 
-Petit à petit, sur plusieurs de nos projets ayant une grande complexité métier, l'ajout et le maintien des tests fonctionnels se sont avérés de plus en plus complexes à réaliser. Le parcours utilisateur pour se présenter dans telle ou telle situation était compliqué à mettre en place, le maintient à jour des fixtures de tests et de leurs relations indispensables ont fait que nos tests devenait difficile.
+Petit à petit, sur plusieurs de nos projets ayant une grande complexité métier, l'ajout et le maintien des tests fonctionnels se sont avérés de plus en plus complexes à réaliser. Le parcours utilisateur pour se présenter dans telle ou telle situation était compliqué à mettre en place, le maintien à jour des fixtures de tests et de leurs relations indispensables ont fait que nos tests devenaientt difficile.
 
-Dans de nombreux cas nous en arrivions à faire une fixture particulière pour chaque tests plutôt que de réutiliser certaines fixtures pour être totalement maître du contexte. Cependant, à chaque modification du _model_, la mise à jour de ces fixtures étaient une réelle perte de temps.
+Dans de nombreux cas nous en arrivions à faire une fixture particulière pour chaque test plutôt que de réutiliser certaines fixtures pour être totalement maître du contexte. Cependant, à chaque modification du _model_, la mise à jour de ces fixtures étaient une réelle perte de temps.
 
-La totalité des projets chez [élao](https://www.elao.com) ont [une architecture hexagonale](/fr/dev/architecture-hexagonale-symfony) et sont orientés DDD. Nous avons donc déjà toutes les méthodes métiers nécessairent pour créer des entités pour les contextes qui nous intéressent.
+La plupart des projets chez [élao](https://www.elao.com) ont [une architecture hexagonale](/fr/dev/architecture-hexagonale-symfony) et sont orientés DDD, Domain Driven Design. Nous avons donc déjà toutes les méthodes métiers nécessaire pour créer des entités pour les contextes qui nous intéressent.
+
+Par exemple, nous avons dans notre classe métier Produit des méthodes nous permettant de créer directement des produits de différent _types_ comme des formules afin de d'abstraire certaines information inutile de faire figurer à chaque endroits du code et simplifier la création de ces derniers.
+Nos _commands_ utilisent donc déjà ces méthodes pour créer des formules, et sont très flexibles pour chaque besoin différents.
 
 {{< highlight php >}}
 <?php
@@ -50,9 +53,6 @@ class Product
   }
 }
 {{< /highlight >}}
-
-Par exemple, nous avons dans notre classe métier Produit des méthodes nous permettant de créer directement des produits de différent _types_ comme des formules afin de d'abstraire certaines information inutile de faire figurer à chaque endroits du code et simplifier la création de ces derniers.
-Nos _commands_ utilisent donc déjà ces méthodes pour créer des formules, et sont très flexibles pour chaque besoin différents.
 
 Nous avons initié cette réflexion après avoir rencontrer les problèmes cité ci-dessus, mais également en explorant le code source, et notamment les tests fonctionnels du projet [Sylius](https://github.com/Sylius/Sylius/tree/master/features).
 
@@ -95,7 +95,7 @@ Tout d'abord, nous avons besoin d'installer Behat en _dev-dependencies_ de notre
 }
 {{< /highlight >}}
 
-Le point d'entrée de Behat est le fichier `behat.yml.dist` à la racine de notre projet. Afin de déporter l'ensemble de la logique de notre code Behat dans un seule et même endroit, notre fichier `behat.yml.dist` ne sert qu'à importer notre fichier de configuration déporter dans un autre répertoire:
+Le point d'entrée de Behat est le fichier `behat.yml.dist` à la racine de notre projet. Afin de déporter l'ensemble de la logique de notre code Behat dans un seul et même endroit, notre fichier `behat.yml.dist` ne sert qu'à importer notre fichier de configuration:
 
 
 {{< highlight yaml >}}
@@ -103,7 +103,7 @@ imports:
   - features/Behat/Resources/config/default.yml
 {{< /highlight >}}
 
-L'architecture des repertoires nos tests fonctionnels est la suivante:
+L'architecture des repertoires de nos tests fonctionnels est la suivante:
 
 ```
 - features/
@@ -116,7 +116,7 @@ L'architecture des repertoires nos tests fonctionnels est la suivante:
 
 Le point d'entrée est donc le repertoire `features/` dans lequel nous stockons à la fois nos tests mais aussi nos services et contextes.
 
-Expliquons ensuite comment réaliser un step comme celui que nous avons vu plus haut qui permet la création d'une formule sans passer par des fixtures.
+Expliquons ensuite comment réaliser un _step_ comme celui que nous avons vu plus haut qui permet la création d'une formule.
 
 Nous allons donc créer un _Manager_ qui nous permettra d'appeler nos méthodes de création de produits, de modifier des paramètres, d'appeler les _repositories_ pour persister en base de données ce qui doit l'être etc...
 
@@ -295,8 +295,8 @@ Imaginons que vous souhaitez créer une formule "Early bird" et que celle-ci soi
 
 Pour éviter cela, il est intéresant de pouvoir récupérer un élément du _step_ précédent dans le _step_ suivant afin de modifier certaines valeurs ou des rajouter des conditions sur celles-ci.
 
-Afin de réaliser cette tâche, nous avons ajouter un service qui sert de receptacle de données entre nos _steps_ et qui nous permet de piocher les données des _steps_ précédent.
-Ce _Storage_ contient simplement un tableau indexer par type de donnée stockée et nous offre l'accès à un getter et un setter pour récupérer ou écraser la donnée.
+Afin de réaliser cette tâche, nous avons ajouté un service qui sert de réceptacle de données entre nos _steps_ et qui nous permet de piocher les données des _steps_ précédents.
+Ce _Storage_ contient simplement un tableau indexé par type de donnée stockée et nous offre l'accès à un getter et un setter pour récupérer ou écraser la donnée.
 
 > features/Behat/Storage/Storage.php
 
@@ -320,7 +320,7 @@ class Storage
 }
 {{< /highlight >}}
 
-On peut ensuite, injecter ce storage à notre ProductProxy et on pourra de ce fait, piocher dans les données pour les modifier
+On peut ensuite, injecter ce _storage_ à notre _ProductProxy_ et on pourra de ce fait, piocher dans les données pour les modifier.
 
 {{< highlight php >}}
 <?php
@@ -348,3 +348,112 @@ class ProductProxy
     }
 }
 {{< /highlight >}}
+
+En repartant de notre test fonctionnel en Gherkin, nous pouvons donc avoir les _steps_ suivantes:
+
+{{< highlight gherkin >}}
+  Scenario: I can not buy a plan with an availability date passed
+    Given the database is purged
+    And there is a plan named "Premium" with a price of 100
+    And this plan is not available anymore
+    And the user "user@example.net" is created
+    And I am logged with "user@example.net"
+    When I go to this page "/fr/buy"
+    Then I should see "Premium"
+    And I can not buy "Premium"
+{{< /highlight >}}
+
+Ce qui se retranscrirait dans le code du _ProductManager_ et du _ProductContext_ par:
+
+{{< highlight php >}}
+<?php
+
+namespace App\Tests\Behat\Manager;
+
+class ProductManager
+{
+    private $productRepository;
+
+    public function __construct(
+        ProductRepositoryInterface $productRepository
+    ) {
+        $this->productRepository = $productRepository;
+    }
+
+    public function createPlan(string $reference, int $price): Product
+    {
+         $plan = Product::createPlan(
+            $reference,
+            $price,
+            20,
+            100
+        );
+
+        $this->productRepository->add($plan);
+
+        // We now return the plan after the creation
+        return $plan;
+    }
+
+    public function setAvailability(
+        Product $plan,
+        ?\DateTimeInterface $availability
+    ): void {
+        $plan->updateEndOfAvailability($availability);
+
+        $this->productRepository->set($plan);
+    }
+}
+{{< /highlight >}}
+
+{{< highlight php >}}
+<?php
+
+use Behat\Behat\Context\Context;
+use Webmozart\Assert\Assert;
+
+class ProductContext implements Context
+{
+    /**
+     * @Given there is a plan named :reference with a price of :price
+     */
+    public function createPlan(string $reference, int $price): void
+    {
+        // We receive the return of the createPlan function
+        $plan = $this->productProxy
+            ->getProductManager()
+            ->createPlan($reference, $price)
+        ;
+
+        // And we set the plan in the storage for further usage
+        $this->productProxy->getStorage()->set('plan', $plan);
+    }
+
+    // ...
+
+    /**
+     * @Given this plan is not available anymore
+     */
+    public function planNotAvailable(): void
+    {
+        // We retrieve the previous plan from the storage
+        $plan = $this->productProxy->getStorage()->get('plan');
+
+        $this->productProxy
+            ->getProductManager()
+            ->setAvailability(
+                $plan,
+                new \DateTime('1999-10-10 10:00:00.000')
+            )
+        ;
+    }
+}
+{{< /highlight >}}
+
+A la lecture de notre test fonctionnel, nous comprenons tout de suite dans quel contexte nous nous trouvons, avec une formule non disponible, et nous testons qu'elle n'est plus achetable par un utilisateur.
+
+# En conclusion
+
+Là où avant nous avions beaucoup de tests avec des fixtures lourdes à maintenir et qui cachaient une grande partie de ce qui était chargé, nous avons maintenant des _steps_ qui décrivent le contexte dans lequel le test s'effectue. Un code maintenable car c'est directement notre code métier qui est utilisé.
+
+Nos tests sont lisibles, facilement reviewable par nos pairs et réutilisable facilement pour différent contexte.
