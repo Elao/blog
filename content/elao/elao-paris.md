@@ -19,7 +19,7 @@ co_authors:         []
 
 # Elao à Paris
 
-Elao a été créé par 3 développeurs à Lyon il y a plus de 10 ans et est présente sur Paris depuis 2015. A travers cet article, nous voulons vous présenter notre cadre de travail et l'environnement parisien.
+Créé par 3 développeurs à Lyon il y a plus de 10 ans, Elao est présent sur Paris depuis 2015. A travers cet article, nous voulons vous présenter notre cadre de travail et l'environnement parisien.
 
 Elao, ce sont des tribus **de développeuses et développeurs** :
 
