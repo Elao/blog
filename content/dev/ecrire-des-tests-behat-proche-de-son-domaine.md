@@ -22,7 +22,7 @@ Dans cet article nous allons voir comment nous écrivons désormais nos tests en
 
 L'ajout et le maintien des tests fonctionnels se sont avérés de plus en plus complexes à réaliser sur plusieurs de nos projets avec une grande complexité métier. Certains parcours utilisateur étaient compliqués à mettre en place. Le maintien à jour des fixtures de tests devenait difficile, les dépendances entre les entités testées les rendant encore plus complexes.
 
-Dans de nombreux cas, nous en arrivions à faire une fixture particulière pour chaque test plutôt que de réutiliser ccertaines d'entre elles pour être totalement maître du contexte. A chaque modification du _model_, la mise à jour de toutes les fixtures étaient une réelle perte de temps.
+Dans de nombreux cas, nous en arrivions à faire une fixture particulière pour chaque test plutôt que de réutiliser certaines d'entre elles pour être totalement maître du contexte. A chaque modification du _model_, la mise à jour de toutes les fixtures étaient une réelle perte de temps.
 
 La plupart des projets chez [élao](https://www.elao.com) ont [une architecture hexagonale](/fr/dev/architecture-hexagonale-symfony) et sont orientés DDD, Domain Driven Design. Nous avons donc déjà toutes les méthodes métiers nécessaires pour créer des entités pour les contextes qui nous intéressent.
 
