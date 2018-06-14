@@ -480,7 +480,7 @@ De même, la modification d'une entité peut se passer hors des _steps_ prédéf
 +   | reference | Early bird |
 {{< /highlight >}}
 
-Mais tout ceci demande de coder tous les contextes, les _steps_, les _proxies_, ce qui est énergivore. Cependant la valeur ajoutée d'avoir une bonne couverture de tests fonctionnels reste importante.
+Mais tout ceci demande de coder tous les contextes, les _steps_, les _proxies_, ce qui est très verbeux. Cependant la valeur ajoutée d'avoir une bonne couverture de tests fonctionnels est importante et le temps passé à coder les tests est du temps gagné en débogage.
 
 # En conclusion 🎬
 
