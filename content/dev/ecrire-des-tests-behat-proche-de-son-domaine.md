@@ -1,10 +1,10 @@
 ---
 type:               "post"
-title:              "Ecrire des tests Behat proche de son domaine"
+title:              "Ecrire des tests Behat proches de son domaine"
 date:               "2018-06-17"
 publishdate:        "2018-06-17"
 draft:              false
-slug:               "ecrire-des-tests-behat-proche-de-son-domaine"
+slug:               "ecrire-des-tests-behat-proches-de-son-domaine"
 description:        ""
 
 thumbnail:          "/images/posts/thumbnails/ecrire-des-tests-behat-proche-de-son-domaine-thumbnail.png"
