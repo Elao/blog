@@ -55,6 +55,8 @@ Nous allons voir pas à pas comment nous avons exploité le routing pour répond
 ### Récupérer toutes les routes de l'application
 
 {{< highlight php >}}
+<?php
+
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouterInterface;
 
@@ -87,6 +89,8 @@ Dump Toutes les routes de l'application :
 ### Filtrer les routes en ne gardant que les routes avec méthode GET
 
 {{< highlight php >}}
+<?php
+
     return array_filter(
         $this->router->getRouteCollection()->all(),
         function (Route $route) {
@@ -104,6 +108,8 @@ admin_generate_invoice_for_order ➡ Generate invoice for Order
 ### Générer l'url
 
 {{< highlight php >}}
+<?php
+
 class RouteGenerator
 {
     /** @var RouterInterface */
@@ -127,7 +133,11 @@ Dump
 
 ### Démo
 
-https://github.com/Pixabay/JavaScript-autoComplete
+Pour le widget côté navigateur permettant à l'utilisateur de faire sa recherche et d'avoir des suggestions de résultats,
+nous avons choisi une librairie assez légère et facilement configurable, notamment au niveau de la source de données :
+[Pixabay/JavaScript-autoComplete](https://github.com/Pixabay/JavaScript-autoComplete).
+
+Et cela donne comme résultat :
 
 <p class="text-center">
     <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/demo.png" alt="Démo" />
@@ -157,6 +167,8 @@ admin_user_update:
 {{< /highlight >}}
 
 {{< highlight php >}}
+<?php
+
 class UserController extends Controller
 {
     public function updateAction(Request $request, User $user): Response
@@ -166,6 +178,8 @@ class UserController extends Controller
 Ou invokable controller (Action Domain Response pattern) :
 
 {{< highlight php >}}
+<?php
+
 class UpdateUserAction
 {
     public function __invoke(Request $request, User $user): Response
@@ -175,6 +189,8 @@ class UpdateUserAction
 Récupérer les requirements d'une route
 
 {{< highlight php >}}
+<?php
+
 public function getRequirements(Route $route): array
 {
     return array_keys($route->getRequirements());
@@ -188,6 +204,8 @@ admin_user_update -> user
 ### Récupérer les metadata du controller d'une route
 
 {{< highlight php >}}
+<?php
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Controller\ControllerResolverInterface;
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
@@ -228,6 +246,8 @@ Appel un repository Doctrine classique. Récupèrer liste des utilisateurs.
 Créer un label (ici le nom/prénom), et passer la valeur du paramètre user permettant de générer l'url de la route, ici l'id.
 
 {{< highlight php >}}
+<?php
+
 class UserResolver implements ResolverInterface
 {
     /** ... */
@@ -249,9 +269,14 @@ class UserResolver implements ResolverInterface
 
 Dump du résultat
 
-## Resolver Doctrine ?
+
+## Améliorations
+
+### Resolver Doctrine ?
 
 {{< highlight php >}}
+<?php
+
 use Doctrine\Common\Persistence\ManagerRegistry;
 
 class DoctrineResolver {
@@ -286,6 +311,8 @@ class DoctrineResolver {
 Et ne pas oublier de déclarer une méthode __toString
 
 {{< highlight php >}}
+<?php
+
 class User
 {
     public function __toString(): string
@@ -294,7 +321,7 @@ class User
     }
 {{< /highlight >}}
 
-## Traduction des noms de route
+### Traduction des noms de route
 
 {{< highlight yaml >}}
 # Routing
@@ -323,6 +350,8 @@ admin_user_update: Utilisateur Modifier
 {{< /highlight >}}
 
 {{< highlight php >}}
+<?php
+
 use Symfony\Component\Translation\TranslatorBagInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 
