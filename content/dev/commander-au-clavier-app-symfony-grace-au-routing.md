@@ -22,7 +22,7 @@ il est souvent fastidieux d'accéder à une information.
 Il faut choisir le bon élément dans un menu, chercher dans une liste, cliquer sur modifier, accéder à un formulaire
 pour enfin pouvoir modifier une donnée.
 
-Nous allons voir comment on peut facilement ajouter à une application Symfony une UI différente,
+Nous allons voir comment on peut ajouter à une application Symfony une UI différente,
 une interface de commande par texte avec autocompletion.
 
 ## Le contexte
@@ -31,26 +31,30 @@ une interface de commande par texte avec autocompletion.
     <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/backoffice.png" alt="Backoffice" />
 </p>
 
-Interface d'administration d'une application classique.
+Ceci est une capture d'écran d'interface d'administration d'une application classique.
 Il y a des listes, des boutons, des menus...
-Il y a des centaines de fonctionnalités et des millions de lignes en base de données.
-Accéder à une ressource peut parfois être fastidieux : plusieurs clics pour accéder à une fonctionnalité.
+Pour accéder à une ressource ou à une fonctionnalité, plusieurs clics sont nécessaires.
 
-Et si on disruptait l'UI de notre application ?
-Dans nos 20% off dédié aux sides project, dojo de toute sorte, nous avons eu l'idée de voir ce qu'on pouvait fort pour rendre accessible plus rapidement et plus efficacement les centaines de fonctionnalités d'une application.
+Et si on avait une UI différente ?
 
-Google, Spotlight ou Alfred sous mac
-Recherche avec Autocompletion
+Dans notre temps dédié aux *side projects*, nous avons eu l'idée de voir ce qu'on pouvait faire pour accéder
+plus rapidement et plus efficacement aux ressources d'une application. L'idée est de s'inspirer des suggestions de
+résultats comme sur Google, Spotlight ou Alfred sous Mac.
+
+Exemple lorsqu'on tape "Modifier document" sur Google :
 
 <p class="text-center">
     <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/search.png" alt="Recherche avec suggestion de résultats" />
 </p>
 
-Si on créait un chat bot ?
+Cela serait pas mal d'avoir la même chose dans notre application, n'est-ce pas ?
 
-## Exploiter le routing de Symfony ?
+## Exploiter le *routing* de Symfony ?
 
-Nous allons voir pas à pas comment nous avons exploité le routing pour répondre à notre besoin.
+Symfony dispose des commandes *Console* mais cette interface est dédiée aux développeurs.
+L'idée est d'avoir un moteur de recherche dans le navigateur qui suggère des résultats qui irait piocher dans notre
+application sans forcément écrire complètement une API côté Backend. Et pourquoi pas exploiter le *Routing* de Symfony ? 
+Nous allons voir pas à pas comment nous avons exploité le *routing* pour répondre à notre besoin.
 
 ### Récupérer toutes les routes de l'application
 
@@ -80,17 +84,17 @@ class AllRoutesResolver
 }
 {{< /highlight >}}
 
-Dump Toutes les routes de l'application :
+Cela donne comme résultat en faisant un *dump* :
 
 <p class="text-center">
-    <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/all-routes-dump.png" alt="Dump de routes les routes de l'application" />
+    <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/all-routes-dump.png" alt="Dump de routes les routes de l'application" style="width: 50%" />
 </p>
 
-### Filtrer les routes en ne gardant que les routes avec méthode GET
+Filtrons maintenant les routes en ne gardant que les routes avec méthode GET :
 
 {{< highlight php >}}
 <?php
-
+    // ...
     return array_filter(
         $this->router->getRouteCollection()->all(),
         function (Route $route) {
@@ -101,35 +105,35 @@ Dump Toutes les routes de l'application :
 
 ### Humaniser les noms de route
 
-admin_user_list ➡ User list
-admin_user_create ➡ User create
-admin_generate_invoice_for_order ➡ Generate invoice for Order
+Maintenant qu'on a toutes les *routes* de l'application, il faut pouvoir les proposer à l'utilisateur.
+L'idée est de transformer le nom de chaque *route* en libellé "humanisé" :
+
+- admin_user_list ➡ User list
+- admin_user_create ➡ User create
+- admin_generate_invoice_for_order ➡ Generate invoice for Order
+
+Pour obtenir ce résultat, on a simplement supprimé le préfixe `admin_` et les `_`, puis mis la première lettre en
+majuscule.
 
 ### Générer l'url
 
+Pour générer l'url à partir d'une route, rien de plus trivial :
+
 {{< highlight php >}}
 <?php
-
-class RouteGenerator
-{
-    /** @var RouterInterface */
-    private $router;
-
-    public function __construct(RouterInterface $router)
-    {
-        $this->router = $router;
-    }
-
-    public function generateUrl(string $routeName, array $parameters): string
-    {
-        return $this->router->generate($routeName, $parameters);
-    }
-}
+    /** @var RouterInterface $router */
+    return $router->generate($routeName, $parameters);
 {{< /highlight >}}
 
-L'ensemble des urls générées
+On créé des vues contenant le libellé et l'url et cela donne quelque chose comme ça :
 
-Dump
+```
+array:140 [▼
+  0 => ResultView {#1388 ▼
+    +label: "User list"
+    +routeName: "admin_user_list"
+    +url: "/user/list"
+```
 
 ### Démo
 
@@ -145,16 +149,19 @@ Et cela donne comme résultat :
 
 ## Deviner des paramètres de route
 
-Routes avec des paramètres
+Que faire maintenant si nos routes attendent des paramètres ? En terme d'expérience utilisateur, on souhaite que
+l'application nous suggère des résultats. Par exemple, si on tape "User update", l'application nous propose l'ensemble
+des utilisateur pouvant être modifiés :
 
-Suggestion de résultats
-
-User update_
+```
 ➡ User update Korben DALLAS
 ➡ User update Leeloo Ekbat De Sebat
 ➡ User update Cornelius
+```
 
 ### Récupérer les requirements d'une route
+
+Considérons que l'on a cette *route* :
 
 {{< highlight yaml >}}
 # Routing
@@ -166,6 +173,11 @@ admin_user_update:
     defaults: { _controller: AdminBundle:User:update }
 {{< /highlight >}}
 
+Notre *requirement* apparaît être un paramètre `user` qui est de type numérique.
+
+Dans notre *controller*, le paramètre `user` va être transformé grâce au `ParamConverter` de Symfony en objet
+de la classe `User` :
+
 {{< highlight php >}}
 <?php
 
@@ -175,7 +187,7 @@ class UserController extends Controller
     {
 {{< /highlight >}}
 
-Ou invokable controller (Action Domain Response pattern) :
+Ou ici avec un *invokable controller* (*Action Domain Response pattern*) :
 
 {{< highlight php >}}
 <?php
@@ -186,7 +198,7 @@ class UpdateUserAction
     {
 {{< /highlight >}}
 
-Récupérer les requirements d'une route
+Par le code, récupérer les *requirements* d'une *route* :
 
 {{< highlight php >}}
 <?php
@@ -197,9 +209,7 @@ public function getRequirements(Route $route): array
 }
 {{< /highlight >}}
 
-Résultat :
-
-admin_user_update -> user
+On sait ainsi par le code que la route `admin_user_update` a pour *requirement*, un paramètre `user`.
 
 ### Récupérer les metadata du controller d'une route
 
@@ -212,7 +222,7 @@ use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactoryInterface;
 use Symfony\Component\Routing\Route;
 
-class RouteGetter
+class RouteArgumentsMetadata
 {
     /** ... */
 
@@ -237,13 +247,38 @@ class RouteGetter
 
 Résultat :
 
-Dump des metadata du controller d'une route
+```
+array:2 [▼
+  0 => ArgumentMetadata {#2146 ▼
+    -name: "request"
+    -type: "Symfony\Component\HttpFoundation\Request"
+    -isVariadic: false
+    -hasDefaultValue: false
+    -defaultValue: null
+    -isNullable: false
+  }
+  1 => ArgumentMetadata {#2151 ▼
+    -name: "user"
+    -type: "App\Domain\Model\User"
+    -isVariadic: false
+    -hasDefaultValue: false
+    -defaultValue: null
+    -isNullable: false
+  }
+]
+```
+
+On a donc une variable `user` dont le type est `App\Domain\Model\User`.
+Cela devient carrément intéressant !
+Continuons...
 
 ### Custom resolver
 
-Resolver dédié pour le User.
-Appel un repository Doctrine classique. Récupèrer liste des utilisateurs.
-Créer un label (ici le nom/prénom), et passer la valeur du paramètre user permettant de générer l'url de la route, ici l'id.
+Nous allons coder un *Resolver* dédié pour un paramètre dès lors qu'il est de type `App\Domain\Model\User`.
+
+Ici on sait que notre classe `User` est une classe mappé avec Doctrine. Nous allons faire appel à un *repository
+Doctrine* pour récupèrer une liste des utilisateurs depuis la base de données. On prend soin de retourner le résultat
+en précisant que la valeur du paramètre `user` prend pour valeur l'id de l'utilisateur :
 
 {{< highlight php >}}
 <?php
@@ -253,13 +288,18 @@ class UserResolver implements ResolverInterface
     /** ... */
 
     /** ResultView[] */
-    public function resolve(ResultView $resultView): array
+    public function resolve(ResultView $parentResultView): array
     {
         $enabledUsers = $this->userRepository->getEnabledUser();
         $resultViews = [];
 
         foreach ($enabledUsers as $user) {
-            $resultViews[] = new ResultView($user->getFullName(), ['user' => $user->getId()]);
+            $resultViews[] = new ResultView(
+                $parentResultView->label . ' ' . $user->getFullName(),
+                $parentResultView->routeName,
+                $router->generate($parentResultView->routeName, ['user' => $user->getId()]),
+                ['user' => $user->getId()]
+            );
         }
 
         return $resultViews;
@@ -267,8 +307,26 @@ class UserResolver implements ResolverInterface
 }
 {{< /highlight >}}
 
-Dump du résultat
+On obtient ce résultat :
 
+```
+array:2 [▼
+  0 => ResultView {#1395 ▼
+    +label: "User update Korben DALLAS"
+    +routeName: "admin_user_update"
+    +url: "/user/update/42"
+    +parameters: array:2 [▼
+      "user" => 42
+      "_locale" => "en"
+    ]
+  }
+  1 => ResultView {#1403 ▼
+    +label: "User update Leeloo Ekbat De Sebat"
+    +routeName: "admin_user_update"
+    +url: "/user/update/1337"
+    +parameters: array:2 [▶]
+  }
+```
 
 ## Améliorations
 
@@ -396,24 +454,28 @@ App\ActionsBot\Resolver\TranslateRouteName:
 
 ## Bilan
 
-- Nouvelle UX / UI basées sur les routes
-- Rapidité++ efficacité++
-- Commandes auto-générées ou personnalisées : Chiffre d'affaire du mois / CA de l'année...
-- Générer une API à partir du routing ?
+### Résultat
 
-Inconvénients
-- inversion langage : "Utilisateur Modifier" au lieu de "Modifier utilisateur"
-- proposer une recherche en langage naturel
-- savoir quoi chercher
-- savoir comment chercher -> indiquer sur chaque page via la route, comment y accéder par une recherche texte
+- Nouvelle UX / UI basées sur les routes de l'application.
+- Rapidité++ efficacité++.
+- On pourrait imaginer avoir des commandes personnalisées : afficher le chiffre d'affaire du moisa, afficher le nombre
+d'utilisateurs connectés...
+
+### Inconvénients
+
+- Il faut savoir quoi chercher.
+- Savoir comment chercher. On pourrait résoudre ce problème en indiquant sur chaque page, comment y accéder par une
+recherche texte.
+- Inversion du langage : "Utilisateur Modifier" au lieu de "Modifier utilisateur". Pour améliorer, on pourrait proposer
+une recherche en langage naturel.
 
 ## Commander par la voix ?
 
-Alexa ? Google Home ?
-On est en réunion et on demande "Quel est le CA du mois sur le produit BIDULE ?"
+Depuis quelques mois, nos ordinateurs et enceintes connectées se sont dotés d'assistants vocaux plus ou moins
+performants : Microsoft Cortana, Siri chez Apple, Amazon Alexa (Echo) ou Google Home.
 
-Assistants vocaux Cortana, Siri, Ok Google
-enceintes connectés comme Alexa Echo ou Google Home
+Pourquoi ne pas piloter notre application web avec la voix ? Par exemple, en réunion on pourrait demander
+"Quel est le Chiffre d'affaire du mois sur le produit TROPSTYLÉ ?" et avoir une réponse en synthèse vocale.
 
 Web Speech API
 Speech Synthesis
