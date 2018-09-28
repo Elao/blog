@@ -35,11 +35,12 @@ Ceci est une capture d'écran d'interface d'administration d'une application cla
 Il y a des listes, des boutons, des menus...
 Pour accéder à une ressource ou à une fonctionnalité, plusieurs clics sont nécessaires.
 
-Et si on avait une UI différente ?
+Et si on avait une **UI différente** ?
 
 Dans notre temps dédié aux *side projects*, nous avons eu l'idée de voir ce qu'on pouvait faire pour accéder
-plus rapidement et plus efficacement aux ressources d'une application. L'idée est de s'inspirer des suggestions de
-résultats comme sur Google, Spotlight ou Alfred sous Mac.
+plus rapidement et plus efficacement aux ressources d'une application.
+
+S'inspirer des **suggestions de résultats** comme sur Google, Spotlight ou Alfred sous Mac ?
 
 Exemple lorsqu'on tape "Modifier document" sur Google :
 
@@ -84,7 +85,7 @@ class AllRoutesResolver
 }
 {{< /highlight >}}
 
-Cela donne comme résultat en faisant un *dump* :
+Cela donne comme résultat :
 
 <p class="text-center">
     <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/all-routes-dump.png" alt="Dump de routes les routes de l'application" style="width: 50%" />
@@ -105,7 +106,8 @@ Filtrons maintenant les routes en ne gardant que les routes avec méthode GET :
 
 ### Humaniser les noms de route
 
-Maintenant qu'on a toutes les *routes* de l'application, il faut pouvoir les proposer à l'utilisateur.
+Maintenant qu'on a toutes les *routes* de l'application, il faut pouvoir les proposer de manière lisible à un
+utilisateur non-développeur.
 L'idée est de transformer le nom de chaque *route* en libellé "humanisé" :
 
 - admin_user_list ➡ User list
@@ -154,10 +156,14 @@ l'application nous suggère des résultats. Par exemple, si on tape "User update
 des utilisateur pouvant être modifiés :
 
 ```
-➡ User update Korben DALLAS
-➡ User update Leeloo Ekbat De Sebat
+➡ User update Korben
+➡ User update Leeloo
 ➡ User update Cornelius
 ```
+
+Cela signifie que côté frontend, lorsqu'on aura tapé "User update" + un espace (très important l'espace),
+une requête XMLHttpRequest (Ajax pour les intimes) sera déclenchée afin de récupérer les routes contenant
+les noms des utilisateurs.
 
 ### Récupérer les requirements d'une route
 
@@ -213,6 +219,29 @@ On sait ainsi par le code que la route `admin_user_update` a pour *requirement*,
 
 ### Récupérer les metadata du controller d'une route
 
+Le principe est de récupérer les arguments d'un *controller* d'une *route* et de voir de quelle *classe*
+il s'agit.
+
+On a besoin de deux choses :
+
+* 1. Récupérer le *controller* d'une route :
+
+{{< highlight php >}}
+<?php
+/** @var Symfony\Component\HttpKernel\Controller\ControllerResolverInterface $controllerResolver */
+$controllerResolver->getController($request);
+{{< /highlight >}}
+
+* 2. Récupérer les metadata des arguments d'un *controller* :
+
+{{< highlight php >}}
+<?php
+/** @var Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactoryInterface $argumentMetadataFactory */
+$argumentMetadataFactory->createArgumentMetadata($controller);
+{{< /highlight >}}
+
+Et le code complet donne cela :
+
 {{< highlight php >}}
 <?php
 
@@ -224,7 +253,11 @@ use Symfony\Component\Routing\Route;
 
 class RouteArgumentsMetadata
 {
-    /** ... */
+    /** @var ControllerResolverInterface */
+    private $controllerResolver;
+
+    /** @var ArgumentMetadataFactoryInterface */
+    private $argumentMetadataFactory;
 
     public function __construct(
         ControllerResolverInterface $controllerResolver,
@@ -269,8 +302,8 @@ array:2 [▼
 ```
 
 On a donc une variable `user` dont le type est `App\Domain\Model\User`.
-Cela devient carrément intéressant !
-Continuons...
+Cela devient intéressant !
+Voyons voir ce qu'on peut en faire...
 
 ### Custom resolver
 
@@ -297,7 +330,7 @@ class UserResolver implements ResolverInterface
             $resultViews[] = new ResultView(
                 $parentResultView->label . ' ' . $user->getFullName(),
                 $parentResultView->routeName,
-                $router->generate($parentResultView->routeName, ['user' => $user->getId()]),
+                $this->router->generate($parentResultView->routeName, ['user' => $user->getId()]),
                 ['user' => $user->getId()]
             );
         }
@@ -311,40 +344,64 @@ On obtient ce résultat :
 
 ```
 array:2 [▼
-  0 => ResultView {#1395 ▼
-    +label: "User update Korben DALLAS"
+  0 => ResultView { ▼
+    +label: "User update Korben"
     +routeName: "admin_user_update"
     +url: "/user/update/42"
-    +parameters: array:2 [▼
+    +parameters: array:1 [▼
       "user" => 42
-      "_locale" => "en"
     ]
   }
-  1 => ResultView {#1403 ▼
-    +label: "User update Leeloo Ekbat De Sebat"
+  1 => ResultView { ▼
+    +label: "User update Leeloo"
+    +routeName: "admin_user_update"
+    +url: "/user/update/1"
+    +parameters: array:1 [▼
+      "user" => 1
+    ]
+  }
+  2 => ResultView { ▼
+    +label: "User update Cornelius"
     +routeName: "admin_user_update"
     +url: "/user/update/1337"
-    +parameters: array:2 [▶]
+    +parameters: array:1 [▼
+      "user" => 1337
+    ]
   }
 ```
+
+On peut donc maintenant proposer à l'utilisateur d'accéder à des routes avec paramètre.
 
 ## Améliorations
 
 ### Resolver Doctrine ?
+
+Pourrait-on avoir un *resolver* générique dédié à nos *classes* d'entité *Doctrine* ?
+
+L'idée est de tester si une classe donnée est une entité Doctrine, c'est à dire via le `ManagerRegistry` chercher
+un éventuel `EntityManager`. Puis avec cet `EntityManager`, utiliser le bon `Repository`
+et la méthode générique de tout `Repository` Doctrine, `findAll()` :
 
 {{< highlight php >}}
 <?php
 
 use Doctrine\Common\Persistence\ManagerRegistry;
 
-class DoctrineResolver {
-    public function __construct(ManagerRegistry $managerRegistry) {
+class DoctrineResolver
+{
+    public function __construct(ManagerRegistry $managerRegistry, RouterInterface $router)
+    {
         $this->managerRegistry = $managerRegistry;
+        $this->router = $router;
     }
 
-    public function resolve(ResultView $resultView, string $paramName, string $className): array {
+    public function resolve(ResultView $resultView, string $paramName, string $className): array
+    {
         $entityManager = $this->managerRegistry->getManagerForClass($className);
-        if (null === $entityManager) { return []; }
+
+        if (null === $entityManager) {
+            return [];
+        }
 
         $objects = $entityManager->getRepository($className)->findAll();
         $resultViews = [];
@@ -356,7 +413,7 @@ class DoctrineResolver {
             $resultViews[] = new ResultView(
                 sprintf('%s %s', $resultView->label, $object),
                 $resultView->routeName,
-                $resultView->url,
+                $this->router->generate($parentResultView->routeName, $parameters),
                 $parameters
             );
         }
@@ -366,7 +423,7 @@ class DoctrineResolver {
 }
 {{< /highlight >}}
 
-Et ne pas oublier de déclarer une méthode __toString
+Il faut aussi déclarer une méthode `__toString` dans nos classes d'entité Doctrine :
 
 {{< highlight php >}}
 <?php
@@ -379,7 +436,26 @@ class User
     }
 {{< /highlight >}}
 
+Ceci afin que l'objet soit *transformé* en *string* lorsque le libellé de la *route* est créé ici :
+
+```
+sprintf('%s %s', $resultView->label, $object),
+```
+
 ### Traduction des noms de route
+
+On a vu plus haut, comment à partir du nom de la route, la transformer un peu pour l'humaniser.
+
+Cependant les noms de routes dans une application sont généralement en anglais.
+Comment faire lorsque l'application est disponible en plusieurs langues ? Par exemple pour la *route*
+"admin_user_create", en anglais on aurait donc "User Create" et en français "Utilisateur Créer".
+
+Oui, l'action est préfixée par le sujet et du coup la phrase est inversée (Yoda style !).
+Si on avait dans notre application "Créer document", "Créer facture", "Créer produit"... lorsqu'on tapperait "Cré.."
+on aurait droit à tous les "Créer..." de l'application. Nous avons donc choisi ici de préfixer les libellés par le sujet
+de l'action. Quand on tappe "Produ..." on a par exemple "Produit Créer", "Produit Modifier", "Produit Déstocker"...
+
+Prenons les noms des routes :
 
 {{< highlight yaml >}}
 # Routing
@@ -392,6 +468,8 @@ admin_user_create:
 admin_user_update:
     path: /user/update/{user}
 {{< /highlight >}}
+
+et déposons les dans des fichiers de traductions de Symfony (*translations*) :
 
 {{< highlight yaml >}}
 # humanized_routes.en.yml
@@ -406,6 +484,11 @@ admin_user_list: Utilisateur Lister
 admin_user_create: Utilisateur Créer
 admin_user_update: Utilisateur Modifier
 {{< /highlight >}}
+
+Comment utiliser ces fichiers de traduction ?
+
+Simplement, on regarde si on a la traduction pour un nom de *route* donné dans la *locale* de l'utilisateur de
+l'application :
 
 {{< highlight php >}}
 <?php
@@ -439,6 +522,9 @@ class TranslateRouteName
 }
 {{< /highlight >}}
 
+`TranslatorInterface` et `TranslatorBagInterface` sont implémentés par le même service, donc dans notre déclaration de
+service, on a :
+
 {{< highlight yaml >}}
 App\ActionsBot\Resolver\TranslateRouteName:
     arguments:
@@ -471,17 +557,18 @@ une recherche en langage naturel.
 
 ## Commander par la voix ?
 
-Depuis quelques mois, nos ordinateurs et enceintes connectées se sont dotés d'assistants vocaux plus ou moins
+Depuis quelques mois, nos ordinateurs et enceintes se sont dotés d'assistants vocaux plus ou moins
 performants : Microsoft Cortana, Siri chez Apple, Amazon Alexa (Echo) ou Google Home.
 
 Pourquoi ne pas piloter notre application web avec la voix ? Par exemple, en réunion on pourrait demander
-"Quel est le Chiffre d'affaire du mois sur le produit TROPSTYLÉ ?" et avoir une réponse en synthèse vocale.
+"Quel est le Chiffre d'affaire du mois sur le produit T-SHIRT KORBEN DALLAS ?" et avoir une réponse en synthèse vocale.
 
-Web Speech API
-Speech Synthesis
-Speech Recognition
-Synthèse vocale à partir d'un texte écrit
-Reconnaissance automatique de la parole
+Une API web est disponible : [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)
+
+Celle-ci comporte notamment les composants suivants :
+
+- [Speech Synthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) : la synthèse vocale à partir d'un texte écrit
+- [Speech Recognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) : la reconnaissance automatique de la parole
 
 {{< highlight js >}}
 var recognition = new SpeechRecognition();
@@ -498,12 +585,13 @@ recognition.onresult = function (event) {
 recognition.start();
 {{< /highlight >}}
 
-Démo ici : https://www.google.com/intl/en/chrome/demos/speech.html
-
 Le support de l'API SpeechRecognition est très limité pour l'instant :
 
 <p class="text-center">
     <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/caniuse-speech-recognition.png" alt="Can I Use SpeechRecognition" />
 </p>
 
-Cependant, c'est une technologie assez promoteuse. A suivre donc !
+Démo ici : https://www.google.com/intl/en/chrome/demos/speech.html (à tester avec Chrome seulement au jour où cet
+article a été écrit).
+
+C'est une technologie assez promoteuse. A suivre donc !
