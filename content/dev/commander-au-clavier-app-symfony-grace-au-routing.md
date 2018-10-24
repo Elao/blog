@@ -146,7 +146,7 @@ nous avons choisi une librairie assez légère et facilement configurable, notam
 Et cela donne comme résultat :
 
 <p class="text-center">
-    <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/demo.gif" alt="Démo" />
+    <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/demo1.gif" alt="Démo" />
 </p>
 
 ## Deviner des paramètres de route
