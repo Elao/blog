@@ -544,10 +544,10 @@ App\ActionsBot\Resolver\TranslateRouteName:
 
 ### Résultat
 
-- Nouvelle UX / UI basées sur les *routes* de l'application.
+- Nouvelle UX / UI basée sur les *routes* de l'application.
 - Rapidité++ efficacité++.
-- On pourrait imaginer avoir des commandes personnalisées : afficher le chiffre d'affaire du moisa, afficher le nombre
-d'utilisateurs connectés...
+- On pourrait imaginer avoir des commandes personnalisées : afficher le chiffre d'affaire du mois, afficher le nombre
+d'utilisateurs connectés, etc.
 
 ### Inconvénients
 
