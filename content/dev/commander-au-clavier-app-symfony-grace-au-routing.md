@@ -1,15 +1,15 @@
 ---
 type:           "post"
 title:          "Commander au clavier une application Symfony grâce au Routing"
-date:           "2018-09-01"
-publishdate:    "2018-09-01"
+date:           "2018-10-25"
+publishdate:    "2018-10-25"
 draft:          false
 slug:           "commander-au-clavier-app-symfony-grace-au-routing"
 description:    "Comment ajouter à une application Symfony une UI différente, une interface de commande par texte avec autocompletion."
 summary:        true
 
-thumbnail:      "/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/demo-avec-parametre.png"
-header_img:     "/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/demo-avec-parametre.png"
+thumbnail:      "/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/anthony-martino-335460-unsplash.jpg"
+header_img:     "/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/anthony-martino-335460-unsplash.jpg"
 tags:           ["Symfony", "Routing", "UX"]
 categories:     ["dev", "Symfony"]
 
@@ -57,7 +57,7 @@ L'idée est d'avoir un moteur de recherche dans le navigateur qui suggère des r
 application sans forcément écrire complètement une API côté Backend. Et pourquoi pas exploiter le *Routing* de Symfony ? 
 Nous allons voir pas à pas comment nous avons exploité le *routing* pour répondre à notre besoin.
 
-### Récupérer toutes les routes de l'application
+### Récupérer toutes les *routes* de l'application
 
 {{< highlight php >}}
 <?php
@@ -88,10 +88,10 @@ class AllRoutesResolver
 Cela donne comme résultat :
 
 <p class="text-center">
-    <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/all-routes-dump.png" alt="Dump de routes les routes de l'application" style="width: 50%" />
+    <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/all-routes-dump.png" alt="Dump de *routes* les *routes* de l'application" style="width: 50%" />
 </p>
 
-Filtrons maintenant les routes en ne gardant que les routes avec méthode GET :
+Filtrons maintenant les *routes* en ne gardant que les *routes* avec méthode GET :
 
 {{< highlight php >}}
 <?php
@@ -146,14 +146,14 @@ nous avons choisi une librairie assez légère et facilement configurable, notam
 Et cela donne comme résultat :
 
 <p class="text-center">
-    <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/demo.png" alt="Démo" />
+    <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/demo.gif" alt="Démo" />
 </p>
 
 ## Deviner des paramètres de route
 
-Que faire maintenant si nos routes attendent des paramètres ? En terme d'expérience utilisateur, on souhaite que
+Que faire maintenant si nos *routes* attendent des paramètres ? En terme d'expérience utilisateur, on souhaite que
 l'application nous suggère des résultats. Par exemple, si on tape "User update", l'application nous propose l'ensemble
-des utilisateur pouvant être modifiés :
+des utilisateurs pouvant être modifiés :
 
 ```
 ➡ User update Korben
@@ -162,10 +162,10 @@ des utilisateur pouvant être modifiés :
 ```
 
 Cela signifie que côté frontend, lorsqu'on aura tapé "User update" + un espace (très important l'espace),
-une requête XMLHttpRequest (Ajax pour les intimes) sera déclenchée afin de récupérer les routes contenant
+une requête XMLHttpRequest (Ajax pour les intimes) sera déclenchée afin de récupérer les *routes* contenant
 les noms des utilisateurs.
 
-### Récupérer les requirements d'une route
+### Récupérer les *requirements* d'une *route*
 
 Considérons que l'on a cette *route* :
 
@@ -215,16 +215,16 @@ public function getRequirements(Route $route): array
 }
 {{< /highlight >}}
 
-On sait ainsi par le code que la route `admin_user_update` a pour *requirement*, un paramètre `user`.
+On sait ainsi par le code que la *route* `admin_user_update` a pour *requirement*, un paramètre `user`.
 
 ### Récupérer les metadata du controller d'une route
 
-Le principe est de récupérer les arguments d'un *controller* d'une *route* et de voir de quelle *classe*
+Le principe est de récupérer les arguments d'un *controller* d'une *route* et de voir de quelle classe
 il s'agit.
 
 On a besoin de deux choses :
 
-* 1. Récupérer le *controller* d'une route :
+* 1. Récupérer le *controller* d'une *route* :
 
 {{< highlight php >}}
 <?php
@@ -302,14 +302,16 @@ array:2 [▼
 ```
 
 On a donc une variable `user` dont le type est `App\Domain\Model\User`.
-Cela devient intéressant !
-Voyons voir ce qu'on peut en faire...
 
-### Custom resolver
+Cela devient intéressant !
+
+Voyons voir ce que l'on peut en faire...
+
+### *Resolver* dédié
 
 Nous allons coder un *Resolver* dédié pour un paramètre dès lors qu'il est de type `App\Domain\Model\User`.
 
-Ici on sait que notre classe `User` est une classe mappé avec Doctrine. Nous allons faire appel à un *repository
+Ici on sait que notre classe `User` est une classe d'entité *Doctrine*. Nous allons faire appel à un *repository
 Doctrine* pour récupèrer une liste des utilisateurs depuis la base de données. On prend soin de retourner le résultat
 en précisant que la valeur du paramètre `user` prend pour valeur l'id de l'utilisateur :
 
@@ -370,17 +372,17 @@ array:2 [▼
   }
 ```
 
-On peut donc maintenant proposer à l'utilisateur d'accéder à des routes avec paramètre.
+On peut donc maintenant proposer à l'utilisateur d'accéder à des *routes* ayant un paramètre.
 
 ## Améliorations
 
-### Resolver Doctrine ?
+### *Resolver Doctrine* ?
 
-Pourrait-on avoir un *resolver* générique dédié à nos *classes* d'entité *Doctrine* ?
+Pourrait-on avoir un *resolver* générique dédié à nos classes d'entité *Doctrine* ?
 
-L'idée est de tester si une classe donnée est une entité Doctrine, c'est à dire via le `ManagerRegistry` chercher
+L'idée est de tester si une classe donnée est une entité *Doctrine*, c'est à dire via le `ManagerRegistry` chercher
 un éventuel `EntityManager`. Puis avec cet `EntityManager`, utiliser le bon `Repository`
-et la méthode générique de tout `Repository` Doctrine, `findAll()` :
+et la méthode générique de tout `Repository` *Doctrine*, `findAll()` :
 
 {{< highlight php >}}
 <?php
@@ -423,7 +425,7 @@ class DoctrineResolver
 }
 {{< /highlight >}}
 
-Il faut aussi déclarer une méthode `__toString` dans nos classes d'entité Doctrine :
+Il faut aussi déclarer une méthode `__toString` dans nos classes d'entité *Doctrine* :
 
 {{< highlight php >}}
 <?php
@@ -446,7 +448,7 @@ sprintf('%s %s', $resultView->label, $object),
 
 On a vu plus haut, comment à partir du nom de la route, la transformer un peu pour l'humaniser.
 
-Cependant les noms de routes dans une application sont généralement en anglais.
+Cependant les noms de *routes* dans une application sont généralement en anglais.
 Comment faire lorsque l'application est disponible en plusieurs langues ? Par exemple pour la *route*
 "admin_user_create", en anglais on aurait donc "User Create" et en français "Utilisateur Créer".
 
@@ -455,7 +457,7 @@ Si on avait dans notre application "Créer document", "Créer facture", "Créer 
 on aurait droit à tous les "Créer..." de l'application. Nous avons donc choisi ici de préfixer les libellés par le sujet
 de l'action. Quand on tappe "Produ..." on a par exemple "Produit Créer", "Produit Modifier", "Produit Déstocker"...
 
-Prenons les noms des routes :
+Prenons les noms des *routes* :
 
 {{< highlight yaml >}}
 # Routing
@@ -535,14 +537,14 @@ App\ActionsBot\Resolver\TranslateRouteName:
 ### Démo
 
 <p class="text-center">
-    <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/demo-avec-parametre.png" alt="Démo avec paramètre" />
+    <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/demo2.gif" alt="Démo avec paramètre" />
 </p>
 
 ## Bilan
 
 ### Résultat
 
-- Nouvelle UX / UI basées sur les routes de l'application.
+- Nouvelle UX / UI basées sur les *routes* de l'application.
 - Rapidité++ efficacité++.
 - On pourrait imaginer avoir des commandes personnalisées : afficher le chiffre d'affaire du moisa, afficher le nombre
 d'utilisateurs connectés...
@@ -567,8 +569,10 @@ Une API web est disponible : [Web Speech API](https://developer.mozilla.org/en-U
 
 Celle-ci comporte notamment les composants suivants :
 
-- [Speech Synthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) : la synthèse vocale à partir d'un texte écrit
-- [Speech Recognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) : la reconnaissance automatique de la parole
+- [Speech Synthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) :
+la synthèse vocale à partir d'un texte écrit
+- [Speech Recognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) :
+la reconnaissance automatique de la parole
 
 {{< highlight js >}}
 var recognition = new SpeechRecognition();
@@ -595,3 +599,7 @@ Démo ici : https://www.google.com/intl/en/chrome/demos/speech.html (à tester a
 article a été écrit).
 
 C'est une technologie assez promoteuse. A suivre donc !
+
+---
+
+Photo by Anthony Martino on Unsplash
