@@ -39,7 +39,7 @@ Installons le framework de test PHPUnit :
 
     $ composer require --dev phpunit/phpunit ^7
 
-En considérons que notre namespace est `MyCompany\App` on devrait avoir ceci dans notre composer.json :
+En considérant que notre namespace est `MyCompany\App` on devrait avoir ceci dans notre composer.json :
 
 ```
 {
@@ -115,7 +115,7 @@ class Post
 ### Dépendances
 
 Considérons que nous avons les deux interfaces suivantes permettant d'accéder aux articles
-et aux nombres de commentaires par articles.
+et au nombre de commentaires par articles.
 
 `PostRepository`:
 
@@ -153,7 +153,7 @@ interface CommentRepository
 ### La plomberie
 
 Créons une classe `PostView` qu'on appelle communément un DTO (data transfer object), un objet de transfert de données
-qui ne doit comporter aucune logique métier :
+qui ne doit comporter aucune logique métier, donc que des valeurs :
 
 {{< highlight php >}}
 <?php
@@ -182,7 +182,7 @@ final class PostView
 
 ## Le service à tester
 
-Créons notre service `GetPostsList` qui ne fait en réalité qu'une seule chose, une seule méthode publique, l'`_invoke` :
+Créons notre service `GetPostsList` qui ne fait en réalité qu'une seule chose, une seule méthode publique, `_invoke` :
 
 {{< highlight php >}}
 <?php
@@ -200,7 +200,7 @@ final class GetPostsList
 
 ### Les enfants et les tests d'abord !
 
-Créons maintenant un test de `GetPostsList` qui est censé nous envoyé deux articles, l'un marqué nouveau, l'autre non. 
+Créons maintenant un test de `GetPostsList` qui est censé nous envoyer deux articles, l'un marqué nouveau, l'autre non. 
 
 Dans : `tests/Post/GetPostsListTest.php` :
 
@@ -251,7 +251,7 @@ Bien sûr, cela échoue :
 Mais pas de panique. Au contraire, faire échouer les tests est la 1ère étape en TDD !
 
 Complétons le test en faisant un *mock* de chaque dépendance.
-Le *mock* nous permet de s'affranchir de l'implémentation de la dépendance et de décider ce que celle-ci renvoit comme
+Le *mock* nous permet de s'affranchir de l'implémentation de la dépendance et de décider ce que celle-ci renvoie comme
 données.
 
 {{< highlight php >}}
