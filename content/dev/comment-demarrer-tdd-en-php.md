@@ -18,7 +18,7 @@ author_username:    "rhanna"
 
 **Test Driven Development** ou le développement guidé par les tests, n'est clairement pas une méthode triviale.
 N'ayez pas honte de ne pas savoir par où commencer.
-Beaucoup de personne parlent de « déclic » lorsqu'il s'agit d'appréhender le TDD.
+Beaucoup de personnes parlent de « déclic » lorsqu'il s'agit d'appréhender le TDD.
 L'ambition de cet article est d'essayer de créer ce déclic.
 
 ## Pourquoi faire du *Test Driven Development*
@@ -28,7 +28,7 @@ On trouve pléthore de littérature à ce sujet et voici selon nous les avantage
 - tester les différents cas de figure,
 - le plus souvent les tests s'appuient sur les spécifications et cela permet donc de conserver la documentation dans le code (*live documentation*),
 - permet de mieux découper le code (notion de *clean code*),
-- poser une première implémentation puis optimiser ou/et refactoriser et à chaque fois le valider grâce aux tests,
+- poser une première implémentation puis optimiser ou/et refactoriser et à chaque fois la valider grâce aux tests,
 - gain de temps en validant l'implémentation via la console sans passer par les tests dans le navigateur.
 
 <img src="https://media.giphy.com/media/iKbUlFbs77oI0/giphy.gif" />
@@ -79,7 +79,7 @@ Si un article a été publié il y a moins d'une semaine, le titre de l'article 
 Les articles sont stockés quelque part, en base de données, fichiers, peu importe...
 Il me faut donc un service qui récupère les données puis les prépare pour être affichées.
 On va considérer que :
-- le service pour récupérer les données existent déjà.
+- le service pour récupérer les données existe déjà.
 - l'affichage sera géré par autre chose, le controlleur et le templating de notre application généralement.
 
 On va uniquement se focaliser pour cet exemple sur un service qui va préparer les données souhaitées.
@@ -346,9 +346,9 @@ Enfin, lançons les tests :
     
 > OK (1 test, 4 assertions)
 
-### Le temps n'attends pas
+### Le temps n'attend pas
 
-Attention, il y a un piège. Désolé mais ce test ne fonctionnera plus dans quelques jour.
+Attention, il y a un piège. Désolé mais ce test ne fonctionnera plus dans quelques jours.
 Pourquoi ?
 Nous avons une comparaison avec la date "système" dans l'implémentation (`new \DateTime`)
 alors que les dates sont fixes dans les tests.
