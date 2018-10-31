@@ -153,7 +153,7 @@ interface CommentRepository
 ### La plomberie
 
 Créons une classe `PostView` qu'on appelle communément un DTO (data transfer object), un objet de transfert de données
-qui ne doit comporter aucune logique métier, donc que des valeurs :
+qui ne contient aucun comportement, que des valeurs :
 
 {{< highlight php >}}
 <?php
