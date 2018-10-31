@@ -6,6 +6,7 @@ publishdate:        "2018-10-30"
 draft:              false
 slug:               "comment-demarrer-tdd-en-php"
 description:        "Test Driven Development c'est bien mais comment commencer à en faire ?"
+summary:            true
 
 thumbnail:          "/images/posts/headers/tdd.jpg"
 header_img:         "/images/posts/headers/tdd.jpg"
@@ -20,7 +21,7 @@ N'ayez pas honte de ne pas savoir par où commencer.
 Beaucoup de personne parlent de « déclic » lorsqu'il s'agit d'appréhender le TDD.
 L'ambition de cet article est d'essayer de créer ce déclic.
 
-# Pourquoi faire du *Test Driven Development*
+## Pourquoi faire du *Test Driven Development*
 
 On trouve pléthore de littérature à ce sujet et voici selon nous les avantages à faire du TDD en vrac :
 
@@ -32,7 +33,7 @@ On trouve pléthore de littérature à ce sujet et voici selon nous les avantage
 
 <img src="https://media.giphy.com/media/iKbUlFbs77oI0/giphy.gif" />
 
-# Outillage
+## Outillage
 
 Installons le framework de test PHPUnit :
 
@@ -66,14 +67,14 @@ Nous devrions avoir quelque chose comme ça :
 
 > No tests executed!
 
-# Notre exemple
+## Notre exemple
 
 Imaginons que nous intervenons sur un blog.
 Les utilisateurs de ce blog ont besoin de voir la liste des articles.
 Pour chaque article, on voit un titre et le nombre de commentaires laissés.
 Si un article a été publié il y a moins d'une semaine, le titre de l'article contient "Nouveau !" en préfixe.
 
-## Hypothèses
+### Hypothèses
 
 Les articles sont stockés quelque part, en base de données, fichiers, peu importe...
 Il me faut donc un service qui récupère les données puis les prépare pour être affichées.
@@ -83,7 +84,73 @@ On va considérer que :
 
 On va uniquement se focaliser pour cet exemple sur un service qui va préparer les données souhaitées.
 
-## Plomberie
+Imaginer quelle est la plus petite entité logique à tester et faire cet effort de réflexion est finalement la
+premère étape en TDD. 
+
+### Entité
+
+Nous allons uniquement utiliser l'entité suivante `Post` représentant un article du blog :
+
+{{< highlight php >}}
+<?php
+
+namespace MyCompany\App\Post;
+
+class Post
+{
+    /** @var string */
+    public $title;
+
+    /** @var \DateTime */
+    public $publishedAt;
+
+    public function __construct(string $title, \DateTime $publishedAt)
+    {
+        $this->title = $title;
+        $this->publishedAt = $publishedAt;
+    }
+}
+{{< /highlight >}}
+
+### Dépendances
+
+Considérons que nous avons les deux interfaces suivantes permettant d'accéder aux articles
+et aux nombres de commentaires par articles.
+
+`PostRepository`:
+
+{{< highlight php >}}
+<?php
+
+namespace MyCompany\App\Repository;
+
+use MyCompany\App\Post\Post;
+
+interface PostRepository
+{
+    /**
+     * @return Post[]
+     */
+    public function getAll(): array;
+}
+{{< /highlight >}}
+
+`CommentRepository`:
+
+{{< highlight php >}}
+<?php
+
+namespace MyCompany\App\Repository;
+
+use MyCompany\App\Post\Post;
+
+interface CommentRepository
+{
+    public function countByPost(Post $post): int;
+}
+{{< /highlight >}}
+
+### La plomberie
 
 Créons une classe `PostView` qu'on appelle communément un DTO (data transfer object), un objet de transfert de données
 qui ne doit comporter aucune logique métier :
@@ -131,7 +198,7 @@ final class GetPostsList
 }
 {{< /highlight >}}
 
-## Les enfants et les tests d'abord !
+### Les enfants et les tests d'abord !
 
 Créons maintenant un test de `GetPostsList` qui est censé nous envoyé deux articles, l'un marqué nouveau, l'autre non. 
 
@@ -183,45 +250,7 @@ Bien sûr, cela échoue :
 
 Mais pas de panique. Au contraire, faire échouer les tests est la 1ère étape en TDD !
 
-## Dépendances
-
-Considérons que nous avons les deux interfaces suivantes permettant d'accéder aux articles
-et aux nombres de commentaires par articles.
-
-`PostRepository`:
-
-{{< highlight php >}}
-<?php
-
-namespace MyCompany\App\Repository;
-
-use MyCompany\App\Post\Post;
-
-interface PostRepository
-{
-    /**
-     * @return Post[]
-     */
-    public function getAll(): array;
-}
-{{< /highlight >}}
-
-`CommentRepository`:
-
-{{< highlight php >}}
-<?php
-
-namespace MyCompany\App\Repository;
-
-use MyCompany\App\Post\Post;
-
-interface CommentRepository
-{
-    public function countByPost(Post $post): int;
-}
-{{< /highlight >}}
-
-Maintenant que nous savons comment récupérer les données, complétons le test en faisant un *mock* de chaque dépendance.
+Complétons le test en faisant un *mock* de chaque dépendance.
 Le *mock* nous permet de s'affranchir de l'implémentation de la dépendance et de décider ce que celle-ci renvoit comme
 données.
 
@@ -266,7 +295,7 @@ class GetPostsListTest extends TestCase
 }
 {{< /highlight >}}
 
-## Enfin, l'implémentation
+### Enfin, l'implémentation
 
 Nous avons tout ce qu'il faut pour implémenter notre code :
 
@@ -317,7 +346,7 @@ Enfin, lançons les tests :
     
 > OK (1 test, 4 assertions)
 
-## Le temps n'attends pas
+### Le temps n'attends pas
 
 Attention, il y a un piège. Désolé mais ce test ne fonctionnera plus dans quelques jour.
 Pourquoi ?
