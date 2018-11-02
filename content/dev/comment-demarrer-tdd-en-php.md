@@ -203,7 +203,7 @@ final class GetPostsList
 ### Les enfants et les tests d'abord !
 
 Créons maintenant un test de `GetPostsList` qui est censé nous envoyer deux articles, l'un marqué nouveau, l'autre non.
-Il est important de tester tous les cas. Cela tombe bien, notre besoin est simple, on n'a que deux cas.
+Il est important de tester tous les cas. Cela tombe bien, notre besoin est simple, on a que deux cas.
 
 Dans : `tests/Post/GetPostsListTest.php` :
 
