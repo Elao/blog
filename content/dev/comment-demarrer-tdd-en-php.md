@@ -78,9 +78,11 @@ Si un article a été publié il y a moins d'une semaine, le titre de l'article 
 
 Les articles sont stockés quelque part, en base de données, fichiers, peu importe...
 Il me faut donc un service qui récupère les données puis les prépare pour être affichées.
+
 On va considérer que :
-- le service pour récupérer les données existe déjà.
-- l'affichage sera géré par autre chose, le controlleur et le templating de notre application généralement.
+
+- le ou les services pour récupérer les données existent déjà,
+- l'affichage sera géré par autre chose, par le *controller* et le *templating* de notre application.
 
 On va uniquement se focaliser pour cet exemple sur un service qui va préparer les données souhaitées.
 
@@ -200,7 +202,8 @@ final class GetPostsList
 
 ### Les enfants et les tests d'abord !
 
-Créons maintenant un test de `GetPostsList` qui est censé nous envoyer deux articles, l'un marqué nouveau, l'autre non. 
+Créons maintenant un test de `GetPostsList` qui est censé nous envoyer deux articles, l'un marqué nouveau, l'autre non.
+Il est important de tester tous les cas. Cela tombe bien, notre besoin est simple, on n'a que deux cas.
 
 Dans : `tests/Post/GetPostsListTest.php` :
 
@@ -271,7 +274,7 @@ class GetPostsListTest extends TestCase
     public function test_get_new_and_old_posts()
     {
         $post1 = new Post('TDD c\'est bien', new \DateTime('2018-10-29'));
-        $post2 = new Post('Tester c\'est douter', new \DateTime('2018-10-01'));
+        $post2 = new Post('Tester ce n\'est pas douter', new \DateTime('2018-10-01'));
 
         // mock of PostRepository interface
         $postRepository = $this->prophesize(PostRepository::class);
@@ -287,7 +290,7 @@ class GetPostsListTest extends TestCase
         $this->assertEquals(
             [
                 new PostView('TDD c\'est bien', 42, true),
-                new PostView('Tester c\'est douter', 1, false),
+                new PostView('Tester ce n\'est pas douter', 1, false),
             ],
             $getPostsList()
         );
