@@ -8,8 +8,8 @@ slug:           "commander-au-clavier-app-symfony-grace-au-routing"
 description:    "Comment ajouter à une application Symfony une UI différente, une interface de commande par texte avec autocompletion."
 summary:        true
 
-thumbnail:      "/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/anthony-martino-335460-unsplash.jpg"
-header_img:     "/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/anthony-martino-335460-unsplash.jpg"
+thumbnail:      "/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/thumbnail.jpg"
+header_img:     "/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/header.jpg"
 tags:           ["Symfony", "Routing", "UX"]
 categories:     ["dev", "Symfony"]
 
@@ -595,8 +595,7 @@ Le support de l'API SpeechRecognition est très limité pour l'instant :
     <img src="/images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/caniuse-speech-recognition.png" alt="Can I Use SpeechRecognition" />
 </p>
 
-Démo ici : https://www.google.com/intl/en/chrome/demos/speech.html (à tester avec Chrome seulement au jour où cet
-article a été écrit).
+[Démo ici](https://www.google.com/intl/en/chrome/demos/speech.html) (à tester avec Chrome seulement au jour où cet article a été écrit).
 
 C'est une technologie assez promoteuse. A suivre donc !
 
