@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/forumphp2018-team.jpeg"
 tags:               ["Développement", "Web", "afup", "Conférence", "ForumPHP"]
 categories:         ["conference"]
 author_username:    "elao"
-co_authors:         ["aldeboissieu"]
+co_authors:         ["rhanna", "aldeboissieu"]
 ---
 
 Cette année, le Forum PHP s'est achevé sur l'annonce d'un nouvel évènement organisé par l'AFUP : les [Afup Days](https://event.afup.org/), qui auront lieu simultanément à Lille, Lyon et Rennes.
@@ -64,3 +64,8 @@ Richard nous a montré comment y parvenir et, en plus, accéder aux paramètres.
 Et si les vacances démarraient en bas de chez vous, devant votre portail, avec un vélo et deux sacoches ? 
 C'est ce dont nous a parlé Thomas, qui nous montré que la rando vélo est accessible à tous et permet de découvrir des paysages insoupçonnés de l'Hexagone !
 
+## Pour conclure
+
+L'organisation était au top et les conférences étaient de bon niveau. 
+Seul regret : la taille de la seconde salle, plus réduite, nous a parfois empêché d'assister à la conférence de notre choix.
+Nos prochains RDV : <a href="https://event.afup.org/" target="_blank">Afup Day</a> le 17 mai (Lyon, Rennes et Lille), et <a href="https://mixitconf.org/" target="_blank">MiXiT</a> à Lyon les 23 & 24 mai 2019 !
