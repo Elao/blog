@@ -47,7 +47,7 @@ Retour d'expérience très intéressant sur le passage à docker en prod d'une a
 ## Les conférences sur lesquelles on est pas très objectifs puisque nos collègues les ont données 😘
 - [Voyage au centre du cerveau humain ou comment manipuler des données binaires en JavaScript](https://www.youtube.com/watch?v=LuCXFhaRXcw) par Thomas Jarrand
 
-Thomas, développeur chez Elao, a partagé un retour d'expérience d'un projet hors du commun : charger un IRM dans le navigateur, pour les besoins d'une Université. 
+Thomas, développeur chez Elao, a partagé un retour d'expérience : charger un IRM dans le navigateur, pour les besoins d'une Université. 
 Tout en apportant des éléments concrets et une démo béton, Thomas a conquis son auditoire par son humour hors du commun 🤓
 
 - [Mentorat & parcours de reconversion : comment faciliter l'apprentissage](https://www.youtube.com/watch?v=gW_TJ7kAu78) par Éric Daspet & Anne-Laure de Boissieu
@@ -66,6 +66,5 @@ C'est ce dont nous a parlé Thomas, qui nous montré que la rando vélo est acce
 
 ## Pour conclure
 
-L'organisation était au top et les conférences étaient de bon niveau. 
-Seul regret : la taille de la seconde salle, plus réduite, nous a parfois empêché d'assister à la conférence de notre choix.
-Nos prochains RDV : <a href="https://event.afup.org/" target="_blank">Afup Day</a> le 17 mai (Lyon, Rennes et Lille), et <a href="https://mixitconf.org/" target="_blank">MiXiT</a> à Lyon les 23 & 24 mai 2019 !
+L'organisation était au top et les conférences de très bon niveau. Que demander de plus ? Ah oui, passer un moment agréable en retrouvant des connaissances ou en rencontrant de nouveaux pairs. Mission accomplie !
+Nos prochains RDV (et on trépigne d'avance) : <a href="https://event.afup.org/" target="_blank">Afup Day</a> le 17 mai (Lyon, Rennes et Lille), et <a href="https://mixitconf.org/" target="_blank">MiXiT</a> à Lyon les 23 & 24 mai 2019 !
