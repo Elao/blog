@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/forumphp2018-team.jpeg"
 tags:               ["Développement", "Web", "afup", "Conférence", "ForumPHP"]
 categories:         ["conference"]
 author_username:    "elao"
-co_authors:         ["rhanna", "tjarrand", "aldeboissieu"]
+co_authors:         ["rhanna", "tjarrand", "aldeboissieu", "ndievart"]
 ---
 
 Cette année, le Forum PHP s'est achevé sur l'annonce d'un nouvel évènement organisé par l'AFUP : les [Afup Days](https://event.afup.org/), qui auront lieu simultanément à Lille, Lyon et Rennes.
@@ -36,7 +36,10 @@ Ou comment les patrons de conception Adapter, EventDispatcher et Decorator sont 
 
 - <a href="https://www.youtube.com/watch?v=7TvIIt4c8uY" target="_blank">Générateurs et Programmation Asynchrone</a> par Benoît Viguier
 
-Oui, on peut faire de l'asynchrone en PHP, et cela peut s'avérer très pratique.
+Oui, on peut faire de l'asynchrone en PHP, et cela peut s'avérer très pratique. Benoît et l'équipe tech de M6 Web ont open-sourcé une librairie pour simplifier l'utilisation de l'asynchrone et l'écriture des tests en PHP: [Tornado](https://github.com/M6Web/Tornado).
+
+Si vous voulez en savoir plus, vous pouvez retrouver l'épisode du [podcast écho](https://twitter.com/podcastecho) qui lui est consacré&nbsp;:
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/532349232&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
 
 ## Nous avons aimé les retours d'expérience
 
@@ -58,9 +61,11 @@ En d'autres termes : pourquoi s'en priver ?
 
 - <a href="https://www.youtube.com/watch?v=i4LTeeDZaJg" target="_blank">Développeurs de jeux vidéo : les rois de la combine</a> par Laurent Victorino
 
-Au gré d'anecdotes sur de célèbres jeux vidéo, Laurent (des studios [Monkey Moon](http://monkeymoon.net/)) nous a montré que les développeurs sont de parfaits magiciens capables de transformer bugs et contraintes techniques en irrésistibles features. 
+Au gré d'anecdotes sur de célèbres jeux vidéo, Laurent (des studios [Monkey Moon](http://monkeymoon.net/)) nous a montré que les développeurs sont de parfaits magiciens capables de transformer bugs et contraintes techniques en irrésistibles features.
 Bref, on a adoré en apprendre plus sur ces combines ... et nous faire mener en bateau par le conférencier lui-même.
 
+Laurent s'est preté aux questions de Richard pour un épisode du [podcast écho](https://twitter.com/podcastecho) sur le métier de développeur de jeux vidéo indépendant, si vous voulez le découvrir :
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/525153006&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
 
 ## Les conférences sur lesquelles on est pas très objectifs puisque nos collègues les ont données 😘
 - <a href="https://www.youtube.com/watch?v=LuCXFhaRXcw" target="_blank">Voyage au centre du cerveau humain ou comment manipuler des données binaires en JavaScript</a> par Thomas Jarrand
@@ -71,6 +76,9 @@ Tout en apportant des éléments concrets et une démo béton, Thomas a conquis 
 - <a href="https://www.youtube.com/watch?v=gW_TJ7kAu78" target="_blank">Mentorat & parcours de reconversion : comment faciliter l'apprentissage ?</a> par Éric Daspet & Anne-Laure de Boissieu
 
 Retour d'expérience sur plus d'un an et demi de mentorat. Concrètement, qu'est-ce que cela représente de mentorer, et qu'est-ce que cela peut vous apporter ?
+
+Anne-Laure et Éric ont également profité du Forum PHP pour enregistrer un épisode du podcast écho où ils reviennent sur ce sujet, vous pouvez le retrouver ici :
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/528315084&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
 
 - Lightning-talk : <a href="https://www.youtube.com/watch?v=9tnkySxEoKA&feature=youtu.be&t=366" target="_blank">Comment commander une application par le texte</a> par Richard Hanna
 
