@@ -1,0 +1,19 @@
+en:
+  display_name: Anne-Laure de Boissieu
+  short_bio:    "Développeuse Symfony, book and movie lover."
+  long_bio:     "Développeuse Symfony, book and movie lover."
+  job_title":   "Développeuse Symfony"
+
+fr:
+  display_name: Anne-Laure de Boissieu
+  short_bio:    "Développeuse Symfony, amatrice de livres et de films."
+  long_bio:     "Développeuse Symfony, amatrice de livres et de films."
+  job_title":   "Développeuse Symfony"
+
+social:
+  website:         http://www.elao.com
+  twitter:         AnneLaure2B
+  github:          al2b
+  email:           al.deboissieu@elao.com
+  avatar:          authors/aldeboissieu.jpg
+  google_plus_id:  ~
