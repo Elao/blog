@@ -19,15 +19,15 @@ Cette année, le Forum PHP s'est achevé sur l'annonce d'un nouvel évènement o
 En attendant le 17 mai et la publication prochaine du programme, revenons sur le Forum PHP où une partie de l'équipe d'Elao s'est rendue.
 
 ## Nous avons aimé revenir aux fondamentaux
-- <a href="https://www.youtube.com/watch?v=v3IPU3F_0JIY" target="_blank">Beyond design patterns and principles - writing good oo code]</a> par Matthias Noback
+- <a href="https://www.youtube.com/watch?v=v3IPU3F_0JIY" target="_blank">Beyond design patterns and principles - writing good oo code</a> par Matthias Noback
 
 
-Ces rappels (ou découvertes pour certains) de l'utilisation de l'objet dans son code permet de revenir aux fondamentaux et d'ouvrir de nouvelles perspectives.
+Ces rappels (ou découvertes pour certains) de l'utilisation de l'objet dans son code permettent de revenir aux fondamentaux et d'ouvrir de nouvelles perspectives.
 
 - Cessons les estimations par Frédéric Leguedois
 
 Cette conférence nous a permis de questionner nos approches de l'agilité : les estimations sont-elles fiables ? Est-il vraiment possible de compter dessus ?
-SCRUM est-elle vraiment une méthodologie agile? Autant de questions nécessaires pour réfléchir sur nos organisations au sein d'équipe de développement.
+SCRUM est-elle vraiment une méthodologie agile ? Autant de questions nécessaires pour réfléchir sur nos organisations au sein d'équipes de développement.
 Au fait, [on en avait déjà parlé !](https://blog.elao.com/fr/elao/mixit-2018/#cessons-les-estimations)
 
 - <a href="https://www.youtube.com/watch?v=aXq05_mdCqE" target="_blank">Comment j’ai commencé à aimer ce qu’ils appellent « design pattern »</a> par Samuel Roze
@@ -45,15 +45,15 @@ Si vous voulez en savoir plus, vous pouvez retrouver l'épisode du [podcast éch
 
 - <a href="https://www.youtube.com/watch?v=Cq1sR005B2E" target="_blank">Docker en prod ? Oui, avec Kubernetes !</a> par Pascal Martin
 
-Retour d'expérience très intéressant sur le passage à docker en prod d'une application à fort trafic (M6 Web).
+Retour d'expérience très intéressant sur le passage à Docker en prod d'une application à fort trafic (M6 Web).
 
-- <a href="https://www.youtube.com/watch?v=av9Z7NqMxFs" target="_blank">Boostez vos applications avec HTTP2]</a> par Kevin Dunglas
+- <a href="https://www.youtube.com/watch?v=av9Z7NqMxFs" target="_blank">Boostez vos applications avec HTTP2</a> par Kevin Dunglas
 
-Vous n'êtes pas encore passé au protocol HTTP2 sur vos application ? Kevin nous a convaincu en quelques simples arguments de faire la migration :
+Vous n'êtes pas encore passés au protocol HTTP2 sur vos applications ? Kevin nous a convaincus de faire la migration en quelques arguments simples :
 
-Activez-le une ligne dans NGINX: `listen 443 ssl http2;`, c'est sans impact sur vos applications PHP et vous bénéficiez d'emblée un gain de performance de l'ordre de x2 sur le temps de vos requêtes HTTP.
+Activez-le en une ligne dans NGINX: `listen 443 ssl http2;`, c'est sans impact sur vos applications PHP et vous bénéficiez d'emblée d'un gain de performance de l'ordre de x2 sur le temps de vos requêtes HTTP.
 
-En plus de ça, vous serez prêt à utiliser les nouvelles fonctionnalités HTTP2 comme le `server_push` et le nouveau composant Symfony qui lui est dédié : [Mercure](https://github.com/symfony/mercure) !
+En plus de ça, vous serez prêts à utiliser les nouvelles fonctionnalités HTTP2 comme le `server_push` et le nouveau composant Symfony qui lui est dédié : [Mercure](https://github.com/symfony/mercure) !
 
 En d'autres termes : pourquoi s'en priver ?
 
@@ -67,10 +67,10 @@ Bref, on a adoré en apprendre plus sur ces combines ... et nous faire mener en 
 Laurent s'est preté aux questions de Richard pour un épisode du [podcast écho](https://twitter.com/podcastecho) sur le métier de développeur de jeux vidéo indépendant, si vous voulez le découvrir :
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/525153006&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
 
-## Les conférences sur lesquelles on est pas très objectifs puisque nos collègues les ont données 😘
+## Les conférences sur lesquelles on n'est pas très objectifs puisque nos collègues les ont données 😘
 - <a href="https://www.youtube.com/watch?v=LuCXFhaRXcw" target="_blank">Voyage au centre du cerveau humain ou comment manipuler des données binaires en JavaScript</a> par Thomas Jarrand
 
-Thomas, développeur chez Elao, a partagé un retour d'expérience : charger un IRM dans le navigateur, pour les besoins d'une Université.
+Thomas, développeur chez Elao, a partagé un retour d'expérience : charger une IRM dans le navigateur, pour les besoins d'une Université.
 Tout en apportant des éléments concrets et une démo béton, Thomas a conquis son auditoire par son humour hors du commun 🤓
 
 - <a href="https://www.youtube.com/watch?v=gW_TJ7kAu78" target="_blank">Mentorat & parcours de reconversion : comment faciliter l'apprentissage ?</a> par Éric Daspet & Anne-Laure de Boissieu
@@ -88,7 +88,7 @@ Richard nous a montré comment y parvenir et, en plus, accéder aux paramètres.
 - Lightning-talk : <a href="https://www.youtube.com/watch?v=9tnkySxEoKA&feature=youtu.be&t=366" target="_blank">La randonnée à vélo 🚲</a> par Thomas Jarrand
 
 Et si les vacances démarraient en bas de chez vous, devant votre portail, avec un vélo et deux sacoches ?
-C'est ce dont nous a parlé Thomas, qui nous montré que la rando vélo est accessible à tous et permet de découvrir des paysages insoupçonnés de l'Hexagone !
+C'est ce dont nous a parlé Thomas, qui nous a montré que la rando vélo est accessible à tous et permet de découvrir des paysages insoupçonnés de l'Hexagone !
 
 ## Pour conclure
 
