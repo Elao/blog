@@ -21,22 +21,22 @@ Et bien chez nous, à élao, depuis quelques années on est passé aux environne
 
 ## Qu'est-ce qu'un environnement de développement virtuel ?
 
-C'est une machine virtuelle (que nous appellerons simple VM) qui tourne sur mon ordinateur et dans laquelle vit mon application.
+C'est une machine virtuelle (que nous appellerons simplement VM) qui tourne sur mon ordinateur et dans laquelle vit mon application.
 
-L'idée c'est d'avoir tout l'environnement de mon application (version de PHP, configuration Nginx, package node ou extensions PHP particulières) installé, configuré et fonctionnel dans cette VM et ce de manière __automatique__ (c'est à dire au lancement d'une simple commande, sans intervention manuelle).
+L'idée c'est d'avoir tout l'environnement de mon application (version de PHP, configuration Nginx, packages Node ou extensions PHP particulières) installé, configuré et fonctionnel dans cette VM et ce de manière __automatique__ (c'est à dire au lancement d'une simple commande, sans intervention manuelle).
 
 ## Les avantages de la machine virtuelle
 
 - (Re)monter et supprimer un projet sans effort sur ma machine à l'aide d'une seule commande.
 - Partager le même environnement au sein d'une équipe projet.
-- Développer dans des conditions et dans un contexte proche de la prod (même moteur de base de donnée, même version de PHP, etc.).
+- Développer dans des conditions et dans un contexte proches de la prod (même moteur de base de données, même version de PHP, etc.).
 - Accéder au projet localement derrière une url intelligible. Ex : http://monprojet.vm
-- Pouvoir faire tourner plusieurs projets dépendants de différentes version de PHP sur sa machine.
+- Pouvoir faire tourner plusieurs projets dépendant de différentes versions de PHP sur sa machine.
 - Versionner tout ce contexte projet au même titre que son code source.
 
 ## Manalizer son projet
 
-Et pour faire ça nous utilisons __[Manala](http://www.manala.io/)__, un outils petit et puissant qui permet de décrire l'environnement de notre projet sous la forme d'une configuration texte, puis de monter et lancer une VM selon cette recette.
+Et pour faire ça nous utilisons __[Manala](http://www.manala.io/)__, un outil petit et puissant qui permet de décrire l'environnement de notre projet sous la forme d'une configuration texte, puis de monter et lancer une VM selon cette recette.
 
 ### Pré-requis
 
@@ -59,17 +59,17 @@ Puis créer un environnement virtuel Manala pour cette application :
 
 `manalize setup .`
 
-À travers son outils de setup interactif, Manala me demande de faire un certain nombre de choix concernant les technologies nécessaires au fonctionnement de mon projet à intégrer dans la VM.
+À travers son outil de setup interactif, Manala me demande de faire un certain nombre de choix concernant les technologies nécessaires au fonctionnement de mon projet à intégrer dans la VM.
 
-Puisque nous travaillons beaucoup avec Symfony chez élao, Manala propose une pré-configuration adaptée aux projets Symfony, embarquant entre autre PHP et Mysql. C'est ce que j'utiliserai ici :
+Puisque nous travaillons beaucoup avec Symfony chez élao, Manala propose une pré-configuration adaptée aux projets Symfony, embarquant entre autres PHP et Mysql. C'est ce que j'utiliserai ici :
 
 ![](/images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/setup.png)
 
 _💡 Qu'est-ce qui est créé ?_
 
-- `Vangrantfile` : Décris les propriétés de la machine virtuelle pour Vagrant.
-- `ansible/.manalize.yml` : Fichier de configuration Manala persistant les choix fait lors du setup interactif, à partir duquel sont générés les fichiers de configuration Ansible.
-- `ansible/*.yml` : Fichiers de configuration Ansible configurant le système de fichier de la VM, Nginx, PHP et toutes technologie nécessaire au fonctionnement du projet.
+- `Vangrantfile` : Décrit les propriétés de la machine virtuelle pour Vagrant.
+- `ansible/.manalize.yml` : Fichier de configuration Manala persistant les choix faits lors du setup interactif, à partir duquel sont générés les fichiers de configuration Ansible.
+- `ansible/*.yml` : Fichiers de configuration Ansible configurant le système de fichiers de la VM, Nginx, PHP et toute technologie nécessaire au fonctionnement du projet.
 - `Makefile` : Liste de commandes Make servant à piloter la VM et le projet depuis la console.
 
 _💡 Note :_ Ces fichiers font maintenant partie du code source du projet et seront versionnés et publiés dans Git. Ils pourront également évoluer et s'étoffer au fur et à mesure de la vie du projet.
@@ -78,7 +78,7 @@ _💡 Note :_ Ces fichiers font maintenant partie du code source du projet et se
 
 #### Créer la VM
 
-Lorsque je viens de mettre en place Manala sur mon projet, ou bien lorsque je clone un projet existant, utilisant déjà Manala, sur ma machine; je dois d'abord créer la machine virtuelle :
+Lorsque je viens de mettre en place Manala sur mon projet, ou bien lorsque je clone un projet existant, utilisant déjà Manala, sur ma machine hôte; je dois d'abord créer la machine virtuelle :
 
 `make setup`
 
@@ -98,7 +98,7 @@ Mission accomplie ! 🎉
 
 Mon projet ne tourne pas localement sur mon poste, mais dans une machine virtuelle (c'était le but).
 
-C'est pourquoi, pour accéder à des fonctions internes comme la console Symfony, je vais devoir lancer `bin/console` _dans_ la VM; afin que le script s'execute dans le contexte de la VM, avec sa version de PHP et son système de fichier.
+C'est pourquoi, pour accéder à des fonctions internes comme la console Symfony, je vais devoir lancer `bin/console` _dans_ la VM; afin que le script s'execute dans le contexte de la VM, avec sa version de PHP et son système de fichiers.
 
 Pour cela, je me connecte en SSH à la VM (comme je le ferais à un serveur web distant hébergeant mon application), grâce à la commande suivante fournie par vagrant :
 
@@ -108,11 +108,11 @@ Une fois connecté, je suis dans le répertoire de mon application et peux accé
 
 ![](/images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/symfony_cli_in_vm.png)
 
-_💡 Notez le chemin du répertoire courant :_ je suis dans le système de fichier de la VM, plus sur ma machine !
+_💡 Notez le chemin du répertoire courant :_ je suis dans le système de fichiers de la VM, plus sur ma machine !
 
 ## Le tester, c'est l'adopter !
 
-Nous utilisons [Manala](http://manala.io) depuis plusieurs années pour nos environnement de développement, l'outils est maintenant mature et stable.
+Nous utilisons [Manala](http://manala.io) depuis plusieurs années pour nos environnements de développement, l'outil est maintenant mature et stable.
 
 Il est également totalement open-source, disponible et utilisable par tous.
 
