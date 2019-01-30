@@ -121,7 +121,7 @@ Pourquoi ne pas tester un petit `manalize setup .` dès maintenant et voir votre
 
 ## Une dernière chose ...
 
-En 2019, une nouvelle version de Manala arrive, encore plus souple.
+En 2019, une nouvelle mouture de `manalize` devrait pointer le bout de son nez, encore plus cool !
 Mais ça fera l'objet d'un prochain article. 😉
 
 ---
