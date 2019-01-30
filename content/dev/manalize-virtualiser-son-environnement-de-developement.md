@@ -48,9 +48,9 @@ Puis installez l'outil en ligne de commande dédié : [manalize](https://github.
 
 Pour l'exemple, je vais créer un nouveau projet [Symfony](https://symfony.com/download) vide avec :
 
-`symfony new --full manalize_me`
+`symfony new --full acme`
 
-`cd manalize_me`
+`cd acme`
 
 ![](/images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/empty_symfony_projetc.png)
 ![](/images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/empty_symfony_projetc_browser.png)
