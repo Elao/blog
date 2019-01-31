@@ -40,9 +40,24 @@ Et pour faire ça nous utilisons __[Manala](http://www.manala.io/)__, un outil p
 
 ### Pré-requis
 
-Manala s'appuie sur _Vagrant_ et _VirtualBox_ pour créer des machines virtuelles et sur _Ansible_ pour les configurer. Veillez à installer d'abord tout les [pré-requis](https://github.com/manala/manalize#prerequisites) sur votre ordinateur.
+Tout d'abord, installons l'outil de configuration en ligne de commande dédié : __manalize__
 
-Puis installez l'outil en ligne de commande dédié : [manalize](https://github.com/manala/manalize#installation)
+```
+curl -LSs https://raw.githubusercontent.com/manala/manalize/master/installer.php | php
+```
+
+_💡 Note :_ il est aussi possible de [l'installer via git ou composer](https://github.com/manala/manalize#installation).
+
+Ensuite, Manala s'appuie sur _Vagrant_ et _VirtualBox_ pour créer des machines virtuelles et sur _Ansible_ pour les configurer. Il nous faudra donc [installer sur notre ordinateur tous ces pré-requis](https://github.com/manala/manalize#prerequisites) :
+
+- [PHP](http://php.net)
+- [Vagrant](https://www.vagrantup.com/)
+- [Vagrant Landrush](https://github.com/vagrant-landrush/landrush)
+- [VirtualBox](https://www.virtualbox.org/)
+
+_💡 Note :_ manalize est capable de nous confirmer que tous les pré-requis sont correctement installés avec la commande `manalize check:requirements`.
+
+Et voila, nous sommes prêts à manalizer notre projet web !
 
 ### Au lancement
 
