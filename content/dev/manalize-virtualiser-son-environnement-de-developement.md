@@ -55,7 +55,11 @@ Ensuite, Manala s'appuie sur _Vagrant_ et _VirtualBox_ pour créer des machines 
 - [Vagrant Landrush](https://github.com/vagrant-landrush/landrush)
 - [VirtualBox](https://www.virtualbox.org/)
 
-_💡 Note :_ manalize est capable de nous confirmer que tous les pré-requis sont correctement installés avec la commande `manalize check:requirements`.
+_💡 Note :_ manalize est capable de nous confirmer que tous les pré-requis sont correctement installés avec la commande :
+
+```
+manalize check:requirements
+```
 
 Et voila, nous sommes prêts à manalizer notre projet web !
 
@@ -63,16 +67,19 @@ Et voila, nous sommes prêts à manalizer notre projet web !
 
 Pour l'exemple, je vais créer un nouveau projet [Symfony](https://symfony.com/download) vide avec :
 
-`symfony new --full acme`
-
-`cd acme`
+```
+symfony new --full acme
+cd acme
+```
 
 ![](/images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/empty_symfony_projetc.png)
 ![](/images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/empty_symfony_projetc_browser.png)
 
 Puis créer un environnement virtuel Manala pour cette application :
 
-`manalize setup .`
+```
+manalize setup .
+```
 
 À travers son outil de setup interactif, Manala me demande de faire un certain nombre de choix concernant les technologies nécessaires au fonctionnement de mon projet à intégrer dans la VM.
 
@@ -95,13 +102,17 @@ _💡 Note :_ Ces fichiers font maintenant partie du code source du projet et se
 
 Lorsque je viens de mettre en place Manala sur mon projet, ou bien lorsque je clone un projet existant, utilisant déjà Manala, sur ma machine hôte; je dois d'abord créer la machine virtuelle :
 
-`make setup`
+```
+make setup
+```
 
 #### Lancer la VM
 
 Ensuite, je n'aurai plus qu'a lancer cette VM à chaque fois que je démarre mon ordinateur et que je veux développer sur ce projet :
 
-`vagrant up`
+```
+vagrant up
+```
 
 Mon app est maintenant disponible à l'adresse suivante : http://acme.vm
 
@@ -117,7 +128,9 @@ C'est pourquoi, pour accéder à des fonctions internes comme la console Symfony
 
 Pour cela, je me connecte en SSH à la VM (comme je le ferais à un serveur web distant hébergeant mon application), grâce à la commande suivante fournie par vagrant :
 
-`vagrant ssh`
+```
+vagrant ssh
+```
 
 Une fois connecté, je suis dans le répertoire de mon application et peux accéder à la console Symfony :
 
