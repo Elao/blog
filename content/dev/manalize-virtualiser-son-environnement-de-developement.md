@@ -154,4 +154,4 @@ Mais ça fera l'objet d'un prochain article. 😉
 
 ---
 
-<span>Photo par <a href="https://unsplash.com/photos/zen35Y3B834?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Mark Mühlberger</a> sur <a href="/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+<span>Photo par <a href="https://unsplash.com/photos/zen35Y3B834">Mark Mühlberger</a> sur <a href="https://unsplash.com">Unsplash</a></span>
