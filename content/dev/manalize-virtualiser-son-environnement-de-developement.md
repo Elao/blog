@@ -72,8 +72,8 @@ symfony new --full acme
 cd acme
 ```
 
-![](/images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/empty_symfony_projetc.png)
-![](/images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/empty_symfony_projetc_browser.png)
+![](/images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/empty_symfony_project.png)
+![](/images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/empty_symfony_project_browser.png)
 
 Puis créer un environnement virtuel Manala pour cette application :
 
