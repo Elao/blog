@@ -3,13 +3,14 @@ type:               "post"
 title:              "Sauvez un cookie 🍪, installez Matomo !"
 date:               "2019-03-21"
 date:               "2019-03-21"
+summary:            true
 draft:              false
 slug:               "retour-experience-matomo"
 description:        "Chez Elao, nous mesurons désormais l'audience de nos propres sites grâce à Matomo. Retour d'expérience. "
 
 thumbnail:          "/images/posts/thumbnails/cool_cat.jpg"
-tags:               ["Seo"]
-categories:         ["Dev"]
+tags:               ["Seo", "RGPD", "Matomo"]
+categories:         ["Dev", "Web"]
 
 author_username:    "aldeboissieu"
 ---
@@ -34,11 +35,11 @@ Tout comme Google Analytics, Matomo permet de mieux comprendre la façon dont le
 
 Il est possible d'installer un serveur spécialement pour Matomo et d'y configurer plusieurs sites, de la même façon que fonctionne le multi-compte de Google Analytics. 
 
-Les minimum requis pour installer Matomo sont : 
+Les minima requis pour installer Matomo sont : 
 
-- Un serveur web (Apache, Nginx, etc…);
+- Un serveur web (Apache, Nginx, etc.);
 - PHP en version 5.5.9 ou plus;
-- Une base de donnée : MySQL ou MariaDB;
+- Une base de données : MySQL ou MariaDB;
 - Les extensions PHP pdo. 
 
 Faites vos choix :
@@ -52,34 +53,45 @@ Matomo indique quelques conseils pour [optimiser son infrastructure](https://mat
 
 ![Installation de Matomo](/images/posts/2019/matomo/install-matomo.png)
 
+
+
 ## Comment l'utiliser sur vos sites web ? 
 
 **Matomo fonctionne grâce à un marqueur javascript à insérer dans le header de votre site web**. Celui-ci vous est communiqué au moment de la création d'un compte pour un nouveau site. Tout comme le marqueur de Google Analytics, celui-ci est à insérer avant la fermeture de la balise ```</head>```. 
+
+
+
 ## Conformité avec la RGPD
 
-Les récents renforcements de la protection des données ne vous ont probablement pas échappés. Ainsi, dans sa documentation ["Solutions pour les cookies de mesure d'audience"](https://www.cnil.fr/fr/solutions-pour-les-cookies-de-mesure-daudience), **la CNIL détaille les obligations légales à mettre en place en matière de cookies**, dès lors qu'il y a données collectées liées à une visite. Miracle 🙌 ! **Utiliser un outil d'analyse d'audience tel que Matomo ou AT Internet (Xiti) permet de bénéficier de l'exemption du cookie**, permettant ainsi à nos visiteurs d'économiser un clic, ce qui est bon à prendre en ces temps de frénésie de bandeaux / pop-ups. 
+Les récents renforcements de la protection des données ne vous ont probablement pas échappé. Ainsi, dans sa documentation ["Solutions pour les cookies de mesure d'audience"](https://www.cnil.fr/fr/solutions-pour-les-cookies-de-mesure-daudience), **la CNIL détaille les obligations légales à mettre en place en matière de cookies**, dès lors qu'il y a données collectées liées à une visite. Miracle 🙌 ! **Utiliser un outil d'analyse d'audience tel que Matomo ou AT Internet (Xiti) permet de bénéficier de l'exemption du cookie**, permettant ainsi à nos visiteurs d'économiser un clic, ce qui est bon à prendre en ces temps de frénésie de bandeaux / pop-ups. 
 
-Les principaux points relatifs cités par la CNIL auxquels il faut être attentifs et qui peuvent être paramétrés sont les suivants :
+Les principaux points relatifs cités par la CNIL auxquels il faut être attentif et qui peuvent être paramétrés sont les suivants :
 
-- **Les deux derniers octets de l’adresse IP receuillie doivent être supprimés,** au minimum, afin s'arrêter à la seule localisation de la ville de l'internaute;
+- **Les deux derniers octets de l’adresse IP receuillie doivent être supprimés,** au minimum, afin de s'arrêter à la seule localisation de la ville de l'internaute;
 - Les cookies permettant la traçabilité des internautes et les adresses IP **ne doivent pas être conservés au-delà de 13 mois à compter de la première visite** ;
 - **les données de fréquentation brutes associant un identifiant** ne doivent pas non plus être conservées plus de 13 mois.
+
+<img src="https://media.giphy.com/media/wO9EzKpgf3pao/giphy.gif" />
 
 L'interface de Matomo permet de facilement configurer ces choix, puisqu'un menu est dédié à la vie privée, mêlant à la fois documentation et règlages. Les règlages possibles concernent : 
 
 - **L'anonymisation des données** de suivi :
-  - Nombre de bytes de l'adresse IP masqués, de 1 à 3;
+  - Nombre d'octets de l'adresse IP masqués, de 1 à 3;
   - Masquage des adresses IP;
   - Remplacement de l'identifiant utilisateur par un pseudonyme.
-- **Suppression régulière des données stockées en base** (cf le troisième points cité ci-dessus, exigé par la CNIL), en indiquant le nombre de jours. Attention, ces infos sont utilisées par Matomo pour nourrir les rapports à propos des top keywords ou top pages. Ainsi, il faut bien penser activer [l'auto-archivage des rapports](https://matomo.org/docs/setup-auto-archiving/);
+- **Suppression régulière des données stockées en base** (cf le troisième point cité ci-dessus, exigé par la CNIL), en indiquant le nombre de jours. Attention, ces infos sont utilisées par Matomo pour nourrir les rapports à propos des top keywords ou top pages. Ainsi, il faut bien penser à activer [l'auto-archivage des rapports](https://matomo.org/docs/setup-auto-archiving/);
 - Purges régulières de la base des données;
 - **Anonymisation des données trackées qui ne l'étaient pas** encore, dès lors qu'elles n'ont plus d'intérêt à être conservées. 
 
 ⚠️ : le [guide de conformité de Piwik (ancien nom de Matomo) proposé par la CNIL](https://www.cnil.fr/sites/default/files/typo/document/Configuration_piwik.pdf) ne semble plus à jour, puisqu'il pointe une modification du tag de tracking permettant d'indiquer une durée de timeout du cookie à 13 mois, alors que cette durée est désormais paramétrée par défaut, comme nous l'indique la [documentation de Matomo](https://developer.matomo.org/api-reference/tracking-javascript) (voir au paragraphe "Configuration of Tracking Cookies", pour la méthode ```setVisitorCookieTimeout```. 
 
+
+
 ## Les fonctionnalités proposées par Matomo vs Google Analytics
 
 Pour les habitués de Google Analytics, le passage à une nouvelle ergonomie n'est pas évidente. En comparant deux périodes sur l'année, nous avons déjà pu nous assurer qu'aucun visiteur n'est laissé au bord de la route : les données semblent cohérentes. 
+
+![Evolution de traffic](/images/posts/2019/matomo/Evolution-trafic-matomo.png)
 
 On retrouve les fondamentaux : 
 
@@ -89,14 +101,16 @@ On retrouve les fondamentaux :
 - **Les informations concernant le comportement des visiteurs** : les pages d'entrées, de sorties, etc.
 - **La mise en place d'objectifs** et les informations qui en résultent.
 
+![Canaux d'acquisition](/images/posts/2019/matomo/canaux-matomo.png)
+
 On peut noter quelques fonctionnalités remarquables de Matomo  :
 
-- **Matomo permet un accès facilité aux différents logs** : par exemple, on peut accéder via l'interface à la liste des visites avec toutes les informations collectées (localisation, OS, action..);
+- **Matomo permet un accès facilité aux différents logs** : par exemple, on peut accéder via l'interface à la liste des visites avec toutes les informations collectées (localisation, OS, action...);
 - Le fameux **flux de comportements des visiteurs**, bien connu des utilisateurs de Google Analytics, est également disponible;
 - Pour obtenir les entonnoirs de conversion des visiteurs vers les objectifs et étudier les fuites, il faudra souscrire à la feature *Funnels* (ou bien établir son propre entonnoir de conversion personnalisé);
 - Il est possible de **paramétrer ses écrans d'accueil en créant ses tableaux de bord personnalisés** et des gadgets;
 - Les nouveaux segments se paramètrent en composant ses propres règles par expression;
-- Un accès rapide permet d'accéder à la liste de **tous les liens sortants cliqués sur la période** (clics uniques et au total).
+- Un accès rapide permet d'accéder à la liste de **tous les liens sortants cliqués sur la période** (clic uniques et au total).
 
 Pour les personnes qui ont l'habitude de faire des campagnes adwords, il est possible de créer ses propres campagnes pour les suivre. 
 
@@ -108,7 +122,7 @@ A noter :
 
 ## Fonctionnalités payantes
 
-Utiliser les outils Google habitue à la "gratuité", mais n'oublions pas que Google tire profit des données qu'il stocke pour nous, relative à la fréquentation de nos sites. Matomo se rémunère grâce aux dons et aux fonctionnalités vendues à ses utilisateurs. 
+Utiliser les outils Google habitue à la "gratuité", mais n'oublions pas que Google tire profit des données qu'il stocke pour nous, relatives à la fréquentation de nos sites. Matomo se rémunère grâce aux dons et aux fonctionnalités vendues à ses utilisateurs. 
 
 [Des fonctionnalités supplémentaires pour les sites e-commerce](<https://matomo.org/docs/ecommerce-analytics/>), que nous n'avons pas eu l'occasion de tester pour l'instant, existent et proposent des features telles que l'analyse du panier, des produits cliqués, etc.);
 
@@ -118,5 +132,8 @@ Un panel de fonctionnalités payantes couvre un scope intéressant, comme par ex
 
 Certes, difficile de ne pas être décontenancé par l'ergonomie de l'outil quand on est habitué à plusieurs années d'utilisations de la suite Google. Pour autant, Matomo n'est pas à la traîne, car on retrouve les principales metrics et la plupart des possibilités permettant d'analyser ses metrics sont bien présentes. Couplé à un outil d'analyse de logs (d'ailleurs, Matomo propose une solution), rien ne pourra vous échapper. Mais surtout, garantir à nos visiteurs le respect de leur vie privée est totalement séducteur 🥰.
 
-Sources : 
-- Matomo
+## En savoir plus / Sources
+
+- [Matomo](<https://matomo.org/>)
+- [Démo publique](<[https://demo.matomo.org](https://demo.matomo.org/)>)
+- [Comprendre et analyser les données avec Matomo](https://zestedesavoir.com/tutoriels/2508/matomo-analytics/partie-4-comprendre-et-analyser-les-donnees/)
