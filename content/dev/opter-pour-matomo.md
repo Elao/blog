@@ -73,7 +73,9 @@ Les principaux points relatifs cités par la CNIL auxquels il faut être attenti
 
 <img src="https://media.giphy.com/media/wO9EzKpgf3pao/giphy.gif" />
 
-L'interface de Matomo permet de facilement configurer ces choix, puisqu'un menu est dédié à la vie privée, mêlant à la fois documentation et règlages. Les règlages possibles concernent : 
+L'interface de Matomo permet de facilement configurer ces choix, puisqu'un menu est dédié à la vie privée, mêlant à la fois documentation et réglages. A noter que ces réglages se font au niveau de l'instance, donc **ces choix s'appliqueront sur tous les sites configurés**. Il n'est pour l'instant pas possible de les régler site par site. 
+
+Les réglages possibles concernent : 
 
 - **L'anonymisation des données** de suivi :
   - Nombre d'octets de l'adresse IP masqués, de 1 à 3;
@@ -134,6 +136,6 @@ Certes, difficile de ne pas être décontenancé par l'ergonomie de l'outil quan
 
 ## En savoir plus / Sources
 
-- [Matomo](<https://matomo.org/>)
-- [Démo publique](<[https://demo.matomo.org](https://demo.matomo.org/)>)
+- [Matomo](https://matomo.org/)
+- [Démo publique](https://demo.matomo.org)
 - [Comprendre et analyser les données avec Matomo](https://zestedesavoir.com/tutoriels/2508/matomo-analytics/partie-4-comprendre-et-analyser-les-donnees/)
