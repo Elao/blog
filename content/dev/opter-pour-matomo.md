@@ -137,4 +137,4 @@ Certes, difficile de ne pas être décontenancé par l'ergonomie de l'outil quan
 - [Démo publique](https://demo.matomo.org/)
 - [Comprendre et analyser les données avec Matomo](https://zestedesavoir.com/tutoriels/2508/matomo-analytics/partie-4-comprendre-et-analyser-les-donnees/)
 
-Merci à Sébastien Monnier pour son feedback sur l'article :)
+Merci à [Sébastien Monnier](https://woptimo.com/) pour son feedback sur l'article :)
