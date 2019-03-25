@@ -16,10 +16,6 @@ categories:         ["Dev", "Web"]
 author_username:    "aldeboissieu"
 ---
 
-# Sauvez un cookie 🍪, installez Matomo !
-
-
-
 Anciennement nommé Piwik, Matomo est une solution de mesure d'audience de sites web, alternative libre à Google Analytics. Chez Elao, nous avons souhaité l'utiliser définitivement pour analyser le trafic de notre site et de notre blog. Nous partageons avec vous quelques informations qui vous seront peut-être utiles si, vous aussi, **vous souhaitez rendre anonymes les informations relatives à vos visiteurs** 🔒. 
 
 ## A quoi sert Matomo ? 
@@ -46,7 +42,7 @@ Les minima requis pour installer Matomo sont :
 Faites vos choix :
 
 - installation [par archive](https://matomo.org/docs/installation/);
-- installation [par package](https://matomo.org/faq/how-to-install/faq_17844/) : ```apt-get install piwik```;
+- installation [par package](https://debian.matomo.org/) : ```apt-get install matomo```;
 - installation par [docker](<https://docs.docker.com/samples/library/matomo/>);
 - solution [hébergée par matomo](<https://matomo.org/pricing/>). 
 
@@ -119,7 +115,7 @@ Pour les personnes qui ont l'habitude de faire des campagnes Google Ads, il est 
 
 A noter : 
 
-- Matomo propose depuis peu un [Tag Manager](<https://matomo.org/docs/tag-manager/>), qui permet de mettre en place un plan de marquage, d'ajouter des scripts de tracking ou encore des liens d'affiliation, par exemple, depuis la même interface. 
+- Matomo propose depuis peu un [Tag Manager](https://matomo.org/docs/tag-manager/), qui permet de mettre en place un plan de marquage, d'ajouter des scripts de tracking ou encore des liens d'affiliation, par exemple, depuis la même interface. 
 
 ![Fonctionnalités de Matomo](/images/posts/2019/matomo/features-analytics.png)
 
@@ -137,8 +133,8 @@ Certes, difficile de ne pas être décontenancé par l'ergonomie de l'outil quan
 
 ## En savoir plus / Sources
 
-- [Matomo](<https://matomo.org/>)
-- [Démo publique](<[https://demo.matomo.org](https://demo.matomo.org/)>)
-- [Comprendre et analyser les données avec Matomo](<https://zestedesavoir.com/tutoriels/2508/matomo-analytics/partie-4-comprendre-et-analyser-les-donnees/>)
+- [Matomo](https://matomo.org/)
+- [Démo publique](https://demo.matomo.org/)
+- [Comprendre et analyser les données avec Matomo](https://zestedesavoir.com/tutoriels/2508/matomo-analytics/partie-4-comprendre-et-analyser-les-donnees/)
 
 Merci à Sébastien Monnier pour son feedback sur l'article :)
