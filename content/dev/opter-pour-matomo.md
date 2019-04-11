@@ -60,7 +60,7 @@ Matomo indique quelques conseils pour [optimiser son infrastructure](https://mat
 
 ## Conformité avec la RGPD
 
-Les récents renforcements de la protection des données ne vous ont probablement pas échappé. Ainsi, dans sa documentation ["Solutions pour les cookies de mesure d'audience"](https://www.cnil.fr/fr/solutions-pour-les-cookies-de-mesure-daudience), **la CNIL détaille les obligations légales à mettre en place en matière de cookies**, dès lors qu'il y a données collectées liées à une visite. Miracle 🙌 ! **Utiliser un outil d'analyse d'audience tel que Matomo ou AT Internet (Xiti) permet de bénéficier de l'exemption du cookie**, permettant ainsi à nos visiteurs d'économiser un clic, ce qui est bon à prendre en ces temps de frénésie de bandeaux / pop-ups. 
+Les récents renforcements de la protection des données ne vous ont probablement pas échappé. Ainsi, dans sa documentation ["Solutions pour les cookies de mesure d'audience"](https://www.cnil.fr/fr/solutions-pour-les-cookies-de-mesure-daudience), **la CNIL détaille les obligations légales à mettre en place en matière de cookies**, dès lors qu'il y a données collectées liées à une visite. Miracle 🙌 ! **Utiliser un outil d'analyse d'audience tel que Matomo ou AT Internet (Xiti) permet de bénéficier de l'exemption de la demande de consentement avant de déposer un cookie**, permettant ainsi à nos visiteurs d'économiser un clic, ce qui est bon à prendre en ces temps de frénésie de bandeaux / pop-ups. 
 
 Les principaux points relatifs cités par la CNIL auxquels il faut être attentif et qui peuvent être paramétrés sont les suivants :
 
