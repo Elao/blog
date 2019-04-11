@@ -66,7 +66,8 @@ Les principaux points relatifs cités par la CNIL auxquels il faut être attenti
 
 - **Les deux derniers octets de l’adresse IP recueillie doivent être supprimés,** au minimum, afin de s'arrêter à la seule localisation de la ville de l'internaute;
 - Les cookies permettant la traçabilité des internautes et les adresses IP **ne doivent pas être conservées au-delà de 13 mois à compter de la première visite** ;
-- **les données de fréquentation brutes associant un identifiant** ne doivent pas non plus être conservées plus de 13 mois.
+- **Les données de fréquentation brutes associant un identifiant** ne doivent pas non plus être conservées plus de 13 mois.
+- **Mettre en place une solution d'Opt-out** pour permettre aux utilisateurs de s’opposer au dépôt de cookies. Pour cela il suffit d’insérer par exemple dans une page "Politique de confidentialité", l'iframe qui est fournie dans les paramètres Vie privée / Désinscription des utilisateurs.
 
 <img src="https://media.giphy.com/media/wO9EzKpgf3pao/giphy.gif" />
 
