@@ -19,17 +19,17 @@ author_username:    "mcolin"
 
 Si vous avez un jour travaillé sur la refonte d'une application, vous avez sûrement dû importer des données dites "legacy" provenant de l'application existante. Ces données contiennent bien souvent des comptes utilisateurs et donc des hashs de mots de passe qu'il faudra réintégrer à la nouvelle application.
 
-Les standards de sécurité évoluent, là où hier on se contentait d'un hash md5 ou sha1, on utilise plutôt bcrypt aujoud'hui. Afin de maintenir votre application aux standards actuels vous allez devoir migrer ses hashs de mots de passe.
+Les standards de sécurité évoluent, là où hier on se contentait d'un hash md5 ou sha1, on utilise plutôt bcrypt aujoud'hui. Afin de maintenir votre application aux standards actuels, vous allez devoir migrer ces hashs de mots de passe.
 
 # Solution
 
-Par définition, il n'est pas possible de retrouver simplement le mot de passe à partir du hash. Vous ne pouvez donc pas simplement migrer l'ensemble de mots de passe au moment d'importer les données dans le nouveau système. La seul personne a connaitre le mot de passe en clair est l'utilisateur lui-même.
+Par définition, il n'est pas possible de retrouver simplement le mot de passe à partir du hash. Vous ne pouvez donc pas simplement migrer l'ensemble de mots de passe au moment d'importer les données dans le nouveau système. La seule personne à connaitre le mot de passe en clair est l'utilisateur lui-même.
 
 L'idée est donc de réaliser une migration continue lorsque l'utilisateur rentre son mot de passe.
 
 Par exemple, pour une migration de mots de passe de `md5` vers `bcrypt`, lors d'une tentative de connexion :
 
-- Si l'utilisateur n'a pas été migré, on vérifie que le mot de passe fourni correspond au hash `md5`. Si c'est le cas, on calcul le hash `bcrypt` à partir du mot de passe puis on le stock.
+- Si l'utilisateur n'a pas été migré, on vérifie que le mot de passe fourni correspond au hash `md5`. Si c'est le cas, on calcule le hash `bcrypt` à partir du mot de passe, puis on le stocke.
 - Si l'utilisateur a déjà été migré, on vérifie le mot de passe avec le hash `bcrypt`
 
 Ainsi, chaque utilisateur migrera son mot de passe lors de sa première connexion à la nouvelle plateforme. Une fois que tous les utilisateurs auront été migrés, nous pourront effacer complètement les hashs `md5` de la base de données et n'utiliser que `bcrypt`.
@@ -53,8 +53,8 @@ Si vous utilisez un formulaire de connexion simple, de type login/password avec 
 
 Ce service doit implémenter la classe [`SimpleFormAuthenticatorInterface`](http://api.symfony.com/3.0/Symfony/Component/Security/Http/Authentication/SimpleFormAuthenticatorInterface.html) qui requiert l'implémentation des trois méthodes suivantes :
 
-* `createToken` : le formulaire est de type login/password, nous allons donc créer un `UsernamePasswordToken`
-* `supportsToken` : l'authenticator supportera les `UsernamePasswordToken`
+* `createToken` : le formulaire est de type login/password, nous allons donc créer un `UsernamePasswordToken`.
+* `supportsToken` : l'authenticator supportera les `UsernamePasswordToken`.
 * `authenticateToken` : et enfin, c'est ici que nous allons mettre notre logique d'authentification.
 
 Dans l'exemple suivant, la méthode d'encodage "legacy" est la suivante : `HASH = MD5(PASSWORD + SALT)`. Si l'application à refondre est déjà une application Symfony utilisant un encodeur de Symfony, vous pouvez le reproduire dans votre refonte et l'injecter dans votre service.
@@ -76,12 +76,7 @@ class MigrationAuthenticator implements SimpleFormAuthenticatorInterface
 
     public function authenticateToken(TokenInterface $token, UserProviderInterface $userProvider, $providerKey)
     {
-        try {
-            $user = $userProvider->loadUserByUsername($token->getUsername());
-        } catch (UsernameNotFoundException $exception) {
-            throw new BadCredentialsException('Invalid username or password');
-        }
-
+        $user = $userProvider->loadUserByUsername($token->getUsername());
         $password = $token->getCredentials();
 
         // The user hasn't password, it's not migrated
@@ -140,7 +135,7 @@ services:
             - '@doctrine.orm.entity_manager'
 {{< /highlight >}}
 
-puis renseignez le dans la configuration de votre firewall :
+Puis renseignez le dans la configuration de votre firewall :
 
 {{< highlight yaml >}}
 security:
