@@ -60,13 +60,14 @@ Matomo indique quelques conseils pour [optimiser son infrastructure](https://mat
 
 ## Conformité avec la RGPD
 
-Les récents renforcements de la protection des données ne vous ont probablement pas échappé. Ainsi, dans sa documentation ["Solutions pour les cookies de mesure d'audience"](https://www.cnil.fr/fr/solutions-pour-les-cookies-de-mesure-daudience), **la CNIL détaille les obligations légales à mettre en place en matière de cookies**, dès lors qu'il y a données collectées liées à une visite. Miracle 🙌 ! **Utiliser un outil d'analyse d'audience tel que Matomo ou AT Internet (Xiti) permet de bénéficier de l'exemption du cookie**, permettant ainsi à nos visiteurs d'économiser un clic, ce qui est bon à prendre en ces temps de frénésie de bandeaux / pop-ups. 
+Les récents renforcements de la protection des données ne vous ont probablement pas échappé. Ainsi, dans sa documentation ["Solutions pour les cookies de mesure d'audience"](https://www.cnil.fr/fr/solutions-pour-les-cookies-de-mesure-daudience), **la CNIL détaille les obligations légales à mettre en place en matière de cookies**, dès lors qu'il y a données collectées liées à une visite. Miracle 🙌 ! **Utiliser un outil d'analyse d'audience tel que Matomo ou AT Internet (Xiti) permet de bénéficier de l'exemption de la demande de consentement avant de déposer un cookie**, permettant ainsi à nos visiteurs d'économiser un clic, ce qui est bon à prendre en ces temps de frénésie de bandeaux / pop-ups. 
 
 Les principaux points relatifs cités par la CNIL auxquels il faut être attentif et qui peuvent être paramétrés sont les suivants :
 
 - **Les deux derniers octets de l’adresse IP recueillie doivent être supprimés,** au minimum, afin de s'arrêter à la seule localisation de la ville de l'internaute;
 - Les cookies permettant la traçabilité des internautes et les adresses IP **ne doivent pas être conservées au-delà de 13 mois à compter de la première visite** ;
-- **les données de fréquentation brutes associant un identifiant** ne doivent pas non plus être conservées plus de 13 mois.
+- **Les données de fréquentation brutes associant un identifiant** ne doivent pas non plus être conservées plus de 13 mois.
+- **Mettre en place une solution d'Opt-out** pour permettre aux utilisateurs de s’opposer au dépôt de cookies. Pour cela il suffit d’insérer par exemple dans une page "Politique de confidentialité", l'iframe qui est fournie dans les paramètres Vie privée / Désinscription des utilisateurs.
 
 <img src="https://media.giphy.com/media/wO9EzKpgf3pao/giphy.gif" />
 
