@@ -15,13 +15,13 @@ author_username:    "elao"
 co_authors:         ["tjarrand", "aldeboissieu", "mbernard", "bleveque"]
 ---
 
-Le 17 mai 2019, nous avons été parmi quelques chanceux (ou prévoyants?) 💪 à pouvoir profiter de l'[Afup Day, 
-une journée conférence qui s'est tenue à Lyon](https://event.afup.org/afup-day-2019/afup-day-2019-lyon/). Pourquoi "quelques chanceux" ? Parce que les tickets 
+Le 17 mai 2019, nous avons été parmi quelques chanceux (ou prévoyants?) 💪 à pouvoir profiter de l'[Afup Day,
+une journée conférence qui s'est tenue à Lyon](https://event.afup.org/afup-day-2019/afup-day-2019-lyon/). Pourquoi "quelques chanceux" ? Parce que les tickets
 se sont envolés à une vitesse record !
 
 ## Nos impressions sur la journée
 
-Anne-Laure : La barre a été placée très haut pour cette première édition. Les conférences étaient de très bonnes qualités, j'ai apprécié l'alternance entre les sujets techniques et non-techniques. 
+**Anne-Laure** : La barre a été placée très haut pour cette première édition. Les conférences étaient de très bonnes qualités, j'ai apprécié l'alternance entre les sujets techniques et non-techniques.
 
 Je retiendrai :
 
@@ -32,4 +32,11 @@ Je retiendrai :
 - L'échange très intéressant entre CTO lors de la table-ronde, et notamment les problématiques rencontrées par Mathilde Lemée dans la start-up qu'elle a co-fondée : comment choisir des technologies qui soient à la fois bonnes pour le projet et à la fois en rapport avec le marché pour recruter ?
 - Les rappels de Marine Gandy, qui nous invite à reverser à la communauté ce dont on a bénéficié dans notre propre parcours.
 - Les madeleines à la pistache 🙈.
+
+**Thomas** : Pour ma part, ce que je vois transparaitre à travers les expériences partagées lors de cet Afup Day, c'est un retour aux sources et à _une certaine humilité_ dans nos processus de développement, notre rapport aux outils, aux framework et au code lui même.
+
+Qu'il s'agisse :
+- de re-découvrir des fondamentaux comme l'orienté objet ou le SQL
+- de voir d'autres frameworks mais aussi d'écouter d'autres points de vue humains
+- ou encore d'accepter de remettre en question certains marqueurs de qualité, considérés comme acquis, en fonction du contexte et de l'importance de la fonctionnalité au sein d'un projet.
 
