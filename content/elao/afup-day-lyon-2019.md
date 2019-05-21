@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/matomo.jpg"
 tags:               ["Développement", "Web", "afup", "Conférence", "afupDay"]
 categories:         ["conference"]
 author_username:    "elao"
-co_authors:         ["tjarrand", "aldeboissieu", "mbernard", "bleveque"]
+co_authors:         ["tjarrand", "aldeboissieu", "mbernard", "bleveque", "dgauthier"]
 ---
 
 Le 17 mai 2019, nous avons été parmi quelques chanceux (ou prévoyants?) 💪 à pouvoir profiter de l'[Afup Day,
@@ -40,3 +40,12 @@ Qu'il s'agisse :
 - de voir d'autres frameworks mais aussi d'écouter d'autres points de vue humains
 - ou encore d'accepter de remettre en question certains marqueurs de qualité, considérés comme acquis, en fonction du contexte et de l'importance de la fonctionnalité au sein d'un projet.
 
+**Delphine** : J'ai été impressionnée par la qualité des conférences proposées pour cette première édition de l'AFUP Day. 
+
+J'ai particulièrement aimé :
+- La conférence de Flavien Chantelot et Aurélien Damien, chez OVH, qui montre que pour innover, ce ne sont pas forcément les technologies qui comptent, mais la façon dont on les utilise.
+- La présentation de l'analyse statique de code par Julien Deniau.
+- La table ronde des CTO, durant laquelle ils ont parfaitement mis en valeur la richesse et la diversité de leurs métiers, au sein d'organisations parfois diamétralement opposées.
+- La sagesse de Mathieu Napoli, qui nous rappelle que : « Du code legacy c’est un projet qui a réussi », parce que nous sommes parfois durs envers ce genre de projets.
+- La place importante qui a été donnée à l'humain, aux relations humaines, à l'humilité et _à la bienveillance_ au cours de cette journée.
+- Les madeleines à l'amande (encore meilleures que celles à la pistache).
