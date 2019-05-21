@@ -53,3 +53,5 @@ J'ai particulièrement aimé :
 - La sagesse de Mathieu Napoli, qui nous rappelle que : « Du code legacy c’est un projet qui a réussi », parce que nous sommes parfois durs envers ce genre de projets.
 - La place importante qui a été donnée à l'humain, aux relations humaines, à l'humilité et _à la bienveillance_ au cours de cette journée.
 - Les financiers framboise/amande (encore meilleurs que ceux à la pistache).
+
+![L'équipe élao présente sur place](/images/posts/2019/afup-day-2019/equipe.jpg)
