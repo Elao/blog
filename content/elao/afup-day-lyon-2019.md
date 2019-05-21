@@ -36,13 +36,17 @@ Je retiendrai :
 **Thomas** : Pour ma part, ce que je vois transparaitre à travers les expériences partagées lors de cet Afup Day, c'est un retour aux sources et à _une certaine humilité_ dans nos processus de développement, notre rapport aux outils, aux framework et au code lui même.
 
 Qu'il s'agisse :
-- de re-découvrir des fondamentaux comme l'orienté objet ou le SQL
-- de voir d'autres frameworks mais aussi d'écouter d'autres points de vue humains
+
+- de re-découvrir des fondamentaux comme l'orienté objet ou le SQL,
+- de voir d'autres frameworks mais aussi d'écouter d'autres points de vue humains,
 - ou encore d'accepter de remettre en question certains marqueurs de qualité, considérés comme acquis, en fonction du contexte et de l'importance de la fonctionnalité au sein d'un projet.
 
-**Delphine** : J'ai été impressionnée par la qualité des conférences proposées pour cette première édition de l'AFUP Day. 
+Et puis on s'est bien marré aussi ! 😬
+
+**Delphine** : J'ai été impressionnée par la qualité des conférences proposées pour cette première édition de l'AFUP Day.
 
 J'ai particulièrement aimé :
+
 - La conférence de Flavien Chantelot et Aurélien Damien, chez OVH, qui montre que pour innover, ce ne sont pas forcément les technologies qui comptent, mais la façon dont on les utilise.
 - La présentation de l'analyse statique de code par Julien Deniau.
 - La table ronde des CTO, durant laquelle ils ont parfaitement mis en valeur la richesse et la diversité de leurs métiers, au sein d'organisations parfois diamétralement opposées.
