@@ -49,7 +49,6 @@ J'ai particulièrement aimé :
 - La conférence de Flavien Chantelot et Aurélien Damien, chez OVH, qui montre que pour innover, ce ne sont pas forcément les technologies qui comptent, mais la façon dont on les utilise.
 - La présentation de l'analyse statique de code par Julien Deniau.
 - La table ronde des CTO, durant laquelle ils ont parfaitement mis en valeur la richesse et la diversité de leurs métiers, au sein d'organisations parfois diamétralement opposées.
-- La sagesse de Mathieu Napoli, qui nous rappelle que : « Du code legacy c’est un projet qui a réussi », parce que nous sommes parfois durs envers ce genre de projets.
 - La place importante qui a été donnée à l'humain, aux relations humaines, à l'humilité et _à la bienveillance_ au cours de cette journée.
 - Les financiers framboise/amande (encore meilleurs que ceux à la pistache).
 
