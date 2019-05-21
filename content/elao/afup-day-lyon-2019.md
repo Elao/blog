@@ -31,7 +31,7 @@ Je retiendrai :
 - En parlant de code legacy, je retiens cette citation / punchline de Mathieu Napoli : « Du code legacy c’est un projet qui a réussi ».
 - L'échange très intéressant entre CTO lors de la table-ronde, et notamment les problématiques rencontrées par Mathilde Lemée dans la start-up qu'elle a co-fondée : comment choisir des technologies qui soient à la fois bonnes pour le projet et à la fois en rapport avec le marché pour recruter ?
 - Les rappels de Marine Gandy, qui nous invite à reverser à la communauté ce dont on a bénéficié dans notre propre parcours.
-- Les madeleines à la pistache 🙈.
+- Les financiers à la pistache 🙈.
 
 **Thomas** : Pour ma part, ce que je vois transparaitre à travers les expériences partagées lors de cet Afup Day, c'est un retour aux sources et à _une certaine humilité_ dans nos processus de développement, notre rapport aux outils, aux framework et au code lui même.
 
@@ -48,4 +48,4 @@ J'ai particulièrement aimé :
 - La table ronde des CTO, durant laquelle ils ont parfaitement mis en valeur la richesse et la diversité de leurs métiers, au sein d'organisations parfois diamétralement opposées.
 - La sagesse de Mathieu Napoli, qui nous rappelle que : « Du code legacy c’est un projet qui a réussi », parce que nous sommes parfois durs envers ce genre de projets.
 - La place importante qui a été donnée à l'humain, aux relations humaines, à l'humilité et _à la bienveillance_ au cours de cette journée.
-- Les madeleines à l'amande (encore meilleures que celles à la pistache).
+- Les mini-macarons à l'amande (encore meilleures que les financiers à la pistache).
