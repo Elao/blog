@@ -32,7 +32,31 @@ Une des variantes est la balise meta robots noindex, [c'est une des solutions d�
 
 ### Comment paramétrer ce tag sur Symfony ? 
 
-//TODO 
+Depuis Symfony 4.3, [une configuration](https://symfony.com/blog/new-in-symfony-4-3-automatic-search-engine-protection) permet d'ajouter automatiquement le header `X-Robots-Tag: noindex` aux réponses de Symfony. 
+
+```
+# config/packages/framework.yaml
+framework:
+    disallow_search_engine_index: true
+```
+
+Néanmoins, vous ne pouvez modifier cette configuration qu'en fonction de l'environnement Symfony (`dev`, `prod`, `test`, ...) et non en fonction du serveur. L'idée serait d'ajouter ce header sur les serveurs de staging, demo ou recette par exemple et de ne pas l'ajouter sur le serveur de production, peu importe l'environnement Symfony qui est utilisé.
+
+Malheureusement, cette configuration ne peux pas être piloté par une variable d'environnement car elle impact directement le container (définition d'un listener) et Symfony ne permet pas faire cela au runtime. Je conseil donc de ne pas utiliser cette configuration.
+
+La solution est de passer par la configuration **nginx** ou **Apache** de votre serveur pour ajouter le header.
+
+Par exemple avec nginx:
+
+```
+server {
+    ...
+    add_header X-Robots-Tag "noindex";
+    ...
+}
+```
+
+Cette solution à l'avantage de fonctionner peu importe la version de Symfony, le framework ou le langage utilisé par votre application. De plus elle ne pourra pas être désactivé lors d'un mauvais déploiement.
 
 ## La chose à ne pas faire 🙅‍♀️ : interdire l'indexation via le robots.txt
 
