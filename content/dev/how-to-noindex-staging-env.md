@@ -3,11 +3,12 @@ type:               "post"
 title:              "Comment empêcher les moteurs de recherche d'indexer votre app Symfony en staging ?"
 date:               "2019-07-10"
 publishdate:        "2019-07-10"
-draft:              true
+draft:              false
 slug:               "no-index-staging-symfony"
 description:        "Les pages de votre application n'ont pas vocation à être présentes dans les moteurs de recherche ? Voici une courte explication pour vous aider à empêcher le crawl et l'indexation."
 
-thumbnail:          "/images/posts/thumbnails/cool_cat.jpg"
+thumbnail:          "/images/posts/thumbnails/judging-sardine-large.jpg"
+header_img:         "/images/posts/headers/judging-sardine-small.jpg"
 tags:               ["Symfony", "seo", "no-index"]
 categories:         ["Dev", "Symfony", "seo"]
 
