@@ -32,7 +32,7 @@ Néanmoins, ces deux solutions peuvent parfois entraîner de nombreuses contrain
 
 ### Le plan B 👍 : l'en-tête de réponse HTTP
 
-Cette **instruction X-Robots-Tag indiquera aux robots de ne pas indexer la page**. Attention, cette méthode ne doit pas être couplée avec une directive de disallow de l'intégralité du robots.txt, puisque les bots n'auraient  jamais accès à ce tag. 
+Cette **instruction X-Robots-Tag indiquera aux robots de ne pas indexer la page**. Attention, cette méthode ne doit pas être couplée avec une directive de disallow de l'intégralité du robots.txt, puisque les bots n'auraient jamais accès à ce tag. 
 
 Une des variantes est la balise meta robots noindex, [c'est une des solutions décrites par Google dans sa documentation officielle](<https://support.google.com/webmasters/answer/93710?hl=fr>). 
 
@@ -58,6 +58,14 @@ server {
     add_header X-Robots-Tag "noindex";
     ...
 }
+```
+
+Et avec Apache (sous réserve que le mod header soit activé) :
+
+```
+...
+SetEnv X-Robots-Tag noindex
+...
 ```
 
 Cette solution a l'avantage de fonctionner **peu importe la version de Symfony, le framework ou le langage utilisé par votre application**. De plus, elle ne pourra pas être désactivée lors d'un mauvais déploiement.
