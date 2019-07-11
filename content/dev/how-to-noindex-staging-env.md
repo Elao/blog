@@ -27,7 +27,7 @@ Voyons ensemble **quelques solutions pour ne pas indexer les pages publiques de 
 Le meilleur moyen d'empêcher tout crawl des robots et visites des internautes est d'**imposer une authentification côté serveur**. Une autre bonne solution est de filtrer l'accès au site selon l'IP, c'est à dire qu'on autorise l'affichage que si vous y êtes autorisés. 
 Bien sûr, dans les deux cas, les robots ne peuvent pas accéder aux pages, empêchant de ce fait tout risque de crawl et donc d'indexation. 
 
-Néanmoins, ces deux solutions ne peuvent parfois entraîner de nombreuses contraintes, par exemple si vous utilisez différents sous-domaines pour vos assets ou pour vos apis. La recette peut alors se compliquer sur les features les plus importantes du site.
+Néanmoins, ces deux solutions peuvent parfois entraîner de nombreuses contraintes, par exemple si vous utilisez différents sous-domaines pour vos assets ou pour vos apis. La recette peut alors se compliquer sur les features les plus importantes du site.
 
 
 ### Le plan B 👍 : l'en-tête de réponse HTTP
