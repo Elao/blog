@@ -7,8 +7,8 @@ draft:              false
 slug:               "donnes-structurees-offre-emploi"
 description:        "Et si vous rendiez vos offres d'emploi plus visibles dans les pages de résultats des moteurs de recherche grâce aux données structurées ? "
 
-thumbnail:          "/images/posts/thumbnails/matomo.jpg"
-header_img:         "/images/posts/headers/matomo.jpg"
+thumbnail:          "/images/posts/thumbnails/arrows-square.jpg"
+header_img:         "/images/posts/headers/arrows.jpg"
 tags:               ["Seo", "microdata", "rich snippets"]
 categories:         ["Dev", "Web"]
 
@@ -35,7 +35,7 @@ Certaines données structurées sont déjà des standards du web, comme **le fil
 
 Il existe d'autres protocoles, comme par exemple l'[**Open Graph de Facebook**](https://developers.facebook.com/docs/sharing/webmasters?locale=fr_FR), qui facilite le partage de vos contenus sur ce réseau social en ciblant correctement le titre, la description de l'article, etc. 
 
-## Offres d'emploi : est-ce utile intégrer des données structurées ? 
+## Offres d'emploi : est-ce utile d'intégrer des données structurées ? 
 
 Si l'internaute saisit des mots-clés relatifs à une recherche d'emploi (ici `pizzaiolo lyon`, **il voit apparaître une feature spéciale lui proposant une liste d'offres localisée**. Au clic sur "17 offres d'emploi" (voir ci-dessous), on est redirigé vers un outil de recherche d'emplois permettant de filtrer selon plusieurs types (date de publication, type d'emploi, lieu, employeur). Voir son ou ses offres d'emploi y paraître semble donc être un bon moyen de bénéficier de plus de visibilités.
 
