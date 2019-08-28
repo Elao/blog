@@ -24,7 +24,7 @@ Les internautes sont habitués à voir selon la thématique, pour un résultat p
 ![Vélo avec prix](/images/posts/2019/microdata-offers/produit-prix.png)
 ![Recette de cuisine](/images/posts/2019/microdata-offers/rich-snippet-recipe.png)
 
-C'est en encodant son contenu HTML que les crawlers de Google (ou d'autres moteurs de recherche) peuvent interpréter votre contenu, et ainsi peut-être l'utiliser pour alimenter ses pages de résultats. Et si vous avez la chance de figurer parmi les premières positions, **vous bénéficierez probablement de plus de clics sur votre page web, et ainsi plus de trafic**. 
+C'est en encodant votre HTML que les crawlers de Google (ou d'autres moteurs de recherche) peuvent interpréter votre contenu, et ainsi peut-être l'utiliser pour alimenter ses pages de résultats. Et si vous avez la chance de figurer parmi les premières positions, **vous bénéficierez probablement de plus de clics sur votre page web, et ainsi plus de trafic**. 
 
 En plus des contenus enrichis, Google propose de véritables features, comme par exemple ce planning des concerts à venir : 
 ![Evènements à venir](/images/posts/2019/microdata-offers/position-zero-concert.png)
