@@ -1,8 +1,8 @@
 ---
 type:               "post"
 title:              "Two Way-Binding avec Vue et Vuex"
-date:               "2018-08-12"
-publishdate:        "2018-08-12"
+date:               "2019-08-26"
+publishdate:        "2019-08-26"
 draft:              false
 slug:               "two-ways-binding-avec-vue-et-vuex"
 description:        "Mise en place d'un Two-Way Binding avec Vue et Vuex."
@@ -15,7 +15,7 @@ categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 author_username:    "mcolin"
 ---
 
-Vue permet déjà de faire du Two-Way Binding grâce à la directive `v-model`. C'est à dire mettre à jour votre UI lorsque votre model change et vise-versa.
+Vue permet déjà de faire du Two-Way Binding grâce à la directive `v-model`. C'est à dire mettre à jour l'interface lorsque le model change et vice et versa.
 
 ```
 <script>
@@ -37,7 +37,7 @@ export default {
 
 Dans ce composant par exemple, lorsque la variable `foobar` est modifié, le contenu du champ est mis à jour et lorsque le contenu du champ est modifié, la variable `foobar` sera mise à jour.
 
-Si nous introduisons Vuex (ou un autre state manager), les variables du store n'étant pas modifiable pas les composant, nous ne pouvons faire que du One-Way Binding (lorsque le model change, l'UI est mis à jour, l'inverse n'est pas possible).
+Si nous introduisons Vuex (ou un autre state manager), les variables du store n'étant pas modifiable pas les composants, nous ne pouvons faire que du One-Way Binding (lorsque le model change, l'interface est mise à jour, l'inverse n'est pas possible).
 
 ```
 <template>
@@ -47,7 +47,7 @@ Si nous introduisons Vuex (ou un autre state manager), les variables du store n'
 </template>
 ```
 
-Un composant comme celui-ci par exemple violerait le principe selon lequel les variables du store ne peuvent être modifié que par une mutation et jamais directement. Vous obtiendrez d'ailleurs un message d'erreur de la part de Vue.
+Un composant comme celui-ci par exemple violerait le principe selon lequel les variables du store ne peuvent être modifiées que par une mutation et jamais directement. Vous obtiendrez d'ailleurs un message d'erreur de la part de Vue.
 
 La solution pour faire du Two-Way Binding est donc d'utiliser un computed avec un getter et un setter. Le getter renvoie la valeur stockée dans le store et le setter met à jour le store grâce à une mutation.
 
@@ -72,7 +72,7 @@ export default {
 
 On retrouve alors un Two-Way Binding tout en respectant le principe de non modification directe du state.
 
-L'ennuie avec cette méthode est qu'elle nécessite autant de getter/setter que de champs, ce qui peut vite vous amenez a écrire beaucoup de code lorsque vous avez de gros formulaire. On va donc voir une astuce pour simplifier tout ça.
+L'ennui avec cette méthode est qu'elle nécessite autant de getter/setter que de champs, ce qui peut vite vous amener à écrire beaucoup de code lorsque vous avez de gros formulaires. Je vous propose une astuce pour simplifier tout ça.
 
 On va s'inspirer des helpers `mapState`, `mapGetters` et `mapActions` de Vuex.
 
@@ -105,7 +105,7 @@ export default {
 </script>
 ```
 
-Cela permet de réduire considérablement la quantité de code lorsqu'on l'on a un grand nombre de variables à mapper. On va donc créer une fonction similaire à `mapState` qui ne va pas seulement créer de simple `computed` mais également les getters et setters nécessaires au Two-Way Binding.
+Cela permet de réduire considérablement la quantité de code lorsque l'on l'on a un grand nombre de variables à mapper. On va donc créer une fonction similaire à `mapState` qui ne va pas seulement créer de simples `computed` mais également les getters et setters nécessaires au Two-Way Binding.
 
 ```
 function mapFields(fields) {
@@ -121,10 +121,12 @@ function mapFields(fields) {
       }
     }
   }
+
+  return computeds
 }
 ```
 
-Vous pouvez désormais utiliser cette fonction avec le spread operator pour générer vos computed properties.
+Vous pouvez désormais utiliser cette fonction avec le [spread operator](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Syntaxe_d%C3%A9composition) pour générer vos computed properties.
 
 ```
 <script>
@@ -143,7 +145,7 @@ export default {
 </template>
 ```
 
-Ici, cela nécessite évidemment que vous disposiez des mutations pour chacun de vos variables nommée de la même façon (`UPDATE_FOOBAR` et `UPDATE_BARFOO`).
+Ici, cela nécessite évidemment que vous disposiez des mutations pour chacune de vos variables nommées de la même façon (`UPDATE_FOOBAR` et `UPDATE_BARFOO`).
 
 ```
 new Vuex.Store({
@@ -158,7 +160,7 @@ new Vuex.Store({
 })
 ```
 
-Vous pouvez bien entendu complexifié cette fonction selon vos besoin et vos habitude ou en créer plusieurs correspondant à vos différents use-cases. L'idée peut être même appliquée à d'autres cas que les computed et le **two-way binding**. On peut par exemple imaginer des fonctions pour générer des méthodes ou watchers.
+Vous pouvez bien entendu complexifier cette fonction selon vos besoins et vos habitudes ou en créer plusieurs correspondant à vos différents use-cases. L'idée peut être même appliquée à d'autres cas que les computed et le **two-way binding**. On peut par exemple imaginer des fonctions pour générer des méthodes ou watchers.
 
 ```
 function mapWatcher(fields) {
@@ -174,7 +176,7 @@ function mapWatcher(fields) {
 }
 ```
 
-Cette fonction permet de créer un watcher qui émettra un événement à la modification pour chaque propriété passé en argument.
+Cette fonction permet de créer un watcher qui émettra un événement à la modification pour chaque propriété passée en argument.
 
 ```
 export default {
