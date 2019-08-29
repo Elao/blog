@@ -47,7 +47,7 @@ Si nous introduisons Vuex (ou un autre state manager), les variables du store n'
 </template>
 ```
 
-Un composant comme celui-ci par exemple violerait le principe selon lequel les variables du store ne peuvent être modifiées que par une mutation et jamais directement. Vous obtiendrez d'ailleurs un message d'erreur de la part de Vue.
+Un composant comme celui-ci par exemple violerait le principe selon lequel les variables du store ne peuvent être modifiées que par une mutation et jamais directement. Vous obtiendrez d'ailleurs un warning de la part de Vue.
 
 La solution pour faire du Two-Way Binding est donc d'utiliser un computed avec un getter et un setter. Le getter renvoie la valeur stockée dans le store et le setter met à jour le store grâce à une mutation.
 
