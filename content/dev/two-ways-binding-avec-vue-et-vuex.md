@@ -15,7 +15,7 @@ categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 author_username:    "mcolin"
 ---
 
-Vue permet déjà de faire du Two-Way Binding grâce à la directive `v-model`. C'est à dire mettre à jour l'interface lorsque le model change et vice et versa.
+Vue permet déjà de faire du Two-Way Binding grâce à la directive `v-model`. C'est à dire mettre à jour l'interface lorsque le modèle change et vice et versa.
 
 ```
 <script>
@@ -35,9 +35,9 @@ export default {
 </template>
 ```
 
-Dans ce composant par exemple, lorsque la variable `foobar` est modifié, le contenu du champ est mis à jour et lorsque le contenu du champ est modifié, la variable `foobar` sera mise à jour.
+Dans ce composant par exemple, lorsque la variable `foobar` est modifié, le contenu du champ est mis à jour et lorsque le contenu du champ est modifié, la variable `foobar` est modifiée.
 
-Si nous introduisons Vuex (ou un autre state manager), les variables du store n'étant pas modifiable pas les composants, nous ne pouvons faire que du One-Way Binding (lorsque le model change, l'interface est mise à jour, l'inverse n'est pas possible).
+Si nous introduisons Vuex (ou un autre state manager), les variables du store n'étant pas modifiable par les composants, nous ne pouvons faire que du One-Way Binding (lorsque le modèle change, l'interface est mise à jour, l'inverse n'est pas possible).
 
 ```
 <template>
