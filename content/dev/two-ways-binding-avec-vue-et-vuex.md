@@ -97,7 +97,7 @@ export default {
     foobar() {
       return this.$store.state.foobar
     },
-    foobar() {
+    barfoo() {
       return this.$store.state.barfoo
     }
   }
@@ -105,14 +105,14 @@ export default {
 </script>
 ```
 
-Cela permet de réduire considérablement la quantité de code lorsque l'on l'on a un grand nombre de variables à mapper. On va donc créer une fonction similaire à `mapState` qui ne va pas seulement créer de simples `computed` mais également les getters et setters nécessaires au Two-Way Binding.
+Cela permet de réduire considérablement la quantité de code lorsque l'on a un grand nombre de variables à mapper. On va donc créer une fonction similaire à `mapState` qui ne va pas seulement créer de simples `computed` mais également les getters et setters nécessaires au Two-Way Binding.
 
 ```
 function mapFields(fields) {
   let computeds = {}
 
   for (field of fields) {
-    computed[field] = {
+    computeds[field] = {
       get() {
         return this.$store.state[field]
       },
