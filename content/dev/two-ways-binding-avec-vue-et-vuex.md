@@ -1,8 +1,8 @@
 ---
 type:               "post"
 title:              "Two Way-Binding avec Vue et Vuex"
-date:               "2019-08-26"
-publishdate:        "2019-08-26"
+date:               "2019-09-25"
+publishdate:        "2019-09-25"
 draft:              false
 slug:               "two-ways-binding-avec-vue-et-vuex"
 description:        "Mise en place d'un Two-Way Binding avec Vue et Vuex."
