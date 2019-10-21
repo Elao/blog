@@ -19,9 +19,9 @@ L'une des pratiques les plus courantes du web pour accéder à un contenu de bas
 
 ## Problèmes de sécurités et de confidentialité
 
-Exposer ces identifiant dans les url pose principalement de **sécurité** et de **confidentialité**.
+Exposer ces identifiants dans les url pose principalement des problèmes de **sécurité** et de **confidentialité**.
 
-La cause de ses problèmes est du à la prédictabilité de l'identifiant. En effet, celui-ci étant auto-incrémenté, si vous avez une url avec un identifiant, il est très faciles de déduire les urls d'autres contenu un incrémentant ou décrémentant l'identifiant dans l'url.
+La cause de ses problèmes est du à la prédictabilité de l'identifiant. En effet, celui-ci étant auto-incrémenté, si vous avez une url avec un identifiant, il est très facile de déduire les urls d'autres contenus en incrémentant ou décrémentant l'identifiant dans l'url.
 
 Il est alors simple pour un hacker ou simplement un utilisateur curieux de tenter accéder à des contenus qui ne lui sont pas dédié. Couplé à d'autres failles ou défaut de sécurité, cela lui facilitera grandement la tâche. Il est également simple de crawler votre contenu sans connaitre à l'avance toutes les urls, mais simplement en bouclant sur un identifiant incrémenté.
 
@@ -33,7 +33,7 @@ Plusieurs alternatives aux identifiants auto-incrémentés existent.
 
 L'une des plus connus est l'**[UUID](https://fr.wikipedia.org/wiki/Universal_Unique_Identifier)**. Cet identifiant de 32 caractères hexadécimaux est généré de façon unique par un algorithme. A partir d'un UUID d'un contenu il n'est pas possible de prédire celui des autres. Il est très utilisé lors d'échange API néanmoins il souffre d'un inconvéniant majeur pour des urls, sa longueur.
 
-L'url suivante est quand même beaucoup moins lisible et pratique que la même utilisante des ID entier :
+L'url suivante est quand même beaucoup moins lisible et pratique que la même utilisant des ID entier :
 
 <figure>
   <pre>https://www.example.com/shop/category/b441a884-5d46-423b-8317-ddb6f7e3f2fb/product/f0283088-5bd3-4acc-bc42-e6d173d33dd8?filter=165779fc-171d-4f3c-8c60-a2351d6468d3</pre>
@@ -45,7 +45,7 @@ L'url suivante est quand même beaucoup moins lisible et pratique que la même u
   <figcaption>Une url avec des ID</figcaption>
 </figure>
 
-Une autre solution pourrait être d'utilser des **identifiants entier non auto-incrémenté**. Cela nécessite néanmoins la mise en place d'un algorithme permettant de générer de manière unique des identifiants entier. C'est une solution qui peut être viable, mais pas forcement simple à mettre en place et la perte d'auto-increment côté base de données peut être handicapant.
+Une autre solution pourrait être d'utilser des **identifiants entier non auto-incrémenté**. Cela nécessite néanmoins la mise en place d'un algorithme permettant de générer de manière unique ces identifiants. C'est une solution qui peut être viable, mais pas forcement simple à mettre en place et la perte d'auto-increment côté base de données peut être handicapant.
 
 ## L'obsuscation
 
@@ -82,3 +82,83 @@ figure {
   margin: 20px 0;
 }
 </style>
+
+## Intrégation dans Symfony
+
+Afin de ne pas avoir à encoder moi même les ID, j'ai créé un decorator pour le router Symfony.
+
+Voici un exemple simple qui obfusque tous les paramêtres `id` des routes.
+
+{{< highlight php >}}
+<?php
+class IdObfuscatorUrlGenerator implements RouterInterface
+{
+    private $inner;
+    private $idObfuscator;
+
+    public function __construct(RouterInterface $inner, IdObfuscatorInterface $idObfuscator)
+    {
+        $this->inner = $inner;
+        $this->idObfuscator = $idObfuscator;
+    }
+
+    public function generate($name, $parameters = [], $referenceType = self::ABSOLUTE_PATH)
+    {
+        foreach ($parameters as $key => $value) {
+            if ($key === 'id') {
+                $parameters[$key] = $this->idObfuscator->obfuscate($value);
+            }
+        }
+
+        return $this->inner->setContext($name, $parameters, $referenceType);
+    }
+
+    public function setContext(RequestContext $context)
+    {
+        return $this->inner->setContext($context);
+    }
+
+    public function getContext()
+    {
+        return $this->inner->getContext();
+    }
+
+    public function getRouteCollection()
+    {
+        return $this->inner->getRouteCollection();
+    }
+
+    public function match($pathinfo)
+    {
+        return $this->inner->match($pathinfo);
+    }
+}
+{{< /highlight >}}
+
+Il faut ensuite déobfusquer les ID a chaque requête avant de pouvoir les utiliser. J'utilise pour celà un `ArgumentValueResolver`.
+
+Par exemple, voici celui qui correspondrait au routeur si dessus :
+
+{{< highlight php >}}
+<?php
+class ObfuscatedIdResolver implements ArgumentValueResolverInterface
+{
+    /** @var IdObfuscatorInterface */
+    private $idObfuscator;
+
+    public function __construct(IdObfuscatorInterface $idObfuscator)
+    {
+        $this->idObfuscator = $idObfuscator;
+    }
+
+    public function supports(Request $request, ArgumentMetadata $argument)
+    {
+        return $argument->getType() === 'int' && $request->attributes->has('id');
+    }
+
+    public function resolve(Request $request, ArgumentMetadata $argument)
+    {
+        yield $this->idObfuscator->deobfuscate($request->attributes->getInt('id'));
+    }
+}
+{{< /highlight >}}
