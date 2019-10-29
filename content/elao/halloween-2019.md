@@ -54,31 +54,21 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 Ma catégorie préférée du moment.
 
-- The Witch (2015)
-- Héredité (2018)
-- Midsommar (2019)
-
-### Les classiques qu'il fait bon revoir
-
-Mi frissons - mi nostalgie.
-
-- Sixième sens (1999)
-- The Blair Witch project (1999)
-- Scream (1996)
+- __The Witch__ (2015) : sobre, patient et magnifique.
+- __Héredité__ (2018) : un film d'horreur qui l'oublie parfois pour parler de famille.
+- __Midsommar__ (2019) : plus angoissant qu'effrayant, plus dérangeant que surprenant.
 
 ### Des petites fraicheures qui n'ont rien perdu de leur originalité
 
 Si vous les avez loupé à l'époque ...
 
-- Rec (2007)
-- Paranormal activity (2007)
-- Drag Me to Hell (2009)
+- __Rec__ (2007) : un excellent found-footage espagnol debrouillard et inventif.
+- __The Babadook__ (2014) : un film d'horreur malin qui nous plonge dans les craintes d'une mère célibataire.
+- __Drag Me to Hell__ (2009) : de l'horreur fun et gore, un Sam Raimi méconnu, digne héritier d'Evil Dead.
 
 ### Si je devais n'en conseiller qu'un...
 
- Poils qui se dressent garantis
-
-- __The Visit__ (2015)
+- __The Visit__ (2015) : le réalisateur du Sixième Sens revient avec un budget minuscule et tout à (re)prouver. Le résultat est une petite pépite d'épouvante qui m'a littéralement fais dresser les poils sur les bras.
 
 ## Florian :
 
