@@ -48,4 +48,21 @@ Les Gremlins
 - Série à binger toute la nuit :
 Haunting of hill house
 
+## Thomas :
 
+### Ma catégorie préférée du moment : "Horreur d'auteur"
+
+- The Witch (2015)
+- Héredité (2018)
+- Midsommar (2019)
+
+### Les classiques qu'il fait bon revoir
+- Sixième sens (1999)
+- The Blair Witch project (1999)
+- Scream (1996)
+- A Nightmare on Elm Street (1984)
+
+## Des petites fraicheures qui n'ont rien perdue de leur originalité
+- Rec (2007)
+- Paranormal activity (2007)
+- Drag Me to Hell (2009)
