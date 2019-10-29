@@ -35,19 +35,24 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 ## Amélie :
 
-- Films pas assez connus / un peu expérimentaux / un peu weird :
-Morse
-It follows
+### Films pas assez connus / un peu expérimentaux / un peu weird :
 
-- Film mainstream décomplexé family friendly
-Les Gremlins
+- Morse
+- It follows
 
-- Série à binger toute la nuit :
-Haunting of hill house
+### Film mainstream décomplexé family friendly
+
+- Les Gremlins
+
+### Série à binger toute la nuit :
+
+- Haunting of hill house
 
 ## Thomas :
 
-### Ma catégorie préférée du moment : "Horreur d'auteur"
+###  "Horreur d'auteur"
+
+Ma catégorie préférée du moment.
 
 - The Witch (2015)
 - Héredité (2018)
@@ -55,17 +60,23 @@ Haunting of hill house
 
 ### Les classiques qu'il fait bon revoir
 
+Mi frissons - mi nostalgie.
+
 - Sixième sens (1999)
 - The Blair Witch project (1999)
 - Scream (1996)
 
 ### Des petites fraicheures qui n'ont rien perdu de leur originalité
 
+Si vous les avez loupé à l'époque ...
+
 - Rec (2007)
 - Paranormal activity (2007)
 - Drag Me to Hell (2009)
 
-### Si je devais n'en conseiller qu'un... poils qui se dressent garantis.
+### Si je devais n'en conseiller qu'un...
+
+ Poils qui se dressent garantis
 
 - __The Visit__ (2015)
 
@@ -74,7 +85,7 @@ Haunting of hill house
 ### Les films dont ça fait 10 ans que je recherche désespérément le titre
 - Dead end (2003)
 
-## Les films dont j'ai mis 20 minutes à retrouver le titre
+### Les films dont j'ai mis 20 minutes à retrouver le titre
 - House on Haunted Hill (1999)
 
 ## Guewen :
