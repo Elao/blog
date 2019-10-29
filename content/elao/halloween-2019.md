@@ -75,3 +75,25 @@ Haunting of hill house
 ## Les films dont j'ai mis 20 minutes à retrouver le titre
 - House on Haunted Hill (1999)
 
+## Guewen :
+
+### Les classiques
+
+- Les oiseaux (1962)
+- L'exorciste (1973)
+- Shining (1980)
+- La mouche (1986)
+- Les dents de la mer (1975)
+- Carrie (1976)
+- Alien (1979)
+
+### Les japs
+
+- Ringu - The ring (1998)
+- Ju On - The Grudge (2002)
+
+### Les gentils
+
+- The others (2001)
+
+
