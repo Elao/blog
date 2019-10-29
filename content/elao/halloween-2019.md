@@ -19,9 +19,9 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 ## Anne-Laure :
 
-J'ai essayé de faire une sélection hétéroclite, pour donner quelques idées de films que j'aimerais faire découvrir ! 
+J'ai essayé de faire une sélection hétéroclite, pour donner quelques idées de films que j'aimerais faire découvrir !
 
-- Films qui font plus ou moins peur : 
+- Films qui font plus ou moins peur :
 The Descent
 Simetierre
 Threads
@@ -32,6 +32,20 @@ Dellamorte Dellamore
 Teeth
 Heartless
 
-- Films gores / marrants : 
+- Films gores / marrants :
 Elmer le remue méninge
 Braindead
+
+## Amélie :
+
+- Films pas assez connus / un peu expérimentaux / un peu weird :
+Morse
+It follows
+
+- Film mainstream décomplexé family friendly
+Les Gremlins
+
+- Série à binger toute la nuit :
+Haunting of hill house
+
+
