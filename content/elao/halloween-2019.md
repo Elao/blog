@@ -15,26 +15,23 @@ categories:         ["elao"]
 
 author_username: "elao"
 ---
-Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous ne pouvions pas passer à côté de l'occasion de vous faire profiter de nos listes de films préférés à regarder le soir d'Hallowen 🎃
+Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous ne pouvions pas passer à côté de l'occasion de vous faire profiter de nos listes de films préférés à regarder le soir d'Halloween 🎃.
 
 ## Anne-Laure :
 
-J'ai essayé de faire une sélection hétéroclite, pour donner quelques idées de films que j'aimerais faire découvrir !
+### Films qui font plus ou moins peur :
 
-- Films qui font plus ou moins peur :
-The Descent
-Simetierre
-Threads
+- Simetierre, Mary Lambert (1989)
+- Threads, Mick Jackson (1984)
+- Dark Touch, Marina de Van (2013)
 
-- Films bizarres :
-Parents
-Dellamorte Dellamore
-Teeth
-Heartless
+### Films bizarres / inquiétants :
 
-- Films gores / marrants :
-Elmer le remue méninge
-Braindead
+- Parents, Bob Balaban (1989)
+- Dellamorte Dellamore, Michele Soavi (1995)
+- Heartless, Philip Ridley (2010)
+- Toad Road, Jason Banker (2012)
+- Kissed, Lynne Stopkewich (1996)
 
 ## Amélie :
 
@@ -99,4 +96,5 @@ Haunting of hill house
 
 - Mother (2017)
 - La mouche (1986)
+
 
