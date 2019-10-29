@@ -19,7 +19,7 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 ## Anne-Laure :
 
-###  Films qui font plus ou moins peur :
+### Films qui font plus ou moins peur :
 
 - Simetierre, Mary Lambert (1989)
 - Threads, Mick Jackson (1984)
@@ -32,11 +32,6 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 - Heartless, Philip Ridley (2010)
 - Toad Road, Jason Banker (2012)
 - Kissed, Lynne Stopkewich (1996)
-
-###  Films rigolos / trash :
-
-- Elmer le remue méninge, Frank Henenlotter (1988)
-- Braindead, Peter Jackson (1992)
 
 ## Amélie :
 
