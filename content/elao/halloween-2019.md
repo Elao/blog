@@ -102,7 +102,7 @@ Si vous les avez loupé à l'époque ...
 - __Carrie__, ‎Brian De Palma (1976)
 - __Alien__, Ridley Scott (1979)
 
-### Les japs
+### Les jap's
 
 - __Ringu - The ring__, Hideo Nakata, Hiroshi Takahashi, Kôji Suzuki (1998)
 - __Ju On - The Grudge__, Takashi Shimizu (2002)
@@ -111,12 +111,10 @@ Si vous les avez loupé à l'époque ...
 
 - __The others__, Alejandro Amenábar (2001)
 
-### Je suis pas sur que ça soit de l'horreur / Les tordus
+### Les tordus
 
 - __Mother!__, Darren Aronofsky (2017)
 - __La mouche__, David Cronenberg (1986)
-
-
 
 Alors bons films, et happy Halloween ! 🎃🦇👻
 
