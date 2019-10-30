@@ -1,21 +1,24 @@
 ---
 type:               "post"
-title:              "Films d'Halloween 🎃 : la sélection de l'équipe"
-date:               "2019-10-29"
-date:               "2019-10-29"
+title:              "🎃 Films d'Halloween : la sélection de l'équipe 🍿"
+date:               "2019-10-31"
+publishdate:        "2019-10-31"
 summary:            true
 draft:              false
 slug:               "halloween-2019"
-description:        "Quelques idées pour rendre votre soirée d'Halloween un peu plus effrayante ou étrange 👻"
+description:        "Quelques idées pour rendre votre soirée d'Halloween un peu plus effrayante ou étrange ... 👻"
 
-thumbnail:          "/images/posts/thumbnails/yosemite.jpg"
-header_img:         ""
+thumbnail:          "/images/posts/thumbnails/halloween-2019.jpg"
+header_img:         "/images/posts/headers/halloween-2019.jpg"
 tags:               ["Halloween", "cinéma"]
 categories:         ["elao"]
 
 author_username: "elao"
 ---
-Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous ne pouvions pas passer à côté de l'occasion de vous faire profiter de nos listes de films préférés à regarder le soir d'Halloween 🎃.
+
+Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous ne pouvions pas passer à côté de l'occasion de vous faire profiter de nos listes de films préférés à regarder le soir d'Halloween. 🦇
+
+<!--more-->
 
 ## Anne-Laure
 
@@ -112,3 +115,11 @@ Si vous les avez loupé à l'époque ...
 
 - __Mother__, Darren Aronofsky (2017)
 - __La mouche__, David Cronenberg (1986)
+
+
+
+Alors bons films, et happy Halloween ! 🎃🦇👻
+
+---
+
+Photo by <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@jeremyyappy?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Jeremy Yap"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Jeremy Yap</span></a>
