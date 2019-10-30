@@ -17,7 +17,9 @@ author_username: "elao"
 ---
 Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous ne pouvions pas passer à côté de l'occasion de vous faire profiter de nos listes de films préférés à regarder le soir d'Halloween 🎃.
 
-## Anne-Laure :
+## Anne-Laure
+
+![](/images/posts/2019/halloween/anne-laure.png)
 
 ### Films qui font plus ou moins peur :
 
@@ -33,7 +35,9 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 - __Toad Road__, Jason Banker (2012)
 - __Kissed__, Lynne Stopkewich (1996)
 
-## Amélie :
+## Amélie
+
+![](/images/posts/2019/halloween/amelie.jpg)
 
 ### Films pas assez connus / un peu expérimentaux / un peu weird :
 
@@ -48,7 +52,9 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 - __Haunting of hill house__, Mike Flanagan (2018)
 
-## Thomas :
+## Thomas
+
+![](/images/posts/2019/halloween/thomas.png)
 
 ###  "Horreur d'auteur"
 
@@ -58,7 +64,7 @@ Ma catégorie préférée du moment.
 - __Héredité__, Ari Aster (2018) : un film d'horreur qui l'oublie parfois pour parler de famille.
 - __Midsommar__, Ari Aster (2019) : plus angoissant qu'effrayant, plus dérangeant que surprenant.
 
-### Des petites fraicheures qui n'ont rien perdu de leur originalité
+### Des petites fraîcheurs qui n'ont rien perdu de leur originalité
 
 Si vous les avez loupé à l'époque ...
 
@@ -68,9 +74,11 @@ Si vous les avez loupé à l'époque ...
 
 ### Si je devais n'en conseiller qu'un...
 
-- __The Visit__, M. Night Shyamalan (2015) : le réalisateur du Sixième Sens revient avec un budget minuscule et tout à (re)prouver. Le résultat est une petite pépite d'épouvante qui m'a littéralement fais dresser les poils sur les bras.
+- __The Visit__, M. Night Shyamalan (2015) : le réalisateur du Sixième Sens revient avec un budget minuscule et tout à (re)prouver. Le résultat est une petite pépite d'épouvante qui m'a littéralement fait dresser les poils sur les bras.
 
-## Florian :
+## Florian
+
+![](/images/posts/2019/halloween/flo.png)
 
 ### Les films dont ça fait 10 ans que je recherche désespérément le titre
 - __Dead end__, Jean-Baptiste Andrea (2003)
@@ -78,7 +86,9 @@ Si vous les avez loupé à l'époque ...
 ### Les films dont j'ai mis 20 minutes à retrouver le titre
 - __House on Haunted Hill__, William Malone (1999)
 
-## Guewen :
+## Guewen
+
+![](/images/posts/2019/halloween/guewen.png)
 
 ### Les classiques
 
