@@ -22,7 +22,7 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 ## Anne-Laure
 
-![](/images/posts/2019/halloween/anne-laure.png)
+![](/images/posts/2019/halloween/anne-laure.jpg)
 
 ### Films qui font plus ou moins peur :
 
@@ -57,7 +57,7 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 ## Thomas
 
-![](/images/posts/2019/halloween/thomas.png)
+![](/images/posts/2019/halloween/thomas.jpg)
 
 ###  "Horreur d'auteur"
 
@@ -81,7 +81,7 @@ Si vous les avez loupé à l'époque ...
 
 ## Florian
 
-![](/images/posts/2019/halloween/flo.png)
+![](/images/posts/2019/halloween/flo.jpg)
 
 ### Les films dont ça fait 10 ans que je recherche désespérément le titre
 - __Dead end__, Jean-Baptiste Andrea (2003)
@@ -91,7 +91,7 @@ Si vous les avez loupé à l'époque ...
 
 ## Guewen
 
-![](/images/posts/2019/halloween/guewen.png)
+![](/images/posts/2019/halloween/guewen.jpg)
 
 ### Les classiques
 
