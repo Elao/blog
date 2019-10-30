@@ -116,6 +116,36 @@ Si vous les avez loupé à l'époque ...
 - __Mother!__, Darren Aronofsky (2017)
 - __La mouche__, David Cronenberg (1986)
 
+## Maxime
+
+![](/images/posts/2019/halloween/maxime.jpg)
+
+Je n'y connais rien en film d'horreur alors je vais mettre des films qui font pas (tros) peur mais quand même avec des fantômes, vampires, monstres et autres étrangetés dignes d'Halloween.
+
+### Les films de mon enfance
+
+- __Ghostbusters__, Ivan Reitman (1984)
+- __Gremlins__, Joe Dante (1984)
+- __Beetlejuice__, Tim Burton (1988)
+- __The Addams Family__, Barry Sonnenfeld (1991)
+- __The Frighteners__ (Fantômes contre fantômes), Peter Jackson (1996)
+- __28 Days Later…__, Danny Boyle (2002)
+
+### Halloween en chanson
+
+- __Little Shop of Horrors__, Frank Oz (1986)
+- __The Rocky Horror Picture Show__, Jim Sharman (1975)
+- __L'Étrange Noël de monsieur Jack__, Henry Selick (1993)
+
+### Spécial vampire
+
+- __Blade__, Stephen Norrington (1998)
+- __Vampire in Brooklyn__, Wes Craven (1995)
+- __From Dusk till Dawn__, Robert Rodriguez (1994)
+- __Interview with the Vampire__, Neil Jordan (1994)
+- __Only Lovers Left Alive__, Jim Jarmusch (2014)
+
+
 Alors bons films, et happy Halloween ! 🎃🦇👻
 
 ---
