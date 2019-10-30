@@ -21,32 +21,32 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 ### Films qui font plus ou moins peur :
 
-- Simetierre, Mary Lambert (1989)
-- Threads, Mick Jackson (1984)
-- Dark Touch, Marina de Van (2013)
+- __Simetierre__, Mary Lambert (1989)
+- __The Incident__, Alexandre Courtès (2012)
+- __Dark Touch__, Marina de Van (2013)
 
 ### Films bizarres / inquiétants :
 
-- Parents, Bob Balaban (1989)
-- Dellamorte Dellamore, Michele Soavi (1995)
-- Heartless, Philip Ridley (2010)
-- Toad Road, Jason Banker (2012)
-- Kissed, Lynne Stopkewich (1996)
+- __Parents__, Bob Balaban (1989)
+- __Dellamorte Dellamore__, Michele Soavi (1995)
+- __Heartless__, Philip Ridley (2010)
+- __Toad Road__, Jason Banker (2012)
+- __Kissed__, Lynne Stopkewich (1996)
 
 ## Amélie :
 
 ### Films pas assez connus / un peu expérimentaux / un peu weird :
 
-- Morse
-- It follows
+- __Morse__, Tomas Alfredson (2009)
+- __It follows__, David Robert Mitchell (2015)
 
 ### Film mainstream décomplexé family friendly
 
-- Les Gremlins
+- __Les Gremlins__, Joe Dante (1984)
 
 ### Série à binger toute la nuit :
 
-- Haunting of hill house
+- __Haunting of hill house__, Mike Flanagan (2018)
 
 ## Thomas :
 
@@ -62,45 +62,43 @@ Ma catégorie préférée du moment.
 
 Si vous les avez loupé à l'époque ...
 
-- __Rec__ (2007) : un excellent found-footage espagnol debrouillard et inventif.
-- __The Babadook__ (2014) : un film d'horreur malin qui nous plonge dans les craintes d'une mère célibataire.
+- __Rec__, Jaume Balagueró, Paco Plaza (2007) : un excellent found-footage espagnol debrouillard et inventif.
+- __The Babadook__, Jennifer Kent (2014) : un film d'horreur malin qui nous plonge dans les craintes d'une mère célibataire.
 - __Drag Me to Hell__ (2009) : de l'horreur fun et gore, un Sam Raimi méconnu, digne héritier d'Evil Dead.
 
 ### Si je devais n'en conseiller qu'un...
 
-- __The Visit__ (2015) : le réalisateur du Sixième Sens revient avec un budget minuscule et tout à (re)prouver. Le résultat est une petite pépite d'épouvante qui m'a littéralement fais dresser les poils sur les bras.
+- __The Visit__, M. Night Shyamalan (2015) : le réalisateur du Sixième Sens revient avec un budget minuscule et tout à (re)prouver. Le résultat est une petite pépite d'épouvante qui m'a littéralement fais dresser les poils sur les bras.
 
 ## Florian :
 
 ### Les films dont ça fait 10 ans que je recherche désespérément le titre
-- Dead end (2003)
+- __Dead end__, Jean-Baptiste Andrea (2003)
 
 ### Les films dont j'ai mis 20 minutes à retrouver le titre
-- House on Haunted Hill (1999)
+- __House on Haunted Hill__, William Malone (1999)
 
 ## Guewen :
 
 ### Les classiques
 
-- Les oiseaux (1962)
-- L'exorciste (1973)
-- Shining (1980)
-- Les dents de la mer (1975)
-- Carrie (1976)
-- Alien (1979)
+- __Les oiseaux__, Alfred Hitchcock (1962)
+- __L'exorciste__, William Friedkin (1973)
+- __Shining__, Stanley Kubrick (1980)
+- __Les dents de la mer__, Steven Spielberg (1975)
+- __Carrie__, ‎Brian De Palma (1976)
+- __Alien__, Ridley Scott (1979)
 
 ### Les japs
 
-- Ringu - The ring (1998)
-- Ju On - The Grudge (2002)
+- __Ringu - The ring__, Gore Verbinski (1998)
+- __Ju On - The Grudge__, Takashi Shimizu, Toby Wilkins (2002)
 
 ### Les gentils
 
-- The others (2001)
+- __The others__, Alejandro Amenábar (2001)
 
 ### Je suis pas sur que ça soit de l'horreur / Les tordus
 
-- Mother (2017)
-- La mouche (1986)
-
-
+- __Mother__, Darren Aronofsky (2017)
+- __La mouche__, David Cronenberg (1986)
