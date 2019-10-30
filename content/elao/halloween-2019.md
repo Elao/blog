@@ -145,6 +145,33 @@ Je n'y connais rien en film d'horreur alors je vais mettre des films qui font pa
 - __Interview with the Vampire__, Neil Jordan (1994)
 - __Only Lovers Left Alive__, Jim Jarmusch (2014)
 
+## Ogi (Maxime.S)
+
+Sans prétention aucune, surtout adepte de séries, voici ma liste pour une ambiance comfy Halloween.
+
+### Chill & Décomplexés
+
+- __Les Nouvelles Aventures de Sabrina__, Roberto Aguirre-Sacasa (2018)
+- __Les Sorcières de Zugarramurdi__, Álex de la Iglesia (2014)
+
+### Doctor Who
+
+Cette série regorge d'épisodes aux thèmes et ambiances variées. 
+Mais certains épisodes en particulier relèvent du mystère et de l'épouvante nécessaires à passer une bonne soirée d'Halloween.  
+En voici une petite sélection:
+
+- __Blink__ (S03E10), Steven Moffat (2007): Évidemment. Ce classique introduit l'une des créatures les plus emblématiques et traumatisantes de la série. Bien que peu de fois ré-exploitées (cet épisode jamais égalé), elles laisseront à jamais une marque sur votre esprit.
+- __The Empty Child__ (S01E09), Steven Moffat (2006) : Il suffit d'un enfant et d'un masque à gaz pour vous donner des sueurs froides. __"Are you my mummy?"__. Cet épisode marque également la première apparition du personnage de Jack Harkness.
+- __Mummy on the Orient Express__ (S08E08), Jamie Matheson, (2014) : des morts mystérieuses, une enquête digne d'un Agatha Christie, une momie (et surtout: Clara (__Jenna-Louise Coleman__) ❤️).
+
+### En vrac
+
+Des films ou séries en mode pseudo horreur ou thriller, dans lesquels il peut valoir le coup de s'investir pour ceux qui auront envie de prolonger les plaisirs après Halloween:
+
+- __Hannibal__, Bryan Fuller (2013)
+- __Bates Motel__, Anthony Cipriano (2013): d'après l'oeuvre originale d'Alfred Hitchcock "Psychose", cette série se veut en fait une préquelle contemporaine.
+- __American Horror Story__, (2011) : Série [anthologique](https://fr.wikipedia.org/wiki/S%C3%A9rie_t%C3%A9l%C3%A9vis%C3%A9e#Anthologie), les 9 saisons sont très inégales, notamment niveau scénar. La série excelle pourtant dans la création d'une atmosphère dérangeante. En priorité: Murder House (saison 1), Asylum (saison 2), Hotel (saison 5), Cult (saison 7) ?
+- __Rosemary's Baby__, Roman Polanski (1968) ou l'adaptation en "série" (2 épisodes) de Agnieszka Holland (2014): inspiré du roman éponyme d'Ira Levin. Bien que dispensable, la série peut être une bonne occasion de découvrir l'oeuvre et saura mettre en place une ambiance pesante.
 
 Alors bons films, et happy Halloween ! 🎃🦇👻
 
