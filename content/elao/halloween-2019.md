@@ -54,9 +54,9 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 Ma catégorie préférée du moment.
 
-- __The Witch__ (2015) : sobre, patient et magnifique.
-- __Héredité__ (2018) : un film d'horreur qui l'oublie parfois pour parler de famille.
-- __Midsommar__ (2019) : plus angoissant qu'effrayant, plus dérangeant que surprenant.
+- __The Witch__, Robert Eggers (2015) : sobre, patient et magnifique.
+- __Héredité__, Ari Aster (2018) : un film d'horreur qui l'oublie parfois pour parler de famille.
+- __Midsommar__, Ari Aster (2019) : plus angoissant qu'effrayant, plus dérangeant que surprenant.
 
 ### Des petites fraicheures qui n'ont rien perdu de leur originalité
 
