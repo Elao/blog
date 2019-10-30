@@ -104,8 +104,8 @@ Si vous les avez loupé à l'époque ...
 
 ### Les japs
 
-- __Ringu - The ring__, Gore Verbinski (1998)
-- __Ju On - The Grudge__, Takashi Shimizu, Toby Wilkins (2002)
+- __Ringu - The ring__, Hideo Nakata, Hiroshi Takahashi, Kôji Suzuki (1998)
+- __Ju On - The Grudge__, Takashi Shimizu (2002)
 
 ### Les gentils
 
@@ -113,7 +113,7 @@ Si vous les avez loupé à l'époque ...
 
 ### Je suis pas sur que ça soit de l'horreur / Les tordus
 
-- __Mother__, Darren Aronofsky (2017)
+- __Mother!__, Darren Aronofsky (2017)
 - __La mouche__, David Cronenberg (1986)
 
 
