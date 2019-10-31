@@ -10,7 +10,7 @@ description:        "Quelques idées pour rendre votre soirée d'Halloween un pe
 
 thumbnail:          "/images/posts/thumbnails/halloween-2019.jpg"
 header_img:         "/images/posts/headers/halloween-2019.jpg"
-tags:               ["Halloween", "cinéma"]
+tags:               ["Halloween", "cinema"]
 categories:         ["elao"]
 
 author_username: "elao"
