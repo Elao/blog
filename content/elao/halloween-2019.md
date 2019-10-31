@@ -147,6 +147,8 @@ Je n'y connais rien en film d'horreur alors je vais mettre des films qui font pa
 
 ## Ogi (Maxime.S)
 
+![](/images/posts/2019/halloween/ogi.jpg)
+
 Sans prétention aucune, surtout adepte de séries, voici ma liste pour une ambiance comfy Halloween.
 
 ### Chill & Décomplexés
@@ -156,8 +158,8 @@ Sans prétention aucune, surtout adepte de séries, voici ma liste pour une ambi
 
 ### Doctor Who
 
-Cette série regorge d'épisodes aux thèmes et ambiances variées. 
-Mais certains épisodes en particulier relèvent du mystère et de l'épouvante nécessaires à passer une bonne soirée d'Halloween.  
+Cette série regorge d'épisodes aux thèmes et ambiances variées.
+Mais certains épisodes en particulier relèvent du mystère et de l'épouvante nécessaires à passer une bonne soirée d'Halloween.
 En voici une petite sélection:
 
 - __Blink__ (S03E10), Steven Moffat (2007): Évidemment. Ce classique introduit l'une des créatures les plus emblématiques et traumatisantes de la série. Bien que peu de fois ré-exploitées (cet épisode jamais égalé), elles laisseront à jamais une marque sur votre esprit.
