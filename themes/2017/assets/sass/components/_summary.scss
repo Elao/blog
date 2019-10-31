@@ -83,6 +83,8 @@
         margin-left: -320px;
         margin-bottom: 0;
         width: 230px;
+        max-height: calc(85vh - 150px);
+        overflow: auto;
 
         a {
             line-height: 1.75em;
