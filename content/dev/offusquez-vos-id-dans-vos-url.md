@@ -49,9 +49,9 @@ Une autre solution pourrait être d'utiliser des **identifiants entiers non auto
 
 ## L'offuscation
 
-Afin de conserver mes identifiants auto-incrementés en interne mais de ne pas les exposer j'ai opté pour l'[offuscation](https://fr.wikipedia.org/wiki/Offuscation). Le principe est simple, mes IDs sont encodés avant d'être inséré dans les urls puis décodés à chaque requête de façon a ce que l'utilisateur ne voit jamais les vrais IDs.
+Afin de conserver mes identifiants auto-incrementés en interne mais de ne pas les exposer j'ai opté pour l'[offuscation](https://fr.wikipedia.org/wiki/Offuscation). Le principe est simple, mes IDs sont encodés avant d'être inséré dans les urls puis décodés à chaque requête de façon à ce que l'utilisateur ne voie jamais les vrais IDs.
 
-En PHP il existe plusieurs bibliothèques permettant d'offusquer un ID numérique, encodant un entier en une chaine héxadécidémale, une chaine base64 ou un autre entier par exemple.
+En PHP il existe plusieurs bibliothèques permettant d'offusquer un ID numérique, encodant un entier en une chaîne héxadécidémale, une chaîne base64 ou un autre entier par exemple.
 
 * [hashids](https://hashids.org/)
 * [zackkitzmiller/tiny](https://github.com/zackkitzmiller/tiny-php)
