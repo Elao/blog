@@ -90,7 +90,13 @@ Tout d'abord créons un service pour offusquer nos IDs.
 
 {{< highlight php >}}
 <?php
-class Obfuscator
+interface ObfuscatorInterface
+{
+    public function obfuscate(int $id): int;
+    public function deobfuscate(int $id): int;
+}
+
+class OptimusObfuscator implements ObfuscatorInterface
 {
     private $optimus;
 
@@ -111,6 +117,30 @@ class Obfuscator
 }
 {{< /highlight >}}
 
+Configurons le service avec les générateurs.
+
+{{< highlight yaml >}}
+parameters:
+    env(APP_OPTIMUS_PRIME): "1580030173"
+    env(APP_OPTIMUS_INVERSE): "59260789"
+    env(APP_OPTIMUS_XOR): "1163945558"
+    env(APP_OPTIMUS_SIZE): "31"
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Jenssegers\Optimus\Optimus:
+        $prime: '%env(APP_OPTIMUS_PRIME)%'
+        $inverse: '%env(APP_OPTIMUS_INVERSE)%'
+        $xor: '%env(APP_OPTIMUS_XOR)%'
+        $size: '%env(APP_OPTIMUS_SIZE)%'
+{{< /highlight >}}
+
+> La bibiothèque met à disposition une commande pour générer les paramètres à injecter à *Optimus* : `php vendor/bin/optimus spark`.
+> Plus d'informations sur ces paramètres dans la [documentation](https://github.com/jenssegers/optimus/blob/master/README.md).
+
 Ensuite, afin de ne pas avoir à encoder nous-mêmes les IDs, créons un decorator pour le router Symfony.
 
 Voici un exemple simple qui **offusque** tous les paramètres `id` des routes.
@@ -122,7 +152,7 @@ class ObfuscatorUrlGenerator implements RouterInterface
     private $inner;
     private $obfuscator;
 
-    public function __construct(RouterInterface $inner, Obfuscator $obfuscator)
+    public function __construct(RouterInterface $inner, ObfuscatorInterface $obfuscator)
     {
         $this->inner = $inner;
         $this->obfuscator = $obfuscator;
