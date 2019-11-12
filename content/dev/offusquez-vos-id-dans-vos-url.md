@@ -139,6 +139,19 @@ class ObfuscatorUrlGenerator implements RouterInterface
         return $this->inner->setContext($name, $parameters, $referenceType);
     }
 
+    public function match($pathinfo)
+    {
+        $parameters = $this->inner->match($pathinfo);
+
+        foreach ($parameters as $key => $value) {
+            if ($key === 'id') {
+                $parameters[$key] = $this->obfuscator->deobfuscate($value);
+            }
+        }
+
+        return $parameters;
+    }
+
     public function setContext(RequestContext $context)
     {
         return $this->inner->setContext($context);
@@ -153,11 +166,6 @@ class ObfuscatorUrlGenerator implements RouterInterface
     {
         return $this->inner->getRouteCollection();
     }
-
-    public function match($pathinfo)
-    {
-        return $this->inner->match($pathinfo);
-    }
 }
 {{< /highlight >}}
 
@@ -170,51 +178,13 @@ services:
             $inner: '@App\Routing\ObfuscatorUrlGenerator.inner'
 {{< /highlight >}}
 
-Il faut ensuite **déoffusquer** les IDs à chaque requête avant de pouvoir les utiliser dans nos contrôleurs. Utilisons pour cela un `ArgumentValueResolver`.
-
-Voici celui qui correspondrait au router ci-dessus :
-
-{{< highlight php >}}
-<?php
-class ObfuscatedArgumentResolver implements ArgumentValueResolverInterface
-{
-    /** @var Obfuscator */
-    private $obfuscator;
-
-    public function __construct(Obfuscator $obfuscator)
-    {
-        $this->obfuscator = $obfuscator;
-    }
-
-    public function supports(Request $request, ArgumentMetadata $argument)
-    {
-        return $argument->getName() === 'id'
-            && $request->attributes->has(argument->getName());
-    }
-
-    public function resolve(Request $request, ArgumentMetadata $argument)
-    {
-        yield $this->obfuscator->deobfuscate($request->attributes->getInt('id'));
-    }
-}
-{{< /highlight >}}
-
-Attention, il faut attribuer à notre resolver une priorité plus grande que le *RequestAttributeValueResolver* de Symfony (qui est de 100) afin qu'il s'exécute avant celui-ci.
-
-
-{{< highlight yaml >}}
-App\ArgumentResolver\ObfuscatedArgumentResolver:
-    tags:
-        - { name: controller.argument_value_resolver, priority: 101 }
-{{< /highlight >}}
-
-Ainsi, notre router offusque automatiquement nos `id` :
+Ainsi, notre router offusque automatiquement nos `id` lors de la génération d'url :
 
 {{< highlight twig >}}
 {{ path('ma_route', { id: 20 }) }} {# /ma/route/1535832388 #}
 {{< /highlight >}}
 
-Et nous accédons à notre `id` en clair dans nos controller
+Et désoffusque nos `id` lors de la correspondance d'url nous permettant d'accéder à notre `id` en clair dans nos controller :
 
 {{< highlight php >}}
 <?php
@@ -237,6 +207,7 @@ Notre offuscation fonctionne mais uniquement sur les paramètres `id`. Nous auro
 Pour cela ajoutons une méthode `mustBeObfuscated` à notre `Obfuscator` et déportons y la logique utilisée dans le router et dans le resolver :
 
 {{< highlight diff >}}
+<?php
 class Obfuscator
 {
     // ...
@@ -262,16 +233,19 @@ class ObfuscatorUrlGenerator implements RouterInterface
 
         return $this->inner->setContext($name, $parameters, $referenceType);
     }
-}
 
-class ObfuscatedArgumentResolver implements ArgumentValueResolverInterface
-{
-    public function supports(Request $request, ArgumentMetadata $argument)
+    public function match($pathinfo)
     {
--        return $argument->getName() === 'id'
-+        $routeName = $request->attribute->get('_route');
-+        return $this->obfuscator->mustBeObfuscated($routeName, $argument->getName())
-            && $request->attributes->has(argument->getName());
+        $parameters = $this->inner->match($pathinfo);
+
+        foreach ($parameters as $key => $value) {
+-            if ($key === 'id') {
++            if ($this->obfuscator->mustBeObfuscated($parameters['_route'], $key)) {
+                $parameters[$key] = $this->obfuscator->deobfuscate($value);
+            }
+        }
+
+        return $parameters;
     }
 }
 {{< /highlight >}}
@@ -299,4 +273,4 @@ class Obfuscator
 }
 {{< /highlight >}}
 
-Pour aller plus loin, nous pouvons baser ce tableau de routes sur un fichier de configuration, sur des attributs ou des options dans le fichier de routing, sur une convention de nommage ou toute autre logique.
+Pour aller plus loin, nous pouvons baser ce tableau de routes sur un fichier de configuration, sur des attributs ou des options dans le fichier de routing, sur une convention de nommage ou implémenter toute autre logique dans la méthode `mustBeObfuscated`.
