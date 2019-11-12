@@ -169,13 +169,13 @@ class ObfuscatorUrlGenerator implements RouterInterface
 }
 {{< /highlight >}}
 
-{{< highlight php >}}
+{{< highlight yaml >}}
 services:
     App\Routing\ObfuscatorUrlGenerator:
         decorates: router
         decoration_priority: 1
         arguments:
-            $inner: '@App\Routing\ObfuscatorUrlGenerator.inner'
+            $inner: "@App\Routing\ObfuscatorUrlGenerator.inner"
 {{< /highlight >}}
 
 Ainsi, notre router offusque automatiquement nos `id` lors de la génération d'url :
