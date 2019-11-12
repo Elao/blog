@@ -15,6 +15,11 @@ categories:     ["jobs", "recrutement"]
 author_username:    "elao"
 ---
 
+<div class="disclaimer">
+	<strong>Avertissement : </strong>
+	Cette annonce est aujourd'hui caduque. Rendez-vous dans <a href="/fr/categories/recrutement/">notre rubrique "Recrutement"</a> pour consulter nos annonces les plus récentes.
+</div>
+
 <!--more-->
 
 Nous recherchons pour renforcer le pôle Frontend de notre tribu lyonnaise :
