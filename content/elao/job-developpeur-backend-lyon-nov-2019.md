@@ -9,7 +9,7 @@ description:    "élao recherche une développeuse / un développeur Backend à 
 
 thumbnail:      "/images/posts/2019/dev-back-nov-2019/image-full.jpg"
 header_img:     "/images/posts/2019/dev-back-nov-2019/image-banner.jpg"
-tags:           ["job", "web", "paris", "backend", "symfony", "PHP"]
+tags:           ["job", "web", "lyon", "backend", "symfony", "PHP", "Javascript"]
 categories:     ["elao", "recrutement", "Symfony"]
 
 author_username:    "elao"
@@ -33,7 +33,7 @@ Nous prenons en charge des projets d'applications web et mobile. Concrètement, 
 Les applications que nous développons s'appuient essentiellement sur :
 
 - le framework Symfony pour le Backend 
-- les librairies JS les plus récentes (React, Vue.js) pour le front 
+- les librairies JS les plus récentes (React, Vue.js) pour le Front 
 
 Mais nous restons bien entendu ouverts à d'autres technologies.
 
@@ -47,13 +47,14 @@ N'hésitez pas à consulter notre site internet pour avoir un [aperçu de nos pr
 
 Idéalement, vos compétences incluent :
 
-- Quelques années d'expérience en développment PHP
+- Quelques années d'expérience en développement PHP
 - Conception et développement
 - Web Services (API REST et GraphQL)
 - Git
 - Symfony
 - Bonnes connaissances des bases de données relationnelles
-- Des notions avancées de Javascript (ES6)
+- Des notions avancées de Javascript (ES6+)
+- Notions de DDD et [architecture hexagonale](/fr/dev/architecture-hexagonale-symfony/)
 - Expérience des tests unitaires et fonctionnels
 - Qualité du code (pair programming, code review, documentation)
 - Respect des standards et bonnes pratiques
@@ -62,12 +63,14 @@ Note : Apprécier d'autres langages (Golang, Java, Python, etc.) n'est absolumen
 
 ### L'humain, c'est bien aussi ...
 
-- Vous êtes passionné(e),
-- Vous êtes curieux(se), doté de l'esprit d’équipe et d'une bonne capacité d’analyse,
-- Vous n'avez pas peur de prendre des initiatives, d'être force de proposition,
-- Vous êtes soucieux(se) de comprendre les besoins métiers et fonctionnels de chaque projet,
-- Vous appliquez les bonnes pratiques et vous ne passez pas à côté de l’écriture des tests,
-- Vous souhaitez vous impliquer dans la vie de l'entreprise
+Oui, parce qu'on recherche un collègue, pas seulement un développeur de génie (on en a déjà en magasin). Ce qui nous intéresse, c'est aussi quelqu'un qui :
+
+- apprécie son travail
+- fait preuve de rigueur et applique les bonnes pratiques
+- sait échanger sur un problème technique de manière constructive et faire des revues de codes bienveillantes
+- s'intéresse et est soucieux des besoins métiers, car ils sont au coeur de notre pratique
+- nous donne son avis (parce qu'il nous intéresse et qu'on n'est pas parfait)
+- aura envie de s'impliquer dans la vie de l'entreprise (entendez-ici : nourrir le chat et discuter autour d'un verre ou d'un petit dej' de temps en temps)
 
 Note : l'humour est bien vu ; un peu de raffinement ne ferait pas de mal à l'équipe.
 
@@ -81,17 +84,27 @@ Apprendre : à travers nos partages, nous souhaitons toujours apprendre. Nous pr
 
 ## Le cadre de travail
 
-Nos bureaux sont situés à Charpennes, dans une résidence calme, à proximité des commerces, des principales lignes de transport (bus, métro, tramways, SNCF), des lieux de restauration, et à 10 minutes à pied du Parc de la Tête d'or.
+Nos bureaux sont situés à Charpennes, dans une résidence calme, à proximité des commerces, des principales lignes de transport (bus, métro, tramways, SNCF), des lieux de restauration, et à 15 minutes à pied du Parc de la Tête d'or.
 
 Notre open space, à taille humaine, n'a rien d'un hall de gare.
 
-Parmi les avantages proposés à nos collaborateurs : mutuelle prise en charge par l'entreprise à 100%, tickets restaurant, IKV (indemnité kilométrique vélocipède), thé et machine à café en libre service, etc.
+Postes de travail : Mac OSX, virtualisation (Vagrant, Docker), Slack ...
+
+La possibilité vous est offerte de passer quelques journées en télé-travail.
+
+Parmi les avantages proposés à nos collaborateurs : 
+
+* mutuelle prise en charge par l'entreprise à 100%
+* tickets restaurant
+* IKV (indemnité kilométrique vélocipède)
+* cagnotte personnelle pour vos dépenses de dév ou de formation (participation aux événements Web, licence PHPStorm)
+* thé et machine à café en libre service
 
 -----------------------------------------------------------------------------------------------------------------
 
 ## Comment postuler ? 
 
-<span class="side-note">📨</span>  Envoyez-nous votre lettre de motivation et votre CV, composés de votre plus belle écriture (ou en Arial taille 12, c'est bien aussi) à **jobs@elao.com**.
+<span class="side-note">📨</span>  Envoyez-nous votre CV accompagné d'un petit mot composé de votre plus belle écriture (ou en Arial taille 12, c'est bien aussi) à **jobs@elao.com**.
 
 Si vous souhaitez nous rencontrer avant d'entamer des démarches formelles, n'hésitez pas à nous aborder ! [L'équipe](https://www.elao.com/fr/la-tribu/) se fera une joie et un devoir de répondre à toutes vos questions.
 
