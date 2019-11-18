@@ -166,7 +166,7 @@ class ObfuscatorUrlGenerator implements RouterInterface
             }
         }
 
-        return $this->inner->setContext($name, $parameters, $referenceType);
+        return $this->inner->generate($name, $parameters, $referenceType);
     }
 
     public function match($pathinfo)
