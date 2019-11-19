@@ -15,6 +15,11 @@ categories:     ["elao", "recrutement", "Symfony"]
 author_username:    "elao"
 ---
 
+<div class="disclaimer">
+	<strong class="disclaimer__title">Avertissement : </strong>
+	Cette annonce est aujourd'hui caduque. Rendez-vous dans <a href="/fr/categories/recrutement/">notre rubrique "Recrutement"</a> pour consulter nos annonces les plus récentes.
+</div>
+
 Nous recherchons **des développeuses ou développeurs** pour notre tribu parisienne. En quelques mots, voici le cadre et la mission que nous vous proposons. Notre site et notre blog vous apporteront également plus de précisions et l'équipe se fera une joie de compléter au besoin et/ou de témoigner de son quotidien !
 <!--more-->
 

@@ -16,6 +16,11 @@ categories:     ["recrutement", "elao"]
 author_username:    "elao"
 ---
 
+<div class="disclaimer">
+    <strong class="disclaimer__title">Avertissement : </strong>
+	Cette annonce est aujourd'hui caduque. Rendez-vous dans <a href="/fr/categories/recrutement/">notre rubrique "Recrutement"</a> pour consulter nos annonces plus récentes.
+</div>
+
 **Rejoignez-nous !**
  Nous recrutons pour notre tribu lyonnaise **4 nouveaux(elles) passionné(e)s**. Nous sommes impatients d'enrichir l'équipe pour continuer à concrétiser de beaux projets et ensemble, relever les challenges techniques que l'on apprécie tant 🍺
 
