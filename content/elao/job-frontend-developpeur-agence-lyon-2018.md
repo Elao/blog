@@ -16,7 +16,7 @@ author_username:    "elao"
 ---
 
 <div class="disclaimer">
-	<strong>Avertissement : </strong>
+	<strong class="disclaimer__title">Avertissement : </strong>
 	Cette annonce est aujourd'hui caduque. Rendez-vous dans <a href="/fr/categories/recrutement/">notre rubrique "Recrutement"</a> pour consulter nos annonces les plus récentes.
 </div>
 
