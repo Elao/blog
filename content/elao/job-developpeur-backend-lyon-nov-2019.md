@@ -92,6 +92,8 @@ Postes de travail : Mac OSX, virtualisation (Vagrant, Docker), Slack ...
 
 La possibilité vous est offerte de passer quelques journées en télé-travail.
 
+La fourchette de rémunération se situe entre 38k€ et 45k€ annuelle brute.
+
 Parmi les avantages proposés à nos collaborateurs : 
 
 * mutuelle prise en charge par l'entreprise à 100%
