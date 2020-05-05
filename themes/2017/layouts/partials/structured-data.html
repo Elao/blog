@@ -14,7 +14,7 @@
       "headline":       "{{ .Title }}",
       "articleSection": "{{ .Section }}",
       "datePublished":  "{{ .PublishDate.Format "02 Jan 2006" }}",
-      "dateModified":   "{{ if isset .Params "modifiedDate" }}{{ .Params.modifiedDate | dateFormat "02 Jan 2006" }}{{ else }}{{ .PublishDate.Format "02 Jan 2006" }}{{ end }}",
+      "dateModified":   "{{ if isset .Params "modifieddate" }}{{ .Params.modifieddate | dateFormat "02 Jan 2006" }}{{ else }}{{ .PublishDate.Format "02 Jan 2006" }}{{ end }}",
       "image": {
         "@type": "ImageObject",
         "url": "{{ .Site.BaseURL }}{{ slicestr .Params.thumbnail 1 }}",
