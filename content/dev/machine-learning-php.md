@@ -16,45 +16,45 @@ author_username: "mcolin"
 
 ---
 
-L'intelligence artificielle et le machine learning sont deux notions en vogue en ce moment mais assez abstraites pour beaucoup de développeur. Nous allons dymistifié un peu cela dans cette article et voir comment et pourquoi utiliser le machine learning.
+L'**intelligence artificielle** et le **machine learning** sont deux notions en vogue en ce moment mais assez abstraites pour beaucoup de développeurs. Nous allons dymistifier un peu cela dans cet article et voir comment et pourquoi utiliser le **machine learning**.
 
-N'étant moi même pas spécialiste, cet article est une introduction simple et basique au machine learning ainsi qu'un retour sur mes expérimentation en la matière avec PHP. Il ne couvrira donc pas la totalité de ce qu'est et de ce que permet le machine learning.
+N'étant moi même pas spécialiste, cet article est une introduction simple et basique au machine learning ainsi qu'un retour sur mes expérimentation en la matière avec **PHP** pour des problèmatiques qui peuvent ce posé dans le monde du web. Il ne couvrira donc pas la totalité de ce qu'est et de ce que permet le **machine learning**.
 
 ## Le machine learning
 
-Le machine learning est une branche de l'intelligence artificielle qui consiste à nourrir un algorithme avec une quantité importante de données dans un domaine précis afin que celui ci en détermine des règles lui permettant de résoudre un problème dans ce même domaine.
+Le **machine learning** est une branche de l'**intelligence artificielle** qui consiste à nourrir un algorithme avec une quantité importante de données dans un domaine précis afin que celui ci en détermine des règles lui permettant de résoudre un problème dans ce même domaine.
 
-Cette phase d'ingestion de données est appelé l'apprentissage ou l'entrainement. Il existe plusieurs types d'apprentissage :
+Cette phase d'ingestion de données est appelé l'**apprentissage** ou l'**entrainement**. Il existe plusieurs types d'apprentissage :
 
-* Supervisé : on fourni les données d'exemple ainsi que les réponses attendues
-* Non supervisé : on ne fourni que les données d'exemple, l'agorithme tir seul des conclusions à partir des données
-* Semi-supervisé : seule une partie des données d'exemple est associée à une réponse
-* Par remforcement : similaire à l'apprentissage non-suppervisé mais on "récompense" la machine pour ses bonnes réponses
-* Par transfert : la machine se base sur les solutions à des problèmes similaires pour trouver la réponse
+* **Supervisé** : on fourni les données d'exemple ainsi que les réponses attendues
+* **Non supervisé** : on ne fourni que les données d'exemple, l'agorithme tir seul des conclusions à partir des données
+* **Semi-supervisé** : seule une partie des données d'exemple est associée à une réponse
+* **Par remforcement** : similaire à l'apprentissage non-suppervisé mais on "récompense" la machine pour ses bonnes réponses
+* **Par transfert** : la machine se base sur les solutions à des problèmes similaires pour trouver la réponse
 
-Grâce au machine learning, un ordinateur peut résoudre plusieurs types de problèmes, je vais vous parler de trois d'entre eux :
+Grâce au **machine learning**, un ordinateur peut résoudre plusieurs types de problèmes, je vais vous parler de trois d'entre eux :
 
-* Classer des éléments dans des groupes prédéfinit, il s'agit de la **classification**
-* Trouver une relations entre plusieurs variables afin d'en prédire l'évolution, il s'agit de la **regression**
-* Rassembler des éléments qui se ressemblent groupes homogènes, il s'agit du **clustering**
+* **Classer** des éléments dans des groupes prédéfinit, il s'agit de la **classification**
+* Trouver une relations entre plusieurs variables afin d'en **prédire** l'évolution, il s'agit de la **régression**
+* **Regrouper** des éléments qui se ressemblent en groupes homogènes, il s'agit du **clustering**
 
 L'une de difficulté du machine learning est de déterminer quel type d'apprentissage et quel type d'algorithme correspond à son problème, puis de modèliser ses données pour correspondre aux besoins de l'algorithme.
 
 ## PHP ML
 
-Etant moi même développeur PHP, j'ai souhaité explorer une piste me permettant de rester dans l'écosystème que je maîtrise et me concentrer le machine learning.
+Etant moi même développeur **PHP**, j'ai souhaité explorer une piste me permettant de rester dans l'écosystème que je maîtrise et me concentrer le **machine learning**.
 
-[PHP ML](https://github.com/php-ai/php-ml) est une bibliothèque permettant de faire du machine learning avec PHP. Elle repose sur une bibliothèque écrit en C++, [libsvm](https://www.csie.ntu.edu.tw/~cjlin/libsvm/), piloté par **PHP ML**. Le binaire est fourni pour Windows, macOS et Linux, il n'y a rien a installer en plus et nous n'aurons qu'à manipuler du **PHP**.
+[PHP ML](https://github.com/php-ai/php-ml) est une bibliothèque permettant de faire du **machine learning avec PHP**. Certains algorithmes sont implémentés directement en **PHP**, d'autres utilisent une bibliothèque écrit en C++, [libsvm](https://www.csie.ntu.edu.tw/~cjlin/libsvm/), piloté par **PHP ML**. Le binaire est fourni pour Windows, macOS et Linux, il n'y a rien a installer en plus et nous n'aurons qu'à manipuler du **PHP**.
 
 ```
 composer require php-ai/php-ml
 ```
 
-Dans la suite de l'article, je vais détailler quelques types de problèmes résolvable grâce au **machine learning**, lister quelques de cas d'usages concrêts dans le monde du web et présenter un exemple avec **PHP ML**.
+Dans la suite de l'article, je vais détailler quelques types de problèmes résolvables grâce au **machine learning**, lister quelques de cas d'usages concrêts dans le monde du web et présenter un exemple avec **PHP ML**.
 
 ## La classification
 
-La classification permet de classer des éléments dans des groupes. Il s'agit d'apprentissage supervisé, on entraîne l'algorithme avec un jeu de données associant un grand nombre d'éléments exemples à des groupes groupes. L'algorithme ainsi entrainé pourra déterminer à quel groupe appartient un nouvel élément.
+**La classification** permet de classer des éléments dans des groupes. Il s'agit d'apprentissage supervisé, on entraîne l'algorithme avec un jeu de données associant un grand nombre d'éléments exemples à des groupes prédéfinis. L'algorithme ainsi entrainé pourra déterminer à quel groupe appartient un nouvel élément.
 
 Concrêment, les taches de classification peuvent être pré-machés voir complèment automatisé grâce à ce type d'algorithme.
 
@@ -64,16 +64,26 @@ Par exemple :
 * Déterminer si un message est positif ou négatif
 * Classer des articles dans des catégories
 * Classer des messages entre urgent et non urgent
-* Répondre à une question par oui ou non
+* Classer des messages en spam
 
 ### Uses cases
 
 Prenons l'exemple d'une application bancaire qui devrait classer les transactions en catégories (restaurant, loisir, shopping, loyer, salaire, ...).
 
-Nous avons en entrer un fichier CSV comportant dans une première colonne le libellé des transactions et dans une seconde colonne la catégorie attendue.
+<figure>
+  <img src="/images/posts/2020/machine-learning/classification-chart.svg" alt="" />
+</figure>
+
+Nous avons en entrer un fichier CSV comportant dans une première colonne le libellé des transactions et dans une seconde colonne la catégorie attendue. Plus vous aurez de données, plus votre algorithme aura des chances d'être juste.
 
 ```csv
 "label", "category"
+"FACTURE(S) CARTE XXX DU 010113 APPLE ITUNES ST LUX 1,79EUR", "shopping"
+"FACTURE(S) CARTE XXX DU 120114 CARREFOUR VILLE VILLEURBANNE", "food"
+"FACTURE(S) CARTE XXX DU 190115 PAYPAL 0800 942 890", "shopping"
+"VIREMENT RECU TIERS ELAO SARL ELAO - SAL012013", "wage"
+"RETRAIT DAB 17/02/13 20H49 0398493 BNP PARIBAS LYON 2EME XXX", "withdrawals"
+"PRELEVEMENT FREE TELECOM NUM 684936 ECH 01.04.13 REF FREE HAUTDEBIT", "multimedia"
 ```
 
 Il faut tout d'abbord charger ces données :
@@ -85,14 +95,23 @@ use Phpml\Dataset\CsvDataset;
 $data = new CsvDataset('data.csv', 1);
 {{< /highlight >}}
 
-Ensuite, il faut modeliser ces données sous une forme compréhensible par l'algorithme (généralement des vecteurs, des matrices, bref... bref des maths 😁). Pour cela on va utiliser des *transformer*.
+Ensuite, il faut modeliser ces données sous une forme compréhensible par l'algorithme (généralement des chiffres, des vecteurs, des matrices, ... bref, des maths 😁). Pour cela on va utiliser des *transformer*.
 
 {{< highlight php >}}
 <?php
 use Phpml\FeatureExtraction\{TokenCountVectorizer,TfIdfTransformer,StopWords};
 use Phpml\Tokenization\WordTokenizer;
+use Phpml\Transformer;
+
+$singleColumnTransformer = new class implements Transformer {
+  public function fit(array $samples, ?array $targets = null): void { }
+  public function transform(array &$samples, ?array &$targets = null): void {
+    $samples = array_column($samples, 0);
+  }
+}
 
 $transformers = [
+    $singleColumnTransformer,
     new TokenCountVectorizer(new WordTokenizer(), StopWords::factory('French')),
     new TfIdfTransformer()
 ];
@@ -100,21 +119,23 @@ $transformers = [
 
 Dans notre cas, c'est la présence de certains mots qui va nous indiquer la catégorie de la transaction.
 
-Le `TokenCountVectorizer` va extraire donc tout les mots de nos données, hors stopwords, puis compter leur occurences dans chaque libellé.
+`$singleColumnTransformer` va extraire la première colonne de nos données, le libellé des transactions.
 
-Puis, le `TfIdfTransformer` va utilise l'algorithme [TF-IDF](https://fr.wikipedia.org/wiki/TF-IDF) pour convertir cela en fréquence d'utilisation de chaque mot dans nos libellés.
+Le `TokenCountVectorizer` va extraire tous les mots de nos libellés, hors stopwords, et compter leur occurence dans chaque libellé.
+
+Puis, le `TfIdfTransformer` va utiliser l'algorithme [TF-IDF](https://fr.wikipedia.org/wiki/TF-IDF) pour convertir cela en fréquence d'utilisation de chaque mot dans nos libellés.
 
 > TF-IDF (term frequency–inverse document frequency), est une statistic numérique qui a pour but de reflèter à quel point un mot est important pour un document dans une collection ou un corpus.
 
 Maintenant que nos données sont prètes, nous allons pouvoir choisir notre algorithme de classification et l'entrainé.
 
-PHP-ML fourni trois algorithmes :
+**PHP-ML** fourni trois algorithmes :
 
-* `Phpml\Classification\SVC` qui utilise [<abbr title="Support Vector Machine">SVM</abbr>](https://fr.wikipedia.org/wiki/Machine_%C3%A0_vecteurs_de_support)
+* `Phpml\Classification\SVC`  qui est une configuration de [<abbr title="Support Vector Machine">SVM</abbr>](https://fr.wikipedia.org/wiki/Machine_%C3%A0_vecteurs_de_support) dédié à la classification
 * `Phpml\Classification\NaiveBayes` qui utilise la [classification naïve bayésienne](https://fr.wikipedia.org/wiki/Classification_na%C3%AFve_bay%C3%A9sienne)
 * `Phpml\Classification\KNearestNeighbors` qui utilise la [méthode des k plus proches voisins](https://fr.wikipedia.org/wiki/M%C3%A9thode_des_k_plus_proches_voisins)
 
-Il n'y a pas de meilleur algorithme dans l'absolut, l'efficacité de chacun dépend des données (quantité et qualité) et du problème à résoudre.
+En **machine learning**, il n'y a pas de meilleur algorithme dans l'absolut, l'efficacité de chacun dépend des données (type, quantité et qualité) et du problème à résoudre.
 
 Commençons avec `SVC` :
 
@@ -123,12 +144,11 @@ Commençons avec `SVC` :
 use Phpml\Classification\SVC;
 use Phpml\SupportVectorMachine\Kernel;
 
-$estimator = new SVC(Kernel::RBF, $cost = 10000);
-$estimator->setVarPath(__DIR__ . '/var/model.data');
+$estimator = new SVC();
 $pipeline = new Pipeline($transformers, $estimator);
 {{< /highlight >}}
 
-L'entrainement est à réalisé une fois et générera un fichier qui servira pour les prédictions.
+On entraine tout d'abbord l'algorithme avec nos données :
 
 {{< highlight php >}}
 <?php
@@ -139,8 +159,160 @@ Nous pouvons ensuite faire des prédictions sur de nouvelles transactions :
 
 {{< highlight php >}}
 <?php
-$pipeline->predict(['Lorem ipsum']);
+$pipeline->predict(['FACTURE(S) CARTE XXX DU 230713 DECATHLON LYON']); // => ['shopping']
 {{< /highlight >}}
+
+Nous pouvons faire de même avec `NaiveBayes`
+
+{{< highlight php >}}
+<?php
+$estimator = new NaiveBayes();
+$pipeline = new Pipeline($transformers, $estimator);
+$pipeline->train($data->getSamples(), $data->getTargets());
+$pipeline->predict(['...']);
+{{< /highlight >}}
+
+ou avec `KNearestNeighbors`
+
+{{< highlight php >}}
+<?php
+$estimator = new KNearestNeighbors();
+$pipeline = new Pipeline($transformers, $estimator);
+$pipeline->train($data->getSamples(), $data->getTargets());
+$pipeline->predict(['...']);
+{{< /highlight >}}
+
+### Calculer la justesse des classifications
+
+Afin de déterminer **quel algorithme est le meilleur**, nous devons calculer sa précisions. Pour cela, il faut couper nos données en deux partie. Nous allons par exemple utiliser 90% de nos données pour entrainer l'algorithme et vérifier qu'il donne les bonnes prévisions pour les 10% de données restantes.
+
+**PHP-ML** fourni la class `RandomSplit` pour cela :
+
+{{< highlight php >}}
+$data = new CsvDataset(__DIR__ . '/transactions.csv', 1, true, ',');
+$split = new RandomSplit($data, 0.1); // 10% pour les tests
+{{< /highlight >}}
+
+Calculons ensuite la justesse de nos prédictions avec la classe `Accuracy` :
+
+{{< highlight php >}}
+$pipeline = new Pipeline($transformers, $estimator);
+$pipeline->train($split->getTrainSamples(), $split->getTrainLabels());
+$predicted = $pipeline->predict($split->getTestSamples());
+
+echo Accuracy::score($split->getTestLabels(), $predicted) . "\n";
+{{< /highlight >}}
+
+Avec les paramètres par défaut de chaque algorithme, sur un jeu de données de 1700 transactions, j'obtiens les résultats suivants :
+
+<table class="table">
+  <tr>
+    <th>algorithme</th>
+    <th>score</th>
+    <th>prédictions justes</th>
+  <tr>
+  <tr>
+    <th>SVC</th>
+    <td>0.43406593406593</td>
+    <td>43%</td>
+  </tr>
+  <tr>
+    <th>NaiveBayes</th>
+    <td>0.95604395604396</td>
+    <td class="good">95%</td>
+  </tr>
+  <tr>
+    <th>KNearestNeighbors</th>
+    <td>0.93956043956044</td>
+    <td class="good">93%</td>
+  </tr>
+</table>
+
+On obtiens seulement 43% de prédiction juste pour `SVC` mais plus de 90% avec `NaiveBayes` et `KNearestNeighbors`. C'est à dire que ces deux algorithmes arrivent à classer mes transactions dans la bonne catégorie plus de 9 fois sur 10.
+
+Voyons tout de même si on ne peux pas améliorer les résultats. L'algorithme `NaiveBayes` ne dispose d'aucun paramètre, le seul moyen d'augmenter sa justesse de prédiction et d'augmenter la quantité et la qualité des données d'entrainement. Par contre `SVC` et `KNearestNeighbors` dispose tous les deux de paramètres. Essayons d'en modifier les valeurs.
+
+### Paramètrer les algorithmes
+
+Nous pouvons modifier [de nombreux paramètre sur l'algorithme **SVC**](https://php-ml.readthedocs.io/en/latest/machine-learning/classification/svc/).
+
+Essayons d'intéragir avec le paramètre `$cost` :
+
+{{< highlight php >}}
+<?php
+new SVC(Kernel::RBF, $cost = 10);
+{{< /highlight >}}
+
+On voit tout de suite qu'on ratrappe largement les autres algorithmes, 99% de prédictions justes c'est vraiment très bon.
+
+<table class="table">
+  <tr>
+    <th>$cost</th>
+    <th>score</th>
+    <th>prédictions justes</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0.43406593406593</td>
+    <td>43%</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>0.94767441860465</td>
+    <td>95%</td>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>0.98837209302326</td>
+    <td class="good">99%</td>
+  </tr>
+  <tr>
+    <td>1000</td>
+    <td>0.98837209302326</td>
+    <td class="good">99%</td>
+  </tr>
+</table>
+
+Essayons de voir si on peut faire la même chose avec `KNearestNeighbors`. Nous pouvons modifier le paramètre `$k` indiquant le nombre de plus proches voisins à analyser.
+
+{{< highlight php >}}
+<?php
+new KNearestNeighbors($k = 5);
+{{< /highlight >}}
+
+Malheureusement ici, on perd clairement en justesse.
+
+<table class="table">
+  <tr>
+    <th>$k</th>
+    <th>score</th>
+    <th>prédictions justes</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0.93023255813953</td>
+    <td>93%</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>0.92441860465116</td>
+    <td>92%</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>0.90697674418605</td>
+    <td class="bad">90%</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>0.88372093023256</td>
+    <td class="bad">88%</td>
+  </tr>
+</table>
+
+On peut également modifier le paramètre `$distanceMetric` avec l'un des différents type de distance disponible (Minkowski, Manhattan, Euclidean, Chebyshev), mais les prédictions restes moins justes qu'avec **SVC**.
+
+En conclusion, l'algorithme **SVC** avec un *cost* à 100 est la solution qui offre les prédictions les plus justes pour notre problème.
 
 ## La régression
 
@@ -368,18 +540,18 @@ Et cela nous donne des métriques nous aidant à déterminer quelle régression 
     <th>LeastSquares</th>
     <td>38276</td>
     <td>0.0349</td>
-    <td class="success">125</td>
-    <td class="success">79</td>
+    <td class="good">125</td>
+    <td class="good">79</td>
     <td>889</td>
     <td>0.82</td>
   </tr>
   <tr>
     <th>SVR(LINEAR)</th>
-    <td class="success">32062</td>
-    <td class="success">0.0335</td>
+    <td class="good">32062</td>
+    <td class="good">0.0335</td>
     <td>131</td>
     <td>114</td>
-    <td class="success">730</td>
+    <td class="good">730</td>
     <td>0.82</td>
   </tr>
   <tr>
@@ -389,7 +561,7 @@ Et cela nous donne des métriques nous aidant à déterminer quelle régression 
     <td>340</td>
     <td>280</td>
     <td>1082</td>
-    <td class="success">0.85</td>
+    <td class="good">0.85</td>
   </tr>
 </table>
 
@@ -397,7 +569,7 @@ On constate ici que les regressions linéaires ont donné des résultats plus ju
 
 ## Clustering
 
-Le clustering permet de regrouper des éléments similaires dans des groupes homogènes. A la différence de la classification, il s'agit de d'apprentissage non supervisé, les groupes ne sont pas connu à l'avance, c'est à l'algorithme de les déterminer. L'intéret n'est pas seulement de regrouper ces éléments, mais également de faire émerger des groupes à partir de nos données.
+Le **clustering** permet de regrouper des éléments similaires dans des groupes homogènes. A la différence de la **classification**, il s'agit de d'**apprentissage non supervisé**, les groupes ne sont pas connu à l'avance, c'est à l'algorithme de les déterminer. L'intéret n'est pas seulement de regrouper ces éléments, mais également de faire émerger des groupes à partir de nos données.
 
 Le clustering peut permettre par exemple de :
 
@@ -420,6 +592,7 @@ https://www.youtube.com/watch?v=aU7EWwLtiOg
 
   figure {
     margin-bottom: 30px;
+    text-align: center;
   }
 
   figcaption {
@@ -439,8 +612,12 @@ https://www.youtube.com/watch?v=aU7EWwLtiOg
     padding: 0 10px;
   }
 
-  .table th.success, .table td.success {
+  .table th.good, .table td.good {
     background-color: #1AC580;
+  }
+
+  .table th.bad, .table td.bad {
+    background-color: #ED4337;
   }
 
   .data-color {
@@ -455,7 +632,6 @@ https://www.youtube.com/watch?v=aU7EWwLtiOg
     margin-right: 5px;
     border: 1px solid #000;
   }
-
 
   .data-color.color-1::before { background-color: #bf6969; }
   .data-color.color-2::before { background-color: #69bf69; }
