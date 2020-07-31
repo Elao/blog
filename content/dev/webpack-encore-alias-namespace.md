@@ -14,9 +14,9 @@ categories:         ["Dev", "Front", "Symfony"]
 author_username:    "tjarrand"
 ---
 
-Si vous travaillez avec Symfony et que gérez votre base de code javascript avec Webpack Encore, j'ai aujourd'hui une petite astuce méconue qui pourrait vous simplifier la vie : les alias Webpack.
+Si vous travaillez avec Symfony et gérez votre base de code javascript avec Webpack Encore, j'ai aujourd'hui une petite astuce méconnue qui pourrait vous simplifier la vie : les alias Webpack.
 
-_Note: Si vous n'utilisez pas Webpack Encore dans vos projets Symfony, vous devriez peut-être y jetter un oeil ..._
+_Note: Si vous n'utilisez pas Webpack Encore dans vos projets Symfony, vous devriez peut-être y jeter un oeil ..._
 
 ## Contexte
 
@@ -44,9 +44,9 @@ Ce n'est pas toujours plaisant à écrire de tête et encore moins à refactorer
 
 ## Coté back
 
-En PHP, on est habitué aux __namespaces__, qui permettent de referencer une classe par un chemin __absolu__ qui ne dépends donc pas de l'endroit où l'on se trouve.
+En PHP, on est habitué aux __namespaces__, qui permettent de référencer une classe par un chemin __absolu__ qui ne dépend donc pas de l'endroit où l'on se trouve.
 
-On commence par définir un namespace pour un chemin donné notre `composer.json` :
+On commence par définir un namespace pour un chemin donné dans notre `composer.json` :
 
 ```json
 "autoload": {
@@ -102,7 +102,7 @@ Encore
     })
 ```
 
-Et simplifiez vous la vie :
+Et simplifiez-vous la vie :
 
 ```javascript
 import 'Style/app.scss';
