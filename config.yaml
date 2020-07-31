@@ -130,6 +130,15 @@ Languages:
             URL:        "/categories/recrutement"
             Weight:     50
             parent:     "elao"
+          - Name:       "Inte"
+            Identifier: "inte"
+            URL:        "/categories/inte"
+            Weight:     200
+          - Name:       "Intégration"
+            Identifier: "integration"
+            URL:        "categories/integration"
+            Weight:     10
+            parent:     "inte"
 
   en:
     title:          "ELAO technical blog"
