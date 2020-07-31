@@ -50,9 +50,11 @@
                         {{ $author.job_title }}
                     </div>
                     <div class="article-footer__links">
+                        {{ with $social.website }}
+                        <a href="{{ $social.website }}" target="_blank"><i class="icon-web"></i></a>
+                        {{ end }}
                         <a href="https://twitter.com/{{ $social.twitter }}" target="_blank"><i class="icon-twitter"></i></a>
                         <a href="https://github.com/{{ $social.github }}" target="_blank"><i class="icon-github"></i></a>
-
                         {{ with $social.google_plus_id }}
                         <a href="https://plus.google.com/{{ $social.google_plus_id }}?rel=author" target="_blank"><i class="icon-gplus"></i></a>
                         {{ end }}

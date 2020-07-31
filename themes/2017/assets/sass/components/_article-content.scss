@@ -43,8 +43,8 @@
             margin-left: .3em;
 
             &::before {
-                content: '\e9cb';
-                font-family: 'icomoon';
+                content: $icon-link;
+                font-family: $icomoon-font-family;
                 font-size: .8em;
             }
 
