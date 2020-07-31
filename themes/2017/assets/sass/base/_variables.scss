@@ -56,3 +56,19 @@ $container-desktop:          ((940px + $grid-gutter-width)) !default;
 $container-lg-desktop:       ((1140px + $grid-gutter-width)) !default;
 
 $container-max-width:        $screen-lg !default;
+
+///////////////////////////
+/// ICONS
+///////////////////////////
+
+$icomoon-font-family: "elaoblog" !default;
+$icomoon-font-path: "../fonts/icons/" !default;
+
+$icon-link: "\e901";
+$icon-web: "\e900";
+$icon-twitter: "\e800";
+$icon-github: "\e801";
+$icon-search: "\e802";
+$icon-gplus: "\e803";
+$icon-instagram: "\e804";
+$icon-love: "\e805";
