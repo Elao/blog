@@ -45,7 +45,7 @@ import Loader from '../../core/Loader.js';
 
 Ce n'est pas toujours plaisant à écrire de tête et encore moins à refactorer.
 
-## Coté back
+## Côté back
 
 En PHP, on est habitué aux __namespaces__, qui permettent de référencer une classe par un chemin __absolu__ qui ne dépend donc pas de l'endroit où l'on se trouve.
 
@@ -59,13 +59,13 @@ On commence par définir un namespace pour un chemin donné dans notre `composer
 },
 ```
 
-Et on peut maintenant utiliser la classe `src/kernel.php` via le namespace `App/Kernel` partout dans notre application.
+Et on peut maintenant utiliser la classe `src/Kernel.php` via le namespace `App/Kernel` partout dans notre application.
 
-C'est ce qu'on souhaite mettre en place coté client grâce aux alias webpack !
+C'est ce qu'on souhaite mettre en place côté client grâce aux alias webpack !
 
 ## Les alias Webpack
 
-Comme on configure l'autoload coté back, on peut configurer des alias coté front dans notre configuration Webpack Encore :
+Comme on configure l'autoload côté back, on peut configurer des alias côté front dans notre configuration Webpack Encore :
 
 ```javascript
 //webpack.config.js
