@@ -1,20 +1,23 @@
 ---
 type:               "post"
-title:              "Des namespace dans mon JS avec les alias Webpack Encore"
+title:              "Des namespaces dans mon JS avec les alias Webpack Encore"
 date:               "2020-07-30"
 publishdate:        "2020-07-31"
 draft:              true
 slug:               "webpack-encore-alias-namespace"
-description:        "Des namespace dans mon JS avec les alias Webpack Encore"
+description:        "Beneficier de chemins absolus pour vos import de modules Javascript grâce aux alias Webpack"
 
-thumbnail:          "/images/posts/thumbnails/cool_cat.jpg"
-tags:               ["Symfony", "Webpack", "Encore", "alias", "namespace"]
-categories:         ["Dev", "Front", "Symfony"]
+thumbnail:          "/images/posts/thumbnails/webpack-encore-alias.jpg"
+header_img:         "/images/posts/headers/webpack-encore-alias.jpg"
+tags:               ["Symfony", "Javascript", "Webpack"]
+categories:         ["Javascript", "Dev", "Symfony"]
 
 author_username:    "tjarrand"
 ---
 
 Si vous travaillez avec Symfony et gérez votre base de code javascript avec Webpack Encore, j'ai aujourd'hui une petite astuce méconnue qui pourrait vous simplifier la vie : les alias Webpack.
+
+<!--more-->
 
 _Note: Si vous n'utilisez pas Webpack Encore dans vos projets Symfony, vous devriez peut-être y jeter un oeil ..._
 
@@ -108,3 +111,7 @@ Et simplifiez-vous la vie :
 import 'Style/app.scss';
 import logoPath from 'Images/logo.png';
 ```
+
+---
+
+<em>Illustration photo par <em><a href="https://unsplash.com/@jannesglas?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jannes Glas</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
