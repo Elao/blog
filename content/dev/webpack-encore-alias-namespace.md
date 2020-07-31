@@ -1,16 +1,16 @@
 ---
 type:               "post"
-title:              "Des namespaces dans mon JS avec les alias Webpack Encore"
+title:              "Des namespaces en JavaScript ? C’est possible avec les alias Webpack Encore !"
 date:               "2020-07-30"
 publishdate:        "2020-07-31"
-draft:              true
+draft:              false
 slug:               "webpack-encore-alias-namespace"
-description:        "Beneficier de chemins absolus pour vos import de modules Javascript grâce aux alias Webpack"
+description:        "Avec les alias Webpack Encore, adoptez la souplesse des namespaces PHP dans vos modules JavaScript avec des chemins absolus pour un code plus lisible et plus facile à refactorer."
 
 thumbnail:          "/images/posts/thumbnails/webpack-encore-alias.jpg"
 header_img:         "/images/posts/headers/webpack-encore-alias.jpg"
-tags:               ["Symfony", "Javascript", "Webpack"]
-categories:         ["Javascript", "Dev", "Symfony"]
+tags:               ["Symfony", "JavaScript", "Webpack"]
+categories:         ["JavaScript", "Dev", "Symfony"]
 
 author_username:    "tjarrand"
 ---
