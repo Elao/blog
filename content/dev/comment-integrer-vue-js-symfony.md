@@ -324,7 +324,7 @@ new Vue({ render: h => h(App) }).$mount('#app')
   <body>
     <div id="app"></div>
 
-    {{ encore_entry_script_tags('cooptation') }}
+    {{ encore_entry_script_tags('app') }}
   </body>
 </html>
 {{< /highlight >}}
