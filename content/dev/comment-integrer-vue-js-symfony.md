@@ -295,7 +295,7 @@ Une autre façon d'écrire vos composants est d'utiliser les [composants monofic
 </template>
 
 <script>
-  import Greeting './Greeting.vue'
+  import Greeting from './Greeting.vue'
 
   export default {
     components: {
