@@ -54,7 +54,7 @@ var Encore = require('@symfony/webpack-encore');
 Encore
     .setOutputPath('public/build/')
     .setPublicPath('/build')
-    .addEntry('ats', './assets/app.js')
+    .addEntry('app', './assets/app.js')
 
     // ...
 
@@ -295,7 +295,7 @@ Une autre façon d'écrire vos composants est d'utiliser les [composants monofic
 </template>
 
 <script>
-  import Greeting './Greeting.vue'
+  import Greeting from './Greeting.vue'
 
   export default {
     components: {
@@ -324,7 +324,7 @@ new Vue({ render: h => h(App) }).$mount('#app')
   <body>
     <div id="app"></div>
 
-    {{ encore_entry_script_tags('cooptation') }}
+    {{ encore_entry_script_tags('app') }}
   </body>
 </html>
 {{< /highlight >}}
