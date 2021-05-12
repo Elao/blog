@@ -50,10 +50,15 @@ Languages:
             URL:        "/categories/linux"
             Weight:     30
             parent:     "infra"
+          - Name:       "Kubernetes"
+            Identifier: "kubernetes"
+            URL:        "/categories/kubernetes"
+            Weight:     40
+            parent:     "infra"
           - Name:       "Monitoring"
             Identifier: "monitoring"
             URL:        "/categories/monitoring"
-            Weight:     30
+            Weight:     50
             parent:     "infra"
           - Name:       "Devops"
             Identifier: "devops"
